@@ -1,3 +1,4 @@
+
 html,
 body {
   padding: 0;
@@ -13,3 +14,64 @@ a {
   box-sizing: border-box;
 }
 
+.content-editable-container {
+  padding: 4px 2px;
+  white-space: pre-line;
+  border-radius: 4px;
+  outline: 0;
+}
+
+.content-editable-container:focus {
+  border-radius: 4px;
+  background-color: #efefef;
+  outline: 0;
+}
+.content-editable-container:active {
+  border-radius: 4px;
+  outline: 0;
+}
+.content-editable-container:visited {
+  border-radius: 4px;
+  outline: 0;
+}
+.manager-f-heading-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+.manager-template-text-bold {
+  font-weight: bold;
+}
+.manager-f-name {
+  font-size: 0.95em !important;
+  line-height: 20px;
+}
+.manager-fName {
+  font-size: 0.95em !important;
+  line-height: 20px;
+}
+input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+input[type="date"]:in-range::-webkit-datetime-edit-day-field,
+input[type="date"]:in-range::-webkit-datetime-edit-text {
+  color: #999;
+}
+.fullName {
+  font-weight: 800;
+  font-size: 2em;
+  padding: 0;
+  line-height: 30px;
+  text-align: center;
+}
+.manager-template-row {
+  flex-direction: row;
+  display: flex;
+  padding-bottom: 10px;
+}
+.manager-template-text-center {
+  align-items: center;
+}
+.manager-f-sub-rowA {
+  margin: 0 auto;
+}
