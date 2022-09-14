@@ -1,0 +1,38 @@
+.fcontainer {
+    display: flex;
+    background-color: #2f3e46;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 12px;
+    padding-bottom: 6px;
+}
+
+.h1 {
+    font-size: 25px;
+    color: white;
+}
+
+.fcontainer1 {
+    padding: 24px 150px;
+    display: flex;
+    background-color: #354f52;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.linkDiv {
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.linkDiv > Link {
+    margin-bottom: 16px;
+}
+
+.footerP {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
