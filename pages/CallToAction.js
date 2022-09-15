@@ -15,7 +15,7 @@ export default function CallToAction() {
         </p>
         <div className={styles.heroIconImgs}>
           <Image src="/amazon.png" 
-          width={100} height={100}
+          width={100} height={40}
           style={{marginTop:5}}
           />
           <Image src="/qatar.png"  width={100} height={40} 

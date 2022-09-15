@@ -50,6 +50,7 @@
   justify-content: space-around;
   align-items: center;
   margin-right: 20%;
+  margin-top: 20px;
 }
 @media (max-width: 960px) {
   .ctaContainer {
