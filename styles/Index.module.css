@@ -90,7 +90,7 @@ padding-right: 10px;
     margin-left: 33%;
   }
   .heroIconImgs {
-    margin-left: 15%;
+    margin-left: 22%;
   }
 }
 
@@ -122,7 +122,11 @@ padding-right: 10px;
     margin-left: 35%;
   }
   .ctaText {
-    font-size: 18px;
+    font-size: 22px;
+  }
+  .heroIconImgs {
+    margin-left: 15%;
+    margin-right: 25%;
   }
 }
 @media (max-width: 520px) {
@@ -143,7 +147,12 @@ padding-right: 10px;
     margin-left: 33%;
   }
   .ctaText {
-    font-size: 18px;
+    font-size: 20px;
+  }
+  .heroIconImgs {
+   
+    margin-left: 10%;
+    margin-right: 15%;
   }
 }
 @media (max-width: 420px) {
@@ -162,11 +171,16 @@ padding-right: 10px;
     margin-left: 30%;
   }
   .ctaText {
-    font-size: 16px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .heroIconImgs {
-    margin-left: 20%;
+margin-left: 5%;
+margin-right: 5%;
+
   }
+  
 
 }
 
@@ -185,6 +199,14 @@ padding-right: 10px;
     margin-left: 33%;
   }
   .ctaText {
-    font-size: 12px;
+    font-size: 18px;
+    padding-left: 13px;
+    padding-right :13px ;
   }
+  .heroIconImgs {
+   
+    margin-right: 7%;
+    margin-left: 7%;
+ 
+      }
 }

@@ -14,15 +14,14 @@ export default function CallToAction() {
           Some of Our Customers have been hired by:
         </p>
         <div className={styles.heroIconImgs}>
-          <Image src="/amazon.png" 
-          width={90} height={35}
-          style={{marginTop:5,}}
+          <Image
+            src="/amazon.png"
+            width={90}
+            height={35}
+            style={{ marginTop: 5 }}
           />
-          <Image src="/qatar.png"  width={80} height={35} 
-           />
-          <Image src="/netflix.png" width={80} height={45} 
-        
-           />
+          <Image src="/qatar.png" width={80} height={35} />
+          <Image src="/netflix.png" width={80} height={45} />
         </div>
       </div>
       <div className={styles.ctaRightSec}>
@@ -32,10 +31,7 @@ export default function CallToAction() {
           width={500}
           height={360}
           alt="Picture of the author"
-       style={{
-      
-      }
-       }
+          style={{}}
         />
       </div>
     </div>
