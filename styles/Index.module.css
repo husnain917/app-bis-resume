@@ -110,7 +110,7 @@ padding-right: 10px;
 }
 @media (max-width: 520px) {
   .ctaLeftSec {
-    width: 90%;
+    width: 80%;
   }
   .ctaHeading {
     font-size: 40px;
@@ -126,7 +126,7 @@ padding-right: 10px;
 }
 @media (max-width: 420px) {
   .ctaHeading {
-    font-size: 35px;
+    font-size: 30px;
   }
   .ctaHeroButton {
     padding: 5px 10px;
@@ -142,13 +142,16 @@ padding-right: 10px;
 }
 
 @media (max-width: 320px) {
+  .ctaLeftSec{
+    width: 75%;
+  }
   .ctaHeading {
-    font-size: 37px;
+    font-size: 32px;
   }
   .ctaHeroButton {
     font-size: 12px;
     padding: 7px 10px;
-    margin-left: 15%;
+    margin-left: 12%;
   }
   .ctaText {
     font-size: 14px;
