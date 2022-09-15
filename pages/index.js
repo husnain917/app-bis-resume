@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import styles from '../styles/Index.module.css'
+import Head from "next/head";
+import CallToAction from '../src/components/CallToAction'
+import styles from "../styles/Index.module.css";
 
 export default function Home() {
   return (
@@ -8,7 +9,9 @@ export default function Home() {
         <title>Bis Resume App</title>
         <meta name="description" content="Create resume with ease!" />
       </Head>
-      <h1>Bis resume Landing Page</h1>
+      <div>
+        <CallToAction />
+      </div>
     </div>
-  )
+  );
 }
