@@ -1,3 +1,156 @@
-.container{
-    
+.ctaContainer {
+  background: linear-gradient(
+    280deg,
+    transparent 0%,
+    transparent 18%,
+    rgb(34, 99, 108) 0,
+    rgb(22, 104, 118) 100%
+  );
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ctaLeftSec {
+  padding-left: 70px;
+  width: 40%;
+  margin-top: 5%;
+}
+.ctaRightSec {
+  width: 60%;
+  margin-top: 3.3%;
+}
+.ctaHeading {
+  color: white;
+  font-size: 52px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  line-height: normal;
+}
+.ctaHeroButton {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: orangered;
+  padding: 15px 40px;
+  border: none;
+  margin-top: 10%;
+  cursor: pointer;
+}
+.ctaText {
+  color: white;
+  font-size: 20px;
+  margin-top: 10%;
+  line-height: normal;
+}
+.heroIconImgs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20%;
+}
+@media (max-width: 960px) {
+  .ctaContainer {
+    background: linear-gradient(
+      0deg,
+      transparent 0%,
+      transparent 0%,
+      rgb(34, 99, 108) 0,
+      rgb(22, 104, 118) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .ctaLeftSec {
+    width: 90%;
+  }
+  .ctaRightSec {
+    width: 100%;
+    padding-left: 10px;
+padding-right: 10px;
+  }
+  .ctaHeading {
+    font-size: 65px;
+    text-align: center;
+  }
+  .ctaText {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+  }
+  .ctaHeroButton {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-left: 33%;
+  }
+  .heroIconImgs {
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 720px) {
+  .ctaHeading {
+    font-size: 55px;
+  }
+  .ctaHeroButton {
+    margin-left: 27%;
+  }
+  .heroIconImgs {
+    margin-left: 15%;
+  }
+}
+@media (max-width: 620px) {
+  .ctaHeading {
+    font-size: 50px;
+  }
+}
+@media (max-width: 520px) {
+  .ctaLeftSec {
+    width: 90%;
+  }
+  .ctaHeading {
+    font-size: 40px;
+  }
+  .ctaHeroButton {
+    font-size: 15px;
+    padding: 10px 15px;
+    margin-left: 25%;
+  }
+  .ctaText {
+    font-size: 18px;
+  }
+}
+@media (max-width: 420px) {
+  .ctaHeading {
+    font-size: 35px;
+  }
+  .ctaHeroButton {
+    padding: 5px 10px;
+    margin-left: 17%;
+  }
+  .ctaText {
+    font-size: 16px;
+  }
+  .heroIconImgs {
+    margin-left: 20%;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .ctaHeading {
+    font-size: 37px;
+  }
+  .ctaHeroButton {
+    font-size: 12px;
+    padding: 7px 10px;
+    margin-left: 15%;
+  }
+  .ctaText {
+    font-size: 14px;
+  }
 }
