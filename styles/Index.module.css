@@ -13,9 +13,9 @@
   justify-content: space-between;
 }
 .ctaLeftSec {
-  padding-left: 70px;
+  padding-left: 100px;
   width: 40%;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 .ctaRightSec {
   width: 60%;
@@ -23,7 +23,7 @@
 }
 .ctaHeading {
   color: white;
-  font-size: 52px;
+  font-size: 50px;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
   line-height: normal;
@@ -47,9 +47,9 @@
 .heroIconImgs {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin-right: 20%;
+  margin-right: 35%;
   margin-top: 20px;
 }
 @media (max-width: 960px) {

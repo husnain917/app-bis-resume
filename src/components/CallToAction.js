@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/Index.module.css";
+import styles from "../../styles/Index.module.css";
 import Image from "next/image";
 
 export default function CallToAction() {
@@ -15,13 +15,12 @@ export default function CallToAction() {
         </p>
         <div className={styles.heroIconImgs}>
           <Image src="/amazon.png" 
-          width={100} height={40}
-          style={{marginTop:5}}
+          width={90} height={35}
+          style={{marginTop:5,}}
           />
-          <Image src="/qatar.png"  width={100} height={40} 
-         
+          <Image src="/qatar.png"  width={80} height={35} 
            />
-          <Image src="/netflix.png" width={100} height={50} 
+          <Image src="/netflix.png" width={80} height={45} 
         
            />
         </div>

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import CallToAction from "./CallToAction";
+import CallToAction from '../src/components/CallToAction'
 import styles from "../styles/Index.module.css";
 
 export default function Home() {
