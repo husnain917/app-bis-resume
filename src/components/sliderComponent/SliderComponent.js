@@ -49,15 +49,20 @@ const SliderComponent = () => {
   };
   return (
     <>
-      <Text textAlign="center" fontSize={36} fontWeight="bold" m={4}>
+      <Text
+        textAlign="center"
+        fontSize={["16", "24", "36"]}
+        fontWeight="bold"
+        m={4}
+      >
         {" "}
         Zety is Rated Excellent on TrustPilot{" "}
       </Text>
-      <Box display="flex" maxWidth="50px" justifyContent="space-between">
+      <Box display="flex" maxWidth="13vw" justifyContent="space-between">
         <Box>
           <RatingWeb rating={4} />
         </Box>
-        <Box maxW={1600} ml={2}>
+        <Box maxWidth="86vw" ml={2} w={["90vw", "90vw", "90vw", "100vw"]}>
           <Slider {...settings}>
             {data.map((item, index) => (
               <div key={index}>
