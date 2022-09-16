@@ -1,6 +1,6 @@
 .fcontainer {
     display: flex;
-    background-color: #2f3e46;
+    background-color: #1f262E;
     color: white;
     justify-content: center;
     align-items: center;
@@ -10,29 +10,89 @@
 }
 
 .h1 {
-    font-size: 25px;
+    font-size: 1.2rem;
     color: white;
 }
 
+.h1::after {
+    content: " ";
+    display: block;
+    width: 9rem;
+    margin: 1.5rem auto 3rem;
+    height: 0.5rem;
+    background-color: #1DBFAF;
+    border-radius: 3rem;
+}
 .fcontainer1 {
-    padding: 24px 150px;
+    padding: 24px 70px;
     display: flex;
-    background-color: #354f52;
+    background-color: #313B47;
     color: white;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .linkDiv {
-    min-width: 250px;
+    min-width: 270px;
     display: flex;
     flex-direction: column;
 }
 
-.linkDiv > Link {
-    margin-bottom: 16px;
+.linkDiv>div {
+    margin-bottom: 20px;
 }
 
 .footerP {
+    font-size:1rem ;
     font-weight: bold;
     margin-bottom: 20px;
 }
+.copyright {
+    margin-top: 8px;
+}
+
+.fcontainer2 {
+    padding: 16px;
+    display: flex;
+    background-color: rgb(66, 80, 97);
+    color: white;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+}
+.oiconDiv{
+    width:60px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+}
+.iconDiv{
+    background-color: white;
+    color: rgb(66, 80, 97);
+    padding: 8px;
+    border-radius: 50%;
+    text-align: center;
+}
+.icon{
+    font-size: 1.3rem;
+}
+.icon:hover{
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 700px) {
+    .linkDiv {
+        min-width: 270px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerP {
+        font-size:1rem ;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+  }
