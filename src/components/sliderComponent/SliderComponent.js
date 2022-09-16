@@ -16,7 +16,7 @@ const SliderComponent = () => {
     // dots: true,
     infinite: true,
     speed: 300,
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 4,
     // nextArrow: <SampleNextArrow />,
     // prevArrow: <SamplePrevArrow />,
