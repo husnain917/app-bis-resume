@@ -27,7 +27,7 @@ const RatingComponent = ({ title, desc, date, name, rating }) => {
     setHoverValue(undefined);
   };
   return (
-    <Box maxW="300px" overflow="hidden" paddingX={4}>
+    <Box maxW="320px" overflow="hidden" paddingX={4}>
       <Box>
         <Box display="flex" mt="2" alignItems="center">
           {Array(5)
