@@ -1,6 +1,7 @@
 import Head from "next/head";
 import CallToAction from '../src/components/CallToAction'
 import Layout from '../src/Layout'
+import CompProfessionalResume from "../src/components/compProfessionalResume/CompProfessionalResume";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <Layout >
         <CallToAction />
+        <CompProfessionalResume />
       </Layout>
     </>
   )
