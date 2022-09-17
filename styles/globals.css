@@ -3,6 +3,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
 }
 
 a {
@@ -75,7 +76,9 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
 .manager-f-sub-rowA {
   margin: 0 auto;
 }
+
 .slick-prev:before,
 .slick-next:before {
   color: black !important;
 }
+
