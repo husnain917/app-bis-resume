@@ -67,7 +67,8 @@
     height: auto;
   }
   .ctaLeftSec {
-    width: 90%;
+    width: 100%;
+    padding-left: 0px;
   }
   .ctaRightSec {
     width: 100%;
@@ -89,7 +90,7 @@
     margin-left: 33%;
   }
   .heroIconImgs {
-    margin-left: 15%;
+    margin-left: 22%;
   }
 }
 
@@ -105,72 +106,105 @@
   }
 }
 @media (max-width: 620px) {
+  .ctaLeftSec {
+    width: 100%;
+    padding-left: 0px;
+  }
   .ctaHeading {
     font-size: 50px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .ctaHeroButton {
+    font-size: 12px;
+    padding: 7px 15px;
+    margin-left: 35%;
+  }
+  .ctaText {
+    font-size: 22px;
+  }
+  .heroIconImgs {
+    margin-left: 15%;
+    margin-right: 25%;
   }
 }
 @media (max-width: 520px) {
   .ctaLeftSec {
-    width: 80%;
+    width: 100%;
+    padding-left: 0px;
   }
   .ctaHeading {
-    font-size: 40px;
+    font-size: 35px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .ctaHeroButton {
     font-size: 15px;
-    padding: 10px 15px;
-    margin-left: 25%;
+    padding: 7px 15px;
+    margin-left: 33%;
   }
   .ctaText {
-    font-size: 18px;
+    font-size: 20px;
+  }
+  .heroIconImgs {
+    margin-left: 10%;
+    margin-right: 15%;
   }
 }
 @media (max-width: 420px) {
+  .ctaLeftSec {
+    width: 100%;
+    padding-left: 0px;
+  }
   .ctaHeading {
-    font-size: 30px;
+    font-size: 32px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .ctaHeroButton {
     padding: 5px 10px;
-    margin-left: 17%;
+    margin-left: 30%;
   }
   .ctaText {
-    font-size: 16px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .heroIconImgs {
-    margin-left: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 
 @media (max-width: 320px) {
   .ctaLeftSec {
-    width: 75%;
+    width: 100%;
+    padding-left: 0px;
   }
   .ctaHeading {
-    font-size: 32px;
+    font-size: 24px;
   }
   .ctaHeroButton {
-    font-size: 12px;
-    padding: 7px 10px;
-    margin-left: 12%;
+    font-size: 10px;
+    padding: 5px 7px;
+    margin-left: 33%;
   }
   .ctaText {
-    font-size: 14px;
+    font-size: 18px;
+    padding-left: 13px;
+    padding-right: 13px;
   }
-}
-
-.hrLine{
-  width: 7%;
-  color: black;
-  background-color: #51E2C2;
-margin-left: 45%;
-
-}
-.hintSecText{
-  font-size: 25px;
-  font-weight: 200;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-align: center;
-padding: 40px;
-padding-left: 17%;
-padding-right: 17%;
+  .heroIconImgs {
+    margin-right: 7%;
+    margin-left: 7%;
+  }
+  .hrLine {
+    width: 7%;
+    color: black;
+    background-color: #51e2c2;
+    margin-left: 45%;
+  }
 }

@@ -3,16 +3,19 @@ import CallToAction from "../src/components/CallToAction";
 import HintSection from "../src/components/hintSection/HintSection";
 import styles from "../styles/Index.module.css";
 import { Text } from "@chakra-ui/react";
+import Layout from '../src/Layout'
+
+
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Bis Resume App</title>
         <meta name="description" content="Create resume with ease!" />
       </Head>
-      <div>
+      <Layout >
         <CallToAction />
-      </div>
+    
       <div style={{ marginTop: "5%" }}>
         <Text
           fontSize={["2rem", "2rem", "2.3rem"]}
@@ -71,6 +74,9 @@ export default function Home() {
           paddingBottom="5px"
         />
       </div>
-    </div>
-  );
+  
+
+      </Layout>
+    </>
+  )
 }
