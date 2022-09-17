@@ -1,17 +1,18 @@
 import Head from "next/head";
 import CallToAction from '../src/components/CallToAction'
-import styles from "../styles/Index.module.css";
+import Layout from '../src/Layout'
+
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Bis Resume App</title>
         <meta name="description" content="Create resume with ease!" />
       </Head>
-      <div>
+      <Layout >
         <CallToAction />
-      </div>
-    </div>
-  );
+      </Layout>
+    </>
+  )
 }
