@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 import CallToAction from "../src/components/CallToAction";
+import HintSection from "../src/components/hintSection/HintSection";
 import styles from "../styles/Index.module.css";
-
+import { Text } from "@chakra-ui/react";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -13,28 +13,64 @@ export default function Home() {
       <div>
         <CallToAction />
       </div>
-      <div>
-      <div style={{ width: "100%", height: "100vh",marginTop:100, display: "flex" ,paddingLeft:"4%"}}>
-        <div style={{ width: "50%" }}>
-          <div
-            style={{width:30,margin:20,marginLeft:"75%"}}
-          >
-            <h1 style={{backgroundColor:'#51E2C2',padding:80,color:'white',borderRadius:20,height:100}}>
-              1
-            </h1>
-          </div>
-          <div
-            style={{ backgroundColor: "grey", wdith: 400, height: 340,borderRadius:30 }}
-          ></div>
-        </div>
-        <div
-          style={{  width: "50%", height: 500 }}
+      <div style={{ marginTop: "5%" }}>
+        <Text
+          fontSize={["2rem", "2rem", "2.3rem"]}
+          color="#313B47"
+          fontWeight="bold"
+          textAlign="center"
+          pl={["7%", "14%"]}
+          pr={["14%"]}
         >
-<Image src="/one.jpg" width={550} height={550} />
-        </div>
+          Build Your Resume Fast and Easy.
+        </Text>
+        <hr className={styles.hrLine} />
+        <Text
+          color="#313B47"
+          fontSize={["1rem", "1.5rem"]}
+          fontWeight={["400", "400"]}
+          align="center"
+          pl={["7%", "14%"]}
+          pr={["14%"]}
+          mt="3%"
+        >
+          Novorésumé is lightning fast. There's no software to download. No
+          multi-part sign-up
+          form. No long-winded tutorials. Just a straightforward process.
+        </Text>
+        <HintSection
+          number="1"
+          message="Pick a Template"
+          description="Don't sabotage your job search before it has even begun. Choose from our ATS-friendly, hand-crafted resume templates"
+          imgSrc="/one.png"
+          isRight={true}
+          paddingBottom="30px"
+        />
+        <HintSection
+          number="2"
+          message="Customize Your Layout"
+          description="Make the resume template truly your own. Customize the layout based on your experience level."
+          imgSrc="/two.png"
+          isRight={false}
+          paddingBottom="20px"
+        />
+        <HintSection
+          number="3"
+          message="Fill in the Blanks"
+          description="Fill in your resume information, let our AI content analyzer do its job, and see your resume changes dynamically in real time."
+          imgSrc="/three.png"
+          isRight={true}
+          paddingBottom="20px"
+        />
+        <HintSection
+          number="4"
+          message="Hit 'Download!'"
+          description="And yes, it's free! We don't hit you with a paywall once you've completed your resume in the Basic Account. If you use any of our premium features, the software will let you know about it."
+          imgSrc="/four.jpg"
+          isRight={false}
+          paddingBottom="5px"
+        />
       </div>
-      </div>
-
     </div>
   );
 }

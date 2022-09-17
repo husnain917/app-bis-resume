@@ -72,7 +72,7 @@
   .ctaRightSec {
     width: 100%;
     padding-left: 10px;
-padding-right: 10px;
+    padding-right: 10px;
   }
   .ctaHeading {
     font-size: 65px;
@@ -139,11 +139,10 @@ padding-right: 10px;
   .heroIconImgs {
     margin-left: 20%;
   }
-
 }
 
 @media (max-width: 320px) {
-  .ctaLeftSec{
+  .ctaLeftSec {
     width: 75%;
   }
   .ctaHeading {
@@ -157,4 +156,21 @@ padding-right: 10px;
   .ctaText {
     font-size: 14px;
   }
+}
+
+.hrLine{
+  width: 7%;
+  color: black;
+  background-color: #51E2C2;
+margin-left: 45%;
+
+}
+.hintSecText{
+  font-size: 25px;
+  font-weight: 200;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+padding: 40px;
+padding-left: 17%;
+padding-right: 17%;
 }
