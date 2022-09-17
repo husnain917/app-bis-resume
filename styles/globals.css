@@ -81,4 +81,10 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
 .slick-next:before {
   color: black !important;
 }
+.carousel{
+  width:90%;
+}
 
+.slick-prev {
+  left: -10px !important;
+}

@@ -16,14 +16,15 @@ const SliderComponent = () => {
     // dots: true,
     infinite: true,
     speed: 300,
-    slidesToShow: 5,
-    slidesToScroll: 4,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    autoplay: true,
     // nextArrow: <SampleNextArrow />,
     // prevArrow: <SamplePrevArrow />,
 
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -43,6 +44,7 @@ const SliderComponent = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          mobileFirst: true,
         },
       },
     ],
@@ -51,7 +53,7 @@ const SliderComponent = () => {
     <>
       <Text
         textAlign="center"
-        fontSize={["16", "24", "36"]}
+        fontSize={["1rem", "2rem", "3rem"]}
         fontWeight="bold"
         m={4}
       >
@@ -60,18 +62,19 @@ const SliderComponent = () => {
       </Text>
       <Box
         display="flex"
-        maxWidth={["100vw", "13vw"]}
+        maxWidth={["100vw", "100vw", "100vw", "13vw"]}
         justifyContent="space-between"
-        flexDirection={["column", "row", "row"]}
+        flexDirection={["column", "column", "column", "row"]}
       >
         <Box>
           <RatingWeb rating={4} />
         </Box>
+
         <Box
-          maxWidth={["100vw", "86vw"]}
-          ml={["0", "2"]}
-          my={2}
-          w={["90vw", "90vw", "90vw", "100vw"]}
+          maxWidth={["100vw", "100vw", "100vw", "86vw"]}
+          ml={["2", "6", "6", "2"]}
+          my={1}
+          w={["90vw", "90vw", "90vw", "75vw", "82vw", "100vw"]}
         >
           <Slider {...settings}>
             {data.map((item, index) => (
