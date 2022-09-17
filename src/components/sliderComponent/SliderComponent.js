@@ -16,13 +16,22 @@ const SliderComponent = () => {
     // dots: true,
     infinite: true,
     speed: 300,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 2,
     autoplay: true,
     // nextArrow: <SampleNextArrow />,
     // prevArrow: <SamplePrevArrow />,
 
     responsive: [
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: true,
+        },
+      },
       {
         breakpoint: 1200,
         settings: {
