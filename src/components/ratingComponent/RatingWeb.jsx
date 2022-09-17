@@ -17,12 +17,12 @@ const RatingWeb = ({ title, desc, date, name, rating }) => {
   };
   return (
     <>
-      <Text textAlign="center" fontSize={36} fontWeight="bold">
-        Excellent
-      </Text>
       <Box maxW="300px" overflow="hidden" paddingX={4}>
+        <Text textAlign="center" fontSize={36} fontWeight="bold">
+          Excellent
+        </Text>
         <Box>
-          <Box display="flex" alignItems="center">
+          <Box display="flex" alignItems="center" justifyContent="center">
             {Array(5)
               .fill(0)
               .map((_, index) => (

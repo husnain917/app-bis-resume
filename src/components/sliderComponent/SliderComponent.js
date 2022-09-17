@@ -58,11 +58,21 @@ const SliderComponent = () => {
         {" "}
         Zety is Rated Excellent on TrustPilot{" "}
       </Text>
-      <Box display="flex" maxWidth="13vw" justifyContent="space-between">
+      <Box
+        display="flex"
+        maxWidth={["100vw", "13vw"]}
+        justifyContent="space-between"
+        flexDirection={["column", "row", "row"]}
+      >
         <Box>
           <RatingWeb rating={4} />
         </Box>
-        <Box maxWidth="86vw" ml={2} w={["90vw", "90vw", "90vw", "100vw"]}>
+        <Box
+          maxWidth={["100vw", "86vw"]}
+          ml={["0", "2"]}
+          my={2}
+          w={["90vw", "90vw", "90vw", "100vw"]}
+        >
           <Slider {...settings}>
             {data.map((item, index) => (
               <div key={index}>
