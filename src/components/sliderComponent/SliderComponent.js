@@ -24,6 +24,15 @@ const SliderComponent = () => {
 
     responsive: [
       {
+        breakpoint: 2200,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 6,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
         breakpoint: 1600,
         settings: {
           slidesToShow: 4,
@@ -80,7 +89,7 @@ const SliderComponent = () => {
         </Box>
 
         <Box
-          maxWidth={["100vw", "100vw", "100vw", "86vw"]}
+          maxWidth={["100vw", "100vw", "100vw", "86vw", "90vw"]}
           ml={["2", "6", "6", "2"]}
           my={1}
           w={["90vw", "90vw", "90vw", "75vw", "82vw", "100vw"]}
