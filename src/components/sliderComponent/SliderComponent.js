@@ -89,7 +89,7 @@ const SliderComponent = () => {
         </Box>
 
         <Box
-          maxWidth={["100vw", "100vw", "100vw", "86vw", "90vw"]}
+          maxWidth={["100vw", "100vw", "100vw", "86vw"]}
           ml={["2", "6", "6", "2"]}
           my={1}
           w={["90vw", "90vw", "90vw", "75vw", "82vw", "100vw"]}
