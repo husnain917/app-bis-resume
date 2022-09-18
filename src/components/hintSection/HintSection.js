@@ -25,7 +25,7 @@ export default function HintSection({
           display={["none", "none", "none", "block"]}
           w="28%"
           fontWeight="bold"
-          fontSize="7rem"
+          fontSize={isRight ? "7rem" : "7rem"}
           color="white"
           bgColor={isRight ? "#51E2C2" : "#4BCBED"}
           align="center"
