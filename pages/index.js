@@ -5,6 +5,7 @@ import styles from "../styles/Index.module.css";
 import { Text } from "@chakra-ui/react";
 import Layout from "../src/Layout";
 import { FaMinus } from "react-icons/fa";
+import Advantages from "../src/components/advantages/Advantages";
 export default function Home() {
   return (
     <>
@@ -88,9 +89,9 @@ export default function Home() {
             isRight={false}
             paddingBottom="5px"
           />
-          <div>
-            
-          </div>
+
+           
+          <Advantages />
         </div>
       </Layout>
     </>
