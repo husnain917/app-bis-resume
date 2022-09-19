@@ -48,6 +48,7 @@ export default function HintSection({
             fontWeight="bold"
             color=" #313B47"
             pt="20px"
+            textAlign="center"
           >
             {message}
           </Text>

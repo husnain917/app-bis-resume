@@ -32,13 +32,13 @@ export default function Home() {
                 color: "#1dbfaf",
                 fontSize: "30px",
                 backgroundColor: "#1dbfaf",
-                paddingLeft: "5%",
-                paddingRight: "5%",
+                paddingLeft: "2.5%",
+                paddingRight: "2.7%",
                 borderRadius: 50,
                 height: 5,
                 textAlign: "center",
-                marginLeft: "45%",
-                marginTop: "2%",
+                marginLeft: "47.5%",
+                marginTop: "0%",
               }}
             />
           </div>
@@ -87,7 +87,6 @@ export default function Home() {
             isRight={false}
             paddingBottom="5px"
           />
-          <div></div>
         </div>
       </Layout>
     </>
