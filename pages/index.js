@@ -52,14 +52,14 @@ export default function Home() {
             pr={["14%"]}
             mt="3%"
           >
-            Novorésumé is lightning fast. There's no software to download. No
+            Novoresume is lightning fast. There is no software to download. No
             multi-part sign-up form. No long-winded tutorials. Just a
             straightforward process.
           </Text>
           <HintSection
             number="1"
             message="Pick a Template"
-            description="Don't sabotage your job search before it has even begun. Choose from our ATS-friendly, hand-crafted resume templates"
+            description="Dont sabotage your job search before it has even begun. Choose from our ATS-friendly, hand-crafted resume templates"
             imgSrc="/one.png"
             isRight={true}
             paddingBottom="30px"
@@ -82,8 +82,8 @@ export default function Home() {
           />
           <HintSection
             number="4"
-            message="Hit 'Download!'"
-            description="And yes, it's free! We don't hit you with a paywall once you've completed your resume in the Basic Account. If you use any of our premium features, the software will let you know about it."
+            message="Hit Download!'"
+            description="And yes, its free! We dont hit you with a paywall once you have completed your resume in the Basic Account. If you use any of our premium features, the software will let you know about it."
             imgSrc="/four.jpg"
             isRight={false}
             paddingBottom="5px"
