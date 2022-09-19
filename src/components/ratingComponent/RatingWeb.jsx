@@ -17,7 +17,7 @@ const RatingWeb = ({ title, desc, date, name, rating }) => {
   };
   return (
     <>
-      <Box maxW={["600", "800", "1000"]} paddingX={4}>
+      <Box maxW={["600", "800", "1000"]} paddingX={["4", "4", "4", "10"]}>
         <Text textAlign="center" fontSize={36} fontWeight="bold">
           Excellent
         </Text>
@@ -27,7 +27,7 @@ const RatingWeb = ({ title, desc, date, name, rating }) => {
               .fill(0)
               .map((_, index) => (
                 <>
-                  <Badge colorScheme="green" variant="solid" mr="1" p="1">
+                  <Badge colorScheme="green" variant="solid" mr="1" p={["1"]}>
                     <StarIcon
                       boxSize={6}
                       key={index}

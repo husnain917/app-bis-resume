@@ -9,19 +9,105 @@ const FaqsComponent = () => {
     AOS.init();
   });
   return (
-    <Box maxW={["90vw"]}>
-      {/* <div data-aos="fade-in"> */}
+    <Box maxW={["90vw"]} overflow="hidden" mt={10} mb={10}>
+      <Grid
+        minHeight="400px"
+        templateRows="repeat(2, 1fr)"
+        templateColumns="repeat(5, 1fr)"
+        gap={4}
+      >
+        <GridItem
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+          rowSpan={2}
+          colSpan={1}
+        >
+          <Image objectFit="cover" src="/faq0@2x.png" alt="Dan Abramov" />
+        </GridItem>
+        <GridItem colSpan={3} rowSpan={2} maxW="850">
+          <Text fontSize={["2.75em"]} className="font">
+            Why should I use a resume builder?
+          </Text>
+          <Text fontSize="2xl" my={4}>
+            {" "}
+            Using a resume builder makes the process of creating a resume
+            significantly faster and easier. Ever tried building your resume
+            with Word?
+          </Text>
+          <Text fontSize="2xl" my={4}>
+            The whole process is a huge pain – you make a TINY change to your
+            resume, and the entire resume layout gets completely messed up.
+          </Text>
+          <Text fontSize="2xl" my={4}>
+            With a resume builder, you don’t have to worry about the nitty
+            gritty of resume creation, like font selection, layout, formatting,
+            etc.
+          </Text>
+          <Text fontSize="2xl" my={4}>
+            All you have to do is pick a resume template, fill it in, and then
+            you’re ready to start applying for jobs!
+          </Text>
+        </GridItem>
+      </Grid>
       <Grid
         h="200px"
         templateRows="repeat(2, 1fr)"
         templateColumns="repeat(5, 1fr)"
         gap={4}
       >
-        <GridItem rowSpan={2} colSpan={1} bg="tomato" />
-        <GridItem colSpan={2} bg="papayawhip" />
-        <GridItem colSpan={2} bg="papayawhip" />
-        <GridItem colSpan={4} bg="tomato" />
+        <GridItem colSpan={1} rowSpan={6} />
+        <GridItem colSpan={3} rowSpan={6} bg="turquoise" />
+
+        <GridItem
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+          rowSpan={2}
+          colSpan={1}
+        >
+          <Image objectFit="cover" src="/faq1@2x.png" alt="Dan Abramov" />
+        </GridItem>
       </Grid>
+      <Grid
+        h="200px"
+        templateRows="repeat(2, 1fr)"
+        templateColumns="repeat(5, 1fr)"
+        gap={4}
+      >
+        <GridItem
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+          rowSpan={2}
+          colSpan={1}
+        >
+          <Image objectFit="cover" src="/faq2@2x.png" alt="Dan Abramov" />
+        </GridItem>
+        <GridItem colSpan={3} rowSpan={6} bg="tomato" />
+      </Grid>
+      <Grid
+        h="200px"
+        templateRows="repeat(2, 1fr)"
+        templateColumns="repeat(5, 1fr)"
+        gap={4}
+      >
+        <GridItem colSpan={1} rowSpan={6}>
+          {" "}
+        </GridItem>
+        <GridItem colSpan={3} rowSpan={6} bg="turquoise" />
+        <GridItem
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+          rowSpan={2}
+          colSpan={1}
+        >
+          {" "}
+          <Image objectFit="cover" src="/faq3@2x.png" alt="Dan Abramov" />
+        </GridItem>
+      </Grid>
+
       {/* </div> */}
     </Box>
   );

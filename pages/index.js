@@ -16,9 +16,7 @@ export default function Home() {
       </Head>
       <Layout>
         <CallToAction />
-        {/* <div>Ahsan Ali</div> */}
-        <FaqsComponent />
-        {/* <div></div> */}
+        {/* <FaqsComponent /> */}
         <SliderComponent />
       </Layout>
     </div>

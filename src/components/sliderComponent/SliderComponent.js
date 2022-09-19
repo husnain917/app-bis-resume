@@ -16,7 +16,7 @@ const SliderComponent = () => {
     // dots: true,
     infinite: true,
     speed: 300,
-    slidesToShow: 5,
+    slidesToShow: 7,
     slidesToScroll: 2,
     autoplay: true,
     // nextArrow: <SampleNextArrow />,
@@ -80,7 +80,7 @@ const SliderComponent = () => {
       </Text>
       <Box
         display="flex"
-        maxWidth={["100vw", "100vw", "100vw", "13vw"]}
+        maxWidth={["100vw", "100vw", "100vw", "13vw", "96vw"]}
         justifyContent="space-between"
         flexDirection={["column", "column", "column", "row"]}
       >
@@ -89,10 +89,9 @@ const SliderComponent = () => {
         </Box>
 
         <Box
-          maxWidth={["100vw", "100vw", "100vw", "86vw"]}
           ml={["2", "6", "6", "2"]}
           my={1}
-          w={["90vw", "90vw", "90vw", "75vw", "82vw", "100vw"]}
+          w={["90vw", "90vw", "92vw", "71vw", "79vw", "83vw"]}
         >
           <Slider {...settings}>
             {data.map((item, index) => (
@@ -133,5 +132,3 @@ const SliderComponent = () => {
 // }
 
 export default SliderComponent;
-
-// .slick-next:before, .slick-prev:before

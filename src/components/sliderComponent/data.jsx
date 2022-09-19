@@ -55,4 +55,20 @@ export const data = [
     reviewCount: 34,
     rating: 1,
   },
+  {
+    title: "Excellent and wonderfull",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iste impedit maxime? Corrupti, saepe quam!",
+    date: "April 5",
+    name: "customer",
+    reviewCount: 34,
+    rating: 1,
+  },
+  {
+    title: "Excellent and wonderfull",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iste impedit maxime? Corrupti, saepe quam!",
+    date: "April 5",
+    name: "customer",
+    reviewCount: 34,
+    rating: 1,
+  },
 ];
