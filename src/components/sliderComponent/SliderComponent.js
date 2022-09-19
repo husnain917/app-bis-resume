@@ -33,7 +33,16 @@ const SliderComponent = () => {
         },
       },
       {
-        breakpoint: 1600,
+        breakpoint: 1900,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 6,
+          infinite: true,
+          // dots: true,
+        },
+      },
+      {
+        breakpoint: 1500,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -79,7 +88,7 @@ const SliderComponent = () => {
         Zety is Rated Excellent on TrustPilot{" "}
       </Text>
       <Flex
-        maxWidth={["100vw", "100vw", "100vw", "13vw", "96vw"]}
+        maxWidth={["100vw", "100vw", "100vw", "15vw", "93vw"]}
         justifyContent="space-between"
         flexDirection={["column", "column", "column", "row"]}
         width="100%"
@@ -89,9 +98,9 @@ const SliderComponent = () => {
         </Box>
 
         <Box
-          ml={["2", "6", "6", "2", "0"]}
           my={1}
-          w={["90vw", "90vw", "93vw", "70vw", "79vw", "80vw"]}
+          w={["90vw", "90vw", "93vw", "74vw", "80vw", "79vw"]}
+          marginLeft={["1%", "1%", "1%", "1%", "1%"]}
         >
           <Slider {...settings}>
             {data.map((item, index) => (
