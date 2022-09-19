@@ -3,7 +3,6 @@ import CallToAction from '../src/components/CallToAction'
 import Layout from '../src/Layout'
 import CompProfessionalResume from "../src/components/compProfessionalResume/CompProfessionalResume";
 
-
 export default function Home() {
   return (
     <>
