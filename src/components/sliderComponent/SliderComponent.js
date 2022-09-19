@@ -67,7 +67,7 @@ const SliderComponent = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -101,7 +101,7 @@ const SliderComponent = () => {
           // ml={["2", "6", "6", "2", "0"]}
           my={1}
           w={["90vw", "90vw", "93vw", "74vw", "80vw", "82vw"]}
-          marginLeft={["2%", "1%", "1%", "0.5%"]}
+          marginLeft={["6%", "1%", "3%", "0.5%"]}
         >
           <Slider {...settings}>
             {data.map((item, index) => (
