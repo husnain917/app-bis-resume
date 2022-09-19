@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Flex } from "@chakra-ui/react";
 import RatingComponent from "../ratingComponent/RatingComponent";
 import { data } from "./data";
 import Slider from "react-slick";
@@ -29,7 +29,7 @@ const SliderComponent = () => {
           slidesToShow: 6,
           slidesToScroll: 6,
           infinite: true,
-          dots: true,
+          // dots: true,
         },
       },
       {
@@ -38,7 +38,7 @@ const SliderComponent = () => {
           slidesToShow: 4,
           slidesToScroll: 4,
           infinite: true,
-          dots: true,
+          // dots: true,
         },
       },
       {
@@ -47,7 +47,7 @@ const SliderComponent = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
+          // dots: true,
         },
       },
       {
@@ -78,20 +78,20 @@ const SliderComponent = () => {
         {" "}
         Zety is Rated Excellent on TrustPilot{" "}
       </Text>
-      <Box
-        display="flex"
+      <Flex
         maxWidth={["100vw", "100vw", "100vw", "13vw", "96vw"]}
         justifyContent="space-between"
         flexDirection={["column", "column", "column", "row"]}
+        width="100%"
       >
         <Box>
           <RatingWeb rating={4} />
         </Box>
 
         <Box
-          ml={["2", "6", "6", "2"]}
+          ml={["2", "6", "6", "2", "0"]}
           my={1}
-          w={["90vw", "90vw", "92vw", "71vw", "79vw", "83vw"]}
+          w={["90vw", "90vw", "93vw", "70vw", "79vw", "80vw"]}
         >
           <Slider {...settings}>
             {data.map((item, index) => (
@@ -101,7 +101,7 @@ const SliderComponent = () => {
             ))}
           </Slider>
         </Box>
-      </Box>
+      </Flex>
     </>
   );
 };

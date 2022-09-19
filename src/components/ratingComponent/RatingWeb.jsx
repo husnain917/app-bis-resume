@@ -17,7 +17,7 @@ const RatingWeb = ({ title, desc, date, name, rating }) => {
   };
   return (
     <>
-      <Box maxW={["600", "800", "1000"]} paddingX={["4", "4", "4", "10"]}>
+      <Box paddingX={["4", "4", "4", "10"]}>
         <Text textAlign="center" fontSize={36} fontWeight="bold">
           Excellent
         </Text>
