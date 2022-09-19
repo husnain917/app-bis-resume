@@ -88,6 +88,9 @@ export default function Home() {
             isRight={false}
             paddingBottom="5px"
           />
+          <div>
+            
+          </div>
         </div>
       </Layout>
     </>
