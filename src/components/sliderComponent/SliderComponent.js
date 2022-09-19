@@ -26,7 +26,7 @@ const SliderComponent = () => {
       {
         breakpoint: 2200,
         settings: {
-          slidesToShow: 6,
+          slidesToShow: 5,
           slidesToScroll: 6,
           infinite: true,
           // dots: true,
@@ -35,8 +35,8 @@ const SliderComponent = () => {
       {
         breakpoint: 1600,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           infinite: true,
           // dots: true,
         },
@@ -44,14 +44,14 @@ const SliderComponent = () => {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           infinite: true,
           // dots: true,
         },
       },
       {
-        breakpoint: 1000,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
