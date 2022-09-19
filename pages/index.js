@@ -27,7 +27,6 @@ export default function Home() {
             Build Your Resume Fast and Easy.
           </Text>
           <div className={styles.hrLine}>
-          
             <FaMinus
               style={{
                 color: "#1dbfaf",
@@ -52,14 +51,14 @@ export default function Home() {
             pr={["14%"]}
             mt="3%"
           >
-            Novoresume is lightning fast. There is no software to download. No
+            ` Novoresume is lightning fast. There is no software to download. No
             multi-part sign-up form. No long-winded tutorials. Just a
-            straightforward process.
+            straightforward process.`
           </Text>
           <HintSection
             number="1"
             message="Pick a Template"
-            description="Dont sabotage your job search before it has even begun. Choose from our ATS-friendly, hand-crafted resume templates"
+            description="`Dont sabotage your job search before it has even begun. Choose from our ATS-friendly, hand-crafted resume templates`"
             imgSrc="/one.png"
             isRight={true}
             paddingBottom="30px"
@@ -67,7 +66,7 @@ export default function Home() {
           <HintSection
             number="2"
             message="Customize Your Layout"
-            description="Make the resume template truly your own. Customize the layout based on your experience level."
+            description="`Make the resume template truly your own. Customize the layout based on your experience level.`"
             imgSrc="/two.png"
             isRight={false}
             paddingBottom="20px"
@@ -75,7 +74,7 @@ export default function Home() {
           <HintSection
             number="3"
             message="Fill in the Blanks"
-            description="Fill in your resume information, let our AI content analyzer do its job, and see your resume changes dynamically in real time."
+            description="`Fill in your resume information, let our AI content analyzer do its job, and see your resume changes dynamically in real time.`"
             imgSrc="/three.png"
             isRight={true}
             paddingBottom="20px"
@@ -83,14 +82,12 @@ export default function Home() {
           <HintSection
             number="4"
             message="Hit Download!'"
-            description="And yes, its free! We dont hit you with a paywall once you have completed your resume in the Basic Account. If you use any of our premium features, the software will let you know about it."
+            description="`And yes, its free! We dont hit you with a paywall once you have completed your resume in the Basic Account. If you use any of our premium features, the software will let you know about it`."
             imgSrc="/four.jpg"
             isRight={false}
             paddingBottom="5px"
           />
-          <div>
-            
-          </div>
+          <div></div>
         </div>
       </Layout>
     </>
