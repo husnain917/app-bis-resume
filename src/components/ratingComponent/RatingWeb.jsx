@@ -17,7 +17,7 @@ const RatingWeb = ({ title, desc, date, name, rating }) => {
   };
   return (
     <>
-      <Box mx={["0", "0", "5"]} bg="tomato">
+      <Box mx={["0", "0", "5"]}>
         <Text textAlign="center" fontSize={36} fontWeight="bold">
           Excellent
         </Text>
@@ -29,7 +29,7 @@ const RatingWeb = ({ title, desc, date, name, rating }) => {
                 <>
                   <Badge colorScheme="green" variant="solid" mr="1" p={["1"]}>
                     <StarIcon
-                      boxSize={["6", "6", "6", "8"]}
+                      boxSize={6}
                       key={index}
                       color={currentValue > index ? "orange" : "white"}
                       // onClick={() => handleClick(index + 1)}

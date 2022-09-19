@@ -88,7 +88,7 @@ const SliderComponent = () => {
         Zety is Rated Excellent on TrustPilot{" "}
       </Text>
       <Flex
-        maxWidth={["100vw", "100vw", "100vw", "15vw", "93vw"]}
+        maxWidth={["100vw", "100vw", "100vw", "15vw", "92vw"]}
         justifyContent="space-between"
         flexDirection={["column", "column", "column", "row"]}
         width="100%"
@@ -98,9 +98,10 @@ const SliderComponent = () => {
         </Box>
 
         <Box
+          // ml={["2", "6", "6", "2", "0"]}
           my={1}
-          w={["90vw", "90vw", "93vw", "74vw", "80vw", "79vw"]}
-          marginLeft={["1%", "1%", "1%", "1%", "1%"]}
+          w={["90vw", "90vw", "93vw", "74vw", "80vw", "82vw"]}
+          marginLeft={["2%", "1%", "1%", "0.5%"]}
         >
           <Slider {...settings}>
             {data.map((item, index) => (
