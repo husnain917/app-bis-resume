@@ -24,7 +24,7 @@ export default function HintSection({
       <Box
         w={["100%", "100%", isRight ? "40%" : "50%"]}
         ml={["5", "0%", "0%", isRight ? "15%" : "10px"]}
-        mr={isRight ? "0%" : "5%"}
+        mr={isRight ? "0%" : "7%"}
         mb="5%"
       >
         <Text
@@ -71,7 +71,7 @@ export default function HintSection({
       </Box>
       <Box
         w={["100%", "100%", "50%"]}
-        ml={["0%", "15%", isRight ? "0%" : "0%", isRight ? "0%" : "21.5%"]}
+        ml={["0%", "15%", isRight ? "0%" : "0%", isRight ? "0%" : "23.5%"]}
       >
         <Image src={imgSrc} width={450} height={400} />
       </Box>
