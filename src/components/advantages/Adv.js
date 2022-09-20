@@ -7,12 +7,13 @@ import {
   AccordionPanel,
   AccordionIcon,
 } from "@chakra-ui/react";
+
 export default function Adv({ title, advNum, advDesc }) {
   return (
     <div>
-      <Accordion allowToggle>
-        <AccordionItem>
-          <AccordionButton>
+      <Accordion allowToggle >
+        <AccordionItem >
+          <AccordionButton >
             <Box
               w="100%"
               display="flex"
@@ -41,8 +42,8 @@ export default function Adv({ title, advNum, advDesc }) {
             </Box>
           </AccordionButton>
 
-          <AccordionPanel>
-            <Text bgColor={"white"}>{advDesc}</Text>
+          <AccordionPanel >
+            <Text bgColor="white" textAlign="center" fontSize="12px">{advDesc}</Text>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>

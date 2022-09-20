@@ -56,7 +56,8 @@ export default function Advantages() {
             <Adv
               advNum="6"
               title="Up your application game"
-              advDesc="With Smart Apply, we will help you find an opportunity, customize your resume, create a matching cover letter, and download your documents. We will even send you to the web page where you can apply!"
+              advDesc="With Smart Apply, we will help you find an opportunity, customize your resume, create a matching cover letter, and download your documents.
+               We will even send you to the web page where you can apply!"
             />
           </Box>
         </Box>
