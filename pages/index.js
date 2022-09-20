@@ -55,6 +55,7 @@ export default function Home() {
             multi-part sign-up form. No long-winded tutorials. Just a
             straightforward process.`
           </Text>
+        
           <HintSection
             number="1"
             message="Pick a Template"

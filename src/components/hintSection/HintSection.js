@@ -13,27 +13,32 @@ export default function HintSection({
       display="flex"
       flexDir={["column", "column", isRight ? "row" : "row-reverse"]}
       alignItems="center"
-      justifyContent="space-between"
-      mt="5%"
-      ml="5%"
+      justifyContent={["space-between", "space-between", "space-between"]}
+      mt="2.5%"
+      mr="5%"
+      ml={isRight ? "5%" : "0%"}
       w="90%"
       bgColor={["#F5F5F5", "#F5F5F5", "#FFFFF", "white"]}
       borderRadius="20px"
     >
-      <Box w={["100%", "100%", "50%"]} ml={["5", "0%", "0%"]}>
+      <Box
+        w={["100%", "100%", isRight ? "40%" : "50%"]}
+        ml={["5", "0%", "0%", isRight ? "15%" : "10px"]}
+        mr={isRight ? "0%" : "5%"}
+      >
         <Text
           display={["none", "none", "none", "block"]}
-          w="28%"
+          w={isRight ? "25%" : "25%"}
           fontWeight="bold"
-          fontSize={isRight ? "7rem" : "7rem"}
+          fontSize={isRight ? "4rem" : "4rem"}
           color="white"
           bgColor={isRight ? "#51E2C2" : "#4BCBED"}
           align="center"
           pt="5px"
           pb="5px"
           borderRadius="20px"
-          mb="20px"
-          ml={isRight ? "67%" : "1%"}
+          mb="55px"
+          ml={isRight ? "73%" : "0%"}
         >
           {number}
         </Text>
@@ -41,19 +46,19 @@ export default function HintSection({
           bgColor={["none", "none", "none", "#F5F5F5"]}
           borderRadius="20px"
           mr="10px"
-          p={["10px", "20px", "40px", "60px"]}
+          p={["10px", "20px", "40px", "20px", "30px"]}
         >
           <Text
             fontSize={["1.2rem", "2rem"]}
             fontWeight="bold"
             color=" #313B47"
             pt="20px"
-            textAlign="center"
+            textAlign="left"
           >
             {message}
           </Text>
           <Text
-            fontSize={["1rem", "1.3rem"]}
+            fontSize={["1rem", "1rem"]}
             color=" #313B47"
             mt="10px"
             fontWeight="500"
@@ -64,9 +69,9 @@ export default function HintSection({
       </Box>
       <Box
         w={["100%", "100%", "50%"]}
-        ml={["0%", "0%", isRight ? "0%" : "0%", isRight ? "0%" : "8%"]}
+        ml={["0%", "0%", isRight ? "0%" : "0%", isRight ? "0%" : "21.5%"]}
       >
-        <Image src={imgSrc} width={550} height={530} />
+        <Image src={imgSrc} width={450} height={400} />
       </Box>
     </Box>
   );
