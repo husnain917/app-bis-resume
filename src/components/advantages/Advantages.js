@@ -1,9 +1,23 @@
 import { Box, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Adv from "./Adv";
-
+import TabOne from "../../../public/tabone.jpg";
+import TabTwo from "../../../public/tabtwo.jpg";
+import TabThree from "../../../public/tabthree.jpg";
+import TabFour from "../../../public/tabfour.jpg";
+import TabFive from "../../../public/tabfive.jpg";
+import TabSix from "../../../public/tabsix.jpg";
 export default function Advantages() {
+  const [index, setIndex] = useState([]);
+  const imageArray = {
+    Image:"/tabone.jpg" ,
+    Image: "/tabtwo.jpg",
+    Image: "/tabthree.jpg",
+    Image: "/tabfour.jpg",
+    Image: "/tabfive.jpg",
+    Image: "/tabsix.jpg",
+  };
   return (
     <>
       <Box bgColor="#F6F5F0">
@@ -25,18 +39,25 @@ export default function Advantages() {
           justifyContent="center"
         >
           <Box>
-            <Image src="/adv.png" width={250} height={460} />
+            <img
+              src={imageArray[index]}
+              // style={{ width: 400, height: "auto" }}
+           width={400}
+           height={400}
+           />
           </Box>
           <Box>
             <Adv
               advNum="1"
               title="Professional, customizable templates"
               advDesc="Stand out with My Perfect Resumes eye-catching templates! Building an impressive resume has never been easier or faster."
+              onClick={() => setIndex(imageArray[0])}
             />
             <Adv
               advNum="2"
               title="Expertly crafted phrases"
               advDesc="Dont get stuck writing about your work experience. Our Resume Builder has pre-written, industry-specific bullet points to create an impressive resume."
+              onClick={() => setIndex(imageArray[1])}
             />
             <Adv
               advNum="3"

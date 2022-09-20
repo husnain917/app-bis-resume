@@ -11,7 +11,7 @@ import {
 export default function Adv({ title, advNum, advDesc }) {
   return (
     <div>
-      <Accordion allowToggle >
+      <Accordion allowToggle>
         <AccordionItem >
           <AccordionButton >
             <Box
@@ -42,8 +42,10 @@ export default function Adv({ title, advNum, advDesc }) {
             </Box>
           </AccordionButton>
 
-          <AccordionPanel >
-            <Text bgColor="white" textAlign="center" fontSize="12px">{advDesc}</Text>
+          <AccordionPanel  w="50%">
+            <Text bgColor="white" textAlign="center" fontSize="12px">
+              {advDesc}
+            </Text>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
