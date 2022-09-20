@@ -15,9 +15,9 @@ export default function Home() {
         <meta name="description" content="Create resume with ease!" />
       </Head>
       <Layout>
-        <CallToAction />
-        {/* <FaqsComponent /> */}
-        <SliderComponent />
+        {/* <CallToAction /> */}
+        {/* <SliderComponent /> */}
+        <FaqsComponent />
       </Layout>
     </div>
   );
