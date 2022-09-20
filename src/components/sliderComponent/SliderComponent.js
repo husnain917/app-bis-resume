@@ -12,7 +12,6 @@ const SliderComponent = () => {
   {
     data.map((item) => {
       console.log(item);
-      console.log(w);
     });
   }
   var settings = {
