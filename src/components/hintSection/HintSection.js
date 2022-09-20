@@ -15,8 +15,8 @@ export default function HintSection({
       alignItems="center"
       justifyContent={["space-between", "space-between", "space-between"]}
       mt="2.5%"
-      mr="5%"
-      ml={isRight ? "5%" : "0%"}
+      mr="15%"
+      ml={isRight ? "5%" : "0.3%"}
       w="90%"
       bgColor={["#F5F5F5", "#F5F5F5", "#FFFFF", "white"]}
       borderRadius="20px"
@@ -37,7 +37,7 @@ export default function HintSection({
           pt="5px"
           pb="5px"
           borderRadius="20px"
-          mb="55px"
+          mb="50px"
           ml={isRight ? "73%" : "0%"}
         >
           {number}
@@ -69,7 +69,7 @@ export default function HintSection({
       </Box>
       <Box
         w={["100%", "100%", "50%"]}
-        ml={["0%", "0%", isRight ? "0%" : "0%", isRight ? "0%" : "21.5%"]}
+        ml={["0%", "0%", isRight ? "0%" : "0%", isRight ? "0%" : "21%"]}
       >
         <Image src={imgSrc} width={450} height={400} />
       </Box>
