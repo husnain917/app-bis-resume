@@ -4,12 +4,15 @@ import RatingComponent from "../ratingComponent/RatingComponent";
 import { data } from "./data";
 import Slider from "react-slick";
 import RatingWeb from "../ratingComponent/RatingWeb";
+import { useWindowWidth } from "@react-hook/window-size";
 
 const SliderComponent = () => {
   console.log("SliderComponent", data);
+  // const w = useWindowWidth();
   {
     data.map((item) => {
       console.log(item);
+      console.log(w);
     });
   }
   var settings = {
@@ -98,9 +101,9 @@ const SliderComponent = () => {
         </Box>
 
         <Box
-          // ml={["2", "6", "6", "2", "0"]}
+          ml={["2", "6", "6", "0", "0", "4"]}
           my={1}
-          w={["90vw", "90vw", "93vw", "74vw", "80vw", "82vw"]}
+          w={["90vw", "90vw", "93vw", "76vw", "87%", "89%"]}
           marginLeft={["6%", "1%", "3%", "0.5%"]}
         >
           <Slider {...settings}>
