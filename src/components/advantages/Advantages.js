@@ -9,15 +9,8 @@ import TabFour from "../../../public/tabfour.jpg";
 import TabFive from "../../../public/tabfive.jpg";
 import TabSix from "../../../public/tabsix.jpg";
 export default function Advantages() {
-  const [index, setIndex] = useState([]);
-  const imageArray = {
-    Image:"/tabone.jpg" ,
-    Image: "/tabtwo.jpg",
-    Image: "/tabthree.jpg",
-    Image: "/tabfour.jpg",
-    Image: "/tabfive.jpg",
-    Image: "/tabsix.jpg",
-  };
+  const [index, setIndex] = useState("");
+  const imageArray = [TabOne, TabTwo, TabThree, TabFour, TabFive, TabSix];
   return (
     <>
       <Box bgColor="#F6F5F0">
@@ -42,22 +35,22 @@ export default function Advantages() {
             <img
               src={imageArray[index]}
               // style={{ width: 400, height: "auto" }}
-           width={400}
-           height={400}
-           />
+              width={400}
+              height={400}
+            />
           </Box>
           <Box>
             <Adv
               advNum="1"
               title="Professional, customizable templates"
               advDesc="Stand out with My Perfect Resumes eye-catching templates! Building an impressive resume has never been easier or faster."
-              onClick={() => setIndex(imageArray[0])}
+              onClick={() => setIndex(0)}
             />
             <Adv
               advNum="2"
               title="Expertly crafted phrases"
               advDesc="Dont get stuck writing about your work experience. Our Resume Builder has pre-written, industry-specific bullet points to create an impressive resume."
-              onClick={() => setIndex(imageArray[1])}
+              onClick={() => setIndex(1)}
             />
             <Adv
               advNum="3"
