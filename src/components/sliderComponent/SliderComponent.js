@@ -103,7 +103,7 @@ const SliderComponent = () => {
           ml={["2", "6", "6", "0", "0", "4"]}
           my={1}
           w={["90vw", "90vw", "93vw", "76vw", "87%", "89%"]}
-          marginLeft={["6%", "1%", "3%", "0.5%"]}
+          marginLeft={["6%", "4%", "3%", "0.5%"]}
         >
           <Slider {...settings}>
             {data.map((item, index) => (
