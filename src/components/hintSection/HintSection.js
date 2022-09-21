@@ -20,8 +20,8 @@ export default function HintSection({
         isRight ? "5%" : "5%",
         isRight ? "5%" : "5%",
         isRight ? "5%" : "5%",
-        isRight ? "5%" : "0.3%",
-        isRight ? "5%" : "0%",
+        isRight ? "4%" : "0.3%",
+        isRight ? "0%" : "0%",
         isRight ? "5%" : "5%",
       ]}
       w={["90%", "90%", "90%", "90%", "90%", "90%"]}
@@ -34,7 +34,7 @@ export default function HintSection({
           "5",
           "0%",
           "0%",
-          // isRight ? "10%" : "0px",
+          isRight ? "10%" : "1%",
           isRight ? "15%" : "10px",
           isRight ? "15%" : "10px",
         ]}
@@ -103,7 +103,8 @@ export default function HintSection({
           "0%",
           "15%",
           isRight ? "0%" : "0%",
-          isRight ? "0%" : "21.5%",
+          isRight ? "0%" : "13%",
+          isRight ? "0%" : "15%",
           isRight ? "0%" : "17%",
         ]}
       >
@@ -115,7 +116,7 @@ export default function HintSection({
             "450px",
             "450px",
             "450px",
-            isRight ? "600px" : "800px",
+            isRight ? "500px" : "800px",
             isRight ? "700px" : "700px",
           ]}
           h={["auto", "400px", "400px", "400px", "400px", "600px"]}
