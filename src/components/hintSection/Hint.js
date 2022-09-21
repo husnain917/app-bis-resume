@@ -20,11 +20,9 @@ export default function Hint({
         ]}
         alignItems="center"
         justifyContent="center"
-       
         pl="10%"
         pr="10%"
         mt="50px"
- 
       >
         <Box
           w={["100%", "100%", "100%", "50%"]}
@@ -32,11 +30,11 @@ export default function Hint({
           flexDir="column"
           alignSelf="start"
           mt="1.3%"
-          ml={isRight?"0":"10px"}
+          ml={isRight ? "0" : "10px"}
         >
           <Text
             display={["none", "none", "none", "block"]}
-         w="25%"
+            w="25%"
             fontWeight="bold"
             fontSize={[
               isRight ? "4rem" : "4rem",
@@ -52,7 +50,6 @@ export default function Hint({
             pt={["5px"]}
             pb="5px"
             borderRadius="20px"
-           
             ml={isRight ? "74%" : "0%"}
           >
             {number}
@@ -78,6 +75,7 @@ export default function Hint({
               color=" #313B47"
               mt={[, , "0px", "10px"]}
               fontWeight="500"
+              textAlign="justify"
             >
               {description}
             </Text>
