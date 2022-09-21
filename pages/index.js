@@ -1,8 +1,10 @@
 import Head from "next/head";
-import CallToAction from '../src/components/CallToAction'
-import Layout from '../src/Layout'
+import CallToAction from "../src/components/CallToAction";
+import HintSection from "../src/components/hintSection/HintSection";
+import { Text } from "@chakra-ui/react";
+import Layout from "../src/Layout";
 
-
+import Hint from "../src/components/hintSection/Hint";
 export default function Home() {
   return (
     <>
@@ -10,9 +12,10 @@ export default function Home() {
         <title>Bis Resume App</title>
         <meta name="description" content="Create resume with ease!" />
       </Head>
-      <Layout >
+      <Layout>
         <CallToAction />
+        <HintSection />
       </Layout>
     </>
-  )
+  );
 }
