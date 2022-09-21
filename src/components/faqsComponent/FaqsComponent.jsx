@@ -19,7 +19,7 @@ const FaqsComponent = () => {
   });
   return (
     <Box
-      maxW={["80vw"]}
+      width={["100vw", "100vw", "100vw", "80vw", "80vw"]}
       overflow="hidden"
       margin="auto"
       display="flex"
@@ -32,6 +32,8 @@ const FaqsComponent = () => {
         templateRows="repeat(2, 1fr)"
         templateColumns="repeat(5, 1fr)"
         gap={4}
+        // display="flex"
+        // flexDirection={["column", "column", "column", "row"]}
       >
         <GridItem
           data-aos="fade-down"

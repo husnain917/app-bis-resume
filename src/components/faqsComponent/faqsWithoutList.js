@@ -28,25 +28,29 @@ const FaqsWithoutList = () => {
       >
         <Image objectFit="cover" src="/faq0@2x.png" alt="Dan Abramov" />
       </GridItem>
-      <GridItem colSpan={3} rowSpan={2} maxW="850">
+      <GridItem
+        colSpan={3}
+        rowSpan={2}
+        w={["100%", "100%", "100%", "100%", "100%", "100%", "80%"]}
+      >
         <Text fontSize={["2.75em"]} className="font">
           Why should I use a resume builder?
         </Text>
-        <Text fontSize="2xl" my={4}>
+        <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.5em"]} my={4}>
           {" "}
           Using a resume builder makes the process of creating a resume
           significantly faster and easier. Ever tried building your resume with
           Word?
         </Text>
-        <Text fontSize="2xl" my={4}>
+        <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.5em"]} my={4}>
           The whole process is a huge pain – you make a TINY change to your
           resume, and the entire resume layout gets completely messed up.
         </Text>
-        <Text fontSize="2xl" my={4}>
+        <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.5em"]} my={4}>
           With a resume builder, you don’t have to worry about the nitty gritty
           of resume creation, like font selection, layout, formatting, etc.
         </Text>
-        <Text fontSize="2xl" my={4}>
+        <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.5em"]} my={4}>
           All you have to do is pick a resume template, fill it in, and then
           you’re ready to start applying for jobs!
         </Text>

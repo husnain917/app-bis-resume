@@ -15,7 +15,7 @@ const ListItems = () => {
   return (
     <Grid
       templateRows="repeat(2, 1fr)"
-      templateColumns="repeat(5, 1fr)"
+      templateColumns="repeat(1fr,2fr,1fr)"
       gap={4}
       overflow="hidden"
     >
@@ -23,7 +23,8 @@ const ListItems = () => {
       <GridItem
         colSpan={3}
         rowSpan={6}
-        maxW={["100", "100vw", "100vw", "100vw", "80vw"]}
+        // maxW={["100", "100vw", "100vw", "100vw", "80vw"]}
+        w={["80%"]}
       >
         <Text fontSize={["2.75em"]} className="font">
           What is the best resume builder?

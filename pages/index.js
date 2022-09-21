@@ -19,9 +19,9 @@ export default function Home() {
         {/* <CallToAction /> */}
         {/* <SliderComponent /> */}
         <FaqsComponent />
-        <CallToAction />
+        {/* <CallToAction /> */}
 
-        <div style={{ marginTop: "5%", marginBottom: "5%" }}>
+        {/* <div style={{ marginTop: "5%", marginBottom: "5%" }}>
           <Text
             fontSize={["2rem", "2rem", "2.3rem"]}
             color="#313B47"
@@ -94,7 +94,7 @@ export default function Home() {
             isRight={false}
             paddingBottom="5px"
           />
-        </div>
+        </div> */}
       </Layout>
     </>
   );
