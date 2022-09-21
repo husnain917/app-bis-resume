@@ -13,23 +13,22 @@ import Layout from "../src/Layout";
 import Hint from "../src/components/hintSection/Hint";
 export default function Home() {
   return (
-    <div
-    // className={styles.container}
-    >
-      <Head>
-        <title>Bis Resume App</title>
-        <meta name="description" content="Create resume with ease!" />
-      </Head>
-      <Layout>
-        <CallToAction />
+    <>
+      <div
+      // className={styles.container}
+      >
+        <Head>
+          <title>Bis Resume App</title>
+          <meta name="description" content="Create resume with ease!" />
+        </Head>
+        <Layout>
+          <CallToAction />
 
-        {/* <FaqsComponent /> */}
-        <SliderComponent />
-      </Layout>
-    </div>
-        <HintSection />
-      </Layout>
+          {/* <FaqsComponent /> */}
+          <SliderComponent />
+          {/* <HintSection /> */}
+        </Layout>
+      </div>
     </>
-
   );
 }
