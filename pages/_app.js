@@ -4,11 +4,15 @@ import store from '../config/store';
 import 'antd/dist/antd.css'
 import 'react-tippy/dist/tippy.css';
 import { createWrapper } from 'next-redux-wrapper';
+import Navbar from '../src/components/navbar/Navbar';
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
+    <>
+      <ChakraProvider>
+        <Navbar />
         <Component {...pageProps} />
-    </ChakraProvider>
+      </ChakraProvider>
+    </>
   )
 }
 

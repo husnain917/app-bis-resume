@@ -8,7 +8,7 @@ export default function Home() {
         <title>Bis Resume App</title>
         <meta name="description" content="Create resume with ease!" />
       </Head>
-      <h1>Bis resume Landing Page</h1>
+      {/* <h1>Bis resume Landing Page</h1> */}
     </div>
   )
 }
