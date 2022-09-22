@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import equal from "deep-equal";
 import { Tooltip } from "react-tippy";
+import { Image } from "@chakra-ui/react";
 
 import styles from "../../../styles/templates/dnd.module.scss";
 
@@ -166,8 +167,10 @@ class Dnd extends Component {
                             onClick={() => this.props.additem()}
                           >
                             <Tooltip title="Add New Item" arrow distance={20}>
-                            <img className={styles.icon} src='/icons/plus.png' />
-
+                              <Image
+                                className={styles.icon}
+                                src="/icons/plus.png"
+                              />
                             </Tooltip>
                           </div>
                           {this.state.data.length > 1 && (
@@ -185,7 +188,10 @@ class Dnd extends Component {
                                 arrow
                                 distance={20}
                               >
-                             <img className={styles.icon2} src='/icons/equal.png' />
+                                <Image
+                                  className={styles.icon2}
+                                  src="/icons/equal.png"
+                                />
                               </Tooltip>
                             </div>
                           )}
@@ -199,8 +205,10 @@ class Dnd extends Component {
                               onClick={() => this.props.removeitem(index)}
                             >
                               <Tooltip title="Remove" arrow distance={20}>
-                              <img className={styles.icon2} src='/icons/minus.png' />
-
+                                <Image
+                                  className={styles.icon2}
+                                  src="/icons/minus.png"
+                                />
                               </Tooltip>
                             </div>
                           )}

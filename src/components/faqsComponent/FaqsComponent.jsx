@@ -49,17 +49,16 @@ const FaqsComponent = () => {
             Why should I use a resume builder?
           </Text>
           <Text fontSize="2xl" my={4}>
-            {" "}
             Using a resume builder makes the process of creating a resume
             significantly faster and easier. Ever tried building your resume
             with Word?
           </Text>
           <Text fontSize="2xl" my={4}>
-            The whole process is a huge pain – you make a TINY change to your
+            The whole process is a huge pain - you make a TINY change to your
             resume, and the entire resume layout gets completely messed up.
           </Text>
           <Text fontSize="2xl" my={4}>
-            With a resume builder, you don’t have to worry about the nitty
+            With a resume builder, you don`&#39;`t have to worry about the nitty
             gritty of resume creation, like font selection, layout, formatting,
             etc.
           </Text>
@@ -83,30 +82,20 @@ const FaqsComponent = () => {
           </Text>
           <Text fontSize="2xl" my={4} fontWeight="500" letterSpacing={2}>
             {" "}
-            Over the past 7 years, we’ve been working hard to make Novorésumé
-            the best resume builder out there.
+            Over the past 7 years, we`&#39;`ve been working hard to make
+            Novorésumé the best resume builder out there.
           </Text>
           <Text fontSize="2xl" my={4}>
-            And we’d say we succeeded! Here’s what sets us apart from the rest
-            of the competition:
+            And we`&#39;`d say we succeeded! Here`&#39;`s what sets us apart
+            from the rest of the competition:
           </Text>
           <UnorderedList ml={8} fontSize={18}>
             <ListItem>
-              <span
-                style={{
-                  fontWeight: "bold",
-                }}
-              >
-                Easy to Use
-              </span>
-              <span
-                style={{
-                  marginLeft: 3,
-                }}
-              >
-                - Our builder is very easy to use, even if you're not too
+              <Text>Easy to Use</Text>
+              <Text>
+                Our builder is very easy to use, even if you`&#39;`re not too
                 tech-friendly.
-              </span>
+              </Text>
             </ListItem>
             <ListItem>
               <span
@@ -121,7 +110,8 @@ const FaqsComponent = () => {
                   marginLeft: 3,
                 }}
               >
-                - Just pick one of our resume templates, and you're good to go!
+                - Just pick one of our resume templates, and you`&#39;`re good
+                to go!
               </span>
             </ListItem>
             <ListItem>
@@ -130,7 +120,7 @@ const FaqsComponent = () => {
                   fontWeight: "bold",
                 }}
               >
-                It's 100% free
+                It`&#39;`s 100% free
               </span>
               <span
                 style={{
@@ -194,7 +184,7 @@ const FaqsComponent = () => {
               >
                 - Our resume templates are built on top of some of the most
                 popular applicant tracking systems out there. Meaning, your
-                resume won't automatically get rejected by any ATS.
+                resume won`&#39;`t automatically get rejected by any ATS.
               </span>
             </ListItem>
           </UnorderedList>
@@ -284,7 +274,7 @@ const FaqsComponent = () => {
                   marginLeft: 3,
                 }}
               >
-                - Our builder is very easy to use, even if you're not too
+                - Our builder is very easy to use, even if you`&#39;`re not too
                 tech-friendly.
               </span>
             </ListItem>
@@ -301,7 +291,8 @@ const FaqsComponent = () => {
                   marginLeft: 3,
                 }}
               >
-                - Just pick one of our resume templates, and you're good to go!
+                - Just pick one of our resume templates, and you`&#39;`re good
+                to go!
               </span>
             </ListItem>
             <ListItem>
@@ -310,7 +301,7 @@ const FaqsComponent = () => {
                   fontWeight: "bold",
                 }}
               >
-                It's 100% free
+                It`&#39;`s 100% free
               </span>
               <span
                 style={{
@@ -319,9 +310,9 @@ const FaqsComponent = () => {
                 }}
               >
                 - Some resume builders out there pretend to be free… and then
-                they hit you with a paywall once you’re done writing your
-                resume! We don’t do that. Our builder will instantly notify you
-                if you’re using any of our premium features.
+                they hit you with a paywall once you`&#39;`re done writing your
+                resume! We don`&#39;`t do that. Our builder will instantly
+                notify you if you`&#39;`re using any of our premium features.
               </span>
             </ListItem>
             <ListItem>
@@ -374,7 +365,7 @@ const FaqsComponent = () => {
               >
                 - Our resume templates are built on top of some of the most
                 popular applicant tracking systems out there. Meaning, your
-                resume won't automatically get rejected by any ATS.
+                resume won`&#39;`t automatically get rejected by any ATS.
               </span>
             </ListItem>
           </UnorderedList>
@@ -425,7 +416,7 @@ const FaqsComponent = () => {
           </Text>
           <Text fontSize="2xl" my={4}>
             All you have to do is pick a resume template, fill it in, and then
-            you’re ready to start applying for jobs!
+            you`&#39;`re ready to start applying for jobs!
           </Text>
         </GridItem>
       </Grid>

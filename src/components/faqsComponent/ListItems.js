@@ -52,7 +52,7 @@ const ListItems = () => {
                 marginLeft: 3,
               }}
             >
-              - Our builder is very easy to use, even if you're not too
+              - Our builder is very easy to use, even if you`&#39;`re not too
               tech-friendly.
             </span>
           </ListItem>
@@ -69,7 +69,8 @@ const ListItems = () => {
                 marginLeft: 3,
               }}
             >
-              - Just pick one of our resume templates, and you're good to go!
+              - Just pick one of our resume templates, and you`&#39;`re good to
+              go!
             </span>
           </ListItem>
           <ListItem>
@@ -78,7 +79,7 @@ const ListItems = () => {
                 fontWeight: "bold",
               }}
             >
-              It's 100% free
+              It`&#39;`s 100% free
             </span>
             <span
               style={{
@@ -142,7 +143,7 @@ const ListItems = () => {
             >
               - Our resume templates are built on top of some of the most
               popular applicant tracking systems out there. Meaning, your resume
-              won't automatically get rejected by any ATS.
+              won`&#39;`t automatically get rejected by any ATS.
             </span>
           </ListItem>
         </UnorderedList>
