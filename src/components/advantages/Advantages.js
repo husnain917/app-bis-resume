@@ -14,6 +14,7 @@ export default function Advantages() {
     console.log(length);
     setWidth("100%");
     setDisplay("block");
+    // setToastWidth("100%");
     setIsTabActive(index);
   };
 
@@ -60,6 +61,7 @@ export default function Advantages() {
             {data?.map((tab, index) => {
               return (
                 <Adv
+                key={index}
                   advNum={tab.advNum}
                   title={tab.title}
                   advDesc={tab.advDesc}
@@ -82,11 +84,11 @@ export default function Advantages() {
           fontSize="1.2rem"
           fontWeight="bold"
           textAlign="center"
-          ml={["20%", "30%", "35%", "37%", "43%"]}
+          ml={["15%","20%", "25%", "35%", "37%", "43%"]}
           mb="5%"
-          p="25px"
-          pl="50px"
-          pr="50px"
+          p={["15px","25px"]}
+          pl="35px"
+          pr="35px"
         >
           Build my resume
         </Button>

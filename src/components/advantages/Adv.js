@@ -72,7 +72,7 @@ export default function Adv({
           className={styles.toastLine}
           mb="2%"
           w={toastWidth}
-          bgColor="red"
+          bgColor="#FF8873"
           h="3px"
           mt="4%"
           ml="0.5%"
