@@ -1,26 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Text } from "@chakra-ui/react";
 import { useState } from "react";
-export default function Adv({ title, advNum, advDesc }) {
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-  const [Display, setDisplay] = useState("none");
+import styles from "../../../styles/Index.module.css";
+export default function Adv({
+  title,
+  advNum,
+  advDesc,
+  tabHandler,
+  Display,
+  width,
+  toastWidth,
+  currentActiveTab,
+  isTabActive,
+  index
 
-  const tabHandler = () => {
-    console.log("handler presses");
-    setWidth(500);
-
-    setDisplay("block");
-  };
+}) {
   return (
     <div>
       <Box
-        w="500px"
+        w="100%"
         display="flex"
         flexDir="row"
         alignItems="center"
         bgColor="white"
-        p="20px"
+        p={["10px", "20px"]}
         pr="3rem"
         borderRadius="12px"
         boxShadow="sm"
@@ -39,21 +42,42 @@ export default function Adv({ title, advNum, advDesc }) {
         >
           {advNum}
         </Text>
-        <Text color="#002D6B" fontSize="1rem" fontWeight="bold" pl="10px">
+        <Text
+          color="#002D6B"
+          fontSize={["0.5rem", "0.8rem", "1rem"]}
+          fontWeight="bold"
+          pl="10px"
+        >
           {title}
         </Text>
       </Box>
       <Box
-        display={Display}
+        display={index=== isTabActive ? "block" : 'none'}
         w={width}
         h="auto"
         bgColor="white"
         borderBottomRightRadius="12px"
         borderBottomLeftRadius="12px"
       >
-        <Text bgColor="white" textAlign="center" fontSize="12px" pl="5%" pr="5%">
+        <Text
+          bgColor="white"
+          textAlign="center"
+          fontSize={["0.5rem", "0.8rem", "1rem"]}
+          pl="5%"
+          pr="5%"
+        >
           {advDesc}
         </Text>
+        <Box
+          className={styles.toastLine}
+          mb="2%"
+          w={toastWidth}
+          bgColor="red"
+          h="3px"
+          mt="4%"
+          ml="0.5%"
+          pr="0.5"
+        ></Box>
       </Box>
     </div>
   );
