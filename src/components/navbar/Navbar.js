@@ -185,7 +185,7 @@ const DesktopNav = () => {
                                 href={navItem?.href ?? '#'}
                                 fontWeight={500}
                                 color={linkColor}
-                                fontSize={useBreakpointValue({ base: '15px' })}
+                                fontSize={'15px'}
                                 _hover={{
                                     textDecoration: 'none',
                                     color: linkHoverColor,
