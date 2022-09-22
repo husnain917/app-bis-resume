@@ -122,33 +122,37 @@ export default function Navbar() {
 
                     {/* login buttons */}
                     {
-                        Login_Buttons?.map((items) => (
-                            <>
-                                <Box
-                                    display={{ base: 'none', md: 'inline-block' }}
-                                    justify={{ base: 'end' }}
-                                    border={0}
-                                    boxShadow={'lg'}
-                                    width={useBreakpointValue({ xl: '120px', lg: '80px', md: '110px', })}
-                                    bg={popoverContentBgColor}
-                                    textAlign={'center'}
-                                    padding={'10px 5px'}
-                                    textTransform={'uppercase'}
-                                >
-                                    <Link
-                                        fontWeight={650}
-                                        color={linkColor}
-                                        fontSize={useBreakpointValue({ xl: '14px', lg: '12px', })}
-                                        _hover={{
-                                            textDecoration: 'none',
-                                            color: linkHoverColor,
-                                        }}
+                        Login_Buttons?.map((items) => {
+                            const breakpointWidth = useBreakpointValue({ xl: '120px', lg: '80px', md: '110px', });
+                            const breakpointfontSize = useBreakpointValue({ xl: '14px', lg: '12px', })
+                            return (
+                                <>
+                                    <Box
+                                        display={{ base: 'none', md: 'inline-block' }}
+                                        justify={{ base: 'end' }}
+                                        border={0}
+                                        boxShadow={'lg'}
+                                        width={breakpointWidth}
+                                        bg={popoverContentBgColor}
+                                        textAlign={'center'}
+                                        padding={'10px 5px'}
+                                        textTransform={'uppercase'}
                                     >
-                                        {items.label}
-                                    </Link>
-                                </Box>
-                            </>
-                        ))
+                                        <Link
+                                            fontWeight={650}
+                                            color={linkColor}
+                                            fontSize={breakpointfontSize}
+                                            _hover={{
+                                                textDecoration: 'none',
+                                                color: linkHoverColor,
+                                            }}
+                                        >
+                                            {items.label}
+                                        </Link>
+                                    </Box>
+                                </>
+                            )
+                        })
                     }
                     {/* login button end */}
 
@@ -187,49 +191,52 @@ const DesktopNav = () => {
 
     return (
         <Stack direction={'row'} alignItems={'center'} spacing={useBreakpointValue({ xl: 5, lg: 3, })}>
-            {NAV_ITEMS?.map((navItem) => (
-                <Box key={navItem?.label}>
-                    <Popover trigger={'hover'} placement={'bottom-start'}>
-                        <PopoverTrigger>
-                            <Link
-                                href={navItem?.href ?? '#'}
-                                fontWeight={500}
-                                color={linkColor}
-                                fontSize={useBreakpointValue({ xl: '16px', lg: '14px', })}
-                                _hover={{
-                                    textDecoration: 'none',
-                                    color: linkHoverColor,
-                                }}>
-                                {navItem?.label}
-                                {
-                                    navItem.label === 'Resume' || navItem.label === 'CV' || navItem.label === 'Cover Letter' ?
-                                        <>
-                                            <Icon color={'black.400'} w={5} h={5} as={navItem.icon} />
-                                        </>
-                                        :
-                                        <></>
-                                }
-                            </Link>
-                        </PopoverTrigger>
+            {NAV_ITEMS?.map((navItem) => {
+                const breakpointfontSize = useBreakpointValue({ xl: '16px', lg: '14px', })
+                return (
+                    <Box key={navItem?.label}>
+                        <Popover trigger={'hover'} placement={'bottom-start'}>
+                            <PopoverTrigger>
+                                <Link
+                                    href={navItem?.href ?? '#'}
+                                    fontWeight={500}
+                                    color={linkColor}
+                                    fontSize={breakpointfontSize}
+                                    _hover={{
+                                        textDecoration: 'none',
+                                        color: linkHoverColor,
+                                    }}>
+                                    {navItem?.label}
+                                    {
+                                        navItem.label === 'Resume' || navItem.label === 'CV' || navItem.label === 'Cover Letter' ?
+                                            <>
+                                                <Icon color={'black.400'} w={5} h={5} as={navItem.icon} />
+                                            </>
+                                            :
+                                            <></>
+                                    }
+                                </Link>
+                            </PopoverTrigger>
 
-                        {navItem.children && (
-                            <PopoverContent
-                                border={0}
-                                boxShadow={'xl'}
-                                bg={popoverContentBgColor}
-                                p={4}
-                                rounded={'xl'}
-                                minW={'xs'}>
-                                <Stack>
-                                    {navItem.children.map((child) => (
-                                        <DesktopSubNav key={child.label} {...child} />
-                                    ))}
-                                </Stack>
-                            </PopoverContent>
-                        )}
-                    </Popover>
-                </Box>
-            ))}
+                            {navItem.children && (
+                                <PopoverContent
+                                    border={0}
+                                    boxShadow={'xl'}
+                                    bg={popoverContentBgColor}
+                                    p={4}
+                                    rounded={'xl'}
+                                    minW={'xs'}>
+                                    <Stack>
+                                        {navItem.children.map((child) => (
+                                            <DesktopSubNav key={child.label} {...child} />
+                                        ))}
+                                    </Stack>
+                                </PopoverContent>
+                            )}
+                        </Popover>
+                    </Box>
+                )
+            })}
         </Stack>
     );
 };
@@ -288,31 +295,34 @@ const MobileNav = () => {
 
             {/* login buttons */}
             {
-                Login_Buttons?.map((items) => (
-                    <>
-                        <Box
-                            display={{ base: 'inline-flex', md: 'none' }}
-                            border={0}
-                            boxShadow={'lg'}
-                            bg={popoverContentBgColor}
-                            textAlign={'center'}
-                            padding={'10px 40px'}
-                            textTransform={'uppercase'}
-                        >
-                            <Link
-                                fontWeight={650}
-                                color={linkColor}
-                                fontSize={useBreakpointValue({ xl: '14px', lg: '12px', })}
-                                _hover={{
-                                    textDecoration: 'none',
-                                    color: linkHoverColor,
-                                }}
+                Login_Buttons?.map((items) => {
+                    const breakpointfontSize = useBreakpointValue({ xl: '14px', lg: '12px', })
+                    return (
+                        <>
+                            <Box
+                                display={{ base: 'inline-flex', md: 'none' }}
+                                border={0}
+                                boxShadow={'lg'}
+                                bg={popoverContentBgColor}
+                                textAlign={'center'}
+                                padding={'10px 40px'}
+                                textTransform={'uppercase'}
                             >
-                                {items.label}
-                            </Link>
-                        </Box>
-                    </>
-                ))
+                                <Link
+                                    fontWeight={650}
+                                    color={linkColor}
+                                    fontSize={breakpointfontSize}
+                                    _hover={{
+                                        textDecoration: 'none',
+                                        color: linkHoverColor,
+                                    }}
+                                >
+                                    {items.label}
+                                </Link>
+                            </Box>
+                        </>
+                    )
+                })
             }
             {/* login buttons end */}
         </Stack>
