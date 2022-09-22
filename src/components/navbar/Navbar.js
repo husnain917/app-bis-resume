@@ -22,7 +22,7 @@ import {
 } from '@chakra-ui/icons';
 import logoIcon from "../../../public/vercel.svg";
 import Image from 'next/image';
-import { NAV_ITEMS, EnglishDropDown } from "../constant/navbarLinks/NavbarLinks";
+import { NAV_ITEMS, EnglishDropDown, Login_Buttons } from "../constant/navbarLinks/NavbarLinks";
 
 export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
@@ -31,16 +31,17 @@ export default function Navbar() {
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
     return (
-        <Box>
+        <Box
+            borderBottom={1}
+            borderStyle={'solid'}
+            borderColor={useColorModeValue('gray.200', 'gray.900')}
+        >
             <Flex
                 bg={useColorModeValue('white', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
                 minH={'60px'}
                 py={{ base: 2 }}
-                px={{ base: 4 }}
-                borderBottom={1}
-                borderStyle={'solid'}
-                borderColor={useColorModeValue('gray.200', 'gray.900')}
+                mx={useBreakpointValue({ xl: '95px', lg: '40px', })}
                 align={'center'}>
 
                 {/* logo */}
@@ -55,7 +56,7 @@ export default function Navbar() {
                     />
 
                     {/* deskTop Nav */}
-                    <Flex display={{ base: 'none', lg: 'flex', }} ml={10}>
+                    <Flex display={{ base: 'none', lg: 'flex', }} marginLeft={useBreakpointValue({ xl: '6rem', lg: '3rem', })}>
                         <DesktopNav />
                     </Flex>
                 </Flex>
@@ -67,10 +68,10 @@ export default function Navbar() {
                     direction={'row'}
                     alignItems={'center'}
                     spacing={5}
-                    >
+                >
 
                     {/* English dropdown start */}
-                    {EnglishDropDown?.map((navItem) => (
+                    {/* {EnglishDropDown?.map((navItem) => (
                         <Box key={navItem?.label}
                             display={{ base: 'none', lg: 'inline-flex' }}
                         >
@@ -80,7 +81,7 @@ export default function Navbar() {
                                         padding={'8px 0px'}
                                         minW={'110'}
                                         href={navItem?.href ?? '#'}
-                                        fontSize={'md'}
+                                        fontSize={'14px'}
                                         fontWeight={500}
                                         display={'inline-block'}
                                         color={linkColor}
@@ -113,35 +114,44 @@ export default function Navbar() {
                                 )}
                             </Popover>
                         </Box>
-                    ))}
+                    ))} */}
                     {/* English dropdown end */}
 
 
-                    {/* Account button */}
-                    <Box
-                        display={{ base: 'none', md: 'inline-block' }}
-                        justify={{ base: 'end' }}
-                        border={0}
-                        boxShadow={'lg'}
-                        width={useBreakpointValue({ base: 120, lg: 95 })}
-                        bg={popoverContentBgColor}
-                        textAlign={'center'}
-                        padding={'11px 5px'}
-                        textTransform={'uppercase'}
-                    >
-                        <Link
-                            fontWeight={500}
-                            color={linkColor}
-                            fontSize={useBreakpointValue({ base: 14, lg: 12 })}
-                            _hover={{
-                                textDecoration: 'none',
-                                color: linkHoverColor,
-                            }}
-                        >
-                            My Account
-                        </Link>
-                    </Box>
-                    {/* account button end */}
+
+
+                    {/* login buttons */}
+                    {
+                        Login_Buttons?.map((items) => (
+                            <>
+                                <Box
+                                    display={{ base: 'none', md: 'inline-block' }}
+                                    justify={{ base: 'end' }}
+                                    border={0}
+                                    boxShadow={'lg'}
+                                    width={useBreakpointValue({ xl: '120px', lg: '80px', md: '110px', })}
+                                    bg={popoverContentBgColor}
+                                    textAlign={'center'}
+                                    padding={'10px 5px'}
+                                    textTransform={'uppercase'}
+                                >
+                                    <Link
+                                        fontWeight={650}
+                                        color={linkColor}
+                                        fontSize={useBreakpointValue({ xl: '14px', lg: '12px', })}
+                                        _hover={{
+                                            textDecoration: 'none',
+                                            color: linkHoverColor,
+                                        }}
+                                    >
+                                        {items.label}
+                                    </Link>
+                                </Box>
+                            </>
+                        ))
+                    }
+                    {/* login button end */}
+
 
                     {/* toggle button */}
                     <Flex
@@ -176,7 +186,7 @@ const DesktopNav = () => {
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
     return (
-        <Stack direction={'row'} alignItems={'center'} spacing={4}>
+        <Stack direction={'row'} alignItems={'center'} spacing={useBreakpointValue({ xl: 5, lg: 3, })}>
             {NAV_ITEMS?.map((navItem) => (
                 <Box key={navItem?.label}>
                     <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -185,7 +195,7 @@ const DesktopNav = () => {
                                 href={navItem?.href ?? '#'}
                                 fontWeight={500}
                                 color={linkColor}
-                                fontSize={'15px'}
+                                fontSize={useBreakpointValue({ xl: '16px', lg: '14px', })}
                                 _hover={{
                                     textDecoration: 'none',
                                     color: linkHoverColor,
@@ -270,33 +280,41 @@ const MobileNav = () => {
             {NAV_ITEMS.map((navItem) => (
                 <MobileNavItem key={navItem.label} {...navItem} />
             ))}
-            {EnglishDropDown.map((navItem) => (
+
+            {/* english dropdown */}
+            {/* {EnglishDropDown.map((navItem) => (
                 <MobileNavItem key={navItem.label} {...navItem} />
-            ))}
-            {/* Account button */}
-            <Box
-                display={{ base: 'inline-block', md: 'none' }}
-                border={0}
-                boxShadow={'lg'}
-                width={'150px'}
-                bg={popoverContentBgColor}
-                textAlign={'center'}
-                padding={'12px 5px'}
-                textTransform={'uppercase'}
-            >
-                <Link
-                    fontWeight={500}
-                    color={linkColor}
-                    fontSize={'14px'}
-                    _hover={{
-                        textDecoration: 'none',
-                        color: linkHoverColor,
-                    }}
-                >
-                    My Account
-                </Link>
-            </Box>
-            {/* account button end */}
+            ))} */}
+
+            {/* login buttons */}
+            {
+                Login_Buttons?.map((items) => (
+                    <>
+                        <Box
+                            display={{ base: 'inline-flex', md: 'none' }}
+                            border={0}
+                            boxShadow={'lg'}
+                            bg={popoverContentBgColor}
+                            textAlign={'center'}
+                            padding={'10px 40px'}
+                            textTransform={'uppercase'}
+                        >
+                            <Link
+                                fontWeight={650}
+                                color={linkColor}
+                                fontSize={useBreakpointValue({ xl: '14px', lg: '12px', })}
+                                _hover={{
+                                    textDecoration: 'none',
+                                    color: linkHoverColor,
+                                }}
+                            >
+                                {items.label}
+                            </Link>
+                        </Box>
+                    </>
+                ))
+            }
+            {/* login buttons end */}
         </Stack>
     );
 };
