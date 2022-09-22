@@ -4,7 +4,6 @@ import styles from "../../styles/build.module.css"
 import { Button, Box } from '@chakra-ui/react'
 import { FaArrowRight } from 'react-icons/fa';
 import Image from 'next/image'
-import Bu from "../../public/Bu.jpg"
 import ImageBuild from "../../public/mainImageBuild.webp"
 
 
