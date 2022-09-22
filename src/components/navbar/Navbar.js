@@ -29,6 +29,8 @@ export default function Navbar() {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
     const linkHoverColor = useColorModeValue('gray.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+    const breakpointWidth = useBreakpointValue({ xl: '120px', lg: '80px', md: '110px', });
+    const breakpointfontSize = useBreakpointValue({ xl: '14px', lg: '12px', })
 
     return (
         <Box
@@ -123,8 +125,6 @@ export default function Navbar() {
                     {/* login buttons */}
                     {
                         Login_Buttons?.map((items) => {
-                            const breakpointWidth = useBreakpointValue({ xl: '120px', lg: '80px', md: '110px', });
-                            const breakpointfontSize = useBreakpointValue({ xl: '14px', lg: '12px', })
                             return (
                                 <>
                                     <Box
@@ -188,11 +188,11 @@ const DesktopNav = () => {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
     const linkHoverColor = useColorModeValue('gray.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+    const breakpointfontSize = useBreakpointValue({ xl: '16px', lg: '14px', })
 
     return (
         <Stack direction={'row'} alignItems={'center'} spacing={useBreakpointValue({ xl: 5, lg: 3, })}>
             {NAV_ITEMS?.map((navItem) => {
-                const breakpointfontSize = useBreakpointValue({ xl: '16px', lg: '14px', })
                 return (
                     <Box key={navItem?.label}>
                         <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -279,6 +279,8 @@ const MobileNav = () => {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
     const linkHoverColor = useColorModeValue('gray.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+    const breakpointfontSize = useBreakpointValue({ xl: '14px', lg: '12px', })
+    
     return (
         <Stack
             bg={useColorModeValue('white', 'gray.800')}
@@ -296,7 +298,6 @@ const MobileNav = () => {
             {/* login buttons */}
             {
                 Login_Buttons?.map((items) => {
-                    const breakpointfontSize = useBreakpointValue({ xl: '14px', lg: '12px', })
                     return (
                         <>
                             <Box
