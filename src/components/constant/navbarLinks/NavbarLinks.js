@@ -165,9 +165,11 @@ export const EnglishDropDown = [
 
 export const Login_Buttons = [
     {
-        label : 'Register'
+        label : 'Register',
+        href: '#',
     },
     {
-        label : 'Login'
+        label : 'Login',
+        href: '#',
     },
 ]

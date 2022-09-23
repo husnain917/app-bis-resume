@@ -132,6 +132,7 @@ export default function Navbar() {
                                         justify={{ base: 'end' }}
                                         border={0}
                                         boxShadow={'lg'}
+                                        cursor={'pointer'}
                                         width={breakpointWidth}
                                         bg={popoverContentBgColor}
                                         textAlign={'center'}
@@ -139,6 +140,7 @@ export default function Navbar() {
                                         textTransform={'uppercase'}
                                     >
                                         <Link
+                                            href={items?.href ?? '#'}
                                             fontWeight={650}
                                             color={linkColor}
                                             fontSize={breakpointfontSize}
@@ -280,7 +282,7 @@ const MobileNav = () => {
     const linkHoverColor = useColorModeValue('gray.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
     const breakpointfontSize = useBreakpointValue({ xl: '14px', lg: '12px', })
-    
+
     return (
         <Stack
             bg={useColorModeValue('white', 'gray.800')}
@@ -303,6 +305,7 @@ const MobileNav = () => {
                             <Box
                                 display={{ base: 'inline-flex', md: 'none' }}
                                 border={0}
+                                cursor={'pointer'}
                                 boxShadow={'lg'}
                                 bg={popoverContentBgColor}
                                 textAlign={'center'}
@@ -310,6 +313,7 @@ const MobileNav = () => {
                                 textTransform={'uppercase'}
                             >
                                 <Link
+                                    href={items?.href ?? '#'}
                                     fontWeight={650}
                                     color={linkColor}
                                     fontSize={breakpointfontSize}
