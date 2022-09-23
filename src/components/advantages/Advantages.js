@@ -1,4 +1,4 @@
-import { Box, Button, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Image, Text, useDisclosure } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import Adv from "./Adv";
 import { data } from "./Constant";
@@ -7,34 +7,31 @@ export default function Advantages() {
   const [width, setWidth] = useState("500");
   const [Display, setDisplay] = useState("none");
   const [toastWidth, setToastWidth] = useState(0);
-  const [currentActiveTab, setCurrentActiveTab] = useState(0);
 
   const tabHandler = (index) => {
-    const length = data.length;
-    console.log(length);
     setWidth("100%");
     setDisplay("block");
-    // setToastWidth("100%");
     setIsTabActive(index);
   };
 
   useEffect(() => {
+    const progressBar = setInterval(() => {
+      setToastWidth((prev) => prev + 24);
+    }, 2000);
     const interval = setInterval(() => {
-      if (isTabActive < 5) {
-        setIsTabActive((prevTab) => {
-          if (prevTab === 5) return 0;
-          console.log("done");
-          return (prevTab += 1);
-        });
-      }
-    }, 5000);
+      setIsTabActive((prevTab) => {
+        if (prevTab === 5) return 0;
+
+        return (prevTab += 1);
+      });
+    }, 7000);
   }, []);
 
   return (
     <>
       <Box bgColor="#F6F5F0">
         <Text
-          fontSize="2rem"
+          fontSize={["2rem", , "2.5rem", "2.5rem", "3rem", "4rem"]}
           align="center"
           fontWeight="600"
           color="#002D6B"
@@ -57,11 +54,11 @@ export default function Advantages() {
           <Box w={["100%", "100%", "100%", "50%"]}>
             <Image src={data[isTabActive].imgSrc} w="100%" h="auto" />
           </Box>
-          <Box w={["100%", "100%", "100%", "50%"]} mt="2%">
+          <Box w={["100%", "100%", "100%", "50%"]} mt="2.5%">
             {data?.map((tab, index) => {
               return (
                 <Adv
-                key={index}
+                  key={index}
                   advNum={tab.advNum}
                   title={tab.title}
                   advDesc={tab.advDesc}
@@ -70,28 +67,29 @@ export default function Advantages() {
                   Display={Display}
                   toastWidth={toastWidth}
                   isTabActive={isTabActive}
-                  currentActiveTab={currentActiveTab}
                   index={index}
                 />
               );
             })}
           </Box>
         </Box>
-        <Button
-          bgColor="#027C87"
-          color="white"
-          borderRadius="50px"
-          fontSize="1.2rem"
-          fontWeight="bold"
-          textAlign="center"
-          ml={["15%","20%", "25%", "35%", "37%", "43%"]}
-          mb="5%"
-          p={["15px","25px"]}
-          pl="35px"
-          pr="35px"
-        >
-          Build my resume
-        </Button>
+        <Box display="flex" alignItems="center" justifyContent="space-around">
+          <Button
+            bgColor="#027C87"
+            color="white"
+            borderRadius="50px"
+            fontSize={["1rem", "1rem", "1.2rem", "1.2rem", "1.2rem", "1.2rem"]}
+            fontWeight="bold"
+            textAlign="center"
+            // ml={["18%","30%", "25%", "35%", "37%", "43%"]}
+            mb="5%"
+            p={["15px", "25px"]}
+            pl="35px"
+            pr="35px"
+          >
+            Build my resume
+          </Button>
+        </Box>
       </Box>
     </>
   );

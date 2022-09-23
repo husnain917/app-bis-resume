@@ -5,7 +5,26 @@ import { Text } from "@chakra-ui/react";
 import Layout from "../src/Layout";
 import { FaMinus } from "react-icons/fa";
 import Advantages from "../src/components/advantages/Advantages";
+import { useState, useEffect } from "react";
+import Reveal from "react-reveal/Reveal";
+import Fade from "react-reveal/Fade";
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+  const listenToScroll = () => {
+    let heightToHidden = 2550;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (winScroll > heightToHidden) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+  }, []);
   return (
     <>
       <Head>
@@ -15,7 +34,11 @@ export default function Home() {
       <Layout>
         <CallToAction />
         <HintSection />
-        <Advantages />
+        {isVisible && (
+          <Fade bottom >
+            <Advantages />
+          </Fade>
+        )}
       </Layout>
     </>
   );

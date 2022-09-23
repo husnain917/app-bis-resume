@@ -201,39 +201,29 @@
     margin-right: 7%;
     margin-left: 7%;
   }
-  .hrLine{
-    /* font-size: 30px;
-    background-color: #1dbfaf;
-    color: #1dbfaf;
-    padding-left: 2.5%;
-    padding-right: 2.7%;
-    border-radius: 50px;
-text-align: center;
-height: 5px;
-margin-left: 47.5%;
-margin-top: 0%; */
-
+  @media (max-width: 760px) {
+    .hrLine {
+      margin-left: 40%;
+    }
   }
-  @media (max-width:760px) {
-  .hrLine{
-    margin-left:40%
+  @media (max-width: 430px) {
+    .hrLine {
+      margin-right: 10%;
+    }
   }
-
-}
-@media (max-width:430px) {
-  .hrLine{
-    margin-right:10%
-  }
-  }
-@media (max-width:320px) {
-  .hrLine{
-    margin-right:60%
-  }
+  @media (max-width: 320px) {
+    .hrLine {
+      margin-right: 60%;
+    }
   }
 }
-
-.toastLine{
-  width: 525px;
-  transition: width 5s;
-
+.progressBar{
+ display: block;
+ height: 3px;
+ width: 95%;
+ background-color: #FF8873;
+ animation: progress 1s ease-in-out forwards;
+ animation-delay: 0.5s;
+ animation-duration: 7s;
 }
+

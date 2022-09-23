@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Box, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import styles from "../../../styles/Index.module.css";
+import { Line, Circle } from "rc-progress";
 export default function Adv({
   title,
   advNum,
@@ -10,10 +11,8 @@ export default function Adv({
   Display,
   width,
   toastWidth,
-  currentActiveTab,
   isTabActive,
-  index
-
+  index,
 }) {
   return (
     <div>
@@ -44,7 +43,7 @@ export default function Adv({
         </Text>
         <Text
           color="#002D6B"
-          fontSize={["0.5rem", "0.8rem", "1rem"]}
+          fontSize={["0.5rem", "0.8rem", "1.2rem"]}
           fontWeight="bold"
           pl="10px"
         >
@@ -52,7 +51,9 @@ export default function Adv({
         </Text>
       </Box>
       <Box
-        display={index=== isTabActive ? "block" : 'none'}
+        position="relative"
+        bottom="10px"
+        display={index === isTabActive ? "block" : "none"}
         w={width}
         h="auto"
         bgColor="white"
@@ -62,22 +63,15 @@ export default function Adv({
         <Text
           bgColor="white"
           textAlign="center"
-          fontSize={["0.5rem", "0.8rem", "1rem"]}
+          fontSize={["0.5rem", "0.8rem", "0.8rem"]}
           pl="5%"
           pr="5%"
         >
           {advDesc}
         </Text>
-        <Box
-          className={styles.toastLine}
-          mb="2%"
-          w={toastWidth}
-          bgColor="#FF8873"
-          h="3px"
-          mt="4%"
-          ml="0.5%"
-          pr="0.5"
-        ></Box>
+        <Box mt="3%">
+          <Line percent={toastWidth} strokeWidth={1} strokeColor="#FF8873"  />
+        </Box>
       </Box>
     </div>
   );
