@@ -73,7 +73,7 @@
   .ctaRightSec {
     width: 100%;
     padding-left: 10px;
-padding-right: 10px;
+    padding-right: 10px;
   }
   .ctaHeading {
     font-size: 65px;
@@ -106,7 +106,7 @@ padding-right: 10px;
   }
 }
 @media (max-width: 620px) {
-  .ctaLeftSec{
+  .ctaLeftSec {
     width: 100%;
     padding-left: 0px;
   }
@@ -139,7 +139,6 @@ padding-right: 10px;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
-
   }
   .ctaHeroButton {
     font-size: 15px;
@@ -150,13 +149,12 @@ padding-right: 10px;
     font-size: 20px;
   }
   .heroIconImgs {
-   
     margin-left: 10%;
     margin-right: 15%;
   }
 }
 @media (max-width: 420px) {
-  .ctaLeftSec{
+  .ctaLeftSec {
     width: 100%;
     padding-left: 0px;
   }
@@ -176,17 +174,13 @@ padding-right: 10px;
     padding-right: 10px;
   }
   .heroIconImgs {
-margin-left: 5%;
-margin-right: 5%;
-
+    margin-left: 5%;
+    margin-right: 5%;
   }
-  
-
 }
 
 @media (max-width: 320px) {
- 
-  .ctaLeftSec{
+  .ctaLeftSec {
     width: 100%;
     padding-left: 0px;
   }
@@ -201,12 +195,39 @@ margin-right: 5%;
   .ctaText {
     font-size: 18px;
     padding-left: 13px;
-    padding-right :13px ;
+    padding-right: 13px;
   }
   .heroIconImgs {
-   
     margin-right: 7%;
     margin-left: 7%;
- 
-      }
+  }
+  .hrLine{
+    /* font-size: 30px;
+    background-color: #1dbfaf;
+    color: #1dbfaf;
+    padding-left: 2.5%;
+    padding-right: 2.7%;
+    border-radius: 50px;
+text-align: center;
+height: 5px;
+margin-left: 47.5%;
+margin-top: 0%; */
+
+  }
+  @media (max-width:760px) {
+  .hrLine{
+    margin-left:40%
+  }
+
+}
+@media (max-width:430px) {
+  .hrLine{
+    margin-right:10%
+  }
+  }
+@media (max-width:320px) {
+  .hrLine{
+    margin-right:60%
+  }
+  }
 }

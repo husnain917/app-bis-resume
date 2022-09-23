@@ -10,7 +10,7 @@ export default function RightCard({ cardData}) {
 
 
   return (
-    <Box bg='white' display={width >= 767 ? "auto":"flex" } flexDirection={width >= 767 ? "auto": "Column" } justifyContent="center" alignItems="center" minHeight={width >= 767 ? "fit-content" : {base:580,sm:350}} borderRadius="10px" py={4} px={6} my={5} >
+    <Box bg='white' display={width >= 767 ? "auto":"flex" } flexDirection={width >= 767 ? "auto": "Column" } justifyContent="center" alignItems="center" minHeight={width >= 767 ? "fit-content" : {base:530,sm:350}} borderRadius="10px" py={4} px={6} my={5} >
       <Box pos="relative" textAlign={width >= 767 ? null : "center"}><Circle data={{ customStyle: cardData.customStyle, text: cardData.text }} />
         <Text px={2} pos={width >= 767 ? "absolute" : null} color="#002d6b"
           fontSize={{ base: "1.4rem", md: '1.1rem', lg: "1.4rem" }} fontWeight="bold"

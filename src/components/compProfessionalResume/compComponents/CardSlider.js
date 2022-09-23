@@ -69,7 +69,7 @@ export default function CardSliderFunc({cardWidth}) {
             prevArrow: <SamplePrevArrow />,
         };
         return (
-            <div  style={{ maxWidth: this.props.cardWidth ,  padding:"5px 12px"}} >
+            <div  style={{ maxWidth: this.props?.cardWidth || "auto",  padding:"5px 12px"}} >
                 <Slider   {...settings}>
                     {cardData.map((item, index) => {
                         return (

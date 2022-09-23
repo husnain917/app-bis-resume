@@ -12,7 +12,7 @@ export default function CompProfessionalResume() {
      const size     = useWindowSizing()
       
     const width = size.width
-    const carouselWidth = width - 100;
+    const carouselWidth = width - 50;
     
     return (
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} p={{ base: 5, sm: 8, md: 16 }} bg='#f6f5f0'>
@@ -33,7 +33,7 @@ export default function CompProfessionalResume() {
                     }
                 </div>
             </Box>
-            <Box pt={8} display={width >= 767 ? "block" : "flex"} justifyContent={width >= 767 ? null : "center"}>
+            <Box pt={8} mx={width >= 767 ? "auto" : "-8px"}display={width >= 767 ? "block" : "flex"}  justifyContent={width >= 767 ? null : "center"}>
                 {width >= 767 ?
                     cardData.map((item, index) => {
                         return (
