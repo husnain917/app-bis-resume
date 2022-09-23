@@ -33,7 +33,8 @@
     "redux-thunk": "^2.4.1",
     "sass": "^1.54.9",
     "slick-carousel": "^1.8.1",
-    "uniqid": "^5.4.0"
+    "uniqid": "^5.4.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "eslint": "8.23.1",
