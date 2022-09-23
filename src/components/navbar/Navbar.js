@@ -20,7 +20,7 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
 } from '@chakra-ui/icons';
-import logoIcon from "../../../public/vercel.svg";
+import logoIcon from "../../../public/bisResumeLogo.png";
 import Image from 'next/image';
 import { NAV_ITEMS, EnglishDropDown, Login_Buttons } from "../constant/navbarLinks/NavbarLinks";
 
@@ -41,24 +41,30 @@ export default function Navbar() {
             <Flex
                 bg={useColorModeValue('white', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
-                minH={'60px'}
+                minH={'110px'}
                 py={{ base: 2 }}
-                mx={useBreakpointValue({ xl: '95px', lg: '40px', })}
+                mx={useBreakpointValue({ xl: '62px', lg: '30px', })}
                 align={'center'}>
 
                 {/* logo */}
                 <Flex
                     flex={{ base: 1 }}
                     justify={{ base: 'start' }}
+                    alignItems={{ base:'center' }}
                 >
                     <Image
                         src={logoIcon}
                         alt='Image Not Found'
-                        width={useBreakpointValue({ base: 100 })}
+                        height={useBreakpointValue({ xl: '90px', lg: '60px', md: '70px', sm: '70px' })}
+                        width={useBreakpointValue({ xl: '250px', lg: '170px', md: '200px', sm: '180px' })}
                     />
 
                     {/* deskTop Nav */}
-                    <Flex display={{ base: 'none', lg: 'flex', }} marginLeft={useBreakpointValue({ xl: '6rem', lg: '3rem', })}>
+                    <Flex
+                        display={{ base: 'none', lg: 'flex', }}
+                        marginTop={useBreakpointValue({ xl: '20px', lg: '12px' })}
+                        marginLeft={useBreakpointValue({ xl: '3rem', lg: '1.2rem', })}
+                    >
                         <DesktopNav />
                     </Flex>
                 </Flex>
@@ -70,6 +76,7 @@ export default function Navbar() {
                     direction={'row'}
                     alignItems={'center'}
                     spacing={5}
+                    marginTop={useBreakpointValue({ xl: '20px', lg: '12px', md: '15px' })}
                 >
 
                     {/* English dropdown start */}
