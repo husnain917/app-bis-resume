@@ -39,6 +39,7 @@ export default function CardSliderFunc({cardWidth}) {
 
   const [height, setHeight] = useState(400);
   const [width, setWidth] = useState(0);
+  // console.log(height)
 
   useEffect(() => {
     setHeight(ref.current.offsetHeight);
@@ -68,11 +69,11 @@ export default function CardSliderFunc({cardWidth}) {
             prevArrow: <SamplePrevArrow />,
         };
         return (
-            <div  style={{ maxWidth: this.props.cardWidth , border:"1px solid",  padding:"5px 12px"}} >
+            <div  style={{ maxWidth: this.props.cardWidth ,  padding:"5px 12px"}} >
                 <Slider   {...settings}>
                     {cardData.map((item, index) => {
                         return (
-                               <RightCard cardData={item} height={this.props.height} key={index} />
+                               <RightCard cardData={item} key={index} />
                          
                         )
                     })

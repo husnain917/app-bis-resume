@@ -3,22 +3,14 @@ import React from 'react'
 import Circle from './Circle'
 import { useWindowSizing } from '../../../../customHooks/useWindowSizing'
 
-export default function RightCard({ cardData, height }) {
+export default function RightCard({ cardData}) {
   const size = useWindowSizing()
   const width = size.width
-  let newHeight = height
-  if (height > 600) {
-    newHeight = 400 - 50
-  }
-  //  else if (height  > 700) {
-  //   newHeight = height - 100
-  // }else{
-  //   newHeight = height 
-  // }
-  console.log({ newHeight })
+ 
+
 
   return (
-    <Box bg='white'  minHeight={width >= 767 ? "fit-content" : "inherit"} borderRadius="10px" py={4} px={6} my={5} >
+    <Box bg='white' display={width >= 767 ? "auto":"flex" } flexDirection={width >= 767 ? "auto": "Column" } justifyContent="center" alignItems="center" minHeight={width >= 767 ? "fit-content" : {base:580,sm:350}} borderRadius="10px" py={4} px={6} my={5} >
       <Box pos="relative" textAlign={width >= 767 ? null : "center"}><Circle data={{ customStyle: cardData.customStyle, text: cardData.text }} />
         <Text px={2} pos={width >= 767 ? "absolute" : null} color="#002d6b"
           fontSize={{ base: "1.4rem", md: '1.1rem', lg: "1.4rem" }} fontWeight="bold"
