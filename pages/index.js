@@ -1,6 +1,8 @@
 import Head from "next/head";
 import CallToAction from "../src/components/CallToAction";
 import FaqsComponent from "../src/components/faqsComponent/FaqsComponent";
+
+import Flex1 from "../src/components/faqsComponent/Flex1";
 import RatingComponent from "../src/components/ratingComponent/RatingComponent";
 import SliderComponent from "../src/components/sliderComponent/SliderComponent";
 import HintSection from "../src/components/hintSection/HintSection";
@@ -10,6 +12,7 @@ import { Text } from "@chakra-ui/react";
 import { FaMinus } from "react-icons/fa";
 
 import Hint from "../src/components/hintSection/Hint";
+import PracticingGrid from "../src/components/faqsComponent/PracticingGrid";
 export default function Home() {
   return (
     <>
@@ -21,11 +24,12 @@ export default function Home() {
           <meta name="description" content="Create resume with ease!" />
         </Head>
         <Layout>
-          <CallToAction />
-
+          {/* <CallToAction /> */}
+          {/* <SliderComponent /> */}
           {/* <FaqsComponent /> */}
-          <SliderComponent />
+          <Flex1 />
           {/* <HintSection /> */}
+          {/* <PracticingGrid /> */}
         </Layout>
       </div>
     </>
