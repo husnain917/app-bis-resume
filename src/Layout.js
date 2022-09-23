@@ -1,11 +1,14 @@
 import React from 'react'
+import BuildResume from './components/BuildResume'
 import Footer from './components/footer/Footer'
 
-export default function Layout({children}) {
+export default function Layout({ children }) {
   return (
     <>
       <main>{children}</main>
+      <BuildResume />
       <Footer />
+
     </>
   )
 }
