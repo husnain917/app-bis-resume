@@ -217,13 +217,32 @@
     }
   }
 }
-.progressBar{
- display: block;
- height: 3px;
- width: 95%;
- background-color: #FF8873;
- animation: progress 1s ease-in-out forwards;
- animation-delay: 0.5s;
- animation-duration: 7s;
+.benefitBtn {
+  transition: transform 0.3s ease;
 }
+.benefitBtn::after,
+.benefitBtn::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background-color: #027c98;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 50px;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.benefitBtn:hover {
+  background-color: #027c87;
+  color: white;
 
+  transform: translate(-12px, -12px);
+}
+.benefitBtn:hover::after {
+  transform: translate(6px, 6px);
+}
+.benefitBtn:hover::before {
+  transform: translate(12px, 12px);
+}

@@ -2,6 +2,7 @@ import { Box, Button, Image, Text, useDisclosure } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import Adv from "./Adv";
 import { data } from "./Constant";
+import styles from "../../../styles/Index.module.css"
 export default function Advantages() {
   const [isTabActive, setIsTabActive] = useState(0);
   const [width, setWidth] = useState("500");
@@ -75,17 +76,18 @@ export default function Advantages() {
         </Box>
         <Box display="flex" alignItems="center" justifyContent="space-around">
           <Button
+          colorScheme="#027C87"
             bgColor="#027C87"
             color="white"
             borderRadius="50px"
             fontSize={["1rem", "1rem", "1.2rem", "1.2rem", "1.2rem", "1.2rem"]}
             fontWeight="bold"
             textAlign="center"
-            // ml={["18%","30%", "25%", "35%", "37%", "43%"]}
             mb="5%"
-            p={["15px", "25px"]}
-            pl="35px"
-            pr="35px"
+            p={["15px",, "25px"]}
+            pl="40px"
+            pr="40px"
+            className={styles.benefitBtn}
           >
             Build my resume
           </Button>
