@@ -1,0 +1,122 @@
+.nav {
+    position: fixed;
+    width: 70px;
+    transition: all 0.3s linear;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.nav li {
+    height: 60px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.nav li a {
+    color: #002d6b;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 60px;
+    padding-left: 25%;
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
+    transition: all .3s linear;
+    border-radius: 220px;
+
+}
+
+.nav li:nth-child(1) a {
+    background: #cad5e2;
+    margin-bottom: 10px;
+}
+
+
+
+.nav li:nth-child(2) a {
+    background-color: #cad5e2;
+}
+
+.nav li:nth-child(3) a {
+    background: #cad5e2;
+}
+
+.nav li:nth-child(3) a {
+    background: #cad5e2;
+}
+
+.nav li:nth-child(4) a {
+    background: #cad5e2;
+}
+
+.nav li:nth-child(5) a {
+    background: #cad5e2;
+}
+
+.nav li:nth-child(6) a {
+    background: #cad5e2;
+}
+
+.nav li:nth-child(7) a {
+    background: #cad5e2;
+}
+
+.nav li:nth-child(3) a:hover {
+    background-color: #002D6C;
+    color: white;
+}
+
+.nav li:nth-child(4) a:hover {
+    background-color: #0073b1;
+    color: white;
+}
+
+.nav li:nth-child(5) a:hover {
+    background-color: #00ACEE;
+    color: white;
+}
+
+.nav li:nth-child(6) a:hover {
+    background-color: #02818c;
+    color: white;
+}
+
+.nav li:nth-child(7) a:hover {
+    background-color: red;
+    color: white;
+}
+
+.BtnOpen {
+    font-size: 10px;
+    font-weight: 500;
+}
+.nav li a i {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    font-size: 27px;
+}
+
+.ul li a span {
+    display: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.a:hover {
+    z-index: 1;
+    width: 200px;
+   
+}
+
+
+
+.ul li:hover a span {
+    padding-left: 30%;
+    display: block;
+}
+
+.btnAction {
+    border: 2px dashed #002d6b;
+    background-color: white;
+}
