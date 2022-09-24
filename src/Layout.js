@@ -8,7 +8,6 @@ export default function Layout({ children }) {
       <main>{children}</main>
       <BuildResume />
       <Footer />
-
     </>
   )
 }

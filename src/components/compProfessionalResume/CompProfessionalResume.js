@@ -33,7 +33,7 @@ export default function CompProfessionalResume() {
                     }
                 </div>
             </Box>
-            <Box pt={width >= 767 ? "8px" : "0px"} pb={width >= 767 ? "auto" : "20px"} mx={width >= 767 ? "auto" : "-8px"} display={width >= 767 ? "block" : "flex"}  justifyContent={width >= 767 ? null : "center"}>
+            <Box pt={width >= 767 ? "8px" : "0px"} pb={width >= 767 ? "auto" : "20px"}  display={width >= 767 ? "block" : "flex"}  justifyContent={width >= 767 ? null : "center"}>
                 {width >= 767 ?
                     cardData.map((item, index) => {
                         return (
