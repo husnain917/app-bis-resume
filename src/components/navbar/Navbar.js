@@ -20,13 +20,13 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
 } from '@chakra-ui/icons';
-import logoIcon from "../../../public/bisResumeLogo.png";
+import logoIcon from "../../../public/bisResumeLogo.svg";
 import Image from 'next/image';
 import { NAV_ITEMS, EnglishDropDown, Login_Buttons } from "../constant/navbarLinks/NavbarLinks";
 
 export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
-    const linkColor = useColorModeValue('gray.600', 'gray.200');
+    // const linkColor = useColorModeValue('gray.600', 'gray.200');
     const linkHoverColor = useColorModeValue('gray.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
     const breakpointWidth = useBreakpointValue({ xl: '120px', lg: '80px', md: '110px', });
@@ -50,7 +50,7 @@ export default function Navbar() {
                 <Flex
                     flex={{ base: 1 }}
                     justify={{ base: 'start' }}
-                    alignItems={{ base:'center' }}
+                    alignItems={{ base: 'center' }}
                 >
                     <Image
                         src={logoIcon}
@@ -137,8 +137,11 @@ export default function Navbar() {
                                     <Box
                                         display={{ base: 'none', md: 'inline-block' }}
                                         justify={{ base: 'end' }}
-                                        border={0}
-                                        boxShadow={'lg'}
+                                        style={{
+                                            border: '1px solid #e0e2e8',
+                                            boxShadow: '0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)',
+                                            borderRadius: '0.2rem'
+                                        }}
                                         cursor={'pointer'}
                                         width={breakpointWidth}
                                         bg={popoverContentBgColor}
@@ -149,7 +152,7 @@ export default function Navbar() {
                                         <Link
                                             href={items?.href ?? '#'}
                                             fontWeight={650}
-                                            color={linkColor}
+                                            color={'#71737d'}
                                             fontSize={breakpointfontSize}
                                             _hover={{
                                                 textDecoration: 'none',
@@ -305,37 +308,46 @@ const MobileNav = () => {
             ))} */}
 
             {/* login buttons */}
-            {
-                Login_Buttons?.map((items) => {
-                    return (
-                        <>
-                            <Box
-                                display={{ base: 'inline-flex', md: 'none' }}
-                                border={0}
-                                cursor={'pointer'}
-                                boxShadow={'lg'}
-                                bg={popoverContentBgColor}
-                                textAlign={'center'}
-                                padding={'10px 40px'}
-                                textTransform={'uppercase'}
-                            >
-                                <Link
-                                    href={items?.href ?? '#'}
-                                    fontWeight={650}
-                                    color={linkColor}
-                                    fontSize={breakpointfontSize}
-                                    _hover={{
-                                        textDecoration: 'none',
-                                        color: linkHoverColor,
+            <Box
+                display={'flex'}
+                justifyContent={'space-evenly'}
+            >
+                {
+                    Login_Buttons?.map((items) => {
+                        return (
+                            <>
+                                <Box
+                                    display={{ base: 'inline-flex', md: 'none' }}
+                                    cursor={'pointer'}
+                                    style={{
+                                        border: '1px solid #e0e2e8',
+                                        boxShadow: '0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)',
+                                        borderRadius: '0.2rem',
+                                        width: '110px'
                                     }}
+                                    bg={popoverContentBgColor}
+                                    padding={'10px 0px'}
+                                    justifyContent={'center'}
+                                    textTransform={'uppercase'}
                                 >
-                                    {items.label}
-                                </Link>
-                            </Box>
-                        </>
-                    )
-                })
-            }
+                                    <Link
+                                        href={items?.href ?? '#'}
+                                        fontWeight={650}
+                                        color={linkColor}
+                                        fontSize={breakpointfontSize}
+                                        _hover={{
+                                            textDecoration: 'none',
+                                            color: linkHoverColor,
+                                        }}
+                                    >
+                                        {items.label}
+                                    </Link>
+                                </Box>
+                            </>
+                        )
+                    })
+                }
+            </Box>
             {/* login buttons end */}
         </Stack>
     );
