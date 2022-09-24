@@ -9,10 +9,11 @@ export default function Adv({
   advDesc,
   tabHandler,
   Display,
-  width,
+  Width,
   toastWidth,
   isTabActive,
   index,
+  isSlider,
 }) {
   return (
     <div>
@@ -49,12 +50,27 @@ export default function Adv({
         >
           {title}
         </Text>
+        {isSlider?
+        <>
+        <Text
+          bgColor="white"
+          textAlign="center"
+          fontSize={["0.5rem", "0.8rem", "0.8rem"]}
+          pl="5%"
+          pr="5%"
+        >
+          {advDesc}
+        </Text>
+        </>
+
+        : null 
+        }
       </Box>
       <Box
         position="relative"
         bottom="10px"
         display={index === isTabActive ? "block" : "none"}
-        w={width}
+        w={Width}
         h="auto"
         bgColor="white"
         borderBottomRightRadius="12px"
@@ -70,7 +86,7 @@ export default function Adv({
           {advDesc}
         </Text>
         <Box mt="3%">
-          <Line percent={toastWidth} strokeWidth={1} strokeColor="#FF8873"  />
+          <Line percent={toastWidth} strokeWidth={1} strokeColor="#FF8873" />
         </Box>
       </Box>
     </div>

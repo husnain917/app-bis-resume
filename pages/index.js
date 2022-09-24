@@ -1,8 +1,9 @@
 import Head from "next/head";
 import CallToAction from "../src/components/CallToAction";
+import Layout from "../src/Layout";
+import CompProfessionalResume from "../src/components/compProfessionalResume/CompProfessionalResume";
 import HintSection from "../src/components/hintSection/HintSection";
 import { Text } from "@chakra-ui/react";
-import Layout from "../src/Layout";
 import { FaMinus } from "react-icons/fa";
 import Advantages from "../src/components/advantages/Advantages";
 import { useState, useEffect } from "react";
@@ -21,7 +22,6 @@ export default function Home() {
       setIsVisible(false);
     }
   };
-
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
   }, []);
@@ -39,6 +39,7 @@ export default function Home() {
             <Advantages />
           </Fade>
         )}
+        <CompProfessionalResume />
       </Layout>
     </>
   );

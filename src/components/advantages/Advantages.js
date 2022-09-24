@@ -2,14 +2,21 @@ import { Box, Button, Image, Text, useDisclosure } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import Adv from "./Adv";
 import { data } from "./Constant";
-import styles from "../../../styles/Index.module.css"
+import styles from "../../../styles/Index.module.css";
+import CardSliderFunc from "../compProfessionalResume/compComponents/CardSlider";
+import { useWindowSizing } from "../../../customHooks/useWindowSizing";
+import AdvSlider from "./AdvSlider";
 export default function Advantages() {
   const [isTabActive, setIsTabActive] = useState(0);
-  const [width, setWidth] = useState("500");
+  const [Width, setWidth] = useState("500");
   const [Display, setDisplay] = useState("none");
   const [toastWidth, setToastWidth] = useState(0);
 
+  const size = useWindowSizing();
+  const width = size.width;
+
   const tabHandler = (index) => {
+    setToastWidth(0);
     setWidth("100%");
     setDisplay("block");
     setIsTabActive(index);
@@ -19,6 +26,7 @@ export default function Advantages() {
     const progressBar = setInterval(() => {
       setToastWidth((prev) => prev + 24);
     }, 2000);
+    clearInterval(interval,2000)
     const interval = setInterval(() => {
       setIsTabActive((prevTab) => {
         if (prevTab === 5) return 0;
@@ -45,9 +53,9 @@ export default function Advantages() {
           w="100%"
           h="auto"
           display="flex"
-          flexDir={["column", "column", "column", "row"]}
+          flexDir={["column", "column", "row", "row"]}
           justifyContent="center"
-          mt={["10%", , , "2%"]}
+          mt={["10%", "2%"]}
           pl="10%"
           pr="10%"
           pb="5%"
@@ -56,27 +64,31 @@ export default function Advantages() {
             <Image src={data[isTabActive].imgSrc} w="100%" h="auto" />
           </Box>
           <Box w={["100%", "100%", "100%", "50%"]} mt="2.5%">
-            {data?.map((tab, index) => {
-              return (
-                <Adv
-                  key={index}
-                  advNum={tab.advNum}
-                  title={tab.title}
-                  advDesc={tab.advDesc}
-                  tabHandler={() => tabHandler(index)}
-                  width={width}
-                  Display={Display}
-                  toastWidth={toastWidth}
-                  isTabActive={isTabActive}
-                  index={index}
-                />
-              );
-            })}
+            {width >= 767 ? (
+              data?.map((tab, index) => {
+                return (
+                  <Adv
+                    key={index}
+                    advNum={tab.advNum}
+                    title={tab.title}
+                    advDesc={tab.advDesc}
+                    tabHandler={() => tabHandler(index)}
+                    Width={Width}
+                    Display={Display}
+                    toastWidth={toastWidth}
+                    isTabActive={isTabActive}
+                    index={index}
+                  />
+                );
+              })
+            ) : (
+              <AdvSlider isTabActive={isTabActive}/>
+            )}
           </Box>
         </Box>
         <Box display="flex" alignItems="center" justifyContent="space-around">
           <Button
-          colorScheme="#027C87"
+            colorScheme="#027C87"
             bgColor="#027C87"
             color="white"
             borderRadius="50px"
@@ -84,7 +96,7 @@ export default function Advantages() {
             fontWeight="bold"
             textAlign="center"
             mb="5%"
-            p={["15px",, "25px"]}
+            p={["15px", , "25px"]}
             pl="40px"
             pr="40px"
             className={styles.benefitBtn}
