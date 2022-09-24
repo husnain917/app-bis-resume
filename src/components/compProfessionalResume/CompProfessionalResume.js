@@ -17,7 +17,7 @@ export default function CompProfessionalResume() {
     return (
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} p={{ base: 5, sm: 8, md: 16 }} bg='#f6f5f0'>
             <Box>
-                <Text fontSize={{ base: "2.0rem", sm: "2.8rem" }} textAlign={{ base: "center", sm: "left" }} className={styles.headingComp}>The components of a professional resume</Text >
+                <Text fontSize={{ base: "2.0rem", sm: "2.8rem" }} textAlign={{ base: "center", sm: "left" }} className={styles.headingComp}>The components of a BisResume</Text >
                 <div className={styles.resumeImgDiv}>
                     <Image
                         src='/lawyer-resume-example.svg'
@@ -33,7 +33,7 @@ export default function CompProfessionalResume() {
                     }
                 </div>
             </Box>
-            <Box pt={8} mx={width >= 767 ? "auto" : "-8px"}display={width >= 767 ? "block" : "flex"}  justifyContent={width >= 767 ? null : "center"}>
+            <Box pt={width >= 767 ? "8px" : "0px"} pb={width >= 767 ? "auto" : "20px"} mx={width >= 767 ? "auto" : "-8px"} display={width >= 767 ? "block" : "flex"}  justifyContent={width >= 767 ? null : "center"}>
                 {width >= 767 ?
                     cardData.map((item, index) => {
                         return (
