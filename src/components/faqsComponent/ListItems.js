@@ -16,14 +16,14 @@ const ListItems = () => {
     <Box>
       <Grid
         minHeight="400px"
-        templateRows="repeat(2, 1fr)"
+        templateRows="repeat(1, 1fr)"
+        margin="3.2rem auto"
         gridTemplateColumns={[
           "1fr 1fr 1fr",
           "1fr 1fr 1fr",
           "1fr 1fr 1fr",
           "1fr 2fr 1fr",
         ]}
-        gap={4}
         w={["100%", "94%", "100%", "100%", "100%", "100%", "100%"]}
       >
         <GridItem rowSpan={2} colSpan={1}></GridItem>

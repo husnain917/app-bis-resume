@@ -26,8 +26,8 @@ export default function Home() {
         <Layout>
           {/* <CallToAction /> */}
           {/* <SliderComponent /> */}
-          {/* <FaqsComponent /> */}
-          <Flex1 />
+          <FaqsComponent />
+          {/* <Flex1 /> */}
           {/* <HintSection /> */}
           {/* <PracticingGrid /> */}
         </Layout>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Flex, Box, Image, Text } from "@chakra-ui/react";
 
 const Flex1 = () => {
   return (
@@ -10,9 +10,9 @@ const Flex1 = () => {
       alignItems="center"
       w={["100%", "94%", "860px", "960px", "1220px", "1500px"]}
     >
-      <Box>
+      <Flex>
         <Image objectFit="cover" src="/faq0@2x.png" alt="Dan Abramov" />
-      </Box>
+      </Flex>
       <Box
         w={["100%", "80%", "100%", "100%", "100%", "100%", "80%"]}
         minH="400px"

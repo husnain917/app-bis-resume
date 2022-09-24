@@ -16,7 +16,8 @@ const FaqsWithoutList = () => {
     <Box>
       <Grid
         minHeight="400px"
-        templateRows="repeat(2, 1fr)"
+        templateRows="repeat(1, 1fr)"
+        margin="3.2rem auto"
         gridTemplateColumns={[
           "1fr 1fr 1fr",
           "1fr 1fr 1fr",
@@ -31,9 +32,11 @@ const FaqsWithoutList = () => {
           data-aos-duration="1000"
           rowSpan={2}
           colSpan={1}
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
+          // display="flex"
+          // alignItems="center"
+          // justifyContent="center"
+          marginInlineStart="40px"
+          marginInlineEnd="40px"
         >
           <Image objectFit="cover" src="/faq0@2x.png" alt="Dan Abramov" />
         </GridItem>
