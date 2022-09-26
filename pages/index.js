@@ -1,8 +1,6 @@
 import Head from "next/head";
 import CallToAction from "../src/components/CallToAction";
 import FaqsComponent from "../src/components/faqsComponent/FaqsComponent";
-
-import Flex1 from "../src/components/faqsComponent/Flex1";
 import RatingComponent from "../src/components/ratingComponent/RatingComponent";
 import SliderComponent from "../src/components/sliderComponent/SliderComponent";
 import HintSection from "../src/components/hintSection/HintSection";
@@ -24,12 +22,13 @@ export default function Home() {
           <meta name="description" content="Create resume with ease!" />
         </Head>
         <Layout>
-          {/* <CallToAction /> */}
-          {/* <SliderComponent /> */}
-          <FaqsComponent />
+          {/* <CallToAction />
+          <SliderComponent /> */}
+          {/* <FaqsComponent /> */}
           {/* <Flex1 /> */}
-          {/* <HintSection /> */}
-          {/* <PracticingGrid /> */}
+          <HintSection />
+          <PracticingGrid />
+          {/* <FaqsComponent /> */}
         </Layout>
       </div>
     </>

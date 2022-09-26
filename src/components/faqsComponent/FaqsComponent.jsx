@@ -13,7 +13,6 @@ import ListItems from "./ListItems";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import FaqsWithoutList from "./faqsWithoutList";
-import Flex1 from "./Flex1";
 
 const FaqsComponent = () => {
   useEffect(() => {
