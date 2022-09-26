@@ -6,10 +6,9 @@ import SideBar from './components/sideBar/SideBar'
 export default function Layout({ children }) {
   return (
     <>
-      {/* <main>{children}</main>
+      <main>{children}</main>
       <BuildResume />
-      <Footer /> */}
-      <SideBar />
+      <Footer />
 
     </>
   )

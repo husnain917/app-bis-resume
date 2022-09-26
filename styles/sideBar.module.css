@@ -2,8 +2,9 @@
     position: fixed;
     width: 70px;
     transition: all 0.9s linear;
-    margin-top: 10px;
     margin-left: 10px;
+    position: absolute;
+    margin-top: 20px;
 }
 
 .nav li {
@@ -86,7 +87,7 @@
 }
 
 .BtnOpen {
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 500;
 }
 
@@ -106,7 +107,7 @@
 
 .a:hover {
     z-index: 1;
-    width: 160px;
+    width: 190px;
     overflow-y: hidden;
 
 }

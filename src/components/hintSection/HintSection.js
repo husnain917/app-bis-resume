@@ -3,9 +3,11 @@ import React from "react";
 import { FaMinus } from "react-icons/fa";
 import Hint from "./Hint";
 import styles from "../../../styles/Index.module.css";
+import SideBar from "../sideBar/SideBar";
 export default function HintSection() {
   return (
     <div style={{ marginTop: "5%", marginBottom: "5%" }}>
+      <SideBar/>
       <Text
         fontSize={["2.5rem", "2.5rem", "3rem", "3rem", "3rem", "4.5rem"]}
         color="#313B47"
