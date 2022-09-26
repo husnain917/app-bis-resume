@@ -25,9 +25,7 @@ const FaqsSection = () => {
         text2={
           " The whole process is a huge pain - you make a TINY change to your resume, and the entire resume layout gets completely messed up."
         }
-        text3={
-          "`With a resume builder, you don&#39;t have to worry about the nitty gritty of resume creation, like font selection, layout, formatting, etc.`"
-        }
+        text3={`With a resume builder, you don't have to worry about the nitty gritty of resume creation, like font selection, layout, formatting, etc.`}
         text4={` All you have to do is pick a resume template, fill it in, and then you're ready to start applying for jobs! `}
         image={"/faq0@2x.png"}
       />
