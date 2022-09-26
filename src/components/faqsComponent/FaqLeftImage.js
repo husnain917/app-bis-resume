@@ -54,7 +54,7 @@ const FaqLeftImage = ({
           <Text fontSize={["2.75em"]} fontWeight="600">
             {heading}
           </Text>
-          <Text fontSize="2xl" my={4} fontWeight="500" letterSpacing={2}>
+          <Text fontSize="2xl" my={4}>
             {" "}
             {text1}
           </Text>

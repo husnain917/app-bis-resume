@@ -26,7 +26,7 @@ const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
           <Text fontSize={["2.75em"]} fontWeight="600">
             {heading}
           </Text>
-          <Text fontSize={["1.5em"]} my={4}>
+          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.5em"]} my={4}>
             {" "}
             {text1}
           </Text>
