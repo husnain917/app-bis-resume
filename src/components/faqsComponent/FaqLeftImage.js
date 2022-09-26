@@ -51,7 +51,7 @@ const FaqLeftImage = ({
         flexDirection={["column-reverse"]}
       >
         <GridItem pl="2" area={"textArea"} position="relative">
-          <Text fontSize={["2.75em"]} className="font">
+          <Text fontSize={["2.75em"]} fontWeight="600">
             {heading}
           </Text>
           <Text fontSize="2xl" my={4} fontWeight="500" letterSpacing={2}>

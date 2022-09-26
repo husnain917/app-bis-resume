@@ -16,14 +16,14 @@ const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
           "1fr 2fr 1fr",
         ]}
         color="blackAlpha.700"
-        margin="3.2rem auto"
+        // margin="3.2rem auto"
         display={["flex", "flex", "grid", "grid", "grid", "grid", "grid"]}
         flexDirection={["column-reverse"]}
         marginInlineStart="40px"
         marginInlineEnd="40px"
       >
         <GridItem pl="2" area={"textArea"} position="relative">
-          <Text fontSize={["2.75em"]} className="font">
+          <Text fontSize={["2.75em"]} fontWeight="600">
             {heading}
           </Text>
           <Text fontSize={["1.5em"]} my={4}>
