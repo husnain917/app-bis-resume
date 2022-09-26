@@ -3,6 +3,7 @@ import { Box, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import styles from "../../../styles/Index.module.css";
 import { Line, Circle } from "rc-progress";
+import ProgressBar from "@ramonak/react-progress-bar";
 export default function Adv({
   title,
   advNum,
@@ -44,27 +45,12 @@ export default function Adv({
         </Text>
         <Text
           color="#002D6B"
-          fontSize={["0.5rem", "0.8rem", "1.2rem"]}
+          fontSize={["0.5rem", "0.8rem", "1.2rem", "1.2rem", "1.2rem", "2rem"]}
           fontWeight="bold"
           pl="10px"
         >
           {title}
         </Text>
-        {isSlider?
-        <>
-        <Text
-          bgColor="white"
-          textAlign="center"
-          fontSize={["0.5rem", "0.8rem", "0.8rem"]}
-          pl="5%"
-          pr="5%"
-        >
-          {advDesc}
-        </Text>
-        </>
-
-        : null 
-        }
       </Box>
       <Box
         position="relative"
@@ -77,16 +63,26 @@ export default function Adv({
         borderBottomLeftRadius="12px"
       >
         <Text
+          borderBottomRightRadius="12px"
+          borderBottomLeftRadius="12px"
           bgColor="white"
-          textAlign="center"
-          fontSize={["0.5rem", "0.8rem", "0.8rem"]}
+          textAlign="left"
+          fontSize={["0.5rem", "0.8rem", "0.8rem", "0.8rem", "0.8rem", "1.5em"]}
           pl="5%"
           pr="5%"
+          pb="3%"
+          pt="2%"
         >
           {advDesc}
         </Text>
         <Box mt="3%">
-          <Line percent={toastWidth} strokeWidth={1} strokeColor="#FF8873" />
+        <Line
+            percent={toastWidth}
+            strokeWidth={1}
+            strokeColor="#FF8873"
+            className={styles.toastLine}
+          />
+        {/* <ProgressBar completed={toastWidth} bgColor="#FF8873" height="5px"  /> */}
         </Box>
       </Box>
     </div>

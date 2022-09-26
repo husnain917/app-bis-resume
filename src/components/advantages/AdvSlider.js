@@ -2,36 +2,33 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import Adv from "./Adv";
 import { data } from "./Constant";
+import MobileAdv from "./MobileAdv";
 export default class AdvSlider extends Component {
-  
   render() {
     const settings = {
       dots: true,
+      dotsClass: "slick-dots slick-thumb",
       infinite: true,
       autoplay: true,
       speed: 700,
+      autoplaySpeed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1,
       initialSlide: 0,
-      swipe: false,
+      swipe: true,
       arrows: false,
-      afterChange: function(index) {
-        console.log(
-          `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-        );
-      }
-      
     };
     return (
       <div>
         <Slider {...settings}>
-          {data?.map((item,index) => {
+          {data?.map((item, index) => {
             return (
-              <Adv
-              key={index}
+              <MobileAdv
+                key={index}
                 advNum={item.advNum}
                 title={item.title}
                 advDesc={item.advDesc}
+                imgSrc={item.imgSrc}
                 isSlider={false}
               />
             );

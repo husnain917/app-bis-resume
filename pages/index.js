@@ -35,7 +35,7 @@ export default function Home() {
         <CallToAction />
         <HintSection />
         {isVisible && (
-          <Fade bottom>
+          <Fade center>
             <Advantages />
           </Fade>
         )}
