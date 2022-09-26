@@ -12,8 +12,6 @@ import { TiSocialPinterest } from "react-icons/ti";
 import { MdEmail } from "react-icons/md";
 import { RiFileEditFill, RiFileUserLine } from "react-icons/ri";
 
-
-
 export default function SideBar() {
     const [show, setShow] = useState(true)
     return (

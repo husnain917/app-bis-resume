@@ -1,7 +1,7 @@
 .nav {
     position: fixed;
     width: 70px;
-    transition: all 0.3s linear;
+    transition: all 0.9s linear;
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -86,9 +86,10 @@
 }
 
 .BtnOpen {
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 500;
 }
+
 .nav li a i {
     position: absolute;
     top: 17px;
@@ -105,14 +106,15 @@
 
 .a:hover {
     z-index: 1;
-    width: 200px;
-   
+    width: 160px;
+    overflow-y: hidden;
+
 }
 
 
 
 .ul li:hover a span {
-    padding-left: 30%;
+    padding-left: 25%;
     display: block;
 }
 
