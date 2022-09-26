@@ -24,15 +24,15 @@ export default function Advantages() {
 
   useEffect(() => {
     const progressBar = setInterval(() => {
-      setToastWidth((prev) => (prev + 24) % 100);
-    }, 1300);
+      setToastWidth((prev) => (prev + 25) % 100);
+    }, 1400);
+
     const interval = setInterval(() => {
       setIsTabActive((prevTab) => {
         if (prevTab === 5) return 0;
 
         return (prevTab += 1);
       });
-
     }, 7000);
   }, []);
 

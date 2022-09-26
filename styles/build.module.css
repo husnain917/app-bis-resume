@@ -1,5 +1,6 @@
 .ctsMain {
-  text-align: center;
+    text-align: center;
+    padding-top: 15px;
 }
 
 .ctaHeading {
@@ -8,10 +9,10 @@
 }
 
 .ctaHr {
-  margin: auto;
-  width: 5%;
-  border: 3px solid #00c8aa;
-  border-radius: 20px;
+    margin: auto;
+    width: 5%;
+    border: 3px solid #00C8AA;
+    border-radius: 20px;
 }
 
 .ctaWaveBlind svg {
