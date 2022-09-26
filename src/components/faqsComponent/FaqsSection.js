@@ -4,8 +4,9 @@ import FaqRightImage from "./FaqRightImage";
 import FaqLeftImage from "./FaqLeftImage";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import FaqRightImageWithList from "./faqRightImageWithList";
 
-const PracticingGrid = () => {
+const FaqsSection = () => {
   useEffect(() => {
     AOS.init();
   });
@@ -96,16 +97,22 @@ const PracticingGrid = () => {
         `}
         image={"/faq5@2x.png"}
       />
-      <FaqRightImage
-        heading={"What should a resume include?        "}
-        text1={`The must-have contents in your resume include the following sections:
-
-        `}
-        text2={" The optional ones are:          "}
+      <FaqRightImageWithList
+        heading={"What should a resume include?      "}
         image={"/faq6@2x.png"}
+        text1={`The must-have contents in your resume include the following sections:`}
+        text2={" The optional ones are:          "}
+        item1={`Educational Background
+        `}
+        item2={`Contact Information        `}
+        item3={`Resume summary or Resume Objective        `}
+        item4={`Work Experience        `}
+        item5={`Hobbies & Interests        `}
+        item6={`Skills        `}
+        item7={`Volunteering Experience        `}
       />
     </Box>
   );
 };
 
-export default PracticingGrid;
+export default FaqsSection;
