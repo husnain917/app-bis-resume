@@ -6,9 +6,7 @@ import Layout from "../src/Layout";
 export default function Home() {
   return (
     <>
-      <div
-      // className={styles.container}
-      >
+      <div>
         <Head>
           <title>Bis Resume App</title>
           <meta name="description" content="Create resume with ease!" />

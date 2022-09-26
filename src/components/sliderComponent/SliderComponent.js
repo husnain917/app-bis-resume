@@ -4,25 +4,21 @@ import RatingComponent from "../ratingComponent/RatingComponent";
 import { data } from "./data";
 import Slider from "react-slick";
 import RatingWeb from "../ratingComponent/RatingWeb";
-import { useWindowWidth } from "@react-hook/window-size";
 
 const SliderComponent = () => {
   console.log("SliderComponent", data);
-  // const w = useWindowWidth();
+
   {
     data.map((item) => {
       console.log(item);
     });
   }
   var settings = {
-    // dots: true,
     infinite: true,
     speed: 300,
     slidesToShow: 7,
     slidesToScroll: 2,
     autoplay: true,
-    // nextArrow: <SampleNextArrow />,
-    // prevArrow: <SamplePrevArrow />,
 
     responsive: [
       {
@@ -31,7 +27,6 @@ const SliderComponent = () => {
           slidesToShow: 5,
           slidesToScroll: 6,
           infinite: true,
-          // dots: true,
         },
       },
       {
@@ -40,7 +35,6 @@ const SliderComponent = () => {
           slidesToShow: 4,
           slidesToScroll: 6,
           infinite: true,
-          // dots: true,
         },
       },
       {
@@ -49,7 +43,6 @@ const SliderComponent = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          // dots: true,
         },
       },
       {
@@ -58,7 +51,6 @@ const SliderComponent = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          // dots: true,
         },
       },
       {
@@ -117,30 +109,5 @@ const SliderComponent = () => {
     </>
   );
 };
-
-// function SampleNextArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, background: "black" }}
-//       onClick={onClick}
-//     />
-//   );
-// }
-
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{
-//         ...style,
-//         background: "black",
-//       }}
-//       onClick={onClick}
-//     />
-//   );
-// }
 
 export default SliderComponent;
