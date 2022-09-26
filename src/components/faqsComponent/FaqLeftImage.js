@@ -33,7 +33,7 @@ const FaqLeftImage = ({
   return (
     <Box w={["100%", "94%", "94%px", "960px", "1220px", "1500px"]}>
       <Grid
-        marginTop="1.2rem"
+        // marginTop="1.2rem"
         templateAreas={[`". textArea image"`]}
         gridTemplateRows={"1,1fr"}
         gridTemplateColumns={[
