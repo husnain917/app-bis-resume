@@ -1,5 +1,3 @@
-
-
 import styles from "../../styles/build.module.css"
 import { Button, Box } from '@chakra-ui/react'
 import { FaArrowRight } from 'react-icons/fa';
