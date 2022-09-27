@@ -1,21 +1,24 @@
 import Head from "next/head";
-import CallToAction from "../src/components/CallToAction";
-import SliderComponent from "../src/components/sliderComponent/SliderComponent";
+import CallToAction from '../src/components/CallToAction'
+import Layout from '../src/Layout'
+import CompProfessionalResume from "../src/components/compProfessionalResume/CompProfessionalResume";
+import HintSection from "../src/components/hintSection/HintSection";
+
+
 
 import Layout from "../src/Layout";
 export default function Home() {
   return (
     <>
-      <div>
-        <Head>
-          <title>Bis Resume App</title>
-          <meta name="description" content="Create resume with ease!" />
-        </Head>
-        <Layout>
-          <CallToAction />
-          <SliderComponent />
-        </Layout>
-      </div>
+      <Head>
+        <title>Bis Resume App</title>
+        <meta name="description" content="Create resume with ease!" />
+      </Head>
+      <Layout>
+        <CallToAction />
+        <HintSection />
+        <CompProfessionalResume />
+      </Layout>
     </>
   );
 }

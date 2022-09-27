@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function CallToAction() {
   return (
     <div className={styles.ctaContainer}>
-      <div className={styles.ctaLeftSec}>
+      <div className={styles.ctaLeftSec} >
         <h1 className={styles.ctaHeading}>
           Get hired faster with our resume builder!
         </h1>
