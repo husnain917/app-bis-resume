@@ -5,6 +5,7 @@ import { Text } from "@chakra-ui/react";
 import Layout from "../src/Layout";
 
 import Hint from "../src/components/hintSection/Hint";
+import SoftEngineer from "./templates/softEngineer/SoftEngineer";
 export default function Home() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function Home() {
       <Layout>
         <CallToAction />
         <HintSection />
+
       </Layout>
     </>
   );
