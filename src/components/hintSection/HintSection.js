@@ -1,7 +1,7 @@
 import { Text } from "@chakra-ui/react";
 import React from "react";
 import { FaMinus } from "react-icons/fa";
-import Hint from "./Hiint";
+import Hint from "./Hint";
 import styles from "../../../styles/Index.module.css";
 import SideBar from "../sideBar/SideBar";
 export default function HintSection() {

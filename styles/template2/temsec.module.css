@@ -1,0 +1,128 @@
+
+.mainContainer {
+    background-color: black;
+    height: max-content;
+    width: max-content;
+    margin: auto;
+}
+.profileDiv {
+    margin: 30px;
+    height: 500px;
+    width: 350px;
+    box-sizing: border-box;
+    background-color: #555D50;
+    border-radius: 10%;
+}
+.profileSubDiv {
+    margin: auto;
+    height: 200px;
+    width: 220px;
+    margin-top: 30px;
+    border: 1px solid red;
+    border-radius: 30px;
+}
+.ImageStyle {
+    border-radius: 30px;
+}
+.profileContact {
+    color: white;
+    padding-left: 50px;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.profileDiv2 {
+    margin: 50px;
+    height: 300px;
+    width: 380px;
+    box-sizing: border-box;
+    background-color: #5c5b5b;
+    border-radius: 15%;
+    padding-bottom: 100;
+}
+.TopContent {
+    display: flex;
+    flex-direction: row;
+}
+.profileHead {
+    color: white;
+    font-weight: 600;
+    padding-left: 30px;
+    padding-top: 35px;
+    font-size: 40px;
+}
+.p {
+    color: white;
+    padding-left: 30px;
+}
+.AboutDiv {
+    padding-left: 30px;
+}
+.AboutPar {
+    color: aliceblue;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.AboutContent {
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding-bottom: 30px;
+}
+.profileDiv3 {
+    margin-top: 60px;
+    height: 140px;
+    width: 380px;
+    box-sizing: border-box;
+    background-color: #5c5b5b;
+    border-radius: 40px;
+}
+.headEduc {
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 15px;
+    font-size: 20px;
+    color: white;
+}
+.EduPara {
+    padding-left: 30px;
+    padding-top: 15px;
+    color: white;
+}
+.profileHeadSkill {
+    color: white;
+    font-weight: 600;
+    padding-left: 30px;
+    padding-top: 35px;
+    font-size: 40px;
+}
+.skillDiv {
+    margin: 30px;
+    height: 420px;
+    width: 350px;
+    box-sizing: border-box;
+    background-color: #5c5b5b;
+    border-radius: 15%;
+}
+
+.expDiv {
+    margin: 50px;
+    height: 450px;
+    width: 380px;
+    box-sizing: border-box;
+    background-color: #5c5b5b;
+    border-radius: 10%;
+}
+.experTitle1 {
+    font-weight: 600;
+    font-size: 19px;
+    color: white;
+    padding-left: 30px;
+    margin-top: 10px
+}
+.subTitle {
+
+    color: white;
+    padding-left: 30px;
+}
