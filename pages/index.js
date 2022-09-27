@@ -3,12 +3,9 @@ import CallToAction from "../src/components/CallToAction";
 import Layout from "../src/Layout";
 import CompProfessionalResume from "../src/components/compProfessionalResume/CompProfessionalResume";
 import HintSection from "../src/components/hintSection/HintSection";
-import { Text } from "@chakra-ui/react";
-import { FaMinus } from "react-icons/fa";
 import Advantages from "../src/components/advantages/Advantages";
 import { useState, useEffect } from "react";
-import Reveal from "react-reveal/Reveal";
-import Fade from "react-reveal/Fade";
+import Fade from 'react-reveal/Fade';
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {
