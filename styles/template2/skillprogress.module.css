@@ -1,0 +1,42 @@
+.progressDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.progress0 {
+    height: 60px;
+    width: 60px;
+    border: 5px solid white;
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 12px;
+    color: white;
+}
+.progress1 {
+    height: 60px;
+    width: 60px;
+    border: 5px solid white;
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 12px;
+    color: white;
+}
+.proHeadDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.proHead1 {
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    font-weight: 400;
+}
+.proHead2 {
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    font-weight: 400;
+}
