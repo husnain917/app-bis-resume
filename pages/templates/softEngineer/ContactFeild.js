@@ -26,13 +26,12 @@ export default function ContactFeild({
           h={8}
           bgColor="#B29E84"
           p="6px"
-
           color="white"
           borderRadius="5px"
         />
       )}
 
-      <Text fontSize="1.5rem" ml="5%" lineHeight={lineHeight} pt={pt}>
+      <Text fontSize="1.5rem" ml="5%" lineHeight={lineHeight} pt={pt} w="60%" >
         {text}
       </Text>
     </Box>
