@@ -89,8 +89,8 @@ export default function Advantages() {
             </Box>
           </Box>
         ) : (
-          <AdvSlider />
-        )}
+<AdvSlider />
+)}
         <Box display="flex" alignItems="center" justifyContent="space-around">
           <Button
             colorScheme="#027C87"

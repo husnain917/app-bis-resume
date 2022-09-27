@@ -31,7 +31,6 @@ export default function CallToAction() {
           width={500}
           height={360}
           alt="Picture of the author"
-          style={{}}
         />
       </div>
     </div>
