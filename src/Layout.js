@@ -1,6 +1,6 @@
-import React from 'react'
-import BuildResume from './components/BuildResume'
-import Footer from './components/footer/Footer'
+import React from "react";
+import BuildResume from "./components/BuildResume";
+import Footer from "./components/footer/Footer";
 
 export default function Layout({ children }) {
   return (
@@ -8,7 +8,6 @@ export default function Layout({ children }) {
       <main>{children}</main>
       <BuildResume />
       <Footer />
-
     </>
-  )
+  );
 }

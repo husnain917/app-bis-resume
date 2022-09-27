@@ -11,6 +11,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  /* border-right: 5px solid white; */
 }
 .ctaLeftSec {
   padding-left: 100px;
@@ -201,33 +204,52 @@
     margin-right: 7%;
     margin-left: 7%;
   }
-  .hrLine{
-    /* font-size: 30px;
-    background-color: #1dbfaf;
-    color: #1dbfaf;
-    padding-left: 2.5%;
-    padding-right: 2.7%;
-    border-radius: 50px;
-text-align: center;
-height: 5px;
-margin-left: 47.5%;
-margin-top: 0%; */
-
+  @media (max-width: 760px) {
+    .hrLine {
+      margin-left: 40%;
+    }
   }
-  @media (max-width:760px) {
-  .hrLine{
-    margin-left:40%
+  @media (max-width: 430px) {
+    .hrLine {
+      margin-right: 10%;
+    }
   }
-
+  @media (max-width: 320px) {
+    .hrLine {
+      margin-right: 60%;
+    }
+  }
 }
-@media (max-width:430px) {
-  .hrLine{
-    margin-right:10%
-  }
-  }
-@media (max-width:320px) {
-  .hrLine{
-    margin-right:60%
-  }
-  }
+.benefitBtn {
+  transition: transform 0.3s ease;
+}
+.benefitBtn::after,
+.benefitBtn::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background-color: #027c98;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 50px;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.benefitBtn:hover {
+  background-color: #027c87;
+  color: white;
+
+  transform: translate(-12px, -12px);
+}
+.benefitBtn:hover::after {
+  transform: translate(6px, 6px);
+}
+.benefitBtn:hover::before {
+  transform: translate(12px, 12px);
+}
+
+.toastLine{
+transition: 2s ease;
 }
