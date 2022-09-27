@@ -8,7 +8,7 @@ import SEText from "./SEText";
 export default function SoftEngineer() {
   return (
     <>
-      <Box overflow="auto" maxW="2050px">
+      <Box overflow="auto" maxW="2950px">
         <Box
           w="100%"
           display="flex"
@@ -35,7 +35,12 @@ export default function SoftEngineer() {
               textSize="2.1rem"
               wordSpacing="6px"
             />
-            <Text fontSize="1.3rem" textAlign="justify" pt="5%">
+            <Text
+              fontSize="1.7rem"
+              textAlign="justify"
+              pt="5%"
+              lineHeight="31px"
+            >
               Problem solver and fast learner <br />
               with strong communication <br />
               skills. I am motivated to upgrade <br />
@@ -125,7 +130,13 @@ a good quality website for the company"
           </Box>
         </Box>
         <Box>
-          <Image src="/SeBottom.png" w="100%" overflowX="auto" minW="1300px" />
+          <Image
+            src="/SeBottom.png"
+            w="100%"
+            overflowX="auto"
+            minW="1300px"
+            maxW="2950px"
+          />
         </Box>
       </Box>
     </>
