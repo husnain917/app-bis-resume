@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Slider from "react-slick";
 import Adv from "./Adv";
 import { data } from "./Constant";
@@ -36,4 +36,4 @@ export default function AdvSlider() {
       </Slider>
     </div>
   );
-};
+}
