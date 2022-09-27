@@ -6,7 +6,7 @@ import HintSection from "../src/components/hintSection/HintSection";
 
 
 
-import Hint from "../src/components/hintSection/Hint";
+import Layout from "../src/Layout";
 export default function Home() {
   return (
     <>
