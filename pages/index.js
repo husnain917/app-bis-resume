@@ -1,10 +1,12 @@
 import Head from "next/head";
-import CallToAction from "../src/components/CallToAction";
+import CallToAction from '../src/components/CallToAction'
+import Layout from '../src/Layout'
+import CompProfessionalResume from "../src/components/compProfessionalResume/CompProfessionalResume";
 import HintSection from "../src/components/hintSection/HintSection";
-import { Text } from "@chakra-ui/react";
-import Layout from "../src/Layout";
 
-import Hint from "../src/components/hintSection/Hint";
+
+
+import Layout from "../src/Layout";
 export default function Home() {
   return (
     <>
@@ -15,6 +17,7 @@ export default function Home() {
       <Layout>
         <CallToAction />
         <HintSection />
+        <CompProfessionalResume />
       </Layout>
     </>
   );
