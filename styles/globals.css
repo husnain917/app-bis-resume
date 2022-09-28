@@ -48,6 +48,11 @@ a {
   font-size: 0.95em !important;
   line-height: 20px;
 }
+.manager-jobtitle {
+  font-size: 1.2em !important;
+  line-height: 20px;
+  font-weight: bold;
+}
 .manager-fName {
   font-size: 0.95em !important;
   line-height: 20px;
