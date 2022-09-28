@@ -1,15 +1,21 @@
-import { Text } from "@chakra-ui/react";
+import { Text,Box } from "@chakra-ui/react";
 import React from "react";
 import { FaMinus } from "react-icons/fa";
 import Hint from "./Hint";
 import styles from "../../../styles/Index.module.css";
 import SideBar from "../sideBar/SideBar";
+import { useWindowSizing } from "../../../customHooks/useWindowSizing";
 export default function HintSection() {
+  const size = useWindowSizing();
+  const width = size.width;
   return (
     <div style={{ marginTop: "5%", marginBottom: "5%" }}>
-      <SideBar/>
+      
+      <SideBar />
+      <Box ml={["18%","5%","0%","0&","0%","0%"]}>
+
       <Text
-        fontSize={["2.5rem", "2.5rem", "3rem", "3rem", "3rem", "4.5rem"]}
+        fontSize={["1.5rem", "2.5rem", "3rem", "3rem", "3rem", "4.5rem"]}
         color="#313B47"
         fontWeight="bold"
         textAlign="center"
@@ -36,7 +42,7 @@ export default function HintSection() {
       </div>
       <Text
         color="#313B47"
-        fontSize={["1.2rem", "1.5rem", "1.8", "1.7rem", "1.5rem", "2.5rem"]}
+        fontSize={["1rem", "1.5rem", "1.8", "1.7rem", "1.5rem", "2.5rem"]}
         fontWeight={["400", "400"]}
         align="center"
         pl={["7%", "14%"]}
@@ -78,7 +84,10 @@ export default function HintSection() {
         imgSrc="/four.jpg"
         isRight={false}
         paddingBottom="5px"
-      />
+
+/>
+</Box>
+
     </div>
   );
 }
