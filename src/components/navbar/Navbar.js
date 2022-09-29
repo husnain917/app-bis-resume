@@ -43,7 +43,7 @@ export default function Navbar() {
                 color={useColorModeValue('gray.600', 'white')}
                 minH={'110px'}
                 py={{ base: 2 }}
-                mx={useBreakpointValue({ xl: '62px', lg: '30px', })}
+                mx={useBreakpointValue({ xl: '50px', lg: '30px', })}
                 align={'center'}>
 
                 {/* logo */}

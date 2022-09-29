@@ -1,9 +1,7 @@
 import Head from "next/head";
 import CallToAction from "../src/components/CallToAction";
 import Layout from "../src/Layout";
-
-import Hint from "../src/components/hintSection/Hint";
-import SoftEngineer from "./templates/softEngineer/SoftEngineer";
+import FaqsSection from "../src/components/faqsComponent/FaqsSection";
 import CompProfessionalResume from "../src/components/compProfessionalResume/CompProfessionalResume";
 import HintSection from "../src/components/hintSection/HintSection";
 import Advantages from "../src/components/advantages/Advantages";
@@ -34,14 +32,16 @@ export default function Home() {
       </Head>
       <Layout>
         <CallToAction />
+        <SliderComponent />
+
         <HintSection />
         {isVisible && (
           <Fade center>
             <Advantages />
           </Fade>
         )}
-        <SliderComponent />
         <CompProfessionalResume />
+        <FaqsSection />
       </Layout>
     </>
   );
