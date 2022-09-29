@@ -109,7 +109,6 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
   margin: 0 auto;
 }
 
-
 .slick-prev:before,
 .slick-next:before {
   color: black !important;

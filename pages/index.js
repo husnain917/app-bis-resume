@@ -1,6 +1,7 @@
 import Head from "next/head";
 import CallToAction from "../src/components/CallToAction";
 import Layout from "../src/Layout";
+import FaqsSection from "../src/components/faqsComponent/FaqsSection";
 import CompProfessionalResume from "../src/components/compProfessionalResume/CompProfessionalResume";
 import HintSection from "../src/components/hintSection/HintSection";
 import Advantages from "../src/components/advantages/Advantages";
