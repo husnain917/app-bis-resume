@@ -142,6 +142,7 @@ export default function Navbar() {
                                             boxShadow: '0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)',
                                             borderRadius: '0.2rem'
                                         }}
+                                        ml="2.5rem"
                                         cursor={'pointer'}
                                         width={breakpointWidth}
                                         bg={popoverContentBgColor}
