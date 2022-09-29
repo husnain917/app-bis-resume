@@ -1,70 +1,75 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { Text } from "../../src/components/template1/index";
-import style from "../../styles/templates/template1.module.scss";
-import { onBlurField } from "../../store/actions/builderAction";
-import Skills from "../../src/components/template1/Skills";
-import AdditionalSkills from "../../src/components/template1/AdditionalSkills";
-import WorkExperience from "../../src/components/template1/WorkExperience";
-import EducationHistory from "../../src/components/template1/EducationHistory";
-import { sampleData } from "../../constants/sampleData";
-import { styles } from "../../src/components/componentStyles/template1Style";
-import Profile from "../../src/components/template1/Profile";
-import Certifications from "../../src/components/template1/Certifications";
-import Associations from "../../src/components/template1/Associations";
-import Trainings from "../../src/components/template1/Trainings";
-import Achievements from "../../src/components/template1/Achievements";
-import Projects from "../../src/components/template1/Projects";
-import Patents from "../../src/components/template1/Patents";
-import Publications from "../../src/components/template1/Publications";
-import Speakings from "../../src/components/template1/Speakings";
-import Security from "../../src/components/template1/Security";
-import Military from "../../src/components/template1/Military";
-import { Tooltip } from "react-tippy";
-import Link from "next/link";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Text } from '../../src/components/template1/index';
+import style from '../../styles/templates/template1.module.scss';
+import { onBlurField } from '../../store/actions/builderAction';
+import Skills from '../../src/components/template1/Skills';
+import AdditionalSkills from '../../src/components/template1/AdditionalSkills';
+import WorkExperience from '../../src/components/template1/WorkExperience';
+import EducationHistory from '../../src/components/template1/EducationHistory';
+import { sampleData } from '../../constants/sampleData';
+import { styles } from '../../src/components/componentStyles/template1Style';
+import Profile from '../../src/components/template1/Profile';
+import Certifications from '../../src/components/template1/Certifications';
+import Associations from '../../src/components/template1/Associations';
+import Trainings from '../../src/components/template1/Trainings';
+import Achievements from '../../src/components/template1/Achievements';
+import Projects from '../../src/components/template1/Projects';
+import Patents from '../../src/components/template1/Patents';
+import Publications from '../../src/components/template1/Publications';
+import Speakings from '../../src/components/template1/Speakings';
+import Security from '../../src/components/template1/Security';
+import Military from '../../src/components/template1/Military';
+import { Tooltip } from 'react-tippy';
+import Link from 'next/link';
 
 class Manager extends Component {
   render() {
     const { resumeData, updater, width } = this.props;
-    console.log("resumeData", resumeData);
+
+    console.log('resumeData', resumeData);
     return (
       <div className={style.main}>
-        <Link href={'/templates'}> 
+        <Link href={'/templates'}>
           <div className={style.swapCont}>
             <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap} >
-                <img src='/icons/swap.png' />
+              <div className={style.swap}>
+                <img src="/icons/swap.png" />
               </div>
             </Tooltip>
           </div>
         </Link>
         <div className={style.managerTemplateWrapper}>
-          <div className={width < 500 ? "" : style.a4Paper}>
+          <div className={width < 500 ? '' : style.a4Paper}>
             <div>
               <Profile />
-              <div className={`${style.managerTemplateCol} ${style.managerHeading}`}>
+              <div
+                className={`${style.managerTemplateCol} ${style.managerHeading}`}
+              >
                 <Text
                   value={resumeData?.objective?.heading}
                   placeholder="SUMMARY"
-                  customclass={"manager-f-heading-title"}
-                  path={"objective.heading"}
+                  customclass={'manager-f-heading-title'}
+                  path={'objective.heading'}
                   editable={false}
                 />
                 <Text
                   value={resumeData?.objective?.body}
                   placeholder="Summary Detail"
                   customclass={`${style.managerFName} ${style.managerTemplateTextBold}`}
-                  path={"objective.body"}
+                  path={'objective.body'}
                 />
               </div>
               {resumeData?.work?.visible && (
                 <>
-                  <div className={`${style.managerTemplateCol} ${style.managerFHeading}`}>
+                  <div
+                    className={`${style.managerTemplateCol} ${style.managerFHeading}`}
+                  >
                     <Text
                       value={resumeData?.work?.heading}
                       placeholder="Experience"
-                      customclass={"manager-f-heading-title"}
-                      path={"experience.heading"}
+                      customclass={'manager-f-heading-title'}
+                      path={'experience.heading'}
                       editable={false}
                       style={styles.workHeading}
                     />
@@ -86,8 +91,8 @@ class Manager extends Component {
                   <Text
                     value={resumeData?.education?.heading}
                     placeholder="EDUCATION"
-                    customclass={"manager-f-heading-title"}
-                    path={"education.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'education.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
@@ -108,8 +113,8 @@ class Manager extends Component {
                   <Text
                     value={resumeData?.certifications?.heading}
                     placeholder="Certifications"
-                    customclass={"manager-f-heading-title"}
-                    path={"certifications.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'certifications.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
@@ -124,36 +129,35 @@ class Manager extends Component {
                   />
                 </>
               )}
-              {
-                resumeData?.skills?.visible &&
+              {resumeData?.skills?.visible && (
                 <>
                   <Text
-                    value={resumeData?.skills?.heading || "Skills"}
+                    value={resumeData?.skills?.heading || 'Skills'}
                     placeholder="Skills"
-                    customclass={"manager-f-heading-title"}
-                    path={"skills.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'skills.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
                   <Skills
                     data={
-                      resumeData?.skills?.items.length
-                        ? [...resumeData?.skills?.items]
-                        : [...sampleData?.data?.skills?.items]
+                      resumeData?.hobbies?.items.length
+                        ? [...resumeData?.hobbies?.items]
+                        : [...sampleData?.data?.hobbies?.items]
                     }
                     color={this.props.theme.color}
                     updater={updater}
                   />
                 </>
-              }
+              )}
               {/* Associations */}
               {resumeData?.associations?.visible && (
                 <>
                   <Text
                     value={resumeData?.associations?.heading}
                     placeholder="Associations"
-                    customclass={"manager-f-heading-title"}
-                    path={"associations.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'associations.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
@@ -175,8 +179,8 @@ class Manager extends Component {
                   <Text
                     value={resumeData?.training?.heading}
                     placeholder="Trainings"
-                    customclass={"manager-f-heading-title"}
-                    path={"training.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'training.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
@@ -198,8 +202,8 @@ class Manager extends Component {
                   <Text
                     value={resumeData?.achievements?.heading}
                     placeholder="Achievements"
-                    customclass={"manager-f-heading-title"}
-                    path={"achievements.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'achievements.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
@@ -220,8 +224,8 @@ class Manager extends Component {
                   <Text
                     value={resumeData?.projects?.heading}
                     placeholder="Projects"
-                    customclass={"manager-f-heading-title"}
-                    path={"projects.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'projects.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
@@ -243,8 +247,8 @@ class Manager extends Component {
                   <Text
                     value={resumeData?.patents?.heading}
                     placeholder="Patents"
-                    customclass={"manager-f-heading-title"}
-                    path={"patents.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'patents.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
@@ -266,8 +270,8 @@ class Manager extends Component {
                   <Text
                     value={resumeData?.publications?.heading}
                     placeholder="Publications"
-                    customclass={"manager-f-heading-title"}
-                    path={"publications.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'publications.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
@@ -289,8 +293,8 @@ class Manager extends Component {
                   <Text
                     value={resumeData?.speaking_engagements?.heading}
                     placeholder="Speaking Engagements"
-                    customclass={"manager-f-heading-title"}
-                    path={"speaking_engagements.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'speaking_engagements.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
@@ -312,8 +316,8 @@ class Manager extends Component {
                   <Text
                     value={resumeData?.security_creds?.heading}
                     placeholder="Security Credentials"
-                    customclass={"manager-f-heading-title"}
-                    path={"security_creds.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'security_creds.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
@@ -335,8 +339,8 @@ class Manager extends Component {
                   <Text
                     value={resumeData?.military?.heading}
                     placeholder="Military"
-                    customclass={"manager-f-heading-title"}
-                    path={"military.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'military.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
@@ -355,19 +359,21 @@ class Manager extends Component {
 
             {resumeData?.custom?.visible && (
               <>
-                <div className={`${style.managerTemplateCol} ${style.managerHeading}`}>
+                <div
+                  className={`${style.managerTemplateCol} ${style.managerHeading}`}
+                >
                   <Text
                     value={resumeData?.custom?.heading}
                     placeholder="Custom"
-                    customclass={"manager-f-heading-title"}
-                    path={"custom.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'custom.heading'}
                     editable={true}
                   />
                   <Text
                     value={resumeData?.custom?.body}
                     placeholder="Custom Detail"
                     customclass={`${style.managerFName} ${style.managerTemplateTextBold}`}
-                    path={"custom.body"}
+                    path={'custom.body'}
                   />
                 </div>
               </>
@@ -375,12 +381,14 @@ class Manager extends Component {
 
             {resumeData?.additional_skills?.visible && (
               <>
-                <div className={`${style.managerTemplateCol} ${style.managerFHeading}`}>
+                <div
+                  className={`${style.managerTemplateCol} ${style.managerFHeading}`}
+                >
                   <Text
                     value={resumeData?.additional_skills?.heading}
                     placeholder="Experience"
-                    customclass={"manager-f-heading-title"}
-                    path={"additional_skills.heading"}
+                    customclass={'manager-f-heading-title'}
+                    path={'additional_skills.heading'}
                     editable={false}
                     style={styles.workHeading}
                   />
