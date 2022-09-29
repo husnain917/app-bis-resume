@@ -44,7 +44,8 @@ export default function Navbar() {
                 minH={'110px'}
                 py={{ base: 2 }}
                 mx={useBreakpointValue({ xl: '62px', lg: '30px', })}
-                align={'center'}>
+                align={'center'}
+            >
 
                 {/* logo */}
                 <Flex
