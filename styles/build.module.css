@@ -1,5 +1,6 @@
 .ctsMain {
     text-align: center;
+    padding-top: 15px;
 }
 
 .ctaHeading {
@@ -15,7 +16,6 @@
     width: 5%;
     border: 3px solid #00C8AA;
     border-radius: 20px;
-
 }
 
 
