@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../styles/Index.module.css";
-import Image from "next/image";
+import { Image} from '@chakra-ui/react'
+
 
 export default function CallToAction() {
   return (
@@ -16,22 +17,16 @@ export default function CallToAction() {
         <div className={styles.heroIconImgs}>
           <Image
             src="/amazon.png"
-            width={90}
-            height={35}
-            style={{ marginTop: 5 }}
+            w="25%"
+           h="auto"
+           mt="5px"
           />
-          <Image src="/qatar.png" width={80} height={35} />
-          <Image src="/netflix.png" width={80} height={45} />
+          <Image src="/qatar.png"w="25%" h="auto" />
+          <Image src="/netflix.png" w="25%" h="auto" />
         </div>
       </div>
       <div className={styles.ctaRightSec}>
-        <Image
-          src="/hero.png"
-          layout="responsive"
-          width={500}
-          height={360}
-          alt="Picture of the author"
-        />
+       <Image src="/hero.png"w="100%" h="98%"  />
       </div>
     </div>
   );
