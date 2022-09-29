@@ -1,4 +1,6 @@
 
+
+
 html,
 body {
   padding: 0;
@@ -27,42 +29,64 @@ a {
   background-color: #efefef;
   outline: 0;
 }
+
 .content-editable-container:active {
   border-radius: 4px;
   outline: 0;
 }
+
 .content-editable-container:visited {
   border-radius: 4px;
   outline: 0;
 }
+
 .manager-f-heading-title {
   font-size: 1.5em;
   font-weight: 700;
   margin-top: 15px;
   text-transform: uppercase;
 }
+
+.contact-f-heading-title {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-top: 15px;
+  color: white !important;
+  border-bottom: 4px solid white !important;
+  border-radius: 0% !important;
+  opacity: 1.0 !important;
+  padding:  0px !important;
+  text-transform: uppercase;
+}
+
+
 .manager-template-text-bold {
   font-weight: bold;
 }
+
 .manager-f-name {
   font-size: 0.95em !important;
   line-height: 20px;
 }
+
 .manager-jobtitle {
   font-size: 1.2em !important;
   line-height: 20px;
   font-weight: bold;
 }
+
 .manager-fName {
   font-size: 0.95em !important;
   line-height: 20px;
 }
+
 input[type="date"]:in-range::-webkit-datetime-edit-year-field,
 input[type="date"]:in-range::-webkit-datetime-edit-month-field,
 input[type="date"]:in-range::-webkit-datetime-edit-day-field,
 input[type="date"]:in-range::-webkit-datetime-edit-text {
   color: #999;
 }
+
 .fullName {
   font-weight: 800;
   font-size: 2em;
@@ -70,14 +94,17 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
   line-height: 30px;
   text-align: center;
 }
+
 .manager-template-row {
   flex-direction: row;
   display: flex;
   padding-bottom: 10px;
 }
+
 .manager-template-text-center {
   align-items: center;
 }
+
 .manager-f-sub-rowA {
   margin: 0 auto;
 }
@@ -87,15 +114,15 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
 .slick-next:before {
   color: black !important;
 }
-.carousel{
-  width:90%;
+
+.carousel {
+  width: 90%;
 }
 
 .slick-prev {
   left: -20px !important;
 }
-.font{
+
+.font {
   font-family: Euclid Circular 100;
 }
-                                                
-
