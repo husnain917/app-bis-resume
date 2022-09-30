@@ -33,11 +33,7 @@ export default function Navbar() {
     const breakpointfontSize = useBreakpointValue({ xl: '14px', lg: '12px', })
 
     return (
-        <Box
-            borderBottom={1}
-            borderStyle={'solid'}
-            borderColor={useColorModeValue('gray.200', 'gray.900')}
-        >
+        <Box>
             <Flex
                 bg={useColorModeValue('white', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
