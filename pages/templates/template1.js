@@ -50,6 +50,7 @@ class Manager extends Component {
                   path={"objective.heading"}
                   editable={false}
                 />
+                
                 <Text
                   value={resumeData?.objective?.body}
                   placeholder="Summary Detail"
