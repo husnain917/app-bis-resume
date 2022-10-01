@@ -1,17 +1,17 @@
 import React from "react";
-import { Input, Image, Box,  } from "@chakra-ui/react";
+import { Input, Image, Box } from "@chakra-ui/react";
 import List from "./List";
 import HeadingText from "./HeadingText";
 import ContactFeild from "./ContactFeild";
 import SEText from "./SEText";
-import styles from "../../../styles/templates/SeTemplate.module.css"
+import styles from "../../../styles/templates/SeTemplate.module.scss";
 import { useSelector } from "react-redux";
 import { Text } from "../../../src/components/template1";
 import { useWindowSize } from "@react-hook/window-size";
 export default function SoftEngineer() {
   const [width] = useWindowSize();
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  console.log("data in tempalte",resumeData);
+  console.log("data in tempalte", resumeData);
   return (
     <>
       <Box overflow="auto" maxW="2950px">
@@ -27,20 +27,23 @@ export default function SoftEngineer() {
         >
           {/* Left Section  */}
           <Box w="50%" mt="10%">
-            
-          <Text
-            value={resumeData?.profile?.firstName}
-            placeholder="R I C H A R D "
-            customclass={"fullName"}
-            path={"profile.firstName"}
-          />
-          &nbsp;
-          <Text
-            value={resumeData?.profile?.lastName}
-            placeholder="S A N C H E Z"
-            customclass={"fullName"}
-            path={"profile.lastName"}
-          />
+            <Text
+              value={resumeData?.profile?.firstName}
+              placeholder="R I C H A R D "
+              customclass={"fullName"}
+              fontSize="5.1rem"
+              path={"profile.firstName"}
+              lineHeight="60px"
+            />
+            &nbsp;
+            <Text
+              value={resumeData?.profile?.lastName}
+              placeholder="S A N C H E Z"
+              customclass={"fullName"}
+              fontSize="5.0rem"
+              path={"profile.lastName"}
+              lineHeight="60px"
+            />
             {/* <Text
               color="#7C898B"
               fontSize="5.3rem"
@@ -56,7 +59,12 @@ export default function SoftEngineer() {
               wordSpacing="6px"
             />
             <p
-            style={{fontSize:"1.7rem",textAlign:'justify',paddingtop:"5%",lineHeight:"31px"}}
+              style={{
+                fontSize: "1.7rem",
+                textAlign: "justify",
+                paddingtop: "5%",
+                lineHeight: "31px",
+              }}
               fontSize="1.7rem"
               textAlign="justify"
               pt="5%"
@@ -72,8 +80,7 @@ export default function SoftEngineer() {
               with projects independently. I am <br />
               excited about the prospect of <br />
               joining a Ingoude company.
-              </p>
-            
+            </p>
             {/* <HeadingText
               heading="CONTACT US"
               marginTop="10%"
@@ -98,38 +105,35 @@ www.reallygreatsite.com"
               marginTop="8%"
               textSize="1.8rem"
             />
-             <Text
-                value={resumeData.education.institution}
-                placeholder="International University
+            
+            
+            {/* <Text
+              value={resumeData.education.institution}
+              placeholder="International University
                 Bachelor of Science"
-                customclass={"manager-fName"}
-                // path={`${path}.${index}.institution`}
-              />
-               <Text
-                value={resumeData.education.degree}
-                placeholder="C O M P U T E R S C I E N C E"
-                customclass={"manager-fName"}
-                // path={`${path}.${index}.institution`}
-              />
-              <Box display="flex">
+              // path={`${path}.${index}.institution`}
+            />
+            <Text
+              value={resumeData.education.degree}
+              placeholder="C O M P U T E R S C I E N C E"
+              customclass={"manager-fName"}
+              // path={`${path}.${index}.institution`}
+            />
+            <Box display="flex">
               <Text
                 value={resumeData.education.startDate}
                 placeholder="AUG 2016 -"
                 customclass={"manager-fName"}
                 // path={`${path}.${index}.institution`}
               />
-          &nbsp;
-
-          &nbsp;
-
+              &nbsp; &nbsp;
               <Text
                 value={resumeData.education.endDate}
                 placeholder="AUG 2020"
                 customclass={"manager-fName"}
                 // path={`${path}.${index}.institution`}
               />
-              </Box>
-             
+            </Box> */}
             {/* <SEText
               title="  International University 
 Bachelor of Science"
@@ -150,11 +154,11 @@ Bachelor of Science"
               width="60%"
             />
             <Text
-                value={resumeData.work.position}
-                placeholder="Software Engineer"
-                customclass={"manager-fName"}
-                // path={`${path}.${index}.position`}
-              />
+              value={resumeData.work.position}
+              placeholder="Software Engineer"
+              customclass={"manager-fName"}
+              // path={`${path}.${index}.position`}
+            />
             {/* <List text="Programming Language" marginTop="3%" />
             <List text="Programming Language" />
             <List text="Programming Language" />
@@ -166,33 +170,33 @@ Bachelor of Science"
               textSize="1.8rem"
             />
             <Text
-                value={resumeData.work.position}
-                placeholder="Software Engineer"
-                customclass={"manager-fName"}
-                // path={`${path}.${index}.position`}
-              />
-              
+              value={resumeData.work.position}
+              placeholder="Software Engineer"
+              customclass={"manager-fName"}
+              // path={`${path}.${index}.position`}
+            />
+
+            <Text
+              value={resumeData.work.company}
+              placeholder=" W A R D I E R E I N C"
+              customclass={"manager-fName"}
+              // path={`${path}.${index}.position`}
+            />
+            <Box display="flex">
               <Text
-                value={resumeData.work.company}
-                placeholder=" W A R D I E R E I N C"
-                customclass={"manager-fName"}
-                // path={`${path}.${index}.position`}
-              />
-<Box display="flex">
-<Text
                 value={resumeData.work.position}
                 placeholder="N O V 2 0 2 0"
                 customclass={"manager-fName"}
                 // path={`${path}.${index}.position`}
               />
               <p> _ </p>
-               <Text
+              <Text
                 value={resumeData.work.position}
                 placeholder=" E S 2 0 2 1"
                 customclass={"manager-fName"}
                 // path={`${path}.${index}.position`}
               />
-</Box>
+            </Box>
             {/* <SEText
               title="Software Engineer"
               desc="W A R D I E R E I N C ."
