@@ -1,31 +1,29 @@
-import React from 'react';
+import { HStack, Stack, VStack } from '@chakra-ui/react';
 import { Text } from '../template1';
+import DndTemplate5 from './DndTemplate5';
 import { styles } from '../componentStyles/template1Style';
+import { useDispatch } from 'react-redux';
+import Util from '../../../utils/templateUtils';
 import {
-  updateOrder,
   addNewObj,
   deleteObjInArray,
+  updateOrder,
 } from '../../../store/actions/builderAction';
-import { useDispatch } from 'react-redux';
-import { HStack, Stack, VStack } from '@chakra-ui/react';
-import DndTemplate5 from './DndTemplate5';
-import Util from '../../../utils/templateUtils';
-const ExperienceTemplate5 = (props) => {
-  const path = 'work.items';
+const CertificationTemplate5 = (props) => {
   const dispatch = useDispatch();
+  const path = 'certifications.items';
+  const onOrderUpdate = (data) => {
+    const storeReorder = Util.mapOrder(props.data, data, 'id');
+    dispatch(updateOrder(storeReorder, path));
+  };
 
   const _addNewItem = () => {
-    console.log(data);
-    dispatch(addNewObj(data[0], path));
+    dispatch(addNewObj(props.data[0], path));
   };
 
   const _removeItem = (index) => {
     let deletedPath = `${path}.${index}`;
     dispatch(deleteObjInArray(deletedPath));
-  };
-  const onOrderUpdate = (data) => {
-    const storeReorder = Util.mapOrder(props.data, data, 'id');
-    dispatch(updateOrder(storeReorder, path));
   };
   const { data } = props;
   return (
@@ -39,10 +37,10 @@ const ExperienceTemplate5 = (props) => {
           <HStack gap={4} pl={24}>
             <Stack w={190} justifyContent="flex-end">
               <Text
-                placeholder="Company"
-                value={item.company}
+                placeholder="Certificate"
+                value={item.title}
                 customclass={'companyTemplate5'}
-                path={`${path}.${index}.company`}
+                path={`${path}.${index}.title`}
               />
               <div
                 className="manager-template-row"
@@ -68,10 +66,10 @@ const ExperienceTemplate5 = (props) => {
             <Stack w={300} justifyContent="flex-end">
               <Text
                 placeholder="Summary"
-                value={item.description}
+                value={item.summary}
                 customclass={'companyDescriptionTemplate5'}
                 style={styles.mb_10}
-                path={`${path}.${index}.description`}
+                path={`${path}.${index}.summary`}
               />
             </Stack>
           </HStack>
@@ -81,4 +79,4 @@ const ExperienceTemplate5 = (props) => {
   );
 };
 
-export default ExperienceTemplate5;
+export default CertificationTemplate5;

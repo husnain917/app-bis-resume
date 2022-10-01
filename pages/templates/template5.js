@@ -22,8 +22,10 @@ import ProfileTemplate5 from '../../src/components/template5/ProfileTemplate5';
 import ExperienceTemplate5 from '../../src/components/template5/ExperienceTemplate5';
 import EducationTemplate5 from '../../src/components/template5/EducationTemplate5';
 import AboutTemplate5 from '../../src/components/template5/AboutTemplate5';
+import CertificationTemplate5 from '../../src/components/template5/CertificationTemplate5';
 const template5 = (props) => {
   const { resumeData } = props;
+  console.log(resumeData);
   return (
     <Flex justifyContent={{ base: 'none', lg: 'center' }}>
       <SimpleGrid minW={850} bg={'blackAlpha.300'} py={12}>
@@ -80,6 +82,21 @@ const template5 = (props) => {
             />
           </VStack>
           <HStack>
+            <Heading size={'lg'} ml="-25px" mb={10}>
+              Certification
+            </Heading>
+            <Stack width={552}>
+              <Divider borderColor={'black'} />
+            </Stack>
+          </HStack>
+          <CertificationTemplate5
+            data={
+              resumeData?.certifications?.items.length
+                ? [...resumeData?.certifications?.items]
+                : [...sampleData?.data?.certifications?.items]
+            }
+          />
+          <HStack>
             <Heading w={220} size={'lg'} ml="-45px">
               Skill & Hobbies
             </Heading>
@@ -90,9 +107,9 @@ const template5 = (props) => {
           <Box>
             <SkillBase
               data={
-                resumeData?.training?.items?.length
-                  ? [...resumeData?.training?.items]
-                  : [...sampleData?.data?.training?.items]
+                resumeData?.skills?.items?.length
+                  ? [...resumeData?.skills?.items]
+                  : [...sampleData?.data?.skills?.items]
               }
             />
           </Box>

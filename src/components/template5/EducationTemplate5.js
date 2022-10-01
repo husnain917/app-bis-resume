@@ -8,6 +8,7 @@ import {
 } from '../../../store/actions/builderAction';
 import { useDispatch } from 'react-redux';
 import {
+  Box,
   HStack,
   ListItem,
   Stack,
@@ -15,6 +16,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import DndTemplate5 from './DndTemplate5';
+import Util from '../../../utils/templateUtils';
 const EducationTemplate5 = (props) => {
   const { data } = props;
   const path = 'education.items';
@@ -44,11 +46,28 @@ const EducationTemplate5 = (props) => {
             <Stack w={190} justifyContent="flex-end">
               <Text
                 placeholder="Institute or University"
-                value={item.company}
+                value={item.courseworks}
                 customclass={'companyTemplate5'}
                 style={styles.mb_10}
-                path={`${path}.${index}.company`}
+                path={`${path}.${index}.courseworks`}
               />
+              <div
+                className="manager-template-row"
+                style={{ marginTop: '-5px' }}
+              >
+                <Text
+                  value={item.month}
+                  placeholder="End Month"
+                  customclass={'manager-fName'}
+                  path={`${path}.${index}.month`}
+                />{' '}
+                <Text
+                  value={item.endDate}
+                  placeholder="End Year"
+                  customclass={'manager-fName'}
+                  path={`${path}.${index}.endDate`}
+                />
+              </div>
               {console.log('item:', item)}
             </Stack>
             <Stack w={300} justifyContent="flex-end">
@@ -56,17 +75,17 @@ const EducationTemplate5 = (props) => {
                 <ListItem>
                   <Text
                     placeholder="Summary"
-                    value={item.company}
+                    value={item.description}
                     customclass={'companyDescriptionTemplate5'}
-                    path={`${path}.${index}.company`}
+                    path={`${path}.${index}.description`}
                   />
                 </ListItem>
                 <ListItem>
                   <Text
                     placeholder="Summary"
-                    value={item.company}
+                    value={item.awards}
                     customclass={'companyDescriptionTemplate5'}
-                    path={`${path}.${index}.company`}
+                    path={`${path}.${index}.awards`}
                   />
                 </ListItem>
               </UnorderedList>

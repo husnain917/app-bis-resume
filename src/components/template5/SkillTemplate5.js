@@ -16,7 +16,7 @@ const SkillBase = (props) => {
   const [skill3, setSkill3] = useState('');
   const [skill4, setSkill4] = useState('');
   const { data } = props;
-  const path = 'training.items';
+  const path = 'skills.items';
   const dispatch = useDispatch();
   const onOrderUpdate = (data) => {
     const storeReorder = Util.mapOrder(props.data, data, 'id');
@@ -43,12 +43,12 @@ const SkillBase = (props) => {
             <HStack justifyContent={'flex-end'}>
               <HStack>
                 <Text
-                  value={item.company}
+                  value={item.skill1}
                   placeholder="Skill or Hobbies"
                   customclass={
                     'manager-fName manager-template-text-bold skillTextTemplate5'
                   }
-                  path={`${path}.${index}.company`}
+                  path={`skills.items.skill1`}
                 />
                 <Box h={2} w={100} bg={'white'} borderRadius={4}>
                   <Line
@@ -71,12 +71,12 @@ const SkillBase = (props) => {
               <Box></Box>
               <HStack>
                 <Text
-                  value={item.company}
-                  placeholder="Skill or Hobbies"
+                  value={item.skill2}
                   customclass={
                     'manager-fName manager-template-text-bold skillTextTemplate5'
                   }
-                  path={`${path}.${index}.company`}
+                  placeholder="Skill or Hobbies"
+                  path={'skills.items.skill2'}
                 />
                 <Box h={2} w={100} bg={'white'} borderRadius={4}>
                   <Line
@@ -100,12 +100,12 @@ const SkillBase = (props) => {
             <HStack justifyContent={'flex-end'}>
               <HStack>
                 <Text
-                  value={item.company}
+                  value={item.skill3}
                   placeholder="Skill or Hobbies"
                   customclass={
                     'manager-fName manager-template-text-bold skillTextTemplate5'
                   }
-                  path={`${path}.${index}.company`}
+                  path={'skills.items.skill3'}
                 />
                 <Box h={2} w={100} bg={'white'} borderRadius={4}>
                   <Line
@@ -128,12 +128,12 @@ const SkillBase = (props) => {
               <Box></Box>
               <HStack>
                 <Text
-                  value={item.company}
+                  value={item.skill4}
                   placeholder="Skill or Hobbies"
                   customclass={
                     'manager-fName manager-template-text-bold skillTextTemplate5'
                   }
-                  path={`${path}.${index}.company`}
+                  path={'skills.items.skill4'}
                 />
                 <Box h={2} w={100} bg={'white'} borderRadius={4}>
                   <Line
@@ -151,6 +151,8 @@ const SkillBase = (props) => {
                   value={skill4}
                   onChange={(e) => setSkill4(e.target.value)}
                   type="number"
+                  max={100}
+                  min={0}
                 />
               </HStack>
             </HStack>
