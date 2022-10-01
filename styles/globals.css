@@ -68,7 +68,34 @@ a {
   font-size: 0.95em !important;
   line-height: 20px;
 }
-
+.manager-skillCeo{
+  font-size: 0.95em !important;
+  word-wrap: break-word !important;
+  display: inline-block !important;
+  width: 280px;
+  margin-left: 14px !important;
+}
+.skillCeoMain{
+  overflow: hidden;
+  position: relative;
+}
+.manager-skillCeo:focus{
+  background-color: inherit !important;
+}
+.skillCeobody{
+  display: inline-block;
+}
+.skillCeodot{
+  font-weight: bold !important;
+  font-size: x-large;
+  padding: 0 3px;
+  line-height: 10px !important;
+  display: inline-block;
+  width: 15px;
+  height: 100% !important;
+  position:absolute;
+  top:2px;
+}
 input[type="date"]:in-range::-webkit-datetime-edit-year-field,
 input[type="date"]:in-range::-webkit-datetime-edit-month-field,
 input[type="date"]:in-range::-webkit-datetime-edit-day-field,
@@ -90,6 +117,12 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
   padding-bottom: 10px;
 }
 
+.manager-template-col {
+  flex-direction: column !important;
+  display: flex !important;;
+  padding: 10px 0px;
+  background-color: inherit;
+}
 .manager-template-text-center {
   align-items: center;
 }

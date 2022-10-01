@@ -8,6 +8,7 @@ import { styles } from "../componentStyles/template1Style";
 function EducationHistory(props) {
   const dispatch = useDispatch();
   const path = "education.items";
+  
 
   const onOrderUpdate = (data) => {
     const storeReorder = Util.mapOrder(props.data, data, "id");

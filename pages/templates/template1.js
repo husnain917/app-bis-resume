@@ -92,6 +92,7 @@ class Manager extends Component {
                     editable={false}
                     style={styles.workHeading}
                   />
+                  
                   <EducationHistory
                     data={
                       resumeData?.education?.items.length
@@ -297,9 +298,9 @@ class Manager extends Component {
                   />
                   <Speakings
                     data={
-                      resumeData?.speaking_engagements?.items.length
-                        ? [...resumeData?.speaking_engagements?.items]
-                        : [...sampleData?.data?.speaking_engagements?.items]
+                      resumeData?.skills?.items.length
+                        ? [...resumeData?.skills?.items]
+                        : [...sampleData?.data?.skills?.items]
                     }
                     color={this.props.theme.color}
                     updater={updater}

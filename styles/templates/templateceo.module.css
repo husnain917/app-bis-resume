@@ -1,5 +1,5 @@
 .mainDiv {
-  background-color: #f6f5f0;
+  background-color: #e9e7da;
   min-height: fit-content;
   min-width: fit-content;
   padding: 60px 120px
@@ -22,7 +22,7 @@
 .innerMainDiv2 {
   background-color: #ffffff;
   width: 750px;
-  padding: 80px 30px;
+  padding: 80px 40px;
   min-height: 100%
 }
 
@@ -42,7 +42,7 @@
 }
 
 .contactBody {
-  font-size: 1.0em !important;
+  font-size: 0.95em !important;
   line-height: 20px;
   color: white;
 }
@@ -84,4 +84,24 @@
 .contactIconCotent {
   width: 90%;
   display: inline-block
+}
+.languageMainDiv{
+  margin-bottom: 50px !important;
+}
+.templateceoHeadingTitle {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 15px;
+  text-transform: uppercase;
+  border-bottom: 3px solid black !important;
+  border-radius: 0% !important;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+.templateceoHeadingTitle:Empty::before {
+  opacity: 1 !important;
+}
+.managerPadding{
+  padding: 4px 5px;
 }

@@ -96,7 +96,8 @@ export const sampleData = {
       languages: {
         enable: false,
         heading: "Languages",
-        items: [],
+        items: [{}],
+        visible: true,
       },
       military: {
         heading: "Military",
@@ -227,7 +228,7 @@ export const sampleData = {
         enable: true,
         heading: "Skills",
         index: 2,
-        items: [],
+        items: [{}],
         visible: true,
       },
       additional_skills: {
