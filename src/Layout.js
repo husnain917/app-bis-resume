@@ -6,7 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 export default function Layout({ children }) {
   return (
     <>
-    <Navbar />
+      <Navbar />
       <main>{children}</main>
       <BuildResume />
       <Footer />
