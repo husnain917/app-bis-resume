@@ -39,9 +39,8 @@ export default function Navbar() {
                 color={useColorModeValue('gray.600', 'white')}
                 minH={'110px'}
                 py={{ base: 2 }}
-                mx={useBreakpointValue({ xl: '62px', lg: '30px', })}
-                align={'center'}
-            >
+                mx={useBreakpointValue({ xl: '50px', lg: '30px', })}
+                align={'center'}>
 
                 {/* logo */}
                 <Flex
@@ -139,6 +138,7 @@ export default function Navbar() {
                                             boxShadow: '0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)',
                                             borderRadius: '0.2rem'
                                         }}
+                                        ml="2.5rem"
                                         cursor={'pointer'}
                                         width={breakpointWidth}
                                         bg={popoverContentBgColor}
