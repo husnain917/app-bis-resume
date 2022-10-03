@@ -9,11 +9,13 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
 import { TbWorld } from "react-icons/tb";
 import { IoHome } from "react-icons/io5";
-import Skills from '../../src/components/templateCEO/Skills'
-import Languages from '../../src/components/templateCEO/Languages'
+import Skills from '../../src/components/templateceo/Skills'
+import Languages from '../../src/components/templateceo/Languages'
 import { sampleData } from "../../constants/sampleData";
 import Link from "next/link";
 import { Tooltip } from "react-tippy";
+import WorkExperience from '../../src/components/templateceo/WorkExperience'
+import EducationHistory from '../../src/components/templateceo/EducationHistory'
 
 export default function templateceo() {
     const resumeData = useSelector(store => store.editorReducer.resumeData);
@@ -37,6 +39,7 @@ export default function templateceo() {
                     <div className={styles.innerMainDiv1}>
                         <Box height={300} display='flex' justifyContent='center' alignItems='center' >
                             <Box border="7px solid #ffffff" width={250} height={250} borderRadius="100%">
+                            {/* <input type='file' /> */}
                             </Box>
                         </Box>
                         {/* Contact Box */}
@@ -152,8 +155,10 @@ export default function templateceo() {
                             />
                         </div>
                     </div>
+                    {/* summary right side */}
                     <div className={styles.innerMainDiv2} >
                         <Profile cId='ceo' />
+                        {/* professional summary box*/}
                         <div>
                             <Text
                                 value={resumeData?.professional?.heading}
@@ -170,10 +175,47 @@ export default function templateceo() {
                                 path={"objective.body"}
                             />
                         </div>
+                        {/* professional summary box*/}
+                        <div >
+                            <Text
+                                value={resumeData?.work?.heading}
+                                placeholder="Experience"
+                                customclass={`${styles.templateceoHeadingTitle}`}
+                                path={"experience.heading"}
+                                editable={false}
+                            />
+                            <WorkExperience
+                                data={
+                                    resumeData?.work?.items.length
+                                        ? [...resumeData?.work?.items]
+                                        : [...sampleData?.data?.work?.items]
+                                }
+                                color={theme.color}
+                                updater={updater}
+                            />
+                        </div>
+                        {/* Education box*/}
+                        <div >
+                            <Text
+                                value={resumeData?.education?.heading}
+                                placeholder="EDUCATION"
+                                customclass={`${styles.templateceoHeadingTitle}`}
+                                path={"education.heading"}
+                                editable={false}
+                            />
+                            <EducationHistory
+                                data={
+                                    resumeData?.education?.items.length
+                                        ? [...resumeData?.education?.items]
+                                        : [...sampleData?.data?.education?.items]
+                                }
+                                color={theme.color}
+                                updater={updater}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     )
 }
-
