@@ -416,6 +416,8 @@ const MobileNav = () => {
 
 const MobileNavItem = ({ label, children, href }) => {
     const { isOpen, onToggle } = useDisclosure();
+    const mobileNavColor = useColorModeValue('gray.600', 'gray.200')
+    const mobileNavBorder = useColorModeValue('gray.200', 'gray.700')
 
     return (
         <Stack spacing={4} onClick={children && onToggle}>
@@ -430,7 +432,7 @@ const MobileNavItem = ({ label, children, href }) => {
                 }}>
                 <Text
                     fontWeight={600}
-                    color={useColorModeValue('gray.600', 'gray.200')}>
+                    color={mobileNavColor}>
                     {label}
                 </Text>
                 {children && (
@@ -451,7 +453,7 @@ const MobileNavItem = ({ label, children, href }) => {
                     pl={4}
                     borderLeft={1}
                     borderStyle={'solid'}
-                    borderColor={useColorModeValue('gray.200', 'gray.700')}
+                    borderColor={mobileNavBorder}
                     align={'start'}>
                     {children &&
                         children.map((child) => (
@@ -460,7 +462,7 @@ const MobileNavItem = ({ label, children, href }) => {
                                 pl={4}
                                 _hover={{
                                     color: '#006772',
-                                    bg: useColorModeValue('teal.50')
+                                    bg: 'teal.50'
                                 }}
                             >
                                 {child.label}
