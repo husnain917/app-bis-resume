@@ -1,0 +1,115 @@
+/* ------------------------------------Editable container styles ----------------------------------- */
+/* // @import '../../theme/colors'; */
+
+.fashionContentEditableContainer {
+  padding: 4px 2px;
+  white-space: pre-line;
+  /*  border: 1px dashed #fff; */
+  border-radius: 4px;
+  outline: 0;
+}
+.fashionContentEditableContainer:empty::before {
+  content: attr(data-placeholder);
+  opacity: 1;
+}
+
+.fashionContentEditableContainer:focus {
+  /*  border: 1px dashed #a1a1a1; */
+  border-radius: 4px;
+  background-color: #efefef;
+  outline: 0;
+}
+
+.fashionContentEditableContainer:active {
+  /*  border: 1px dashed #a1a1a1; */
+  border-radius: 4px;
+  outline: 0;
+}
+
+.fashionContentEditableContainer:visited {
+  /*  border: 1px dashed #a1a1a1; */
+  border-radius: 4px;
+  outline: 0;
+}
+
+/* --------------------------------------- Editable container styles end ------------------------------------- */
+
+
+.firstNameStyle{
+    background-color: #FDC726 !important;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    color: #000000 !important;
+    margin: 30px 0px 20px 0px;
+    text-align: center;
+}
+.lastNameStyle{
+    background-color: #FDC726 !important;
+    color: #000000 !important;
+    font-weight: 600;
+    font-size: 22px !important;
+    line-height: 25px;
+    text-align: center;
+}
+.aboutHeadingTitle{
+    font-size: 26px !important;
+    font-weight: 700;
+    margin-left: 20px;
+    color: #000000 !important;
+}
+.aboutFbody{
+    font-size: 1.1em !important;
+    color: #000000 !important;
+    background-color: #FDC726 !important;
+    line-height: 25px;
+    font-weight: 600;
+    text-align: justify;
+    margin: 15px 0px 10px 0px;
+}
+.languageBodyHeadings{
+    font-size: 14px !important;
+    color: #000000 !important;
+    font-weight: 700;
+    margin: 10px 0px 5px 0px;
+    background-color: #FDC726 !important;
+    line-height: 20px;
+}
+.fashionContectStyle{
+    margin-left: 20px;
+    color: #fff !important;
+    font-size: 14px !important;
+    background-color: #0F0F0F !important;
+    line-height: 20px;
+}
+.experienceSumHeading{
+    font-size: 26px;
+    margin-left: 20px;
+    color: #fff !important;
+    background-color: #0F0F0F !important;
+}
+.expertiseBodyStyle{
+    color: #fff !important;
+    font-size: 14px !important;
+    background-color: #0F0F0F !important;
+    line-height: 20px;
+}
+.editContectCollege{
+  color: #fff !important;
+  background-color: #0F0F0F !important;
+}
+.editContentHeadings{
+  font-size: 1.2em;
+  margin-top: 4px;
+  font-weight: 600;
+  color: #fff !important;
+}
+.editContentsBody{
+  color: #fff !important;
+  background-color: #0F0F0F !important;
+  line-height: 20px;
+}
+.managerTemplateContentRow {
+  flex-direction: row;
+  display: flex;
+}
