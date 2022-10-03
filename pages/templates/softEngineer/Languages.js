@@ -7,7 +7,6 @@ import {
   addNewObj,
   deleteObjInArray,
 } from "../../../store/actions/builderAction";
-// import { styles } from "../../../src/components/componentStyles/template1Style";
 import { Dnd, Text } from "../../../src/components/template1";
 import styles from ".././../../styles/templates/SeTemplate.module.css";
 import { Box } from "@chakra-ui/react";
@@ -39,14 +38,14 @@ function Languages(props) {
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
           <>
-            <Box display="flex" flexDir="row" alignItems="center" h="40px">
-              <Box fontSize="6rem" mb="11%">
+            <Box display="flex" flexDir="row" alignItems="center" h="30px" mt="2px">
+              <Box fontSize="3rem" mb="7%">
                 .
               </Box>
               <Text
                 value={item.field}
                 placeholder="Programming Language"
-                customclass={styles.prog_lang}
+                customclass={`${styles.prog_lang} ${styles.contentEditableContainer}`}
                 path={`${path}.${index}.field`}
               />
             </Box>

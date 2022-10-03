@@ -7,7 +7,6 @@ import {
   addNewObj,
   deleteObjInArray,
 } from "../../../store/actions/builderAction";
-// import { styles } from "../../../src/components/componentStyles/template1Style";
 import { Dnd, Text } from "../../../src/components/template1";
 import styles from ".././../../styles/templates/SeTemplate.module.css";
 function Education(props) {
@@ -42,7 +41,7 @@ function Education(props) {
               value={item.institution}
               placeholder="Inernational University  
                 Bachelor of Science"
-              customclass={styles.institute_name}
+              customclass={`${styles.institute_name} ${styles.contentEditableContainer}`}
               path={`${path}.${index}.institution`}
             />
 
@@ -52,14 +51,14 @@ function Education(props) {
             &nbsp;
               
               S C I E N C E"
-              customclass={styles.feild_name}
+              customclass={`${styles.feild_name} ${styles.contentEditableContainer}`}
               path={`${path}.${index}.field`}
             />
             <div className="manager-template-row">
               <Text
                 value={item.startDate}
                 placeholder="A U G 2 0 1 6"
-                customclass={styles.feild_name}
+                customclass={`${styles.feild_name} ${styles.contentEditableContainer}`}
                 path={`${path}.${index}.month`}
               />
               &nbsp;
@@ -68,7 +67,7 @@ function Education(props) {
               <Text
                 value={item.endDate}
                 placeholder="A U G 2 0 2 0"
-                customclass={styles.feild_name}
+                customclass={`${styles.feild_name} ${styles.contentEditableContainer}`}
                 path={`${path}.${index}.endDate`}
               />
             </div>

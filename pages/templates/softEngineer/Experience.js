@@ -1,6 +1,7 @@
 import React from "react";
 import Util from "../../../utils/templateUtils";
 import { useDispatch } from "react-redux";
+import { ListItem, UnorderedList } from "@chakra-ui/react";
 import styles from "../../../styles/templates/SeTemplate.module.css";
 import {
   updateOrder,
@@ -43,12 +44,13 @@ function Experience(props) {
               value={item.position}
               placeholder="Software Engineer"
               path={`${path}.${index}.position`}
-              customclass={styles.institute_name}
+              customclass={`${styles.position_name} ${styles.contentEditableContainer}`}
+              fontColor="black"
             />
             <Text
               value={item.company}
               placeholder="W A R D I E R E I N C ."
-              customclass={styles.feild_name}
+              customclass={`${styles.feild_name} ${styles.contentEditableContainer}`}
               path={`${path}.${index}.company`}
             />
             <div className={styles.workItem}>
@@ -56,51 +58,48 @@ function Experience(props) {
                 value={item.startDate}
                 placeholder="N O V 2 0 2 0"
                 path={`${path}.${index}.startDate`}
-                customclass={styles.feild_name}
+                customclass={`${styles.feild_name} ${styles.contentEditableContainer}`}
               />
               <p className={styles.paraStyles}>-</p>
               <Text
                 value={item.endDate}
                 placeholder="D E S 2 0 2 1"
                 path={`${path}.${index}.endDate`}
-                customclass={styles.feild_name}
+                customclass={`${styles.feild_name} ${styles.contentEditableContainer}`}
                 max="9999-12-31"
               />
             </div>
-            <Box display="flex" flexDir="row" alignItems="start">
-              <Box fontSize="6rem">.</Box>
-              
-              <Text
-                value={item.summary}
-                placeholder="Developed technologies and assist fortune
+            <UnorderedList>
+              <ListItem>
+                <Text
+                  value={item.description}
+                  placeholder="`Developed technologies and assist fortune
                 500 companies with scaling content
                 distribution by 60% and increasing their
-                productivity by 80%"
-                path={`${path}.${index}.summary`}
-                customclass={styles.workSummary}
-              />
-            </Box>
-            <Box display="flex" flexDir="row" alignItems="start">
-              <Box fontSize="6rem">.</Box>
-              <Text
-                value={item.summary}
-                placeholder="Built and maintain websites that scaled to 1M
-                daily users%"
-                path={`${path}.${index}.summary`}
-                customclass={styles.workSummary}
-              />
-            </Box>
-
-            {/* <Box display="flex" flexDir="row" alignItems="start">
-              <Box fontSize="6rem">.</Box>
-              <Text
-                value={item.summary}
-                placeholder="Focused in front-end development, providing
-                a good quality website for the company"
-                path={`${path}.${index}.summary`}
-                customclass={styles.workSummary}
-              />
-            </Box> */}
+                productivity by 80%`"
+                  path={`${path}.${index}.description`}
+                  customclass={`${styles.workSummary} ${styles.contentEditableContainer}`}
+                />
+              </ListItem>
+              <ListItem>
+                <Text
+                  value={item.summary}
+                  placeholder="`Built and maintain websites that scaled to 1M
+              daily users%`"
+                  path={`${path}.${index}.summary`}
+                  customclass={`${styles.workSummary} ${styles.contentEditableContainer}`}
+                />
+              </ListItem>
+              <ListItem>
+                <Text
+                  value={item.title}
+                  placeholder="Focused in front-end development, providing
+              a good quality website for the company"
+                  path={`${path}.${index}.title`}
+                  customclass={`${styles.workSummary} ${styles.contentEditableContainer}`}
+                />
+              </ListItem>
+            </UnorderedList>
           </div>
         )}
       />

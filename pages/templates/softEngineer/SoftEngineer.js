@@ -17,7 +17,6 @@ export default function SoftEngineer() {
   let updater = useSelector((state) => state.editorReducer.updater);
   let color = useSelector((state) => state.editorReducer.color);
 
-  console.log("data in tempalte", resumeData);
   return (
     <>
       <Box overflow="auto" maxW="2950px">
@@ -70,23 +69,9 @@ export default function SoftEngineer() {
               excited about the prospect of 
               joining a Ingoude company.
               "
-              customclass={styles.summary}
+              customclass={`${styles.summary} ${styles.contentEditableContainer}`}
               path={"profile.lastName"}
             />
-            {/* <p
-              style={{
-                fontSize: "1.7rem",
-                textAlign: "justify",
-                paddingtop: "5%",
-                lineHeight: "31px",
-              }}
-              fontSize="1.7rem"
-              textAlign="justify"
-              pt="5%"
-              lineHeight="31px"
-            >
-            
-            </p> */}
             <HeadingText
               heading="CONTACT US"
               marginTop="10%"
@@ -113,7 +98,7 @@ export default function SoftEngineer() {
               <Text
                 value={resumeData?.contact?.phone}
                 placeholder="+123-456-7890"
-                customclass={styles.contact_feild}
+                customclass={`${styles.contact_feild} ${styles.contentEditableContainer}`}
                 path={"contact.phone"}
               />
             </Box>
@@ -136,8 +121,8 @@ export default function SoftEngineer() {
               <Text
                 value={resumeData?.contact?.email}
                 placeholder="hello@reallygreatsite.com 
-                www.reallygreatsite.co"
-                customclass={styles.contact_feild}
+                www.reallygreatsite.com"
+                customclass={`${styles.contact_feild} ${styles.contentEditableContainer}`}
                 path={"contact.email"}
               />
             </Box>
@@ -177,7 +162,7 @@ export default function SoftEngineer() {
             />
             <HeadingText
               heading="EXPERIENCE"
-              marginTop="10%"
+              marginTop="8%"
               width="60%"
               textSize="1.8rem"
             />
@@ -189,7 +174,6 @@ export default function SoftEngineer() {
               }
               color={color}
               updater={updater}
-              list={true}
             />
           </Box>
         </Box>
