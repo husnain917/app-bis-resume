@@ -7,7 +7,7 @@
     rgb(22, 104, 118) 100%
   );
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -26,7 +26,7 @@
 }
 .ctaHeading {
   color: white;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
   line-height: normal;
@@ -94,6 +94,19 @@
   }
   .heroIconImgs {
     margin-left: 22%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ctaHeading {
+    font-size: 4.5rem;
+  }
+  .ctaText {
+    font-size: 2rem;
+  }
+  .ctaHeroButton {
+    font-size: 1.5rem;
+    padding: 15px 30px;
   }
 }
 
@@ -250,6 +263,6 @@
   transform: translate(12px, 12px);
 }
 
-.toastLine{
-transition: 2s ease;
+.toastLine {
+  transition: 2s ease;
 }

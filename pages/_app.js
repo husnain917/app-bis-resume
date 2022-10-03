@@ -8,10 +8,12 @@ import "react-tippy/dist/tippy.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { createWrapper } from "next-redux-wrapper";
+// import Navbar from "../src/components/navbar/Navbar";
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <SessionProvider session={session}>
       <ChakraProvider>
+        {/* <Navbar /> */}
         <Component {...pageProps} />
       </ChakraProvider>
     </SessionProvider>
