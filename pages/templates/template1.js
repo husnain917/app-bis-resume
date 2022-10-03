@@ -29,11 +29,11 @@ class Manager extends Component {
     console.log("resumeData", resumeData);
     return (
       <div className={style.main}>
-        <Link href={'/templates'}> 
+        <Link href={"/templates"}>
           <div className={style.swapCont}>
             <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap} >
-                <img src='/icons/swap.png' />
+              <div className={style.swap}>
+                <img src="/icons/swap.png" />
               </div>
             </Tooltip>
           </div>
@@ -42,7 +42,9 @@ class Manager extends Component {
           <div className={width < 500 ? "" : style.a4Paper}>
             <div>
               <Profile />
-              <div className={`${style.managerTemplateCol} ${style.managerHeading}`}>
+              <div
+                className={`${style.managerTemplateCol} ${style.managerHeading}`}
+              >
                 <Text
                   value={resumeData?.objective?.heading}
                   placeholder="SUMMARY"
@@ -59,7 +61,9 @@ class Manager extends Component {
               </div>
               {resumeData?.work?.visible && (
                 <>
-                  <div className={`${style.managerTemplateCol} ${style.managerFHeading}`}>
+                  <div
+                    className={`${style.managerTemplateCol} ${style.managerFHeading}`}
+                  >
                     <Text
                       value={resumeData?.work?.heading}
                       placeholder="Experience"
@@ -124,8 +128,7 @@ class Manager extends Component {
                   />
                 </>
               )}
-              {
-                resumeData?.skills?.visible &&
+              {resumeData?.skills?.visible && (
                 <>
                   <Text
                     value={resumeData?.skills?.heading || "Skills"}
@@ -145,7 +148,7 @@ class Manager extends Component {
                     updater={updater}
                   />
                 </>
-              }
+              )}
               {/* Associations */}
               {resumeData?.associations?.visible && (
                 <>
@@ -355,7 +358,9 @@ class Manager extends Component {
 
             {resumeData?.custom?.visible && (
               <>
-                <div className={`${style.managerTemplateCol} ${style.managerHeading}`}>
+                <div
+                  className={`${style.managerTemplateCol} ${style.managerHeading}`}
+                >
                   <Text
                     value={resumeData?.custom?.heading}
                     placeholder="Custom"
@@ -375,7 +380,9 @@ class Manager extends Component {
 
             {resumeData?.additional_skills?.visible && (
               <>
-                <div className={`${style.managerTemplateCol} ${style.managerFHeading}`}>
+                <div
+                  className={`${style.managerTemplateCol} ${style.managerFHeading}`}
+                >
                   <Text
                     value={resumeData?.additional_skills?.heading}
                     placeholder="Experience"

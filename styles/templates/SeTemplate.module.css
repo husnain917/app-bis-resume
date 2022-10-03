@@ -1,0 +1,51 @@
+
+.summary {
+  font-size: 1.6rem;
+  margin-top: 5%;
+  line-height: 31px;
+  width: 70%;
+  opacity: 1;
+  color: black !important;
+}
+
+/* Education Section  */
+
+.institute_name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  opacity: 1;
+  color: black;
+  /* margin-top: 5%; */
+  width: 50%;
+}
+.feild_name {
+  font-size: 0.9rem;
+  opacity: 1;
+  font-weight: 400;
+  line-height: 10px;
+}
+
+/* Experience Section  */
+
+.workItem {
+  display: flex;
+  margin-top: 0px;
+}
+.contact_feild {
+  font-size: 1.5rem;
+  padding-left: 30px;
+  opacity: 1;
+}
+
+.prog_lang {
+  font-size: 1.5rem;
+  padding-left: 20px;
+  opacity: 1;
+}
+.workSummary{
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 30px;
+  padding-left: 30px;
+
+}
