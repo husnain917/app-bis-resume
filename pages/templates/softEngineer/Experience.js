@@ -41,29 +41,29 @@ function Experience(props) {
         renderItem={(item, index) => (
           <div>
             <Text
-              value={item.position}
+              value={item?.position}
               placeholder="Software Engineer"
               path={`${path}.${index}.position`}
               customclass={`${styles.position_name} ${styles.contentEditableContainer}`}
               fontColor="black"
             />
             <Text
-              value={item.company}
-              placeholder="W A R D I E R E I N C ."
+              value={item?.company}
+              placeholder="WARDIEREINC."
               customclass={`${styles.feild_name} ${styles.contentEditableContainer}`}
               path={`${path}.${index}.company`}
             />
             <div className={styles.workItem}>
               <Text
-                value={item.startDate}
-                placeholder="N O V 2 0 2 0"
+                value={item?.startDate}
+                placeholder="NOV2020"
                 path={`${path}.${index}.startDate`}
                 customclass={`${styles.feild_name} ${styles.contentEditableContainer}`}
               />
               <p className={styles.paraStyles}>-</p>
               <Text
-                value={item.endDate}
-                placeholder="D E S 2 0 2 1"
+                value={item?.endDate}
+                placeholder="DES2021"
                 path={`${path}.${index}.endDate`}
                 customclass={`${styles.feild_name} ${styles.contentEditableContainer}`}
                 max="9999-12-31"
@@ -72,7 +72,7 @@ function Experience(props) {
             <UnorderedList>
               <ListItem>
                 <Text
-                  value={item.description}
+                  value={item?.description}
                   placeholder="`Developed technologies and assist fortune
                 500 companies with scaling content
                 distribution by 60% and increasing their
@@ -83,7 +83,7 @@ function Experience(props) {
               </ListItem>
               <ListItem>
                 <Text
-                  value={item.summary}
+                  value={item?.summary}
                   placeholder="`Built and maintain websites that scaled to 1M
               daily users%`"
                   path={`${path}.${index}.summary`}
@@ -92,7 +92,7 @@ function Experience(props) {
               </ListItem>
               <ListItem>
                 <Text
-                  value={item.title}
+                  value={item?.title}
                   placeholder="Focused in front-end development, providing
               a good quality website for the company"
                   path={`${path}.${index}.title`}

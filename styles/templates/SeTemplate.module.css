@@ -53,8 +53,15 @@
   opacity: 1;
   font-weight: 400;
   line-height: 10px;
-}
+  letter-spacing: 4px;
+text-transform: uppercase;
 
+}
+.fullName {
+  font-weight: bold;
+  letter-spacing: 22px;
+text-transform: uppercase;
+}
 /* Experience Section  */
 
 .workItem {

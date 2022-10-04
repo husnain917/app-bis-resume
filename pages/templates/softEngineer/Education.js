@@ -38,7 +38,7 @@ function Education(props) {
         renderItem={(item, index) => (
           <>
             <Text
-              value={item.institution}
+              value={item?.institution}
               placeholder="Inernational University  
                 Bachelor of Science"
               customclass={`${styles.institute_name} ${styles.contentEditableContainer}`}
@@ -46,18 +46,16 @@ function Education(props) {
             />
 
             <Text
-              value={item.field}
-              placeholder="C O M P U T E R 
-            &nbsp;
-              
-              S C I E N C E"
+              value={item?.field}
+              placeholder="COMPUTER 
+              SCIENCE"
               customclass={`${styles.feild_name} ${styles.contentEditableContainer}`}
               path={`${path}.${index}.field`}
             />
             <div className="manager-template-row">
               <Text
-                value={item.startDate}
-                placeholder="A U G 2 0 1 6"
+                value={item?.startDate}
+                placeholder="AUG2016"
                 customclass={`${styles.feild_name} ${styles.contentEditableContainer}`}
                 path={`${path}.${index}.month`}
               />
@@ -65,8 +63,8 @@ function Education(props) {
               <p style={styles.paraStyles}> - </p>
               &nbsp;
               <Text
-                value={item.endDate}
-                placeholder="A U G 2 0 2 0"
+                value={item?.endDate}
+                placeholder="AUG2020"
                 customclass={`${styles.feild_name} ${styles.contentEditableContainer}`}
                 path={`${path}.${index}.endDate`}
               />

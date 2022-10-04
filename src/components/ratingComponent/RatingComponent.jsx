@@ -3,7 +3,6 @@ import { Box, Image, Badge } from "@chakra-ui/react";
 import StarRatings from "react-star-ratings";
 import { Text } from "@chakra-ui/react";
 import { CheckCircleIcon, StarIcon } from "@chakra-ui/icons";
-
 const RatingComponent = ({ title, desc, date, name, rating }) => {
   console.log("RatingComponent:", rating);
   const [currentValue, setCurrentValue] = useState(rating);

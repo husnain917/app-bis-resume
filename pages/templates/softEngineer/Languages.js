@@ -43,7 +43,7 @@ function Languages(props) {
                 .
               </Box>
               <Text
-                value={item.field}
+                value={item?.field}
                 placeholder="Programming Language"
                 customclass={`${styles.prog_lang} ${styles.contentEditableContainer}`}
                 path={`${path}.${index}.field`}

@@ -34,19 +34,21 @@ export default function SoftEngineer() {
           <Box w="50%" mt="10%">
             <Text
               value={resumeData?.profile?.firstName}
-              placeholder="R I C H A R D "
-              customclass={"fullName"}
-              fontSize="5.1rem"
+              placeholder="RICHARD "
+              // customclass={`${"fullName"} ${styles.fname}`}
+              customclass={styles.fullName}
+              fontSize="5.2rem"
               path={"profile.firstName"}
               lineHeight="60px"
             />
             &nbsp;
             <Text
               value={resumeData?.profile?.lastName}
-              placeholder="S A N C H E Z"
-              customclass={"fullName"}
-              fontSize="5.0rem"
-              path={"profile.lastName"}
+              placeholder="SANCHEZ"
+              // customclas={`${"fullName"} ${styles.fname}`}
+              fontSize="5.2rem"
+              customclass={styles.fullName}
+              path={`"profile.lastName"`}
               lineHeight="60px"
             />
             <HeadingText
@@ -134,7 +136,7 @@ export default function SoftEngineer() {
             />
             <Education
               data={
-                resumeData?.education?.items.length
+                resumeData?.education?.items?.length
                   ? [...resumeData?.education?.items]
                   : [...sampleData?.data?.education?.items]
               }
@@ -153,7 +155,7 @@ export default function SoftEngineer() {
             />
             <Languages
               data={
-                resumeData?.languages?.items.length
+                resumeData?.languages?.items?.length
                   ? [...resumeData?.languages?.items]
                   : [...sampleData?.data?.languages?.items]
               }
@@ -168,7 +170,7 @@ export default function SoftEngineer() {
             />
             <Experience
               data={
-                resumeData?.work?.items.length
+                resumeData?.work?.items?.length
                   ? [...resumeData?.work?.items]
                   : [...sampleData?.data?.work?.items]
               }
