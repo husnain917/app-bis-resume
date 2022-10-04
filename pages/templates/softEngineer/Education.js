@@ -11,7 +11,7 @@ import { Dnd, Text } from "../../../src/components/template1";
 import styles from ".././../../styles/templates/SeTemplate.module.css";
 function Education(props) {
   const dispatch = useDispatch();
-  const path = "education.items";
+  const path = "education?.items";
 
   const onOrderUpdate = (data) => {
     const storeReorder = Util.mapOrder(props.data, data, "id");

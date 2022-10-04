@@ -13,7 +13,7 @@ import { Box } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 function Experience(props) {
   const dispatch = useDispatch();
-  const path = "work.items";
+  const path = "work?.items";
 
   const onOrderUpdate = (data) => {
     const storeReorder = Util.mapOrder(props.data, data, "id");
