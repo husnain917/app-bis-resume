@@ -6,7 +6,8 @@ import CompProfessionalResume from "../src/components/compProfessionalResume/Com
 import HintSection from "../src/components/hintSection/HintSection";
 import Advantages from "../src/components/advantages/Advantages";
 import { useState, useEffect } from "react";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
+import SliderComponent from "../src/components/sliderComponent/SliderComponent";
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {
@@ -31,6 +32,8 @@ export default function Home() {
       </Head>
       <Layout>
         <CallToAction />
+        <SliderComponent />
+
         <HintSection />
         {isVisible && (
           <Fade center>
@@ -38,6 +41,7 @@ export default function Home() {
           </Fade>
         )}
         <CompProfessionalResume />
+        <FaqsSection />
       </Layout>
     </>
   );

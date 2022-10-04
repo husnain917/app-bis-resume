@@ -81,12 +81,21 @@ const template5 = (props) => {
               }
             />
           </VStack>
-          <HStack>
-            <Heading size={'lg'} ml="-25px" mb={10}>
-              Certification
+          {/* <HStack>
+            <Heading size={'lg'} ml="-18px" mb={10}>
+              Certifications
             </Heading>
-            <Stack width={552}>
+            <Stack width={530}>
               <Divider borderColor={'black'} />
+            </Stack>
+            
+          </HStack> */}
+          <HStack>
+            <Heading size={'lg'} ml="-54px" w={150}>
+              Certificate
+            </Heading>
+            <Stack width={545}>
+              <Divider p={3} borderColor={'black'} />
             </Stack>
           </HStack>
           <CertificationTemplate5

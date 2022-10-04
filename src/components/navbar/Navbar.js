@@ -33,17 +33,13 @@ export default function Navbar() {
     const breakpointfontSize = useBreakpointValue({ xl: '14px', lg: '12px', })
 
     return (
-        <Box
-            borderBottom={1}
-            borderStyle={'solid'}
-            borderColor={useColorModeValue('gray.200', 'gray.900')}
-        >
+        <Box>
             <Flex
                 bg={useColorModeValue('white', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
                 minH={'110px'}
                 py={{ base: 2 }}
-                mx={useBreakpointValue({ xl: '62px', lg: '30px', })}
+                mx={useBreakpointValue({ xl: '50px', lg: '30px', })}
                 align={'center'}>
 
                 {/* logo */}
@@ -142,6 +138,7 @@ export default function Navbar() {
                                             boxShadow: '0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)',
                                             borderRadius: '0.2rem'
                                         }}
+                                        ml="2.5rem"
                                         cursor={'pointer'}
                                         width={breakpointWidth}
                                         bg={popoverContentBgColor}

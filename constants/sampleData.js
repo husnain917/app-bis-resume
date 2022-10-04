@@ -232,8 +232,6 @@ export const sampleData = {
         {
           skill1: '',
           skill2: '',
-          skill3: '',
-          skill4: '',
         },
       ],
       visible: true,
