@@ -6,12 +6,10 @@ import {
   RangeSliderTrack,
   RangeSliderFilledTrack,
   RangeSliderThumb,
-  Link,
   ListItem,
   UnorderedList,
 } from '@chakra-ui/react'
 import Image from 'next/image';
-import { useSelector } from "react-redux";
 import React from 'react'
 import avatar from "../../../public/avatar.jpg";
 import {
@@ -28,14 +26,12 @@ import {
   FaRegEnvelope,
   FaLocationArrow,
   FaIntercom,
-  FaDigitalOcean,
-  FaWpexplorer,
-  FaBuromobelexperte
 } from "react-icons/fa";
+import FashionCustomHook from "../../../src/components/fashionTemp/FashionCustomHook";
 
 export default function fashionTemp() {
   // redux Data
-  let resumeEditor = useSelector((state) => state.editorReducer);
+  const { resumeEditor } = FashionCustomHook();
 
   return (
     <>
