@@ -72,7 +72,7 @@ export default function SoftEngineer() {
               joining a Ingoude company.
               "
               customclass={`${styles.summary} ${styles.contentEditableContainer}`}
-              path={"profile.lastName"}
+              path={"objective.body"}
             />
             <HeadingText
               heading="CONTACT US"
