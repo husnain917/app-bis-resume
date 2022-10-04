@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import { Text } from '@chakra-ui/react';
-import React from 'react';
-import { FaMinus } from 'react-icons/fa';
-import Hint from './Hint';
-import styles from '../../../styles/Index.module.css';
-import SideBar from '../sideBar/SideBar';
-=======
 import { Text,Box } from "@chakra-ui/react";
 import React from "react";
 import { FaMinus } from "react-icons/fa";
@@ -13,25 +5,16 @@ import Hint from "./Hint";
 import styles from "../../../styles/Index.module.css";
 import SideBar from "../sideBar/SideBar";
 import { useWindowSizing } from "../../../customHooks/useWindowSizing";
->>>>>>> f52fa43e1d7ad1b170bfab4a22395187f1bea32b
 export default function HintSection() {
   const size = useWindowSizing();
   const width = size.width;
   return (
-<<<<<<< HEAD
-    <div style={{ marginTop: '5%', marginBottom: '5%' }}>
-      <SideBar />
-      <Text
-        fontSize={['2.5rem', '2.5rem', '3rem', '3rem', '3rem', '4.5rem']}
-=======
     <div style={{ marginTop: "5%", marginBottom: "5%" }}>
       
       <SideBar />
       <Box ml={["18%","5%","0%","0&","0%","0%"]}>
-
       <Text
         fontSize={["1.5rem", "2.5rem", "3rem", "3rem", "3rem", "4.5rem"]}
->>>>>>> f52fa43e1d7ad1b170bfab4a22395187f1bea32b
         color="#313B47"
         fontWeight="bold"
         textAlign="center"
@@ -58,13 +41,8 @@ export default function HintSection() {
       </div>
       <Text
         color="#313B47"
-<<<<<<< HEAD
-        fontSize={['1.2rem', '1.5rem', '1.8', '1.7rem', '1.5rem', '2.5rem']}
-        fontWeight={['400', '400']}
-=======
         fontSize={["1rem", "1.5rem", "1.8", "1.7rem", "1.5rem", "2.5rem"]}
         fontWeight={["400", "400"]}
->>>>>>> f52fa43e1d7ad1b170bfab4a22395187f1bea32b
         align="center"
         pl={['7%', '14%']}
         pr={['14%']}
