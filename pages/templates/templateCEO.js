@@ -18,7 +18,7 @@ import WorkExperience from '../../src/components/templateceo/WorkExperience'
 import EducationHistory from '../../src/components/templateceo/EducationHistory'
 import Image from 'next/image'
 
-export default function templateceo() {
+export default function Templateceo() {
     const resumeData = useSelector(store => store.editorReducer.resumeData);
     const theme = useSelector(store => store.editorReducer.theme);
     const updater = useSelector(store => store.editorReducer.updater);
