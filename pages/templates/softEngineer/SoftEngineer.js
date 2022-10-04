@@ -1,15 +1,14 @@
 import React from "react";
 import { Input, Image, Box } from "@chakra-ui/react";
-import HeadingText from "./HeadingText";
 import { sampleData } from "../../../constants/sampleData";
 import { PhoneIcon, AddIcon, WarningIcon, EmailIcon } from "@chakra-ui/icons";
-
+import HeadingText from "../../../src/components/softEngineer/HeadingText";
 import { useSelector } from "react-redux";
 import { Text } from "../../../src/components/template1";
 import { useWindowSize } from "@react-hook/window-size";
-import Education from "./Education";
-import Experience from "./Experience";
-import Languages from "./Languages";
+import Education from "../../../src/components/softEngineer/Education";
+import Experience from "../../../src/components/softEngineer/Experience";
+import Languages from "../../../src/components/softEngineer/Languages";
 import styles from "../../../styles/templates/SeTemplate.module.css";
 export default function SoftEngineer() {
   const [width] = useWindowSize();

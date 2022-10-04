@@ -7,7 +7,7 @@ import {
   addNewObj,
   deleteObjInArray,
 } from "../../../store/actions/builderAction";
-import { Dnd, Text } from "../../../src/components/template1";
+import { Dnd, Text } from "../template1";
 import styles from ".././../../styles/templates/SeTemplate.module.css";
 function Education(props) {
   const dispatch = useDispatch();
