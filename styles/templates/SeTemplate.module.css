@@ -28,6 +28,15 @@
   border-radius: 4px;
   outline: 0;
 }
+.summary_heading{
+  font-size: 2.1rem;
+  letter-spacing: 5px;
+  line-height: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+ 
+  
+}
 
 .summary {
   font-size: 1.6rem;

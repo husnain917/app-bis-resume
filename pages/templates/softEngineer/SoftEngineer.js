@@ -15,7 +15,7 @@ export default function SoftEngineer() {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   let updater = useSelector((state) => state.editorReducer.updater);
   let color = useSelector((state) => state.editorReducer.color);
-
+console.log(resumeData);
   return (
     <>
       <Box overflow="auto" maxW="2950px">
@@ -50,12 +50,28 @@ export default function SoftEngineer() {
               path={`"profile.lastName"`}
               lineHeight="60px"
             />
-            <HeadingText
+            <Box mt="8%">
+
+           
+            <Box bgColor="black" w="100%" h="2px"></Box>
+            <Text
+              value={resumeData?.objective?.body.heading}
+              placeholder="SOFTWARE ENGINEER"
+              customclass={
+              `${styles.summary_heading} ${styles.contentEditableContainer}`
+              }
+              path={"objective.heading"}
+              editable={true}
+            />
+            <Box bgColor="black" w="100%" h="2px"></Box>
+            </Box>
+            {/* <HeadingText
               heading=" SOFTWARE ENGINEER"
               marginTop="8%"
               textSize="2.1rem"
               wordSpacing="6px"
-            />
+              editable={true}
+            /> */}
             <Text
               value={resumeData?.objective?.body}
               placeholder="
@@ -146,12 +162,25 @@ export default function SoftEngineer() {
           {/* Right Section  */}
           <Box w="50%">
             <Image src="/SeTemplate.jpg" w="90%" borderRadius="100%" ml="18%" />
-            <HeadingText
+            {/* <HeadingText
               heading="PROGRAMMING LANGUAGE"
               marginTop="7%"
               textSize="1.8rem"
               width="60%"
+            /> */}
+            <Box>
+            <Box bgColor="black" w="60%" h="2px"></Box>
+            <Text
+              value={resumeData?.languages?.body?.heading}
+              placeholder="SKILLS"
+              customclass={
+              `${styles.summary_heading} ${styles.contentEditableContainer}`
+              }
+              path={"objective.heading"}
+              editable={true}
             />
+            <Box bgColor="black" w="60%" h="2px"></Box>
+            </Box>
             <Languages
               data={
                 resumeData?.languages?.items?.length
