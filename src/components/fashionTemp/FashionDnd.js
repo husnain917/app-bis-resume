@@ -57,7 +57,7 @@ const getListStyle = (isDraggingOver) => ({
   "box-shadow": isDraggingOver
     ? "inset 0px 0px 18px 0px rgba(0,0,0,0.08)"
     : "none",
-  background: isDraggingOver ? "rgba(250,250,250,1)" : "#0F0F0F",
+  background: isDraggingOver ? "rgba(0, 0, 0, 0.8)" : "#0F0F0F",
 });
 
 const getListStyleHorizontal = (isDraggingOver) => ({
@@ -70,7 +70,7 @@ const getListStyleHorizontal = (isDraggingOver) => ({
   "box-shadow": isDraggingOver
     ? "inset 0px 0px 18px 0px rgba(0,0,0,0.08)"
     : "none",
-  background: isDraggingOver ? "rgba(250,250,250,1)" : "#0F0F0F",
+  background: isDraggingOver ? "rgba(0, 0, 0, 0.8)" : "#0F0F0F",
   display: "flex",
   flexDirection: "row",
   flexWrap: "wrap",
