@@ -12,7 +12,7 @@ import styles from ".././../../styles/templates/SeTemplate.module.css";
 import { Box } from "@chakra-ui/react";
 function Languages(props) {
   const dispatch = useDispatch();
-  const path = "languages?.items";
+  const path = "languages.items";
 
   const onOrderUpdate = (data) => {
     const storeReorder = Util.mapOrder(props.data, data, "id");
