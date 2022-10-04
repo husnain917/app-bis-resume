@@ -5,16 +5,12 @@ import {
   Flex,
   Heading,
   HStack,
-  ListItem,
   SimpleGrid,
   Stack,
-  Text,
-  UnorderedList,
   VStack,
 } from '@chakra-ui/react';
 import React from 'react';
 import { sampleData } from '../../constants/sampleData';
-
 import { connect } from 'react-redux';
 import { onBlurField } from '../../store/actions/builderAction';
 import SkillBase from '../../src/components/template5/SkillTemplate5';
@@ -25,7 +21,6 @@ import AboutTemplate5 from '../../src/components/template5/AboutTemplate5';
 import CertificationTemplate5 from '../../src/components/template5/CertificationTemplate5';
 const template5 = (props) => {
   const { resumeData } = props;
-  console.log(resumeData);
   return (
     <Flex justifyContent={{ base: 'none', lg: 'center' }}>
       <SimpleGrid minW={850} bg={'blackAlpha.300'} py={12}>

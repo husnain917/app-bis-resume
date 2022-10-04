@@ -104,7 +104,6 @@
     "regenerator-runtime" "^0.13.4"
 
 "@babel/types@^7.18.6":
-<<<<<<< HEAD
   version "7.19.3"
   resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.19.3.tgz#fc420e6bbe54880bce6779ffaf315f5e43ec9624"
   integrity sha512-hGCaQzIY22DJlDh9CH7NOxgKkFjBk0Cw9xDO1Xmh2151ti7wiGfQ3LauXzL4HP1fmFlTX6XjpRETTpUcv7wQLw==
@@ -112,15 +111,6 @@
     "@babel/helper-string-parser" "^7.18.10"
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
-=======
-  "integrity" "sha512-YuGopBq3ke25BVSiS6fgF49Ul9gH1x70Bcr6bqRLjWCkcX8Hre1/5+z+IiWOIerRMSSEfGZVB9z9kyq7wVs9YA=="
-  "resolved" "https://registry.npmjs.org/@babel/types/-/types-7.19.0.tgz"
-  "version" "7.19.0"
-  dependencies:
-    "@babel/helper-string-parser" "^7.18.10"
-    "@babel/helper-validator-identifier" "^7.18.6"
-    "to-fast-properties" "^2.0.0"
->>>>>>> f52fa43e1d7ad1b170bfab4a22395187f1bea32b
 
 "@chakra-ui/accordion@2.0.12":
   "integrity" "sha512-O3qq8mILo1QODjCGr2xwxC5LNFakBoMzTjEgpvpIMynxWc/1RKfGuFLis3IDfpHIicXmBTK6sNiZXewmna88CQ=="
@@ -3641,17 +3631,10 @@
   "resolved" "https://registry.npmjs.org/negotiator/-/negotiator-0.6.3.tgz"
   "version" "0.6.3"
 
-<<<<<<< HEAD
 next-auth@^4.12.0:
   version "4.12.1"
   resolved "https://registry.yarnpkg.com/next-auth/-/next-auth-4.12.1.tgz#ffd2066e98717388bfb85a76160e76e9658fdc69"
   integrity sha512-T0By19RqT4TeStY65OUOaeiwJnGtkgY84GlxbsL9CSEIvu5QvaQlbKh48PwPjtEkaIOxKA3FVaJL6Lsz37Ju5g==
-=======
-"next-auth@^4.12.0":
-  "integrity" "sha512-TqNJBsVavN60ZkZmoe/YZ13qODuMeXxGgVkpbf8ukB8S7KPKxm+zZPPY76vtTppbPFl6PqFIxzEhNodB2nDStg=="
-  "resolved" "https://registry.npmjs.org/next-auth/-/next-auth-4.12.0.tgz"
-  "version" "4.12.0"
->>>>>>> f52fa43e1d7ad1b170bfab4a22395187f1bea32b
   dependencies:
     "@babel/runtime" "^7.16.3"
     "@panva/hkdf" "^1.0.1"
