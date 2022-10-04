@@ -14,29 +14,41 @@ import { RiFileEditFill, RiFileUserLine } from "react-icons/ri";
 
 export default function SideBar() {
     const [show, setShow] = useState(true)
+
+    const hoddenSideBar = (e) => {
+        e.preventDefault();
+        setShow(false)
+
+    }
+    const showSideBar = (e) => {
+        e.preventDefault();
+        setShow(true)
+
+    }
+
     return (
         <div> <nav className={styles.nav}>
 
             {
                 show ?
                     <ul className={styles.ul}>
-                        <li className={styles.li}><a href="#" className={styles.a}><i><RiFileUserLine /></i><span className={styles.BtnOpen}>BUILD RESUME</span></a></li>
-                        <li><a href="#" className={styles.a}><i><RiFileEditFill /></i><span className={styles.BtnOpen}>COVER LETTER Build</span></a></li>
-                        <li className={styles.li}><a href="#" ><i className={styles.pin}><FaFacebookF /></i></a></li>
-                        <li className={styles.li}><a href="#" ><i className={styles.pin}><FaLinkedinIn /></i></a></li>
+                        <li className={styles.li}><a className={styles.a}><i><RiFileUserLine /></i><span className={styles.BtnOpen}>BUILD RESUME</span></a></li>
+                        <li><a className={styles.a}><i><RiFileEditFill /></i><span className={styles.BtnOpen}>COVER LETTER Build</span></a></li>
+                        <li className={styles.li}><a  ><i className={styles.pin}><FaFacebookF /></i></a></li>
+                        <li className={styles.li}><a  ><i className={styles.pin}><FaLinkedinIn /></i></a></li>
 
 
-                        <li className={styles.li}><a href="#" ><i className={styles.pin}><FaTwitter /></i></a></li>
-                        <li className={styles.li}><a href="#" ><i className={styles.pin}><MdEmail /></i></a></li>
-                        <li className={styles.li}><a href="#" ><i className={styles.pin}><TiSocialPinterest /></i></a></li>
-                        <li className={styles.btnAction}><a href="#" ><i ><FaArrowLeft onClick={() => setShow(false)} /></i></a></li>
+                        <li className={styles.li}><a  ><i className={styles.pin}><FaTwitter /></i></a></li>
+                        <li className={styles.li}><a  ><i className={styles.pin}><MdEmail /></i></a></li>
+                        <li className={styles.li}><a ><i className={styles.pin}><TiSocialPinterest /></i></a></li>
+                        <div onClick={(e) => hoddenSideBar(e)}> <li className={styles.btnAction}><a ><i ><FaArrowLeft /></i></a></li></div>
 
                     </ul>
 
                     :
                     <ul >
 
-                        <li className={styles.btnAction}><a href="#" ><i ><FaArrowRight onClick={() => setShow(true)}  /></i></a></li>
+                        <div onClick={(e) => showSideBar(e)}> <li className={styles.btnAction}><a ><i ><FaArrowRight /></i></a></li></div>
 
 
                     </ul>
