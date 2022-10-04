@@ -16,6 +16,7 @@ import Link from "next/link";
 import { Tooltip } from "react-tippy";
 import WorkExperience from '../../src/components/templateceo/WorkExperience'
 import EducationHistory from '../../src/components/templateceo/EducationHistory'
+import Image from 'next/image'
 
 export default function templateceo() {
     const resumeData = useSelector(store => store.editorReducer.resumeData);
@@ -38,8 +39,8 @@ export default function templateceo() {
                 <div className={styles.innerMainDiv} >
                     <div className={styles.innerMainDiv1}>
                         <Box height={300} display='flex' justifyContent='center' alignItems='center' >
-                            <Box border="7px solid #ffffff" width={250} height={250} borderRadius="100%">
-                            {/* <input type='file' /> */}
+                            <Box border="7px solid #ffffff" width={250} height={250} borderRadius="100%" overflow='hidden'>
+                              <Image src='/ceocvImage.jpg' height='250px'  width='250px'   />
                             </Box>
                         </Box>
                         {/* Contact Box */}

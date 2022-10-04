@@ -149,6 +149,10 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
 .carousel {
   width: 90%;
 }
+.cursor{
+  cursor: pointer !important;
+}
+
 
 .slick-prev {
   left: -20px !important;
