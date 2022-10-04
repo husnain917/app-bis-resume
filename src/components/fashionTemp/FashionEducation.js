@@ -4,7 +4,7 @@ import { Text } from "../template1/index";
 import { FashionDnd } from "../fashionTemp/index";
 import { useDispatch } from "react-redux";
 import { updateOrder, addNewObj, deleteObjInArray } from "../../../store/actions/builderAction";
-import { styles } from "../componentStyles/template1Style";
+// import { styles } from "../componentStyles/template1Style";
 import style from "../../../styles/fashionTemp.module.css";
 
 function FashionEducation(props) {
@@ -12,12 +12,12 @@ function FashionEducation(props) {
   const path = "education.items";
 
   const onOrderUpdate = (data) => {
-    const storeReorder = Util.mapOrder(props.data, data, "id");
+    const storeReorder = Util.mapOrder(props?.data, data, "id");
     dispatch(updateOrder(storeReorder, path));
   };
 
   const _addNewItem = () => {
-    dispatch(addNewObj(props.data[0], path));
+    dispatch(addNewObj(props?.data[0], path));
   };
 
   const _removeItem = (index) => {
@@ -39,7 +39,7 @@ function FashionEducation(props) {
               <Text
                 value={item.institution}
                 placeholder="College Name"
-                customclass={`${style.editContectCollege} `}
+                customclass={`${style.editContectCollege} ${style.fashionContentEditableContainer}`}
                 path={`${path}.${index}.institution`}
               />
               <p style={{
@@ -52,16 +52,16 @@ function FashionEducation(props) {
               <Text
                 value={item.location}
                 placeholder="Location"
-                customclass={`${style.editContectCollege} `}
+                customclass={`${style.editContectCollege} ${style.fashionContentEditableContainer}`}
                 path={`${path}.${index}.location`}
               />
             </div>
             <div>
-              <p className={style.editContentHeadings}>CGPA</p>
+              <p className={style.editContentHeadings}>CGPA: </p>
               <Text
                 value={item.gpa}
                 placeholder="GPA/CGPA"
-                customclass={`${style.editContentsBody}`}
+                customclass={`${style.editContentsBody} ${style.fashionContentEditableContainer}`}
                 path={`${path}.${index}.gpa`}
               />
             </div>
@@ -70,7 +70,7 @@ function FashionEducation(props) {
               <Text
                 value={item.field}
                 placeholder="Field of Study"
-                customclass={`${style.editContentsBody}`}
+                customclass={`${style.editContentsBody} ${style.fashionContentEditableContainer}`}
                 path={`${path}.${index}.field`}
               />
             </div>
@@ -79,7 +79,7 @@ function FashionEducation(props) {
               <Text
                 value={item.courseworks}
                 placeholder="Courseworks"
-                customclass={`${style.editContentsBody}`}
+                customclass={`${style.editContentsBody} ${style.fashionContentEditableContainer}`}
                 path={`${path}.${index}.courseworks`}
               />
             </div>
@@ -88,7 +88,7 @@ function FashionEducation(props) {
               <Text
                 value={item.awards}
                 placeholder="Awards"
-                customclass={`${style.editContentsBody}`}
+                customclass={`${style.editContentsBody} ${style.fashionContentEditableContainer}`}
                 path={`${path}.${index}.awards`}
               />
             </div>

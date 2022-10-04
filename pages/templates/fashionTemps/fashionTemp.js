@@ -2,10 +2,6 @@ import {
   Box,
   Container,
   // Text,
-  RangeSlider,
-  RangeSliderTrack,
-  RangeSliderFilledTrack,
-  RangeSliderThumb,
   ListItem,
   UnorderedList,
 } from '@chakra-ui/react'
@@ -16,10 +12,11 @@ import {
   FaRegUser,
   FaSignLanguage,
 } from "react-icons/fa";
-import { CUSTOM_CONTENT, CUSTOM_LINKS, RANGE_DATA } from "./fashionConstant";
+import { CUSTOM_CONTENT, CUSTOM_LINKS, RANGE_DATA } from "../../../src/components/fashionTemp/fashionConstant";
 import { Text } from "../../../src/components/template1/index";
 import FashionEducation from "../../../src/components/fashionTemp/FashionEducation";
 import FashionExperience from "../../../src/components/fashionTemp/FashionExperience";
+import FashionLanguage from "../../../src/components/fashionTemp/FashionLanguage";
 import styles from "../../../styles/fashionTemp.module.css";
 import {
   FaPhoneAlt,
@@ -120,10 +117,10 @@ export default function fashionTemp() {
             >
               <FaSignLanguage size={'35px'} color={'#000000'} />
               <Text
-                value={resumeEditor?.resumeData?.objective?.languageTitle}
+                value={resumeEditor?.resumeData?.languages?.heading}
                 placeholder="LANGUAGES"
-                customclass={`${styles.aboutHeadingTitle} ${styles.fashionContentEditableContainer}`}
-                path={"objective.languageTitle"}
+                customclass={`${styles.aboutHeadingTitle} ${styles.languageHeading} ${styles.fashionContentEditableContainer}`}
+                path={"languages.heading"}
                 editable={false}
               />
             </Box>
@@ -131,61 +128,19 @@ export default function fashionTemp() {
             <Box
               margin={'15px 0px 25px 0px'}
             >
-              {/* English Language */}
-              <Text
-                value={resumeEditor?.resumeData?.objective?.languageBodyEnglish}
-                placeholder={'English'}
-                customclass={`${styles.languageBodyHeadings} ${styles.fashionContentEditableContainer}`}
-                path={"objective.languageBodyEnglish"}
-              />
-              <RangeSlider aria-label={['min', 'max']} defaultValue={[0, 70]}>
-                <RangeSliderTrack>
-                  <RangeSliderFilledTrack bg={'#000000'} />
-                </RangeSliderTrack>
-                <RangeSliderThumb index={1} />
-              </RangeSlider>
-
-              {/* Russion Language */}
-              <Text
-                value={resumeEditor?.resumeData?.objective?.languageBodyRussion}
-                placeholder={'Russion'}
-                customclass={`${styles.languageBodyHeadings} ${styles.fashionContentEditableContainer}`}
-                path={"objective.languageBodyRussion"}
-              />
-              <RangeSlider aria-label={['min', 'max']} defaultValue={[0, 60]}>
-                <RangeSliderTrack>
-                  <RangeSliderFilledTrack bg={'#000000'} />
-                </RangeSliderTrack>
-                <RangeSliderThumb index={1} />
-              </RangeSlider>
-
-              {/* Dutch Langusge */}
-              <Text
-                value={resumeEditor?.resumeData?.objective?.languageBodyDutch}
-                placeholder={'Dutch'}
-                customclass={`${styles.languageBodyHeadings} ${styles.fashionContentEditableContainer}`}
-                path={"objective.languageBodyDutch"}
-              />
-              <RangeSlider aria-label={['min', 'max']} defaultValue={[0, 45]}>
-                <RangeSliderTrack>
-                  <RangeSliderFilledTrack bg={'#000000'} />
-                </RangeSliderTrack>
-                <RangeSliderThumb index={1} />
-              </RangeSlider>
-
-              {/* German Language */}
-              <Text
-                value={resumeEditor?.resumeData?.objective?.languageBodyGerman}
-                placeholder={'German'}
-                customclass={`${styles.languageBodyHeadings} ${styles.fashionContentEditableContainer}`}
-                path={"objective.languageBodyGerman"}
-              />
-              <RangeSlider aria-label={['min', 'max']} defaultValue={[0, 35]}>
-                <RangeSliderTrack>
-                  <RangeSliderFilledTrack bg={'#000000'} />
-                </RangeSliderTrack>
-                <RangeSliderThumb index={1} />
-              </RangeSlider>
+              {resumeEditor?.resumeData?.languages?.visible && (
+                <>
+                  <FashionLanguage
+                    data={
+                      resumeEditor?.resumeData?.languages?.items?.length
+                        ? [...resumeEditor?.resumeData?.languages?.items]
+                        : [...sampleData?.data?.languages?.items]
+                    }
+                    color={resumeEditor?.color}
+                    updater={resumeEditor?.updater}
+                  />
+                </>
+              )}
             </Box>
           </Box>
         </Box>
@@ -377,7 +332,7 @@ export default function fashionTemp() {
                         <>
                           <FashionEducation
                             data={
-                              resumeEditor?.resumeData?.education?.items.length
+                              resumeEditor?.resumeData?.education?.items?.length
                                 ? [...resumeEditor?.resumeData?.education?.items]
                                 : [...sampleData?.data?.education?.items]
                             }
@@ -429,7 +384,7 @@ export default function fashionTemp() {
                           <>
                             <FashionExperience
                               data={
-                                resumeEditor?.resumeData?.work?.items.length
+                                resumeEditor?.resumeData?.work?.items?.length
                                   ? [...resumeEditor?.resumeData?.work?.items]
                                   : [...sampleData?.data?.work?.items]
                               }
@@ -444,7 +399,7 @@ export default function fashionTemp() {
                     items?.label === 'Expertise' ?
                       <>
                         <Box
-                          margin={'20px 0px 30px 0px'}
+                          margin={'20px 0px 20px 0px'}
                           display={'flex'}
                           alignItems={'center'}
                         >

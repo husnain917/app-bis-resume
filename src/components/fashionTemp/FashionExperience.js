@@ -4,7 +4,7 @@ import { Text } from "../template1/index";
 import { FashionDnd } from "../fashionTemp/index";
 import { useDispatch } from "react-redux";
 import { updateOrder, addNewObj, deleteObjInArray } from "../../../store/actions/builderAction";
-import { styles } from "../componentStyles/template1Style";
+// import { styles } from "../componentStyles/template1Style";
 import style from "../../../styles/fashionTemp.module.css";
 
 function FashionExperience(props) {
@@ -12,12 +12,12 @@ function FashionExperience(props) {
     const path = "work.items";
 
     const onOrderUpdate = (data) => {
-        const storeReorder = Util.mapOrder(props.data, data, "id");
+        const storeReorder = Util.mapOrder(props?.data, data, "id");
         dispatch(updateOrder(storeReorder, path));
     };
 
     const _addNewItem = () => {
-        dispatch(addNewObj(props.data[0], path));
+        dispatch(addNewObj(props?.data[0], path));
     };
 
     const _removeItem = (index) => {
@@ -38,7 +38,7 @@ function FashionExperience(props) {
                             <Text
                                 value={item.company}
                                 placeholder="Company"
-                                customclass={`${style.editContectCollege} `}
+                                customclass={`${style.editContectCollege} ${style.fashionContentEditableContainer}`}
                                 path={`${path}.${index}.company`}
                             />
                             <p style={{
@@ -51,7 +51,7 @@ function FashionExperience(props) {
                             <Text
                                 value={item.location}
                                 placeholder="Location"
-                                customclass={`${style.editContectCollege} `}
+                                customclass={`${style.editContectCollege} ${style.fashionContentEditableContainer}`}
                                 path={`${path}.${index}.location`}
                             />
                         </div>
@@ -60,7 +60,7 @@ function FashionExperience(props) {
                             <Text
                                 value={item.position}
                                 placeholder="Position"
-                                customclass={`${style.editContentsBody}`}
+                                customclass={`${style.editContentsBody} ${style.fashionContentEditableContainer}`}
                                 path={`${path}.${index}.position`}
                             />
                         </div>
@@ -69,25 +69,25 @@ function FashionExperience(props) {
                             <Text
                                 value={item.startDate}
                                 placeholder="Start Date 19"
-                                customclass={`${style.editContentsBody}`}
+                                customclass={`${style.editContentsBody} ${style.fashionContentEditableContainer}`}
                                 path={`${path}.${index}.startDate`}
                             />
                             <p className={style.editContentHeadings}>to</p>
                             <Text
                                 value={item.endDate}
                                 placeholder="End Date 10"
-                                customclass={`${style.editContentsBody}`}
+                                customclass={`${style.editContentsBody} ${style.fashionContentEditableContainer}`}
                                 path={`${path}.${index}.endDate`}
                                 max="9999-12-31"
 
                             />
                         </div>
                         <div>
-                            <p className={style.editContentHeadings}>Experience Years</p>
+                            <p className={style.editContentHeadings}>Experience Years: </p>
                             <Text
                                 value={item.expYear}
                                 placeholder="Experience Years"
-                                customclass={`${style.editContentsBody}`}
+                                customclass={`${style.editContentsBody} ${style.fashionContentEditableContainer}`}
                                 path={`${path}.${index}.expYear`}
                             />
                         </div>
