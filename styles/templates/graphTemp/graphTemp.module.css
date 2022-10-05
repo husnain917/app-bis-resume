@@ -1,0 +1,207 @@
+.mainContainer {
+    background-color: black;
+    height: min-content;
+    width: max-content;
+    margin: auto;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileDiv2 {
+    margin-top: 50px;
+    height: 400px;
+    width: 400px;
+    background-color: #372b25 !important;
+
+    border-radius: 10%;
+    margin-right: 40px;
+}
+
+.TopContent {
+    display: flex;
+    flex-direction: row;
+}
+
+.profileHead {
+    color: white;
+    font-weight: 600;
+    padding-left: 30px;
+    padding-top: 35px;
+    font-size: 40px;
+}
+
+.p {
+    color: white;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+.AboutDiv {
+    padding-left: 30px;
+}
+
+.AboutPar {
+    color: white;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.AboutContent {
+    color: white;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+
+.mainSecDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileDiv3 {
+    margin-top: 10px;
+    box-sizing: border-box;
+    max-height: 250px;
+    background-color: #372b25 !important;
+    border-radius: 40px;
+    width: 400px;
+}
+
+.headEduc {
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 15px;
+    font-size: 22px;
+    color: white;
+}
+
+.EduText {
+    margin-right: 30px;
+    box-sizing: border-box;
+}
+
+.EduPara {
+    padding-left: 30px;
+    padding-top: 15px;
+    color: white;
+}
+
+.profileHeadSkill {
+    color: white;
+    font-weight: 600;
+    padding-left: 30px;
+    padding-top: 35px;
+    font-size: 40px;
+}
+
+.skillDiv {
+    margin: 30px;
+    height: 500px;
+    width: 400px;
+    background-color: #372b25 !important;
+    border-radius: 15%;
+}
+
+.expDiv {
+    box-sizing: border-box;
+    max-height: 900px;
+    width: 400px;
+    background-color: #372b25 !important;
+    margin-top: 20px;
+    border-radius: 10%;
+
+
+}
+
+.experTitle1 {
+    font-weight: 600;
+    font-size: 19px;
+    color: white;
+    padding-left: 30px;
+    margin-top: 10px
+}
+
+.subTitle {
+
+    color: white;
+    padding-left: 30px;
+}
+
+.firstName {
+    color: white !important;
+    background-color: #372b25 !important;
+
+    outline: 0;
+}
+
+.lastName {
+    color: white !important;
+    background-color: #372b25 !important;
+
+    outline: 0;
+}
+
+.SummaryAbout {
+    background-color: #372b25 !important;
+
+    color: white !important;
+    margin-right: 10px;
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.EducSummary {
+    background-color: #372b25 !important;
+    color: white !important;
+    margin-right: 20px;
+    margin-top: 3px;
+    font-size: 18px;
+}
+
+.experAdd {
+    background-color: #372b25 !important;
+
+    padding: 20px;
+    border-radius: 15%;
+    margin-top: 20px;
+}
+
+.expHeading {
+    font-weight: bold;
+    margin-left: 30px;
+    padding-top: 15px;
+    font-size: 20px;
+    color: white;
+}
+
+.managerExpBox {
+    font-size: 1.6em !important;
+    line-height: 20px;
+    color: white !important;
+    font-weight: 800;
+}
+
+.ExpericerceSec {
+    background-color: #372b25 !important;
+    color: white !important;
+    font-size: 18px;
+
+}
+
+.nextHalf {
+    display: flex;
+    flex-direction: row;
+}
+
+.manageConenetExp {
+    padding-left: 30px;
+}
