@@ -7,13 +7,13 @@ import { colors } from '../../../constants/colors';
 function Text(props) {
   const dispatch = useDispatch();
   const { getResumeBuilderChoice } = useSelector(
-    (state) => state.editorReducer,
+    (state) => state.editorReducer
   );
-  const [addBorder, setAddBorder] = React.useState(false)
+  const [addBorder, setAddBorder] = React.useState(false);
 
   const _onBlur = (e) => {
     const data = e.textContent ? e.textContent : '';
-    setAddBorder(false)
+    setAddBorder(false);
     dispatch(onBlurField(data, props.path));
   };
 
@@ -24,12 +24,11 @@ function Text(props) {
     <div className={styles.main}>
       <TagName
         style={{
-          border:
-           'none',
+          border: 'none',
           borderColor: addBorder ? '#4267b2' : 'rgba(0, 0, 0, 0.23)',
         }}
         // style={{
-          
+
         // broder: '1px solid',
         // borderColor: addBorder ? colors.blue: colors.grey
         // }}
@@ -48,8 +47,8 @@ function Text(props) {
         className={styles.contentEditableContainer + ' ' + customclass}
         data-placeholder={props.placeholder}
         {...props}
-        onClick={()=>{
-          setAddBorder(true)
+        onClick={() => {
+          setAddBorder(true);
         }}
       />
     </div>

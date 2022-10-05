@@ -3,9 +3,7 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import equal from 'deep-equal';
 import { Tooltip } from 'react-tippy';
 import { Image } from '@chakra-ui/react';
-
 import styles from '../../../styles/templates/dnd.module.scss';
-
 const getDragIconStyle = () => ({
   userSelect: 'none',
   width: '26px',
@@ -58,7 +56,7 @@ const getListStyle = (isDraggingOver) => ({
   'box-shadow': isDraggingOver
     ? 'inset 0px 0px 18px 0px rgba(0,0,0,0.08)'
     : 'none',
-  background: isDraggingOver ? 'rgba(250,250,250,1)' : '#fff',
+  background: isDraggingOver ? 'rgba(250,250,250,1)' : '#D6D6D6',
 });
 
 const getListStyleHorizontal = (isDraggingOver) => ({
@@ -77,7 +75,7 @@ const getListStyleHorizontal = (isDraggingOver) => ({
   flexWrap: 'wrap',
 });
 
-class Dnd extends Component {
+class DndTemplate5 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -228,4 +226,4 @@ class Dnd extends Component {
 }
 
 /* Export Component =============================== */
-export default Dnd;
+export default DndTemplate5;
