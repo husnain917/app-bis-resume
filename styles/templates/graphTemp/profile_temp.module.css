@@ -1,11 +1,10 @@
 .profileDiv {
-    margin: 30px;
+    margin: 40px !important;
     height: 600px;
     width: 400px;
     box-sizing: border-box;
     background-color: #372b25;
     border-radius: 10%;
-    margin-top: 50;
 }
 
 .profileSubDiv {
