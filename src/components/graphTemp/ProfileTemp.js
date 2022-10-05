@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image'
-import imageProfile from "../../../public/icons/imageProfile.jpg"
+import imageProfile from "../../../public/imageProfile.jpg"
 import { useSelector } from "react-redux";
 import styles from "../../../styles/templates/graphTemp/profile_temp.module.css"
 import BottomLine from './BottomLine';
