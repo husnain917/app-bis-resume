@@ -8,15 +8,7 @@ import { useSelector } from 'react-redux';
 import { Text } from '../template1/index';
 const ProfileTemplate5 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  console.log('profession:', resumeData?.profile?.profession);
-  console.log('email:', resumeData?.profile?.email);
-  const emailValidation = (value) => {
-    if (value === 12) {
-      return 'number';
-    } else {
-      return 'invalid Email';
-    }
-  };
+
   return (
     <div>
       <Row style={{ marginBottom: '15px' }}>

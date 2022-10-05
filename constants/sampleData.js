@@ -42,6 +42,8 @@ export const sampleData = {
           location: '',
           summary: '',
           title: '',
+          startDate: '',
+          endDate: '',
         },
       ],
       visible: false,
@@ -94,9 +96,13 @@ export const sampleData = {
       visible: false,
     },
     languages: {
-      enable: false,
       heading: 'Languages',
-      items: [],
+      items: [
+        {
+          title: '',
+          description: '',
+        },
+      ],
     },
     military: {
       heading: 'Military',
@@ -312,6 +318,19 @@ export const sampleData = {
         },
       ],
       visible: true,
+    },
+    organization: {
+      enable: true,
+      heading: 'Organization',
+      items: [
+        {
+          organization: '',
+          role: '',
+          startDate: '',
+          endDate: '',
+          summary: '',
+        },
+      ],
     },
   },
   oid: '5fb681c7c8d2ca429821d3d2',

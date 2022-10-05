@@ -21,6 +21,7 @@ import AboutTemplate5 from '../../src/components/template5/AboutTemplate5';
 import CertificationTemplate5 from '../../src/components/template5/CertificationTemplate5';
 const template5 = (props) => {
   const { resumeData } = props;
+  console.log('resumeData:', resumeData);
   return (
     <Flex justifyContent={{ base: 'none', lg: 'center' }}>
       <SimpleGrid minW={850} bg={'blackAlpha.300'} py={12}>
