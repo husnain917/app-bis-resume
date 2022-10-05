@@ -2,7 +2,6 @@ import React from 'react'
 import { Box } from '@chakra-ui/react'
 import Profile from '../../src/components/template1/Profile'
 import { Text } from '../../src/components/template1'
-import { useSelector } from 'react-redux'
 import styles from '../../styles/templates/templateceo.module.css'
 import style from "../../styles/templates/template1.module.scss";
 import { BsFillTelephoneFill } from "react-icons/bs";
@@ -17,13 +16,14 @@ import { Tooltip } from "react-tippy";
 import WorkExperience from '../../src/components/templateceo/WorkExperience'
 import EducationHistory from '../../src/components/templateceo/EducationHistory'
 import Image from 'next/image'
+import useStoreData from '../../src/components/templateCEO/useStoreData'
 
 export default function Templateceo() {
-    const resumeData = useSelector(store => store.editorReducer.resumeData);
-    const theme = useSelector(store => store.editorReducer.theme);
-    const updater = useSelector(store => store.editorReducer.updater);
-    console.log(resumeData)
-
+   const {
+        resumeData,
+            theme,
+            updater
+    } = useStoreData();
     return (
         <div className={style.main}>
             <Link href={'/templates'}>
@@ -40,7 +40,7 @@ export default function Templateceo() {
                     <div className={styles.innerMainDiv1}>
                         <Box height={300} display='flex' justifyContent='center' alignItems='center' >
                             <Box border="7px solid #ffffff" width={250} height={250} borderRadius="100%" overflow='hidden'>
-                              <Image src='/ceocvImage.jpg' height='250px'  width='250px'   />
+                                <Image src='/ceocvImage.jpg' height='250px' width='250px' />
                             </Box>
                         </Box>
                         {/* Contact Box */}
