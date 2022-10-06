@@ -36,10 +36,10 @@ const HybridOrganization = (props) => {
       renderItem={(item, index) => (
         <Box>
           <Text
-            value={item.organization}
+            value={item.name}
             placeholder="Organization Name"
             customclass={`${Style.projectTitleText}`}
-            path={`organization.items.organization`}
+            path={`organization.items.name`}
           />
           <HStack>
             <Text

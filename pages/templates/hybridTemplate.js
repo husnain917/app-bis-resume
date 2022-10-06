@@ -17,6 +17,7 @@ import HybridOrganization from '../../src/components/hybridTemplate/HybridOrgani
 import HybridCertificates from '../../src/components/hybridTemplate/HybridCertificates';
 import HybridLanguage from '../../src/components/hybridTemplate/HybridLanguage';
 import HybridHobbies from '../../src/components/hybridTemplate/HybridHobbies';
+import { sampleData } from '../../constants/sampleData';
 const hybridTemplate = (props) => {
   const { resumeData } = props;
   return (

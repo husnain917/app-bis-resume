@@ -36,10 +36,10 @@ const HybridLanguage = (props) => {
       renderItem={(item, index) => (
         <Box>
           <Text
-            value={item.title}
+            value={item.Name}
             placeholder="Language "
             customclass={`${Style.projectTitleText}`}
-            path={`languages.items.title`}
+            path={`languages.items.Name`}
           />
         </Box>
       )}

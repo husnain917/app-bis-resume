@@ -44,10 +44,10 @@ const HybridSkill = (props) => {
           alignSelf={'center'}
         >
           <Text
-            value={item.skill1}
+            value={item.title}
             placeholder="Skill"
             customclass={`${Style.skillText}`}
-            path={`skills.items.skill1`}
+            path={`skills.items.title`}
           />
         </Box>
       )}

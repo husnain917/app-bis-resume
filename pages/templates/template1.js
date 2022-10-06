@@ -30,7 +30,7 @@ class Manager extends Component {
     console.log('resumeData', resumeData);
     return (
       <div className={style.main}>
-        <Link href={"/templates"}>
+        <Link href={'/templates'}>
           <div className={style.swapCont}>
             <Tooltip title="Change Template" arrow distance={20}>
               <div className={style.swap}>
