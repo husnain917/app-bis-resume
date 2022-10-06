@@ -97,20 +97,7 @@ export const sampleData = {
       enable: true,
       heading: "Languages",
       index: 18,
-      items: [
-        {
-          Name: "",
-        },
-        {
-          Name: "",
-        },
-        {
-          Name: "",
-        },
-        {
-          Name: "",
-        },
-      ],
+      items: [{}],
     },
     military: {
       heading: "Military",
@@ -247,7 +234,7 @@ export const sampleData = {
     additional_skills: {
       heading: "Additonal Skills",
       index: 16,
-      items: [{ Name: "" }],
+      items: [{}],
       visible: false,
     },
     social: {
