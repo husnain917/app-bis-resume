@@ -6,7 +6,13 @@ import { useDispatch } from "react-redux";
 import { updateOrder, addNewObj, deleteObjInArray } from "../../../store/actions/builderAction";
 // import { styles } from "../componentStyles/template1Style";
 import style from "../../../styles/fashionTemp.module.css";
-import { RangeSlider, RangeSliderTrack, RangeSliderFilledTrack, RangeSliderThumb } from "@chakra-ui/react";
+import {
+    Slider,
+    SliderTrack,
+    SliderFilledTrack,
+    SliderThumb,
+} from "@chakra-ui/react";
+
 
 function FashionLanguage(props) {
     const dispatch = useDispatch();
@@ -33,55 +39,55 @@ function FashionLanguage(props) {
             additem={_addNewItem}
             removeitem={(index) => _removeItem(index)}
             renderItem={(item, index) =>
-                <div style={{padding:'0px 10px'}}>
+                <div style={{ padding: '0px 10px' }}>
                     <Text
                         value={item.languages}
                         placeholder="English"
                         customclass={`${style.languageBodyHeadings} ${style.fashionContentEditableContainer}`}
                         path={`${path}.${index}.english`}
                     />
-                    <RangeSlider aria-label={['min', 'max']} defaultValue={[0, 70]}>
-                        <RangeSliderTrack>
-                            <RangeSliderFilledTrack bg={'#000000'} />
-                        </RangeSliderTrack>
-                        <RangeSliderThumb index={1} />
-                    </RangeSlider>
+                    <Slider aria-label='slider-ex-1' defaultValue={35}>
+                        <SliderTrack>
+                            <SliderFilledTrack bg={'#000000'} />
+                        </SliderTrack>
+                        <SliderThumb />
+                    </Slider>
                     <Text
                         value={item.languages}
                         placeholder="Russian"
                         customclass={`${style.languageBodyHeadings} ${style.fashionContentEditableContainer}`}
                         path={`${path}.${index}.russian`}
                     />
-                    <RangeSlider aria-label={['min', 'max']} defaultValue={[0, 55]}>
-                        <RangeSliderTrack>
-                            <RangeSliderFilledTrack bg={'#000000'} />
-                        </RangeSliderTrack>
-                        <RangeSliderThumb index={1} />
-                    </RangeSlider>
+                    <Slider aria-label='slider-ex-1' defaultValue={35}>
+                        <SliderTrack>
+                            <SliderFilledTrack bg={'#000000'} />
+                        </SliderTrack>
+                        <SliderThumb />
+                    </Slider>
                     <Text
                         value={item.languages}
                         placeholder="Dutch"
                         customclass={`${style.languageBodyHeadings} ${style.fashionContentEditableContainer}`}
                         path={`${path}.${index}.dutch`}
                     />
-                    <RangeSlider aria-label={['min', 'max']} defaultValue={[0, 45]}>
-                        <RangeSliderTrack>
-                            <RangeSliderFilledTrack bg={'#000000'} />
-                        </RangeSliderTrack>
-                        <RangeSliderThumb index={1} />
-                    </RangeSlider>
+                    <Slider aria-label='slider-ex-1' defaultValue={35}>
+                        <SliderTrack>
+                            <SliderFilledTrack bg={'#000000'} />
+                        </SliderTrack>
+                        <SliderThumb />
+                    </Slider>
                     <Text
                         value={item.languages}
                         placeholder="German"
                         customclass={`${style.languageBodyHeadings} ${style.fashionContentEditableContainer}`}
                         path={`${path}.${index}.german`}
                     />
-                    <RangeSlider aria-label={['min', 'max']} defaultValue={[0, 35]}>
-                        <RangeSliderTrack>
-                            <RangeSliderFilledTrack bg={'#000000'} />
-                        </RangeSliderTrack>
-                        <RangeSliderThumb index={1} />
-                    </RangeSlider>
+                    <Slider aria-label='slider-ex-1' defaultValue={35}>
+                        <SliderTrack>
+                            <SliderFilledTrack bg={'#000000'}  />
+                        </SliderTrack>
+                        <SliderThumb />
+                    </Slider>
                 </div>
             }
         />
