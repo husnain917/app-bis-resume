@@ -4,11 +4,8 @@
 }
 
 .ctaHeading {
-    font-size: 30px;
-    font-weight: bolder;
-
-
-
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 .ctaHr {
@@ -18,26 +15,21 @@
     border-radius: 20px;
 }
 
-
 .ctaWaveBlind svg {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
 
 .ctaImageDiv {
-    position: relative;
-    text-align: center;
-    margin-top: 10px;
+  position: relative;
+  text-align: center;
+  margin-top: 10px;
 }
 
-
-
 .ctaBtn:hover {
-    background-color: #50bce0;
-    box-shadow: -2px -3px 6px 9px #8fd1e7;
-    border-radius: 8px;
-
-
+  background-color: #50bce0;
+  box-shadow: -2px -3px 6px 9px #8fd1e7;
+  border-radius: 8px;
 }

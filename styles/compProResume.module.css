@@ -1,0 +1,12 @@
+.headingComp{
+    color: #002d6b;
+    font-family: 'Domine';
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+.resumeImgDiv{
+    position: relative;
+    border: 1px solid rgb(208, 190, 190);
+    background-color: white;
+}
