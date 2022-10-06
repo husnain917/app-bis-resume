@@ -18,7 +18,7 @@ import EducationHistory from '../../src/components/templateceo/EducationHistory'
 import Image from 'next/image'
 import useStoreData from '../../src/components/templateCEO/useStoreData'
 
-export default function Templateceo() {
+export default function templateceo() {
    const {
         resumeData,
             theme,
