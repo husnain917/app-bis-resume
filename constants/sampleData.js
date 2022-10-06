@@ -92,7 +92,11 @@ export const sampleData = {
     hobbies: {
       enable: false,
       heading: 'Hobbies',
-      items: [],
+      items: [
+        {
+          title: '',
+        },
+      ],
       visible: false,
     },
     languages: {

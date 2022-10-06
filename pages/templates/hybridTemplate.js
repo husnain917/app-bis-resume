@@ -6,6 +6,7 @@ import { IoLanguageOutline } from 'react-icons/io5';
 import { connect } from 'react-redux';
 import { GoProject } from 'react-icons/go';
 import { TbCertificate } from 'react-icons/tb';
+import { FaHorseHead } from 'react-icons/fa';
 import EducationHybridTemplate from '../../src/components/hybridTemplate/EducationHybridTemplate';
 import HybridProfile from '../../src/components/hybridTemplate/HybridProfile';
 import { onBlurField } from '../../store/actions/builderAction';
@@ -15,13 +16,14 @@ import HybridProject from '../../src/components/hybridTemplate/HybridProject';
 import HybridOrganization from '../../src/components/hybridTemplate/HybridOrganization';
 import HybridCertificates from '../../src/components/hybridTemplate/HybridCertificates';
 import HybridLanguage from '../../src/components/hybridTemplate/HybridLanguage';
+import HybridHobbies from '../../src/components/hybridTemplate/HybridHobbies';
 const hybridTemplate = (props) => {
   const { resumeData } = props;
   return (
-    <Flex justifyContent={{ base: 'none', lg: 'center' }}>
-      <Box minW={910} py={12} px={2}>
+    <Flex justifyContent={{ base: 'none', lg: 'center' }} bg={'blackAlpha.100'}>
+      <Box minW={910} py={12} px={2} bg={'white'} m={4} borderRadius={6}>
         <HybridProfile />
-        <HStack mt={5}>
+        <HStack mt={5} alignItems="flex-start">
           <Box minW={580} maxW={580} h="full">
             <Box pl={8}>
               <HStack mb={3}>
@@ -137,6 +139,21 @@ const hybridTemplate = (props) => {
                 resumeData?.languages?.items
                   ? [...resumeData?.languages?.items]
                   : [...sampleData?.data?.languages?.items]
+              }
+            />
+            <HStack mb={3}>
+              <Circle size={'38px'} bg="#313B47">
+                <FaHorseHead color="white" size={18} />
+              </Circle>
+              <Text fontSize={'2xl'} fontWeight="bold" color={'#313B47'}>
+                INTEREST
+              </Text>
+            </HStack>
+            <HybridHobbies
+              data={
+                resumeData?.hobbies?.items
+                  ? [...resumeData?.hobbies?.items]
+                  : [...sampleData?.data?.hobbies?.items]
               }
             />
           </Box>

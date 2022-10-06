@@ -35,7 +35,14 @@ const HybridSkill = (props) => {
       removeitem={(index) => _removeItem(index)}
       reorder={(e) => onOrderUpdate(e)}
       renderItem={(item, index) => (
-        <Box h={'35px'} my={2} bg="blackAlpha.300" borderRadius={6}>
+        <Box
+          h={'35px'}
+          my={2}
+          bg="blackAlpha.300"
+          borderRadius={6}
+          justifyContent="center"
+          alignSelf={'center'}
+        >
           <Text
             value={item.skill1}
             placeholder="Skill"
