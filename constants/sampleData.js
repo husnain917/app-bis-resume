@@ -95,6 +95,7 @@ export const sampleData = {
     },
     languages: {
       enable: true,
+      visible: true,
       heading: "Languages",
       index: 18,
       items: [{}],
