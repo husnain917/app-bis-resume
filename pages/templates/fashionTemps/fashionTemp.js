@@ -33,7 +33,7 @@ export default function fashionTemp() {
   return (
     <>
       <Container
-        maxW={'70%'}
+        minW={'70%'}
         display={'flex'}
       >
         {/* ist content container start */}
