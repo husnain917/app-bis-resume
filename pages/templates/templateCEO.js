@@ -8,17 +8,17 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
 import { TbWorld } from "react-icons/tb";
 import { IoHome } from "react-icons/io5";
-import Skills from '../../src/components/templateceo/Skills'
-import Languages from '../../src/components/templateceo/Languages'
+import Skills from '../../src/components/templateCEO/Skills'
+import Languages from '../../src/components/templateCEO/Languages'
 import { sampleData } from "../../constants/sampleData";
 import Link from "next/link";
 import { Tooltip } from "react-tippy";
-import WorkExperience from '../../src/components/templateceo/WorkExperience'
-import EducationHistory from '../../src/components/templateceo/EducationHistory'
+import WorkExperience from '../../src/components/templateCEO/WorkExperience'
+import EducationHistory from '../../src/components/templateCEO/EducationHistory'
 import Image from 'next/image'
 import useStoreData from '../../src/components/templateCEO/useStoreData'
 
-export default function Templateceo() {
+export default function TemplateCEO() {
    const {
         resumeData,
             theme,
