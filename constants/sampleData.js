@@ -94,7 +94,7 @@ export const sampleData = {
       visible: false,
     },
     languages: {
-      enable: false,
+      enable: true,
       heading: "Languages",
       items: [{}],
       visible: true,
