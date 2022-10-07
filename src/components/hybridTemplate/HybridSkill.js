@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, HStack, Text as ChakraText } from '@chakra-ui/react';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import {
@@ -10,6 +10,8 @@ import Style from './hybridStyle.module.css';
 import Util from '../../../utils/templateUtils';
 import { Text } from '../template1';
 import DndTemplate5 from '../template5/DndTemplate5';
+import DndHybrid from './DndHybrid';
+import HybridText from './HybridText';
 
 const HybridSkill = (props) => {
   const { data } = props;
@@ -29,21 +31,15 @@ const HybridSkill = (props) => {
     dispatch(updateOrder(storeReorder, path));
   };
   return (
-    <DndTemplate5
+    <DndHybrid
       data={data}
+      direction="horizontal"
       additem={_addNewItem}
       removeitem={(index) => _removeItem(index)}
       reorder={(e) => onOrderUpdate(e)}
       renderItem={(item, index) => (
-        <Box
-          h={'35px'}
-          my={2}
-          bg="blackAlpha.300"
-          borderRadius={6}
-          justifyContent="center"
-          alignSelf={'center'}
-        >
-          <Text
+        <Box h={'32px'} m={0.4} bg="blackAlpha.300" borderRadius={6}>
+          <HybridText
             value={item.title}
             placeholder="Skill"
             customclass={`${Style.skillText}`}

@@ -67,6 +67,12 @@
   font-weight: 500;
 }
 .skillText {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
+  margin: 3px;
+}
+.languageText {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 1px;
 }

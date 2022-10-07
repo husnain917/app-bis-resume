@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { onBlurField } from '../../../store/actions/builderAction';
 import styles from './hybridStyle.module.css';
 import { colors } from '../../../constants/colors';
+import { HStack } from '@chakra-ui/react';
 
 function HybridText(props) {
   const dispatch = useDispatch();

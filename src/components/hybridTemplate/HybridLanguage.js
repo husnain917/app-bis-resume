@@ -1,4 +1,4 @@
-import { Box, HStack } from '@chakra-ui/react';
+import { Box, HStack, ListItem, UnorderedList } from '@chakra-ui/react';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import {
@@ -34,14 +34,16 @@ const HybridLanguage = (props) => {
       reorder={(e) => onOrderUpdate(e)}
       removeitem={(index) => _removeItem(index)}
       renderItem={(item, index) => (
-        <Box>
-          <Text
-            value={item.Name}
-            placeholder="Language "
-            customclass={`${Style.projectTitleText}`}
-            path={`languages.items.Name`}
-          />
-        </Box>
+        <UnorderedList>
+          <ListItem>
+            <Text
+              value={item.Name}
+              placeholder="Language "
+              customclass={`${Style.languageText}`}
+              path={`languages.items.Name`}
+            />
+          </ListItem>
+        </UnorderedList>
       )}
     />
   );

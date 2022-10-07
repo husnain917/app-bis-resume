@@ -8,7 +8,7 @@ import {
 } from '../../../store/actions/builderAction';
 import Util from '../../../utils/templateUtils';
 import { Text } from '../template1';
-import DndTemplate5 from '../template5/DndTemplate5';
+import DndHybrid from './DndHybrid';
 import Style from './hybridStyle.module.css';
 
 const HybridHobbies = (props) => {
@@ -28,17 +28,23 @@ const HybridHobbies = (props) => {
   };
   const { data } = props;
   return (
-    <DndTemplate5
+    <DndHybrid
+      direction="horizontal"
       data={data}
       additem={_addNewItem}
       reorder={(e) => onOrderUpdate(e)}
       removeitem={(index) => _removeItem(index)}
       renderItem={(item, index) => (
-        <Box>
+        <Box
+          borderWidth={2}
+          borderColor={'blackAlpha.400'}
+          borderRadius={6}
+          m={0.5}
+        >
           <Text
             value={item.title}
             placeholder="Interest"
-            customclass={`${Style.projectTitleText}`}
+            customclass={`${Style.skillText}`}
             path={`hobbies.items.title`}
           />
         </Box>

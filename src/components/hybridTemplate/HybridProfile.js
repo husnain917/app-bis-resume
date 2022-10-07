@@ -1,4 +1,4 @@
-import { Box, HStack, Image } from '@chakra-ui/react';
+import { Box, HStack, Image, Text } from '@chakra-ui/react';
 import React from 'react';
 import { GrMail } from 'react-icons/gr';
 import { useSelector } from 'react-redux';
@@ -8,6 +8,7 @@ import { BsPhoneFill } from 'react-icons/bs';
 import { MdLocationOn } from 'react-icons/md';
 const HybridProfile = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const path = 'achievements.items';
   return (
     <div>
       <HStack>
@@ -15,7 +16,7 @@ const HybridProfile = () => {
           height={150}
           width={150}
           borderColor="#313C4E"
-          borderWidth={3}
+          borderWidth={4}
           borderRadius="full"
           ml={12}
         >
@@ -51,14 +52,24 @@ const HybridProfile = () => {
           <Box h={6}></Box>
         </Box>
       </HStack>
-      <Box
+      <HStack
         bg={'#313B47'}
         width="full"
-        h={'110px'}
+        minH={'110px'}
         borderTopRightRadius={6}
         borderTopLeftRadius={6}
         mt={-10}
-      ></Box>
+      >
+        <Box maxW={'200px'} minW={'200px'}></Box>
+        <Box maxW={'200px'} minW={'660px'} p={4}>
+          <HybridText
+            placeholder="Short and Engaging Pitch about Yourself"
+            customclass={` ${Style.profileText}`}
+            value={resumeData?.achievements?.items?.Description}
+            path={`${path}.Description`}
+          />
+        </Box>
+      </HStack>
       <Box
         bg={'#449399'}
         width="full"
