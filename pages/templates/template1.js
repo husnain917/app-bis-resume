@@ -52,6 +52,7 @@ class Manager extends Component {
                   path={"objective.heading"}
                   editable={false}
                 />
+                
                 <Text
                   value={resumeData?.objective?.body}
                   placeholder="Summary Detail"
@@ -95,6 +96,7 @@ class Manager extends Component {
                     editable={false}
                     style={styles.workHeading}
                   />
+                  
                   <EducationHistory
                     data={
                       resumeData?.education?.items.length

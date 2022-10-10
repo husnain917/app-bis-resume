@@ -1,17 +1,16 @@
 import React from "react";
 import Util from "../../../utils/templateUtils";
-import { Text, Dnd } from "./index";
+import { Text } from "../template1/index";
+import Dnd from './Dnd'
 import { useDispatch } from "react-redux";
 import { updateOrder, addNewObj, deleteObjInArray } from "../../../store/actions/builderAction";
 
-function Skills(props) {
+function Languages (props) {
   const dispatch = useDispatch();
-  const path = "skills.items";
+  const path = "languages.items";
 
   const onOrderUpdate = (data) => {
     const storeReorder = Util.mapOrder(props.data, data, "id");
-
-    //
     dispatch(updateOrder(storeReorder, path));
   };
 
@@ -24,29 +23,29 @@ function Skills(props) {
     dispatch(deleteObjInArray(deletedPath));
   };
   const { data } = props;
-  console.log({data})
 
   return (
-    <div className="manager-template-row">
+    <div className="manager-template-col">
       <Dnd
-        direction="horizontal"
         data={data}
         reorder={(e) => onOrderUpdate(e)}
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <div className="manager-template-row manager-template-text-center manager-f-sub-row">
-            <Text
-              value={item.name}
-              placeholder="Skill"
-              customclass={"manager-fName"}
-              path={`${path}.${index}.name`}
-            />
-            {data.length - 1 !== index && <p className="aPadding">|</p>}
+          <div className="skillCeoMain">
+            <div className="skillCeodot">.</div>
+            <div className="skillCeobody">
+              <Text
+                value={item.name}
+                placeholder="Language"
+                customclass={"manager-skillCeo"}
+                path={`${path}.${index}.name`}
+              />
+            </div>
           </div>
         )}
       />
     </div>
   );
 }
-export default Skills;
+export default Languages;
