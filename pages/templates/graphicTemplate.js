@@ -60,56 +60,62 @@ class GraphicTemplate extends Component {
                       path={"objective.body"}
                     />
                   </div>
+
+                  <div>
+                    {resumeData?.work?.visible && (
+                      <>
+                        <div className={`${style.managerTemplateCol} ${style.managerFHeading}`}>
+                          <Text
+                            value={resumeData?.work?.heading}
+                            placeholder="Experience"
+                            customclass={"manager-f-heading-title"}
+                            path={"experience.heading"}
+                            editable={false}
+                            style={styles.workHeading}
+                          />
+                          <WorkExperience
+                            data={
+                              resumeData?.work?.items.length
+                                ? [...resumeData?.work?.items]
+                                : [...sampleData?.data?.work?.items]
+                            }
+                            color={this.props.theme.color}
+                            updater={updater}
+                          />
+                        </div>
+                      </>
+                    )}
                   </div>
 
-                  {/* Education Histroy */}
-                  {resumeData?.education?.visible && (
-                    <div className={`${style.rowWidth}`}>
-                      <Text
-                        value={resumeData?.education?.heading}
-                        placeholder="EDUCATION"
-                        customclass={"manager-f-heading-title"}
-                        path={"education.heading"}
-                        editable={false}
-                        style={styles.workHeading}
-                      />
 
-                      <EducationHistory
-                        data={
-                          resumeData?.education?.items.length
-                            ? [...resumeData?.education?.items]
-                            : [...sampleData?.data?.education?.items]
-                        }
-                        color={this.props.theme.color}
-                        updater={updater}
-                      />
-                    </div>
-                  )}
-              </div>
+                </div>
 
-              {resumeData?.work?.visible && (
-                <>
-                  <div className={`${style.managerTemplateCol} ${style.managerFHeading}`}>
+                {/* Education Histroy */}
+                {resumeData?.education?.visible && (
+                  <div className={`${style.rowWidth}`}>
                     <Text
-                      value={resumeData?.work?.heading}
-                      placeholder="Experience"
+                      value={resumeData?.education?.heading}
+                      placeholder="EDUCATION"
                       customclass={"manager-f-heading-title"}
-                      path={"experience.heading"}
+                      path={"education.heading"}
                       editable={false}
                       style={styles.workHeading}
                     />
-                    <WorkExperience
+
+
+                    <EducationHistory
                       data={
-                        resumeData?.work?.items.length
-                          ? [...resumeData?.work?.items]
-                          : [...sampleData?.data?.work?.items]
+                        resumeData?.education?.items.length
+                          ? [...resumeData?.education?.items]
+                          : [...sampleData?.data?.education?.items]
                       }
                       color={this.props.theme.color}
                       updater={updater}
                     />
                   </div>
-                </>
-              )}
+                )}
+              </div>
+
 
               {/* Certification */}
               {resumeData?.certifications?.visible && (
