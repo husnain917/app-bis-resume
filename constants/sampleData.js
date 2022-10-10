@@ -101,10 +101,9 @@ export const sampleData = {
     },
     languages: {
       enable: true,
-      visible: true,
       heading: 'Languages',
-      index: 18,
       items: [{}],
+      visible: true,
     },
     military: {
       heading: 'Military',
@@ -159,6 +158,46 @@ export const sampleData = {
       enable: false,
       heading: 'Professional Accomplishments',
       items: [],
+      visible: false,
+    },
+    skills: {
+      enable: true,
+      heading: 'Skills',
+      index: 2,
+      items: [{}],
+      visible: true,
+    },
+    additional_skills: {
+      heading: 'Additonal Skills',
+      index: 16,
+      items: [],
+      visible: false,
+    },
+    social: {
+      enable: false,
+      heading: 'Social',
+      items: [],
+      visible: false,
+    },
+    speaking_engagements: {
+      heading: 'Speaking Engagements',
+      index: 12,
+      items: [
+        {
+          Description: '',
+          EventName: '',
+          EventType: '',
+          DatesOfService: {
+            StartDate: {
+              YearMonth: '',
+            },
+            EndDate: {
+              YearMonth: '',
+            },
+          },
+          '@branch': '',
+        },
+      ],
       visible: false,
     },
     profile: {
@@ -227,41 +266,6 @@ export const sampleData = {
             },
           },
           Name: '',
-        },
-      ],
-      visible: false,
-    },
-    skills: {
-      enable: true,
-      heading: 'Skills',
-      index: 2,
-      items: [
-        {
-          title: '',
-        },
-      ],
-      visible: true,
-    },
-    additional_skills: {
-      heading: 'Additonal Skills',
-      index: 16,
-      items: [{}],
-      visible: false,
-    },
-    social: {
-      enable: false,
-      heading: 'Social',
-      items: [],
-      visible: false,
-    },
-    speaking_engagements: {
-      heading: 'Speaking Engagements',
-      index: 12,
-      items: [
-        {
-          Description: '',
-          EventName: '',
-          EventType: '',
         },
       ],
       visible: false,
