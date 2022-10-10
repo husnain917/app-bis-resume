@@ -26,6 +26,9 @@ function Text(props) {
         style={{
           border: 'none',
           borderColor: addBorder ? '#4267b2' : 'rgba(0, 0, 0, 0.23)',
+          fontSize: props.fontSize,
+          lineHeight: props.lineHeight,
+          color: props.color,
         }}
         // style={{
 

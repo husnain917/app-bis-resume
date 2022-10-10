@@ -1,0 +1,92 @@
+.progressDiv {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.progress0 {
+    height: 40px;
+    width: 40px;
+    border: 5px solid white;
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 12px;
+    color: white;
+}
+
+.progress1 {
+    height: 60px;
+    width: 60px;
+    border: 5px solid white;
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 12px;
+    color: white;
+}
+
+.proHeadDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.proHead1 {
+    text-align: center;
+    padding-top: 10px;
+    color: white !important;
+    font-weight: 400;
+}
+
+.proHead2 {
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    font-weight: 400;
+}
+
+.progessDemo {
+    height: 80px;
+    width: 80px;
+}
+
+.inputControl {
+    width: "30px";
+}
+
+.input {
+    position: absolute;
+    margin-top: 30px;
+    max-width: 40px;
+    overflow: hidden;
+    max-height: 25px;
+    margin-left: 20px;
+    background-color: #372b25 !important;
+
+    text-align: center;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20;
+    border: 0;
+    outline: 0;
+}
+
+.inputCourse {
+    max-width: 150px;
+    overflow: hidden;
+    max-height: 25px;
+    margin-left: 20px;
+
+    background-color: #372b25 !important;
+
+    text-align: center;
+    border: none;
+    color: white !important;
+    /* font-weight: 500; */
+    font-size: 20;
+    border: 0;
+    outline: 0;
+
+}
