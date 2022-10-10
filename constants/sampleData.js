@@ -406,10 +406,9 @@ export const sampleData = {
     },
     languages: {
       enable: true,
-      visible: true,
       heading: "Languages",
-      index: 18,
       items: [{}],
+      visible: true,
     },
     military: {
       heading: "Military",
@@ -464,6 +463,46 @@ export const sampleData = {
       enable: false,
       heading: "Professional Accomplishments",
       items: [],
+      visible: false,
+    },
+    skills: {
+      enable: true,
+      heading: "Skills",
+      index: 2,
+      items: [{}],
+      visible: true,
+    },
+    additional_skills: {
+      heading: "Additonal Skills",
+      index: 16,
+      items: [],
+      visible: false,
+    },
+    social: {
+      enable: false,
+      heading: "Social",
+      items: [],
+      visible: false,
+    },
+    speaking_engagements: {
+      heading: "Speaking Engagements",
+      index: 12,
+      items: [
+        {
+          Description: "",
+          EventName: "",
+          EventType: "",
+          DatesOfService: {
+            StartDate: {
+              YearMonth: "",
+            },
+            EndDate: {
+              YearMonth: "",
+            },
+          },
+          "@branch": "",
+        },
+      ],
       visible: false,
     },
     profile: {
@@ -536,37 +575,6 @@ export const sampleData = {
       ],
       visible: false,
     },
-    skills: {
-      enable: true,
-      heading: "Skills",
-      index: 2,
-      items: [],
-      visible: true,
-    },
-    additional_skills: {
-      heading: "Additonal Skills",
-      index: 16,
-      items: [{}],
-      visible: false,
-    },
-    social: {
-      enable: false,
-      heading: "Social",
-      items: [],
-      visible: false,
-    },
-    speaking_engagements: {
-      heading: "Speaking Engagements",
-      index: 12,
-      items: [
-        {
-          Description: "",
-          EventName: "",
-          EventType: "",
-        },
-      ],
-      visible: false,
-    },
     training: {
       heading: "Training",
       index: 7,
@@ -617,8 +625,12 @@ export const sampleData = {
           title: "",
           website: "",
         },
+<<<<<<< HEAD
         
 >>>>>>> 400414f5efe18afc3636f81a4576d4371cda70e0
+=======
+
+>>>>>>> f2c0ac28396ebeea968d0902c8c289ba1d98d278
       ],
       visible: true,
     },

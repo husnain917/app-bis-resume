@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { useWindowSize } from '@react-hook/window-size';
 import { Row } from 'antd';
 
-export default function Profile() {
+export default function Profile({ cId }) {
   const [width] = useWindowSize();
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
 
@@ -27,8 +27,10 @@ export default function Profile() {
           />
         </Row>
       </div>
+
       <div className={`manager-template-row manager-template-text-center`}>
         <div
+<<<<<<< HEAD
           className={`manager-template-row manager-template-text-center manager-f-sub-rowA`}
         >
           <Text
@@ -71,6 +73,64 @@ export default function Profile() {
             customclass={'manager-f-name'}
             path={'profile.linkedinURL'}
           />
+=======
+          className={
+            `manager-template-row manager-template-text-center manager-f-sub-rowA`
+          }
+        >
+          {
+            cId === 'ceo' ?
+              <Text
+                value={resumeData?.profile?.address?.city}
+                placeholder="CHIEF EXLUSIVE OFFICER"
+                path={"profile.address.jobTitle"}
+                customclass={"manager-jobtitle "}
+              />
+              :
+              <>
+                <Text
+                  value={resumeData?.profile?.address?.city}
+                  placeholder="City"
+                  path={"profile.address.city"}
+                  customclass={"manager-f-name"}
+                />
+                <Text
+                  value={resumeData?.profile?.address?.state}
+                  placeholder="State"
+                  path={"profile.address.state"}
+                  customclass={"manager-f-name"}
+                />
+                <Text
+                  value={resumeData?.profile?.address?.zipcode}
+                  placeholder="Zip"
+                  customclass={"manager-f-name"}
+                  path={"profile.address.zipcode"}
+                />
+                <p className="aPadding">&nbsp;|&nbsp;</p>
+                <Text
+                  value={resumeData?.profile?.phone}
+                  placeholder="Phone"
+                  customclass={"manager-f-name"}
+                  path={"profile.phone"}
+                />
+                <p className="aPadding">&nbsp;|&nbsp;</p>
+
+                <Text
+                  value={resumeData?.profile?.email}
+                  placeholder="Email"
+                  customclass={"manager-f-name"}
+                  path={"profile.email"}
+                />
+                <p className="aPadding">&nbsp;|&nbsp;</p>
+                <Text
+                  value={resumeData?.profile?.linkedinURL}
+                  placeholder="LinkedIn"
+                  customclass={"manager-f-name"}
+                  path={"profile.linkedinURL"}
+                />
+              </>
+          }
+>>>>>>> f2c0ac28396ebeea968d0902c8c289ba1d98d278
         </div>
       </div>
     </>

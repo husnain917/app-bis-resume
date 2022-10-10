@@ -7,11 +7,12 @@
   }
   .main{
     position: relative;
+    min-width: fit-content;
   }
   .swapCont{
-    position: fixed;
-    right: 60px;
-    top: 40px;
+    position: absolute;
+    right: 40px ;
+    top: 80px;
   }
   .swap{
     width: 40px;
