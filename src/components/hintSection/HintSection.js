@@ -13,30 +13,29 @@ export default function HintSection() {
       
       <SideBar />
       <Box ml={["18%","5%","0%","0&","0%","0%"]}>
-
       <Text
         fontSize={["1.5rem", "2.5rem", "3rem", "3rem", "3rem", "4.5rem"]}
         color="#313B47"
         fontWeight="bold"
         textAlign="center"
-        pl={["7%", "14%"]}
-        pr={["14%"]}
+        pl={['7%', '14%']}
+        pr={['14%']}
       >
         Build Your Resume Fast and Easy.
       </Text>
       <div className={styles.hrLine}>
         <FaMinus
           style={{
-            color: "#1dbfaf",
-            fontSize: "30px",
-            backgroundColor: "#1dbfaf",
-            paddingLeft: "2.5%",
-            paddingRight: "2.7%",
+            color: '#1dbfaf',
+            fontSize: '30px',
+            backgroundColor: '#1dbfaf',
+            paddingLeft: '2.5%',
+            paddingRight: '2.7%',
             borderRadius: 50,
             height: 5,
-            textAlign: "center",
-            marginLeft: "47.5%",
-            marginTop: "0%",
+            textAlign: 'center',
+            marginLeft: '47.5%',
+            marginTop: '0%',
           }}
         />
       </div>
@@ -45,8 +44,8 @@ export default function HintSection() {
         fontSize={["1rem", "1.5rem", "1.8", "1.7rem", "1.5rem", "2.5rem"]}
         fontWeight={["400", "400"]}
         align="center"
-        pl={["7%", "14%"]}
-        pr={["14%"]}
+        pl={['7%', '14%']}
+        pr={['14%']}
         mt="3%"
       >
         ` Novoresume is lightning fast. There is no software to download. No

@@ -1,10 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { onBlurField } from '../../../store/actions/builderAction';
-import styles from '../../../styles/templates/text.module.scss';
-import { colors } from '../../../constants/colors';
+import styles from './hybridStyle.module.css';
 
-function Text(props) {
+function HybridText(props) {
   const dispatch = useDispatch();
   const { getResumeBuilderChoice } = useSelector(
     (state) => state.editorReducer
@@ -26,9 +25,6 @@ function Text(props) {
         style={{
           border: 'none',
           borderColor: addBorder ? '#4267b2' : 'rgba(0, 0, 0, 0.23)',
-          fontSize: props.fontSize,
-          lineHeight: props.lineHeight,
-          color: props.color,
         }}
         // style={{
 
@@ -47,7 +43,7 @@ function Text(props) {
         suppressContentEditableWarning="true"
         onBlur={(e) => _onBlur(e.currentTarget)}
         dangerouslySetInnerHTML={{ __html: value }}
-        className={styles.contentEditableContainer + ' ' + customclass}
+        className={styles.contentEditableHybridContainer + ' ' + customclass}
         data-placeholder={props.placeholder}
         {...props}
         onClick={() => {
@@ -58,4 +54,4 @@ function Text(props) {
   );
 }
 
-export default Text;
+export default HybridText;
