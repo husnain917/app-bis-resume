@@ -1,4 +1,4 @@
-import { Box, HStack, Image, Text } from '@chakra-ui/react';
+import { Box, HStack, Image } from '@chakra-ui/react';
 import React from 'react';
 import { GrMail } from 'react-icons/gr';
 import { useSelector } from 'react-redux';
@@ -6,6 +6,7 @@ import Style from './hybridStyle.module.css';
 import HybridText from './HybridText';
 import { BsPhoneFill } from 'react-icons/bs';
 import { MdLocationOn } from 'react-icons/md';
+import { Text } from '../template1';
 const HybridProfile = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const path = 'achievements.items';
@@ -59,9 +60,10 @@ const HybridProfile = () => {
         borderTopRightRadius={6}
         borderTopLeftRadius={6}
         mt={-10}
+        alignItems="flex-start"
       >
         <Box maxW={'200px'} minW={'200px'}></Box>
-        <Box maxW={'200px'} minW={'660px'} p={4}>
+        <Box maxW={'660px'} minW={'660px'} p={2}>
           <HybridText
             placeholder="Short and Engaging Pitch about Yourself"
             customclass={` ${Style.profileText}`}
@@ -72,12 +74,16 @@ const HybridProfile = () => {
       </HStack>
       <Box
         bg={'#449399'}
-        width="full"
-        h={'45px'}
         borderBottomRightRadius={6}
         borderBottomLeftRadius={6}
+        w={'full'}
       >
-        <HStack justifyContent="center" h={'full'}>
+        <HStack
+          justifyContent="center"
+          minH={'45px'}
+          alignItems="center"
+          maxW={'900px'}
+        >
           <GrMail size={20} color="white" />
           <HybridText
             placeholder="E-mail"

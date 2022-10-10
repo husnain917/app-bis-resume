@@ -10,6 +10,7 @@ import Util from '../../../utils/templateUtils';
 import { Text } from '../template1';
 import DndHybrid from './DndHybrid';
 import Style from './hybridStyle.module.css';
+import HybridText from './HybridText';
 
 const HybridHobbies = (props) => {
   const dispatch = useDispatch();
@@ -41,7 +42,7 @@ const HybridHobbies = (props) => {
           borderRadius={6}
           m={0.5}
         >
-          <Text
+          <HybridText
             value={item.title}
             placeholder="Interest"
             customclass={`${Style.skillText}`}
