@@ -37,11 +37,12 @@
   font-size: 1.4em;
   padding: 0;
   line-height: 30px;
-  text-align: center;
+  text-align: left;
   color: #319795;
 }
 .hybridName {
   color: #313c4e;
+  text-align: left;
 }
 .programText {
   font-size: 20px;

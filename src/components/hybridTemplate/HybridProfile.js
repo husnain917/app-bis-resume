@@ -14,8 +14,9 @@ const HybridProfile = () => {
     <div>
       <HStack>
         <Box
-          height={150}
-          width={150}
+          minH={150}
+          maxW={150}
+          minW={150}
           borderColor="#313C4E"
           borderWidth={4}
           borderRadius="full"
@@ -44,13 +45,14 @@ const HybridProfile = () => {
               path={'profile.lastName'}
             />
           </HStack>
-          <HybridText
-            placeholder="Profession"
-            customclass={`${Style.ProfessionHybrid}`}
-            path={'profile.profession'}
-            value={resumeData?.profile?.profession}
-          />
-          <Box h={6}></Box>
+          <Box maxW={'750px'} pb={10} justifyContent={'center'} ml={1}>
+            <HybridText
+              placeholder="Profession"
+              customclass={`${Style.ProfessionHybrid}`}
+              path={'profile.profession'}
+              value={resumeData?.profile?.profession}
+            />
+          </Box>
         </Box>
       </HStack>
       <HStack
