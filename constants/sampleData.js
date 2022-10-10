@@ -1,10 +1,6 @@
 export const sampleData = {
   data: {
     achievements: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 26d93fd5ea827d3d048e1274b7cf6d3b1c18e575
       heading: 'Achievements',
       index: 8,
       items: [
@@ -324,17 +320,9 @@ export const sampleData = {
           title: '',
           website: '',
         },
-<<<<<<< HEAD
-=======
-      heading: "Achievements",
-      index: 8,
-      items: [
-        {
-          Description: "",
-        },
-=======
->>>>>>> 26d93fd5ea827d3d048e1274b7cf6d3b1c18e575
       ],
+      heading: 'Achievements',
+      index: 8,
       visible: true,
     },
     organization: {
@@ -348,287 +336,261 @@ export const sampleData = {
           endDate: '',
         },
       ],
-<<<<<<< HEAD
+
       visible: true,
     },
     expertise: {
-      heading: "Areas of Expertise include:",
+      heading: 'Areas of Expertise include:',
       items: [],
       visible: false,
     },
     extras: {
       enable: false,
-      heading: "Additional Information",
+      heading: 'Additional Information',
       items: [],
     },
     hobbies: {
       enable: false,
-      heading: "Hobbies",
+      heading: 'Hobbies',
       items: [],
       visible: false,
     },
     languages: {
       enable: true,
-      heading: "Languages",
+      heading: 'Languages',
       items: [{}],
       visible: true,
     },
     military: {
-      heading: "Military",
+      heading: 'Military',
       index: 14,
       items: [
         {
           RankAchieved: {
-            CurrentOrEndRank: "",
+            CurrentOrEndRank: '',
           },
           DatesOfService: {
             StartDate: {
-              YearMonth: "",
+              YearMonth: '',
             },
             EndDate: {
-              YearMonth: "",
+              YearMonth: '',
             },
           },
-          "@branch": "",
+          '@branch': '',
         },
       ],
       visible: false,
     },
     objective: {
-      body: "",
+      body: '',
       enable: true,
-      heading: "Summary",
+      heading: 'Summary',
       index: 1,
       visible: true,
     },
     custom: {
-      body: "",
+      body: '',
       enable: false,
-      heading: "Custom",
+      heading: 'Custom',
       index: 15,
       visible: false,
     },
     patents: {
-      heading: "Patents",
+      heading: 'Patents',
       index: 10,
       items: [
         {
-          Description: "",
+          Description: '',
           Inventors: {
-            InventorName: [""],
+            InventorName: [''],
           },
-          PatentTitle: "",
+          PatentTitle: '',
         },
       ],
       visible: false,
     },
     professionalAccomplishments: {
       enable: false,
-      heading: "Professional Accomplishments",
+      heading: 'Professional Accomplishments',
       items: [],
       visible: false,
     },
     skills: {
       enable: true,
-      heading: "Skills",
+      heading: 'Skills',
       index: 2,
       items: [{}],
       visible: true,
     },
     additional_skills: {
-      heading: "Additonal Skills",
+      heading: 'Additonal Skills',
       index: 16,
       items: [],
       visible: false,
     },
     social: {
       enable: false,
-      heading: "Social",
+      heading: 'Social',
       items: [],
       visible: false,
     },
     speaking_engagements: {
-      heading: "Speaking Engagements",
+      heading: 'Speaking Engagements',
       index: 12,
       items: [
         {
-          Description: "",
-          EventName: "",
-          EventType: "",
+          Description: '',
+          EventName: '',
+          EventType: '',
           DatesOfService: {
             StartDate: {
-              YearMonth: "",
+              YearMonth: '',
             },
             EndDate: {
-              YearMonth: "",
+              YearMonth: '',
             },
           },
-          "@branch": "",
+          '@branch': '',
         },
       ],
       visible: false,
     },
     profile: {
       address: {
-        city: "",
-        line1: "",
-        line2: "",
-        line3: "",
-        pincode: "",
-        state: "",
-        zipcode: "",
+        city: '',
+        line1: '',
+        line2: '',
+        line3: '',
+        pincode: '',
+        state: '',
+        zipcode: '',
       },
-      email: "",
-      firstName: "",
-      heading: "Profile",
+      email: '',
+      firstName: '',
+      heading: 'Profile',
       index: 0,
-      lastName: "",
-      linkedinURL: "",
-      phone: "",
+      lastName: '',
+      linkedinURL: '',
+      phone: '',
       photo:
-        "https://pbs.twimg.com/profile_images/1197449172921847809/HhpxN86f_400x400.jpg",
-      photograph: "",
-      subtitle: "",
+        'https://pbs.twimg.com/profile_images/1197449172921847809/HhpxN86f_400x400.jpg',
+      photograph: '',
+      subtitle: '',
       visible: true,
-      website: "",
+      website: '',
     },
     projects: {
-      heading: "Projects",
+      heading: 'Projects',
       index: 9,
       items: [
         {
-          Title: "",
-          Company: "",
-          Duration: "",
-          TechnologiesUsed: "",
-          Summary: "",
+          Title: '',
+          Company: '',
+          Duration: '',
+          TechnologiesUsed: '',
+          Summary: '',
         },
       ],
       visible: false,
     },
     publications: {
-      heading: "Publications",
+      heading: 'Publications',
       index: 11,
       items: [
         {
-          Title: "",
-          JournalOrSerialName: "",
-          Issue: "",
+          Title: '',
+          JournalOrSerialName: '',
+          Issue: '',
         },
       ],
       visible: false,
     },
     references: {
       enable: false,
-      heading: "References",
+      heading: 'References',
       items: [],
     },
     security_creds: {
-      heading: "Security Credentials",
+      heading: 'Security Credentials',
       index: 13,
       items: [
         {
           EffectiveDate: {
             FirstIssuedDate: {
-              Year: "",
+              Year: '',
             },
           },
-          Name: "",
+          Name: '',
         },
       ],
       visible: false,
     },
     training: {
-      heading: "Training",
+      heading: 'Training',
       index: 7,
       items: [
         {
-          "sov:Description": "",
-          "sov:EndDate": {
-            Year: "",
+          'sov:Description': '',
+          'sov:EndDate': {
+            Year: '',
           },
-          "sov:Entity": null,
-          "sov:Qualifications": {
-            "sov:Qualification": [],
+          'sov:Entity': null,
+          'sov:Qualifications': {
+            'sov:Qualification': [],
           },
-          "sov:TrainingName": null,
-          "sov:Type": "",
+          'sov:TrainingName': null,
+          'sov:Type': '',
         },
       ],
       visible: false,
     },
     volunteerExperience: {
       enable: false,
-      heading: "Volunteer Experience",
+      heading: 'Volunteer Experience',
       items: [],
       visible: false,
     },
     work: {
       enable: true,
-      heading: "Work Experience",
+      heading: 'Work Experience',
       index: 3,
       items: [
         {
-          company: "",
-          description: "",
+          company: '',
+          description: '',
           enabled: true,
-          end: "",
-          endDate: "",
-          endMonth: "",
-          endYear: "",
-          id: "",
-          location: "",
-          position: "",
-          role: "",
-          start: "",
-          startDate: "",
-          startMonth: "",
-          startYear: "",
-          summary: "",
-          title: "",
-          website: "",
+          end: '',
+          endDate: '',
+          endMonth: '',
+          endYear: '',
+          id: '',
+          location: '',
+          position: '',
+          role: '',
+          start: '',
+          startDate: '',
+          startMonth: '',
+          startYear: '',
+          summary: '',
+          title: '',
+          website: '',
         },
-<<<<<<< HEAD
-        
->>>>>>> 400414f5efe18afc3636f81a4576d4371cda70e0
-=======
-
->>>>>>> f2c0ac28396ebeea968d0902c8c289ba1d98d278
       ],
       visible: true,
     },
-  },
-<<<<<<< HEAD
-=======
+
+    oid: '5fb681c7c8d2ca429821d3d2',
+    theme: {
+      colors: {
+        accent: '#f44336',
+        background: '#ffffff',
+        primary: '#212121',
+      },
+      font: {
+        family: 'Montserrat',
+      },
+      layout: 'castform',
     },
-  },
->>>>>>> 26d93fd5ea827d3d048e1274b7cf6d3b1c18e575
-  oid: '5fb681c7c8d2ca429821d3d2',
-  theme: {
-    colors: {
-      accent: '#f44336',
-      background: '#ffffff',
-      primary: '#212121',
-    },
-    font: {
-      family: 'Montserrat',
-    },
-    layout: 'castform',
-<<<<<<< HEAD
-=======
-  oid: "5fb681c7c8d2ca429821d3d2",
-  theme: {
-    colors: {
-      accent: "#f44336",
-      background: "#ffffff",
-      primary: "#212121",
-    },
-    font: {
-      family: "Montserrat",
-    },
-    layout: "castform",
->>>>>>> 400414f5efe18afc3636f81a4576d4371cda70e0
-=======
->>>>>>> 26d93fd5ea827d3d048e1274b7cf6d3b1c18e575
   },
 };
