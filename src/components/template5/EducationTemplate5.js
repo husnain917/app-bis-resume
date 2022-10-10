@@ -46,10 +46,10 @@ const EducationTemplate5 = (props) => {
             <Stack w={190} justifyContent="flex-end">
               <Text
                 placeholder="Institute or University"
-                value={item.courseworks}
+                value={item.institution}
                 customclass={'companyTemplate5'}
                 style={styles.mb_10}
-                path={`${path}.${index}.courseworks`}
+                path={`${path}.${index}.institution`}
               />
               <div
                 className="manager-template-row"

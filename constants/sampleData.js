@@ -2,6 +2,9 @@ export const sampleData = {
   data: {
     achievements: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 26d93fd5ea827d3d048e1274b7cf6d3b1c18e575
       heading: 'Achievements',
       index: 8,
       items: [
@@ -43,6 +46,8 @@ export const sampleData = {
           location: '',
           summary: '',
           title: '',
+          startDate: '',
+          endDate: '',
         },
       ],
       visible: false,
@@ -91,13 +96,18 @@ export const sampleData = {
     hobbies: {
       enable: false,
       heading: 'Hobbies',
-      items: [],
+      items: [
+        {
+          title: '',
+        },
+      ],
       visible: false,
     },
     languages: {
-      enable: false,
+      enable: true,
       heading: 'Languages',
-      items: [],
+      items: [{}],
+      visible: true,
     },
     military: {
       heading: 'Military',
@@ -154,6 +164,46 @@ export const sampleData = {
       items: [],
       visible: false,
     },
+    skills: {
+      enable: true,
+      heading: 'Skills',
+      index: 2,
+      items: [{}],
+      visible: true,
+    },
+    additional_skills: {
+      heading: 'Additonal Skills',
+      index: 16,
+      items: [],
+      visible: false,
+    },
+    social: {
+      enable: false,
+      heading: 'Social',
+      items: [],
+      visible: false,
+    },
+    speaking_engagements: {
+      heading: 'Speaking Engagements',
+      index: 12,
+      items: [
+        {
+          Description: '',
+          EventName: '',
+          EventType: '',
+          DatesOfService: {
+            StartDate: {
+              YearMonth: '',
+            },
+            EndDate: {
+              YearMonth: '',
+            },
+          },
+          '@branch': '',
+        },
+      ],
+      visible: false,
+    },
     profile: {
       address: {
         city: '',
@@ -177,7 +227,6 @@ export const sampleData = {
       subtitle: '',
       visible: true,
       website: '',
-      profession: '',
     },
     projects: {
       heading: 'Projects',
@@ -221,42 +270,6 @@ export const sampleData = {
             },
           },
           Name: '',
-        },
-      ],
-      visible: false,
-    },
-    skills: {
-      enable: true,
-      heading: 'Skills',
-      index: 2,
-      items: [
-        {
-          skill1: '',
-          skill2: '',
-        },
-      ],
-      visible: true,
-    },
-    additional_skills: {
-      heading: 'Additonal Skills',
-      index: 16,
-      items: [],
-      visible: false,
-    },
-    social: {
-      enable: false,
-      heading: 'Social',
-      items: [],
-      visible: false,
-    },
-    speaking_engagements: {
-      heading: 'Speaking Engagements',
-      index: 12,
-      items: [
-        {
-          Description: '',
-          EventName: '',
-          EventType: '',
         },
       ],
       visible: false,
@@ -311,6 +324,7 @@ export const sampleData = {
           title: '',
           website: '',
         },
+<<<<<<< HEAD
 =======
       heading: "Achievements",
       index: 8,
@@ -318,74 +332,23 @@ export const sampleData = {
         {
           Description: "",
         },
+=======
+>>>>>>> 26d93fd5ea827d3d048e1274b7cf6d3b1c18e575
       ],
-      visible: false,
+      visible: true,
     },
-    associations: {
-      heading: "Associations",
-      index: 6,
-      items: [
-        {
-          Name: "",
-          Role: [
-            {
-              Name: "",
-            },
-          ],
-        },
-      ],
-      visible: false,
-    },
-    awards: {
-      enable: false,
-      heading: "Honors & Awards",
-      items: [],
-      visible: false,
-    },
-    certifications: {
-      heading: "Certifications",
-      index: 5,
-      items: [
-        {
-          date: "",
-          id: "",
-          issuer: "",
-          location: "",
-          summary: "",
-          title: "",
-        },
-      ],
-      visible: false,
-    },
-    education: {
+    organization: {
       enable: true,
-      heading: "Education",
-      index: 4,
+      heading: 'Organization',
       items: [
         {
-          awards: "",
-          courseworks: "",
-          degree: "",
-          description: "",
-          enabled: true,
-          end: "",
-          endDate: "",
-          extracurricular: "",
-          field: "",
-          gpa: "",
-          grade: "",
-          id: "",
-          institution: "",
-          location: "",
-          major: "",
-          month: "",
-          start: null,
-          startDate: null,
-          summary: "",
-          title: "",
-          year: "",
+          name: '',
+          role: '',
+          startDate: '',
+          endDate: '',
         },
       ],
+<<<<<<< HEAD
       visible: true,
     },
     expertise: {
@@ -636,6 +599,10 @@ export const sampleData = {
     },
   },
 <<<<<<< HEAD
+=======
+    },
+  },
+>>>>>>> 26d93fd5ea827d3d048e1274b7cf6d3b1c18e575
   oid: '5fb681c7c8d2ca429821d3d2',
   theme: {
     colors: {
@@ -647,6 +614,7 @@ export const sampleData = {
       family: 'Montserrat',
     },
     layout: 'castform',
+<<<<<<< HEAD
 =======
   oid: "5fb681c7c8d2ca429821d3d2",
   theme: {
@@ -660,5 +628,7 @@ export const sampleData = {
     },
     layout: "castform",
 >>>>>>> 400414f5efe18afc3636f81a4576d4371cda70e0
+=======
+>>>>>>> 26d93fd5ea827d3d048e1274b7cf6d3b1c18e575
   },
 };
