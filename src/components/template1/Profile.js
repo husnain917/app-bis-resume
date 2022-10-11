@@ -30,58 +30,6 @@ export default function Profile({ cId }) {
 
       <div className={`manager-template-row manager-template-text-center`}>
         <div
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className={`manager-template-row manager-template-text-center manager-f-sub-rowA`}
-        >
-          <Text
-            value={resumeData?.profile?.address?.city}
-            placeholder="City"
-            path={'profile.address.city'}
-            customclass={'manager-f-name'}
-          />
-          <Text
-            value={resumeData?.profile?.address?.state}
-            placeholder="State"
-            path={'profile.address.state'}
-            customclass={'manager-f-name'}
-          />
-          <Text
-            value={resumeData?.profile?.address?.zipcode}
-            placeholder="Zip"
-            customclass={'manager-f-name'}
-            path={'profile.address.zipcode'}
-          />
-          <p className="aPadding">&nbsp;|&nbsp;</p>
-          <Text
-            value={resumeData?.profile?.phone}
-            placeholder="Phone"
-            customclass={'manager-f-name'}
-            path={'profile.phone'}
-          />
-          <p className="aPadding">&nbsp;|&nbsp;</p>
-
-          <Text
-            value={resumeData?.profile?.email}
-            placeholder="Email"
-            customclass={'manager-f-name'}
-            path={'profile.email'}
-          />
-          <p className="aPadding">&nbsp;|&nbsp;</p>
-          <Text
-            value={resumeData?.profile?.linkedinURL}
-            placeholder="LinkedIn"
-            customclass={'manager-f-name'}
-            path={'profile.linkedinURL'}
-          />
-=======
-          className={
-            `manager-template-row manager-template-text-center manager-f-sub-rowA`
-          }
-        >
-          {
-            cId === 'ceo' ?
-=======
           className={`manager-template-row manager-template-text-center manager-f-sub-rowA`}
         >
           {cId === 'ceo' ? (
@@ -93,7 +41,6 @@ export default function Profile({ cId }) {
             />
           ) : (
             <>
->>>>>>> 26d93fd5ea827d3d048e1274b7cf6d3b1c18e575
               <Text
                 value={resumeData?.profile?.address?.city}
                 placeholder="City"
@@ -121,24 +68,6 @@ export default function Profile({ cId }) {
               />
               <p className="aPadding">&nbsp;|&nbsp;</p>
 
-<<<<<<< HEAD
-                <Text
-                  value={resumeData?.profile?.email}
-                  placeholder="Email"
-                  customclass={"manager-f-name"}
-                  path={"profile.email"}
-                />
-                <p className="aPadding">&nbsp;|&nbsp;</p>
-                <Text
-                  value={resumeData?.profile?.linkedinURL}
-                  placeholder="LinkedIn"
-                  customclass={"manager-f-name"}
-                  path={"profile.linkedinURL"}
-                />
-              </>
-          }
->>>>>>> f2c0ac28396ebeea968d0902c8c289ba1d98d278
-=======
               <Text
                 value={resumeData?.profile?.email}
                 placeholder="Email"
@@ -154,7 +83,6 @@ export default function Profile({ cId }) {
               />
             </>
           )}
->>>>>>> 26d93fd5ea827d3d048e1274b7cf6d3b1c18e575
         </div>
       </div>
     </>
