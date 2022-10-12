@@ -1,0 +1,140 @@
+.mainDiv {
+  background-color:#005063;
+  min-height: fit-content;
+  min-width: fit-content;
+  padding: 60px 300px
+}
+
+.innerMainDiv {
+  max-width: 900px;
+  min-width: 900px;
+  display: flex;
+  height: 100%
+}
+
+.innerMainDiv1 {
+  background-color: #ffffff;
+
+  width: 400px;
+  padding: 0 25px;
+  min-height: 100%
+}
+
+.innerMainDiv2 {
+  background-color: #ffffff;
+  width: 500px;
+  padding: 20px 40px;
+  min-height: 100%
+}
+
+.contactHeadingTitle {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-top: 15px;
+  color: white !important;
+  border-bottom: 4px solid white !important;
+  border-radius: 0% !important;
+  padding: 0px !important;
+  text-transform: uppercase;
+}
+
+.ContactDiv {
+  background-color: #2a3035;
+  margin-top: 50px
+}
+
+.contactHeadingTitle:empty::before {
+  opacity: 1 !important;
+}
+
+.contactBody {
+  font-size: 0.95em !important;
+  line-height: 20px;
+  color: white;
+  font-weight: 400;
+}
+
+.contactBody:empty::before {
+  color: white !important;
+  font-weight: 500;
+}
+
+.contactBody:focus {
+  background-color: inherit !important;
+}
+
+.contactIconMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0;
+  padding-bottom: 5px;
+}
+
+.contactIcon {
+  width: 12%;
+  display: inline-block;
+  height: 33px;
+  text-align: center;
+  margin: 0 4px;
+}
+
+.iconDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.contactIconCotent {
+  width: 90%;
+  display: inline-block
+}
+
+.languageMainDiv {
+  margin-bottom: 50px !important;
+}
+
+.templateceoHeadingTitle {
+
+  border-left: 5px solid black !important;
+  margin: 20px 0px !important;
+  color: black;
+  margin-bottom: 10px !important;
+}
+
+.ProfileCon {
+  font-size: 1.7em;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  border-radius: 0% !important;
+  margin-bottom: 10px !important;
+  margin-top: 40px;
+  padding-left: 5px;
+  color: black;
+}
+
+
+.templateceoHeadingTitle:Empty::before {
+  opacity: 1 !important;
+}
+
+.managerPadding {
+  padding: 4px 5px;
+}
+
+.SkillHead {
+  font-size: 30px;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  
+
+
+}
