@@ -38,7 +38,7 @@ export default function TemplateMarket() {
                         <Profile cId='market' />
                         <Box className={styles.ContactDiv}>
                             < h2 className={styles.SkillHead}> Contact</h2>
-                            <Box >
+                            <Box style={{ marginLeft: 15 }}>
                                 <div className={styles.contactIconMain} >
                                     <div className={styles.contactIcon} >
                                         <div className={styles.iconDiv}>
