@@ -19,7 +19,7 @@ import WorkCertificate from '../../src/components/templateMarket/WorkCertificate
 
 
 
-export default function templateMarket() {
+export default function TemplateMarket() {
     const {
         resumeData,
         theme,
@@ -180,7 +180,6 @@ export default function templateMarket() {
                         </div>
 
                         {/* Education */}
-
                         <div >
                             <Text
                                 value={resumeData?.education?.heading}
@@ -205,7 +204,6 @@ export default function templateMarket() {
                                 </div>
                             </div>
                         </div>
-
                         <div >
                             <Text
                                 value={resumeData?.certifications?.heading}
