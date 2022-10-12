@@ -73,7 +73,7 @@ export default function TemplateMarket() {
                                 <div className={styles.contactIconMain}>
                                     <div className={styles.contactIcon} style={{ width: '43px', justifyContent: 'right', padding: '0px', margin: '0px' }}>
                                         <div className={styles.iconDiv} style={{ border: 'none', padding: '0px', margin: '0px' }}>
-                                            <TbWorld size='40px' color='white' />
+                                            <TbWorld size='20px' color='white' />
                                         </div>
                                     </div>
                                     <div className={styles.contactIconCotent}>
