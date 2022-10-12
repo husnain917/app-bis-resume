@@ -1,8 +1,9 @@
 .headingComp{
     color: #002d6b;
     font-family: 'Domine';
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 20px;
+
 }
 .resumeImgDiv{
     position: relative;

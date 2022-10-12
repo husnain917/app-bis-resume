@@ -24,6 +24,7 @@ function Skills(props) {
     dispatch(deleteObjInArray(deletedPath));
   };
   const { data } = props;
+  console.log({data})
 
   return (
     <div className="manager-template-row">

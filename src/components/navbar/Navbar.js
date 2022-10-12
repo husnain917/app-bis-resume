@@ -33,17 +33,13 @@ export default function Navbar() {
     const breakpointfontSize = useBreakpointValue({ xl: '14px', lg: '12px', })
 
     return (
-        <Box
-            borderBottom={1}
-            borderStyle={'solid'}
-            borderColor={useColorModeValue('gray.200', 'gray.900')}
-        >
+        <Box>
             <Flex
                 bg={useColorModeValue('white', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
                 minH={'110px'}
                 py={{ base: 2 }}
-                mx={useBreakpointValue({ xl: '62px', lg: '30px', })}
+                mx={useBreakpointValue({ xl: '50px', lg: '30px', })}
                 align={'center'}>
 
                 {/* logo */}
@@ -59,7 +55,7 @@ export default function Navbar() {
                         width={useBreakpointValue({ xl: '250px', lg: '170px', md: '200px', sm: '180px' })}
                     />
 
-                    {/* deskTop Nav */}
+                     {/* deskTop Nav */}
                     <Flex
                         display={{ base: 'none', lg: 'flex', }}
                         marginTop={useBreakpointValue({ xl: '20px', lg: '12px' })}
@@ -124,7 +120,7 @@ export default function Navbar() {
                             </Popover>
                         </Box>
                     ))} */}
-                    {/* English dropdown end */}
+                    {/* English dropdown end  */}
 
 
 
@@ -142,6 +138,7 @@ export default function Navbar() {
                                             boxShadow: '0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)',
                                             borderRadius: '0.2rem'
                                         }}
+                                        ml="2.5rem"
                                         cursor={'pointer'}
                                         width={breakpointWidth}
                                         bg={popoverContentBgColor}
@@ -169,7 +166,7 @@ export default function Navbar() {
                     {/* login button end */}
 
 
-                    {/* toggle button */}
+                    {/* toggle button  */}
                     <Flex
                         flex={{ base: 1, }}
                         ml={{ base: -2 }}
@@ -185,7 +182,7 @@ export default function Navbar() {
                             aria-label={'Toggle Navigation'}
                         />
                     </Flex>
-                    {/* toogle button end */}
+                    {/* toogle button end  */}
                 </Stack>
             </Flex>
 
@@ -302,7 +299,7 @@ const MobileNav = () => {
                 <MobileNavItem key={navItem.label} {...navItem} />
             ))}
 
-            {/* english dropdown */}
+            {/* english dropdown  */}
             {/* {EnglishDropDown.map((navItem) => (
                 <MobileNavItem key={navItem.label} {...navItem} />
             ))} */}
@@ -348,7 +345,7 @@ const MobileNav = () => {
                     })
                 }
             </Box>
-            {/* login buttons end */}
+            {/* login buttons end  */}
         </Stack>
     );
 };
