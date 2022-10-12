@@ -24,17 +24,17 @@ export default function Skillprogress() {
             <div className={styles.progressDiv}>
                 <div>
                     <div className={styles.inputControl}>
-                        <input type="text" value={progrees} onChange={(e) => setProgrees(e.target.value)} className={styles.input} />       </div>
+                        <input type="number" value={progrees > 0 && progrees > 100 || progrees <= 0 ? progrees === "0" : null} onChange={(e) => setProgrees(e.target.value)} className={styles.input} />       </div>
                     <div>
-                        <Circle percent={progrees > 100 || progrees < 0 ? progrees === "100" : progrees} strokeWidth={4} strokeColor="red" className={styles.progessDemo} onClick={() => youProgress} />
+                        <Circle percent={progrees > 0 && progrees <= 100 ? progrees : null} strokeWidth={4} strokeColor="red" minLength={3} max={3} className={styles.progessDemo} onClick={() => youProgress} />
                     </div>
                 </div>
                 <div>
                     <div className={styles.inputControl}>
-                        <input type="number" value={progrees2} onChange={(e) => setProgress2(e.target.value)} className={styles.input} />
+                        <input type="number" value={progrees2 > 0 && progrees2 > 100 || progrees2 <= 0 ? progrees2 === "0" : null} onChange={(e) => setProgress2(e.target.value)} className={styles.input} />
                     </div>
                     <div>
-                        <Circle percent={progrees2 > 100 || progrees2 < 0 ? progrees2 === "100" : progrees2} strokeWidth={5} strokeColor="cornflowerblue" className={styles.progessDemo} onClick={() => youProgress2()} />
+                        <Circle percent={progrees2 > 0 && progrees2 <= 100 ? progrees2 : null} strokeWidth={5} strokeColor="cornflowerblue" className={styles.progessDemo} onClick={() => youProgress2()} />
                     </div>
                 </div>
             </div>
