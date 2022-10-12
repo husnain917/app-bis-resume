@@ -1,29 +1,29 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Text } from "../../src/components/graphicTemplate/index";
-import style from "../../styles/templates/graphicTemplate.module.scss";
+import { Text } from "../../src/components/graphicDesigner/index";
+import style from "../../styles/templates/graphicDesigner.module.scss";
 import { onBlurField } from "../../store/actions/builderAction";
-import Skills from "../../src/components/graphicTemplate/Skills";
-import AdditionalSkills from "../../src/components/graphicTemplate/AdditionalSkills";
-import WorkExperience from "../../src/components/graphicTemplate/WorkExperience";
-import EducationHistory from "../../src/components/graphicTemplate/EducationHistory";
+import Skills from "../../src/components/graphicDesigner/Skills";
+import AdditionalSkills from "../../src/components/graphicDesigner/AdditionalSkills";
+import WorkExperience from "../../src/components/graphicDesigner/WorkExperience";
+import EducationHistory from "../../src/components/graphicDesigner/EducationHistory";
 import { sampleData } from "../../constants/sampleData";
-import { styles } from "../../src/components/componentStyles/graphicTemplateStyle";
-import Profile from "../../src/components/graphicTemplate/Profile";
-import Certifications from "../../src/components/graphicTemplate/Certifications";
-import Associations from "../../src/components/graphicTemplate/Associations";
-import Trainings from "../../src/components/graphicTemplate/Trainings";
-import Achievements from "../../src/components/graphicTemplate/Achievements";
-import Projects from "../../src/components/graphicTemplate/Projects";
-import Patents from "../../src/components/graphicTemplate/Patents";
-import Publications from "../../src/components/graphicTemplate/Publications";
-import Speakings from "../../src/components/graphicTemplate/Speakings";
-import Security from "../../src/components/graphicTemplate/Security";
-import Military from "../../src/components/graphicTemplate/Military";
+import { styles } from "../../src/components/componentStyles/graphicDesignerStyle";
+import Profile from "../../src/components/graphicDesigner/Profile";
+import Certifications from "../../src/components/graphicDesigner/Certifications";
+import Associations from "../../src/components/graphicDesigner/Associations";
+import Trainings from "../../src/components/graphicDesigner/Trainings";
+import Achievements from "../../src/components/graphicDesigner/Achievements";
+import Projects from "../../src/components/graphicDesigner/Projects";
+import Patents from "../../src/components/graphicDesigner/Patents";
+import Publications from "../../src/components/graphicDesigner/Publications";
+import Speakings from "../../src/components/graphicDesigner/Speakings";
+import Security from "../../src/components/graphicDesigner/Security";
+import Military from "../../src/components/graphicDesigner/Military";
 import { Tooltip } from "react-tippy";
 import Link from "next/link";
 
-class GraphicTemplate extends Component {
+class GraphicDesigner extends Component {
   render() {
     const { resumeData, updater, width } = this.props;
     console.log("resumeData", resumeData);
@@ -424,4 +424,4 @@ const mapStateToProps = (store) => ({
   updater: store.editorReducer.updater,
 });
 
-export default connect(mapStateToProps, { onBlurField })(GraphicTemplate);
+export default connect(mapStateToProps, { onBlurField })(GraphicDesigner);
