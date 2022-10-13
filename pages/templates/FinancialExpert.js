@@ -27,7 +27,7 @@ class Manager extends Component {
     const { resumeData, updater, width } = this.props;
     console.log("resumeData", resumeData);
     return (
-      <Box position="relative">
+      <Box position="relative" overflow="auto" maxW="2950px">
         <Link href={"/templates"}>
           <Box position="fixed" right="60px" top="40px">
             <Tooltip title="Change Template" arrow distance={20}>
@@ -41,16 +41,16 @@ class Manager extends Component {
           padding="30px"
           backgroundColor="white"
           fontFamily="sans-serif"
-          minW={1350}
           margin="auto"
+          minW={1750}
         >
           <Box className={width < 500 ? "" : style.a4PaperFinancial}>
             <Box>
               {/* <Profile /> */}
               <Box display="flex" flexDirection="row">
-                <Box minW="30%" minH="30vh"></Box>
+                <Box w="30%" minH="30vh"></Box>
                 <Box
-                  minW="70%"
+                  w="70%"
                   minH="30vh"
                   display="flex"
                   justifyContent="center"
@@ -70,11 +70,10 @@ class Manager extends Component {
                 <Box minW="30%" maxW="30%">
                   <Image
                     src="/Profile.jpeg"
-                    h={350}
-                    w={350}
+                    h={300}
+                    w={300}
                     borderRadius="50%"
                     marginTop="-230px"
-                    marginLeft="20px"
                   />
                   <Box padding="16">
                     <Text

@@ -80,7 +80,7 @@ function WorkExperience(props) {
                 h="30px"
                 mt="2px"
               >
-                <Box fontSize="3rem" mb="3%">
+                <Box fontSize="3rem" mb="2%">
                   .
                 </Box>
                 <Text
@@ -99,7 +99,7 @@ function WorkExperience(props) {
                 h="30px"
                 mt="2px"
               >
-                <Box fontSize="3rem" mb="3%">
+                <Box fontSize="3rem" mb="2%">
                   .
                 </Box>
                 <Text
@@ -118,7 +118,7 @@ function WorkExperience(props) {
                 h="30px"
                 mt="2px"
               >
-                <Box fontSize="3rem" mb="3%">
+                <Box fontSize="3rem" mb="2%">
                   .
                 </Box>
                 <Text
@@ -137,7 +137,7 @@ function WorkExperience(props) {
                 h="30px"
                 mt="2px"
               >
-                <Box fontSize="3rem" mb="3%">
+                <Box fontSize="3rem" mb="2%">
                   .
                 </Box>
                 <Text
