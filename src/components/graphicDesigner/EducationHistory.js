@@ -35,95 +35,35 @@ function EducationHistory(props) {
           <>
             <div className="manager-template-row">
               <Text
+                value={item.startDate}
+                placeholder="Start Date"
+                customclass={"manager-fName"}
+                path={`${path}.${index}.startDate`}
+              />
+              <p> &nbsp; - &nbsp;</p>
+              <Text
+                value={item.endDate}
+                placeholder="End Date"
+                customclass={"manager-fName"}
+                path={`${path}.${index}.endDate`}
+                max="9999-12-31"
+
+              />
+            </div>
+            <div className="manager-template-row">
+              <Text
                 value={item.degree}
                 placeholder="Degree"
                 customclass={"manager-fName manager-template-text-bold"}
                 path={`${path}.${index}.degree`}
               />
-
-              <p style={styles.paraStyles(false)}>,</p>
+            </div>
+            <div className="manager-template-row">
               <Text
                 value={item.institution}
                 placeholder="College Name"
                 customclass={"manager-fName"}
                 path={`${path}.${index}.institution`}
-              />
-              <p style={styles.paraStyles(false)}>,</p>
-              <Text
-                value={item.location}
-                placeholder="Location"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.location`}
-              />
-            </div>
-            <div className="manager-template-row">
-              <p style={styles.paraStyles(true)}>CGPA</p>
-              <Text
-                value={item.gpa}
-                placeholder="GPA/CGPA"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.gpa`}
-              />
-            </div>
-            <div className="manager-template-row">
-              <Text
-                value={item.month}
-                placeholder="Month"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.month`}
-              />
-              <Text
-                value={item.endDate}
-                placeholder="Graduation Year (YYYY)"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.endDate`}
-              />
-            </div>
-            <div className="manager-template-row">
-              <p style={styles.paraStyles(true)}>Field of Study: </p>
-              <Text
-                value={item.field}
-                placeholder="Field of Study"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.field`}
-              />
-            </div>
-            <div className="manager-template-row">
-              <p style={styles.paraStyles(true)}>Courseworks: </p>
-              <Text
-                value={item.courseworks}
-                placeholder="Courseworks"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.courseworks`}
-              />
-            </div>
-            <div className="manager-template-row">
-              <p style={styles.paraStyles(true)}>Awards: </p>
-              <Text
-                value={item.awards}
-                placeholder="Awards"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.awards`}
-              />
-            </div>
-            <div className="manager-template-row">
-              <p style={styles.paraStyles(true)}>
-                Extracurricular Activities:{" "}
-              </p>
-              <Text
-                value={item.extracurricular}
-                placeholder="Extracurricular Activities"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.extracurricular`}
-              />
-            </div>
-            <div>
-              <strong>Summary</strong>
-              <Text
-                value={`${item.summary}`}
-                placeholder="Summary"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.summary`}
               />
             </div>
           </>

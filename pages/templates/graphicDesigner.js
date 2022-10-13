@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Text } from "../../src/components/graphicDesigner/index";
-import style from "../../styles/templates/graphicDesigner.module.scss";
+import style from "../../styles/templates/graphicDesigner/graphicDesigner.module.scss";
 import { onBlurField } from "../../store/actions/builderAction";
 import Skills from "../../src/components/graphicDesigner/Skills";
 import AdditionalSkills from "../../src/components/graphicDesigner/AdditionalSkills";

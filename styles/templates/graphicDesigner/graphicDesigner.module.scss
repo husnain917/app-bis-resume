@@ -124,23 +124,16 @@
   border: 2px solid rgba($color: #000000, $alpha: 0.05);
   padding: 5px;
 }
-
-.mt_10 {
-  margin-top: 10px;
+.experience {
+  display: flex;
 }
 
-.workItem {
-  margin-bottom: -10px;
+.position {
+  margin-left: 20px;
 }
-
-.summary {
+.positionName {
+  font-size: 1.1em !important;
   line-height: 20px;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.paraStyles {
-  font-size: 1em;
-  font-weight: bold;
-  margin-top: 4px;
+  font-weight: 700;
+  color: #000000;
 }

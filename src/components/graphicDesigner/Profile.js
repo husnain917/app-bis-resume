@@ -10,11 +10,12 @@ export default function Profile() {
 
   return (
     <>
-      <div style={{ display: "flex", marginTop: 20 }}>
-        <Row style={{ width: '50%', }}>
+      <div style={{ display: "flex", marginTop: 20 , justifyContent: 'space-between'}}>
+        <Row style={{ width: '48%', }}>
           <p>test </p>
         </Row>
-        <Row style={{ display: 'flex', flexDirection: 'column' }}>
+
+        <Row style={{width: '48%', display: 'flex', flexDirection: 'column' }}>
           <Text
             value={resumeData?.profile?.firstName}
             placeholder="First Name"

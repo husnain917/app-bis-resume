@@ -3,7 +3,7 @@ import Util from "../../../utils/templateUtils";
 import { Text, Dnd } from "./index";
 import { useDispatch } from "react-redux";
 import { updateOrder, addNewObj, deleteObjInArray } from "../../../store/actions/builderAction";
-import { styles } from "../componentStyles/template1Style";
+import style from "../../../styles/templates/graphicDesigner/graphicDesigner.module.scss";
 
 function WorkExperience(props) {
   const dispatch = useDispatch();
@@ -24,23 +24,23 @@ function WorkExperience(props) {
   };
   const { data } = props;
   return (
-    <div style={styles.mt_10}>
+    <div >
       <Dnd
         data={data}
         reorder={(e) => onOrderUpdate(e)}
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) =>
-          <div style={{ display: 'flex'}}>
+          <div className={style.experience} >
             <div>
-              <div className="manager-template-row" style={styles.workItem}>
+              <div className="manager-template-row">
                 <Text
                   value={item.startDate}
                   placeholder="Start Date"
                   customclass={"manager-fName"}
                   path={`${path}.${index}.startDate`}
                 />
-                <p style={styles.paraStyles(true)}> &nbsp; - &nbsp;</p>
+                <p> &nbsp; - &nbsp;</p>
                 <Text
                   value={item.endDate}
                   placeholder="End Date"
@@ -51,34 +51,34 @@ function WorkExperience(props) {
                 />
               </div>
 
-              <div className="manager-template-row" style={styles.workItem}>
+              <div className="manager-template-row" >
                 <Text
                   value={item.company}
                   placeholder="Company"
                   customclass={"manager-fName manager-template-text-bold"}
                   path={`${path}.${index}.company`}
-                  style={styles.mb_10}
+                // style={styles.mb_10}
                 />
               </div>
             </div>
 
 
-            <div>
-              <div className="manager-template-row" style={styles.workItem}>
+            <div className={style.position}>
+              <div className="manager-template-row">
                 <Text
                   value={item.position}
                   placeholder="Position"
-                  customclass={"manager-fName"}
+                  customclass={style.positionName}
                   path={`${path}.${index}.position`}
                 />
               </div>
               <div>
                 <Text
                   value={item.summary}
-                  placeholder="Summary"
+                  placeholder="Short Detail"
                   customclass={"manager-fName"}
                   path={`${path}.${index}.summary`}
-                  style={styles.summary}
+                // style={styles.summary}
                 />
               </div>
             </div>
