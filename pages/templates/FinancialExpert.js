@@ -41,19 +41,16 @@ class Manager extends Component {
           padding="30px"
           backgroundColor="white"
           fontFamily="sans-serif"
-          maxWidth="1700"
-          minWidth="1700"
-          maxHeight="2500"
-          minHeight="1700"
+          minW={1350}
           margin="auto"
         >
           <Box className={width < 500 ? "" : style.a4PaperFinancial}>
             <Box>
               {/* <Profile /> */}
               <Box display="flex" flexDirection="row">
-                <Box minW="40%" minH="30vh"></Box>
+                <Box minW="30%" minH="30vh"></Box>
                 <Box
-                  minW="60%"
+                  minW="70%"
                   minH="30vh"
                   display="flex"
                   justifyContent="center"
@@ -70,14 +67,14 @@ class Manager extends Component {
                 display="flex"
                 flexDirection="row"
               >
-                <Box minW="40%" maxW="40%">
+                <Box minW="30%" maxW="30%">
                   <Image
                     src="/Profile.jpeg"
-                    h="350px"
-                    w="370px"
+                    h={350}
+                    w={350}
                     borderRadius="50%"
                     marginTop="-230px"
-                    marginLeft="50px"
+                    marginLeft="20px"
                   />
                   <Box padding="16">
                     <Text
@@ -209,7 +206,7 @@ class Manager extends Component {
                     )}
                   </Box>
                 </Box>
-                <Box minW="60%" maxW="60%">
+                <Box minW="70%" maxW="70%">
                   <Box>
                     <Text
                       value={resumeData?.aboutMe?.heading}
