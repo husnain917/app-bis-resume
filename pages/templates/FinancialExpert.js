@@ -67,7 +67,7 @@ class Manager extends Component {
                 display="flex"
                 flexDirection="row"
               >
-                <Box w="30%" w="30%">
+                <Box w="30%">
                   <Image
                     src="/Profile.jpeg"
                     h={300}
