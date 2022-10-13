@@ -46,28 +46,19 @@ const FashTemp1Reference = (props) => {
             customclass={`${Style.profileText}`}
             path={`${path}.${index}.profession`}
           />
-          <HStack alignItems={'flex-start'}>
-            <Text fontSize={'16px'} fontWeight={400} mt={1} maxW={5} minW={5}>
-              A :
-            </Text>
-            <HybridText
-              placeholder="Address"
-              value={item.address}
-              customclass={`${Style.profileText}`}
-              path={`${path}.${index}.address`}
-            />
-          </HStack>
-          <HStack alignItems={'flex-start'}>
-            <Text fontSize={'16px'} fontWeight={400} mt={1} maxW={5} minW={5}>
-              P :
-            </Text>
-            <HybridText
-              placeholder="Phone"
-              value={item.phone}
-              customclass={`${Style.profileText}`}
-              path={`${path}.${index}.phone`}
-            />
-          </HStack>
+
+          <HybridText
+            placeholder="Address"
+            value={item.address}
+            customclass={`${Style.profileText}`}
+            path={`${path}.${index}.address`}
+          />
+          <HybridText
+            placeholder="Phone"
+            value={item.phone}
+            customclass={`${Style.profileText}`}
+            path={`${path}.${index}.phone`}
+          />
         </Box>
       )}
     />
