@@ -253,7 +253,14 @@ export const sampleData = {
     references: {
       enable: false,
       heading: 'References',
-      items: [],
+      items: [
+        {
+          name: '',
+          profession: '',
+          address: '',
+          phone: '',
+        },
+      ],
     },
     security_creds: {
       heading: 'Security Credentials',
