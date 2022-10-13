@@ -29,6 +29,8 @@ function Text(props) {
           fontSize: props.fontSize,
           lineHeight: props.lineHeight,
           color: props.color,
+          marginTop:props.marginTop,
+          marginLeft:props.paddingLeft
         }}
         // style={{
 
