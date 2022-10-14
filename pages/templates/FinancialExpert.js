@@ -27,7 +27,7 @@ class Manager extends Component {
     const { resumeData, updater, width } = this.props;
     console.log("resumeData", resumeData);
     return (
-      <Box position="relative" overflow="auto" maxW="1700">
+      <Box position="relative" overflow="auto">
         <Link href={"/templates"}>
           <Box position="fixed" right="60px" top="40px">
             <Tooltip title="Change Template" arrow distance={20}>
@@ -42,15 +42,16 @@ class Manager extends Component {
           backgroundColor="white"
           fontFamily="sans-serif"
           margin="auto"
-          minW={1750}
+          maxW="1050"
+          w={1050}
         >
           <Box className={width < 500 ? "" : style.a4PaperFinancial}>
             <Box>
               {/* <Profile /> */}
               <Box display="flex" flexDirection="row">
-                <Box w="30%"></Box>
+                <Box w="40%"></Box>
                 <Box
-                  w="70%"
+                  w="60%"
                   minH="30vh"
                   display="flex"
                   justifyContent="center"
@@ -67,13 +68,14 @@ class Manager extends Component {
                 display="flex"
                 flexDirection="row"
               >
-                <Box w="30%">
+                <Box w="40%">
                   <Image
                     src="/Profile.jpeg"
-                    h={300}
-                    w={300}
+                    h={250}
+                    w={250}
                     borderRadius="50%"
-                    marginTop="-230px"
+                    marginTop="-150px"
+                    marginLeft="10px"
                   />
                   <Box padding="16">
                     <Text
@@ -126,6 +128,7 @@ class Manager extends Component {
                         customclass={"manager-f-name"}
                         path={"profile.websiteURL"}
                         marginLeft={"5px"}
+                        w={950}
                       />
                     </Box>
                     {resumeData?.hard_skills?.visible && (
@@ -205,7 +208,7 @@ class Manager extends Component {
                     )}
                   </Box>
                 </Box>
-                <Box w="70%">
+                <Box w="60%">
                   <Box>
                     <Text
                       value={resumeData?.aboutMe?.heading}
