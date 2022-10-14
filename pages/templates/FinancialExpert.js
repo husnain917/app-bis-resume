@@ -81,7 +81,7 @@ class Manager extends Component {
                     <Text
                       value={resumeData?.objective?.Contact}
                       placeholder="My Contact"
-                      customclass={"manager-f-heading-title"}
+                      customclass={"manager-f1-heading-title"}
                       path={"objective.contact"}
                       editable={false}
                     />
@@ -136,7 +136,7 @@ class Manager extends Component {
                         <Text
                           value={resumeData?.hard_skills?.heading}
                           placeholder="Hard Skills"
-                          customclass={"manager-f-heading-title"}
+                          customclass={"manager-f1-heading-title"}
                           path={"hard_skills.heading"}
                           editable={false}
                           style={styles.workHeading}
@@ -161,7 +161,7 @@ class Manager extends Component {
                         <Text
                           value={resumeData?.soft_skills?.heading}
                           placeholder="Soft Skills"
-                          customclass={"manager-f-heading-title"}
+                          customclass={"manager-f1-heading-title"}
                           path={"skills.heading"}
                           editable={false}
                           style={styles.workHeading}
@@ -187,7 +187,7 @@ class Manager extends Component {
                         <Text
                           value={resumeData?.education?.heading}
                           placeholder="EDUCATION"
-                          customclass={"manager-f-heading-title"}
+                          customclass={"manager-f1-heading-title"}
                           path={"education.heading"}
                           editable={false}
                           style={styles.workHeading}
@@ -213,7 +213,7 @@ class Manager extends Component {
                     <Text
                       value={resumeData?.aboutMe?.heading}
                       placeholder="About Me"
-                      customclass={"manager-f-heading-title"}
+                      customclass={"manager-f1-heading-title"}
                       path={"aboutme.heading"}
                       editable={false}
                       fontSize="1.5em"
@@ -242,7 +242,7 @@ class Manager extends Component {
                         <Text
                           value={resumeData?.Professional?.heading}
                           placeholder="Professional Experience"
-                          customclass={"manager-f-heading-title"}
+                          customclass={"manager-f1-heading-title"}
                           color="black"
                           path={"ProfessionalExperience.heading"}
                           editable={false}
@@ -271,7 +271,7 @@ class Manager extends Component {
                       <Text
                         value={resumeData?.achievements?.heading}
                         placeholder="Achievements"
-                        customclass={"manager-f-heading-title"}
+                        customclass={"manager-f1-heading-title"}
                         path={"achievements.heading"}
                         editable={false}
                         style={styles.workHeading}

@@ -43,6 +43,11 @@ a {
   margin-top: 15px;
   text-transform: uppercase;
 }
+.manager-f1-heading-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 15px;
+}
 
 .manager-template-text-bold {
   font-weight: bold;
