@@ -1,5 +1,5 @@
 .mainDiv {
-  background-color:#005063;
+  background-color: #005063;
   min-height: fit-content;
   min-width: fit-content;
   padding: 60px 210px
@@ -134,7 +134,32 @@
   color: white;
   text-align: center;
   margin-top: 10px;
-  
 
 
+
+}
+
+.progressDiv {
+  display: flex;
+  padding: 10px;
+}
+
+.percDiv {
+  padding-right: 2px !important;
+}
+
+.inputData {
+  font-size: 15px !important;
+}
+
+
+.perD {
+  margin-left: -5px !important;
+  font-size: 15px !important;
+  text-align: center !important;
+
+}
+
+.progresslangDiv {
+  margin-top: 2px !important;
 }

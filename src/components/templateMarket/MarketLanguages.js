@@ -15,6 +15,9 @@ import {
   SliderTrack,
   Text as ChakraText,
 } from '@chakra-ui/react';
+import { Input } from '@chakra-ui/react';
+import { Line } from 'rc-progress';
+import { useState } from "react";
 
 function MarketLanguages(props) {
   const dispatch = useDispatch();
@@ -34,6 +37,40 @@ function MarketLanguages(props) {
     dispatch(deleteObjInArray(deletedPath));
   };
   const { data } = props;
+
+  const [progresslang, setProgressLang] = useState([]);
+  const validateData = (e, index2) => {
+    if (e.target.value > 0 && e.target.value > 100 || e.target.value <= 0) {
+      let newArr2 = progresslang.map((item, index) => {
+        if (index === index2) {
+          return null;
+        }
+        else {
+          return item
+        }
+      })
+      setProgressLang(newArr2);
+      return;
+    }
+    let newArr;
+    if (progresslang.length <= 0) {
+      newArr = [e.target.value]
+    }
+    else if (progresslang.length === index2) {
+      newArr = [...progresslang, e.target.value]
+      console.log(newArr);
+    }
+    else {
+      newArr = progresslang.map((item, index) => {
+        if (index === index2) {
+          return e.target.value;
+        } else {
+          return item
+        }
+      })
+    }
+    setProgressLang(newArr);
+  }
 
   return (
     <div>
@@ -58,11 +95,37 @@ function MarketLanguages(props) {
                   />
                 </div>
               </div>
-              <Slider aria-label="slider-ex-1" defaultValue={5} w={'200px'}>
-                <SliderTrack h={2} borderRadius={8} bg={'white'}>
-                  <SliderFilledTrack borderRadius={8} bg={'#005063'} />
-                </SliderTrack>
-              </Slider>
+
+
+              <div className={`${styles.progresslangDiv}`}>
+                <Box w={100} h={2} borderRadius={8} bg={'white'}>
+                  <Line
+                    percent={progresslang[index]}
+                    strokeWidth={8}
+                    strokeColor={'#005063'}
+                  />
+
+                </Box>
+              </div>
+              <div className={`${styles.percDiv}`}>
+                <Input
+                  maxW={50}
+                  maxH={30}
+                  borderColor="none"
+                  variant="unstyled"
+                  placeholder="0"
+                  value={`${progresslang[index]}`}
+                  className={`${styles.inputData}`}
+                  onChange={(e) => validateData(e, index)}
+                  type="number"
+                />
+              </div>
+              {
+
+                progresslang[index] ?
+                  <span className={`${styles.perD}`}>%</span> : null}
+
+
             </HStack>
           )}
         />
