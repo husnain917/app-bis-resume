@@ -58,7 +58,7 @@ function DigitalMarketingSkill(props) {
                         </div>
 
                         {/* Social Media Ads skill */}
-                        <div className={style.skillDiv}>
+                        {/* <div className={style.skillDiv}>
                             <Text
                                 value={item.skills}
                                 placeholder="Social Media Ads"
@@ -71,10 +71,10 @@ function DigitalMarketingSkill(props) {
                                 </SliderTrack>
                                 <SliderThumb />
                             </Slider>
-                        </div>
+                        </div> */}
 
                         {/* Email Marketing skill */}
-                        <div className={style.skillDiv}>
+                        {/* <div className={style.skillDiv}>
                             <Text
                                 value={item.skills}
                                 placeholder="Email Marketing"
@@ -87,10 +87,10 @@ function DigitalMarketingSkill(props) {
                                 </SliderTrack>
                                 <SliderThumb />
                             </Slider>
-                        </div>
+                        </div> */}
 
                         {/* Google Analytic skill */}
-                        <div className={style.skillDiv}>
+                        {/* <div className={style.skillDiv}>
                             <Text
                                 value={item.skills}
                                 placeholder="Google Analytic"
@@ -103,10 +103,10 @@ function DigitalMarketingSkill(props) {
                                 </SliderTrack>
                                 <SliderThumb />
                             </Slider>
-                        </div>
+                        </div> */}
 
                         {/* Google Ads skill */}
-                        <div className={style.skillDiv}>
+                        {/* <div className={style.skillDiv}>
                             <Text
                                 value={item.skills}
                                 placeholder="Google Ads"
@@ -119,7 +119,7 @@ function DigitalMarketingSkill(props) {
                                 </SliderTrack>
                                 <SliderThumb />
                             </Slider>
-                        </div>
+                        </div> */}
                     </div>
                 </>
             }

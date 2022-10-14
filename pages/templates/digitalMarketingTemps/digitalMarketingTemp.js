@@ -54,7 +54,7 @@ export default function digitalMarketingTemp() {
           </Box>
           {/* links */}
           <Box
-          marginTop={'50px'}
+            marginTop={'50px'}
           >
             <Text
               value={resumeEditor?.resumeData?.contact?.heading}
@@ -153,7 +153,7 @@ export default function digitalMarketingTemp() {
 
           {/* education section */}
           <Box
-            margin={'40px 0px 10px 0px'}
+            margin={'30px 0px 10px 0px'}
           >
             <Text
               value={resumeEditor?.resumeData?.education?.heading}
@@ -183,7 +183,7 @@ export default function digitalMarketingTemp() {
 
           {/* skill section */}
           <Box
-            margin={'40px 0px 10px 0px'}
+            margin={'30px 0px 10px 0px'}
           >
             <Text
               value={resumeEditor?.resumeData?.skills?.heading}
@@ -221,7 +221,12 @@ export default function digitalMarketingTemp() {
         >
           <Box
             backgroundColor={'#F2DB7A'}
-            padding={'90px 0px 25px 0px'}
+            padding={'25px 0px 25px 0px'}
+            marginTop={'12%'}
+            display={'flex'}
+            flexDirection={'column'}
+            justifyContent={'center'}
+            alignItems={'center'}
           >
             {/* firstName */}
             <Text
@@ -270,19 +275,7 @@ export default function digitalMarketingTemp() {
               placeholder="A passionate digital marketer who loves to make plans
               to introduce products or services to the right people
               digitally. And love to make clients satisfied and feel their
-              excitement during the whole process. Able to evaluate
-              campaigns result and manage the creative team's work
-              and schedules. A digital-savvy marketer that able to
-              create and manages the process of engaging audiences,
-              and selling products or services while growing the
-              company.
-              excitement during the whole process. Able to evaluate
-              campaigns result and manage the creative team's work
-              and schedules. A digital-savvy marketer that able to
-              create and manages the process of engaging audiences,
-              and selling products or services while growing the
-              company.
-              "
+              excitement during the whole process."
               customclass={`${styles.aboutBodyDes} ${styles.digitalContentEditableContainer}`}
               path={"objective.aboutBody"}
             />
@@ -290,7 +283,7 @@ export default function digitalMarketingTemp() {
 
           {/* experience section */}
           <Box
-            padding={'50px 25px 0px 25px'}
+            padding={'25px 25px 0px 25px'}
           >
             <Text
               value={resumeEditor?.resumeData?.experience?.heading}
@@ -317,6 +310,16 @@ export default function digitalMarketingTemp() {
                 />
               </>
             )}
+          </Box>
+
+          {/* footer */}
+          <Box
+            height={'60px'}
+            width={'100%'}
+            backgroundColor={'#F2DB7A'}
+            marginTop={'24%'}
+          >
+            {/* footer */}
           </Box>
         </Box>
       </Container>

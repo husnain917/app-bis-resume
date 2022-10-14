@@ -48,7 +48,7 @@ function DigitalMarketingExperience(props) {
                                     {/* experience about */}
                                     <Text
                                         value={`${item.title}`}
-                                        placeholder="Manage and create a strong presence on social media business presence on social media. Manage and create a strong business presence on social media."
+                                        placeholder="Manage and create a strong presence on social media business presence on social media. Manage and create a strong."
                                         customclass={`${style.experienceDesTitle} ${style.digitalContentEditableContainer}`}
                                         path={`${path}.${index}.title`}
                                     />
@@ -59,15 +59,12 @@ function DigitalMarketingExperience(props) {
                                         placeholder="Work closely with the creative team to make, create,
                                         and manage advertising campaigns on social media.
                                         Able to manage and evaluate the campaign's result.
-                                        Work closely with the creative team to make, create,
-                                        and manage advertising campaigns on social media.
-                                        Able to manage and evaluate the campaign's result.
-                                        "
+                                        Work closely with the creative team to make."
                                         customclass={`${style.experienceDes} ${style.digitalContentEditableContainer}`}
                                         path={`${path}.${index}.summary`}
                                     />
                                 </li>
-                                <li className={style.experienceDesDiv}>
+                                {/* <li className={style.experienceDesDiv}>
                                     <Text
                                         value={item.endYear}
                                         placeholder="2012 - now"
@@ -75,7 +72,6 @@ function DigitalMarketingExperience(props) {
                                         path={`${path}.${index}.endYear`}
                                     />
 
-                                    {/* experience about */}
                                     <Text
                                         value={`${item.role}`}
                                         placeholder="Marketing Manager"
@@ -83,7 +79,7 @@ function DigitalMarketingExperience(props) {
                                         path={`${path}.${index}.role`}
                                     />
 
-                                    {/* experience description */}
+
                                     <Text
                                         value={`${item.description}`}
                                         placeholder="Manage and evaluate the creative team works and
@@ -99,7 +95,7 @@ function DigitalMarketingExperience(props) {
                                         customclass={`${style.experienceDes} ${style.digitalContentEditableContainer}`}
                                         path={`${path}.${index}.description`}
                                     />
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </>

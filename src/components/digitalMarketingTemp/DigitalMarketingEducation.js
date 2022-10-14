@@ -52,21 +52,20 @@ function DigitalMarketingEducation(props) {
                                         path={`${path}.${index}.summary`}
                                     />
                                 </li>
-                                <li className={style.educationDesHeading}>
+                                {/* <li className={style.educationDesHeading}>
                                     <Text
                                         value={item.month}
                                         placeholder="2010 - 2012"
                                         customclass={`${style.educationDesHeading} ${style.digitalContentEditableContainer}`}
                                         path={`${path}.${index}.month`}
                                     />
-                                    {/* education about */}
                                     <Text
                                         value={`${item.description}`}
                                         placeholder="BA in Digital Marketing and Social Media Graduated with honor"
                                         customclass={`${style.educationDesAbout} ${style.digitalContentEditableContainer}`}
                                         path={`${path}.${index}.description`}
                                     />
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </>
