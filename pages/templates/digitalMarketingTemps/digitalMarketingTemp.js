@@ -53,13 +53,17 @@ export default function digitalMarketingTemp() {
             />
           </Box>
           {/* links */}
-          <Text
-            value={resumeEditor?.resumeData?.contact?.heading}
-            placeholder="CONTACT PERSON"
-            customclass={`${styles.leftContainerHeadings} ${styles.digitalContentEditableContainer}`}
-            path={"contact.heading"}
-            editable={false}
-          />
+          <Box
+          marginTop={'50px'}
+          >
+            <Text
+              value={resumeEditor?.resumeData?.contact?.heading}
+              placeholder="CONTACT PERSON"
+              customclass={`${styles.leftContainerHeadings} ${styles.digitalContentEditableContainer}`}
+              path={"contact.heading"}
+              editable={false}
+            />
+          </Box>
           <Box
             margin={'10px 0px'}
           >
@@ -246,7 +250,7 @@ export default function digitalMarketingTemp() {
 
           {/* about section */}
           <Box
-            padding={'15px 25px 0px 25px'}
+            padding={'30px 25px 0px 25px'}
           >
             <Text
               value={resumeEditor?.resumeData?.objective?.aboutTitle}
@@ -286,7 +290,7 @@ export default function digitalMarketingTemp() {
 
           {/* experience section */}
           <Box
-            padding={'40px 25px 0px 25px'}
+            padding={'50px 25px 0px 25px'}
           >
             <Text
               value={resumeEditor?.resumeData?.experience?.heading}
