@@ -1,13 +1,15 @@
 import React from "react";
-import { Box, Image, Flex } from "@chakra-ui/react";
+import { Box, Image, Flex, Tooltip } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import { Row } from "antd";
 import styles from "../../../styles/templates/Fashion.module.css";
-import { Text } from "../../../src/components/template1";
-import { FaGrav, FaPhone } from "react-icons/fa";
+import FdText from "../../../src/components/fashionDesigner/FdText";
 import Contact from "../../../src/components/fashionDesigner/Contact";
 import Education from "../../../src/components/fashionDesigner/Education";
 import Languages from "../../../src/components/fashionDesigner/Languages";
+import WorkExperience from "../../../src/components/fashionDesigner/WorkExperience";
+import Link from "next/link";
+import Interest from "../../../src/components/fashionDesigner/Interest";
 export default function FashionDesigner() {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   let updater = useSelector((state) => state.editorReducer.updater);
@@ -15,109 +17,149 @@ export default function FashionDesigner() {
   console.log(resumeData);
   return (
     <>
-      <Box
-        display="flex"
-        flexDir="row"
-        w="100%"
-        bgColor="#E6D5C2"
-        h="300vh"
-        overflow="auto"
-        maxW="2950px"
-        minW="1300px"
-      >
-        <Box w="60%" mt="8%" ml="5%">
-          <Row>
-            <Text
-              value={resumeData?.profile?.firstName}
-              placeholder="OLIVIA"
-              customclass={styles.fullName}
-              path={"profile.firstName"}
-              fontSize="5rem"
+      <div className={styles.main}>
+        <Link href={"/templates"}>
+          <div className={styles.swapCont}>
+            <Tooltip title="Change Template" arrow distance={20}>
+              <div className={styles.swap}>
+                <img src="/icons/swap.png" />
+              </div>
+            </Tooltip>
+          </div>
+        </Link>
+        <Box
+          display="flex"
+          flexDir="row"
+          w="70%"
+          bgColor="#E6D5C2"
+          h="auto"
+          // overflow="auto"
+          // maxW="70%"
+          ml="15%"
+          mt="5%"
+        >
+          <Box w="45%" mt="7%" ml="5%" pb="10%">
+            <Row>
+              <FdText
+                value={resumeData?.profile?.firstName}
+                placeholder="OLIVIA"
+                customclass={styles.fullName}
+                path={"profile.firstName"}
+                fontSize="3rem"
+              />
+              &nbsp;
+              <FdText
+                value={resumeData?.profile?.lastName}
+                placeholder="WILSON"
+                customclass={styles.fullName}
+                path={"profile.lastName"}
+                fontSize="3rem"
+              />
+            </Row>
+            <Box bgColor="#1B4245" w="40%" h="10px" mt="2%"></Box>
+            <FdText
+              value={resumeData?.objective?.title}
+              placeholder="Fashion Designer"
+              //   customclass={styles.fullName}
+              path={"profile.objective.heading"}
+              fontSize="2rem"
+              marginTop="2%"
             />
-            &nbsp;
-            <Text
-              value={resumeData?.profile?.lastName}
-              placeholder="WILSON"
-              customclass={styles.fullName}
-              path={"profile.lastName"}
-              fontSize="5rem"
-            />
-          </Row>
-          <Box bgColor="#1B4245" w="40%" h="10px" mt="2%"></Box>
-          <Text
-            value={resumeData?.objective?.title}
-            placeholder="Fashion Designer"
-            //   customclass={styles.fullName}
-            path={"profile.objective.heading"}
-            fontSize="2.6rem"
-            marginTop="2%"
-          />
-          <Flex alignItems="center" mt="5%">
-            <FaGrav color="#1B4245" size="40px" />
-            <p className={styles.heading}>About Me</p>
-          </Flex>
-          <Text
-            value={resumeData?.objective?.body}
-            placeholder="
+            <Flex alignItems="center" mt="5%">
+              {/* <FaGrav color="#1B4245" size="40px" /> */}
+              <Image src="/about.jpg" w="70px" h="50px" />
+              <p className={styles.heading}>About Me</p>
+            </Flex>
+            <FdText
+              value={resumeData?.objective?.body}
+              placeholder="
               Let me introduce myself, I am a fashion designer
               who has 7 years of experience in this job. I am
               very experienced in various fashion styles for all
               seasons and I have made various models for
               men and women for a world famous brand.
               "
-            customclass={styles.aboutMe}
-            path={"objective.body"}
-          />
-        </Box>
-        {/* Right Section Code  */}
-
-        <Box w="40%" bgColor="#1B4245" h="100%">
-          <Image
-            src="/fashionGirl.png"
-            customClass={styles.girlImg}
-            mt="8%"
-            ml="6%"
-            w="90%"
-          />
-          <Box ml="15%">
-            <Flex alignItems="center" mt="10%">
-              <FaPhone color="white" size="40px" />
-
-              <p className={styles.rightHeading}>Contact</p>
-            </Flex>
-            <Contact />
-          </Box>
-          <Box ml="15%">
-            <Flex alignItems="center" mt="15%">
-              <FaPhone color="white" size="40px" />
-              <p className={styles.rightHeading}>Education</p>
-            </Flex>
-            <Education
-              data={
-                resumeData?.languages?.items?.length
-                  ? [...resumeData?.education?.items]
-                  : [...sampleData?.data?.education?.items]
-              }
-              color={color}
-              updater={updater}
+              customclass={styles.aboutMe}
+              path={"objective.body"}
             />
-            <Flex alignItems="center" mt="15%">
-              <FaPhone color="white" size="40px" />
-              <p className={styles.rightHeading}>Languages</p>
-            </Flex>
-             <Languages
-              data={
-                resumeData?.languages?.items?.length
-                  ? [...resumeData?.languages?.items]
-                  : [...sampleData?.data?.languages?.items]
-              }
-              color={color}
-              updater={updater}
-            />
+            <Box>
+              <Flex alignItems="center" mt="5%">
+                <Image src="/work.jpg" w="70px" h="60px" />
+                <p className={styles.heading}>Work Experience</p>
+              </Flex>
+              <WorkExperience
+                data={
+                  resumeData?.work?.items?.length
+                    ? [...resumeData?.work?.items]
+                    : [...sampleData?.data?.work?.items]
+                }
+                color={color}
+                updater={updater}
+              />
+              <Flex alignItems="center" mt="5%">
+                <Image src="/interest.jpg" w="70px" h="80px" />
+                <p className={styles.heading}>Interest</p>
+              </Flex>
+              <Interest
+                data={
+                  resumeData?.hobbies?.items?.length
+                    ? [...resumeData?.hobbies?.items]
+                    : [...sampleData?.data?.hobbies?.items]
+                }
+              />
+            </Box>
           </Box>
-         
+          {/* Right Section Code  */}
+
+          <Box w="45%" bgColor="#1B4245" h="auto" ml="5%" pb="10%">
+            <Image
+              src="/fashionGirl.png"
+              customClass={styles.girlImg}
+              mt="8%"
+              ml="6%"
+              w="90%"
+            />
+            <Box ml="15%">
+              <Flex alignItems="center" mt="10%">
+                <Image src="/contact.jpg" w="80px" h="80px" />
+
+                <p className={styles.rightHeading}>Contact</p>
+              </Flex>
+              <Contact />
+            </Box>
+            <Box ml="15%">
+              <Flex alignItems="center" mt="15%">
+                <Image src="/education.jpg" w="80px" h="80px" />
+
+                <p className={styles.rightHeading}>Education</p>
+              </Flex>
+              <Education
+                data={
+                  resumeData?.education?.items?.length
+                    ? [...resumeData?.education?.items]
+                    : [...sampleData?.data?.education?.items]
+                }
+                color={color}
+                updater={updater}
+              />
+              <Flex alignItems="center" mt="15%">
+                <Image src="/language.jpg" w="80px" h="80px" />
+
+                <p className={styles.rightHeading}>Languages</p>
+              </Flex>
+              <Languages
+                data={
+                  resumeData?.languages?.items?.length
+                    ? [...resumeData?.languages?.items]
+                    : [...sampleData?.data?.languages?.items]
+                }
+                color={color}
+                updater={updater}
+              />
+            </Box>
+          </Box>
         </Box>
-      </Box>
+      </div>
     </>
   );
 }

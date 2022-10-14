@@ -11,9 +11,9 @@ import FdText from "./FdText";
 import Dnd from "./Dnd";
 import { Box } from "@chakra-ui/react";
 import styles from ".././../../styles/templates/Fashion.module.css";
-function Education(props) {
+function Interest(props) {
   const dispatch = useDispatch();
-  const path = "education.items";
+  const path = "hobbies.items";
 
   const onOrderUpdate = (data) => {
     const storeReorder = Util.mapOrder(props.data, data, "id");
@@ -40,37 +40,19 @@ function Education(props) {
         renderItem={(item, index) => (
           <>
             <div>
-              <Box bgColor="#1B4245">
-                <Box display="flex">
+              
+                <Box display="flex"  bgColor="#E6D5C2" pl="5%">
                   <FdText
-                    value={item?.institution}
-                    placeholder="Fashion School"
-                    customClass={styles.educationFeild}
-                    path={`${path}.${index}.instituion`}
-                    color="white"
-                    fontSize="1.2rem"
+                    value={item?.title}
+                    placeholder="Photography"
+                    // customClass={styles.educationFeild}
+                    path={`${path}.${index}.title`}
+                    color="#1B4245"
+                    fontSize="1.5rem"
                     fontWeight="600"
                   />
-                  <Box bgColor="white" w="3px" h="22px" m="3px" mt="8px"></Box>
-                  <FdText
-                    value={item?.year}
-                    placeholder="2023"
-                    customClass={styles.educationFeild}
-                    path={`${path}.${index}.year`}
-                    color="white"
-                    fontSize="1.2rem"
-                    fontWeight="600"
-                  />
-                </Box>
+                 
 
-                <FdText
-                  value={item?.description}
-                  placeholder="Ginyard International Universitye"
-                  path={`${path}.${index}.description`}
-                  color="white"
-                  fontSize="1.2rem"
-                  fontWeight="200"
-                />
               </Box>
             </div>
           </>
@@ -79,4 +61,4 @@ function Education(props) {
     </div>
   );
 }
-export default Education;
+export default Interest;

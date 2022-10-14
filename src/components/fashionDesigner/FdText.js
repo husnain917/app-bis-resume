@@ -4,7 +4,7 @@ import { onBlurField } from '../../../store/actions/builderAction';
 import styles from '../../../styles/templates/Fashion.module.css';
 import { colors } from '../../../constants/colors';
 
-function Text(props) {
+function FdText(props) {
   const dispatch = useDispatch();
   const { getResumeBuilderChoice } = useSelector(
     (state) => state.editorReducer
@@ -62,4 +62,4 @@ function Text(props) {
   );
 }
 
-export default Text;
+export default FdText;

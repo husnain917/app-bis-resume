@@ -1,33 +1,69 @@
 .contentEditableContainer {
-    padding: 4px 2px;
-    white-space: pre-line;
-    /* border: 1px dashed #fff; */
-    border-radius: 4px;
-    outline: 0;
-  }
-  .contentEditableContainer:empty::before {
-    content: attr(data-placeholder);
-    opacity: 1;
-  }
-  
-  .contentEditableContainer:focus {
-    /* border: 1px dashed #a1a1a1; */
-    border-radius: 4px;
-    background-color: #1b4245;
-    outline: 0;
-  }
-  
-  .contentEditableContainer:active {
-    /* border: 1px dashed #a1a1a1; */
-    border-radius: 4px;
-    outline: 0;
-  }
-  
-  .contentEditableContainer:visited {
-    /* border: 1px dashed #a1a1a1; */
-    border-radius: 4px;
-    outline: 0;
-  }
+  padding: 4px 2px;
+  white-space: pre-line;
+  /* border: 1px dashed #fff; */
+  border-radius: 4px;
+  outline: 0;
+}
+.contentEditableContainer:empty::before {
+  content: attr(data-placeholder);
+  opacity: 1;
+}
+
+.contentEditableContainer:focus {
+  /* border: 1px dashed #a1a1a1; */
+  border-radius: 4px;
+  /* background-color: #1b4245; */
+  outline: 0;
+}
+
+.contentEditableContainer:active {
+  /* border: 1px dashed #a1a1a1; */
+  border-radius: 4px;
+  outline: 0;
+}
+
+.contentEditableContainer:visited {
+  /* border: 1px dashed #a1a1a1; */
+  border-radius: 4px;
+  outline: 0;
+}
+.unselectedDragItems .dragBox {
+  /* border: 2px dashed rgba(255, 255, 255, 0); */
+  transition: all 0.2s ease-in-out;
+}
+.unselectedDragItems .dragBox:hover {
+  border: 1px dashed #000;
+  transition-delay: 0.1s;
+}
+.dragBoxIcon {
+  opacity: 0;
+  text-align: center;
+}
+.unselectedDragItems .dragBox:hover > .dragBoxIcon {
+  transition-delay: 0.2s;
+  /* display: block; */
+  opacity: 1;
+}
+
+.selectedDragItems .dragBox {
+  border: 2px dashed rgba(255, 255, 255, 0);
+}
+.icon {
+  filter: invert(1);
+}
+.icon2 {
+  width: 14px;
+  margin: auto;
+  margin-top: 6px;
+  filter: invert(1);
+}
+.dndIcon {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 2px;
+}
+
 .fullName {
   font-weight: bold;
   font-family: sans-serif;
@@ -43,23 +79,61 @@
   padding-left: 20px;
 }
 .aboutMe {
-  width: 80%;
+  width: 95%;
   text-align: justify;
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   margin-top: 3%;
   word-spacing: 1px;
 }
 .rightHeading {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 400;
   font-family: sans-serif;
   color: #ffffff;
   padding-left: 20px;
 }
-.contactFeild {
-  color: white;
-  font-size: 1rem;
+.educationFeild {
+  font-weight: bold;
 }
-.educationFeild{
-   font-weight: bold;
+.experienceContainer {
+  background-color: #e6d5c2;
+  display: flex;
+  flex-direction: row;
+}
+.work {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.wrokFeild {
+  word-spacing: 2px;
+  text-align: justify;
+}
+.main {
+  position: relative;
+  min-width: fit-content;
+}
+.swapCont {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+}
+.swap {
+  width: 40px;
+  height: 40px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: all 0.2s;
+}
+.swap:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.swap img {
+  width: 70%;
+  filter: invert(1);
 }

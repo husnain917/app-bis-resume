@@ -5,7 +5,6 @@ import { CheckCircleIcon, StarIcon } from "@chakra-ui/icons";
 const RatingWeb = ({ title, desc, date, name, rating }) => {
   console.log("RatingWeb:", rating);
   const [currentValue, setCurrentValue] = useState(rating);
-
   const property = {
     title: "Excellent and wonderfull",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iste impedit maxime? Corrupti, saepe quam!",
