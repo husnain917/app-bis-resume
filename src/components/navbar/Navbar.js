@@ -26,7 +26,6 @@ import { NAV_ITEMS, EnglishDropDown, Login_Buttons } from "../constant/navbarLin
 
 export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
-    // const linkColor = useColorModeValue('gray.600', 'gray.200');
     const linkHoverColor = useColorModeValue('gray.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
     const breakpointWidth = useBreakpointValue({ xl: '120px', lg: '80px', md: '110px', });
