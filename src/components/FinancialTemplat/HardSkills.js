@@ -45,16 +45,19 @@ function HardSkills(props) {
             alignItems="center"
             h="30px"
             mt="2px"
+            textAlign="center"
           >
-            <Box fontSize="3rem" mb="7%">
+            <Box fontSize="3rem" mb="7">
               .
             </Box>
-            <Text
-              value={item?.name}
-              placeholder="Hard Skill"
-              customclass={"manager-fName"}
-              path={`${path}.${index}.name`}
-            />
+            <Box>
+              <Text
+                value={item?.name}
+                placeholder="Hard Skill"
+                customclass={"manager-fName"}
+                path={`${path}.${index}.name`}
+              />
+            </Box>
             {/* {data.length - 1 !== index && <p className="aPadding">|</p>} */}
           </Box>
         )}

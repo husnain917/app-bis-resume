@@ -46,7 +46,7 @@ function SoftSkills(props) {
             h="30px"
             mt="2px"
           >
-            <Box fontSize="3rem" mb="7%">
+            <Box fontSize="3rem" mb="7">
               .
             </Box>
             <Text
