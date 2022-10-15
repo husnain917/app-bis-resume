@@ -8,7 +8,7 @@ export const sampleData = {
           Description: '',
         },
       ],
-      visible: false,
+      visible: true,
     },
     associations: {
       heading: 'Associations',
@@ -164,9 +164,14 @@ export const sampleData = {
       enable: true,
       heading: 'Skills',
       index: 2,
-      items: [{}],
+      items: [
+        {
+          Name: '',
+        },
+      ],
       visible: true,
     },
+
     additional_skills: {
       heading: 'Additonal Skills',
       index: 16,
@@ -254,6 +259,14 @@ export const sampleData = {
       enable: false,
       heading: 'References',
       items: [],
+      items: [
+        {
+          name: '',
+          profession: '',
+          address: '',
+          phone: '',
+        },
+      ],
     },
     security_creds: {
       heading: 'Security Credentials',
