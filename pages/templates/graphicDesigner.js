@@ -57,6 +57,7 @@ const graphicDesigner = (props) => {
           </HStack>
           &nbsp;
           <About />
+          
           <HStack minW={250} maxW={250} bg={'#2e4229'} h={35} mt={5} pl={2}>
             <Text
               color={'white'}
