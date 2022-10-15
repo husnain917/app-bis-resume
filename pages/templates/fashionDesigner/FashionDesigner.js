@@ -9,6 +9,15 @@ import Education from "../../../src/components/fashionDesigner/Education";
 import Languages from "../../../src/components/fashionDesigner/Languages";
 import WorkExperience from "../../../src/components/fashionDesigner/WorkExperience";
 import Link from "next/link";
+import { Icon } from "@chakra-ui/react";
+import {
+  FaArchive,
+  FaInfo,
+  FaHeading,
+  FaBuffer,
+  FaSketch,
+  FaCalculator,
+} from "react-icons/fa";
 import Interest from "../../../src/components/fashionDesigner/Interest";
 export default function FashionDesigner() {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
@@ -33,8 +42,6 @@ export default function FashionDesigner() {
           w="70%"
           bgColor="#E6D5C2"
           h="auto"
-          // overflow="auto"
-          // maxW="70%"
           ml="15%"
           mt="5%"
         >
@@ -56,18 +63,17 @@ export default function FashionDesigner() {
                 fontSize="3rem"
               />
             </Row>
-            <Box bgColor="#1B4245" w="40%" h="10px" mt="2%"></Box>
+            <Box bgColor="#1B4245" w="40%" h="5px" mt="2%"></Box>
             <FdText
               value={resumeData?.objective?.title}
               placeholder="Fashion Designer"
-              //   customclass={styles.fullName}
               path={"profile.objective.heading"}
-              fontSize="2rem"
+              fontSize="1.7rem"
+              color="#1b4245"
               marginTop="2%"
             />
-            <Flex alignItems="center" mt="5%">
-              {/* <FaGrav color="#1B4245" size="40px" /> */}
-              <Image src="/about.jpg" w="70px" h="50px" />
+            <Flex alignItems="center" mt="10%">
+              <Icon as={FaInfo} w={10} h={10} />
               <p className={styles.heading}>About Me</p>
             </Flex>
             <FdText
@@ -80,11 +86,13 @@ export default function FashionDesigner() {
               men and women for a world famous brand.
               "
               customclass={styles.aboutMe}
+              color="#1b4245"
               path={"objective.body"}
             />
             <Box>
-              <Flex alignItems="center" mt="5%">
-                <Image src="/work.jpg" w="70px" h="60px" />
+              <Flex alignItems="center" mt="15%">
+                {/* <Image src="/work.jpg" w="70px" h="60px" /> */}
+                <Icon as={FaArchive} w={10} h={10} />
                 <p className={styles.heading}>Work Experience</p>
               </Flex>
               <WorkExperience
@@ -97,7 +105,8 @@ export default function FashionDesigner() {
                 updater={updater}
               />
               <Flex alignItems="center" mt="5%">
-                <Image src="/interest.jpg" w="70px" h="80px" />
+                <Icon as={FaInfo} w={10} h={10} color="#1b425" />
+
                 <p className={styles.heading}>Interest</p>
               </Flex>
               <Interest
@@ -121,15 +130,14 @@ export default function FashionDesigner() {
             />
             <Box ml="15%">
               <Flex alignItems="center" mt="10%">
-                <Image src="/contact.jpg" w="80px" h="80px" />
-
+                <Icon as={FaCalculator} w={10} h={10} color="white" />
                 <p className={styles.rightHeading}>Contact</p>
               </Flex>
               <Contact />
             </Box>
             <Box ml="15%">
-              <Flex alignItems="center" mt="15%">
-                <Image src="/education.jpg" w="80px" h="80px" />
+              <Flex alignItems="center" mt="10%">
+                <Icon as={FaBuffer} w={10} h={10} color="white" />
 
                 <p className={styles.rightHeading}>Education</p>
               </Flex>
@@ -142,8 +150,8 @@ export default function FashionDesigner() {
                 color={color}
                 updater={updater}
               />
-              <Flex alignItems="center" mt="15%">
-                <Image src="/language.jpg" w="80px" h="80px" />
+              <Flex alignItems="center" mt="10%">
+                <Icon as={FaSketch} w={10} h={10} color="white" />
 
                 <p className={styles.rightHeading}>Languages</p>
               </Flex>

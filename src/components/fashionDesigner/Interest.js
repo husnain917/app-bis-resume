@@ -41,15 +41,22 @@ function Interest(props) {
           <>
             <div>
               
-                <Box display="flex"  bgColor="#E6D5C2" pl="5%">
+                <Box display="flex" alignItems="center"  bgColor="#E6D5C2" pl="5%">
+                <Box
+                      bgColor="#1B4245"
+                      p="3px"
+                      
+                      borderRadius="100px"
+                    ></Box>
                   <FdText
                     value={item?.title}
                     placeholder="Photography"
                     // customClass={styles.educationFeild}
                     path={`${path}.${index}.title`}
                     color="#1B4245"
-                    fontSize="1.5rem"
-                    fontWeight="600"
+                    fontSize="1.2rem"
+                    fontWeight="200"
+                    marginLeft="10px"
                   />
                  
 

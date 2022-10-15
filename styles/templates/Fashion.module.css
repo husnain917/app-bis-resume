@@ -1,7 +1,6 @@
 .contentEditableContainer {
   padding: 4px 2px;
   white-space: pre-line;
-  /* border: 1px dashed #fff; */
   border-radius: 4px;
   outline: 0;
 }
@@ -11,25 +10,20 @@
 }
 
 .contentEditableContainer:focus {
-  /* border: 1px dashed #a1a1a1; */
   border-radius: 4px;
-  /* background-color: #1b4245; */
   outline: 0;
 }
 
 .contentEditableContainer:active {
-  /* border: 1px dashed #a1a1a1; */
   border-radius: 4px;
   outline: 0;
 }
 
 .contentEditableContainer:visited {
-  /* border: 1px dashed #a1a1a1; */
   border-radius: 4px;
   outline: 0;
 }
 .unselectedDragItems .dragBox {
-  /* border: 2px dashed rgba(255, 255, 255, 0); */
   transition: all 0.2s ease-in-out;
 }
 .unselectedDragItems .dragBox:hover {
@@ -81,7 +75,7 @@
 .aboutMe {
   width: 95%;
   text-align: justify;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   margin-top: 3%;
   word-spacing: 1px;
 }
@@ -91,9 +85,6 @@
   font-family: sans-serif;
   color: #ffffff;
   padding-left: 20px;
-}
-.educationFeild {
-  font-weight: bold;
 }
 .experienceContainer {
   background-color: #e6d5c2;

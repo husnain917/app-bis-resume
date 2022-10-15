@@ -42,17 +42,15 @@ function Languages(props) {
             <div>
               <Box bgColor="#1B4245" borderColor="#1B4245">
                 <Box display="flex" flexDir="row" alignItems="center" mr="40px">
-                  <Box display="flex" p="10px" alignItems="center">
+                  <Box display="flex"  alignItems="center">
                     <Box
                       bgColor="white"
                       p="3px"
-                      h="3px"
                       borderRadius="100px"
                     ></Box>
                     <FdText
                       value={item?.language}
                       placeholder="English"
-                      customClass={styles.educationFeild}
                       path={`${path}.${index}.language`}
                       color="white"
                       fontSize="1.2rem"
