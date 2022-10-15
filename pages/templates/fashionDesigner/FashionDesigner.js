@@ -44,9 +44,7 @@ export default function FashionDesigner() {
             bgColor="#E6D5C2"
             h="auto"
             mt="5%"
-            // overflow="auto"
-            // minW="950px"
-            // maxW="2950px"
+            ml="15%"
           >
             <Box w="50%" mt="7%" ml="5%" pb="10%">
               <Row>
