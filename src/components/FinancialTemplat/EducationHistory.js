@@ -80,7 +80,7 @@ function EducationHistory(props) {
                 marginLeft: "4px",
               }}
             >
-              Completed in
+              Completed in :
               <Text
                 value={item.endDate}
                 placeholder="Year (YYYY)"

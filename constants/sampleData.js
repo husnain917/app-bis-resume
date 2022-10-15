@@ -171,28 +171,6 @@ export const sampleData = {
       ],
       visible: true,
     },
-    soft_skills: {
-      enable: true,
-      heading: "Soft Skills",
-      index: 55,
-      items: [
-        {
-          Name: "",
-        },
-      ],
-      visible: true,
-    },
-    hard_skills: {
-      enable: true,
-      heading: "Hard Skills",
-      index: 56,
-      items: [
-        {
-          Name: "",
-        },
-      ],
-      visible: true,
-    },
 
     additional_skills: {
       heading: "Additonal Skills",
