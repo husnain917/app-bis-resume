@@ -164,7 +164,11 @@ export const sampleData = {
       enable: true,
       heading: "Skills",
       index: 2,
-      items: [{}],
+      items: [
+        {
+          Name: "",
+        },
+      ],
       visible: true,
     },
     soft_skills: {

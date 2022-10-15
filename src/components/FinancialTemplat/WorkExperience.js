@@ -92,63 +92,6 @@ function WorkExperience(props) {
                   listItem="Summary"
                 />
               </Box>
-              <Box
-                display="flex"
-                flexDir="row"
-                alignItems="center"
-                h="30px"
-                mt="2px"
-              >
-                <Box fontSize="3rem" mb="5">
-                  .
-                </Box>
-                <Text
-                  value={item.summary1}
-                  placeholder="Summary1"
-                  customclass={"manager-fName"}
-                  path={`${path}.${index}.summary1`}
-                  style={styles.summary}
-                  listItem="Summary1"
-                />
-              </Box>
-              <Box
-                display="flex"
-                flexDir="row"
-                alignItems="center"
-                h="30px"
-                mt="2px"
-              >
-                <Box fontSize="3rem" mb="5">
-                  .
-                </Box>
-                <Text
-                  value={item.summary2}
-                  placeholder="Summary2"
-                  customclass={"manager-fName"}
-                  path={`${path}.${index}.summary2`}
-                  style={styles.summary}
-                  listItem="Summary2"
-                />
-              </Box>
-              <Box
-                display="flex"
-                flexDir="row"
-                alignItems="center"
-                h="30px"
-                mt="2px"
-              >
-                <Box fontSize="3rem" mb="5">
-                  .
-                </Box>
-                <Text
-                  value={item.summary3}
-                  placeholder="Summary3"
-                  customclass={"manager-fName"}
-                  path={`${path}.${index}.summary3`}
-                  style={styles.summary}
-                  listItem="Summary3"
-                />
-              </Box>
             </Box>
             <Box>
               {/* <p>Key responsibilities:</p> */}

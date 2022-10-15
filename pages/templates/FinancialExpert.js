@@ -5,6 +5,7 @@ import style from "../../styles/templates/template1.module.scss";
 import { onBlurField } from "../../store/actions/builderAction";
 
 import WorkExperience from "../../src/components/FinancialTemplat/WorkExperience";
+import Skills from "../../src/components/FinancialTemplat/Skills";
 import EducationHistory from "../../src/components/FinancialTemplat/EducationHistory";
 import { sampleData } from "../../constants/sampleData";
 import { styles } from "../../src/components/componentStyles/template1Style";
@@ -150,6 +151,30 @@ class Manager extends Component {
                             resumeData?.hard_skills?.items.length
                               ? [...resumeData?.hard_skills?.items]
                               : [...sampleData?.data?.hard_skills?.items]
+                          }
+                          color={this.props.theme.color}
+                          updater={updater}
+                        />
+                      </>
+                    )}
+                    {resumeData?.skills?.visible && (
+                      <>
+                        <Text
+                          value={resumeData?.skills?.heading || "Skills"}
+                          placeholder="Skills"
+                          customclass={"manager-f1-heading-title"}
+                          path={"skills.heading"}
+                          editable={false}
+                          style={styles.workHeading}
+                        />
+                        <Box>
+                          <UnderLineBox />
+                        </Box>
+                        <Skills
+                          data={
+                            resumeData?.skills?.items.length
+                              ? [...resumeData?.skills?.items]
+                              : [...sampleData?.data?.skills?.items]
                           }
                           color={this.props.theme.color}
                           updater={updater}
