@@ -93,19 +93,7 @@ function WorkExperience(props) {
                 />
               </Box>
             </Box>
-            <Box>
-              {/* <p>Key responsibilities:</p> */}
-              {/* <Responsibilities /> */}
-              {/* <Responsibilities
-                data={
-                  resumeData?.responsibilities?.items.length
-                    ? [...resumeData?.responsibilities?.items]
-                    : [...sampleData?.data?.responsibilities?.items]
-                }
-                color={this.props.theme.color}
-                updater={updater}
-              /> */}
-            </Box>
+            <Box></Box>
           </Box>
         )}
       />

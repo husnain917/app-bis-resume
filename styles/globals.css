@@ -118,7 +118,7 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   font-size: 2.4em;
   padding: 0;
   line-height: 30px;
-  text-align: center;
+  text-align:left;
 }
 
 .manager-template-row {
