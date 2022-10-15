@@ -33,6 +33,7 @@ function FdText(props) {
           marginLeft:props.marginLeft,
           fontWeight:props.fontWeight,
           paddingRight:props.paddingRight,
+          textAlign:props.textAlign
         }}
         // style={{
 

@@ -102,6 +102,8 @@
 .main {
   position: relative;
   min-width: fit-content;
+  display: flex;
+  justify-content: center;
 }
 .swapCont {
   position: absolute;
