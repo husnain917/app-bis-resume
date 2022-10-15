@@ -17,7 +17,8 @@ import Image from 'next/image'
 import useStoreData from '../../src/components/templateMarket/useStoreData';
 import WorkCertificate from '../../src/components/templateMarket/WorkCertificate'
 
-
+import Link from "next/link";
+import { Tooltip } from "react-tippy";
 
 export default function TemplateMarket() {
     const {
@@ -27,6 +28,15 @@ export default function TemplateMarket() {
     } = useStoreData();
     return (
         <div className={style.main}>
+            <Link href={'/templates'}>
+                <div className={style.swapCont}>
+                    <Tooltip title="Change Template" arrow distance={20}>
+                        <div className={style.swap} >
+                            <img src='/icons/swap.png' />
+                        </div>
+                    </Tooltip>
+                </div>
+            </Link>
             <div className={styles.mainDiv} >
                 <div className={styles.innerMainDiv} >
                     <div className={styles.innerMainDiv1}>
@@ -56,8 +66,8 @@ export default function TemplateMarket() {
                                 </div>
                                 <div className={styles.contactIconMain} >
                                     <div className={styles.contactIcon} >
-                                        <div className={styles.iconDiv} style={{ backgroundColor: 'white' }}>
-                                            <GrMail size='20px' color='#1c2125' />
+                                        <div className={styles.iconDiv}>
+                                            <GrMail size='20px' color='white' />
                                         </div>
                                     </div>
                                     <div className={styles.contactIconCotent}>
@@ -71,7 +81,7 @@ export default function TemplateMarket() {
                                 </div>
 
                                 <div className={styles.contactIconMain}>
-                                    <div className={styles.contactIcon} style={{ width: '43px', justifyContent: 'right', padding: '0px', margin: '0px' }}>
+                                    <div className={styles.contactIcon} style={{ width: '50px', justifyContent: 'right', paddingRight: '0px',margin:"0px"}}>
                                         <div className={styles.iconDiv} style={{ border: 'none', padding: '0px', margin: '0px' }}>
                                             <TbWorld size='43px' color='white' />
                                         </div>
