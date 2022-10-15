@@ -31,6 +31,16 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/fashionTemp4">
+            <img
+              src="FashTemp4.png"
+              alt="Fashion Designer Temmplate 4"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
         {/*  <Box className='cursor'>
           <Link href='/templates/templateCEO'>
               <img src='Chief_Exclusive_Office.jpg' alt='Chief_Exclusive_Office' height='200px' width='250px' />
