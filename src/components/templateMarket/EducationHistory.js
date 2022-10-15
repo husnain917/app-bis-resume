@@ -3,6 +3,7 @@ import Util from "../../../utils/templateUtils";
 import { Text, Dnd } from "../template1";
 import { useDispatch } from "react-redux";
 import { updateOrder, addNewObj, deleteObjInArray } from "../../../store/actions/builderAction";
+import { styles } from "../componentStyles/template1Style";
 
 function EducationHistory(props) {
   const dispatch = useDispatch();
@@ -33,14 +34,31 @@ function EducationHistory(props) {
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
           <>
-            <div style={{margin:'8px 0'}}>
+            <div style={{ margin: '8px 0' }}>
               <Text
                 value={item.institution}
-                placeholder="College Name & From Year - To Year"
+                placeholder="College Name "
                 customclass={"manager-position"}
                 path={`${path}.${index}.institution`}
               />
-              <div style={{margin: '6px 0'}}>
+              <div className="manager-template-row" style={styles.workItem}>
+                <Text
+                  value={item.startDate}
+                  placeholder="Start Date"
+                  customclass={"manager-position"}
+                  path={`${path}.${index}.startDate`}
+                />
+                <p style={styles.paraStyles(true)}>&nbsp;-&nbsp;</p>
+                <Text
+                  value={item.endDate}
+                  placeholder="End Date"
+                  customclass={"manager-position"}
+                  path={`${path}.${index}.endDate`}
+                  max="9999-12-31"
+
+                />
+              </div>
+              <div style={{ margin: '6px 0' }}>
                 <Text
                   value={`${item.summary}`}
                   placeholder="Summary"
