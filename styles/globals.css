@@ -43,6 +43,11 @@ a {
   margin-top: 15px;
   text-transform: uppercase;
 }
+.manager-f1-heading-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 15px;
+}
 
 .manager-template-text-bold {
   font-weight: bold;
@@ -116,7 +121,14 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   font-size: 2.4em;
   padding: 0;
   line-height: 30px;
-  text-align: center;
+  text-align:center;
+}
+.fullName1 {
+  font-weight: 700;
+  font-size: 2.4em;
+  padding: 0;
+  line-height: 30px;
+  text-align:left;
 }
 
 .manager-template-row {
