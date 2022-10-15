@@ -258,7 +258,6 @@ export const sampleData = {
     references: {
       enable: false,
       heading: 'References',
-      items: [],
       items: [
         {
           name: '',
