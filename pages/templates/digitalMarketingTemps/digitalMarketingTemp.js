@@ -317,7 +317,7 @@ export default function digitalMarketingTemp() {
             height={'60px'}
             width={'100%'}
             backgroundColor={'#F2DB7A'}
-            marginTop={'24%'}
+            marginTop={'28%'}
           >
             {/* footer */}
           </Box>

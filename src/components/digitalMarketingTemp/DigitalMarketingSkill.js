@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Util from "../../../utils/templateUtils";
 import { Text } from "../template1/index";
 import { DigitalDnd } from "../digitalMarketingTemp/index";
@@ -7,11 +7,10 @@ import { updateOrder, addNewObj, deleteObjInArray } from "../../../store/actions
 // import { styles } from "../componentStyles/template1Style";
 import style from "../../../styles/digitalMarketingTemp.module.css";
 import {
-    Slider,
-    SliderTrack,
-    SliderFilledTrack,
-    SliderThumb,
+    Box,
+    Input
 } from "@chakra-ui/react";
+import { Line } from 'rc-progress';
 
 
 function DigitalMarketingSkill(props) {
@@ -32,6 +31,40 @@ function DigitalMarketingSkill(props) {
         dispatch(deleteObjInArray(deletedPath));
     };
     const { data } = props;
+
+    const [progress, setProgress] = useState([]);
+    const validateData = (e, index2) => {
+        if (e.target.value > 0 && e.target.value > 100 || e.target.value <= 0) {
+            let newArr2 = progress.map((item, index) => {
+                if (index === index2) {
+                    return null;
+                }
+                else {
+                    return item
+                }
+            })
+            setProgress(newArr2);
+            return;
+        }
+        let newArr;
+        if (progress.length <= 0) {
+            newArr = [e.target.value]
+        }
+        else if (progress.length === index2) {
+            newArr = [...progress, e.target.value]
+            console.log(newArr);
+        }
+        else {
+            newArr = progress.map((item, index) => {
+                if (index === index2) {
+                    return e.target.value;
+                } else {
+                    return item
+                }
+            })
+        }
+        setProgress(newArr);
+    }
     return (
         <DigitalDnd
             data={data}
@@ -40,87 +73,48 @@ function DigitalMarketingSkill(props) {
             removeitem={(index) => _removeItem(index)}
             renderItem={(item, index) =>
                 <>
-                    <div>
-                        {/* Digital Marketing skill */}
-                        <div className={style.skillDiv}>
-                            <Text
-                                value={item.skills}
-                                placeholder="Digital Marketing"
-                                customclass={`${style.skillBodyHeading} ${style.digitalContentEditableContainer}`}
-                                path={`${path}.${index}.digitalMarketing`}
+                    {/* Digital Marketing skill */}
+                    <Box
+                        padding={"5px 10px 0px 10px"}
+                    >
+                        <Text
+                            value={item.skills}
+                            placeholder="Digital Marketing"
+                            customclass={`${style.skillBodyHeading} ${style.digitalContentEditableContainer}`}
+                            path={`${path}.${index}.digitalMarketing`}
+                        />
+                        <Box
+                            display={'flex'}
+                            alignItems={'center'}
+                            mb={'10px'}
+                        >
+                            <Box w={'80%'} borderRadius={8} bg={'#adb5bd'}>
+                                <Line
+                                    percent={progress[index]}
+                                    strokeWidth={6}
+                                    strokeColor={'#fff'}
+                                />
+                            </Box>
+                            <Input
+                                maxW={10}
+                                maxH={30}
+                                borderColor="none"
+                                variant="unstyled"
+                                placeholder="0"
+                                value={`${progress[index]}`}
+                                className={`${style.inputData}`}
+                                onChange={(e) => validateData(e, index)}
+                                type="number"
                             />
-                            <Slider aria-label='slider-ex-1' defaultValue={35} width={'40%'}>
-                                <SliderTrack bg={'#adb5bd'}>
-                                    <SliderFilledTrack bg={'#fff'} />
-                                </SliderTrack>
-                                <SliderThumb />
-                            </Slider>
-                        </div>
+                            {
 
-                        {/* Social Media Ads skill */}
-                        {/* <div className={style.skillDiv}>
-                            <Text
-                                value={item.skills}
-                                placeholder="Social Media Ads"
-                                customclass={`${style.skillBodyHeading} ${style.digitalContentEditableContainer}`}
-                                path={`${path}.${index}.socialMediaAds`}
-                            />
-                            <Slider aria-label='slider-ex-1' defaultValue={35} width={'40%'}>
-                                <SliderTrack bg={'#adb5bd'}>
-                                    <SliderFilledTrack bg={'#fff'} />
-                                </SliderTrack>
-                                <SliderThumb />
-                            </Slider>
-                        </div> */}
-
-                        {/* Email Marketing skill */}
-                        {/* <div className={style.skillDiv}>
-                            <Text
-                                value={item.skills}
-                                placeholder="Email Marketing"
-                                customclass={`${style.skillBodyHeading} ${style.digitalContentEditableContainer}`}
-                                path={`${path}.${index}.emailMarketing`}
-                            />
-                            <Slider aria-label='slider-ex-1' defaultValue={35} width={'40%'}>
-                                <SliderTrack bg={'#adb5bd'}>
-                                    <SliderFilledTrack bg={'#fff'} />
-                                </SliderTrack>
-                                <SliderThumb />
-                            </Slider>
-                        </div> */}
-
-                        {/* Google Analytic skill */}
-                        {/* <div className={style.skillDiv}>
-                            <Text
-                                value={item.skills}
-                                placeholder="Google Analytic"
-                                customclass={`${style.skillBodyHeading} ${style.digitalContentEditableContainer}`}
-                                path={`${path}.${index}.googleAnalytic`}
-                            />
-                            <Slider aria-label='slider-ex-1' defaultValue={35} width={'40%'}>
-                                <SliderTrack bg={'#adb5bd'}>
-                                    <SliderFilledTrack bg={'#fff'} />
-                                </SliderTrack>
-                                <SliderThumb />
-                            </Slider>
-                        </div> */}
-
-                        {/* Google Ads skill */}
-                        {/* <div className={style.skillDiv}>
-                            <Text
-                                value={item.skills}
-                                placeholder="Google Ads"
-                                customclass={`${style.skillBodyHeading} ${style.digitalContentEditableContainer}`}
-                                path={`${path}.${index}.googleAds`}
-                            />
-                            <Slider aria-label='slider-ex-1' defaultValue={35} width={'40%'}>
-                                <SliderTrack bg={'#adb5bd'}>
-                                    <SliderFilledTrack bg={'#fff'} />
-                                </SliderTrack>
-                                <SliderThumb />
-                            </Slider>
-                        </div> */}
-                    </div>
+                                progress[index] ?
+                                    <span className={`${style.perD}`}>%</span>
+                                    :
+                                    null
+                            }
+                        </Box>
+                    </Box>
                 </>
             }
         />

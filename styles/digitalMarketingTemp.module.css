@@ -42,54 +42,58 @@
   font-size: 14px !important;
   background-color: #3A4D6C !important;
 }
+
 .leftContainerHeadings {
   color: #fff !important;
   font-size: 1.4em;
   font-weight: 500 !important;
   text-transform: uppercase;
 }
+
 .educationDesHeadingDiv {
   padding: 5px 30px;
 }
+
 .educationDesHeading {
   color: #fff !important;
   font-size: 15px;
   background-color: #3A4D6C !important;
 }
+
 .educationDesAbout {
   color: #fff !important;
   font-size: 14px;
   background-color: #3A4D6C !important;
 }
-.skillDiv {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
+
 .skillBodyHeading {
-  font-size: 13px;
+  font-size: 14px;
+  margin: 0px 0px 6px 0px;
   color: #fff !important;
   background-color: #3A4D6C !important;
 }
+
 .nameStyle {
   font-size: 2.8em;
   font-weight: 500;
   color: #3A4D6C !important;
   background-color: #F2DB7A !important;
 }
+
 .profileSubTitle {
   font-size: 1.6em;
   font-weight: 500;
   color: #3A4D6C !important;
   background-color: #F2DB7A !important;
 }
+
 .rightContainerHeading {
   color: #3A4D6C !important;
   font-size: 1.4em;
   font-weight: 500 !important;
   text-transform: uppercase;
 }
+
 .aboutBodyDes {
   font-size: 16px;
   color: #3A4D6C !important;
@@ -97,17 +101,21 @@
   line-height: 20px;
   text-align: justify;
 }
+
 .experienceDesContainer {
   margin: 10px 30px;
 }
+
 .experienceDesDiv {
   color: #3A4D6C !important;
 }
+
 .experienceYear {
   color: #3A4D6C !important;
   font-size: 20px;
   background-color: #fff !important;
 }
+
 .experienceDesTitle {
   color: #3A4D6C !important;
   font-size: 18px;
@@ -115,9 +123,23 @@
   text-align: justify;
   background-color: #fff !important;
 }
+
 .experienceDes {
   color: #3A4D6C !important;
   font-size: 15px;
   background-color: #fff !important;
   text-align: justify;
+}
+
+.inputData {
+  font-size: 14px !important;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.perD {
+  display: inline-block;
+  margin-left: -15px !important;
+  font-size: 13px !important;
+  color: #fff;
 }
