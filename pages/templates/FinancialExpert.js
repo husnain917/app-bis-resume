@@ -16,8 +16,6 @@ import { Tooltip } from "react-tippy";
 import Link from "next/link";
 import { Box, Image } from "@chakra-ui/react";
 import Profile from "../../src/components/FinancialTemplat/Profile";
-import SoftSkills from "../../src/components/FinancialTemplat/SoftSkills";
-import HardSkills from "../../src/components/FinancialTemplat/HardSkills";
 import UnderLineBox from "../../src/components/FinancialTemplat/UnderLineBox";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { GiSpiderWeb } from "react-icons/gi";
