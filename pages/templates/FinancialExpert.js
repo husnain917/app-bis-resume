@@ -132,31 +132,6 @@ class Manager extends Component {
                         w={950}
                       />
                     </Box>
-                    {resumeData?.hard_skills?.visible && (
-                      <>
-                        <Text
-                          value={resumeData?.hard_skills?.heading}
-                          placeholder="Hard Skills"
-                          customclass={"manager-f1-heading-title"}
-                          path={"hard_skills.heading"}
-                          editable={false}
-                          style={styles.workHeading}
-                        />
-                        <Box>
-                          <UnderLineBox />
-                        </Box>
-
-                        <HardSkills
-                          data={
-                            resumeData?.hard_skills?.items.length
-                              ? [...resumeData?.hard_skills?.items]
-                              : [...sampleData?.data?.hard_skills?.items]
-                          }
-                          color={this.props.theme.color}
-                          updater={updater}
-                        />
-                      </>
-                    )}
                     {resumeData?.skills?.visible && (
                       <>
                         <Text
@@ -175,31 +150,6 @@ class Manager extends Component {
                             resumeData?.skills?.items.length
                               ? [...resumeData?.skills?.items]
                               : [...sampleData?.data?.skills?.items]
-                          }
-                          color={this.props.theme.color}
-                          updater={updater}
-                        />
-                      </>
-                    )}
-                    {resumeData?.soft_skills?.visible && (
-                      <>
-                        <Text
-                          value={resumeData?.soft_skills?.heading}
-                          placeholder="Soft Skills"
-                          customclass={"manager-f1-heading-title"}
-                          path={"skills.heading"}
-                          editable={false}
-                          style={styles.workHeading}
-                        />
-                        <Box>
-                          <UnderLineBox />
-                        </Box>
-
-                        <SoftSkills
-                          data={
-                            resumeData?.soft_skills?.items.length
-                              ? [...resumeData?.soft_skills?.items]
-                              : [...sampleData?.data?.soft_skills?.items]
                           }
                           color={this.props.theme.color}
                           updater={updater}
