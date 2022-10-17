@@ -14,7 +14,6 @@ const getDragIconStyle = () => ({
   top: -13,
   right: 30,
 });
-
 const getAddIconStyle = () => ({
   userSelect: 'none',
   width: '26px',
@@ -57,7 +56,7 @@ const getListStyle = (isDraggingOver) => ({
   'box-shadow': isDraggingOver
     ? 'inset 0px 0px 18px 0px rgba(0,0,0,0.08)'
     : 'none',
-  background: isDraggingOver ? 'rgba(250,250,250,1)' : '#D6D6D6',
+  background: isDraggingOver ? 'rgba(250,250,250,1)' : 'none',
 });
 
 const getListStyleHorizontal = (isDraggingOver) => ({
@@ -70,13 +69,13 @@ const getListStyleHorizontal = (isDraggingOver) => ({
   'box-shadow': isDraggingOver
     ? 'inset 0px 0px 18px 0px rgba(0,0,0,0.08)'
     : 'none',
-  background: isDraggingOver ? 'rgba(250,250,250,1)' : '#D6D6D6',
+  background: isDraggingOver ? 'rgba(250,250,250,1)' : 'none',
   display: 'flex',
   flexDirection: 'row',
   flexWrap: 'wrap',
 });
 
-class DndHybrid extends Component {
+class DndDigital extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -227,4 +226,4 @@ class DndHybrid extends Component {
 }
 
 /* Export Component =============================== */
-export default DndHybrid;
+export default DndDigital;

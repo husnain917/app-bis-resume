@@ -7,13 +7,11 @@
   }
   .main{
     position: relative;
-    // min-width: fit-content;
-    // background-color: #000000;
   }
   .swapCont{
-    position: absolute;
-    right: 40px ;
-    top: 80px;
+    position: fixed;
+    right: 60px;
+    top: 40px;
   }
   .swap{
     width: 40px;
@@ -92,7 +90,10 @@
   .managerFHeadingTitle {
     font-size: 1.5em;
     font-weight: 700;
-    text-transform: uppercase;
+  }
+  .managerF3HeadingTitle {
+    font-size: 1.5em;
+    font-weight: 700;
   }
   
   .manager-mb-bottom-0 {
@@ -108,11 +109,48 @@
     padding: 5px;
   }
   .a4PaperFinancial {
-    min-width: 80%;
-    max-width: 1500px;
-    overflow: auto;
-    min-height: fit-content;
+    // background-color: red;
+    width: 80%;
     margin: auto;
     border: 2px solid rgba($color: #000000, $alpha: 0.05);
-    background-color: #8d4b55;
+    background-color: green;
+    max-height:2500px;
+    min-height:5000px;
+  }
+
+//   Text Field Styling
+
+// @import '../../theme/colors';
+
+.contentEditableContainer {
+    padding: 6px 2px;
+    white-space: pre-line;
+    border: 1px dashed #fff;
+    border-radius: 4px;
+    outline: 0;
+  }
+  .contentEditableContainer:empty::before {
+    content: attr(data-placeholder);
+    opacity: 1;
+  }
+  
+  .contentEditableContainer:focus {
+    // border: 1px dashed #a1a1a1;
+    padding: auto;
+    white-space: pre-line;
+
+    border-radius: 4px;
+    outline: 0;
+  }
+  
+  .contentEditableContainer:active {
+    // border: 1px dashed #a1a1a1;
+    border-radius: 4px;
+    outline: 0;
+  }
+  
+  .contentEditableContainer:visited {
+    // border: 1px dashed #a1a1a1;
+    border-radius: 4px;
+    outline: 0;
   }
