@@ -61,7 +61,9 @@ function EducationHistory(props) {
                     path={`${path}.${index}.degree`}
                   />
                 </Box>
-                <Box mt="1">
+                <p style={styles.paraStyles(true)}></p>
+
+                <Box>
                   <Text
                     value={item.summary}
                     placeholder="Summary"
