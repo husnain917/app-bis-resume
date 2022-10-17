@@ -52,9 +52,11 @@ function Templates() {
           </Link>
         </Box>
                 <Box className='cursor'>
+        <Box className='cursor'>
           <Link href='/templates/templateMarket'>
             <img src='resumeMarket.png' alt='Resume Digital Market' height='200px' width='250px' />
-              </Link>
+          </Link>
+        </Box>
         </Box>
       </SimpleGrid>
     </div>
