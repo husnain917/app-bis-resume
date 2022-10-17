@@ -88,7 +88,7 @@ function DigitalMarketingSkill(props) {
                             alignItems={'center'}
                             mb={'10px'}
                         >
-                            <Box w={'80%'} borderRadius={8} bg={'#adb5bd'}>
+                            <Box w={'80%'} borderRadius={8}>
                                 <Line
                                     percent={progress[index]}
                                     strokeWidth={6}
