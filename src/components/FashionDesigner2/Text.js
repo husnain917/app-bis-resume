@@ -27,9 +27,9 @@ function Text(props) {
         style={{
           border: "none",
           borderColor: addBorder ? "#4267b2" : "rgba(0, 0, 0, 0.23)",
-          fontSize: props.fontSize || "36px",
           color: props.color,
           margin: props.margin,
+          marginTop: props.marginTop,
           marginLeft: props.marginLeft || "auto",
           fontSize: props.fontSize,
           fontWeight: props.fontWeight,

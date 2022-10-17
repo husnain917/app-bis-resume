@@ -45,7 +45,7 @@ function EducationHistory(props) {
               justifyContent="space-between"
             >
               <Box>
-                <Box ml="1">
+                <Box>
                   <Text
                     value={item.institution}
                     placeholder="College Name"
@@ -53,7 +53,7 @@ function EducationHistory(props) {
                     path={`${path}.${index}.institution`}
                   />
                 </Box>
-                <Box ml="1">
+                <Box>
                   <Text
                     value={item.degree}
                     placeholder="Degree"
@@ -61,7 +61,7 @@ function EducationHistory(props) {
                     path={`${path}.${index}.degree`}
                   />
                 </Box>
-                <Box>
+                <Box mt="1">
                   <Text
                     value={item.summary}
                     placeholder="Summary"

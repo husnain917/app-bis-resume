@@ -12,6 +12,9 @@ import { BsCircle } from "react-icons/bs";
 import { BsCircleFill } from "react-icons/bs";
 
 function Skills(props) {
+  const [currentValue, setCurrentValue] = useState("");
+  const [hoverValue, setHoverValue] = useState(undefined);
+
   const dispatch = useDispatch();
   const path = "skills.items";
 
@@ -30,8 +33,16 @@ function Skills(props) {
     let deletedPath = `${path}.${index}`;
     dispatch(deleteObjInArray(deletedPath));
   };
-  const [currentValue, setCurrentValue] = useState("");
-  const [hoverValue, setHoverValue] = useState(undefined);
+
+  const handleClick = (value) => {
+    setCurrentValue(value);
+  };
+  const handleMouseOver = (value) => {
+    setHoverValue(value);
+  };
+  const handleMouseLeave = () => {
+    setHoverValue(undefined);
+  };
   const { data } = props;
 
   return (
@@ -47,32 +58,35 @@ function Skills(props) {
             display="flex"
             flexDirection="row"
             justifyContent={"space-between"}
+            alignItems="center"
             h="20px"
             mt="2px"
           >
             <Text
               value={item?.name}
               placeholder="Skill"
-              customclass={"manager-fName"}
+              // customclass={"manager-fName"}
               path={`${path}.${index}.name`}
+              fontSize="18px"
+              fontWeight="600"
             />
-            <Box display={"flex"} flexDirection={"row"}>
-              <Box marginX="1">
-                <BsCircle />
-              </Box>
-              <Box>
-                <BsCircleFill />
-              </Box>
-              <Box marginX="1">
-                <BsCircle />
-              </Box>
-              <Box>
-                <BsCircleFill />
-              </Box>
-              <Box marginX="1">
-                <BsCircle />
-              </Box>
-            </Box>
+            {Array(5)
+              .fill(0)
+              .map((_, index) => (
+                <>
+                  <BsCircleFill
+                    size={"1em"}
+                    key={index}
+                    color={
+                      (hoverValue || currentValue) > index ? "red" : "black"
+                    }
+                    onClick={() => handleClick(index + 1)}
+                    onMouseOver={() => handleMouseOver(index + 1)}
+                    onMouseLeave={handleMouseLeave}
+                  />
+                </>
+              ))}
+
             {/* {data.length - 1 !== index && <p className="aPadding">|</p>} */}
           </Box>
         )}
