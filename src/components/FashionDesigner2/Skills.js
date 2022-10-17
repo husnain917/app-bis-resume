@@ -46,7 +46,7 @@ function Skills(props) {
   const { data } = props;
 
   return (
-    <Box>
+    <Box mt={3}>
       <Dnd
         direction="horizontal"
         data={data}
