@@ -8,6 +8,7 @@
 
 .main {
   position: relative;
+  min-width: fit-content;
 }
 
 .swapCont {

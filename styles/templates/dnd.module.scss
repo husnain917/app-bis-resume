@@ -1,7 +1,7 @@
 // @import '../../theme/colors';
 
 .unselectedDragItems .dragBox {
-    // border: 2px dashed rgba(255, 255, 255, 0);
+    border: 2px dashed rgba(255, 255, 255, 0);
     transition: all 0.2s ease-in-out;
 }
 .unselectedDragItems .dragBox:hover {

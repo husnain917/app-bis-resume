@@ -106,13 +106,13 @@ a {
   font-size: 1.2em !important;
   font-weight: bold;
 }
-input[type='date']:in-range::-webkit-datetime-edit-year-field,
-input[type='date']:in-range::-webkit-datetime-edit-month-field,
-input[type='date']:in-range::-webkit-datetime-edit-day-field,
-input[type='date']:in-range::-webkit-datetime-edit-text {
+input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+input[type="date"]:in-range::-webkit-datetime-edit-day-field,
+input[type="date"]:in-range::-webkit-datetime-edit-text {
   color: #999;
 }
-.educationManage{
+.educationManage {
   display: flex;
   flex-direction: row !important;
 }
@@ -121,14 +121,14 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   font-size: 2.4em;
   padding: 0;
   line-height: 30px;
-  text-align:center;
+  text-align: center;
 }
 .fullName1 {
   font-weight: 700;
   font-size: 2.4em;
   padding: 0;
   line-height: 30px;
-  text-align:left;
+  text-align: left;
 }
 
 .manager-template-row {
@@ -153,4 +153,44 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 .slick-prev:before,
 .slick-next:before {
   color: black !important;
+}
+.carousel {
+  width: 90%;
+}
+.cursor {
+  cursor: pointer !important;
+}
+
+.slick-prev {
+  left: -20px !important;
+}
+.font {
+  font-family: Euclid Circular 100;
+}
+.DetailStyleTemplate5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.professionNameTemplate5 {
+  font-weight: 700;
+  font-size: 1.7em;
+  padding: 0;
+  line-height: 30px;
+  text-align: center;
+}
+.aboutTextTemplate5 {
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 16px;
+}
+.companyTemplate5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.companyDescriptionTemplate5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.skillTextTemplate5 {
+  width: 120px;
 }
