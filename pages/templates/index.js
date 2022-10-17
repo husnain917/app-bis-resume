@@ -41,10 +41,22 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/fashionDesigner/FashionDesigner">
+            <img
+              src="fashionDesigner.jpg"
+              alt="Fashion_Designer_Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+                <Box className='cursor'>
         <Box className='cursor'>
           <Link href='/templates/templateMarket'>
             <img src='resumeMarket.png' alt='Resume Digital Market' height='200px' width='250px' />
           </Link>
+        </Box>
         </Box>
       </SimpleGrid>
     </div>
