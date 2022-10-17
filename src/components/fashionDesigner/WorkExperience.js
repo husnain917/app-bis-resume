@@ -41,7 +41,6 @@ function WorkExperience(props) {
               <FdText
                 value={item.startYear}
                 placeholder="2023"
-                // customclass={'manager-fName'}
                 path={`${path}.${index}.startYear`}
                 fontSize="1.2rem"
                 fontWeight="bold"
@@ -79,7 +78,7 @@ function WorkExperience(props) {
                   customclass={styles.wrokFeild}
                   path={`${path}.${index}.summary`}
                   color="#1B4261"
-                  fontSize="17px"
+                  fontSize="20px"
                 />
               </div>
             </div>

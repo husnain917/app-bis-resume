@@ -3,10 +3,6 @@ import { Box, Image, Badge } from "@chakra-ui/react";
 import StarRatings from "react-star-ratings";
 import { Text } from "@chakra-ui/react";
 import { CheckCircleIcon, StarIcon } from "@chakra-ui/icons";
-<<<<<<< HEAD
-=======
-
->>>>>>> 3265bab (sample rating component)
 const RatingComponent = ({ title, desc, date, name, rating }) => {
   console.log("RatingComponent:", rating);
   const [currentValue, setCurrentValue] = useState(rating);
@@ -30,11 +26,7 @@ const RatingComponent = ({ title, desc, date, name, rating }) => {
     setHoverValue(undefined);
   };
   return (
-<<<<<<< HEAD
     <Box paddingX={4}>
-=======
-    <Box maxW="300px" overflow="hidden" paddingX={4}>
->>>>>>> 3265bab (sample rating component)
       <Box>
         <Box display="flex" mt="2" alignItems="center">
           {Array(5)
@@ -99,8 +91,4 @@ const RatingComponent = ({ title, desc, date, name, rating }) => {
   );
 };
 
-<<<<<<< HEAD
 export default RatingComponent;
-=======
-export default RatingComponent;
->>>>>>> 3265bab (sample rating component)

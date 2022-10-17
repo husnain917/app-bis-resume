@@ -32,10 +32,6 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "react-redux": "^8.0.2",
-<<<<<<< HEAD
-    "react-reveal": "^1.2.2",
-=======
->>>>>>> 3265bab (sample rating component)
     "react-slick": "^0.29.0",
     "react-star-ratings": "^2.3.0",
     "react-tippy": "^1.4.0",

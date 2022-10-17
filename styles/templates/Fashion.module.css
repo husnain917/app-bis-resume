@@ -99,18 +99,16 @@
   word-spacing: 2px;
   text-align: justify;
 }
-.main {
+.main{
   position: relative;
-  min-width: fit-content;
-  /* display: flex;
-  justify-content: center; */
+  background-color: transparent;
 }
-.swapCont {
+.swapCont{
   position: absolute;
-  right: 40px;
+  right: 40px ;
   top: 0px;
 }
-.swap {
+.swap{
   width: 40px;
   height: 40px;
   background-color: #03a9f4;
@@ -120,11 +118,11 @@
   justify-content: center;
   cursor: pointer;
 
-  transition: all 0.2s;
+  transition: all .2s;
 }
-.swap:hover {
+.swap:hover{
   transform: scale(1.1);
-  transition: all 0.2s;
+  transition: all .2s;
 }
 .swap img {
   width: 70%;

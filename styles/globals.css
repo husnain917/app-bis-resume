@@ -135,55 +135,7 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 .manager-f-sub-rowA {
   margin: 0 auto;
 }
-<<<<<<< HEAD
-
 .slick-prev:before,
 .slick-next:before {
   color: black !important;
 }
-.carousel {
-  width: 90%;
-}
-.cursor {
-  cursor: pointer !important;
-}
-
-.slick-prev {
-  left: -20px !important;
-}
-.font {
-  font-family: Euclid Circular 100;
-}
-.DetailStyleTemplate5 {
-  font-size: 18px;
-  font-weight: 500;
-}
-.professionNameTemplate5 {
-  font-weight: 700;
-  font-size: 1.7em;
-  padding: 0;
-  line-height: 30px;
-  text-align: center;
-}
-.aboutTextTemplate5 {
-  font-weight: 500;
-  line-height: 30px;
-  font-size: 16px;
-}
-.companyTemplate5 {
-  font-size: 18px;
-  font-weight: bold;
-}
-.companyDescriptionTemplate5 {
-  font-size: 16px;
-  font-weight: 600;
-}
-.skillTextTemplate5 {
-  width: 120px;
-}
-=======
-.slick-prev:before,
-.slick-next:before {
-  color: black !important;
-}
->>>>>>> 3265bab (sample rating component)
