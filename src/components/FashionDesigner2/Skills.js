@@ -60,7 +60,6 @@ function Skills(props) {
             justifyContent={"space-between"}
             alignItems="center"
             h="20px"
-            mt="10px"
           >
             <Text
               value={item?.name}
@@ -70,7 +69,7 @@ function Skills(props) {
               fontSize="18px"
               fontWeight="600"
             />
-            <Box display={"flex"} flexDirection="row">
+            <Box display={"flex"} flexDirection="row" marginRight={5}>
               {Array(5)
                 .fill(0)
                 .map((_, index) => (
