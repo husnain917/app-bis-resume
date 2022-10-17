@@ -61,10 +61,10 @@ class Manager extends Component {
               <Box display="flex" alignItems="center" justifyContent="center">
                 <Image
                   src="/Profile.jpeg"
-                  h={200}
-                  w={180}
+                  h={"15em"}
+                  w={"15em"}
                   borderRadius="50%"
-                  marginTop="-150px"
+                  marginTop="-15%"
                   marginLeft="10px"
                 />
               </Box>

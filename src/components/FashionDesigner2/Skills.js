@@ -69,23 +69,29 @@ function Skills(props) {
               path={`${path}.${index}.name`}
               fontSize="18px"
               fontWeight="600"
+              marginTop="12px"
             />
-            {Array(5)
-              .fill(0)
-              .map((_, index) => (
-                <>
-                  <BsCircleFill
-                    size={"1em"}
-                    key={index}
-                    color={
-                      (hoverValue || currentValue) > index ? "red" : "black"
-                    }
-                    onClick={() => handleClick(index + 1)}
-                    onMouseOver={() => handleMouseOver(index + 1)}
-                    onMouseLeave={handleMouseLeave}
-                  />
-                </>
-              ))}
+            <Box display={"flex"} flexDirection="row">
+              {Array(5)
+                .fill(0)
+                .map((_, index) => (
+                  <>
+                    <BsCircleFill
+                      size={"1em"}
+                      key={index}
+                      marginX="2"
+                      color={
+                        (hoverValue || currentValue) > index
+                          ? "#077BBD"
+                          : "black"
+                      }
+                      onClick={() => handleClick(index + 1)}
+                      onMouseOver={() => handleMouseOver(index + 1)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  </>
+                ))}
+            </Box>
 
             {/* {data.length - 1 !== index && <p className="aPadding">|</p>} */}
           </Box>
