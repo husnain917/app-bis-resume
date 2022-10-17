@@ -60,7 +60,7 @@ function Skills(props) {
             justifyContent={"space-between"}
             alignItems="center"
             h="20px"
-            mt="2px"
+            mt="10px"
           >
             <Text
               value={item?.name}
@@ -69,26 +69,26 @@ function Skills(props) {
               path={`${path}.${index}.name`}
               fontSize="18px"
               fontWeight="600"
-              marginTop="12px"
             />
             <Box display={"flex"} flexDirection="row">
               {Array(5)
                 .fill(0)
                 .map((_, index) => (
                   <>
-                    <BsCircleFill
-                      size={"1em"}
-                      key={index}
-                      marginX="2"
-                      color={
-                        (hoverValue || currentValue) > index
-                          ? "#077BBD"
-                          : "black"
-                      }
-                      onClick={() => handleClick(index + 1)}
-                      onMouseOver={() => handleMouseOver(index + 1)}
-                      onMouseLeave={handleMouseLeave}
-                    />
+                    <Box margin={"10px"}>
+                      <BsCircleFill
+                        size={"1em"}
+                        key={index}
+                        color={
+                          (hoverValue || currentValue) > index
+                            ? "#077BBD"
+                            : "black"
+                        }
+                        onClick={() => handleClick(index + 1)}
+                        onMouseOver={() => handleMouseOver(index + 1)}
+                        onMouseLeave={handleMouseLeave}
+                      />
+                    </Box>
                   </>
                 ))}
             </Box>
