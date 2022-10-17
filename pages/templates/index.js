@@ -58,6 +58,16 @@ function Templates() {
           </Link>
         </Box>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/digitalMarketingTemps/digitalMarketingTemp">
+            <img
+              src="digitalMarketingTemp.PNG"
+              alt="Digital_Marketing_Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
       </SimpleGrid>
     </div>
   )
