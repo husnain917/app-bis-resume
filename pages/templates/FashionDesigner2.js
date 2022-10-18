@@ -44,7 +44,7 @@ class Manager extends Component {
           maxW="1050"
           w={1050}
         >
-          <Box className={width < 500 ? "" : style.a4PaperFinancial}>
+          <Box className={width < 500 ? "" : style.a4PaperFashion2}>
             <Box>
               {/* <Profile /> */}
               <Box display="flex" flexDirection="row">
