@@ -1,4 +1,4 @@
-import { SimpleGrid, Box } from "@chakra-ui/react";
+import { SimpleGrid, Box, Image } from "@chakra-ui/react";
 import React from "react";
 import Link from "next/link";
 
@@ -43,11 +43,11 @@ function Templates() {
         </Box>
         <Box className="cursor">
           <Link href="/templates/FashionDesigner2">
-            <img
+            <Image
               src="FashionDesigner2.png"
               alt="Fashion Designer 2"
-              height="350px"
-              width="300px"
+              height={330}
+              width="250px"
             />
           </Link>
         </Box>
