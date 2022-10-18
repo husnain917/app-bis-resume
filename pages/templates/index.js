@@ -64,6 +64,18 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className='cursor'>
+          <Link href='/templates/GraphicDesigner1'>
+            <img src='gdBanner.jpg' alt='Resume Digital Market' height='200px' width='250px' />
+          </Link>
+        </Box>
+                <Box className='cursor'>
+        <Box className='cursor'>
+          <Link href='/templates/templateMarket'>
+            <img src='resumeMarket.png' alt='Resume Digital Market' height='200px' width='250px' />
+          </Link>
+        </Box>
+        </Box>
         <Box className="cursor">
           <Box className="cursor">
             <Link href="/templates/templateMarket">
