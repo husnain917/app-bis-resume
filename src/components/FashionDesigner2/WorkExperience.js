@@ -73,7 +73,11 @@ function WorkExperience(props) {
               />
             </Box>
 
-            <Box display="flex" style={styles.workItem}>
+            <Box
+              display="flex"
+              className="manager-template-row"
+              style={styles.workItem}
+            >
               <Text
                 value={item.startDate}
                 placeholder="Start Date"

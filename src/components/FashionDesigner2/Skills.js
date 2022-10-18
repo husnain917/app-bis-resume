@@ -69,12 +69,12 @@ function Skills(props) {
               fontSize="18px"
               fontWeight="600"
             />
-            <Box display={"flex"} flexDirection="row" marginRight={5}>
+            <Box display={"flex"} flexDirection="row" marginRight={8}>
               {Array(5)
                 .fill(0)
                 .map((_, index) => (
                   <>
-                    <Box margin={"10px"}>
+                    <Box margin={"6px"}>
                       <BsCircleFill
                         size={"1em"}
                         key={index}

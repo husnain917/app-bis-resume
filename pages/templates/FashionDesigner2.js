@@ -50,7 +50,7 @@ class Manager extends Component {
               <Box display="flex" flexDirection="row">
                 <Box
                   w="100%"
-                  minH="20vh"
+                  minH="10em"
                   display="flex"
                   justifyContent="center"
                   flexDirection="column"
@@ -61,8 +61,8 @@ class Manager extends Component {
               <Box display="flex" alignItems="center" justifyContent="center">
                 <Image
                   src="/Profile.jpeg"
-                  h={"15em"}
-                  w={"15em"}
+                  h={"12em"}
+                  w={"12em"}
                   borderRadius="50%"
                   marginTop="-15%"
                   marginLeft="10px"
