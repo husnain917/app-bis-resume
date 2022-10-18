@@ -95,14 +95,7 @@ class Manager extends Component {
                     </Box>
                     <Text
                       value={resumeData?.aboutMe?.body}
-                      placeholder="Dedicated and detail-oriented Financial Analyst with 10
-                      years of experience. Eager to apply proven-budget
-                      maximization skills for Bank of Brocelle in monitoring,
-                      maintaining, and completing client billing and
-                      reconciliations. Special interest in achieving the
-                      millennial market and helping with retirement and
-                      general financial planning.
-                      "
+                      placeholder="Short and engaging pitch about yourself."
                       path={"aboutMe.body"}
                     />
                   </Box>
