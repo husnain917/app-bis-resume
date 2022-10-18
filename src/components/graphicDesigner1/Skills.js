@@ -89,7 +89,7 @@ function Skills(props) {
               onChange={(e) => skillHandler(e, index)}
               type="number"
             />
-{value[index] ? <span style={{ color: "white",alignSelf:"right",position:'relative',right:20 }}>%</span> : null}
+{value[index] ? <span style={{ color: "white",alignSelf:"right",position:'relative',right:25 }}>%</span> : null}
 
             <Text
               value={item.name}
