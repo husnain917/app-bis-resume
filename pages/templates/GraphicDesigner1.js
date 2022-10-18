@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/templates/Graphic.module.css";
-import { Box, Tooltip } from "@chakra-ui/react";
+import { Box, Image, Tooltip } from "@chakra-ui/react";
 import Link from "next/link";
 import Text from "../../src/components/graphicDesigner1/Text";
 import { useSelector } from "react-redux";
@@ -28,10 +28,17 @@ export default function GraphicDesigner1() {
         </div>
       </Link>
       {/* main div  */}
-      <div className={styles.mainContainer} w="70%" h="100vh" mt="5%">
+      {/* <Box className={styles.mainContainer}> */}
+      <Box w="100%" mt="5%" overflow="auto" ml={["", , ,"5%" , "13%"]}>
         {/* innermaindiv */}
-        <Box w="100%" display="flex">
-          <Box w="35%" bgColor="#365B6D" h="220vh" m="15px">
+        <Box
+          w="100%"
+          display="flex"
+          maxW="950px"
+          minW="950px"
+          className={styles.bgContainer}
+        >
+          <Box w="35%" bgColor="#365B6D" h="auto" m="15px" mt="30px" mb="60px">
             <Contact />
             <Heading
               text="EDUCATION"
@@ -39,6 +46,7 @@ export default function GraphicDesigner1() {
               textAlign="right"
               padding="15px"
               marginTop="24%"
+              marginLeft="75%"
             />
 
             <Education
@@ -56,6 +64,7 @@ export default function GraphicDesigner1() {
               textAlign="right"
               padding="15px"
               marginTop="15%"
+              marginLeft="75%"
             />
             <Skills
               data={
@@ -69,7 +78,7 @@ export default function GraphicDesigner1() {
           </Box>
 
           {/* Right section code  */}
-          <Box w="65%" h="auto" m="15px" ml="10px" mr="25px">
+          <Box w="65%" h="auto" m="30px" ml="10px" mr="25px">
             <Box
               bgColor="#F2F1EC"
               display="flex"
@@ -134,7 +143,12 @@ export default function GraphicDesigner1() {
               fontWeight="400"
             />
 
-            <Heading text="EXPERIENCE" textColor="#365B6D" marginTop="5%" />
+            <Heading
+              text="EXPERIENCE"
+              textColor="#365B6D"
+              marginTop="5%"
+              borderAlign="right"
+            />
             <WorkExperience
               data={
                 resumeData?.work?.items?.length
@@ -144,9 +158,10 @@ export default function GraphicDesigner1() {
               color={color}
               updater={updater}
             />
+            <Image src="/gdImage.png" w="100%" />
           </Box>
         </Box>
-      </div>
+      </Box>
     </div>
   );
 }

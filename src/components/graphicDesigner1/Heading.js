@@ -7,6 +7,7 @@ export default function Heading({
   textAlign,
   padding,
   marginTop,
+  marginLeft,
 }) {
   return (
     <div>
@@ -15,14 +16,18 @@ export default function Heading({
         fontWeight="bold"
         color={textColor}
         textAlign={textAlign}
-        borderBottom="3px"
-        borderStyle="dashed"
-        borderColor="#93CEE8"
         pr={padding}
         mt={marginTop}
       >
         {text}
       </Text>
+      <Text
+        borderBottom="3px"
+        borderStyle="dashed"
+        borderColor="#93CEE8"
+        w="60px"
+        ml={marginLeft}
+      ></Text>
     </div>
   );
 }

@@ -70,28 +70,25 @@ function Skills(props) {
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
           <div className={styles.skillContainer}>
-            <Box display="flex" w={150} h={2} borderRadius={8}>
-              <Line
-                percent={value[index]}
-                strokeWidth={8}
-                strokeColor={"white"}
-                // trailColor={"#41CBA"}
-              />
-              <Input
-                maxW={50}
-                maxH={30}
-                borderColor="none"
-                variant="unstyled"
-                placeholder="0"
-                className={styles.skillInput}
-                value={`${value[index]}`}
-                onChange={(e) => skillHandler(e, index)}
-                type="number"
-              />
-              {value[index] ? (
-                <span style={{ color: "white", marginRight: "25px" }}>%</span>
-              ) : null}
-            </Box>
+            <Line
+              percent={value[index]}
+              strokeWidth={10}
+              strokeColor={"white"}
+              className={styles.lineBar}
+            />
+            {value[index] ? <span style={{ color: "white" }}>%</span> : null}
+
+            <Input
+              maxW={50}
+              maxH={30}
+              borderColor="none"
+              variant="unstyled"
+              placeholder="0"
+              className={styles.skillInput}
+              value={`${value[index]}`}
+              onChange={(e) => skillHandler(e, index)}
+              type="number"
+            />
 
             <Text
               value={item.name}
