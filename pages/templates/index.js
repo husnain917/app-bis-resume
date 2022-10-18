@@ -46,8 +46,9 @@ function Templates() {
             <Image
               src="FashionDesigner2.png"
               alt="Fashion Designer 2"
-              height={330}
-              width="250px"
+              height={340}
+              width={270}
+              mt={-2}
             />
           </Link>
         </Box>
