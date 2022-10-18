@@ -69,14 +69,14 @@ function Skills(props) {
               fontSize="18px"
               fontWeight="600"
             />
-            <Box display={"flex"} flexDirection="row" marginRight={5}>
+            <Box display={"flex"} flexDirection="row" marginRight={3}>
               {Array(5)
                 .fill(0)
                 .map((_, index) => (
                   <>
                     <Box margin={"10px"}>
                       <BsCircleFill
-                        size={"1em"}
+                        size={"0.8em"}
                         key={index}
                         color={
                           (hoverValue || currentValue) > index
