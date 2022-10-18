@@ -76,7 +76,7 @@ function Skills(props) {
                   <>
                     <Box margin={"6px"}>
                       <BsCircleFill
-                        size={"1em"}
+                        size={"0.8em"}
                         key={index}
                         color={
                           (hoverValue || currentValue) > index
