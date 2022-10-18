@@ -59,7 +59,8 @@ function Skills(props) {
             flexDirection="row"
             justifyContent={"space-between"}
             alignItems="center"
-            h="20px"
+            pt={1}
+            pb={1}
           >
             <Text
               value={item?.name}

@@ -21,7 +21,7 @@ import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { GiSpiderWeb } from "react-icons/gi";
 import { MdLocationOn } from "react-icons/md";
 
-class Manager extends Component {
+class FashionDesigner2 extends Component {
   render() {
     const { resumeData, updater, width } = this.props;
     console.log("resumeData", resumeData);
@@ -95,14 +95,7 @@ class Manager extends Component {
                     </Box>
                     <Text
                       value={resumeData?.aboutMe?.body}
-                      placeholder="Dedicated and detail-oriented Financial Analyst with 10
-                      years of experience. Eager to apply proven-budget
-                      maximization skills for Bank of Brocelle in monitoring,
-                      maintaining, and completing client billing and
-                      reconciliations. Special interest in achieving the
-                      millennial market and helping with retirement and
-                      general financial planning.
-                      "
+                      placeholder="Short and engaging pitch about yourself."
                       path={"aboutMe.body"}
                     />
                   </Box>
@@ -260,4 +253,4 @@ const mapStateToProps = (store) => ({
   updater: store.editorReducer.updater,
 });
 
-export default connect(mapStateToProps, { onBlurField })(Manager);
+export default connect(mapStateToProps, { onBlurField })(FashionDesigner2);
