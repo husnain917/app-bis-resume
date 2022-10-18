@@ -10,7 +10,7 @@ const getDragIconStyle = () => ({
   userSelect: 'none',
   width: '26px',
   height: '26px',
-  background: '#03a9f4',
+  background: '#3A4D6C',
   position: 'absolute',
   borderRadius: '100%',
   top: -13,
@@ -20,7 +20,7 @@ const getAddIconStyle = () => ({
   userSelect: 'none',
   width: '26px',
   height: '26px',
-  background: '#03a9f4',
+  background: '#3A4D6C',
   position: 'absolute',
   borderRadius: '100%',
   top: -13,
@@ -31,7 +31,7 @@ const getRemoveIconStyle = () => ({
   userSelect: 'none',
   width: '26px',
   height: '26px',
-  background: '#03a9f4',
+  background: '#3A4D6C',
   position: 'absolute',
   borderRadius: '100%',
   top: -13,
@@ -77,7 +77,7 @@ const getListStyleHorizontal = (isDraggingOver) => ({
   flexWrap: 'wrap',
 });
 
-class Dnd extends Component {
+class DigitalExperienceDnd extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -144,7 +144,7 @@ class Dnd extends Component {
                   : styles.unselectedDragItems
               }
             >
-              {this.state?.data?.map((item, index) => (
+              {this.state.data.map((item, index) => (
                 <Draggable
                   key={index}
                   draggableId={index.toString()}
@@ -228,4 +228,4 @@ class Dnd extends Component {
 }
 
 /* Export Component =============================== */
-export default Dnd;
+export default DigitalExperienceDnd;

@@ -106,13 +106,13 @@ a {
   font-size: 1.2em !important;
   font-weight: bold;
 }
-input[type='date']:in-range::-webkit-datetime-edit-year-field,
-input[type='date']:in-range::-webkit-datetime-edit-month-field,
-input[type='date']:in-range::-webkit-datetime-edit-day-field,
-input[type='date']:in-range::-webkit-datetime-edit-text {
+input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+input[type="date"]:in-range::-webkit-datetime-edit-day-field,
+input[type="date"]:in-range::-webkit-datetime-edit-text {
   color: #999;
 }
-.educationManage{
+.educationManage {
   display: flex;
   flex-direction: row !important;
 }
@@ -121,14 +121,14 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   font-size: 2.4em;
   padding: 0;
   line-height: 30px;
-  text-align:center;
+  text-align: center;
 }
 .fullName1 {
   font-weight: 700;
   font-size: 2.4em;
   padding: 0;
   line-height: 30px;
-  text-align:left;
+  text-align: left;
 }
 
 .manager-template-row {
@@ -150,7 +150,6 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 .manager-f-sub-rowA {
   margin: 0 auto;
 }
-
 .slick-prev:before,
 .slick-next:before {
   color: black !important;

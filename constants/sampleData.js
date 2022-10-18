@@ -90,14 +90,14 @@ export const sampleData = {
       items: [],
     },
     hobbies: {
-      enable: false,
+      enable: true,
       heading: 'Hobbies',
       items: [
         {
           title: '',
         },
       ],
-      visible: false,
+      visible: true,
     },
     languages: {
       enable: true,

@@ -42,10 +42,32 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
-          <Link href="/templates/templateMarket">
+          <Link href="/templates/fashionDesigner/FashionDesigner">
             <img
-              src="resumeMarket.png"
-              alt="Resume Digital Market"
+              src="fashionDesigner.jpg"
+              alt="Fashion_Designer_Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Box className="cursor">
+            <Link href="/templates/templateMarket">
+              <img
+                src="resumeMarket.png"
+                alt="Resume Digital Market"
+                height="200px"
+                width="250px"
+              />
+            </Link>
+          </Box>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/digitalMarketingTemps/digitalMarketingTemp">
+            <img
+              src="digitalMarketingTemp.PNG"
+              alt="Digital_Marketing_Template"
               height="200px"
               width="250px"
             />
@@ -55,7 +77,7 @@ function Templates() {
           <Link href="/templates/FlightAttendant1">
             <img
               src="FlightAttendantTemplate.png"
-              alt="Flight Attendant  Templates"
+              alt="Flight Attendant Template"
               height="200px"
               width="250px"
             />

@@ -10,7 +10,7 @@ const getDragIconStyle = () => ({
   userSelect: 'none',
   width: '26px',
   height: '26px',
-  background: '#03a9f4',
+  background: '#F2DB7A',
   position: 'absolute',
   borderRadius: '100%',
   top: -13,
@@ -20,7 +20,7 @@ const getAddIconStyle = () => ({
   userSelect: 'none',
   width: '26px',
   height: '26px',
-  background: '#03a9f4',
+  background: '#F2DB7A',
   position: 'absolute',
   borderRadius: '100%',
   top: -13,
@@ -31,7 +31,7 @@ const getRemoveIconStyle = () => ({
   userSelect: 'none',
   width: '26px',
   height: '26px',
-  background: '#03a9f4',
+  background: '#F2DB7A',
   position: 'absolute',
   borderRadius: '100%',
   top: -13,
@@ -58,7 +58,7 @@ const getListStyle = (isDraggingOver) => ({
   'box-shadow': isDraggingOver
     ? 'inset 0px 0px 18px 0px rgba(0,0,0,0.08)'
     : 'none',
-  background: isDraggingOver ? 'rgba(250,250,250,1)' : '#fff',
+  background: isDraggingOver ? '#3A4D6C' : '#3A4D6C',
 });
 
 const getListStyleHorizontal = (isDraggingOver) => ({
@@ -71,13 +71,13 @@ const getListStyleHorizontal = (isDraggingOver) => ({
   'box-shadow': isDraggingOver
     ? 'inset 0px 0px 18px 0px rgba(0,0,0,0.08)'
     : 'none',
-  background: isDraggingOver ? 'rgba(250,250,250,1)' : '#fff',
+  background: isDraggingOver ? '#3A4D6C' : '#3A4D6C',
   display: 'flex',
   flexDirection: 'row',
   flexWrap: 'wrap',
 });
 
-class Dnd extends Component {
+class DigitalDnd extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -144,7 +144,7 @@ class Dnd extends Component {
                   : styles.unselectedDragItems
               }
             >
-              {this.state?.data?.map((item, index) => (
+              {this.state.data.map((item, index) => (
                 <Draggable
                   key={index}
                   draggableId={index.toString()}
@@ -228,4 +228,4 @@ class Dnd extends Component {
 }
 
 /* Export Component =============================== */
-export default Dnd;
+export default DigitalDnd;
