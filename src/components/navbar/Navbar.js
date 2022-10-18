@@ -38,7 +38,7 @@ export default function Navbar() {
                 color={useColorModeValue('gray.600', 'white')}
                 minH={'110px'}
                 py={{ base: 2 }}
-                mx={useBreakpointValue({ xl: '50px', lg: '30px', })}
+                mx={useBreakpointValue({ xl: '60px', lg: '30px', })}
                 align={'center'}>
 
                 {/* logo */}
@@ -51,14 +51,14 @@ export default function Navbar() {
                         src={logoIcon}
                         alt='Image Not Found'
                         height={useBreakpointValue({ xl: '90px', lg: '60px', md: '70px', sm: '70px' })}
-                        width={useBreakpointValue({ xl: '250px', lg: '170px', md: '200px', sm: '180px' })}
+                        width={useBreakpointValue({ xl: '230px', lg: '170px', md: '200px', sm: '180px' })}
                     />
 
-                     {/* deskTop Nav */}
+                    {/* deskTop Nav */}
                     <Flex
                         display={{ base: 'none', lg: 'flex', }}
                         marginTop={useBreakpointValue({ xl: '20px', lg: '12px' })}
-                        marginLeft={useBreakpointValue({ xl: '3rem', lg: '1.2rem', })}
+                        marginLeft={useBreakpointValue({ xl: '2rem', lg: '1.2rem', })}
                     >
                         <DesktopNav />
                     </Flex>
@@ -119,7 +119,7 @@ export default function Navbar() {
                             </Popover>
                         </Box>
                     ))} */}
-                    {/* English dropdown end  */}
+                    {/* English dropdown end */}
 
 
 
@@ -137,26 +137,57 @@ export default function Navbar() {
                                             boxShadow: '0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)',
                                             borderRadius: '0.2rem'
                                         }}
-                                        ml="2.5rem"
                                         cursor={'pointer'}
                                         width={breakpointWidth}
-                                        bg={popoverContentBgColor}
+                                        bg={
+                                            items?.label === 'Register' ?
+                                                popoverContentBgColor
+                                                :
+                                                items?.label === 'Login' ?
+                                                    '#006772'
+                                                    :
+                                                    ''
+                                        }
                                         textAlign={'center'}
                                         padding={'10px 5px'}
                                         textTransform={'uppercase'}
+                                        ml='1.5rem'
                                     >
-                                        <Link
-                                            href={items?.href ?? '#'}
-                                            fontWeight={650}
-                                            color={'#71737d'}
-                                            fontSize={breakpointfontSize}
-                                            _hover={{
-                                                textDecoration: 'none',
-                                                color: linkHoverColor,
-                                            }}
-                                        >
-                                            {items.label}
-                                        </Link>
+                                        {
+                                            items?.label === 'Register' ?
+                                                <>
+                                                    <Link
+                                                        href={items?.href ?? '#'}
+                                                        fontWeight={650}
+                                                        color={'#71737d'}
+                                                        fontSize={breakpointfontSize}
+                                                        _hover={{
+                                                            textDecoration: 'none',
+                                                            color: linkHoverColor,
+                                                        }}
+                                                    >
+                                                        {items.label}
+                                                    </Link>
+                                                </>
+                                                :
+                                                items.label === 'Login' ?
+                                                    <>
+                                                        <Link
+                                                            href={items?.href ?? '#'}
+                                                            fontWeight={650}
+                                                            color={'#fdfffc'}
+                                                            fontSize={breakpointfontSize}
+                                                            _hover={{
+                                                                textDecoration: 'none',
+                                                                color: '#fff',
+                                                            }}
+                                                        >
+                                                            {items.label}
+                                                        </Link>
+                                                    </>
+                                                    :
+                                                    <></>
+                                        }
                                     </Box>
                                 </>
                             )
@@ -165,7 +196,7 @@ export default function Navbar() {
                     {/* login button end */}
 
 
-                    {/* toggle button  */}
+                    {/* toggle button */}
                     <Flex
                         flex={{ base: 1, }}
                         ml={{ base: -2 }}
@@ -181,7 +212,7 @@ export default function Navbar() {
                             aria-label={'Toggle Navigation'}
                         />
                     </Flex>
-                    {/* toogle button end  */}
+                    {/* toogle button end */}
                 </Stack>
             </Flex>
 
@@ -196,7 +227,7 @@ const DesktopNav = () => {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
     const linkHoverColor = useColorModeValue('gray.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
-    const breakpointfontSize = useBreakpointValue({ xl: '16px', lg: '14px', })
+    const breakpointfontSize = useBreakpointValue({ xl: '14px', lg: '13px', })
 
     return (
         <Stack direction={'row'} alignItems={'center'} spacing={useBreakpointValue({ xl: 5, lg: 3, })}>
@@ -257,16 +288,21 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
             display={'block'}
             p={2}
             rounded={'sm'}
-            _hover={{ bg: useColorModeValue('blue.50', 'gray.900') }}>
+            _hover={{ bg: useColorModeValue('teal.50', 'gray.900') }}>
             <Stack direction={'row'} align={'center'}>
                 <Box>
                     <Text
                         transition={'all .3s ease'}
-                        _groupHover={{ color: 'blue.400' }}
+                        _groupHover={{ color: 'teal.900' }}
                         fontWeight={500}>
                         {label}
                     </Text>
-                    <Text fontSize={'sm'}>{subLabel}</Text>
+                    <Text
+                        fontSize={'sm'}
+                        _groupHover={{ color: 'teal.700' }}
+                    >
+                        {subLabel}
+                    </Text>
                 </Box>
                 <Flex
                     transition={'all .3s ease'}
@@ -276,7 +312,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
                     justify={'flex-end'}
                     align={'center'}
                     flex={1}>
-                    <Icon color={'blue.400'} w={5} h={5} as={ChevronRightIcon} />
+                    <Icon color={'teal.900'} w={5} h={5} as={ChevronRightIcon} />
                 </Flex>
             </Stack>
         </Link>
@@ -287,7 +323,6 @@ const MobileNav = () => {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
     const linkHoverColor = useColorModeValue('gray.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
-    const breakpointfontSize = useBreakpointValue({ xl: '14px', lg: '12px', })
 
     return (
         <Stack
@@ -298,7 +333,7 @@ const MobileNav = () => {
                 <MobileNavItem key={navItem.label} {...navItem} />
             ))}
 
-            {/* english dropdown  */}
+            {/* english dropdown */}
             {/* {EnglishDropDown.map((navItem) => (
                 <MobileNavItem key={navItem.label} {...navItem} />
             ))} */}
@@ -314,43 +349,74 @@ const MobileNav = () => {
                             <>
                                 <Box
                                     display={{ base: 'inline-flex', md: 'none' }}
-                                    cursor={'pointer'}
                                     style={{
                                         border: '1px solid #e0e2e8',
                                         boxShadow: '0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)',
                                         borderRadius: '0.2rem',
                                         width: '110px'
                                     }}
-                                    bg={popoverContentBgColor}
-                                    padding={'10px 0px'}
+                                    cursor={'pointer'}
+                                    bg={
+                                        items?.label === 'Register' ?
+                                            popoverContentBgColor
+                                            :
+                                            items?.label === 'Login' ?
+                                                '#006772'
+                                                :
+                                                ''
+                                    }
                                     justifyContent={'center'}
+                                    padding={'10px 0px'}
                                     textTransform={'uppercase'}
                                 >
-                                    <Link
-                                        href={items?.href ?? '#'}
-                                        fontWeight={650}
-                                        color={linkColor}
-                                        fontSize={breakpointfontSize}
-                                        _hover={{
-                                            textDecoration: 'none',
-                                            color: linkHoverColor,
-                                        }}
-                                    >
-                                        {items.label}
-                                    </Link>
+                                    {
+                                        items?.label === 'Register' ?
+                                            <>
+                                                <Link
+                                                    href={items?.href ?? '#'}
+                                                    fontWeight={650}
+                                                    color={'#71737d'}
+                                                    _hover={{
+                                                        textDecoration: 'none',
+                                                        color: linkHoverColor,
+                                                    }}
+                                                >
+                                                    {items.label}
+                                                </Link>
+                                            </>
+                                            :
+                                            items.label === 'Login' ?
+                                                <>
+                                                    <Link
+                                                        href={items?.href ?? '#'}
+                                                        fontWeight={650}
+                                                        color={'#fdfffc'}
+                                                        _hover={{
+                                                            textDecoration: 'none',
+                                                            color: '#fff',
+                                                        }}
+                                                    >
+                                                        {items.label}
+                                                    </Link>
+                                                </>
+                                                :
+                                                <></>
+                                    }
                                 </Box>
                             </>
                         )
                     })
                 }
             </Box>
-            {/* login buttons end  */}
+            {/* login buttons end */}
         </Stack>
     );
 };
 
 const MobileNavItem = ({ label, children, href }) => {
     const { isOpen, onToggle } = useDisclosure();
+    const mobileNavColor = useColorModeValue('gray.600', 'gray.200')
+    const mobileNavBorder = useColorModeValue('gray.200', 'gray.700')
 
     return (
         <Stack spacing={4} onClick={children && onToggle}>
@@ -365,14 +431,15 @@ const MobileNavItem = ({ label, children, href }) => {
                 }}>
                 <Text
                     fontWeight={600}
-                    color={useColorModeValue('gray.600', 'gray.200')}>
+                    color={mobileNavColor}>
                     {label}
                 </Text>
                 {children && (
                     <Icon
                         as={ChevronDownIcon}
                         transition={'all .25s ease-in-out'}
-                        transform={isOpen ? 'rotate(180deg)' : ''}
+                        transform={isOpen ? 'rotate(180deg)' : '#006772'}
+                        color={isOpen ? '#006772' : '#006772'}
                         w={6}
                         h={6}
                     />
@@ -385,11 +452,18 @@ const MobileNavItem = ({ label, children, href }) => {
                     pl={4}
                     borderLeft={1}
                     borderStyle={'solid'}
-                    borderColor={useColorModeValue('gray.200', 'gray.700')}
+                    borderColor={mobileNavBorder}
                     align={'start'}>
                     {children &&
                         children.map((child) => (
-                            <Link key={child.label} py={2} href={child.href}>
+                            <Link key={child.label} py={2} href={child.href}
+                                width={'100%'}
+                                pl={4}
+                                _hover={{
+                                    color: '#006772',
+                                    bg: 'teal.50'
+                                }}
+                            >
                                 {child.label}
                             </Link>
                         ))}
@@ -398,10 +472,3 @@ const MobileNavItem = ({ label, children, href }) => {
         </Stack>
     );
 };
-
-//   interface NAV_ITEMS {
-//     label: string;
-//     subLabel?: string;
-//     children?: Array<NAV_ITEMS>;
-//     href?: string;
-//   }
