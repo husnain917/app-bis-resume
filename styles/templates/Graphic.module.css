@@ -67,7 +67,17 @@
 }
 .skillContainer{
   display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: center;
 }
-.skillBar{
-  color: #03a9f4;
+.skillBarContainer{
+  display: flex;
+  align-items: center;
+
+
+}
+.skillInput{
+  color: white;
+
 }
