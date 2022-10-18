@@ -64,7 +64,7 @@ function Education(props) {
                 <Box w="2px" bgColor="white" h="20px" mt="8px" m="5px"></Box>
                 <Text
                   value={item.startDate}
-                  placeholder="2014"
+                  placeholder="2001"
                   path={`${path}.${index}.startDate`}
                   customClass={styles.educationFeild}
                   color="white"
@@ -75,7 +75,7 @@ function Education(props) {
                 <p style={{ color: "white", fontWeight: "bold" }}>_</p>
                 <Text
                   value={item.endDate}
-                  placeholder="2016"
+                  placeholder="2003"
                   path={`${path}.${index}.endDate`}
                   customClass={styles.educationFeild}
                   color="white"

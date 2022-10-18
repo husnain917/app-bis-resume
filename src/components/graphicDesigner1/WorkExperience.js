@@ -40,19 +40,13 @@ function WorkExperience(props) {
             <div className="manager-template-row">
               <Text
                 value={item.position}
-                placeholder="Graphic Designer"
+                placeholder="Position"
                 customclass={styles.workFeild}
                 path={`${path}.${index}.position`}
               />
               <Text
-                value={item.company}
-                placeholder="Borcelle Studios "
-                path={`${path}.${index}.company`}
-                customclass={styles.workFeild}
-              />
-              <Text
                 value={item.startDate}
-                placeholder="2014 "
+                placeholder="1996 "
                 // customclass={"manager-fName"}
                 path={`${path}.${index}.startDate`}
                 customclass={styles.workFeild}
@@ -60,19 +54,24 @@ function WorkExperience(props) {
               <p>_</p>
               <Text
                 value={item.endDate}
-                placeholder="2016"
+                placeholder="2001"
                 path={`${path}.${index}.endDate`}
                 customclass={styles.workFeild}
                 max="9999-12-31"
               />
             </div>
             <Text
+              value={item.company}
+              placeholder="Company"
+              path={`${path}.${index}.company`}
+              customclass={styles.workFeild}
+            />
+            <Text
               value={item.summary}
               placeholder="Working as graphic designer for 1 year, Academic
                 Excellence in Web Design, English"
               customclass={styles.workSummary}
               path={`${path}.${index}.summary`}
-          
             />
           </Box>
         )}

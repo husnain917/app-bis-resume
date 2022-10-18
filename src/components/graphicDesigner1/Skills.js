@@ -76,7 +76,7 @@ function Skills(props) {
               strokeColor={"white"}
               className={styles.lineBar}
             />
-            {value[index] ? <span style={{ color: "white" }}>%</span> : null}
+
 
             <Input
               maxW={50}
@@ -89,6 +89,7 @@ function Skills(props) {
               onChange={(e) => skillHandler(e, index)}
               type="number"
             />
+{value[index] ? <span style={{ color: "white",alignSelf:"right",position:'relative',right:20 }}>%</span> : null}
 
             <Text
               value={item.name}

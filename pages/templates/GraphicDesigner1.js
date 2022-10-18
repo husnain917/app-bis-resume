@@ -87,10 +87,10 @@ export default function GraphicDesigner1() {
               <Row>
                 <Text
                   value={resumeData?.profile?.firstName}
-                  placeholder="AARON"
+                  placeholder="FirstName"
                   customclass={styles.fullName}
                   path={"profile.firstName"}
-                  fontSize="4.5rem"
+                  fontSize="2rem"
                   fontWeight="bold"
                   color="#365B6D"
                   textAlign="left"
@@ -98,10 +98,10 @@ export default function GraphicDesigner1() {
                 &nbsp;
                 <Text
                   value={resumeData?.profile?.lastName}
-                  placeholder="LOEB"
+                  placeholder="LastName"
                   customclass={styles.fullName}
                   path={"profile.lastName"}
-                  fontSize="4.5rem"
+                  fontSize="2rem"
                   fontWeight="bold"
                   color="#365B6D"
                   textAlign="left"
@@ -109,9 +109,9 @@ export default function GraphicDesigner1() {
               </Row>
               <Text
                 value={resumeData?.objective?.title}
-                placeholder="Graphic Designer"
+                placeholder="Profession"
                 path={"profile.objective.heading"}
-                fontSize="2.7rem"
+                fontSize="2.5rem"
                 color="#365B6D"
                 marginTop="2%"
                 textAlign="left"
@@ -123,14 +123,7 @@ export default function GraphicDesigner1() {
             <Heading text="ABOUT ME" textColor="#365B6D" marginTop="7%" />
             <Text
               value={resumeData?.objective?.body}
-              placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-                eget auctor enim. Integer nisi massa, tempor venenatis diam et,
-                blandit volutpat ipsum. Suspendisse orci sem, blandit in magna
-                at, ornare congue justo. Class aptent taciti sociosqu ad litora
-                torquent per conubia nostra, per inceptos himenaeos. Duis
-                commodo odio faucibus, pellentesque ipsum at, dapibus nunc.
-                Pellentesque at enim nec leo eleifend bibendum at at metus.
-                Nulla a eros nec eros accumsan fringilla.
+              placeholder="Short and engaging pitch about yourself.
                 "
               path={"profile.objective.body"}
               fontSize="1.27rem"
