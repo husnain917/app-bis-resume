@@ -27,10 +27,8 @@ export default function GraphicDesigner1() {
           </Tooltip>
         </div>
       </Link>
-      {/* main div  */}
-      {/* <Box className={styles.mainContainer}> */}
+      
       <Box w="100%" mt="5%" overflow="auto" ml={["", , ,"5%" , "13%"]}>
-        {/* innermaindiv */}
         <Box
           w="100%"
           display="flex"
@@ -77,7 +75,6 @@ export default function GraphicDesigner1() {
             />
           </Box>
 
-          {/* Right section code  */}
           <Box w="65%" h="auto" m="30px" ml="10px" mr="25px">
             <Box
               bgColor="#F2F1EC"
