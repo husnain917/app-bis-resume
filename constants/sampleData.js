@@ -80,9 +80,10 @@ export const sampleData = {
       visible: true,
     },
     expertise: {
+      enable: true,
       heading: 'Areas of Expertise include:',
-      items: [],
-      visible: false,
+      items: [{}],
+      visible: true,
     },
     extras: {
       enable: false,
