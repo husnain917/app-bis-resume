@@ -227,7 +227,7 @@ export default function graphicDesignTemp() {
 
           {/* profile section */}
           <Box
-            marginTop={'60px'}
+            marginTop={'100px'}
           >
             <Underline
               width='100%'
