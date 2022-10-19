@@ -165,6 +165,16 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/marketingManager">
+            <img
+              src="MarkManager2.png"
+              alt="Marketing Manager_Template _Design"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
       </SimpleGrid>
     </div>
   );
