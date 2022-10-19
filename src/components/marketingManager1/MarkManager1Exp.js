@@ -1,4 +1,4 @@
-import { Box, ListItem, UnorderedList } from '@chakra-ui/react';
+import { Box, HStack, ListItem, UnorderedList } from '@chakra-ui/react';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import {
@@ -38,32 +38,55 @@ const MarkManager1Exp = (props) => {
       borderTopRightRadius={'50px'}
     >
       <MarkManagerHeading divider1Color="black" text={'experience'} />
-      <DndFash
-        data={data}
-        additem={_addNewItem}
-        reorder={(e) => onOrderUpdate(e)}
-        removeitem={(index) => _removeItem(index)}
-        renderItem={(item, index) => (
-          <>
-            <UnorderedList>
-              <ListItem>
+      <Box className={`${Style.mb}`}>
+        <DndFash
+          data={data}
+          additem={_addNewItem}
+          reorder={(e) => onOrderUpdate(e)}
+          removeitem={(index) => _removeItem(index)}
+          renderItem={(item, index) => (
+            <>
+              <UnorderedList>
+                <ListItem>
+                  <HybridText
+                    placeholder="Workplace/Company"
+                    value={item.company}
+                    customclass={`${Style.company}`}
+                    path={`${path}.${index}.company`}
+                  />
+                </ListItem>
+              </UnorderedList>
+              <HybridText
+                placeholder="Title/Position"
+                value={item.position}
+                customclass={` ${Style.position}  ${Style.ml}`}
+                path={`${path}.${index}.position`}
+              />
+              <HStack>
                 <HybridText
-                  placeholder="Workplace/Company"
-                  value={item.company}
-                  customclass={`${Style.company}`}
-                  path={`${path}.${index}.company`}
+                  placeholder="From"
+                  value={item.startDate}
+                  customclass={`${Style.expDate} ${Style.ml}`}
+                  path={`${path}.${index}.startDate`}
                 />
-              </ListItem>
-            </UnorderedList>
-            <HybridText
-              placeholder="Summary"
-              value={item.description}
-              customclass={`${Style.description}`}
-              path={`${path}.${index}.description`}
-            />
-          </>
-        )}
-      />
+                <div>-</div>
+                <HybridText
+                  placeholder="End"
+                  value={item.endDate}
+                  customclass={`${Style.expDate}`}
+                  path={`${path}.${index}.endDate`}
+                />
+              </HStack>
+              <HybridText
+                placeholder="Summary"
+                value={item.description}
+                customclass={`${Style.description}`}
+                path={`${path}.${index}.description`}
+              />
+            </>
+          )}
+        />
+      </Box>
     </Box>
   );
 };

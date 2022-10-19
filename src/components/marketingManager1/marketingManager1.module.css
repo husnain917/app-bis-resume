@@ -3,7 +3,6 @@
   font-size: 40px;
   font-weight: 400;
   text-align: left;
-
   line-height: 40px;
 }
 .profession {
@@ -19,6 +18,7 @@
 .description {
   font-size: 14px;
   margin-left: 14px;
+  margin-bottom: 15px;
 }
 .profileText {
   color: white;
@@ -34,4 +34,18 @@
 }
 .date {
   color: white;
+}
+.position {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 !important;
+}
+.ml {
+  margin-left: 14px;
+}
+.expDate {
+  color: black;
+}
+.mb {
+  margin-bottom: 20px !important;
 }
