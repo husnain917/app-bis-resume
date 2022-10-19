@@ -83,6 +83,56 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/marketingManager1">
+            <img
+              src="MarketingManagerTemp.png"
+              alt="Marketing Managert Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/template5">
+            <img
+              src="GraphicDesigner5.png"
+              alt="Graphic Designer 5 Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/hybridTemplate">
+            <img
+              src="Hybrid_Template_Design.png"
+              alt="Graphic Designer 5 Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/DigitalMarkTemp2">
+            <img
+              src="DigitalMarketingTemp2.png"
+              alt="Digital Marketing Template 2"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/fashionTemp1">
+            <img
+              src="FashionDesigner1.png"
+              alt="Digital Marketing Template 2"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
       </SimpleGrid>
     </div>
   );
