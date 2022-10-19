@@ -247,9 +247,10 @@ export default function graphicDesignTemp() {
             <Box>
               <Text
                 value={resumeEditor?.resumeData?.objective?.aboutBody}
-                placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a pretium nisl. Vivamus vitae ante rutrum, cursus
-                mauris id, pretium nunc. Phasellus eget sollicitudin augue. Sed turpis massa, efficitur vel arcu sit amet, viverra
-                ornare libero. Suspendisse ut sapien risus. Cras condimentum eget odio a scelerisque."
+                placeholder="A passionate digital marketer who loves to make plans
+                to introduce products or services to the right people
+                digitally. And love to make clients satisfied and feel their
+                excitement during the whole process."
                 customclass={`${styles.aboutBodyDes}`}
                 path={"objective.aboutBody"}
               />

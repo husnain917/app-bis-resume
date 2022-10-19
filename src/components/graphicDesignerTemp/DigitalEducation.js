@@ -41,7 +41,7 @@ function DigitalEducation(props) {
                         >
                             <Text
                                 value={item.degree}
-                                placeholder="Bachelor Of Design"
+                                placeholder="Degree"
                                 customclass={`${style.educationDesHeading}`}
                                 path={`${path}.${index}.degree`}
                             />
@@ -51,7 +51,7 @@ function DigitalEducation(props) {
                             >
                                 <Text
                                     value={item.institution}
-                                    placeholder="Wardiere University"
+                                    placeholder="Institution Name"
                                     customclass={`${style.educationDesHeading}`}
                                     path={`${path}.${index}.institution`}
                                 />
@@ -59,7 +59,7 @@ function DigitalEducation(props) {
                                 <p>&nbsp;|&nbsp;</p>
                                 <Text
                                     value={item.year}
-                                    placeholder="2014 - 2016"
+                                    placeholder="Year"
                                     customclass={`${style.educationDesHeading}`}
                                     path={`${path}.${index}.year`}
                                 />
@@ -69,10 +69,10 @@ function DigitalEducation(props) {
                             >
                                 <ListItem>
                                     <Text
-                                        value={item.description}
-                                        placeholder="Post Graduated in Graphics Designing."
+                                        value={item.summary}
+                                        placeholder="Summary"
                                         customclass={`${style.educationDesTxt}`}
-                                        path={`${path}.${index}.description`}
+                                        path={`${path}.${index}.summary`}
                                     />
                                 </ListItem>
                             </UnorderedList>

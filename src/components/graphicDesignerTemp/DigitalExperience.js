@@ -47,19 +47,19 @@ function DigitalExperience(props) {
                             >
                                 <Text
                                     value={item.role}
-                                    placeholder="Graphic Designer"
+                                    placeholder="Role"
                                     customclass={`${style.experienceDesHeadings}`}
                                     path={`${path}.${index}.role`}
                                 />
                                 <Text
-                                    value={item.title}
-                                    placeholder="Borcelle Studios"
+                                    value={item.position}
+                                    placeholder="Position"
                                     customclass={`${style.experienceDesHeadings}`}
-                                    path={`${path}.${index}.title`}
+                                    path={`${path}.${index}.position`}
                                 />
                                 <Text
                                     value={item.startYear}
-                                    placeholder="2014 - 2016"
+                                    placeholder="Year"
                                     customclass={`${style.experienceDesHeadings}`}
                                     path={`${path}.${index}.startYear`}
                                 />
@@ -68,12 +68,10 @@ function DigitalExperience(props) {
                                 width={'60%'}
                             >
                                 <Text
-                                    value={item.description}
-                                    placeholder="Working as graphic designer for 1
-                                    year, Academic Excellence in Web
-                                    Design & English."
+                                    value={item.summary}
+                                    placeholder="Summary"
                                     customclass={`${style.experienceDesBody}`}
-                                    path={`${path}.${index}.description`}
+                                    path={`${path}.${index}.summary`}
                                 />
                             </Box>
                         </Box>
