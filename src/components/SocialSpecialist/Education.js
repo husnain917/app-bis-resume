@@ -40,7 +40,7 @@ function Education(props) {
             <div>
               <Text
                 value={item.institution}
-                placeholder="International University"
+                placeholder="College"
                 path={`${path}.${index}.institution`}
                 fontSize="1.3rem"
                 fontWeight="bold"
@@ -48,7 +48,7 @@ function Education(props) {
               />
               <Text
                 value={item.degree}
-                placeholder="Bachelor Degree"
+                placeholder="Degree"
                 path={`${path}.${index}.degree`}
                 fontSize="1.3rem"
                 fontWeight="bold"
@@ -57,7 +57,7 @@ function Education(props) {
 
               <Text
                 value={`${item.summary}`}
-                placeholder="MARKETING AND COMMUNICATION,"
+                placeholder="FEILD OF STUDY"
                 path={`${path}.${index}.summary`}
                 letterSpacing="3px"
                 fontSize="14px"
@@ -66,7 +66,7 @@ function Education(props) {
               <div className="manager-template-row">
                 <Text
                   value={item.startDate}
-                  placeholder="AUG 2006"
+                  placeholder="START DATE"
                   path={`${path}.${index}.startDate`}
                   letterSpacing="3px"
                   lineHeight="5px"
@@ -74,7 +74,7 @@ function Education(props) {
                 <h1>-</h1>
                 <Text
                   value={item.endDate}
-                  placeholder="AUG 2020"
+                  placeholder="END DATE"
                   path={`${path}.${index}.endDate`}
                   letterSpacing="3px"
                   lineHeight="5px"

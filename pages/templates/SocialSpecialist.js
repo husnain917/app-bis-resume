@@ -48,9 +48,9 @@ export default function SocialSpecialist() {
             <Box bgColor="black" w="100%" h="2px"></Box>
             <Text
               value={resumeData?.profile?.firstName}
-              placeholder="CLAUDIA"
+              placeholder="FIRSTNAME"
               path={"profile.firstName"}
-              fontSize="3.8rem"
+              fontSize="3.3rem"
               fontWeight="bold"
               color="#E07559"
               textAlign="left"
@@ -60,40 +60,32 @@ export default function SocialSpecialist() {
 
             <Text
               value={resumeData?.profile?.lastName}
-              placeholder="ALVES"
+              placeholder="LASTNAME"
               path={"profile.lastName"}
-              fontSize="3.8rem"
+              fontSize="3.3rem"
               fontWeight="bold"
               color="#E07559"
               textAlign="left"
               lineHeight="30px"
-              letterSpacing="16px"
+              letterSpacing="15px"
             />
             <Box bgColor="black" w="100%" h="2px" mt="8%"></Box>
             <Text
               value={resumeData?.objective?.body.heading}
-              placeholder="SOCIAL MEDIA SPECIALIST"
+              placeholder="PROFESSION"
               path={"objective.heading"}
               editable={true}
               fontSize="1.5rem"
               letterSpacing="3px"
               textTransform="uppercase"
               marginTop="2%"
+              fontWeight="600"
             />
             <Box bgColor="black" w="100%" h="2px" mt="2%"></Box>
             <Box w="90%">
               <Text
                 value={resumeData?.objective?.body}
-                placeholder="Experienced social media
-              specialist, analyst, and content
-              media creator with 10 years of
-              experience in online marketing,
-              Search Engine Optimization,
-              and research in industry
-              developments. Managed and
-              developed the main social
-              media marketing campaigns
-              and company website"
+                placeholder="Short and engaging pitch about yourself."
                 path={"profile.objective.body"}
                 fontSize="1.3rem"
                 marginTop="5%"
