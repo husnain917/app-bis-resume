@@ -4,21 +4,21 @@ import {
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
-import avatar from "../../../public/avatar.jpg";
-import { Text } from "../../../src/components/template1/index";
-import FashionCustomHook from "../../../src/components/fashionTemp/FashionCustomHook";
-import styles from "../../../styles/graphicDesignerTemp.module.css";
+import avatar from "../../public/avatar.jpg";
+import { Text } from "../../src/components/template1/index";
+import FashionCustomHook from "../../src/components/fashionTemp/FashionCustomHook";
+import styles from "../../styles/graphicDesignerTemp.module.css";
 import {
   FaPhoneAlt,
   FaRegEnvelope,
   FaLocationArrow,
   FaIntercom,
 } from "react-icons/fa";
-import Underline from '../../../src/components/graphicDesignerTemp/Underline';
-import DesignerExpertise from "../../../src/components/graphicDesignerTemp/DesignerExpertise";
-import DigitalEducation from "../../../src/components/graphicDesignerTemp/DigitalEducation";
-import DigitalExperience from "../../../src/components/graphicDesignerTemp/DigitalExperience";
-import DigitalSkill from "../../../src/components/graphicDesignerTemp/DigitalSkill";
+import Underline from '../../src/components/graphicDesignerTemp/Underline';
+import DesignerExpertise from "../../src/components/graphicDesignerTemp/DesignerExpertise";
+import DigitalEducation from "../../src/components/graphicDesignerTemp/DigitalEducation";
+import DigitalExperience from "../../src/components/graphicDesignerTemp/DigitalExperience";
+import DigitalSkill from "../../src/components/graphicDesignerTemp/DigitalSkill";
 
 export default function graphicDesignTemp() {
   // redux Data
@@ -246,13 +246,13 @@ export default function graphicDesignTemp() {
             />
 
             {/* profile description */}
-            <Box>
+            <Box
+              display={'flex'}
+              justifyContent={'center'}
+            >
               <Text
                 value={resumeEditor?.resumeData?.objective?.aboutBody}
-                placeholder="A passionate digital marketer who loves to make plans
-                to introduce products or services to the right people
-                digitally. And love to make clients satisfied and feel their
-                excitement during the whole process."
+                placeholder="Short and engaging pitch about yourself."
                 customclass={`${styles.aboutBodyDes}`}
                 path={"objective.aboutBody"}
               />
