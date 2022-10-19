@@ -57,12 +57,12 @@ function Templates() {
             <img src='gdBanner.jpg' alt='Resume Digital Market' height='200px' width='250px' />
           </Link>
         </Box>
-                <Box className='cursor'>
         <Box className='cursor'>
-          <Link href='/templates/templateMarket'>
-            <img src='resumeMarket.png' alt='Resume Digital Market' height='200px' width='250px' />
-          </Link>
-        </Box>
+          <Box className='cursor'>
+            <Link href='/templates/templateMarket'>
+              <img src='resumeMarket.png' alt='Resume Digital Market' height='200px' width='250px' />
+            </Link>
+          </Box>
         </Box>
         <Box className="cursor">
           <Box className="cursor">
@@ -101,6 +101,16 @@ function Templates() {
             <img
               src="social.jpg"
               alt="Social Media Specialist"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/TemplateBabySitter">
+            <img
+              src="templateBaby.png"
+              alt=" Baby Resume"
               height="200px"
               width="250px"
             />
