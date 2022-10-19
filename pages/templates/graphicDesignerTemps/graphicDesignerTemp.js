@@ -46,7 +46,7 @@ export default function graphicDesignTemp() {
             {/* firstName */}
             <Text
               value={resumeEditor?.resumeData?.profile?.firstName}
-              placeholder="AARON LOEB"
+              placeholder="Your Name"
               customclass={`${styles.nameStyle}`}
               path={"profile.firstName"}
             />
@@ -54,7 +54,7 @@ export default function graphicDesignTemp() {
             {/* lastName */}
             <Text
               value={resumeEditor?.resumeData?.profile?.lastName}
-              placeholder="GRAPHIC DESIGNER"
+              placeholder="Your Profession"
               customclass={`${styles.lastNameStyle}`}
               path={"profile.lastName"}
             />
@@ -226,7 +226,9 @@ export default function graphicDesignTemp() {
 
 
           {/* profile section */}
-          <Box>
+          <Box
+            marginTop={'60px'}
+          >
             <Underline
               width='100%'
               bgColor='#947F57'
