@@ -266,6 +266,7 @@ export const sampleData = {
           profession: '',
           address: '',
           phone: '',
+          email: '',
         },
       ],
     },

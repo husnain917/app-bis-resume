@@ -116,6 +116,16 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
+          <Link href="/templates/TemplateBabySitter">
+            <img
+              src="templateBaby.png"
+              alt=" Baby Resume"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
           
           <Link href="/templates/hybridTemplate">
             <img
@@ -171,6 +181,16 @@ function Templates() {
             <img
               src="MarketingManagerTemp.png"
               alt="Graphic Designer_Template 5_Design"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/designerTemplate">
+            <img
+              src="designerTemplate.PNG"
+              alt="Designer Template"
               height="200px"
               width="250px"
             />
