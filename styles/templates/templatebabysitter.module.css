@@ -9,7 +9,8 @@
     max-width: 900px;
     min-width: 900px;
     display: flex;
-    height: 100%
+    height: 100%;
+    background-color: #F8F2EA;
 }
 
 .innerMainDiv1 {
@@ -17,13 +18,18 @@
 
     width: 300px;
     padding: 0 25px;
-    min-height: 100%
+    margin: 0 15px;
+    /* min-height: 100% */
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    overflow-y: hidden;
+    margin-bottom: 30px;
 }
 
 .innerMainDiv2 {
     background-color: #F8F2EA;
     width: 600px;
-    padding: 20px 40px;
+    padding: 20px 30px;
     min-height: 100%
 }
 
@@ -155,7 +161,7 @@
 
 
 .perD {
-    margin-left: -5px !important;
+    margin-left: -20px !important;
     font-size: 15px !important;
     text-align: center !important;
 

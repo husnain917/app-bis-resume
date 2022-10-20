@@ -101,7 +101,7 @@ function Skills(props) {
 
               <div className={styles.progressContent}>
                 <div className={`${styles.progressDiv}`}>
-                  <Box w={180} h={2} borderRadius={8} bg={'white'}>
+                  <Box w={160} h={2} borderRadius={8} bg={'white'}>
                     <Line
                       percent={progress[index]}
                       strokeWidth={5}
