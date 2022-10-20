@@ -163,6 +163,7 @@ export default function aaronGraphicTemp() {
                     display={'flex'}
                     justifyContent={'space-between'}
                     margin={'40px 0px'}
+                    paddingBottom={'50px'}
                 >
                     {/* left container */}
                     <Box
