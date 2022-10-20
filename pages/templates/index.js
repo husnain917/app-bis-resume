@@ -166,10 +166,10 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
-          <Link href="/templates/marketingManager">
+          <Link href="/templates/designerTemplate">
             <img
-              src="MarkManager2.png"
-              alt="Marketing Manager_Template _Design"
+              src="designerTemplate.PNG"
+              alt="Designer Template"
               height="200px"
               width="250px"
             />
