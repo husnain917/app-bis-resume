@@ -196,6 +196,16 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/aaronGraphicTemp">
+            <img
+              src="graphicTemplate.PNG"
+              alt="Graphic Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
       </SimpleGrid>
     </div>
   );
