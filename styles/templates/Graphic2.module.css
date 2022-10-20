@@ -1,6 +1,8 @@
 .main {
   position: relative;
   background-color: transparent;
+  display: flex;
+  align-items: center;
 }
 .swapCont {
   position: absolute;

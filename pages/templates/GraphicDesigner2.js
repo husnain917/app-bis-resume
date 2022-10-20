@@ -41,9 +41,10 @@ export default function GraphicDesigner2() {
           <Box w="30%" h="auto" bgColor="#161619" pb="150px">
             <Image
               src="/graphicMan.jpg"
-              w="100%"
-              position="relative"
-              left="30px"
+              w="200px"
+              h="200px"
+              m="40px"
+              mt="100px"
             />
             <Box ml="30px" mt="30%">
               <Heading
@@ -106,28 +107,17 @@ export default function GraphicDesigner2() {
           <Box w="70%">
             <Box
               bgColor="#E4E4E4"
-              w="100%"
+            
               h="auto"
-              pt="15%"
+              pt="5%"
               pl="10%"
-              pb="200px"
+              pb="100px"
             >
               <Row>
                 <Text
                   value={resumeData?.profile?.firstName}
-                  placeholder="FIRSTNAME"
+                  placeholder="YOUR NAME"
                   path={"profile.firstName"}
-                  fontSize="3rem"
-                  fontWeight="bold"
-                  color="#161619"
-                  textAlign="left"
-                  textTransform="uppercase"
-                />
-                &nbsp;
-                <Text
-                  value={resumeData?.profile?.lastName}
-                  placeholder="LASTNAME"
-                  path={"profile.lastName"}
                   fontSize="3rem"
                   fontWeight="bold"
                   color="#161619"
