@@ -153,7 +153,7 @@ export default function GraphicDesigner2() {
                 "
                 path={"profile.objective.body"}
                 fontSize="1.2rem"
-                color="#365B6D"
+                color="#161619"
                 marginTop="4%"
                 textAlign="left"
                 fontWeight="400"
