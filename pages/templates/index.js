@@ -116,6 +116,16 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
+          <Link href="/templates/TemplateBabySitter">
+            <img
+              src="templateBaby.png"
+              alt=" Baby Resume"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
           <Link href="/templates/hybridTemplate">
             <img
               src="Hybrid_Template_Design.png"
