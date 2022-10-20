@@ -126,6 +126,7 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
+          
           <Link href="/templates/hybridTemplate">
             <img
               src="Hybrid_Template_Design.png"
@@ -150,6 +151,16 @@ function Templates() {
             <img
               src="FashionDesigner1.png"
               alt="Fashion Designer_Template 1_Design"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/GraphicDesigner2">
+            <img
+              src="gdBanner2.jpg"
+              alt="Graphic_Designer_Template"
               height="200px"
               width="250px"
             />
