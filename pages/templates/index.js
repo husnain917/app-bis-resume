@@ -106,6 +106,16 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/GraphicDesigner2">
+            <img
+              src="gdBanner2.jpg"
+              alt="Resume Templates"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
       </SimpleGrid>
     </div>
   );
