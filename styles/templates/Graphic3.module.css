@@ -1,0 +1,69 @@
+.main {
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+.swapCont {
+  position: absolute;
+  right: 80px;
+  top: 80px;
+}
+.swap {
+  width: 40px;
+  height: 40px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: all 0.2s;
+}
+.swap:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.swap img {
+  width: 70%;
+  filter: invert(1);
+}
+.barContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  width: 50%;
+}
+.lineBar {
+  background-color: #ffffff;
+  width: 100%;
+  height: 6px;
+}
+.skillInput {
+  color: white;
+  margin-left: 5px;
+}
+.contactHeading {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.skillContainer {
+  flex-wrap:nowrap;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5%;
+  /* margin-right:30px; */
+  margin-left: 40px;
+}
+.skillsInput {
+  color: grey;
+  margin-left: 5px;
+}
+.skillLineBar {
+  height: 7px;
+  background-color: rgb(198, 188, 188);
+}

@@ -105,14 +105,7 @@ export default function GraphicDesigner2() {
             </Box>
           </Box>
           <Box w="70%">
-            <Box
-              bgColor="#E4E4E4"
-            
-              h="auto"
-              pt="5%"
-              pl="10%"
-              pb="100px"
-            >
+            <Box bgColor="#E4E4E4" h="auto" pt="5%" pl="10%" pb="100px">
               <Row>
                 <Text
                   value={resumeData?.profile?.firstName}
