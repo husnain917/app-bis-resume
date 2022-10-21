@@ -196,10 +196,50 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
+          <Link href="/templates/aaronGraphicTemp">
+            <img
+              src="graphicTemplate.PNG"
+              alt="Graphic Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/GraphicDesigner8">
+            <img
+              src="graphDes8.png"
+              alt="Graphic Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/marketingManager">
+            <img
+              src="MarkManager2.png"
+              alt="Marketing Manager Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/GraphicDesigner3">
+            <img
+              src="gdBanner3.jpg"
+              alt="Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
           <Link href="/templates/StudentTemplate">
             <img
               src="studentTemp.png"
-              alt="STudent Template"
+              alt=" Student Resume   Template"
               height="200px"
               width="250px"
             />
