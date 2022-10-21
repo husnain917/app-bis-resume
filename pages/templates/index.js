@@ -196,7 +196,16 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
-         
+          <Link href="/templates/aaronGraphicTemp">
+            <img
+              src="graphicTemplate.PNG"
+              alt="Graphic Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
           <Link href="/templates/GraphicDesigner8">
             <img
               src="graphDes8.png"
@@ -210,7 +219,7 @@ function Templates() {
           <Link href="/templates/marketingManager">
             <img
               src="MarkManager2.png"
-              alt="Marketing Manager  Template"
+              alt="Marketing Manager Template"
               height="200px"
               width="250px"
             />
@@ -228,7 +237,7 @@ function Templates() {
         </Box>
         
       </SimpleGrid>
-    </div>
+    </div >
   );
 }
 
