@@ -112,7 +112,7 @@ function Language(props) {
               {value[index] ? (
                 <span
                   style={{
-                    color: "white",
+                    color: "grey",
                     alignSelf: "right",
                     position: "relative",
                     right: 25,

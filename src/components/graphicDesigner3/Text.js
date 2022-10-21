@@ -35,7 +35,9 @@ function Text(props) {
           marginTop:props.marginTop,
           textTransform:props.textTransform,
           marginLeft:props.marginLeft,
-          width:props.width
+          width:props.width,
+          minWidth:props.minWidth,
+          maxWidth:props.maxWidth
         }}
         // style={{
 

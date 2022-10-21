@@ -47,10 +47,7 @@ function WorkExperience(props) {
               borderRadius="100px"
             />
             <Box ml="5%">
-              <Box
-                display="flex"
-                // justifyContent="space-between"
-              >
+              <Box display="flex" flexDir="row" justifyContent="space-between">
                 <Text
                   value={item.position}
                   placeholder="Position"
@@ -91,6 +88,8 @@ function WorkExperience(props) {
                 path={`${path}.${index}.summary`}
                 fontSize="17px"
                 marginTop="2%"
+                minWidth="500px"
+                maxWidth="500px"
               />
             </Box>
           </div>

@@ -75,7 +75,7 @@ function Skills(props) {
               value={item.name}
               placeholder="Graphic Designer"
               path={`${path}.${index}.name`}
-              color="grey"
+              color="black"
               fontSize="1rem"
               fontWeight="400"
             />
@@ -101,7 +101,7 @@ function Skills(props) {
               {value[index] ? (
                 <span
                   style={{
-                    color: "grey",
+                    color: "black",
                     alignSelf: "right",
                     position: "relative",
                     right: 25,

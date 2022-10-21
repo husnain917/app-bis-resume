@@ -41,7 +41,7 @@
   height: 6px;
 }
 .skillInput {
-  color: white;
+  color: grey;
   margin-left: 5px;
 }
 .contactHeading {
@@ -60,7 +60,7 @@
   margin-left: 40px;
 }
 .skillsInput {
-  color: grey;
+  color:black;
   margin-left: 5px;
 }
 .skillLineBar {

@@ -37,14 +37,21 @@ export default function GraphicDesigner3() {
           </Tooltip>
         </div>
       </Link>
-      <Box w="100%" mt="5%" overflow="auto" h="auto" ml={["", , , "5%", "13%"]}>
+      <Box
+        w="100%"
+        mt="5%"
+        mb="3%"
+        overflow="auto"
+        h="auto"
+        ml={["", , , "5%", "13%"]}
+      >
         <Box w="100%" display="flex" flexDir="row" maxW="930px" minW="930px">
           <Box w="30%" h="auto" display="flex" flexDir="column">
             <Box bgColor="#56C8EA" pb="30px">
-              <Image src="/gdMan2.png" w="75%" mt="10%" ml="12%" />
+              <Image src="/gdMan2.png" w="75%" mt="12%" ml="12%" />
               <Text
                 value={resumeData?.profile?.firstName}
-                placeholder="FIRSTNAME"
+                placeholder="YOUR"
                 path={"profile.firstName"}
                 fontSize="31px"
                 fontWeight="bold"
@@ -54,7 +61,7 @@ export default function GraphicDesigner3() {
               />
               <Text
                 value={resumeData?.profile?.lastName}
-                placeholder="LASTNAME"
+                placeholder="NAME"
                 path={"profile.lastName"}
                 fontSize="31px"
                 fontWeight="bold"
@@ -72,10 +79,10 @@ export default function GraphicDesigner3() {
                 marginTop="2%"
                 textAlign="center"
                 fontWeight="600"
-                lineHeight="40px"
+                lineHeight="30px"
               />
             </Box>
-            <Box bgColor="#3C4240" h="auto" pb="100px">
+            <Box bgColor="#3C4240" h="100%" pb="100px">
               <div style={{ marginLeft: "30px", marginTop: "30px" }}>
                 <Box display="flex">
                   <Icon as={FaUser} w={6} h={6} color="#56C8EA" />
@@ -142,7 +149,7 @@ export default function GraphicDesigner3() {
               />
             </Box>
           </Box>
-          <Box w="70%" pl="50px" pr="50px">
+          <Box w="70%" pl="50px" pr="50px" pb="50px">
             <div style={{ marginTop: "30px" }}>
               <Box display="flex" alignItems="center" mb="5px">
                 <Icon as={FaUserCircle} w={8} h={8} color="#56C8EA" />
