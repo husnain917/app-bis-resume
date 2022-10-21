@@ -77,30 +77,37 @@ function GraphicSkill(props) {
                 <>
                     {/* Digital Marketing skill */}
                     <Box
-                        padding={"15px 10px 0px 10px"}
+                        padding={"10px"}
+                        display={'flex'}
+                        alignItems={'center'}
+                        justifyContent={'space-between'}
+                        width={'100%'}
                     >
-                        <UnorderedList
-                            color={'#fff'}
-                            paddingLeft={'4px'}
+                        <Box
+                            width={'50%'}
                         >
-                            <ListItem>
-                                <Text
-                                    value={item.skills}
-                                    placeholder="Content Design"
-                                    customclass={`${style.skillBodyHeading}`}
-                                    path={`${path}.${index}.contentdesign`}
-                                />
-                            </ListItem>
-                        </UnorderedList>
+                            <UnorderedList
+                                color={'#fff'}
+                            >
+                                <ListItem>
+                                    <Text
+                                        value={item.skills}
+                                        placeholder="Content Design"
+                                        customclass={`${style.skillBodyHeading}`}
+                                        path={`${path}.${index}.contentdesign`}
+                                    />
+                                </ListItem>
+                            </UnorderedList>
+                        </Box>
                         <Box
                             display={'flex'}
                             alignItems={'center'}
-                            mb={'10px'}
+                            width={'48%'}
                         >
-                            <Box w={'80%'} borderRadius={4}>
+                            <Box w={'80%'} borderRadius={8}>
                                 <Line
                                     percent={progress[index]}
-                                    strokeWidth={4}
+                                    strokeWidth={8}
                                     strokeColor={'#fff'}
                                 />
                             </Box>
