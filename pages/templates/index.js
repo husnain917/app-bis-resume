@@ -226,7 +226,7 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
-        <Link href="/templates/GraphicDesigner3">
+          <Link href="/templates/GraphicDesigner3">
             <img
               src="gdBanner3.jpg"
               alt="Designer Template"
@@ -235,7 +235,17 @@ function Templates() {
             />
           </Link>
         </Box>
-        
+        <Box className="cursor">
+          <Link href="/templates/TemplateContentCreater">
+            <img
+              src="templateContent.png"
+              alt="Content Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+
       </SimpleGrid>
     </div >
   );
