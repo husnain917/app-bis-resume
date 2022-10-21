@@ -1,0 +1,66 @@
+.contentHeadings {
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.designerContectStyle {
+    margin-left: 20px;
+    color: #fff !important;
+    font-size: 14px !important;
+}
+.educationDesHeading {
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 15px;
+}
+.educationDesTxt {
+    color: #fff !important;
+}
+.expertiseBodyHeadings {
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 15px;
+}
+.firstNameStyle {
+    color: #fff !important;
+    font-size: 3em;
+    font-weight: 600;
+}
+.lastNameStyle {
+    color: #fff !important;
+    font-size: 1.8em;
+    font-weight: 500;
+}
+.profileBodyDes {
+    font-size: 15px;
+    color: #fff !important;
+    line-height: 20px;
+    text-align: justify;
+}
+.experienceDesHeadings {
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 15px;
+}
+.experienceDesBody {
+    color: #fff !important;
+    font-size: 15px;
+    text-align: justify;
+}
+.skillBodyHeading {
+    font-size: 15px;
+    color: #fff !important;
+    font-weight: 500;
+}
+.inputData {
+    font-size: 14px !important;
+    color: #fff;
+    margin-left: 10px;
+}
+.perD {
+    display: inline-block;
+    margin-left: -15px !important;
+    font-size: 13px !important;
+    color: #fff;
+}
