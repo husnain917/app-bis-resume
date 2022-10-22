@@ -1,6 +1,6 @@
-import { SimpleGrid, Box, Image } from "@chakra-ui/react";
-import React from "react";
-import Link from "next/link";
+import { SimpleGrid, Box, Image } from '@chakra-ui/react';
+import React from 'react';
+import Link from 'next/link';
 
 function Templates() {
   return (
@@ -52,13 +52,11 @@ function Templates() {
             />
           </Link>
         </Box>
-        {/* <Box className='cursor'>
-          <Link href='/templates/templateCEO'>
-              <img src='Chief_Exclusive_Office.jpg' alt='Chief_Exclusive_Office' height='200px' width='250px' />
-          <Link href="/templates/fashionDesigner/FashionDesigner">
+        <Box className="cursor">
+          <Link href="/templates/GraphicDesigner1">
             <img
-              src="fashionDesigner.jpg"
-              alt="Fashion_Designer_Template"
+              src="gdBanner.jpg"
+              alt="Resume Digital Market"
               height="200px"
               width="250px"
             />
@@ -76,6 +74,7 @@ function Templates() {
             </Link>
           </Box>
         </Box>
+
         <Box className="cursor">
           <Link href="/templates/digitalMarketingTemps/digitalMarketingTemp">
             <img
@@ -95,7 +94,157 @@ function Templates() {
               width="250px"
             />
           </Link>
-        </Box> */}
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/graphicDesignerTemp">
+            <img
+              src="graphicTemp.PNG"
+              alt="Graphic Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/SocialSpecialist">
+            <img
+              src="social.jpg"
+              alt="Social Media Specialist"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/TemplateBabySitter">
+            <img
+              src="templateBaby.png"
+              alt=" Baby Resume"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/hybridTemplate">
+            <img
+              src="Hybrid_Template_Design.png"
+              alt="Hybrid_Template_Design"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/DigitalMarkTemp2">
+            <img
+              src="DigitalMarketingTemp2.png"
+              alt="Digital Marketing_Template 2_Design"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/fashionTemp1">
+            <img
+              src="FashionDesigner1.png"
+              alt="Fashion Designer_Template 1_Design"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/GraphicDesigner2">
+            <img
+              src="gdBanner2.jpg"
+              alt="Graphic_Designer_Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/template5">
+            <img
+              src="GraphicDesigner5.png"
+              alt="Graphic Designer_Template 5_Design"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/marketingManager1">
+            <img
+              src="MarketingManagerTemp.png"
+              alt="Graphic Designer_Template 5_Design"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/designerTemplate">
+            <img
+              src="designerTemplate.PNG"
+              alt="Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/aaronGraphicTemp">
+            <img
+              src="graphicTemplate.PNG"
+              alt="Graphic Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/GraphicDesigner8">
+            <img
+              src="graphDes8.png"
+              alt="Graphic Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/marketingManager">
+            <img
+              src="MarkManager2.png"
+              alt="Marketing Manager Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/GraphicDesigner3">
+            <img
+              src="gdBanner3.jpg"
+              alt="Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/StudentTemplate">
+            <img
+              src="studentTemp.png"
+              alt=" Student Resume   Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
       </SimpleGrid>
     </div>
   );
