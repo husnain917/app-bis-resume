@@ -236,6 +236,16 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
+          <Link href="/templates/harumiGraphicTemp">
+            <img
+              src="harumiTemplate.PNG"
+              alt="Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
           <Link href="/templates/TemplateContentCreater">
             <img
               src="templateContent.png"
@@ -249,7 +259,7 @@ function Templates() {
           <Link href="/templates/ExecutiveTemp">
             <img
               src="ExecTemp.png"
-              alt=" Executive Resume   Template"
+              alt=" Executive Resume Template"
               height="200px"
               width="250px"
             />
@@ -259,16 +269,14 @@ function Templates() {
           <Link href="/templates/StudentTemplate">
             <img
               src="studentTemp.png"
-              alt=" Student Resume   Template"
+              alt=" Student Resume Template"
               height="200px"
               width="250px"
             />
-
           </Link>
         </Box>
-
       </SimpleGrid>
-    </div>
+    </div >
   );
 }
 
