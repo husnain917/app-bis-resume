@@ -226,7 +226,7 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
-          <Link href="/templates/GraphicDesigner3">
+            <Link href="/templates/GraphicDesigner3">
             <img
               src="gdBanner3.jpg"
               alt="Designer Template"
@@ -247,7 +247,7 @@ function Templates() {
         </Box>
 
       </SimpleGrid>
-    </div >
+    </div>
   );
 }
 
