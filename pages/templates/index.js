@@ -236,10 +236,10 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
-          <Link href="/templates/TemplateContentCreater">
+          <Link href="/templates/StudentTemplate">
             <img
-              src="templateContent.png"
-              alt="Content Template"
+              src="studentTemp.png"
+              alt="Student Resume Template"
               height="200px"
               width="250px"
             />
