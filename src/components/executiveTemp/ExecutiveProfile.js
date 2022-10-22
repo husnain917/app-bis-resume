@@ -13,7 +13,7 @@ const ExecutiveProfile = () => {
   const path = 'achievements.items';
   return (
     <div>
-      <HStack mb={5}>
+      <HStack mb={5} alignItems="flex-start">
         <Box minH={150} maxW={150} minW={150} borderRadius="full" ml={12}>
           <Image
             borderRadius={'full'}
