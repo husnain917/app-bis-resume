@@ -236,10 +236,10 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
-          <Link href="/templates/StudentTemplate">
+          <Link href="/templates/TemplateContentCreater">
             <img
-              src="studentTemp.png"
-              alt=" Student Resume   Template"
+              src="templateContent.png"
+              alt="Content Template"
               height="200px"
               width="250px"
             />
@@ -255,6 +255,18 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/StudentTemplate">
+            <img
+              src="studentTemp.png"
+              alt=" Student Resume   Template"
+              height="200px"
+              width="250px"
+            />
+
+          </Link>
+        </Box>
+
       </SimpleGrid>
     </div>
   );
