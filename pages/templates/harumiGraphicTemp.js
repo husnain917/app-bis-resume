@@ -17,7 +17,6 @@ import FashionCustomHook from "../../src/components/fashionTemp/FashionCustomHoo
 import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import styles from "../../styles/harumiGraphicTemp.module.css";
 import HarumiGraphicEducation from "../../src/components/harumiGraphicTemp/HarumiGraphicEducation";
-import HarumiGraphicExpertise from "../../src/components/harumiGraphicTemp/HarumiGraphicExpertise";
 import HarumiGraphicExperience from "../../src/components/harumiGraphicTemp/HarumiGraphicExperience";
 import HarumiGraphicSkill from "../../src/components/harumiGraphicTemp/HarumiGraphicSkill";
 import HarumiGraphicHobbies from "../../src/components/harumiGraphicTemp/HarumiGraphicHobbies";
@@ -159,35 +158,35 @@ export default function harumiGraphicTemp() {
                     </Box>
 
 
-                    {/* education section */}
+                    {/* skill section */}
                     <Box
-                        marginTop={'20px'}
+                        margin={'20px 0px 0px 0px'}
                     >
                         <Text
-                            value={resumeEditor?.resumeData?.education?.heading}
-                            placeholder="EDUCATION"
+                            value={resumeEditor?.resumeData?.skills?.heading}
+                            placeholder="SKILL"
                             customclass={`${styles.contentHeadings}`}
-                            path={"education.heading"}
+                            path={"skills.heading"}
                             editable={false}
                         />
                         <Underline
                             height='0.1em'
-                            width='34%'
+                            width='12%'
                             bgColor='#fff'
                         />
                     </Box>
 
-                    {/* education description */}
+                    {/* skill description */}
                     <Box
-                        margin={'20px 0px 10px 0px'}
+                        margin={'20px 0px'}
                     >
-                        {resumeEditor?.resumeData?.education?.visible && (
+                        {resumeEditor?.resumeData?.skills?.visible && (
                             <>
-                                <HarumiGraphicEducation
+                                <HarumiGraphicSkill
                                     data={
-                                        resumeEditor?.resumeData?.education?.items?.length
-                                            ? [...resumeEditor?.resumeData?.education?.items]
-                                            : [...sampleData?.data?.education?.items]
+                                        resumeEditor?.resumeData?.skills?.items?.length
+                                            ? [...resumeEditor?.resumeData?.skills?.items]
+                                            : [...sampleData?.data?.skills?.items]
                                     }
                                     color={resumeEditor?.color}
                                     updater={resumeEditor?.updater}
@@ -228,7 +227,7 @@ export default function harumiGraphicTemp() {
 
                     {/* about section */}
                     <Box
-                        margin={'20px 0px 0px 0px'}
+                        margin={'10px 0px 0px 0px'}
                     >
                         <Text
                             value={resumeEditor?.resumeData?.objective?.aboutTitle}
@@ -246,7 +245,7 @@ export default function harumiGraphicTemp() {
 
                     {/* Profile */}
                     <Box
-                        margin={'20px 0px 10px 0px'}
+                        margin={'15px 0px 10px 0px'}
                     >
                         <Text
                             value={resumeEditor?.resumeData?.objective?.aboutBody}
@@ -257,9 +256,47 @@ export default function harumiGraphicTemp() {
                     </Box>
 
 
+                    {/* education section */}
+                    <Box
+                        margin={'10px 0px 0px 0px'}
+                    >
+                        <Text
+                            value={resumeEditor?.resumeData?.education?.heading}
+                            placeholder="EDUCATION"
+                            customclass={`${styles.contentHeadings}`}
+                            path={"education.heading"}
+                            editable={false}
+                        />
+                        <Underline
+                            height='0.1em'
+                            width='22%'
+                            bgColor='#fff'
+                        />
+                    </Box>
+
+                    {/* education description */}
+                    <Box
+                        margin={'20px 0px'}
+                    >
+                        {resumeEditor?.resumeData?.education?.visible && (
+                            <>
+                                <HarumiGraphicEducation
+                                    data={
+                                        resumeEditor?.resumeData?.education?.items?.length
+                                            ? [...resumeEditor?.resumeData?.education?.items]
+                                            : [...sampleData?.data?.education?.items]
+                                    }
+                                    color={resumeEditor?.color}
+                                    updater={resumeEditor?.updater}
+                                />
+                            </>
+                        )}
+                    </Box>
+
+
                     {/* experience section */}
                     <Box
-                        margin={'20px 0px 0px 0px'}
+                        margin={'10px 0px 0px 0px'}
                     >
                         <Text
                             value={resumeEditor?.resumeData?.experience?.heading}
@@ -295,83 +332,9 @@ export default function harumiGraphicTemp() {
                     </Box>
 
 
-                    {/* expertise section */}
-                    <Box>
-                        <Text
-                            value={resumeEditor?.resumeData?.expertise?.expertiseTitle}
-                            placeholder='EXPERTISE'
-                            customclass={`${styles.contentHeadings}`}
-                            path={"expertise.expertiseTitle"}
-                            editable={false}
-                        />
-                        <Underline
-                            height='0.1em'
-                            width='18%'
-                            bgColor='#fff'
-                        />
-                    </Box>
-
-                    {/* expertise section */}
-                    <Box
-                        margin={'20px 0px'}
-                    >
-                        {resumeEditor?.resumeData?.expertise?.visible && (
-                            <>
-                                <HarumiGraphicExpertise
-                                    data={
-                                        resumeEditor?.resumeData?.expertise?.items?.length
-                                            ? [...resumeEditor?.resumeData?.expertise?.items]
-                                            : [...sampleData?.data?.expertise?.items]
-                                    }
-                                    color={resumeEditor?.color}
-                                    updater={resumeEditor?.updater}
-                                />
-                            </>
-                        )}
-                    </Box>
-
-
-                    {/* skill section */}
-                    <Box
-                        margin={'20px 0px 0px 0px'}
-                    >
-                        <Text
-                            value={resumeEditor?.resumeData?.skills?.heading}
-                            placeholder="SKILL"
-                            customclass={`${styles.contentHeadings}`}
-                            path={"skills.heading"}
-                            editable={false}
-                        />
-                        <Underline
-                            height='0.1em'
-                            width='12%'
-                            bgColor='#fff'
-                        />
-                    </Box>
-
-                    {/* skill description */}
-                    <Box
-                        margin={'20px 0px'}
-                    >
-                        {resumeEditor?.resumeData?.skills?.visible && (
-                            <>
-                                <HarumiGraphicSkill
-                                    data={
-                                        resumeEditor?.resumeData?.skills?.items?.length
-                                            ? [...resumeEditor?.resumeData?.skills?.items]
-                                            : [...sampleData?.data?.skills?.items]
-                                    }
-                                    color={resumeEditor?.color}
-                                    updater={resumeEditor?.updater}
-                                />
-                            </>
-                        )}
-                    </Box>
-
-
                     {/* hobbies section */}
                     <Box
-                        margin={'20px 0px 0px 0px'}
+                        margin={'10px 0px 0px 0px'}
                     >
                         <Text
                             value={resumeEditor?.resumeData?.hobbies?.heading}

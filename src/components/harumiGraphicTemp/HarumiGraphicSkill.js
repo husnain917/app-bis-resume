@@ -107,7 +107,7 @@ function HarumiGraphicSkill(props) {
                             <Box w={'80%'} borderRadius={6}>
                                 <Line
                                     percent={progress[index]}
-                                    strokeWidth={6}
+                                    strokeWidth={10}
                                     strokeColor={'#fff'}
                                 />
                             </Box>
