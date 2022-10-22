@@ -245,6 +245,16 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/ExecutiveTemp">
+            <img
+              src="ExecTemp.png"
+              alt=" Executive Resume   Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
       </SimpleGrid>
     </div>
   );
