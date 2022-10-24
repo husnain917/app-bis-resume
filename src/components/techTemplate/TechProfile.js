@@ -92,37 +92,6 @@ const TechProfile = () => {
           ))}
         </Box>
       </HStack>
-
-      {/* <Box bg={'blackAlpha.200'} borderRadius={6} w={'full'}>
-        <HStack
-          justifyContent="center"
-          minH={'45px'}
-          alignItems="center"
-          maxW={'900px'}
-        >
-          <GrMail size={20} color="#313B47" />
-          <HybridText
-            placeholder="E-mail"
-            customclass={` ${Style.profileText}`}
-            value={resumeData?.profile?.email}
-            path={'profile.email'}
-          />
-          <BsPhoneFill size={20} color="#313B47" />
-          <HybridText
-            placeholder="Phone"
-            customclass={` ${Style.profileText}`}
-            value={resumeData?.profile?.phone}
-            path={'profile.phone'}
-          />
-          <MdLocationOn size={20} color="#313B47" />
-          <HybridText
-            placeholder="Location"
-            customclass={` ${Style.profileText}`}
-            value={resumeData?.profile?.address?.city}
-            path={'profile.address.city'}
-          />
-        </HStack>
-      </Box> */}
     </div>
   );
 };
