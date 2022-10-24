@@ -275,8 +275,18 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/TechTemplate">
+            <img
+              src="TechTemp.png"
+              alt="Tech Resume Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
       </SimpleGrid>
-    </div >
+    </div>
   );
 }
 
