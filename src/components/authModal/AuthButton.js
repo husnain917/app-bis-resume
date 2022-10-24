@@ -1,29 +1,29 @@
 import { Box, Button, Stack } from "@chakra-ui/react";
 import React from "react";
 import { PhoneIcon, CloseIcon, WarningIcon } from "@chakra-ui/icons";
-
+import styles from "../../../styles/Auth.module.css";
 export default function AuthButton({
   isModalOpen,
   setIsModalOpen,
   ctaRegisterHandler,
   ctaLoginHandler,
+  blue,
 }) {
   return (
-    <Box display="flex" alignItems="center" mt="7%">
-      <Stack
-        w="70%"
-        direction="row"
-        // display="flex"
-        bgColor="#E1E1E1"
-        ml="10%"
-        mr="10%"
-        borderRadius="15px"
-      >
+    <Box
+      w="100%"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      mt="7%"
+    >
+      <Stack w="70%" direction="row" bgColor="#E1E1E1" borderRadius="15px">
         <Button
           w="50%"
           bgColor="#E1E1E1"
           borderRadius="15px"
           _hover={{ bg: "#00C8AA", color: " white", borderRadius: "20px" }}
+          _focus={{ bg: "#00C8AA", color: " white", borderRadius: "20px" }}
           onClick={ctaRegisterHandler}
         >
           Register
@@ -45,10 +45,11 @@ export default function AuthButton({
         color="white"
         bgColor="#E1E1E1"
         p="5px"
+        ml="7%"
         borderRadius="100px"
         _hover={{ color: " white", borderRadius: "5px" }}
-        _focus={{ bg: "#00C8AA", color: " white", borderRadius: "20px" }}
         onClick={() => setIsModalOpen(false)}
+        className={styles.modalBtn}
       />
     </Box>
   );

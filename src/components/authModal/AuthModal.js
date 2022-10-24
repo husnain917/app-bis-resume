@@ -10,8 +10,10 @@ import {
   Image,
   Input,
   Checkbox,
+  Stack,
 } from "@chakra-ui/react";
 import { FaGoogle } from "react-icons/fa";
+import styles from "../../../styles/Auth.module.css";
 import AuthButton from "./AuthButton";
 import CustomBtn from "./CustomBtn";
 export default function AuthModal({ isModalOpen, setIsModalOpen }) {
@@ -27,57 +29,75 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
 
   return (
     <>
-      <Modal isOpen={isModalOpen} size={"ful"} borderRadius="10px">
+      <Modal isOpen={isModalOpen} size={"ful"}>
         <ModalOverlay />
-        <ModalContent w="800px" h="500px">
+        <ModalContent
+          w={["100%", "100%", "80%", "60%"]}
+          h="80vh"
+          borderRadius="10px"
+        >
           {/* <ModalCloseButton /> */}
-          <Box w="900px" display="flex" h="100%">
-            <Box w="400px" bgColor="black" h="100%">
+          <Box w="100%" display="flex" h="100vh">
+            <Box w={[0, 0, 0, "50%"]} h="100%">
               {isRegister ? (
-                <Image src="/signup.png" w="400px" h="100%" />
+                <Image src="/signup.png" w="100%" h="100%" />
               ) : (
-                <Image src="/signin.png" w="400px" h="100%" />
+                <Image src="/signin.png" w="100%" h="100%" />
               )}
             </Box>
-            <Box w="400px" h="500px">
+            <Box w={["100%", "100%", "100%", "50%"]} h="auto">
               <AuthButton
                 ctaLoginHandler={ctaLoginHandler}
                 ctaRegisterHandler={ctaRegisterHandler}
                 setIsModalOpen={setIsModalOpen}
+                blue={true}
               />
               <Box ml="7%" mr="7%" mt="6%">
                 {isRegister ? (
                   <>
-                    <Box display="flex">
+                    <Stack direction="row">
                       <Input
                         variant="outline"
                         placeholder="First Name"
                         bgColor="#E1E1E1"
-                        m="2%"
+                        focusBorderColor="#00C8AA"
                         h="50px"
                         pt="10px"
                         pb="10px"
+                        _hover={{
+                          color: "black",
+                          fontSize: "18px",
+                        }}
                       />
                       <Input
                         variant="outline"
                         placeholder="Last Name"
+                        focusBorderColor="#00C8AA"
                         bgColor="#E1E1E1"
-                        m="2%"
                         h="50px"
                         pt="10px"
                         pb="10px"
+                        _hover={{
+                          color: "black",
+                          fontSize: "18px",
+                        }}
                       />
-                    </Box>
+                    </Stack>
 
                     <Input
                       variant="outline"
                       placeholder="Email"
+                      focusBorderColor="#00C8AA"
                       bgColor="#E1E1E1"
                       w="100%"
                       h="50px"
                       pt="10px"
                       pb="10px"
-                      mt="1%"
+                      mt="3%"
+                      _hover={{
+                        color: "black",
+                        fontSize: "18px",
+                      }}
                     />
                     <Checkbox
                       size="lg"
@@ -98,7 +118,10 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
                       h="50px"
                       pt="10px"
                       pb="10px"
-                      mt="1%"
+                      _hover={{
+                        color: "black",
+                        fontSize: "18px",
+                      }}
                     />
                   </>
                 )}
@@ -111,6 +134,8 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
                       title="Register Now"
                       bgColor="#00C8AA"
                       color="white"
+                      hoverColor="#00e2c0"
+                      blue={true}
                     />
                   </>
                 ) : (
@@ -122,12 +147,14 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
                       title="SignIn With Magic Link"
                       bgColor="#00C8AA"
                       color="white"
+                      blue={true}
+                      mt="5%"
                     />
                     <CustomBtn
                       title="Switch to password"
                       bgColor="#E1E1E1"
                       color="grey"
-                      mt="3%"
+                      mt="5%"
                     />
                   </>
                 )}
@@ -136,10 +163,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
                     <Text fontSize="16px" align="center" mt="5%">
                       Or Sign Up With:
                     </Text>
-                    {/* <Text align="center">
-                      A password can be set after you sign up if you prefer.
-                      Meanwhile, your information is secure and private
-                    </Text> */}
                   </>
                 ) : (
                   <>
@@ -152,18 +175,25 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
                   leftIcon={<FaGoogle />}
                   variant="solid"
                   bgColor="#E1E1E1"
-                  color="black"
+                  color="grey"
                   w="85%"
                   ml="8%"
                   borderRadius="100px"
                   fontSize="16px"
                   mt="3%"
+                  className={styles.modalBtn}
                 >
                   Google
                 </Button>
                 {isRegister ? (
                   <>
-                    <Text align="center" lineHeight="15px" mt="3%">
+                    <Text
+                      align="center"
+                      lineHeight="15px"
+                      mt="3%"
+                      pl="7%"
+                      pr="7%"
+                    >
                       A password can be set after you sign up if you prefer.
                       Meanwhile, your information is secure and private
                     </Text>
@@ -173,7 +203,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
             </Box>
           </Box>
 
-          <ModalFooter></ModalFooter>
+        
         </ModalContent>
       </Modal>
     </>

@@ -206,7 +206,6 @@ export default function Navbar() {
                           color: "#fff",
                         }}
                         onClick={() => setIsModalOpen(true)}
-
                       >
                         {items.label}
                       </Link>

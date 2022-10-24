@@ -1,0 +1,59 @@
+.hoverBtn {
+  transition: transform 0.3s ease;
+}
+
+.hoverBtn::after,
+.hoverBtn::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background-color: #00c8aa;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 50px;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.hoverBtn:hover {
+  background-color: #00c8aa;
+
+  transform: translate(-4px, -4px);
+}
+.hoverBtn:hover::after {
+  transform: translate(8px, -7px);
+}
+.hoverBtn:hover::before {
+  transform: translate(6px, 5px);
+}
+
+.modalBtn {
+  transition: transform 0.3s ease;
+}
+
+.modalBtn::after,
+.modalBtn::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  background-color: #e1e1e1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 50px;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.modalBtn:hover {
+  background-color: #e1e1e1;
+
+  transform: translate(-4px, -4px);
+}
+.modalBtn:hover::after {
+  transform: translate(8px, -7px);
+}
+.modalBtn:hover::before {
+  transform: translate(5px, 5px);
+}

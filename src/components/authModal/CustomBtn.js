@@ -1,7 +1,7 @@
 import { Button } from "@chakra-ui/react";
 import React from "react";
-
-export default function CustomBtn({ title, color, bgColor, mt }) {
+import styles from "../../../styles/Auth.module.css"
+export default function CustomBtn({ title, color, bgColor, mt, hoverColor,blue }) {
   return (
     <div>
       <Button
@@ -11,6 +11,13 @@ export default function CustomBtn({ title, color, bgColor, mt }) {
         mt={mt}
         color={color}
         bgColor={bgColor}
+        _hover={{
+          color: { color },
+          fontSize: "18px",
+          opacity:'0.8'
+        }}
+        
+        className={`${ blue? styles.hoverBtn : styles.modalBtn }`}
       >
         {title}
       </Button>
