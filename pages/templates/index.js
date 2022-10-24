@@ -285,6 +285,16 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/CollegeTemp">
+            <img
+              src="CollegeTemp.png"
+              alt="College Resume Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
       </SimpleGrid>
     </div>
   );
