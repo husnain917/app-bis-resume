@@ -7,7 +7,7 @@ import { updateOrder, addNewObj, deleteObjInArray } from "../../../store/actions
 // import { styles } from "../componentStyles/template1Style";
 import style from "../../../styles/simpleTempDesign.module.css";
 import {
-    Box, ListItem, UnorderedList,
+    Box,
 } from "@chakra-ui/react";
 
 function SimpleTempInterest(props) {
@@ -32,6 +32,7 @@ function SimpleTempInterest(props) {
     return (
         <SimpleTempDnd
             data={data}
+            direction="horizontal"
             reorder={(e) => onOrderUpdate(e)}
             additem={_addNewItem}
             removeitem={(index) => _removeItem(index)}
@@ -43,16 +44,12 @@ function SimpleTempInterest(props) {
                         borderRadius={6}
                         padding={"4px 10px"}
                     >
-                        <UnorderedList>
-                            <ListItem>
-                                <Text
-                                    value={item.title}
-                                    placeholder="Interest"
-                                    customclass={`${style.skillText}`}
-                                    path={`hobbies.items.title`}
-                                />
-                            </ListItem>
-                        </UnorderedList>
+                        <Text
+                            value={item.title}
+                            placeholder="Interest"
+                            customclass={`${style.skillText}`}
+                            path={`hobbies.items.title`}
+                        />
                     </Box>
                 </>
             }
