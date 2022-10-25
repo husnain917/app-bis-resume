@@ -141,7 +141,7 @@ export default function Navbar() {
                                         width={breakpointWidth}
                                         bg={
                                             items?.label === 'Register' ?
-                                                popoverContentBgColor
+                                                '#006772'
                                                 :
                                                 items?.label === 'Login' ?
                                                     '#006772'
@@ -152,6 +152,12 @@ export default function Navbar() {
                                         padding={'10px 5px'}
                                         textTransform={'uppercase'}
                                         ml='1.5rem'
+                                        _hover={{
+                                            textDecoration: 'none',
+                                            backgroundColor: "red",
+                                            color: "white"
+                                        }}
+
                                     >
                                         {
                                             items?.label === 'Register' ?
@@ -159,11 +165,11 @@ export default function Navbar() {
                                                     <Link
                                                         href={items?.href ?? '#'}
                                                         fontWeight={650}
-                                                        color={'#71737d'}
+                                                        color={'#fdfffc'}
                                                         fontSize={breakpointfontSize}
                                                         _hover={{
                                                             textDecoration: 'none',
-                                                            color: linkHoverColor,
+                                                            color: '#fff',
                                                         }}
                                                     >
                                                         {items.label}
@@ -177,9 +183,11 @@ export default function Navbar() {
                                                             fontWeight={650}
                                                             color={'#fdfffc'}
                                                             fontSize={breakpointfontSize}
+
                                                             _hover={{
                                                                 textDecoration: 'none',
                                                                 color: '#fff',
+
                                                             }}
                                                         >
                                                             {items.label}
@@ -358,7 +366,8 @@ const MobileNav = () => {
                                     cursor={'pointer'}
                                     bg={
                                         items?.label === 'Register' ?
-                                            popoverContentBgColor
+                                            '#006772'
+
                                             :
                                             items?.label === 'Login' ?
                                                 '#006772'
@@ -368,6 +377,11 @@ const MobileNav = () => {
                                     justifyContent={'center'}
                                     padding={'10px 0px'}
                                     textTransform={'uppercase'}
+                                    _hover={{
+                                        textDecoration: 'none',
+                                        backgroundColor: "red",
+                                        color: "white"
+                                    }}
                                 >
                                     {
                                         items?.label === 'Register' ?
@@ -375,10 +389,11 @@ const MobileNav = () => {
                                                 <Link
                                                     href={items?.href ?? '#'}
                                                     fontWeight={650}
-                                                    color={'#71737d'}
+                                                    color={'#fdfffc'}
                                                     _hover={{
                                                         textDecoration: 'none',
-                                                        color: linkHoverColor,
+                                                        color: '#fff',
+
                                                     }}
                                                 >
                                                     {items.label}

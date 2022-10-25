@@ -15,28 +15,28 @@ export default function Footer() {
       <div className={styles.fcontainer2}>
         <a href="https://web.facebook.com/login/?_rdc=1&_rdr">
           <div className={styles.oiconDiv}>
-            <div className={styles.iconDiv}>
+            <div className={styles.iconDiv1}>
               <FaFacebookF className={styles.icon} />
             </div>
           </div>
         </a>
         <a href="https://www.linkedin.com/home">
           <div className={styles.oiconDiv}>
-            <div className={styles.iconDiv}>
+            <div className={styles.iconDiv2}>
               <FaLinkedinIn className={styles.icon} />
             </div>
           </div>
         </a>
         <a href="https://twitter.com/login">
           <div className={styles.oiconDiv}>
-            <div className={styles.iconDiv}>
+            <div className={styles.iconDiv3}>
               <FaTwitter className={styles.icon} />
             </div>
           </div>
         </a>
         <a href="https://www.instagram.com/accounts/login/">
           <div className={styles.oiconDiv}>
-            <div className={styles.iconDiv}>
+            <div className={styles.iconDiv4}>
               <FaInstagram className={styles.icon} />
             </div>
           </div>
