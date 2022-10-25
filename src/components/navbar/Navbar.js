@@ -362,7 +362,7 @@ const MobileNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
-
+const [isModalOpen,setIsModalOpen] = useState(false)
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
@@ -413,6 +413,8 @@ const MobileNav = () => {
                         textDecoration: "none",
                         color: linkHoverColor,
                       }}
+                onClick={()=>setIsModalOpen(true)}
+
                     >
                       {items.label}
                     </Link>
@@ -427,6 +429,8 @@ const MobileNav = () => {
                         textDecoration: "none",
                         color: "#fff",
                       }}
+                onClick={()=>setIsModalOpen(true)}
+
                     >
                       {items.label}
                     </Link>
@@ -434,6 +438,7 @@ const MobileNav = () => {
                 ) : (
                   <></>
                 )}
+                <AuthModal setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
               </Box>
             </>
           );

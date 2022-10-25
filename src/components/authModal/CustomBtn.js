@@ -9,6 +9,8 @@ export default function CustomBtn({ title, color, bgColor, mt, hoverColor,blue }
         ml="8%"
         borderRadius="100px"
         mt={mt}
+        pt="5px"
+        pb="5px"
         color={color}
         bgColor={bgColor}
         _hover={{

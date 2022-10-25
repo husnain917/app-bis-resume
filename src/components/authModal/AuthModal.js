@@ -11,6 +11,7 @@ import {
   Input,
   Checkbox,
   Stack,
+  ModalBody,
 } from "@chakra-ui/react";
 import { FaGoogle } from "react-icons/fa";
 import styles from "../../../styles/Auth.module.css";
@@ -32,12 +33,18 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
       <Modal isOpen={isModalOpen} size={"ful"}>
         <ModalOverlay />
         <ModalContent
-          w={["100%", "100%", "80%", "60%"]}
-          h="80vh"
+          w={["100%", "100%", "100%", "70%", "60%"]}
           borderRadius="10px"
+          h={["90%", "100%", "90%", "90%", "80vh"]}
+          minH={["90%","650px","700px","70%",]}
         >
-          {/* <ModalCloseButton /> */}
-          <Box w="100%" display="flex" h="100vh">
+        
+
+          <Box
+            w="100%"
+            display="flex"
+            h={["70%", "85%", "100%", "100%", "100%"]}
+          >
             <Box w={[0, 0, 0, "50%"]} h="100%">
               {isRegister ? (
                 <Image src="/signup.png" w="100%" h="100%" />
@@ -202,8 +209,8 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
               </Box>
             </Box>
           </Box>
+          
 
-        
         </ModalContent>
       </Modal>
     </>
