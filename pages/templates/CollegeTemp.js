@@ -133,26 +133,7 @@ const CollegeTemp = (props) => {
                     : [...sampleData?.data?.projects?.items]
                 }
               />
-              {/* =============== Organization Section =============== */}
-              <Text
-                fontSize={'2xl'}
-                fontWeight="bold"
-                color={'#313B47'}
-                borderTopWidth={2}
-                borderBottomWidth={2}
-                borderColor="#313B47"
-                my={5}
-                w="fit-content"
-              >
-                ORGANIZATION
-              </Text>
-              <ExecutiveOrganization
-                data={
-                  resumeData?.organization?.items?.length
-                    ? [...resumeData?.organization?.items]
-                    : [...sampleData?.data?.organization?.items]
-                }
-              />
+
               {/* =============== Certificates Section =============== */}
               <Text
                 fontSize={'2xl'}
