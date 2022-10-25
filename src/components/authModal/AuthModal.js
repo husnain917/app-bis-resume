@@ -36,7 +36,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
           w={["100%", "100%", "100%", "70%", "60%"]}
           borderRadius="10px"
           h={["90%", "100%", "90%", "90%", "80vh"]}
-          minH={["90%","650px","700px","70%",]}
+          minH={["90%","650px","700px","78%",]}
         >
         
 
