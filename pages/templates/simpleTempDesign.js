@@ -13,7 +13,6 @@ import SimpleTempEducation from "../../src/components/simpleTempDesign/SimpleTem
 import SimpleTempExperience from "../../src/components/simpleTempDesign/SimpleTempExperience";
 import SimpleTempSkill from "../../src/components/simpleTempDesign/SimpleTempSkill";
 import SimpleTempProject from "../../src/components/simpleTempDesign/SimpleTempProject";
-import SimpleTempOrganization from "../../src/components/simpleTempDesign/SimpleTempOrganization";
 import SimpleTempCertificate from "../../src/components/simpleTempDesign/SimpleTempCertificate";
 import SimpleTempLanguage from "../../src/components/simpleTempDesign/SimpleTempLanguage";
 import SimpleTempInterest from "../../src/components/simpleTempDesign/SimpleTempInterest";
@@ -271,40 +270,6 @@ export default function simpleTempDesign() {
                                                 resumeEditor?.resumeData?.projects?.items?.length
                                                     ? [...resumeEditor?.resumeData?.projects?.items]
                                                     : [...sampleData?.data?.projects?.items]
-                                            }
-                                            color={resumeEditor?.color}
-                                            updater={resumeEditor?.updater}
-                                        />
-                                    </>
-                                )}
-                            </Box>
-
-
-                            {/* organization section */}
-                            <Box
-                                margin={'10px 0px 0px 0px'}
-                            >
-                                <Text
-                                    value={resumeEditor?.resumeData?.organization?.heading}
-                                    placeholder="ORGANIZATION"
-                                    customclass={`${styles.contentHeadings}`}
-                                    path={"organization.heading"}
-                                    editable={false}
-                                />
-                            </Box>
-
-
-                            {/* organization description */}
-                            <Box
-                                margin={'5px 0px'}
-                            >
-                                {resumeEditor?.resumeData?.skills?.visible && (
-                                    <>
-                                        <SimpleTempOrganization
-                                            data={
-                                                resumeEditor?.resumeData?.organization?.items?.length
-                                                    ? [...resumeEditor?.resumeData?.organization?.items]
-                                                    : [...sampleData?.data?.organization?.items]
                                             }
                                             color={resumeEditor?.color}
                                             updater={resumeEditor?.updater}
