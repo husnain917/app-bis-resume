@@ -13,7 +13,6 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
-  Button,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -29,11 +28,9 @@ import {
   Login_Buttons,
 } from "../constant/navbarLinks/NavbarLinks";
 import { useState } from "react";
-import AuthModal from "../authModal/AuthModal";
-
+import AuthModal from "../authModal/AuthModal"
 export default function Navbar() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const { isOpen, onOpen, onClose, onToggle } = useDisclosure();
+  const { isOpen, onToggle } = useDisclosure();
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
   const breakpointWidth = useBreakpointValue({
@@ -42,18 +39,7 @@ export default function Navbar() {
     md: "110px",
   });
   const breakpointfontSize = useBreakpointValue({ xl: "14px", lg: "12px" });
-
-  //   const onClickHandler = () => {
-  //     console.log("presses");
-  //     if (e) {
-  //       return (
-  //         <>
-  //           <AuthModal onOpen={onOpen} />
-  //         </>
-  //       );
-  //     }
-  //   };
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <Box>
       <Flex
@@ -107,49 +93,48 @@ export default function Navbar() {
         >
           {/* English dropdown start */}
           {/* {EnglishDropDown?.map((navItem) => (
-                        <Box key={navItem?.label}
-                            display={{ base: 'none', lg: 'inline-flex' }}
-                        >
-                            <Popover trigger={'hover'} placement={'bottom-start'}>
-                                <PopoverTrigger>
-                                    <Link
-                                        padding={'8px 0px'}
-                                        minW={'110'}
-                                        href={navItem?.href ?? '#'}
-                                        fontSize={'14px'}
-                                        fontWeight={500}
-                                        display={'inline-block'}
-                                        color={linkColor}
-                                        border={'1px'}
-                                        borderColor={'#CCC'}
-                                        textAlign={'center'}
-                                        _hover={{
-                                            textDecoration: 'none',
-                                            color: linkHoverColor,
-                                        }}>
-                                        {navItem?.label}
-                                        <Icon color={'black.400'} w={5} h={5} as={navItem.icon} />
-                                    </Link>
-                                </PopoverTrigger>
-
-                                {navItem.children && (
-                                    <PopoverContent
-                                        border={0}
-                                        boxShadow={'xl'}
-                                        bg={popoverContentBgColor}
-                                        p={4}
-                                        rounded={'xl'}
-                                        minW={'xs'}>
-                                        <Stack>
-                                            {navItem.children.map((child) => (
-                                                <DesktopSubNav key={child.label} {...child} />
-                                            ))}
-                                        </Stack>
-                                    </PopoverContent>
-                                )}
-                            </Popover>
-                        </Box>
-                    ))} */}
+                      <Box key={navItem?.label}
+                          display={{ base: 'none', lg: 'inline-flex' }}
+                      >
+                          <Popover trigger={'hover'} placement={'bottom-start'}>
+                              <PopoverTrigger>
+                                  <Link
+                                      padding={'8px 0px'}
+                                      minW={'110'}
+                                      href={navItem?.href ?? '#'}
+                                      fontSize={'14px'}
+                                      fontWeight={500}
+                                      display={'inline-block'}
+                                      color={linkColor}
+                                      border={'1px'}
+                                      borderColor={'#CCC'}
+                                      textAlign={'center'}
+                                      _hover={{
+                                          textDecoration: 'none',
+                                          color: linkHoverColor,
+                                      }}>
+                                      {navItem?.label}
+                                      <Icon color={'black.400'} w={5} h={5} as={navItem.icon} />
+                                  </Link>
+                              </PopoverTrigger>
+                              {navItem.children && (
+                                  <PopoverContent
+                                      border={0}
+                                      boxShadow={'xl'}
+                                      bg={popoverContentBgColor}
+                                      p={4}
+                                      rounded={'xl'}
+                                      minW={'xs'}>
+                                      <Stack>
+                                          {navItem.children.map((child) => (
+                                              <DesktopSubNav key={child.label} {...child} />
+                                          ))}
+                                      </Stack>
+                                  </PopoverContent>
+                              )}
+                          </Popover>
+                      </Box>
+                  ))} */}
           {/* English dropdown end */}
 
           {/* login buttons */}
@@ -168,7 +153,7 @@ export default function Navbar() {
                   width={breakpointWidth}
                   bg={
                     items?.label === "Register"
-                      ? popoverContentBgColor
+                      ? "#006772"
                       : items?.label === "Login"
                       ? "#006772"
                       : ""
@@ -177,17 +162,22 @@ export default function Navbar() {
                   padding={"10px 5px"}
                   textTransform={"uppercase"}
                   ml="1.5rem"
+                  _hover={{
+                    textDecoration: "none",
+                    backgroundColor: "red",
+                    color: "white",
+                  }}
                 >
                   {items?.label === "Register" ? (
                     <>
                       <Link
                         // href={items?.href ?? '#'}
                         fontWeight={650}
-                        color={"#71737d"}
+                        color={"#fdfffc"}
                         fontSize={breakpointfontSize}
                         _hover={{
                           textDecoration: "none",
-                          color: linkHoverColor,
+                          color: "#fff",
                         }}
                         onClick={() => setIsModalOpen(true)}
                       >
@@ -213,15 +203,11 @@ export default function Navbar() {
                   ) : (
                     <></>
                   )}
-                  <AuthModal
-                    isModalOpen={isModalOpen}
-                    setIsModalOpen={setIsModalOpen}
-                  />
+                <AuthModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
                 </Box>
               </>
             );
           })}
-
           {/* login button end */}
 
           {/* toggle button */}
@@ -362,7 +348,8 @@ const MobileNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
-const [isModalOpen,setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
@@ -375,8 +362,8 @@ const [isModalOpen,setIsModalOpen] = useState(false)
 
       {/* english dropdown */}
       {/* {EnglishDropDown.map((navItem) => (
-                <MobileNavItem key={navItem.label} {...navItem} />
-            ))} */}
+              <MobileNavItem key={navItem.label} {...navItem} />
+          ))} */}
 
       {/* login buttons */}
       <Box display={"flex"} justifyContent={"space-evenly"}>
@@ -394,7 +381,7 @@ const [isModalOpen,setIsModalOpen] = useState(false)
                 cursor={"pointer"}
                 bg={
                   items?.label === "Register"
-                    ? popoverContentBgColor
+                    ? "#006772"
                     : items?.label === "Login"
                     ? "#006772"
                     : ""
@@ -402,19 +389,23 @@ const [isModalOpen,setIsModalOpen] = useState(false)
                 justifyContent={"center"}
                 padding={"10px 0px"}
                 textTransform={"uppercase"}
+                _hover={{
+                  textDecoration: "none",
+                  backgroundColor: "red",
+                  color: "white",
+                }}
               >
                 {items?.label === "Register" ? (
                   <>
                     <Link
-                      href={items?.href ?? "#"}
+                      // href={items?.href ?? "#"}
                       fontWeight={650}
-                      color={"#71737d"}
+                      color={"#fdfffc"}
                       _hover={{
                         textDecoration: "none",
-                        color: linkHoverColor,
+                        color: "#fff",
                       }}
-                onClick={()=>setIsModalOpen(true)}
-
+                      onClick={()=>setIsModalOpen(true)}
                     >
                       {items.label}
                     </Link>
@@ -422,14 +413,14 @@ const [isModalOpen,setIsModalOpen] = useState(false)
                 ) : items.label === "Login" ? (
                   <>
                     <Link
-                      href={items?.href ?? "#"}
+                      // href={items?.href ?? "#"}
                       fontWeight={650}
                       color={"#fdfffc"}
                       _hover={{
                         textDecoration: "none",
                         color: "#fff",
                       }}
-                onClick={()=>setIsModalOpen(true)}
+                      onClick={()=>setIsModalOpen(true)}
 
                     >
                       {items.label}
@@ -438,7 +429,7 @@ const [isModalOpen,setIsModalOpen] = useState(false)
                 ) : (
                   <></>
                 )}
-                <AuthModal setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen} />
+                <AuthModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
               </Box>
             </>
           );
