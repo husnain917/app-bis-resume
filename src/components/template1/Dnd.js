@@ -144,7 +144,7 @@ class Dnd extends Component {
                   : styles.unselectedDragItems
               }
             >
-              {this.state.data.map((item, index) => (
+              {this.state?.data?.map((item, index) => (
                 <Draggable
                   key={index}
                   draggableId={index.toString()}

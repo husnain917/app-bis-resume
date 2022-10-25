@@ -112,20 +112,23 @@ input[type='date']:in-range::-webkit-datetime-edit-day-field,
 input[type='date']:in-range::-webkit-datetime-edit-text {
   color: #999;
 }
-
+.educationManage {
+  display: flex;
+  flex-direction: row !important;
+}
 .fullName {
   font-weight: 700;
   font-size: 2.4em;
   padding: 0;
   line-height: 30px;
-  text-align:center;
+  text-align: center;
 }
 .fullName1 {
   font-weight: 700;
   font-size: 2.4em;
   padding: 0;
   line-height: 30px;
-  text-align:left;
+  text-align: left;
 }
 
 .manager-template-row {
@@ -143,11 +146,27 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 .manager-template-text-center {
   align-items: center;
 }
-
+.fDesigner2{
+  font-size: 2.4em;
+  padding: 0;
+  line-height: 30px;
+  text-align:left;
+  margin-top: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.fDesigner2a{
+  padding: 0;
+  line-height: 30px;
+  text-align:left;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
 .manager-f-sub-rowA {
   margin: 0 auto;
 }
-
 .slick-prev:before,
 .slick-next:before {
   color: black !important;

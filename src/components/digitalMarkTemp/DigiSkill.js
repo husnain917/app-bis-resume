@@ -1,6 +1,7 @@
 import {
   Box,
   HStack,
+  Input,
   Slider,
   SliderFilledTrack,
   SliderThumb,
@@ -18,7 +19,8 @@ import {
 import Util from '../../../utils/templateUtils';
 import HybridText from '../hybridTemplate/HybridText';
 import { Dnd, Text } from '../template1';
-
+import { Line } from 'rc-progress';
+import { useState } from 'react';
 const DigiSkill = (props) => {
   const { data } = props;
   const path = 'skills.items';
@@ -36,6 +38,37 @@ const DigiSkill = (props) => {
     const storeReorder = Util.mapOrder(props.data, data, 'id');
     dispatch(updateOrder(storeReorder, path));
   };
+  const [progress, setProgress] = useState([]);
+  const validateData = (e, index2) => {
+    if ((e.target.value > 0 && e.target.value > 100) || e.target.value <= 0) {
+      let newArr2 = progress.map((item, index) => {
+        if (index === index2) {
+          return null;
+        } else {
+          return item;
+        }
+      });
+      setProgress(newArr2);
+      return;
+    }
+    let newArr;
+    if (progress.length <= 0) {
+      newArr = [e.target.value];
+    } else if (progress.length === index2) {
+      newArr = [...progress, e.target.value];
+      console.log(newArr);
+    } else {
+      newArr = progress.map((item, index) => {
+        if (index === index2) {
+          return e.target.value;
+        } else {
+          return item;
+        }
+      });
+    }
+    setProgress(newArr);
+  };
+
   return (
     <div>
       <Box
@@ -72,11 +105,27 @@ const DigiSkill = (props) => {
                 customclass={`${Style.skillText}`}
                 path={`skills.items.title`}
               />
-              <Slider aria-label="slider-ex-1" defaultValue={30} w={'100px'}>
-                <SliderTrack h={3} borderRadius={8} bg={'blackAlpha.400'}>
-                  <SliderFilledTrack borderRadius={8} bg={'#AED6F1'} />
-                </SliderTrack>
-              </Slider>
+              <Box w={100} borderRadius={4}>
+                <Line
+                  percent={progress[index]}
+                  strokeColor={'#AED6F1'}
+                  className={`${Style.bg}`}
+                  strokeWidth={10}
+                  trailColor="#D5DBDB"
+                  trailWidth={10}
+                />
+              </Box>
+              <Input
+                maxW={50}
+                maxH={30}
+                borderColor="none"
+                variant="unstyled"
+                placeholder="0"
+                value={`${progress[index]}`}
+                onChange={(e) => validateData(e, index)}
+                type="number"
+              />
+              <div style={{ marginLeft: '-30px' }}>%</div>
             </HStack>
           )}
         />
