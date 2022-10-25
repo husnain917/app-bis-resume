@@ -61,21 +61,68 @@
     height: 80px;
     align-items: center;
 }
-.oiconDiv{
-    width:60px;
+
+.oiconDiv {
+    width: 60px;
     display: flex;
     justify-content: center;
     height: 50px;
     align-items: center;
 }
-.iconDiv{
+
+.iconDiv1 {
     background-color: white;
     color: rgb(66, 80, 97);
     padding: 8px;
     border-radius: 50%;
     text-align: center;
 }
-.icon{
+
+.iconDiv2 {
+    background-color: white;
+    color: rgb(66, 80, 97);
+    padding: 8px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.iconDiv3 {
+    background-color: white;
+    color: rgb(66, 80, 97);
+    padding: 8px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.iconDiv4 {
+    background-color: white;
+    color: rgb(66, 80, 97);
+    padding: 8px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.iconDiv1:hover {
+    background-color: #002D6C;
+    color: white;
+}
+
+.iconDiv2:hover {
+    background-color: #0073b1;
+    color: white;
+}
+
+.iconDiv3:hover {
+    background-color: #00ACEE;
+    color: white;
+}
+
+.iconDiv4:hover {
+    background-color: rgb(207, 72, 72);
+    color: white;
+}
+
+.icon {
     font-size: 1.3rem;
 }
 .icon:hover{
@@ -90,7 +137,7 @@
         align-items: center;
     }
     .footerP {
-        font-size:1rem ;
+        font-size: 1rem;
         font-weight: bold;
         margin-bottom: 20px;
         margin-top: 20px;
