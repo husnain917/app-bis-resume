@@ -1,6 +1,6 @@
-import { SimpleGrid, Box, Image } from "@chakra-ui/react";
-import React from "react";
-import Link from "next/link";
+import { SimpleGrid, Box, Image } from '@chakra-ui/react';
+import React from 'react';
+import Link from 'next/link';
 
 function Templates() {
   return (
@@ -279,7 +279,7 @@ function Templates() {
           <Link href="/templates/TechTemplate">
             <img
               src="TechTemp.png"
-              alt="Tech Resume Template"
+              alt="Tech Editable Resume Template"
               height="200px"
               width="250px"
             />
@@ -295,7 +295,6 @@ function Templates() {
             />
           </Link>
         </Box>
-       
       </SimpleGrid>
     </div>
   );
