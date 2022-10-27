@@ -3,13 +3,11 @@ import React from "react";
 import ContactButton from "../src/components/contactUs/ContactButton";
 import CustomInput from "../src/components/contactUs/CustomInput";
 import { buttonData } from "../src/components/contactUs/buttonData";
-import Navbar from "../src/components/navbar/Navbar";
-import Footer from "../src/components/Footer/Footer";
+
 export default function ContactUs() {
   return (
     <>
       {/* main div  */}
-      <Navbar />
       <Box
         w="100%"
         h="auto"
@@ -114,7 +112,6 @@ export default function ContactUs() {
           </Box>
         </Box>
       </Box>
-      <Footer />
     </>
   );
 }
