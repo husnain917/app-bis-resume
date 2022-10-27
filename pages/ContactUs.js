@@ -54,7 +54,7 @@ export default function ContactUs() {
                 justifyContent="centers"
                 mt="2%"
               >
-                {buttonData.map((button,index) => {
+                {buttonData.map((button, index) => {
                   return (
                     <div key={index}>
                       <ContactButton button={button} />
