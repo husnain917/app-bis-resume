@@ -1,9 +1,11 @@
 .ctaContainer {
-  background: linear-gradient(280deg,
-      transparent 0%,
-      transparent 18%,
-      rgb(34, 99, 108) 0,
-      rgb(22, 104, 118) 100%);
+  background: linear-gradient(
+    280deg,
+    transparent 0%,
+    transparent 18%,
+    rgb(34, 99, 108) 0,
+    rgb(22, 104, 118) 100%
+  );
   width: 100%;
   height: auto;
   display: flex;
@@ -29,7 +31,7 @@
   color: white;
   font-size: 45px;
   font-weight: bold;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   line-height: normal;
 }
 
@@ -274,7 +276,7 @@
 
 .benefitBtn::after,
 .benefitBtn::before {
-  content: "";
+  content: '';
   position: absolute;
   opacity: 0.3;
   background-color: #027c98;
