@@ -9,7 +9,7 @@ export default function CustomInput({ title, paddingBottom, marginTop,height }) 
         </Text>
         <Input
           variant="flushed"
-          w="90%"
+          w={["100%","100%","90%"]}
           bgColor="#EFF2F9"
           pb={paddingBottom}
           h={height}
