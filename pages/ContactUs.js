@@ -3,10 +3,13 @@ import React from "react";
 import ContactButton from "../src/components/contactUs/ContactButton";
 import CustomInput from "../src/components/contactUs/CustomInput";
 import { buttonData } from "../src/components/contactUs/buttonData";
+import Navbar from "../src/components/navbar/Navbar";
+import Footer from "../src/components/Footer/Footer";
 export default function ContactUs() {
   return (
     <>
       {/* main div  */}
+      <Navbar />
       <Box
         w="100%"
         h="auto"
@@ -17,7 +20,7 @@ export default function ContactUs() {
       >
         {/* inner main div  */}
         <Box w={["100%", "100%", "98%", "70%"]} h="auto" mt="5%">
-          <Text fontSize="3rem" fontWeight="bold" color="#1B6672" pl="10%">
+          <Text fontSize="3rem" fontWeight="750" color="#1B6672" pl="10%">
             Contact Us
           </Text>
           <Text
@@ -36,7 +39,7 @@ export default function ContactUs() {
             w="100%"
             bgColor="white"
             h="auto"
-            pb="100px"
+            pb="60px"
             mt="5%"
             pl={["5%", , , "9%"]}
             pr={["5% ", , "5%"]}
@@ -44,19 +47,21 @@ export default function ContactUs() {
             <Text fontSize="1.5rem" pt="5%">
               Select a topic
             </Text>
-            <Box
-              display="flex"
-              flexDir={"row"}
-              justifyContent="space-around"
-              mt="2%"
-            >
-              {buttonData.map((button) => {
-                return (
-                  <div>
-                    <ContactButton button={button} />
-                  </div>
-                );
-              })}
+            <Box overflow="auto">
+              <Box
+                display="flex"
+                flexDir={"row"}
+                justifyContent="centers"
+                mt="2%"
+              >
+                {buttonData.map((button) => {
+                  return (
+                    <div>
+                      <ContactButton button={button} />
+                    </div>
+                  );
+                })}
+              </Box>
             </Box>
 
             <Box
@@ -88,6 +93,7 @@ export default function ContactUs() {
                 fontSize={["0.9rem", "1.2rem", "1rem", "1rem"]}
                 pr={["0px", "0px", "20px", "20px"]}
                 align={["center", "center", "left"]}
+                mt={["5%", , , "0px"]}
               >
                 This site is protected by reCAPTCHA and the Google Privacy
                 Policy and Terms of Service apply.
@@ -108,6 +114,7 @@ export default function ContactUs() {
           </Box>
         </Box>
       </Box>
+      <Footer />
     </>
   );
 }
