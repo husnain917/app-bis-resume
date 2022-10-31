@@ -1,0 +1,189 @@
+.mainDiv {
+    background-color: #873e23;
+    min-height: fit-content;
+    min-width: fit-content;
+    padding: 60px 210px
+}
+
+.innerMainDiv {
+    max-width: 900px;
+    min-width: 900px;
+    display: flex;
+    height: 100%;
+    background-color: #F8F2EA;
+}
+
+.innerMainDiv1 {
+    background-color: #DDCAB4;
+
+    width: 300px;
+    padding: 0 25px;
+    margin: 0 15px;
+    /* min-height: 100% */
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    overflow-y: hidden;
+    margin-bottom: 30px;
+}
+
+.innerMainDiv2 {
+    background-color: #F8F2EA;
+    width: 600px;
+    padding: 20px 30px;
+    min-height: 100%
+}
+
+.contactHeadingTitle {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-top: 15px;
+    color: white !important;
+    border-bottom: 4px solid white !important;
+    border-radius: 0% !important;
+    padding: 0px !important;
+    text-transform: uppercase;
+}
+
+.ContactDiv {
+    background-color: #2a3035;
+    margin-top: 50px
+}
+
+.contactHeadingTitle:empty::before {
+    opacity: 1 !important;
+}
+
+.contactBody {
+    font-size: 0.95em !important;
+    line-height: 20px;
+    color: black !important;
+    font-weight: 400;
+    margin-right: 1px !important;
+}
+
+.contactBody:empty::before {
+    color: black !important;
+    font-weight: 300;
+}
+
+.contactBody:focus {
+    background-color: #F8F2EA !important;
+
+}
+
+.contactIconMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0;
+    padding-bottom: 5px;
+}
+
+.contactIcon {
+    width: 12%;
+    display: inline-block;
+    height: 33px;
+    text-align: center;
+    margin: 0 4px;
+}
+
+.iconDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.contactIconCotent {
+    width: 95%;
+    display: inline-block
+}
+
+.languageMainDiv {
+    margin-bottom: 50px !important;
+}
+
+.templateceoHeadingTitle {
+
+    border-left: 5px solid black !important;
+    margin: 20px 0px !important;
+    color: black;
+    margin-bottom: 10px !important;
+}
+
+.ProfileCon {
+    font-size: 1.7em;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    border-radius: 0% !important;
+    margin-bottom: 10px !important;
+    padding-left: 5px;
+    color: black;
+}
+
+
+.templateceoHeadingTitle:Empty::before {
+    opacity: 1 !important;
+}
+
+.managerPadding {
+    padding: 4px 5px;
+}
+
+.SkillHead {
+    font-size: 1.7em;
+    font-weight: 700;
+    color: black !important;
+    color: white;
+    margin-top: 10px;
+
+
+
+}
+
+.progressDiv {
+    display: flex;
+    padding: 8px;
+    margin-left: 10px;
+}
+
+.percDiv {
+    padding-right: 2px !important;
+}
+
+.inputData {
+    font-size: 15px !important;
+}
+
+
+.perD {
+    margin-left: -20px !important;
+    font-size: 15px !important;
+    text-align: center !important;
+
+}
+
+.progresslangDiv {
+    margin-top: 2px !important;
+}
+
+.mainSkillDiv {
+    display: flex;
+    flex-direction: column !important;
+}
+
+.progressContent {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.infoCon {
+
+    font-weight: 700 !important;
+    font-size: 18px !important;
+}
