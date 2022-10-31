@@ -43,6 +43,7 @@ function EducationHistory(props) {
               flexDirection="row"
               mt="2px"
               justifyContent="space-between"
+              backgroundColor={"whitesmoke"}
             >
               <Box>
                 <Box>

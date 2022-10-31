@@ -43,6 +43,7 @@ function WorkExperience(props) {
             flexDirection="row"
             justifyContent="space-between"
             height={"70px"}
+            backgroundColor={"whitesmoke"}
           >
             <Box
               display={"flex"}
@@ -50,12 +51,21 @@ function WorkExperience(props) {
               style={styles.workItem}
             >
               <Text
-                value={item.company}
-                placeholder="Company"
-                customclass={"manager-fName manager-template-text-bold"}
-                path={`${path}.${index}.company`}
+                value={item.designation}
+                placeholder="DESIGNATION"
+                // customclass={"manager-fName manager-template-text-bold"}
+                path={`${path}.${index}.designation`}
+                fontSize="16px"
+                fontWeight="600"
               />
-
+              <Text
+                value={item.company}
+                placeholder="Company Name"
+                // customclass={"manager-fName manager-template-text-bold"}
+                path={`${path}.${index}.company`}
+                fontSize="12px"
+                fontWeight="600"
+              />
               <Text
                 value={item.position}
                 placeholder="Position"

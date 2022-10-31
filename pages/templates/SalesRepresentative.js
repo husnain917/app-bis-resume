@@ -7,6 +7,8 @@ import { onBlurField } from "../../store/actions/builderAction";
 import WorkExperience from "../../src/components/salesRepresentative/WorkExperience";
 import Skills from "../../src/components/salesRepresentative/Skills";
 import EducationHistory from "../../src/components/salesRepresentative/EducationHistory";
+import Reference from "../../src/components/salesRepresentative/Reference";
+
 import Profile from "../../src/components/salesRepresentative/Profile";
 import { sampleData } from "../../constants/sampleData";
 import { styles } from "../../src/components/componentStyles/template1Style";
@@ -47,202 +49,223 @@ class Manager extends Component {
           <Box className={width < 500 ? "" : style.a4PaperFashion2}>
             <Box>
               {/* <Profile /> */}
-              <Box display="flex" flexDirection="row">
-                <Box
-                  w="20%"
-                  minH="25em"
-                  display="flex"
-                  justifyContent="center"
-                  flexDirection="column"
-                  backgroundColor="#DBCABA"
-                  zIndex="0.5"
-                ></Box>
+              <Box display="flex" flexDirection="row" background={"whitesmoke"}>
+                <Box w="20%" minH="25em" backgroundColor="#DBCABA"></Box>
               </Box>
-
               <Box
-                bg="white"
-                padding="30px"
-                backgroundColor="white"
-                fontFamily="sans-serif"
                 display="flex"
-                flexDirection="row"
-                justifyContent="space-around"
-                marginTop={"-40%"}
-                width="90%"
-                zIndex="1"
+                alignItems={"center"}
+                justifyContent="center"
+                background={"whitesmoke"}
               >
-                <Box w="40%">
+                <Box
+                  background={"whitesmoke"}
+                  fontFamily="sans-serif"
+                  display="flex"
+                  flexDirection="row"
+                  justifyContent="space-between"
+                  marginTop={"-41%"}
+                  width="92%"
+                >
                   <Box
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
+                    w="50%"
+                    borderColor={"black"}
+                    borderWidth="1px"
+                    padding="15px"
                   >
-                    <Image
-                      src="/Profile.jpeg"
-                      h={"12em"}
-                      w={"12em"}
-                      borderRadius="50%"
-                    />
-                  </Box>
-                  <Box>
-                    <Text
-                      value={resumeData?.aboutMe?.heading}
-                      placeholder="Profile"
-                      customclass={"manager-f1-heading-title"}
-                      path={"aboutme.heading"}
-                      editable={false}
-                      fontSize="1.5em"
-                    />
-                    <Box>
-                      <UnderLineBox />
-                    </Box>
-                    <Text
-                      value={resumeData?.aboutMe?.body}
-                      placeholder="Short and engaging pitch about yourself."
-                      path={"aboutMe.body"}
-                    />
-                  </Box>
-                  <Box>
-                    <Text
-                      value={resumeData?.objective?.Contact}
-                      placeholder="My Contact"
-                      customclass={"manager-f-heading-title"}
-                      path={"objective.contact"}
-                      editable={false}
-                    />
-                    <UnderLineBox />
-                    <Box display="flex" mt="2">
-                      <AiOutlineMail size="26" />
-
-                      <Text
-                        value={resumeData?.profile?.email}
-                        placeholder="Email"
-                        customclass={"manager-f-name"}
-                        path={"profile.email"}
-                        margin={"4px"}
-                        marginLeft={"8px"}
-                        color={"black"}
+                    <Box
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="center"
+                      marginTop={"5"}
+                    >
+                      <Image
+                        src="/Profile.jpeg"
+                        h={"18em"}
+                        w={"18em"}
+                        borderRadius="50%"
                       />
                     </Box>
-                    <Box display="flex" mt="1">
-                      <AiOutlinePhone size="26" />
-                      <Text
-                        value={resumeData?.profile?.phone}
-                        placeholder="Phone"
-                        customclass={"manager-f-name"}
-                        path={"profile.phone"}
-                        margin={"4px"}
-                        marginLeft={"8px"}
-                      />
-                    </Box>
-                    <Box display="flex" mt="1">
-                      <MdLocationOn size="26" />
-                      <Text
-                        value={resumeData?.profile?.address?.city}
-                        placeholder="City"
-                        path={"profile.address.city"}
-                        customclass={"manager-f-name"}
-                        margin={"4px"}
-                        marginLeft={"8px"}
-                      />
-                    </Box>
-                    <Box display="flex" mt="1">
-                      <GiSpiderWeb size="26" />
-                      <Text
-                        value={resumeData?.profile?.websiteURL}
-                        placeholder="Website URL"
-                        customclass={"manager-f-name"}
-                        path={"profile.websiteURL"}
-                        margin={"4px"}
-                        marginLeft={"8px"}
-                      />
-                    </Box>
-                    {/* Skills */}
-                    {resumeData?.skills?.visible && (
-                      <>
-                        <Text
-                          value={resumeData?.skills?.heading || "Skills"}
-                          placeholder="Skills"
-                          customclass={"manager-f1-heading-title"}
-                          path={"skills.heading"}
-                          editable={false}
-                          style={styles.workHeading}
-                        />
-                        <Box>
-                          <UnderLineBox />
-                        </Box>
-                        <Skills
-                          data={
-                            resumeData?.skills?.items.length
-                              ? [...resumeData?.skills?.items]
-                              : [...sampleData?.data?.skills?.items]
-                          }
-                          color={this.props.theme.color}
-                          updater={updater}
-                        />
-                      </>
-                    )}
-                  </Box>
-                </Box>
-                <Box w="50%">
-                  <Box>
-                    <Profile />
-                  </Box>
-                  {/* Education Histroy */}
-                  {resumeData?.education?.visible && (
-                    <>
-                      <Text
-                        value={resumeData?.education?.heading}
-                        placeholder="EDUCATION"
-                        customclass={"manager-f1-heading-title"}
-                        path={"education.heading"}
-                        editable={false}
-                        style={styles.workHeading}
-                      />
+                    <Box padding={"10"}>
                       <Box>
-                        <UnderLineBox />
-                      </Box>
-                      <EducationHistory
-                        data={
-                          resumeData?.education?.items.length
-                            ? [...resumeData?.education?.items]
-                            : [...sampleData?.data?.education?.items]
-                        }
-                        color={this.props.theme.color}
-                        updater={updater}
-                      />
-                    </>
-                  )}
-                  {resumeData?.work?.visible && (
-                    <>
-                      <Box
-                        className={`${style.managerTemplateCol} ${style.managerFHeading}`}
-                      >
                         <Text
-                          value={resumeData?.Professional?.heading}
-                          placeholder="Experience"
-                          customclass={"manager-f1-heading-title"}
-                          color="black"
-                          path={"ProfessionalExperience.heading"}
+                          value={resumeData?.objective?.Contact}
+                          placeholder="My Contact"
+                          customclass={"manager-f-heading-title"}
+                          path={"objective.contact"}
                           editable={false}
-                          style={styles.workHeading}
                         />
-                        <Box>
-                          <UnderLineBox />
-                        </Box>
 
-                        <WorkExperience
-                          data={
-                            resumeData?.work?.items.length
-                              ? [...resumeData?.work?.items]
-                              : [...sampleData?.data?.work?.items]
-                          }
-                          color={this.props.theme.color}
-                          updater={updater}
+                        <Box display="flex" mt="2">
+                          <AiOutlineMail size="26" />
+
+                          <Text
+                            value={resumeData?.profile?.email}
+                            placeholder="Email"
+                            // customclass={"manager-f-name"}
+                            path={"profile.email"}
+                            margin={"4px"}
+                            marginLeft={"8px"}
+                            color={"black"}
+                            marginTop={"0.2em"}
+                          />
+                        </Box>
+                        <Box display="flex" mt="1">
+                          <AiOutlinePhone size="26" />
+                          <Text
+                            value={resumeData?.profile?.phone}
+                            placeholder="Phone"
+                            // customclass={"manager-f-name"}
+                            path={"profile.phone"}
+                            margin={"4px"}
+                            marginLeft={"8px"}
+                            marginTop={"0.2em"}
+                          />
+                        </Box>
+                        <Box display="flex" mt="1">
+                          <MdLocationOn size="26" />
+                          <Text
+                            value={resumeData?.profile?.address?.city}
+                            placeholder="City"
+                            path={"profile.address.city"}
+                            // customclass={"manager-f-name"}
+                            margin={"4px"}
+                            marginLeft={"8px"}
+                            marginTop={"0.2em"}
+                          />
+                        </Box>
+                        <Box display="flex" mt="1">
+                          <GiSpiderWeb size="26" />
+                          <Text
+                            value={resumeData?.profile?.websiteURL}
+                            placeholder="Website URL"
+                            // customclass={"manager-f-name"}
+                            path={"profile.websiteURL"}
+                            margin={"4px"}
+                            marginLeft={"8px"}
+                            marginTop={"0.2em"}
+                          />
+                        </Box>
+                        {/* Skills */}
+                        {resumeData?.skills?.visible && (
+                          <>
+                            <Text
+                              value={resumeData?.skills?.heading || "Skills"}
+                              placeholder="Skills"
+                              customclass={"manager-f1-heading-title"}
+                              path={"skills.heading"}
+                              editable={false}
+                              style={styles.workHeading}
+                            />
+                            <Box></Box>
+                            <Skills
+                              data={
+                                resumeData?.skills?.items.length
+                                  ? [...resumeData?.skills?.items]
+                                  : [...sampleData?.data?.skills?.items]
+                              }
+                              color={this.props.theme.color}
+                              updater={updater}
+                            />
+                          </>
+                        )}
+                        {/* Skills */}
+                        {resumeData?.references?.visible && (
+                          <>
+                            <Text
+                              value={
+                                resumeData?.references?.heading || "Reference"
+                              }
+                              placeholder="Reference"
+                              customclass={"manager-f1-heading-title"}
+                              path={"references.heading"}
+                              editable={false}
+                              style={styles.workHeading}
+                            />
+                            <Reference
+                              data={
+                                resumeData?.references?.items?.length
+                                  ? [...resumeData?.references?.items]
+                                  : [...sampleData?.data?.references?.items]
+                              }
+                              color={color}
+                              updater={updater}
+                            />
+                          </>
+                        )}
+                      </Box>
+                    </Box>
+                  </Box>
+                  <Box w="50%">
+                    <Box marginLeft={"2em"}>
+                      <Box>
+                        <Profile />
+                      </Box>
+                      <Box mt="10">
+                        <Text
+                          value={resumeData?.aboutMe?.body}
+                          placeholder="Short and engaging pitch about yourself."
+                          path={"aboutMe.body"}
                         />
                       </Box>
-                    </>
-                  )}
+                      {/* {" Experience"} */}
+                      {resumeData?.work?.visible && (
+                        <>
+                          <Box
+                            className={`${style.managerTemplateCol} ${style.managerFHeading}`}
+                          >
+                            <Box mb="10">
+                              <Text
+                                value={resumeData?.Professional?.heading}
+                                placeholder="RELEVANT EXPERIENCE
+                              "
+                                customclass={"manager-f1-heading-title"}
+                                color="black"
+                                path={"ProfessionalExperience.heading"}
+                                editable={false}
+                                style={styles.workHeading}
+                              />
+                            </Box>
+
+                            <WorkExperience
+                              data={
+                                resumeData?.work?.items.length
+                                  ? [...resumeData?.work?.items]
+                                  : [...sampleData?.data?.work?.items]
+                              }
+                              color={this.props.theme.color}
+                              updater={updater}
+                            />
+                          </Box>
+                        </>
+                      )}
+                      {/* Education Histroy */}
+                      {resumeData?.education?.visible && (
+                        <>
+                          <Text
+                            value={resumeData?.education?.heading}
+                            placeholder="
+                            EDUCATION BACKGROUND
+                            "
+                            customclass={"manager-f1-heading-title"}
+                            path={"education.heading"}
+                            editable={false}
+                            style={styles.workHeading}
+                          />
+
+                          <EducationHistory
+                            data={
+                              resumeData?.education?.items.length
+                                ? [...resumeData?.education?.items]
+                                : [...sampleData?.data?.education?.items]
+                            }
+                            color={this.props.theme.color}
+                            updater={updater}
+                          />
+                        </>
+                      )}
+                    </Box>
+                  </Box>
                 </Box>
               </Box>
             </Box>

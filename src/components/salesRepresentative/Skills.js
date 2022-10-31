@@ -57,41 +57,26 @@ function Skills(props) {
           <Box
             display="flex"
             flexDirection="row"
-            justifyContent={"space-between"}
             alignItems="center"
             pt={1}
             pb={1}
+            backgroundColor={"whitesmoke"}
           >
+            <Box
+              height={"1"}
+              width={"1"}
+              borderRadius={"50%"}
+              mr={"2"}
+              background="black"
+            ></Box>
             <Text
               value={item?.name}
               placeholder="Skill"
               // customclass={"manager-fName"}
               path={`${path}.${index}.name`}
-              fontSize="18px"
+              fontSize="1.2em"
               fontWeight="600"
             />
-            <Box display={"flex"} flexDirection="row" marginRight={8}>
-              {Array(5)
-                .fill(0)
-                .map((_, index) => (
-                  <>
-                    <Box margin={"6px"}>
-                      <BsCircleFill
-                        size={"0.8em"}
-                        key={index}
-                        color={
-                          (hoverValue || currentValue) > index
-                            ? "#077BBD"
-                            : "black"
-                        }
-                        onClick={() => handleClick(index + 1)}
-                        onMouseOver={() => handleMouseOver(index + 1)}
-                        onMouseLeave={handleMouseLeave}
-                      />
-                    </Box>
-                  </>
-                ))}
-            </Box>
 
             {/* {data.length - 1 !== index && <p className="aPadding">|</p>} */}
           </Box>

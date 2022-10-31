@@ -13,25 +13,24 @@ export default function Profile() {
         style={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
         }}
       >
         <Text
           value={resumeData?.profile?.firstName}
           placeholder="First Name"
-          customclass={"fDesigner2"}
+          // customclass={"fDesigner2"}
           path={"profile.firstName"}
           fontSize="60px"
           color="black"
         />
-        &nbsp;
         <Text
           value={resumeData?.profile?.lastName}
           placeholder="Last Name"
-          customclass={"fDesigner2a"}
+          // customclass={"fDesigner2a"}
           path={"profile.lastName"}
           fontSize="30px"
           color="black"
+          marginLeft="2px"
         />
       </div>
     </>
