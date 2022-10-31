@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Text } from "../../src/components/FashionDesigner2/index";
-import style from "../../styles/templates/fashion2.module.scss";
+import { Text } from "../../src/components/salesRepresentative/index";
+import style from "../../styles/templates/salesRepresentative.module.scss";
 import { onBlurField } from "../../store/actions/builderAction";
 
-import WorkExperience from "../../src/components/FashionDesigner2/WorkExperience";
-import Skills from "../../src/components/FashionDesigner2/Skills";
-import EducationHistory from "../../src/components/FashionDesigner2/EducationHistory";
-import Profile from "../../src/components/FashionDesigner2/Profile";
+import WorkExperience from "../../src/components/salesRepresentative/WorkExperience";
+import Skills from "../../src/components/salesRepresentative/Skills";
+import EducationHistory from "../../src/components/salesRepresentative/EducationHistory";
+import Profile from "../../src/components/salesRepresentative/Profile";
 import { sampleData } from "../../constants/sampleData";
 import { styles } from "../../src/components/componentStyles/template1Style";
 
@@ -55,6 +55,7 @@ class Manager extends Component {
                   justifyContent="center"
                   flexDirection="column"
                   backgroundColor="#DBCABA"
+                  zIndex="0.5"
                 ></Box>
               </Box>
 
@@ -66,8 +67,11 @@ class Manager extends Component {
                 display="flex"
                 flexDirection="row"
                 justifyContent="space-around"
+                marginTop={"-40%"}
+                width="90%"
+                zIndex="1"
               >
-                <Box w="50%">
+                <Box w="40%">
                   <Box
                     display="flex"
                     alignItems="center"
@@ -78,8 +82,6 @@ class Manager extends Component {
                       h={"12em"}
                       w={"12em"}
                       borderRadius="50%"
-                      marginTop="-15%"
-                      marginLeft="10px"
                     />
                   </Box>
                   <Box>

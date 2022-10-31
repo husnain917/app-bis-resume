@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { onBlurField } from "../../../store/actions/builderAction";
-import styles from "../../../styles/templates/fashion2.module.scss";
+import styles from "../../../styles/templates/salesRepresentative.module.scss";
 import { colors } from "../../../constants/colors";
 import { Box, Image } from "@chakra-ui/react";
 
