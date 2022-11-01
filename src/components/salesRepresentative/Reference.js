@@ -36,44 +36,64 @@ function Reference(props) {
     <div>
       <Dnd
         data={data}
+        bg="black"
         direction="horizontall"
         reorder={(e) => onOrderUpdate(e)}
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <>
+          <Box>
             <Box>
-              <Text
-                value={item.name}
-                placeholder="Reference Name"
-                path={`${path}.${index}.name`}
-                color="black"
-                fontSize="1.3rem"
-                textAlign="left"
-                lineHeight="20px"
-                fontWeight="bold"
-                marginRight="60px"
-              />
-
-              <Text
-                value={item.profession}
-                placeholder="Profession"
-                path={`${path}.${index}.profession`}
-                color="grey"
-                fontSize="1rem"
-                textAlign="left"
-              />
+              <Box marginY={"4"}>
+                <Text
+                  value={item.name}
+                  placeholder="name"
+                  path={`${path}.${index}.name`}
+                  color="black"
+                  fontSize="1rem"
+                  textAlign="left"
+                />
+              </Box>
+              <Box display={"flex"} alignItems={"center"}>
+                <Text
+                  value={item.profession}
+                  placeholder="Profession"
+                  path={`${path}.${index}.profession`}
+                  color="black"
+                  fontSize="1rem"
+                  textAlign="left"
+                />
+                ,
+                <Text
+                  value={item.company}
+                  placeholder="Company Name"
+                  // customclass={"manager-fName manager-template-text-bold"}
+                  path={`${path}.${index}.company`}
+                  color="black"
+                  fontSize="1rem"
+                  textAlign="left"
+                />
+              </Box>
               <Text
                 value={item.phone}
                 placeholder="123-456-7890"
                 path={`${path}.${index}.phone`}
-                color="grey"
+                color="black"
+                fontSize="1rem"
+                textAlign="left"
+                lineHeight="10px  "
+              />
+              <Text
+                value={item.email}
+                placeholder="ahsanbutt515@icloud.com"
+                path={`${path}.${index}.phone`}
+                color="black"
                 fontSize="1rem"
                 textAlign="left"
                 lineHeight="10px  "
               />
             </Box>
-          </>
+          </Box>
         )}
       />
     </div>

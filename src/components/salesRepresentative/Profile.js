@@ -18,7 +18,6 @@ export default function Profile() {
         <Text
           value={resumeData?.profile?.firstName}
           placeholder="First Name"
-          // customclass={"fDesigner2"}
           path={"profile.firstName"}
           fontSize="60px"
           color="black"
@@ -26,9 +25,8 @@ export default function Profile() {
         <Text
           value={resumeData?.profile?.lastName}
           placeholder="Last Name"
-          // customclass={"fDesigner2a"}
           path={"profile.lastName"}
-          fontSize="30px"
+          fontSize="60px"
           color="black"
           marginLeft="2px"
         />

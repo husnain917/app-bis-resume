@@ -4,7 +4,7 @@ import equal from "deep-equal";
 import { Tooltip } from "react-tippy";
 import { Image } from "@chakra-ui/react";
 
-import styles from "../../../styles/templates/dnd.module.scss";
+import styles from "../../../styles/templates/dndSR.module.scss";
 
 const getDragIconStyle = () => ({
   userSelect: "none",

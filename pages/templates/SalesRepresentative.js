@@ -86,7 +86,7 @@ class Manager extends Component {
                         borderRadius="50%"
                       />
                     </Box>
-                    <Box padding={"10"}>
+                    <Box padding={"5"}>
                       <Box>
                         <Text
                           value={resumeData?.objective?.Contact}
@@ -171,19 +171,20 @@ class Manager extends Component {
                         {/* Refrences */}
                         {resumeData?.skills?.visible && (
                           <>
-                            <Text
-                              value={resumeData?.skills?.heading || "Reference"}
-                              placeholder="Reference"
-                              customclass={"manager-f1-heading-title"}
-                              path={"skills.heading"}
-                              editable={false}
-                              style={styles.workHeading}
-                            />
-                            <Skills
+                            <Box marginY={"4"}>
+                              <Text
+                                placeholder="Reference"
+                                color="black"
+                                fontSize="1.1rem"
+                                fontWeight="600"
+                                marginRight="60px"
+                              />
+                            </Box>
+                            <Reference
                               data={
-                                resumeData?.skills?.items.length
-                                  ? [...resumeData?.skills?.items]
-                                  : [...sampleData?.data?.skills?.items]
+                                resumeData?.references?.items.length
+                                  ? [...resumeData?.references?.items]
+                                  : [...sampleData?.data?.references?.items]
                               }
                               color={this.props.theme.color}
                               updater={updater}
