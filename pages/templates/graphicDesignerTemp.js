@@ -2,6 +2,7 @@ import {
   Box,
   Container,
 } from '@chakra-ui/react';
+import { Tooltip } from 'react-tippy';
 import Image from 'next/image';
 import React from 'react';
 import avatar from "../../public/avatar.jpg";
@@ -14,6 +15,7 @@ import {
   FaLocationArrow,
   FaIntercom,
 } from "react-icons/fa";
+import Link from "next/link";
 import Underline from '../../src/components/graphicDesignerTemp/Underline';
 import DesignerExpertise from "../../src/components/graphicDesignerTemp/DesignerExpertise";
 import DigitalEducation from "../../src/components/graphicDesignerTemp/DigitalEducation";
@@ -26,6 +28,15 @@ export default function graphicDesignTemp() {
 
   return (
     <>
+      <Link href={"/templates"}>
+        <div className={styles.swapCont}>
+          <Tooltip title="Change Template" arrow distance={20}>
+            <div className={styles.swap}>
+              <img src="/icons/swap.png" />
+            </div>
+          </Tooltip>
+        </div>
+      </Link>
       <Container
         minW={'70%'}
         display={'flex'}
