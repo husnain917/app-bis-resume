@@ -68,7 +68,7 @@ class Manager extends Component {
                   width="92%"
                 >
                   <Box
-                    w="50%"
+                    w="40%"
                     borderColor={"black"}
                     borderWidth="1px"
                     padding="15px"
@@ -77,12 +77,12 @@ class Manager extends Component {
                       display="flex"
                       alignItems="center"
                       justifyContent="center"
-                      marginTop={"5"}
+                      marginTop={"3"}
                     >
                       <Image
                         src="/Profile.jpeg"
-                        h={"18em"}
-                        w={"18em"}
+                        h={"16em"}
+                        w={"16em"}
                         borderRadius="50%"
                       />
                     </Box>
@@ -172,8 +172,8 @@ class Manager extends Component {
                         {resumeData?.skills?.visible && (
                           <>
                             <Text
-                              value={resumeData?.skills?.heading || "Skills"}
-                              placeholder="Skills"
+                              value={resumeData?.skills?.heading || "Reference"}
+                              placeholder="Reference"
                               customclass={"manager-f1-heading-title"}
                               path={"skills.heading"}
                               editable={false}
@@ -193,7 +193,7 @@ class Manager extends Component {
                       </Box>
                     </Box>
                   </Box>
-                  <Box w="50%">
+                  <Box w="60%">
                     <Box marginLeft={"2em"}>
                       <Box>
                         <Profile />
