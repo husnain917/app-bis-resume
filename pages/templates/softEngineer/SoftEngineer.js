@@ -168,7 +168,7 @@ export default function SoftEngineer() {
                 ml="18%"
               />
               <Box>
-                <Box bgColor="black" w="60%" h="2px"></Box>
+                <Box bgColor="black" w="70%" h="2px"></Box>
                 <Text
                   value={resumeData?.languages?.body?.heading}
                   placeholder="SKILLS"
@@ -176,7 +176,7 @@ export default function SoftEngineer() {
                   path={"objective.heading"}
                   editable={true}
                 />
-                <Box bgColor="black" w="60%" h="2px"></Box>
+                <Box bgColor="black" w="70%" h="2px"></Box>
               </Box>
               <Languages
                 data={
@@ -188,6 +188,7 @@ export default function SoftEngineer() {
                 updater={updater}
               />
               <HeadingText
+              width="70%"
                 heading="EXPERIENCE"
                 marginTop="8%"
                 textSize="1.5rem"
