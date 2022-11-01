@@ -5,6 +5,7 @@ import {
   ListItem,
   UnorderedList,
 } from '@chakra-ui/react'
+import { Tooltip } from 'react-tippy';
 import Image from 'next/image';
 import React from 'react'
 import avatar from "../../../public/avatar.jpg";
@@ -12,6 +13,7 @@ import {
   FaRegUser,
   FaSignLanguage,
 } from "react-icons/fa";
+import Link from "next/link";
 import { CUSTOM_CONTENT, CUSTOM_LINKS, RANGE_DATA } from "../../../src/components/fashionTemp/fashionConstant";
 import { Text } from "../../../src/components/template1/index";
 import FashionEducation from "../../../src/components/fashionTemp/FashionEducation";
@@ -32,6 +34,15 @@ export default function fashionTemp() {
 
   return (
     <>
+      <Link href={"/templates"}>
+        <div className={styles.swapCont}>
+          <Tooltip title="Change Template" arrow distance={20}>
+            <div className={styles.swap}>
+              <img src="/icons/swap.png" />
+            </div>
+          </Tooltip>
+        </div>
+      </Link>
       <Container
         minW={'70%'}
         display={'flex'}
