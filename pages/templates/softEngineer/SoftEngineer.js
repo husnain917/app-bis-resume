@@ -37,7 +37,7 @@ export default function SoftEngineer() {
             bgColor="#FFFFF"
             pr="7%"
             pl="7%"
-            maxW="950px"
+            maxW="2150px"
             minW="950px"
             mt="6%"
           >
