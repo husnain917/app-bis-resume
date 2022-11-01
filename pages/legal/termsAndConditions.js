@@ -12,8 +12,6 @@ import { TABLE_CONTENT_DATA, PREMIUM_ACCOUNT_DATA, PREMIUM_ACCOUNT_DATA_LINKS, C
 import Underline from "../../src/components/aaronGraphicTemp/Underline";
 
 export default function termsAndConditions() {
-
-
     return (
         <>
             <Container
