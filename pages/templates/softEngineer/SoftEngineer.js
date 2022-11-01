@@ -47,19 +47,19 @@ export default function SoftEngineer() {
                 value={resumeData?.profile?.firstName}
                 placeholder="RICHARD "
                 customclass={styles.fullName}
-                fontSize="3.5rem"
+                fontSize="3.2rem"
                 path={"profile.firstName"}
-                lineHeight="60px"
+                lineHeight="40px"
               />
               &nbsp;
               <Text
                 value={resumeData?.profile?.lastName}
                 placeholder="SANCHEZ"
                 // customclas={`${"fullName"} ${styles.fname}`}
-                fontSize="3.4rem"
+                fontSize="3.2rem"
                 customclass={styles.fullName}
                 path={`"profile.lastName"`}
-                lineHeight="20px"
+                lineHeight="40px"
               />
               <Box mt="8%">
                 <Box bgColor="black" w="100%" h="2px"></Box>
@@ -188,7 +188,7 @@ export default function SoftEngineer() {
                 updater={updater}
               />
               <HeadingText
-              width="70%"
+                width="70%"
                 heading="EXPERIENCE"
                 marginTop="8%"
                 textSize="1.5rem"
