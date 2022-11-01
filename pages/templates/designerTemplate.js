@@ -61,7 +61,7 @@ export default function designerTemplate() {
                             {/* firstName */}
                             <Text
                                 value={resumeEditor?.resumeData?.profile?.firstName}
-                                placeholder="AARON LOEB"
+                                placeholder="Your Name"
                                 customclass={`${styles.firstNameStyle}`}
                                 path={"profile.firstName"}
                             />
@@ -75,7 +75,7 @@ export default function designerTemplate() {
                     {/* lastName */}
                     <Text
                         value={resumeEditor?.resumeData?.profile?.lastName}
-                        placeholder="DESIGNER"
+                        placeholder="Profession"
                         customclass={`${styles.lastNameStyle}`}
                         path={"profile.lastName"}
                     />

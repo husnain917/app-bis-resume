@@ -116,6 +116,16 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
+          <Link href="/templates/TemplateBabySitter">
+            <img
+              src="templateBaby.png"
+              alt=" Baby Resume"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
           <Link href="/templates/hybridTemplate">
             <img
               src="Hybrid_Template_Design.png"
@@ -146,6 +156,16 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
+          <Link href="/templates/GraphicDesigner2">
+            <img
+              src="gdBanner2.jpg"
+              alt="Graphic_Designer_Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
           <Link href="/templates/template5">
             <img
               src="GraphicDesigner5.png"
@@ -170,6 +190,106 @@ function Templates() {
             <img
               src="designerTemplate.PNG"
               alt="Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/aaronGraphicTemp">
+            <img
+              src="graphicTemplate.PNG"
+              alt="Graphic Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/GraphicDesigner8">
+            <img
+              src="graphDes8.png"
+              alt="Graphic Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/marketingManager">
+            <img
+              src="MarkManager2.png"
+              alt="Marketing Manager Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/GraphicDesigner3">
+            <img
+              src="gdBanner3.jpg"
+              alt="Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/harumiGraphicTemp">
+            <img
+              src="harumiTemplate.PNG"
+              alt="Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/TemplateContentCreater">
+            <img
+              src="templateContent.png"
+              alt="Content Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/ExecutiveTemp">
+            <img
+              src="ExecTemp.png"
+              alt=" Executive Resume Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/graphicDesigner">
+            <img
+              src="graphic.png"
+              alt=" Graphic Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/StudentTemplate">
+            <img
+              src="studentTemp.png"
+              alt=" Student Resume Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/TechTemplate">
+            <img
+              src="TechTemp.png"
+              alt="Tech Resume Template"
               height="200px"
               width="250px"
             />
