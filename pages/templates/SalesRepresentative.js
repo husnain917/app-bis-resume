@@ -157,7 +157,6 @@ class Manager extends Component {
                               editable={false}
                               style={styles.workHeading}
                             />
-                            <Box></Box>
                             <Skills
                               data={
                                 resumeData?.skills?.items.length
@@ -169,26 +168,24 @@ class Manager extends Component {
                             />
                           </>
                         )}
-                        {/* Skills */}
-                        {resumeData?.references?.visible && (
+                        {/* Refrences */}
+                        {resumeData?.skills?.visible && (
                           <>
                             <Text
-                              value={
-                                resumeData?.references?.heading || "Reference"
-                              }
-                              placeholder="Reference"
+                              value={resumeData?.skills?.heading || "Skills"}
+                              placeholder="Skills"
                               customclass={"manager-f1-heading-title"}
-                              path={"references.heading"}
+                              path={"skills.heading"}
                               editable={false}
                               style={styles.workHeading}
                             />
-                            <Reference
+                            <Skills
                               data={
-                                resumeData?.references?.items?.length
-                                  ? [...resumeData?.references?.items]
-                                  : [...sampleData?.data?.references?.items]
+                                resumeData?.skills?.items.length
+                                  ? [...resumeData?.skills?.items]
+                                  : [...sampleData?.data?.skills?.items]
                               }
-                              color={color}
+                              color={this.props.theme.color}
                               updater={updater}
                             />
                           </>
@@ -214,7 +211,7 @@ class Manager extends Component {
                           <Box
                             className={`${style.managerTemplateCol} ${style.managerFHeading}`}
                           >
-                            <Box mb="10">
+                            <Box mb="6">
                               <Text
                                 value={resumeData?.Professional?.heading}
                                 placeholder="RELEVANT EXPERIENCE
@@ -241,7 +238,7 @@ class Manager extends Component {
                       )}
                       {/* Education Histroy */}
                       {resumeData?.education?.visible && (
-                        <>
+                        <Box mb="8">
                           <Text
                             value={resumeData?.education?.heading}
                             placeholder="
@@ -262,7 +259,7 @@ class Manager extends Component {
                             color={this.props.theme.color}
                             updater={updater}
                           />
-                        </>
+                        </Box>
                       )}
                     </Box>
                   </Box>

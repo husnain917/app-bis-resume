@@ -42,7 +42,7 @@ function Reference(props) {
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
           <>
-            <Box mt="12%" w="100%" display="flex" flexDir="column" ml="40px">
+            <Box>
               <Text
                 value={item.name}
                 placeholder="Reference Name"

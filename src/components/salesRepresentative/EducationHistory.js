@@ -7,7 +7,7 @@ import {
   addNewObj,
   deleteObjInArray,
 } from "../../../store/actions/builderAction";
-import { styles } from "../componentStyles/template1Style";
+import { styles } from "./saleReprestatviveStyles";
 import { Box } from "@chakra-ui/react";
 
 function EducationHistory(props) {
@@ -30,64 +30,102 @@ function EducationHistory(props) {
   const { data } = props;
 
   return (
-    <div style={styles.mt_10}>
+    <Box style={styles.mt_10}>
       <Dnd
         data={data}
         reorder={(e) => onOrderUpdate(e)}
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <>
+          <Box
+            display={"flex"}
+            flexDirection="column"
+            justifyContent="space-between"
+            height={"90px"}
+            padding={"5px"}
+            backgroundColor={"whitesmoke"}
+          >
+            <Box
+              display={"flex"}
+              flexDirection="column"
+              style={styles.workItem}
+            >
+              <Text
+                value={item.designation}
+                placeholder="Course Name"
+                // customclass={"manager-fName manager-template-text-bold"}
+                path={`${path}.${index}.designation`}
+                fontSize="16px"
+                fontWeight="600"
+              />
+              <Box
+                display="flex"
+                className="manager-template-row"
+                style={styles.workItem}
+                mt="1"
+              >
+                <Text
+                  value={item.company}
+                  placeholder="University Name"
+                  // customclass={"manager-fName manager-template-text-bold"}
+                  path={`${path}.${index}.company`}
+                  fontSize="14px"
+                  fontWeight="500"
+                />
+                <Box mx={"1"} mb={"1"}>
+                  <p style={styles.paraStyles(true)}> | </p>
+                </Box>
+                <Text
+                  value={item.startDate}
+                  placeholder="Start Date"
+                  // customclass={"manager-fName"}
+                  path={`${path}.${index}.startDate`}
+                  fontSize="14px"
+                  fontWeight="500"
+                />
+                <p style={styles.paraStyles(true)}>-</p>
+                <Text
+                  value={item.endDate}
+                  placeholder="End Date"
+                  // customclass={"manager-fName"}
+                  path={`${path}.${index}.endDate`}
+                  max="9999-12-31"
+                  fontSize="14px"
+                  fontWeight="500"
+                />
+              </Box>
+              <p style={styles.paraStyles(true)}> </p>
+            </Box>
             <Box
               display="flex"
               flexDirection="row"
-              mt="2px"
-              justifyContent="space-between"
+              alignItems="center"
+              pt={1}
+              pb={1}
               backgroundColor={"whitesmoke"}
             >
-              <Box>
-                <Box>
-                  <Text
-                    value={item.institution}
-                    placeholder="College Name"
-                    customclass={"manager-fName"}
-                    path={`${path}.${index}.institution`}
-                  />
-                </Box>
-                <Box>
-                  <Text
-                    value={item.degree}
-                    placeholder="Degree"
-                    customclass={"manager-fName manager-template-text-bold"}
-                    path={`${path}.${index}.degree`}
-                  />
-                </Box>
-                <p style={styles.paraStyles(true)}></p>
+              <Box
+                height={"1"}
+                width={"1"}
+                borderRadius={"50%"}
+                mr={"2"}
+                background="black"
+              ></Box>
+              <Text
+                value={item?.summary}
+                placeholder="Summary"
+                // customclass={"manager-fName"}
+                path={`${path}.${index}.summary`}
+                fontSize="1em"
+                fontWeight="500"
+              />
 
-                <Box>
-                  <Text
-                    value={item.summary}
-                    placeholder="Summary"
-                    customclass={"manager-fName"}
-                    path={`${path}.${index}.summary`}
-                    style={styles.experienceText1}
-                  />
-                </Box>
-              </Box>
-              <Box>
-                <Text
-                  value={item.endDate}
-                  placeholder="Year (YYYY)"
-                  customclass={"manager-fName"}
-                  path={`${path}.${index}.endDate`}
-                />
-              </Box>
               {/* {data.length - 1 !== index && <p className="aPadding">|</p>} */}
             </Box>
-          </>
+          </Box>
         )}
       />
-    </div>
+    </Box>
   );
 }
 export default EducationHistory;

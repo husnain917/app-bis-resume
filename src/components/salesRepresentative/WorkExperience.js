@@ -7,7 +7,7 @@ import {
   addNewObj,
   deleteObjInArray,
 } from "../../../store/actions/builderAction";
-import { styles } from "../financialStyles/template1Style";
+import { styles } from "./saleReprestatviveStyles";
 import { Box, Image } from "@chakra-ui/react";
 import Responsibilities from "./Responsibilities";
 import { connect } from "react-redux";
@@ -40,9 +40,10 @@ function WorkExperience(props) {
         renderItem={(item, index) => (
           <Box
             display={"flex"}
-            flexDirection="row"
+            flexDirection="column"
             justifyContent="space-between"
-            height={"70px"}
+            height={"90px"}
+            padding={"5px"}
             backgroundColor={"whitesmoke"}
           >
             <Box
@@ -58,50 +59,69 @@ function WorkExperience(props) {
                 fontSize="16px"
                 fontWeight="600"
               />
-              <Text
-                value={item.company}
-                placeholder="Company Name"
-                // customclass={"manager-fName manager-template-text-bold"}
-                path={`${path}.${index}.company`}
-                fontSize="12px"
-                fontWeight="600"
-              />
-              <Text
-                value={item.position}
-                placeholder="Position"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.position`}
-              />
-              <p style={styles.paraStyles(true)}></p>
-              <Text
-                value={item.summary}
-                placeholder="Summary"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.summary`}
-                style={styles.summary}
-                listItem="Summary"
-              />
+              <Box
+                display="flex"
+                className="manager-template-row"
+                style={styles.workItem}
+                mt="1"
+              >
+                <Text
+                  value={item.company}
+                  placeholder="Company Name"
+                  // customclass={"manager-fName manager-template-text-bold"}
+                  path={`${path}.${index}.company`}
+                  fontSize="14px"
+                  fontWeight="500"
+                />
+                <Box mx={"1"} mb={"1"}>
+                  <p style={styles.paraStyles(true)}> | </p>
+                </Box>
+                <Text
+                  value={item.startDate}
+                  placeholder="Start Date"
+                  // customclass={"manager-fName"}
+                  path={`${path}.${index}.startDate`}
+                  fontSize="14px"
+                  fontWeight="500"
+                />
+                <p style={styles.paraStyles(true)}>-</p>
+                <Text
+                  value={item.endDate}
+                  placeholder="End Date"
+                  // customclass={"manager-fName"}
+                  path={`${path}.${index}.endDate`}
+                  max="9999-12-31"
+                  fontSize="14px"
+                  fontWeight="500"
+                />
+              </Box>
+              <p style={styles.paraStyles(true)}> </p>
             </Box>
-
             <Box
               display="flex"
-              className="manager-template-row"
-              style={styles.workItem}
+              flexDirection="row"
+              alignItems="center"
+              pt={1}
+              pb={1}
+              backgroundColor={"whitesmoke"}
             >
+              <Box
+                height={"1"}
+                width={"1"}
+                borderRadius={"50%"}
+                mr={"2"}
+                background="black"
+              ></Box>
               <Text
-                value={item.startDate}
-                placeholder="Start Date"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.startDate`}
+                value={item?.summary}
+                placeholder="Summary"
+                // customclass={"manager-fName"}
+                path={`${path}.${index}.summary`}
+                fontSize="1em"
+                fontWeight="500"
               />
-              <p style={styles.paraStyles(true)}>-</p>
-              <Text
-                value={item.endDate}
-                placeholder="End Date"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.endDate`}
-                max="9999-12-31"
-              />
+
+              {/* {data.length - 1 !== index && <p className="aPadding">|</p>} */}
             </Box>
           </Box>
         )}
