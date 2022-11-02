@@ -295,6 +295,16 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/fashionTemps/fashionTemp">
+            <img
+              src="fashionTemp.PNG"
+              alt="Fashion Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
       </SimpleGrid>
     </div>
   );
