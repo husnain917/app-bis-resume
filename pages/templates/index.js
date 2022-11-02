@@ -53,6 +53,17 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
+          <Link href="/templates/FinancialExpert.js">
+            <img
+              src="financialAdvisor.png"
+              alt="Fashion Designer Temmplate 4"
+              height={"340"}
+              width={270}
+              mt={-2}
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
           <Link href="/templates/FashionDesigner2">
             <Image
               src="FashionDesigner2.png"
