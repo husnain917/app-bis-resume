@@ -44,10 +44,11 @@ function Templates() {
         <Box className="cursor">
           <Link href="/templates/SalesRepresentative">
             <img
-              src="FashTemp4.png"
+              src="salesReprentative.png"
               alt="Fashion Designer Temmplate 4"
-              height="200px"
-              width="250px"
+              height={"340"}
+              width={270}
+              mt={-2}
             />
           </Link>
         </Box>
