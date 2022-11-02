@@ -1,0 +1,78 @@
+.profileText {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.contentEditableHybridContainer {
+  padding: 4px 2px;
+  white-space: pre-line;
+
+  border-radius: 4px;
+  outline: 0;
+}
+.contentEditableHybridContainer:empty::before {
+  content: attr(data-placeholder);
+  opacity: 0.6;
+}
+
+.contentEditableHybridContainer:focus {
+  border-radius: 4px;
+  background-color: transparent;
+  opacity: 1;
+  outline: 0;
+}
+
+.contentEditableHybridContainer:active {
+  border-radius: 4px;
+  outline: 0;
+}
+
+.contentEditableHybridContainer:visited {
+  border-radius: 4px;
+  outline: 0;
+}
+.ProfessionHybrid {
+  font-weight: 500;
+  font-size: 1.4em;
+  padding: 0;
+  line-height: 30px;
+  text-align: left;
+  color: #319795;
+}
+.hybridName {
+  color: #313c4e;
+  text-align: left;
+}
+.programText {
+  font-size: 20px;
+  font-weight: 700;
+}
+.institute {
+  font-size: 20px;
+  font-weight: 500;
+}
+.date {
+  font-size: 14px;
+  font-weight: 500;
+  color: #449399;
+}
+.description {
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+}
+.projectTitleText {
+  font-size: 18px;
+  font-weight: 500;
+}
+.skillText {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 3px;
+}
+.languageText {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 1px;
+}

@@ -1,0 +1,55 @@
+.name {
+  color: white;
+  text-align: left;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.profession {
+  color: white;
+  font-size: 21px;
+  font-weight: 600;
+  padding: 0px !important;
+  margin-bottom: 20px;
+}
+.profileText {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.skillText {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+.programText {
+  font-size: 17px;
+  color: black;
+  font-weight: 700;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 430px;
+  max-width: 430px;
+}
+.company {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 430px;
+  max-width: 430px;
+}
+.description {
+  font-size: 15px;
+  font-weight: 500;
+  min-width: 430px;
+  max-width: 430px;
+}
+.date {
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}

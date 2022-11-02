@@ -1,8 +1,8 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { onBlurField } from "../../../store/actions/builderAction";
-import styles from "../../../styles/templates/text.module.scss";
-import { colors } from "../../../constants/colors";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { onBlurField } from '../../../store/actions/builderAction';
+import styles from '../../../styles/templates/Fashion.module.css';
+import { colors } from '../../../constants/colors';
 
 function Text(props) {
   const dispatch = useDispatch();
@@ -12,23 +12,24 @@ function Text(props) {
   const [addBorder, setAddBorder] = React.useState(false);
 
   const _onBlur = (e) => {
-    const data = e.textContent ? e.textContent : "";
+    const data = e.textContent ? e.textContent : '';
     setAddBorder(false);
     dispatch(onBlurField(data, props.path));
   };
 
   const { value, customclass, tag, path, editable = true } = props;
-  const TagName = tag ? tag : "p";
+  const TagName = tag ? tag : 'p';
 
   return (
     <div className={styles.main}>
       <TagName
         style={{
-          border: "none",
-          borderColor: addBorder ? "#4267b2" : "rgba(0, 0, 0, 0.23)",
+          border: 'none',
+          borderColor: addBorder ? '#4267b2' : 'rgba(0, 0, 0, 0.23)',
           fontSize: props.fontSize,
           lineHeight: props.lineHeight,
-          color:props.color
+          color: props.color,
+         
         }}
         // style={{
 
@@ -40,14 +41,14 @@ function Text(props) {
         onPaste={(e) => {
           var bufferText = (
             (e.originalEvent || e).clipboardData || window.clipboardData
-          ).getData("Text");
+          ).getData('Text');
           e.preventDefault();
-          document.execCommand("insertText", false, bufferText);
+          document.execCommand('insertText', false, bufferText);
         }}
         suppressContentEditableWarning="true"
         onBlur={(e) => _onBlur(e.currentTarget)}
         dangerouslySetInnerHTML={{ __html: value }}
-        className={styles.contentEditableContainer + " " + customclass}
+        className={styles.contentEditableContainer + ' ' + customclass}
         data-placeholder={props.placeholder}
         {...props}
         onClick={() => {

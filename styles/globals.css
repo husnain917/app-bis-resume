@@ -1,4 +1,3 @@
-
 html,
 body {
   padding: 0;
@@ -27,67 +26,188 @@ a {
   background-color: #efefef;
   outline: 0;
 }
+
 .content-editable-container:active {
   border-radius: 4px;
   outline: 0;
 }
+
 .content-editable-container:visited {
   border-radius: 4px;
   outline: 0;
 }
+
 .manager-f-heading-title {
   font-size: 1.5em;
   font-weight: 700;
   margin-top: 15px;
   text-transform: uppercase;
 }
+.manager-f1-heading-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
 .manager-template-text-bold {
   font-weight: bold;
 }
+
 .manager-f-name {
   font-size: 0.95em !important;
   line-height: 20px;
 }
+
+.manager-jobtitle {
+  font-size: 1.2em !important;
+  line-height: 20px;
+  font-weight: bold;
+}
+
 .manager-fName {
   font-size: 0.95em !important;
   line-height: 20px;
 }
-input[type="date"]:in-range::-webkit-datetime-edit-year-field,
-input[type="date"]:in-range::-webkit-datetime-edit-month-field,
-input[type="date"]:in-range::-webkit-datetime-edit-day-field,
-input[type="date"]:in-range::-webkit-datetime-edit-text {
+.manager-skillCeo {
+  font-size: 0.95em !important;
+  word-wrap: break-word !important;
+  display: inline-block !important;
+  width: 280px;
+  margin-left: 14px !important;
+}
+.skillCeoMain {
+  overflow: hidden;
+  position: relative;
+}
+.manager-skillCeo:focus {
+  background-color: inherit !important;
+}
+.skillCeobody {
+  display: inline-block;
+}
+.skillCeodot {
+  font-weight: bold !important;
+  font-size: x-large;
+  padding: 0 3px;
+  line-height: 10px !important;
+  display: inline-block;
+  width: 15px;
+  height: 100% !important;
+  position: absolute;
+  top: 2px;
+}
+.manager-psummary {
+  font-size: 0.95em !important;
+
+  padding: 4px 5px !important;
+}
+
+.manager-position {
+  font-size: 1.2em !important;
+  font-weight: bold;
+}
+input[type='date']:in-range::-webkit-datetime-edit-year-field,
+input[type='date']:in-range::-webkit-datetime-edit-month-field,
+input[type='date']:in-range::-webkit-datetime-edit-day-field,
+input[type='date']:in-range::-webkit-datetime-edit-text {
   color: #999;
 }
+.educationManage {
+  display: flex;
+  flex-direction: row !important;
+}
 .fullName {
-  font-weight: 800;
-  font-size: 2em;
+  font-weight: 700;
+  font-size: 2.4em;
   padding: 0;
   line-height: 30px;
   text-align: center;
 }
+.fullName1 {
+  font-weight: 700;
+  font-size: 2.4em;
+  padding: 0;
+  line-height: 30px;
+  text-align: left;
+}
+
 .manager-template-row {
   flex-direction: row;
   display: flex;
   padding-bottom: 10px;
 }
+
+.manager-template-col {
+  flex-direction: column !important;
+  display: flex !important;
+  padding: 10px 0px;
+  background-color: inherit;
+}
 .manager-template-text-center {
   align-items: center;
+}
+.fDesigner2{
+  font-size: 2.4em;
+  padding: 0;
+  line-height: 30px;
+  text-align:left;
+  margin-top: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.fDesigner2a{
+  padding: 0;
+  line-height: 30px;
+  text-align:left;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 .manager-f-sub-rowA {
   margin: 0 auto;
 }
-
 .slick-prev:before,
 .slick-next:before {
   color: black !important;
 }
-.carousel{
-  width:90%;
+.carousel {
+  width: 90%;
+}
+.cursor {
+  cursor: pointer !important;
 }
 
 .slick-prev {
   left: -20px !important;
 }
-.font{
+.font {
   font-family: Euclid Circular 100;
+}
+.DetailStyleTemplate5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.professionNameTemplate5 {
+  font-weight: 700;
+  font-size: 1.7em;
+  padding: 0;
+  line-height: 30px;
+  text-align: center;
+}
+.aboutTextTemplate5 {
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 16px;
+}
+.companyTemplate5 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.companyDescriptionTemplate5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.skillTextTemplate5 {
+  width: 120px;
 }
