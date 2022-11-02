@@ -80,3 +80,15 @@
   width: 70%;
   filter: invert(1);
 }
+
+.inputData {
+  font-size: 14px !important;
+  color: #000000;
+  margin-left: 10px;
+}
+.perD {
+  display: inline-block;
+  margin-left: -15px !important;
+  font-size: 13px !important;
+  color: #000000;
+}
