@@ -1,6 +1,6 @@
-import { SimpleGrid, Box, Image } from '@chakra-ui/react';
-import React from 'react';
-import Link from 'next/link';
+import { SimpleGrid, Box, Image } from "@chakra-ui/react";
+import React from "react";
+import Link from "next/link";
 
 function Templates() {
   return (
@@ -33,6 +33,16 @@ function Templates() {
         </Box>
         <Box className="cursor">
           <Link href="/templates/fashionTemp4">
+            <img
+              src="FashTemp4.png"
+              alt="Fashion Designer Temmplate 4"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/SalesRepresentative">
             <img
               src="FashTemp4.png"
               alt="Fashion Designer Temmplate 4"
