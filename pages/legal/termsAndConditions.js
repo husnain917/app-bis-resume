@@ -8,7 +8,13 @@ import {
     UnorderedList,
 } from '@chakra-ui/react'
 import React from 'react'
-import { TABLE_CONTENT_DATA, PREMIUM_ACCOUNT_DATA, PREMIUM_ACCOUNT_DATA_LINKS, CONTACT_US_DATA, TERMS_DATA } from "./customData/CustomData";
+import {
+    TABLE_CONTENT_DATA,
+    PREMIUM_ACCOUNT_DATA,
+    PREMIUM_ACCOUNT_DATA_LINKS,
+    CONTACT_US_DATA,
+    TERMS_DATA
+} from "../../src/components/legal/customData/CustomData";
 import Underline from "../../src/components/aaronGraphicTemp/Underline";
 
 export default function termsAndConditions() {
