@@ -14,7 +14,7 @@ import {
     PREMIUM_ACCOUNT_DATA_LINKS,
     CONTACT_US_DATA,
     TERMS_DATA
-} from "../../src/components/legal/customData/CustomData";
+} from "../../src/components/legal/CustomData";
 import Underline from "../../src/components/aaronGraphicTemp/Underline";
 
 export default function termsAndConditions() {
