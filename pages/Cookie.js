@@ -8,16 +8,14 @@ import {
     UnorderedList,
 } from '@chakra-ui/react'
 import React from 'react'
-import { TABLE_CONTENT_DATA, PREMIUM_ACCOUNT_DATA, PREMIUM_ACCOUNT_DATA_LINKS, CONTACT_US_DATA, TERMS_DATA, Marketing } from "./cookieData/CookieData";
-import Underline from "../../src/components/aaronGraphicTemp/Underline";
-import Navbar from "../../src/components/navbar/Navbar";
-import Footer from "../../src/components/footer/Footer"
-export default function termsAndConditions() {
+import { TABLE_CONTENT_DATA, PREMIUM_ACCOUNT_DATA, PREMIUM_ACCOUNT_DATA_LINKS, CONTACT_US_DATA, TERMS_DATA, Marketing } from "../src/components/cookieData/CookieData";
+import Underline from "../src/components/aaronGraphicTemp/Underline";
+
+export default function Cookie() {
 
 
     return (
         <>
-
             <Container
                 maxW={['100%', '100%', '100%', '80%', '60%']}
             >
