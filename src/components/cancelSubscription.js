@@ -72,20 +72,20 @@ export default function CancelSubscription() {
                 <br></br>
                 <Box mt="3">
                   <Link href="">
-                    <Text color="blue">Cancel your subscription</Text>
+                    <Text color="blue.400">Cancel your subscription</Text>
                   </Link>
                 </Box>
               </Text>
             </Box>
           </Box>
         </Box>
-        <Box width={"50%"} height={"50px"}>
+        <Box width={"50%"} height={"50px"} mt={"6"}>
           <Text fontSize={"18"}>
             If you experience any problems cancelling your subscription, or you
             have other questions related to the billing, please
             <br></br>
             <Link href="">
-              <Text color={"blue"}>Contact our support</Text>
+              <Text color={"blue.400"}>Contact our support</Text>
             </Link>
           </Text>
         </Box>
