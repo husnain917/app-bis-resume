@@ -299,7 +299,7 @@ export default function termsAndConditions() {
                                     lineHeight={'1.5'}
                                     fontSize={'1rem'}
                                 >
-                                    contact@novoresume.com
+                                    contact@bisResume.com
                                 </Link>
                                 , informing us that you would like to cancel your purchase. Please include the below form:
                             </Text>
@@ -362,7 +362,7 @@ export default function termsAndConditions() {
                                         lineHeight={'1.5'}
                                         fontSize={'1rem'}
                                     >
-                                        contact@novoresume.com
+                                        contact@bisResume.com
                                     </Link>.
                                 </Text>
                                 <Text
@@ -378,7 +378,7 @@ export default function termsAndConditions() {
                                         lineHeight={'1.5'}
                                         fontSize={'1rem'}
                                     >
-                                        contact@novoresume.com
+                                        contact@bisResume.com
                                     </Link>
                                     , and the problem will be investigated. This will result in different compensations or refunds in the case we find the problem was caused by our part.
                                 </Text>
