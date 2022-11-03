@@ -22,7 +22,6 @@ export default function CancelSubscription() {
         <Box
           borderWidth={"2"}
           // minWidth={"90%"}
-          height={"10em"}
           maxW="50%"
           minW="50%"
           w={1050}
@@ -33,12 +32,7 @@ export default function CancelSubscription() {
           display={"flex"}
           flexDirection={"row"}
         >
-          <Box
-            w={"10%"}
-            height={"9.7em"}
-            display="flex"
-            justifyContent={"center"}
-          >
+          <Box w={"10%"} display="flex" justifyContent={"center"}>
             <Box
               background="blue.100"
               width="3em"
@@ -63,7 +57,7 @@ export default function CancelSubscription() {
               </Box>
             </Box>
           </Box>
-          <Box w={"90%"} height={"9.7em"}>
+          <Box w={"90%"}>
             <Box mt={"4"}>
               <Text fontSize="1.4em">
                 Want to instantaly cancel your subscription? Use this simple
