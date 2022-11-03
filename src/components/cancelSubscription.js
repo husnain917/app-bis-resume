@@ -32,7 +32,7 @@ export default function CancelSubscription() {
           display={"flex"}
           flexDirection={"row"}
         >
-          <Box w={"10%"} display="flex" justifyContent={"center"}>
+          <Box minW={"10%"} display="flex" justifyContent={"center"}>
             <Box
               background="blue.100"
               width="3em"
