@@ -48,43 +48,85 @@ const graphicDesigner = (props) => {
           display={'flex'}
           justifyContent={'space-between'}
         >
-          <Box maxW={'49%'} minW={'49%'}>
-            <Box minH={250} maxW={250} minW={250} border={'5px solid black'}>
+          <Box maxW={'50%'} minW={'50%'}>
+            <Box minH={250} maxW={250} minW={250} border={'5px solid black'} ml={10}>
               <Image
                 boxSize="267px"
                 src="/profileDigi.png"
                 alt="Profile"
+                position={'relative'}
+                top={'25px'}
+                right={'45px'}
               />
             </Box>
 
-            <Box minW={250} maxW={250} bg={'#2e4229'} h={35} mt={7} pl={2}>
-              <Text
+            <Box
+              minW={250}
+              maxW={250}
+              bg={'#1C4532'}
+              h={35}
+              margin={'90px 0px 0px 0px'}
+            >
+              <Box
+                minW={250}
+                maxW={250}
+                bg={'#1C4532'}
+                h={'40px'}
+                mt={'40px'}
+                pl={2}
+                position={'relative'}
+                bottom={'20px'}
+                right={'15px'}
+                boxShadow={'dark-lg'}
+              >
+                <Text
                 color={'white'}
                 fontSize={20}
                 fontWeight="600"
                 pb={0.7}
                 pl={2}
                 letterSpacing={3}
+                pt={1}
                 textAlign={'center'}
               >
                 PROFILE
               </Text>
+              </Box>
             </Box>
             &nbsp;
             <About />
 
-            <Box minW={250} maxW={250} bg={'#2e4229'} h={35} mt={5} pl={2}>
-              <Text
+            <Box
+              minW={250}
+              maxW={250}
+              bg={'#1C4532'}
+              h={35}
+            >
+              <Box
+                minW={250}
+                maxW={250}
+                bg={'#1C4532'}
+                h={'40px'}
+                mt={'40px'}
+                pl={2}
+                position={'relative'}
+                bottom={'20px'}
+                right={'15px'}
+                boxShadow={'dark-lg'}
+              >
+                <Text
                 color={'white'}
                 fontSize={20}
                 fontWeight="600"
                 pb={0.7}
                 pl={2}
                 letterSpacing={3}
+                pt={1}
                 textAlign={'center'}
               >
                 EXPERIENCE
               </Text>
+              </Box>
             </Box>
             &nbsp;
             <Box
@@ -103,18 +145,38 @@ const graphicDesigner = (props) => {
           <Box maxW={'49%'} minW={'49%'}>
             <Profile />
             <PersonalInfo />
-            <Box minW={250} maxW={250} bg={'#2e4229'} h={35} mt={5} pl={2}>
-              <Text
-                color={'white'}
-                fontSize={20}
-                fontWeight="600"
-                pb={0.7}
+            <Box
+              minW={250}
+              maxW={250}
+              bg={'#1C4532'}
+              h={35}
+              margin={'85px 0px 0px 0px'}
+            >
+              <Box
+                minW={250}
+                maxW={250}
+                bg={'#1C4532'}
+                h={'40px'}
+                mt={'40px'}
                 pl={2}
-                letterSpacing={3}
-                textAlign={'center'}
+                position={'relative'}
+                bottom={'20px'}
+                right={'15px'}
+                boxShadow={'dark-lg'}
               >
-                EDUCATION
-              </Text>
+                <Text
+                  color={'white'}
+                  fontSize={20}
+                  fontWeight="600"
+                  pb={0.7}
+                  pl={2}
+                  letterSpacing={3}
+                  pt={1}
+                  textAlign={'center'}
+                >
+                  EDUCATION
+                </Text>
+              </Box>
             </Box>
             &nbsp;
             <Box
@@ -130,18 +192,37 @@ const graphicDesigner = (props) => {
               />
             </Box>
 
-            <Box minW={250} maxW={250} bg={'#2e4229'} h={35} mt={5} pl={2}>
-              <Text
+            <Box
+              minW={250}
+              maxW={250}
+              bg={'#1C4532'}
+              h={35}
+            >
+              <Box
+                minW={250}
+                maxW={250}
+                bg={'#1C4532'}
+                h={'40px'}
+                mt={'40px'}
+                pl={2}
+                position={'relative'}
+                bottom={'20px'}
+                right={'15px'}
+                boxShadow={'dark-lg'}
+              >
+                <Text
                 color={'white'}
                 fontSize={20}
                 fontWeight="600"
                 pb={0.7}
                 pl={2}
                 letterSpacing={3}
+                pt={1}
                 textAlign={'center'}
               >
                 SKILLSET
               </Text>
+              </Box>
             </Box>
             &nbsp;
             <Box
@@ -156,18 +237,37 @@ const graphicDesigner = (props) => {
                 }
               />
             </Box>
-            <Box minW={250} maxW={250} bg={'#2e4229'} h={35} mt={5} pl={2}>
-              <Text
+            <Box
+              minW={250}
+              maxW={250}
+              bg={'#1C4532'}
+              h={35}
+            >
+              <Box
+                minW={250}
+                maxW={250}
+                bg={'#1C4532'}
+                h={'40px'}
+                mt={'40px'}
+                pl={2}
+                position={'relative'}
+                bottom={'20px'}
+                right={'15px'}
+                boxShadow={'dark-lg'}
+              >
+                <Text
                 color={'white'}
                 fontSize={20}
                 fontWeight="600"
                 pb={0.7}
                 pl={2}
                 letterSpacing={3}
+                pt={1}
                 textAlign={'center'}
               >
                 LANGUAGES
               </Text>
+              </Box>
             </Box>
             &nbsp;
             <Box
