@@ -85,7 +85,7 @@ const Personal = (props) => {
             width={'50%'}
           >
             <UnorderedList
-              color={'#000000'}
+              color={'#2e4229'}
             >
               <ListItem>
                 <HybridText
@@ -106,7 +106,7 @@ const Personal = (props) => {
               <Line
                 percent={progress[index]}
                 strokeWidth={12}
-                strokeColor={'#000000'}
+                strokeColor={'#2e4229'}
               />
             </Box>
             <Input

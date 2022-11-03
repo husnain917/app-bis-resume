@@ -48,16 +48,16 @@ const graphicDesigner = (props) => {
           display={'flex'}
           justifyContent={'space-between'}
         >
-          <Box maxW={'47%'} minW={'47%'}>
-            <Box minH={250} maxW={250} minW={250} borderRadius={'none'}>
+          <Box maxW={'49%'} minW={'49%'}>
+            <Box minH={250} maxW={250} minW={250} border={'5px solid black'}>
               <Image
-                boxSize="250px"
+                boxSize="267px"
                 src="/profileDigi.png"
                 alt="Profile"
               />
             </Box>
 
-            <Box minW={250} maxW={250} bg={'#2e4229'} h={35} mt={10} pl={2}>
+            <Box minW={250} maxW={250} bg={'#2e4229'} h={35} mt={7} pl={2}>
               <Text
                 color={'white'}
                 fontSize={20}
@@ -87,15 +87,20 @@ const graphicDesigner = (props) => {
               </Text>
             </Box>
             &nbsp;
-            <Experience
-              data={
-                resumeData?.work?.items.length
-                  ? [...resumeData?.work?.items]
-                  : [...sampleData?.data?.work?.items]
-              }
-            />
+            <Box
+              minW={310}
+              maxW={310}
+            >
+              <Experience
+                data={
+                  resumeData?.work?.items.length
+                    ? [...resumeData?.work?.items]
+                    : [...sampleData?.data?.work?.items]
+                }
+              />
+            </Box>
           </Box>
-          <Box maxW={'47%'} minW={'47%'}>
+          <Box maxW={'49%'} minW={'49%'}>
             <Profile />
             <PersonalInfo />
             <Box minW={250} maxW={250} bg={'#2e4229'} h={35} mt={5} pl={2}>
@@ -112,13 +117,18 @@ const graphicDesigner = (props) => {
               </Text>
             </Box>
             &nbsp;
-            <Education
-              data={
-                resumeData?.education?.items.length
-                  ? [...resumeData?.education?.items]
-                  : [...sampleData?.data?.education?.items]
-              }
-            />
+            <Box
+              minW={330}
+              maxW={330}
+            >
+              <Education
+                data={
+                  resumeData?.education?.items.length
+                    ? [...resumeData?.education?.items]
+                    : [...sampleData?.data?.education?.items]
+                }
+              />
+            </Box>
 
             <Box minW={250} maxW={250} bg={'#2e4229'} h={35} mt={5} pl={2}>
               <Text
@@ -134,13 +144,18 @@ const graphicDesigner = (props) => {
               </Text>
             </Box>
             &nbsp;
-            <Personal
-              data={
-                resumeData?.skills?.items?.length
-                  ? [...resumeData?.skills?.items]
-                  : [...sampleData?.data?.skills?.items]
-              }
-            />
+            <Box
+              minW={330}
+              maxW={330}
+            >
+              <Personal
+                data={
+                  resumeData?.skills?.items?.length
+                    ? [...resumeData?.skills?.items]
+                    : [...sampleData?.data?.skills?.items]
+                }
+              />
+            </Box>
             <Box minW={250} maxW={250} bg={'#2e4229'} h={35} mt={5} pl={2}>
               <Text
                 color={'white'}
@@ -155,13 +170,18 @@ const graphicDesigner = (props) => {
               </Text>
             </Box>
             &nbsp;
-            <Languages
-              data={
-                resumeData?.languages?.items
-                  ? [...resumeData?.languages?.items]
-                  : [...sampleData?.data?.languages?.items]
-              }
-            />
+            <Box
+              minW={330}
+              maxW={330}
+            >
+              <Languages
+                data={
+                  resumeData?.languages?.items
+                    ? [...resumeData?.languages?.items]
+                    : [...sampleData?.data?.languages?.items]
+                }
+              />
+            </Box>
           </Box>
         </HStack>
       </Flex>

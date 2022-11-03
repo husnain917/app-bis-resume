@@ -8,19 +8,19 @@ const Profile = () => {
     <div style={{backgroundColor: 'transparent'}}>
       <HybridText
         value={resumeData?.profile?.firstName}
-        placeholder="First Name"
+        placeholder="I S A B E L"
         customclass={` ${Style.fashionName}`}
         path={'profile.firstName'}
       />
       <HybridText
         value={resumeData?.profile?.lastName}
-        placeholder="Last Name"
+        placeholder="M E R C A D O"
         customclass={` ${Style.fashionName}`}
         path={'profile.lastName'}
       />
 
       <HybridText
-        placeholder="Profession"
+        placeholder="Graphic Designer"
         customclass={`${Style.ProfessionFashion} ${Style.mt}`}
         path={'profile.profession'}
         value={resumeData?.profile?.profession}
