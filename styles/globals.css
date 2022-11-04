@@ -211,3 +211,22 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 .skillTextTemplate5 {
   width: 120px;
 }
+.App {
+  font-family: sans-serif;
+  /* text-align: center; */
+  background-color: #f6f9fe;
+  height: 100vh;
+}
+.image-item {
+  display: flex;
+  margin: 10px 0;
+}
+.image-item__btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+button {
+  height: 40px;
+}
+
