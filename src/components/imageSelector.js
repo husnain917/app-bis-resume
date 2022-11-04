@@ -5,6 +5,7 @@ import ImageUploading from "react-images-uploading";
 
 const ImageSelector = () => {
   const [images, setImages] = React.useState([]);
+  const [hover, setHover] = React.useState("");
   const maxNumber = 1;
   const onChange = (imageList, addUpdateIndex) => {
     // data for submit
