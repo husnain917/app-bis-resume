@@ -5,7 +5,7 @@ import ImageUploading from "react-images-uploading";
 
 const ImageSelector = () => {
   const [images, setImages] = React.useState([]);
-  const maxNumber = 69;
+  const maxNumber = 1;
   const onChange = (imageList, addUpdateIndex) => {
     // data for submit
     console.log(imageList, addUpdateIndex);
@@ -32,31 +32,33 @@ const ImageSelector = () => {
           dragProps,
         }) => (
           // write your building UI
-          <Box className="upload__image-wrapper">
-            <button
-              style={isDragging ? { color: "red" } : null}
-              onClick={onImageUpload}
-              {...dragProps}
-            >
-              Click or Drop here
-            </button>
-            &nbsp;
-            {imageList.map((image, index) => (
-              <Box key={index} className="image-item">
-                <Image
-                  src={image.data_url}
-                  alt=""
-                  width="100"
-                  borderRadius="50%"
-                  h={"12em"}
-                  w={"12em"}
-                />
-                <Box className="image-item__btn-wrapper">
-                  <button onClick={() => onImageUpdate(index)}>Update</button>
-                  <button onClick={() => onImageRemove(index)}>Remove</button>
+          <Box display={"flex"} alignItems={"center"} justifyContent={"center"}>
+            <Box className="upload__image-wrapper">
+              <button
+                style={isDragging ? { color: "red" } : null}
+                onClick={onImageUpload}
+                {...dragProps}
+              >
+                Click or Drop here
+              </button>
+              &nbsp;
+              {imageList.map((image, index) => (
+                <Box key={index} className="image-item">
+                  <Image
+                    src={image.data_url}
+                    alt=""
+                    width="100"
+                    borderRadius="50%"
+                    h={"12em"}
+                    w={"12em"}
+                  />
+                  <Box className="image-item__btn-wrapper">
+                    <button onClick={() => onImageUpdate(index)}>Update</button>
+                    <button onClick={() => onImageRemove(index)}>Remove</button>
+                  </Box>
                 </Box>
-              </Box>
-            ))}
+              ))}
+            </Box>
           </Box>
         )}
       </ImageUploading>
