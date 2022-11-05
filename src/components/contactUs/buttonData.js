@@ -1,31 +1,31 @@
 export const buttonData =[
     {
         title:"FeedBack",
-        Link:"#"
+        // Link:"#"
     },
     {
         title:"Billing",
-        Link:"#"
+        // Link:"#"
     },
     {
         title:"Pricing",
-        Link:"#"
+        // Link:"#"
     },
     {
         title:"Page Errors",
-        Link:"#"
+        // Link:"#"
     },
     {
         title:"Cancel Subscription",
-        Link:"#"
+        // Link:"#"
     },
     {
         title:"Email Subscription",
-        Link:"#"
+        // Link:"#"
     },
     {
         title:"Other",
-        Link:"#"
+        // Link:"#"
     },
 
 ]

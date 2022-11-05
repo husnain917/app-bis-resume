@@ -55,7 +55,7 @@ export default function ContactUs() {
                 {buttonData.map((button, index) => {
                   return (
                     <div key={index}>
-                      <ContactButton button={button} />
+                      <ContactButton button={button} index={index} />
                     </div>
                   );
                 })}
