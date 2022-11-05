@@ -1,0 +1,130 @@
+.ctaContainer {
+  background: linear-gradient(280deg,
+      transparent 0%,
+      transparent 18%,
+      rgb(34, 99, 108) 0,
+      rgb(22, 104, 118) 100%);
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+}
+
+.ctaLeftSec {
+  padding-left: 100px;
+  width: 45%;
+  margin-top: 10%;
+}
+
+.ctaRightSec {
+  width: 55%;
+  margin-top: 3.3%;
+}
+
+.ctaHeading {
+  color: white;
+  font-size: 2.6rem;
+  font-weight: bold;
+  font-family: "HK Grotesk,sans-serif";
+  line-height: normal;
+}
+
+
+/* @media (max-width: 960px) {
+  .ctaContainer {
+    background: linear-gradient(0deg,
+        transparent 0%,
+        transparent 0%,
+        rgb(34, 99, 108) 0,
+        rgb(22, 104, 118) 100%);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .ctaLeftSec {
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .ctaRightSec {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .ctaHeading {
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ctaHeading {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 720px) {
+  .ctaHeading {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 620px) {
+  .ctaLeftSec {
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .ctaHeading {
+    font-size: 50px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .ctaLeftSec {
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .ctaHeading {
+    font-size: 35px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .ctaLeftSec {
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .ctaHeading {
+    font-size: 32px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .ctaLeftSec {
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .ctaHeading {
+    font-size: 24px;
+  }
+} */
