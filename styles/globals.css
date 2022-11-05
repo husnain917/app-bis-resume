@@ -229,4 +229,19 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 button {
   height: 40px;
 }
-
+.pic_container{
+  border: 2px solid black;
+  border-radius: 50%;
+}
+.pic_container:hover{
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+}
+.hide {
+  display: none;
+}
+.hide:hover{
+  display: block;
+}
