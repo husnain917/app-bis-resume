@@ -1,39 +1,39 @@
 export const TABLE_CONTENT_DATA = [
     {
         label: 'The BisResume Content',
-        href: '#',
+        href: 'a1',
     },
     {
         label: 'Acceptable Use',
-        href: '#',
+        href: 'a2',
     },
     {
         label: 'Security',
-        href: '#',
+        href: 'a3',
     },
     {
         label: 'Links To Other Software/Websites/Services',
-        href: '#',
+        href: 'a4',
     },
     {
         label: 'Warranty and Premium Account',
-        href: '#',
+        href: 'a5',
     },
     {
         label: 'Governing Law',
-        href: '#',
+        href: 'a6',
     },
     {
         label: 'Changes',
-        href: '#',
+        href: 'a7',
     },
     {
         label: 'Breaches of these terms of use',
-        href: '#',
+        href: 'a8',
     },
     {
         label: 'Termination',
-        href: '#',
+        href: 'a9',
     },
 ]
 

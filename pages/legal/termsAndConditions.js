@@ -3,19 +3,18 @@ import {
     Container,
     Link,
     ListItem,
-    OrderedList,
     Text,
     UnorderedList,
 } from '@chakra-ui/react'
 import React from 'react'
 import {
-    TABLE_CONTENT_DATA,
     PREMIUM_ACCOUNT_DATA,
     PREMIUM_ACCOUNT_DATA_LINKS,
     CONTACT_US_DATA,
     TERMS_DATA
 } from "../../src/components/legal/CustomData";
 import Underline from "../../src/components/aaronGraphicTemp/Underline";
+import TableOfContent from '../../src/components/legal/TableOfContent';
 
 export default function termsAndConditions() {
     return (
@@ -87,30 +86,14 @@ export default function termsAndConditions() {
                         <Box
                             margin={'10px 0px 40px 0px'}
                         >
-                            <OrderedList>
-                                {
-                                    TABLE_CONTENT_DATA?.map((item) => (
-                                        <>
-                                            <ListItem>
-                                                <Link
-                                                    href={item?.href ?? '#'}
-                                                    color={'#2679C7'}
-                                                    lineHeight={'1.5'}
-                                                    fontSize={'1.1em'}
-                                                >
-                                                    {item?.label}
-                                                </Link>
-                                            </ListItem>
-                                        </>
-                                    ))
-                                }
-                            </OrderedList>
+                            <TableOfContent />
                         </Box>
                     </Box>
 
                     {/* 1. The Novorésumé Content */}
                     <Box
                         margin={'40px 0px'}
+                        id={'a1'}
                     >
                         <Text
                             fontSize={['2em', '2.4em', '2.4em', '2.4em']}
@@ -144,6 +127,7 @@ export default function termsAndConditions() {
                     {/* 2. Acceptable Use */}
                     <Box
                         margin={'40px 0px'}
+                        id={'a2'}
                     >
                         <Text
                             fontSize={['2em', '2.4em', '2.4em', '2.4em']}
@@ -177,6 +161,7 @@ export default function termsAndConditions() {
                     {/* 3. Security */}
                     <Box
                         margin={'40px 0px'}
+                        id={'a3'}
                     >
                         <Text
                             fontSize={['2em', '2.4em', '2.4em', '2.4em']}
@@ -203,6 +188,7 @@ export default function termsAndConditions() {
                     {/* 4. Links To Other Software/Websites/Services */}
                     <Box
                         margin={'40px 0px'}
+                        id={'a4'}
                     >
                         <Text
                             fontSize={['2em', '2.4em', '2.4em', '2.4em']}
@@ -236,6 +222,7 @@ export default function termsAndConditions() {
                     {/* 5. Warranty and Premium Account */}
                     <Box
                         margin={'40px 0px'}
+                        id={'a5'}
                     >
                         <Text
                             fontSize={['2em', '2.4em', '2.4em', '2.4em']}
@@ -405,6 +392,7 @@ export default function termsAndConditions() {
                     {/* 6. Governing Law */}
                     <Box
                         margin={'40px 0px'}
+                        id={'a6'}
                     >
                         <Text
                             fontSize={['2em', '2.4em', '2.4em', '2.4em']}
@@ -431,6 +419,7 @@ export default function termsAndConditions() {
                     {/* 7. Changes */}
                     <Box
                         margin={'40px 0px'}
+                        id={'a7'}
                     >
                         <Text
                             fontSize={['2em', '2.4em', '2.4em', '2.4em']}
@@ -457,6 +446,7 @@ export default function termsAndConditions() {
                     {/* 8. Breaches of these terms of use */}
                     <Box
                         margin={'40px 0px'}
+                        id={'a8'}
                     >
                         <Text
                             fontSize={['2em', '2.4em', '2.4em', '2.4em']}
@@ -483,6 +473,7 @@ export default function termsAndConditions() {
                     {/* 9. Termination */}
                     <Box
                         margin={'40px 0px'}
+                        id={'a9'}
                     >
                         <Text
                             fontSize={['2em', '2.4em', '2.4em', '2.4em']}
