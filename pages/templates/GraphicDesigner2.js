@@ -29,7 +29,7 @@ export default function GraphicDesigner2() {
         </div>
       </Link>
 
-      <Box w="100%" mt="5%" overflow="auto" ml={["", , , "5%", "13%"]} h="auto">
+      <Box w="100%" mt="5%" overflow="auto" ml={["", , , "7%", "13%","26%"]} h="auto">
         <Box
           w="100%"
           h="auto"
