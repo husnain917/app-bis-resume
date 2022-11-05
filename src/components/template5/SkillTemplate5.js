@@ -10,9 +10,8 @@ import DndTemplate5 from './DndTemplate5';
 import Util from '../../../utils/templateUtils';
 import { Line } from 'rc-progress';
 import { Text } from '../template1';
+import DndHybrid from '../hybridTemplate/DndHybrid';
 const SkillBase = (props) => {
-  const [skill1, setSkill1] = useState('');
-  const [skill2, setSkill2] = useState('');
   const { data } = props;
   const path = 'skills.items';
   const dispatch = useDispatch();
@@ -28,77 +27,76 @@ const SkillBase = (props) => {
     let deletedPath = `${path}.${index}`;
     dispatch(deleteObjInArray(deletedPath));
   };
+  const [progress, setProgress] = useState([]);
+  const validateData = (e, index2) => {
+    if ((e.target.value > 0 && e.target.value > 100) || e.target.value <= 0) {
+      let newArr2 = progress.map((item, index) => {
+        if (index === index2) {
+          return null;
+        } else {
+          return item;
+        }
+      });
+      setProgress(newArr2);
+      return;
+    }
+    let newArr;
+    if (progress.length <= 0) {
+      newArr = [e.target.value];
+    } else if (progress.length === index2) {
+      newArr = [...progress, e.target.value];
+      console.log(newArr);
+    } else {
+      newArr = progress.map((item, index) => {
+        if (index === index2) {
+          return e.target.value;
+        } else {
+          return item;
+        }
+      });
+    }
+    setProgress(newArr);
+  };
 
   return (
-    <DndTemplate5
-      data={data}
-      additem={_addNewItem}
-      reorder={(e) => onOrderUpdate(e)}
-      removeitem={(index) => _removeItem(index)}
-      renderItem={(item, index) => (
-        <Box width={'3xl'}>
-          <Box ml={30} justifyContent="flex-end" gap={4} mt={8}>
-            <HStack justifyContent={'flex-end'}>
-              <HStack>
-                <Text
-                  value={item.skill1}
-                  placeholder="Skill or Hobbies"
-                  customclass={
-                    'manager-fName manager-template-text-bold skillTextTemplate5'
-                  }
-                  path={`skills.items.skill1`}
-                />
-                <Box h={2} w={100} bg={'white'} borderRadius={4}>
-                  <Line
-                    percent={skill1}
-                    strokeWidth={7.5}
-                    strokeColor={'black'}
-                  />
-                </Box>
-                <Input
-                  maxW={50}
-                  maxH={30}
-                  borderColor="none"
-                  variant="unstyled"
-                  placeholder="%"
-                  value={skill1}
-                  onChange={(e) => setSkill1(e.target.value)}
-                  type="number"
-                />
-              </HStack>
-              <Box></Box>
-              <HStack>
-                <Text
-                  value={item.skill2}
-                  customclass={
-                    'manager-fName manager-template-text-bold skillTextTemplate5'
-                  }
-                  placeholder="Skill or Hobbies"
-                  path={'skills.items.skill2'}
-                />
-                <Box h={2} w={100} bg={'white'} borderRadius={4}>
-                  <Line
-                    percent={skill2}
-                    strokeWidth={7.5}
-                    strokeColor={'black'}
-                  />
-                </Box>
-                <Input
-                  maxW={50}
-                  maxH={30}
-                  borderColor="none"
-                  variant="unstyled"
-                  placeholder="%"
-                  value={skill2}
-                  onChange={(e) => setSkill2(e.target.value)}
-                  type="number"
-                />
-              </HStack>
-            </HStack>
-          </Box>
-        </Box>
-      )}
-    />
+    <Box minW={'600px'} maxW="600px" ml={'165px'}>
+      <DndHybrid
+        data={data}
+        additem={_addNewItem}
+        reorder={(e) => onOrderUpdate(e)}
+        removeitem={(index) => _removeItem(index)}
+        direction="horizontal"
+        renderItem={(item, index) => (
+          <HStack>
+            <Text
+              value={item.title}
+              placeholder="Skill or Hobbies"
+              customclass={
+                'manager-fName manager-template-text-bold skillTextTemplate5'
+              }
+              path={`skills.items.title`}
+            />
+            <Box h={2} w={100} bg={'white'} borderRadius={4}>
+              <Line
+                percent={progress[index]}
+                strokeWidth={7.5}
+                strokeColor={'black'}
+              />
+            </Box>
+            <Input
+              maxW={50}
+              maxH={30}
+              borderColor="none"
+              variant="unstyled"
+              placeholder="%"
+              value={`${progress[index]}`}
+              onChange={(e) => validateData(e, index)}
+              type="number"
+            />
+          </HStack>
+        )}
+      />
+    </Box>
   );
 };
 
