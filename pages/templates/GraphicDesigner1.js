@@ -28,7 +28,7 @@ export default function GraphicDesigner1() {
         </div>
       </Link>
       
-      <Box w="100%" mt="5%" overflow="auto" ml={["", , ,"5%" , "13%"]}>
+      <Box w="100%" mt="5%" overflow="auto" ml={["", , ,"5%" , "13%","25%"]}>
         <Box
           w="100%"
           display="flex"
