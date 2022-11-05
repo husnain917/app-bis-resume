@@ -1,19 +1,4 @@
 
-export const TABLE_CONTENT_DATA = [
-    {
-        label: 'What is a cookie?',
-        href: '#',
-
-    },
-    {
-        label: 'Use of cookies and web storage(browsing data) by Novorésumé',
-        href: '#',
-    },
-    {
-        label: 'Disabling/Enabling Cookies',
-        href: '#',
-    },
-]
 
 
 export const PREMIUM_ACCOUNT_DATA = [

@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 import {
     Box,
     Container,
@@ -12,7 +14,9 @@ import { TABLE_CONTENT_DATA, PREMIUM_ACCOUNT_DATA, PREMIUM_ACCOUNT_DATA_LINKS, C
 import Underline from "../src/components/aaronGraphicTemp/Underline";
 
 export default function Cookie() {
-
+    const scollToRef = useRef();
+    const scrollSecend = useRef();
+    const scrollThird = useRef();
 
     return (
         <>
@@ -81,31 +85,70 @@ export default function Cookie() {
 
                         {/* description */}
                         <Box
-                            margin={'10px 0px 40px 0px'}
-                        >
+                            margin={'10px 0px 40px 0px'} >
                             <OrderedList>
-                                {
-                                    TABLE_CONTENT_DATA?.map((item) => (
-                                        <>
-                                            <ListItem>
-                                                <Link
-                                                    href={item?.href ?? '#'}
-                                                    color={'#2679C7'}
-                                                    lineHeight={'1.5'}
-                                                    fontSize={'1.1em'}
-                                                >
-                                                    {item?.label}
-                                                </Link>
-                                            </ListItem>
-                                        </>
-                                    ))
-                                }
+
+                                <ListItem>
+                                    <Text
+
+                                        // color= " #2679C7"
+                                        // textDecoration={"none"}
+                                        // fontSize={"1.1em"} 
+                                        // lineHeight: 1.5"
+                                        fontSize={'1.1em'}
+                                        lineHeight={'1.5'}
+                                        color={'#2679C7'}
+
+
+                                        cursor="pointer"
+                                        smooth={true}
+                                        onClick={() => scollToRef.current.scrollIntoView({ behavior: 'smooth' })}
+                                    >
+
+                                        What is a cookie?
+                                    </Text>
+                                </ListItem>
+
+                                <ListItem>
+                                    <Text
+                                        fontSize={'1.1em'}
+                                        lineHeight={'1.5'}
+                                        color={'#2679C7'}
+                                        cursor="pointer"
+                                        smooth={true}
+                                        onClick={() => scrollSecend.current.scrollIntoView({ behavior: 'smooth' })}
+                                    >
+
+                                        Use of cookies and web storage(browsing data) by Novorésumé
+                                    </Text>
+                                </ListItem>
+
+                                <ListItem>
+                                    <Text
+                                        fontSize={'1.1em'}
+                                        lineHeight={'1.5'}
+                                        color={'#2679C7'}
+                                        cursor="pointer"
+                                        smooth={true}
+                                        onClick={() => scrollThird.current.scrollIntoView({ behavior: 'smooth' })}
+
+
+                                    >
+
+                                        Disabling/Enabling Cookies
+                                    </Text>
+                                </ListItem>
+
+
                             </OrderedList>
                         </Box>
                     </Box>
 
                     <Box
                         margin={'40px 0px'}
+                        ref={scollToRef}
+
+
                     >
                         <Text
                             fontSize={['2em', '2.4em', '2.4em', '2.4em']}
@@ -137,6 +180,8 @@ export default function Cookie() {
 
                     <Box
                         margin={'40px 0px'}
+                        ref={scrollSecend}
+
                     >
                         <Text
                             fontSize={['2em', '2.4em', '2.4em', '2.4em']}
@@ -197,6 +242,8 @@ export default function Cookie() {
 
                     <Box
                         margin={'40px 0px'}
+                        ref={scrollThird}
+
                     >
                         <Text
                             fontSize={['2em', '2.4em', '2.4em', '2.4em']}
