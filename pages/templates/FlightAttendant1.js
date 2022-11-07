@@ -17,7 +17,7 @@ const FlightAttendant1 = (props) => {
   return (
     <div className={style.main}>
       <Link href={'/templates'}>
-        <div className={style.swapCont}>
+        <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
           <Tooltip title="Change Template" arrow distance={20}>
             <div className={style.swap}>
               <img src="/icons/swap.png" />

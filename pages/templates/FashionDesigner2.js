@@ -93,11 +93,13 @@ class FashionDesigner2 extends Component {
                     <Box>
                       <UnderLineBox />
                     </Box>
-                    <Text
-                      value={resumeData?.aboutMe?.body}
-                      placeholder="Short and engaging pitch about yourself."
-                      path={"aboutMe.body"}
-                    />
+                    <Box mt="3">
+                      <Text
+                        value={resumeData?.aboutMe?.body}
+                        placeholder="Short and engaging pitch about yourself."
+                        path={"aboutMe.body"}
+                      />
+                    </Box>
                   </Box>
                   <Box>
                     <Text
