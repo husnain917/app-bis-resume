@@ -318,6 +318,16 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
+          <Link href="/templates/softEngineer/SoftEngineer">
+            <img
+              src="softEngr.jpg"
+              alt="Tech Resume Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        
           <Link href="/templates/CollegeTemp">
             <img
               src="CollegeTemp.png"
