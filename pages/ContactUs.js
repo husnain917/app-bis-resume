@@ -1,10 +1,14 @@
 import { Box, Text, Button } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import ContactButton from "../src/components/contactUs/ContactButton";
 import CustomInput from "../src/components/contactUs/CustomInput";
 import { buttonData } from "../src/components/contactUs/buttonData";
 
 export default function ContactUs() {
+  const [active, setActive] = useState("");
+  const onFocunHandler = (index) => {
+    setActive(index);
+  };
   return (
     <>
       {/* main div  */}
@@ -55,7 +59,13 @@ export default function ContactUs() {
                 {buttonData.map((button, index) => {
                   return (
                     <div key={index}>
-                      <ContactButton button={button} index={index} />
+                      <ContactButton
+                        button={button}
+                        index={index}
+                        bgColor={active === index ? "#1B6672" : "none"}
+                        color={active === index ? "white" : "grey"}
+                        onFocunHandler={onFocunHandler}
+                      />
                     </div>
                   );
                 })}
@@ -105,6 +115,7 @@ export default function ContactUs() {
                 pl="35px"
                 pr="35px"
                 mt={["5%", "5%", "5%", "0%"]}
+                _hover={{ bg: "#1B6672", color: " white" }}
               >
                 Send Message
               </Button>
