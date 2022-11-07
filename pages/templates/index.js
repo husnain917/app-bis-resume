@@ -295,6 +295,16 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/simpleTempDesign">
+            <img
+              src="simpleTemp.png"
+              alt="Simple Template Design"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
       </SimpleGrid>
     </div>
   );
