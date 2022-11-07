@@ -1,7 +1,7 @@
 import { HStack } from '@chakra-ui/react';
 import React from 'react';
 import HybridText from '../hybridTemplate/HybridText';
-import { MdCastForEducation } from 'react-icons/md';
+import { BsFillLayersFill } from 'react-icons/bs';
 import DndFash from '../fashionTemp5/DndFash';
 import Util from '../../../utils/templateUtils';
 import {
@@ -39,7 +39,7 @@ const FlightAttendEdu = (props) => {
         renderItem={(item, index) => (
           <>
             <HStack alignItems={'flex-start'} mt={5}>
-              <MdCastForEducation color="#2A78AB" size={32} />
+              <BsFillLayersFill color="#2A78AB" size={32} />
               <div>
                 <HybridText
                   placeholder="Study Program"
