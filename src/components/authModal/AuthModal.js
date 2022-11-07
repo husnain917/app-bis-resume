@@ -17,15 +17,18 @@ import { FaGoogle } from "react-icons/fa";
 import styles from "../../../styles/Auth.module.css";
 import AuthButton from "./AuthButton";
 import CustomBtn from "./CustomBtn";
+import { data } from "./data";
+import { CloseIcon } from "@chakra-ui/icons";
 export default function AuthModal({ isModalOpen, setIsModalOpen }) {
   const [isRegister, setIsRegister] = useState(true);
-
-  const ctaRegisterHandler = () => {
-    setIsRegister(true);
-  };
-
-  const ctaLoginHandler = () => {
-    setIsRegister(false);
+  const [active, setIsActive] = useState("");
+  const onChangeHandler = (index) => {
+    setIsActive(index);
+    if (isRegister) {
+      return setIsRegister(false);
+    } else {
+      return setIsRegister(true);
+    }
   };
 
   return (
@@ -36,10 +39,8 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
           w={["100%", "100%", "100%", "70%", "60%"]}
           borderRadius="10px"
           h={["90%", "100%", "90%", "90%", "80vh"]}
-          minH={["90%","650px","700px","78%",]}
+          minH={["90%", "650px", "700px", "78%"]}
         >
-        
-
           <Box
             w="100%"
             display="flex"
@@ -52,13 +53,48 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
                 <Image src="/signin.png" w="100%" h="100%" />
               )}
             </Box>
+
             <Box w={["100%", "100%", "100%", "50%"]} h="auto">
-              <AuthButton
-                ctaLoginHandler={ctaLoginHandler}
-                ctaRegisterHandler={ctaRegisterHandler}
-                setIsModalOpen={setIsModalOpen}
-                blue={true}
-              />
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                mt="7%"
+              >
+                <Box
+                  display="flex"
+                  // w={[,,,"70%"]}
+                  bgColor="#E1E1E1"
+                  borderRadius="15px"
+                >
+                  {data?.map((btn, index) => {
+                    return (
+                      <div key={index}>
+                        <AuthButton
+                          btn={btn}
+                          index={index}
+                          onChangeHandler={onChangeHandler}
+                          bgColor={active === index ? "#00C8AA" : "#E1E1E1"}
+                          color={active === index ? "white" : "black"}
+                        />
+                      </div>
+                    );
+                  })}
+                </Box>
+                <CloseIcon
+                  w={8}
+                  h={8}
+                  color="white"
+                  bgColor="#E1E1E1"
+                  p="5px"
+                  ml="7%"
+                  borderRadius="100px"
+                  _hover={{ color: " white", borderRadius: "5px" }}
+                  onClick={() => setIsModalOpen(false)}
+                  className={styles.modalBtn}
+                />
+              </Box>
+
               <Box ml="7%" mr="7%" mt="6%">
                 {isRegister ? (
                   <>
@@ -108,9 +144,9 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
                     />
                     <Checkbox
                       size="lg"
-                      colorScheme="#00C8AA"
-                      defaultChecked
                       mt="10%"
+                      colorScheme="MediumSpringGreen"
+                      iconColor="MediumSpringGreen"
                     >
                       I Consent to the terms & Privacy Policy
                     </Checkbox>
@@ -209,8 +245,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
               </Box>
             </Box>
           </Box>
-          
-
         </ModalContent>
       </Modal>
     </>

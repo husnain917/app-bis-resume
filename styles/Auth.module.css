@@ -57,3 +57,7 @@
 .modalBtn:hover::before {
   transform: translate(5px, 5px);
 }
+.authBtn{
+  padding-left: 100px;
+  padding-right: 3rem;
+}

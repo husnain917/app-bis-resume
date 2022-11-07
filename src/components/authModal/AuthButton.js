@@ -1,56 +1,28 @@
-import { Box, Button, Stack } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import React from "react";
-import { PhoneIcon, CloseIcon, WarningIcon } from "@chakra-ui/icons";
 import styles from "../../../styles/Auth.module.css";
 export default function AuthButton({
-  isModalOpen,
-  setIsModalOpen,
-  ctaRegisterHandler,
-  ctaLoginHandler,
-  blue,
+  btn,
+  index,
+  bgColor,
+  onChangeHandler,
+  color,
 }) {
   return (
-    <Box
-      w="100%"
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      mt="7%"
-    >
-      <Stack w="70%" direction="row" bgColor="#E1E1E1" borderRadius="15px">
-        <Button
-          w="50%"
-          bgColor="#E1E1E1"
-          borderRadius="15px"
-          _hover={{ bg: "#00C8AA", color: " white", borderRadius: "20px" }}
-          _focus={{ bg: "#00C8AA", color: " white", borderRadius: "20px" }}
-          onClick={ctaRegisterHandler}
-        >
-          Register
-        </Button>
-        <Button
-          bgColor="#E1E1E1"
-          borderRadius="15px"
-          w="50%"
-          _hover={{ bg: "#00C8AA", color: " white", borderRadius: "20px" }}
-          _focus={{ bg: "#00C8AA", color: " white", borderRadius: "20px" }}
-          onClick={ctaLoginHandler}
-        >
-          Sign In
-        </Button>
-      </Stack>
-      <CloseIcon
-        w={8}
-        h={8}
-        color="white"
-        bgColor="#E1E1E1"
-        p="5px"
-        ml="7%"
-        borderRadius="100px"
-        _hover={{ color: " white", borderRadius: "5px" }}
-        onClick={() => setIsModalOpen(false)}
-        className={styles.modalBtn}
-      />
-    </Box>
+    <>
+      <Button
+        w="100%"
+        pl={["1.8rem", "4rem", "7.5rem", "2.2rem"]}
+        pr={["1.8rem", "4rem", "7.5rem", "2.2rem"]}
+        color={color}
+        bgColor={bgColor}
+        borderRadius="10px"
+        _hover={{ bg: "#00C8AA", color: " white", borderRadius: "10px" }}
+        _focus={{ bg: "#00C8AA", color: " white", borderRadius: "10px" }}
+        onClick={() => onChangeHandler(index)}
+      >
+        {btn.btnName}
+      </Button>
+    </>
   );
 }
