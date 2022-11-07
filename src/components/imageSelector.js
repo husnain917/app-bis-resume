@@ -43,24 +43,32 @@ const ImageSelector = () => {
                 Click or Drop here
               </button>
               &nbsp;
-              {imageList.map((image, index) => (
-                <Box key={index} className="image-item">
-                  <Box className="pic_container">
-                    <Image
-                      src={image.data_url}
-                      alt="/imageProfile.jpg"
-                      width="100"
-                      borderRadius="50%"
-                      h={"16em"}
-                      w={"16em"}
-                    />
+              {imageList.map((image, index) => {
+                if (!image) {
+                }
+                return (
+                  <Box key={index} className="image-item">
+                    <Box className="pic_container">
+                      <Image
+                        src={image.data_url}
+                        alt="/imageProfile.jpg"
+                        width="100"
+                        borderRadius="50%"
+                        h={"16em"}
+                        w={"16em"}
+                      />
+                    </Box>
+                    <Box className="image-item__btn-wrapper">
+                      <button onClick={() => onImageUpdate(index)}>
+                        Update
+                      </button>
+                      <button onClick={() => onImageRemove(index)}>
+                        Remove
+                      </button>
+                    </Box>
                   </Box>
-                  <Box className="image-item__btn-wrapper">
-                    <button onClick={() => onImageUpdate(index)}>Update</button>
-                    <button onClick={() => onImageRemove(index)}>Remove</button>
-                  </Box>
-                </Box>
-              ))}
+                );
+              })}
             </Box>
           </Box>
         )}
