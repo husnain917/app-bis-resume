@@ -52,7 +52,6 @@ const Education1 = (props) => {
     extracurricular,
     direction,
     dateDirection = 'row',
-    justifyContent,
     rowMinW,
     rowMaxW,
   } = props;
