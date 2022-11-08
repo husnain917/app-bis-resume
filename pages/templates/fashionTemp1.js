@@ -15,7 +15,9 @@ import FashTemp1PersonalInfo from '../../src/components/fashionTemp1/FashTemp1Pe
 import FashTemp1Edu from '../../src/components/fashionTemp1/FashTemp1Edu';
 import style from '../../styles/templates/template1.module.scss';
 import Link from 'next/link';
+import Style from '../../src/components/fashionTemp1/fashionTemp1.module.css';
 import { Tooltip } from 'react-tippy';
+import Education1 from '../../src/components/commonSection/Education1';
 const fashionTemp1 = (props) => {
   const { resumeData } = props;
   console.log('resumeData:', resumeData);
@@ -40,7 +42,7 @@ const fashionTemp1 = (props) => {
           h={'full'}
           alignItems="flex-start"
           borderRadius={6}
-          bg={'white'}
+          bg={'#fff'}
           my={10}
           py={8}
           px={10}
@@ -121,12 +123,22 @@ const fashionTemp1 = (props) => {
               </Text>
             </HStack>
             &nbsp;
-            <FashTemp1Edu
+            <Education1
               data={
                 resumeData?.education?.items.length
                   ? [...resumeData?.education?.items]
                   : [...sampleData?.data?.education?.items]
               }
+              date={true}
+              summary={true}
+              degree={true}
+              institution={true}
+              degree_placeholder="Study Program"
+              degreeStyle={Style.date}
+              dateStyle={Style.date}
+              institutionStyle={Style.date}
+              summaryStyle={Style.profileText}
+              direction="row"
             />
             <HStack minW={400} maxW={400} bg={'#3498DB'} h={35} mt={5} pl={2}>
               <BsLayersFill color="white" size={20} />
