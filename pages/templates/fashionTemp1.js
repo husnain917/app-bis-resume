@@ -5,19 +5,21 @@ import { onBlurField } from '../../store/actions/builderAction';
 import { BsFillPersonFill, BsLayersFill } from 'react-icons/bs';
 import { IoLanguageSharp } from 'react-icons/io5';
 import { MdCastForEducation, MdEmail } from 'react-icons/md';
-import FashTemp1Experience from '../../src/components/fashionTemp1/FashTemp1Experience';
-import FashTemp1Reference from '../../src/components/fashionTemp1/FashTemp1Reference';
-import FashTemp1Personal from '../../src/components/fashionTemp1/FashTemp1Personal';
 import FashTemp1sProfile from '../../src/components/fashionTemp1/FashTemp1Profile';
-import FashTemp1About from '../../src/components/fashionTemp1/FashTemp1About';
-import FashTemp1Lang from '../../src/components/fashionTemp1/FashTemp1Lang';
 import FashTemp1PersonalInfo from '../../src/components/fashionTemp1/FashTemp1PersonalInfo';
-import FashTemp1Edu from '../../src/components/fashionTemp1/FashTemp1Edu';
 import style from '../../styles/templates/template1.module.scss';
 import Link from 'next/link';
 import Style from '../../src/components/fashionTemp1/fashionTemp1.module.css';
 import { Tooltip } from 'react-tippy';
-import Education1 from '../../src/components/commonSection/Education1';
+import WorkExperience from '../../src/components/commonSection/WorkExperience';
+import Reference from '../../src/components/commonSection/Reference';
+import About from '../../src/components/commonSection/About';
+import Language from '../../src/components/commonSection/Language';
+import Heading from '../../src/components/commonSection/Heading';
+import Education from '../../src/components/commonSection/Education';
+import Skill from '../../src/components/commonSection/Skill';
+import Name from '../../src/components/commonSection/Name';
+import Profession from '../../src/components/commonSection/Profession';
 const fashionTemp1 = (props) => {
   const { resumeData } = props;
   console.log('resumeData:', resumeData);
@@ -35,6 +37,9 @@ const fashionTemp1 = (props) => {
       <Flex
         justifyContent={{ base: 'none', md: 'center' }}
         bg={{ md: 'none', lg: 'blackAlpha.100' }}
+        overflow="auto"
+        flexDir={'column'}
+        alignItems={{ sm: 'none', md: 'center' }}
       >
         <HStack
           minW={830}
@@ -48,82 +53,99 @@ const fashionTemp1 = (props) => {
           px={10}
         >
           <Box maxW={336} minW={336}>
-            <FashTemp1sProfile />
-            <HStack minW={250} maxW={250} bg={'#3498DB'} h={35} mt={10} pl={2}>
-              <BsFillPersonFill color="white" size={20} />
-              <Text
-                color={'white'}
-                fontSize={20}
-                fontWeight="600"
-                pb={0.7}
-                pl={2}
-                letterSpacing={3}
-              >
-                ABOUT ME
-              </Text>
-            </HStack>
+            <Name
+              direction="column"
+              FName={true}
+              SName={true}
+              FNameStyle={Style.fashionName}
+              SNameStyle={Style.fashionName}
+            />
+            <Profession professionStyle={Style.ProfessionFashion} />
+            <Heading
+              title={'ABOUT ME'}
+              headBg={'#3498DB'}
+              icon={(props) => (
+                <BsFillPersonFill {...props} size={20} color={'#fff'} />
+              )}
+              color={'white'}
+              fontSize={20}
+              fontWeight="600"
+              pb={0.7}
+              pl={2}
+              letterSpacing={3}
+              minW={250}
+              maxW={250}
+            />
             &nbsp;
-            <FashTemp1About />
-            <HStack minW={250} maxW={250} bg={'#3498DB'} h={35} mt={5} pl={2}>
-              <BsFillPersonFill color="white" size={20} />
-              <Text
-                color={'white'}
-                fontSize={20}
-                fontWeight="600"
-                pb={0.7}
-                pl={2}
-                letterSpacing={3}
-              >
-                PERSONAL
-              </Text>
-            </HStack>
+            <About aboutStyle={Style.profileText} />
+            <Heading
+              title={'PERSONAL'}
+              headBg={'#3498DB'}
+              icon={(props) => (
+                <BsFillPersonFill {...props} size={20} color={'#fff'} />
+              )}
+              color={'white'}
+              fontSize={20}
+              fontWeight="600"
+              pb={0.7}
+              pl={2}
+              letterSpacing={3}
+              minW={250}
+              maxW={250}
+            />
             &nbsp;
-            <FashTemp1Personal
+            <Skill
               data={
                 resumeData?.skills?.items?.length
                   ? [...resumeData?.skills?.items]
                   : [...sampleData?.data?.skills?.items]
               }
+              skillStyle={Style.personalText}
             />
-            <HStack minW={250} maxW={250} bg={'#3498DB'} h={35} mt={5} pl={2}>
-              <IoLanguageSharp color="white" size={20} />
-              <Text
-                color={'white'}
-                fontSize={20}
-                fontWeight="600"
-                pb={0.7}
-                pl={2}
-                letterSpacing={3}
-              >
-                LANGUAGES
-              </Text>
-            </HStack>
+            <Heading
+              title={'LANGUAGES'}
+              headBg={'#3498DB'}
+              icon={(props) => (
+                <IoLanguageSharp {...props} size={20} color={'#fff'} />
+              )}
+              color={'white'}
+              fontSize={20}
+              fontWeight="600"
+              pb={0.7}
+              pl={2}
+              letterSpacing={3}
+              minW={250}
+              maxW={250}
+            />
             &nbsp;
-            <FashTemp1Lang
+            <Language
               data={
                 resumeData?.languages?.items
                   ? [...resumeData?.languages?.items]
                   : [...sampleData?.data?.languages?.items]
               }
+              langStyle={Style.langText}
             />
           </Box>
           <Box maxW={406} minW={406}>
             <FashTemp1PersonalInfo />
-            <HStack minW={400} maxW={400} bg={'#3498DB'} h={35} mt={61} pl={2}>
-              <MdCastForEducation color="white" size={20} />
-              <Text
-                color={'white'}
-                fontSize={20}
-                fontWeight="600"
-                pb={0.7}
-                pl={2}
-                letterSpacing={3}
-              >
-                EDUCATION
-              </Text>
-            </HStack>
+            <Heading
+              title={'EDUCATION'}
+              headBg={'#3498DB'}
+              icon={(props) => (
+                <MdCastForEducation {...props} size={20} color={'#fff'} />
+              )}
+              color={'white'}
+              fontSize={20}
+              fontWeight="600"
+              pb={0.7}
+              pl={2}
+              letterSpacing={3}
+              minW={400}
+              maxW={400}
+            />
             &nbsp;
-            <Education1
+            <Education
               data={
                 resumeData?.education?.items.length
                   ? [...resumeData?.education?.items]
@@ -139,48 +161,69 @@ const fashionTemp1 = (props) => {
               institutionStyle={Style.date}
               summaryStyle={Style.profileText}
               direction="row"
+              dateDirection="row"
             />
-            <HStack minW={400} maxW={400} bg={'#3498DB'} h={35} mt={5} pl={2}>
-              <BsLayersFill color="white" size={20} />
-              <Text
-                color={'white'}
-                fontSize={20}
-                fontWeight="600"
-                pb={0.7}
-                pl={2}
-                letterSpacing={3}
-              >
-                EXPERIENCE
-              </Text>
-            </HStack>
+            <Heading
+              title={'EXPERIENCE'}
+              headBg={'#3498DB'}
+              icon={(props) => (
+                <BsLayersFill {...props} size={20} color={'#fff'} />
+              )}
+              color={'white'}
+              fontSize={20}
+              fontWeight="600"
+              pb={0.7}
+              pl={2}
+              letterSpacing={3}
+              minW={400}
+              maxW={400}
+            />
             &nbsp;
-            <FashTemp1Experience
+            <WorkExperience
               data={
                 resumeData?.work?.items.length
                   ? [...resumeData?.work?.items]
                   : [...sampleData?.data?.work?.items]
               }
+              company={true}
+              date={true}
+              position={true}
+              summary={true}
+              dateStyle={Style.date}
+              companyStyle={Style.date}
+              positionStyle={Style.date}
+              summaryStyle={Style.profileText}
+              direction="row"
             />
-            <HStack minW={400} maxW={400} bg={'#3498DB'} h={35} mt={5} pl={2}>
-              <MdEmail color="white" size={20} />
-              <Text
-                color={'white'}
-                fontSize={20}
-                fontWeight="600"
-                pb={0.7}
-                pl={2}
-                letterSpacing={3}
-              >
-                REFERENCE
-              </Text>
-            </HStack>
+            <Heading
+              title={'REFERENCE'}
+              headBg={'#3498DB'}
+              icon={(props) => <MdEmail {...props} size={20} color={'#fff'} />}
+              color={'white'}
+              fontSize={20}
+              fontWeight="600"
+              pb={0.7}
+              pl={2}
+              letterSpacing={3}
+              minW={400}
+              maxW={400}
+            />
             &nbsp;
-            <FashTemp1Reference
+            <Reference
               data={
                 resumeData?.references?.items.length
                   ? [...resumeData?.references?.items]
                   : [...sampleData?.data?.references?.items]
               }
+              name={true}
+              profession={true}
+              email={true}
+              phone={true}
+              phoneStyle={Style.profileText}
+              emailStyle={Style.profileText}
+              professionStyle={Style.profileText}
+              nameStyle={Style.referenceName}
+              DndDirection="horizontal"
             />
           </Box>
         </HStack>

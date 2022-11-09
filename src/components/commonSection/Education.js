@@ -9,8 +9,7 @@ import {
   addNewObj,
   deleteObjInArray,
 } from '../../../store/actions/builderAction';
-import styles from '../../../styles/templates/Graphic.module.css';
-const Education1 = (props) => {
+const Education = (props) => {
   const dispatch = useDispatch();
   const path = 'education.items';
 
@@ -52,14 +51,18 @@ const Education1 = (props) => {
     extracurricular,
     direction,
     dateDirection = 'row',
-    rowMinW,
-    rowMaxW,
+    row1MinW = 160,
+    row1MaxW = 160,
+    row2MaxW = 230,
+    row2MinW = 230,
+    DndDirection,
   } = props;
 
   return (
-    <div>
+    <div className={`${eduContainerStyle ? eduContainerStyle : ''}`}>
       <Dnd
         data={data}
+        direction={DndDirection ? DndDirection : ''}
         reorder={(e) => onOrderUpdate(e)}
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
@@ -68,8 +71,8 @@ const Education1 = (props) => {
             <Stack direction={direction ? direction : 'column'}>
               {date && (
                 <Box
-                  minW={direction == 'row' && rowMinW ? rowMinW : 160}
-                  maxW={direction == 'row' && rowMaxW ? rowMaxW : 160}
+                  minW={direction === 'row' && row1MinW}
+                  maxW={direction === 'row' && row1MaxW}
                 >
                   <Stack direction={dateDirection ? dateDirection : 'row'}>
                     <Text
@@ -112,8 +115,8 @@ const Education1 = (props) => {
               )}
               {degree && (
                 <Box
-                  minW={direction == 'row' && rowMinW ? rowMinW : 160}
-                  maxW={direction == 'row' && rowMaxW ? rowMaxW : 160}
+                  minW={direction === 'row' && row2MinW}
+                  maxW={direction === 'row' && row2MaxW}
                 >
                   <Text
                     value={item.degree}
@@ -133,8 +136,8 @@ const Education1 = (props) => {
             <Stack direction={direction ? direction : 'column'}>
               {institution && (
                 <Box
-                  minW={direction == 'row' && rowMinW ? rowMinW : 160}
-                  maxW={direction == 'row' && rowMaxW ? rowMaxW : 160}
+                  minW={direction === 'row' && row1MinW}
+                  maxW={direction === 'row' && row1MaxW}
                 >
                   <Text
                     value={item.institution}
@@ -155,8 +158,8 @@ const Education1 = (props) => {
 
               {summary && (
                 <Box
-                  minW={direction == 'row' && rowMinW ? rowMinW : 160}
-                  maxW={direction == 'row' && rowMaxW ? rowMaxW : 160}
+                  minW={direction === 'row' && row2MinW}
+                  maxW={direction === 'row' && row2MaxW}
                 >
                   <Text
                     value={item.summary}
@@ -179,7 +182,9 @@ const Education1 = (props) => {
                 <Text
                   value={`${item.extracurricular}`}
                   placeholder={
-                    extracurricular_placeholder ? extracurricularStyle : ''
+                    extracurricular_placeholder
+                      ? extracurricularStyle
+                      : 'Extra Curricular'
                   }
                   path={`${path}.${index}.extracurricular`}
                   customClass={`${
@@ -197,4 +202,4 @@ const Education1 = (props) => {
     </div>
   );
 };
-export default Education1;
+export default Education;

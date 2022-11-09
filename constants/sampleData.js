@@ -103,7 +103,7 @@ export const sampleData = {
     languages: {
       enable: true,
       heading: 'Languages',
-      items: [{}],
+      items: [{ title: '' }],
       visible: true,
     },
     military: {
