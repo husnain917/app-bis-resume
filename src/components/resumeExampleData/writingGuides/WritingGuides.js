@@ -39,11 +39,17 @@ const WritingGuides = () => {
           flexShrink={"0"}
           alignSelf={"flex-end"}
           marginLeft={"128px"}
-          w={"544px"}
+          w={["344px", "444px", "544px", "544px", "544px", "544px"]}
           display={"flex"}
         >
           <Box right={"0"} position={"absolute"} marginTop={"-5%"}>
-            <Image src="./top1.png" w={"14"} alignSelf={"flex-end"} />
+            <Image
+              src="./top1.png"
+              w={"200px"}
+              alignSelf={"flex-end"}
+              marginLeft={"-60px"}
+              marginTop={"-36px"}
+            />
           </Box>
           <Box
             overflow={"hidden"}
@@ -59,6 +65,7 @@ const WritingGuides = () => {
             marginRight={"-16px"}
             width={"227px"}
             position={"absolute"}
+            display={["none", "none", "block", "block"]}
           >
             <Image src="./top2.png" marginTop={"-59px"} bg={"transparent"} />
           </Box>
