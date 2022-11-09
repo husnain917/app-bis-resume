@@ -142,6 +142,22 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
                         fontSize: "18px",
                       }}
                     />
+                    <Input
+                      variant="outline"
+                      focusBorderColor="#00C8AA"
+                      placeholder="Password"
+                      bgColor="#E1E1E1"
+                      type={'password'}
+                      w="100%"
+                      mt="10px"
+                      h="50px"
+                      pt="10px"
+                      pb="10px"
+                      _hover={{
+                        color: "black",
+                        fontSize: "18px",
+                      }}
+                    />
                     <Checkbox
                       size="lg"
                       mt="10%"
@@ -166,6 +182,22 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
                         fontSize: "18px",
                       }}
                     />
+                    <Input
+                      variant="outline"
+                      placeholder="Password"
+                      bgColor="#E1E1E1"
+                      type={'password'}
+                      w="100%"
+                      mt="10px"
+                      h="50px"
+                      pt="10px"
+                      pb="10px"
+                      _hover={{
+                        color: "black",
+                        fontSize: "18px",
+                      }}
+                    />
+
                   </>
                 )}
               </Box>
@@ -228,20 +260,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen }) {
                 >
                   Google
                 </Button>
-                {isRegister ? (
-                  <>
-                    <Text
-                      align="center"
-                      lineHeight="15px"
-                      mt="3%"
-                      pl="7%"
-                      pr="7%"
-                    >
-                      A password can be set after you sign up if you prefer.
-                      Meanwhile, your information is secure and private
-                    </Text>
-                  </>
-                ) : null}
+               
               </Box>
             </Box>
           </Box>
