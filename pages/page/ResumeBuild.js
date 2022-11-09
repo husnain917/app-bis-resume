@@ -141,14 +141,14 @@ export default function ResumeBuild() {
                         <Text fontSize="28px" fontWeight="bold" color="black" mb={["5%"]} >How to Make A Resume</Text>
 
                         <Box display="flex" flexDirection="row"><Text marginRight={["12px", "5px", "5px"]}  > <TbCircle1 size={30} color="red" /> </Text><Text fontSize="20px" fontWeight="800"  > Open Canva</Text></Box>
-                        <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]}>Open up Canva and search for Resume to start designing your own.
+                        <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]} mr={["2%", "2%", "0%"]} >Open up Canva and search for Resume to start designing your own.
                         </Text>
 
 
 
                         <Box marginTop="5%">
                             <Box display="flex" flexDirection="row"><Text marginRight={["12px", "5px", "5px"]}   > <TbCircle2 size={30} color="red" /> </Text><Text fontSize="20px" fontWeight="800"  >Find the right template</Text></Box>
-                            <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]} >
+                            <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]} mr={["2%", "2%", "0%"]} >
                                 Choose from hundreds of professionally-designed resume templates. Take your pick from styles like modern or simple layouts or industries like acting, graphic design or more corporate layouts.
 
 
@@ -160,7 +160,7 @@ export default function ResumeBuild() {
                             <Box display="flex" flexDirection="row"><Text marginRight={["12px", "5px", "5px"]}  > <TbCircle3 size={30} color="red" /> </Text><Text fontSize="20px" fontWeight="800"  >
                                 Personalize your resume
                             </Text></Box>
-                            <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]}>
+                            <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]} mr={["2%", "2%", "0%"]}>
                                 After picking a template, use Canvas drag and drop design tools to tweak your resume. Change fonts, text and colors in a few clicks. Upload your own photo and rearrange any and all elements as much as you want.
 
 
@@ -169,9 +169,10 @@ export default function ResumeBuild() {
 
                         <Box marginTop="5%">
                             <Box display="flex" flexDirection="row"><Text marginRight={["12px", "5px", "5px"]}  > <TbCircle4 size={30} color="red" /> </Text><Text fontSize="20px" fontWeight="800"  >
-                                Personalize your resume
+                                Get creative with more features
+
                             </Text></Box>
-                            <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]}>
+                            <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]} mr={["2%", "2%", "0%"]}>
                                 After picking a template, use Canvas drag and drop design tools to tweak your resume. Change fonts, text and colors in a few clicks. Upload your own photo and rearrange any and all elements as much as you want.
 
 
@@ -179,9 +180,10 @@ export default function ResumeBuild() {
                         </Box>
                         <Box marginTop="5%">
                             <Box display="flex" flexDirection="row"><Text marginRight={["12px", "5px", "5px"]}  > <TbCircle5 size={30} color="red" /> </Text><Text fontSize="20px" fontWeight="800"  >
-                                Personalize your resume
+                                Order your prints
+
                             </Text></Box>
-                            <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]}>
+                            <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]} mr={["2%", "2%", "0%"]}>
                                 After picking a template, use Canvas drag and drop design tools to tweak your resume. Change fonts, text and colors in a few clicks. Upload your own photo and rearrange any and all elements as much as you want.
                             </Text>
                         </Box>
