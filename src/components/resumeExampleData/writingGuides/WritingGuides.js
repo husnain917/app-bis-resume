@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Button } from "@chakra-ui/react";
+import { Box, Text, Button, Image } from "@chakra-ui/react";
 
 const WritingGuides = () => {
   return (
@@ -11,7 +11,11 @@ const WritingGuides = () => {
         display={"flex"}
         flexDirection={["column", "column", "row", "row", "row"]}
       >
-        <Box flexGrow={1} marginBottom={["58px", "64px", "64px"]}>
+        <Box
+          flexGrow={1}
+          marginBottom={["58px", "64px", "64px"]}
+          marginTop={"30px"}
+        >
           {" "}
           <Box
             fontSize={["27px", "38px"]}
@@ -30,7 +34,35 @@ const WritingGuides = () => {
           </Box>
           <Box>Check my Resume</Box>
         </Box>
-        <Box> Picture</Box>
+        <Box
+          position={"relative"}
+          flexShrink={"0"}
+          alignSelf={"flex-end"}
+          marginLeft={"128px"}
+          w={"544px"}
+          display={"flex"}
+        >
+          <Box right={"0"} position={"absolute"} marginTop={"-5%"}>
+            <Image src="./top1.png" w={"14"} alignSelf={"flex-end"} />
+          </Box>
+          <Box
+            overflow={"hidden"}
+            borderRadius={"4px 4px 0 0"}
+            height={"480px"}
+            w={["550px", "550px", "550px", "550px", "550px"]}
+          >
+            <Image src="./new-york-resume.jpg" />
+          </Box>{" "}
+          <Box
+            bottom={"20px"}
+            right={"100%"}
+            marginRight={"-16px"}
+            width={"227px"}
+            position={"absolute"}
+          >
+            <Image src="./top2.png" marginTop={"-59px"} bg={"transparent"} />
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
