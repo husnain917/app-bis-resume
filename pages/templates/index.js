@@ -327,7 +327,7 @@ function Templates() {
             />
           </Link>
         </Box>
-        
+        <Box>
           <Link href="/templates/CollegeTemp">
             <img
               src="CollegeTemp.png"
@@ -338,7 +338,7 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
-           <Link href="/templates/simpleTempDesign">
+          <Link href="/templates/simpleTempDesign">
             <img
               src="simpleTemp.png"
               alt="Simple Template Design"
