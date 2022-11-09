@@ -311,7 +311,7 @@ function Templates() {
           <Link href="/templates/TechTemplate">
             <img
               src="TechTemp.png"
-              alt="Tech Resume Template"
+              alt="Tech Editable Resume Template"
               height="200px"
               width="250px"
             />
@@ -327,7 +327,7 @@ function Templates() {
             />
           </Link>
         </Box>
-        <Box>
+        <Box className="cursor">
           <Link href="/templates/CollegeTemp">
             <img
               src="CollegeTemp.png"
