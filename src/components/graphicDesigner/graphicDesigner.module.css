@@ -3,6 +3,7 @@
   font-size: 16px;
   font-weight: 400;
 }
+
 .fashionName {
   color: black;
   text-align: left;
@@ -12,6 +13,7 @@
   padding: 0px !important;
   margin: 0px !important;
 }
+
 .ProfessionFashion {
   font-weight: 500;
   font-size: 1.4em;
@@ -21,10 +23,12 @@
   color: black;
   letter-spacing: 1px;
 }
+
 .personalText {
   font-size: 16px;
   font-weight: 400;
 }
+
 .langText {
   font-size: 16px;
   color: black;
@@ -33,15 +37,58 @@
   min-width: 130px;
   max-width: 130px;
 }
+
 .date {
   font-size: 15px;
   font-weight: 500;
   color: black;
 }
+
 .referenceName {
   font-size: 15px;
   font-weight: 700;
 }
+
 .mt {
   margin-top: 10px;
+}
+
+.swapCont {
+  position: absolute;
+  right: 80px;
+  top: 60px;
+}
+
+.swap {
+  width: 40px;
+  height: 40px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.swap:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+
+.swap img {
+  width: 70%;
+  filter: invert(1);
+}
+
+.inputData {
+  font-size: 14px !important;
+  color: #000000;
+  margin-left: 10px;
+}
+.perD {
+  display: inline-block;
+  margin-left: -15px !important;
+  font-size: 13px !important;
+  color: #000000;
 }

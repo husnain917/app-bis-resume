@@ -2,6 +2,7 @@ import {
     Box,
     Container,
 } from '@chakra-ui/react';
+import { Tooltip } from 'react-tippy';
 import React from 'react';
 import { Text } from "../../src/components/template1/index";
 import FashionCustomHook from "../../src/components/fashionTemp/FashionCustomHook";
@@ -10,6 +11,7 @@ import {
     FaRegEnvelope,
     FaLocationArrow,
 } from "react-icons/fa";
+import Link from "next/link";
 import styles from "../../styles/graphicTemplate.module.css";
 import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import GraphicEducation from "../../src/components/aaronGraphicTemp/GraphicEducation";
@@ -22,6 +24,15 @@ export default function aaronGraphicTemp() {
     const { resumeEditor } = FashionCustomHook();
     return (
         <>
+            <Link href={"/templates"}>
+                <div className={styles.swapCont}>
+                    <Tooltip title="Change Template" arrow distance={20}>
+                        <div className={styles.swap}>
+                            <img src="/icons/swap.png" />
+                        </div>
+                    </Tooltip>
+                </div>
+            </Link>
             <Container
                 backgroundColor={'#000000'}
                 minW={'70%'}

@@ -12,10 +12,10 @@ const PersonalInfo = () => {
     <div style={{marginTop: -18}}>
       <HStack mt={8} ml={2}>
         <Box mr={2}>
-          <BsFillTelephoneFill color="#2e4229" size={16} />
+          <BsFillTelephoneFill color="#2e4229" size={20} />
         </Box>
         <HybridText
-          placeholder="Phone"
+          placeholder="+123-456-7890"
           customclass={` ${Style.profileText}`}
           value={resumeData?.profile?.phone}
           path={'profile.phone'}
@@ -23,10 +23,10 @@ const PersonalInfo = () => {
       </HStack>
       <HStack ml={2}>
         <Box mr={2}>
-          <TbWorld color="#2e4229" size={16} />
+          <TbWorld color="#2e4229" size={20} />
         </Box>
         <HybridText
-          placeholder="Website"
+          placeholder="www.reallygreatsite.com"
           customclass={` ${Style.profileText}`}
           path={'profile.website'}
           value={resumeData?.profile?.website}
@@ -34,10 +34,10 @@ const PersonalInfo = () => {
       </HStack>
       <HStack ml={2}>
         <Box mr={2}>
-          <MdEmail color="#2e4229" size={16} />
+          <MdEmail color="#2e4229" size={20} />
         </Box>
         <HybridText
-          placeholder="E-mail"
+          placeholder="Hello@reallygreatsite.com"
           customclass={` ${Style.profileText}`}
           value={resumeData?.profile?.email}
           path={'profile.email'}
@@ -45,10 +45,10 @@ const PersonalInfo = () => {
       </HStack>
       <HStack ml={2}>
         <Box mr={2}>
-          <MdLocationOn color="#2e4229" size={16} />
+          <MdLocationOn color="#2e4229" size={20} />
         </Box>
         <HybridText
-          placeholder="Location"
+          placeholder="123 Anywhere St., Any City"
           customclass={` ${Style.profileText}`}
           value={resumeData?.profile?.address?.city}
           path={'profile.address.city'}
