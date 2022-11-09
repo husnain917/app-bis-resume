@@ -37,9 +37,9 @@ export default function FormatsTables() {
                 maxW={["100%", "100%", "80%", "60%"]}
             >
                 <Box
-                    id="b1"
+                    id={"b1"}
                 >
-                    <ResumeHeading text="1" />
+                    <ResumeHeading text={"1"} />
                     {/* title */}
                     <Text
                         textAlign={"center"}
@@ -209,8 +209,8 @@ export default function FormatsTables() {
                     margin={"20px 0px 40px 0px"}
                 >
                     <Image
-                        src="/resumeTipsImg.jpg"
-                        alt="Image Not Found"
+                        src={"/resumeTipsImg.jpg"}
+                        alt={"Image Not Found"}
                     />
                 </Box>
             </Container>
@@ -221,9 +221,9 @@ export default function FormatsTables() {
                 maxW={["100%", "100%", "80%", "60%"]}
             >
                 <Box
-                    id="b2"
+                    id={"b2"}
                 >
-                    <ResumeHeading text="2" />
+                    <ResumeHeading text={"2"} />
                     {/* title */}
                     <Text
                         textAlign={"center"}
@@ -274,7 +274,7 @@ export default function FormatsTables() {
                                         >
                                             <Image
                                                 src={item?.img}
-                                                alt="Image Not Found"
+                                                alt={"Image Not Found"}
                                                 onMouseEnter={() => setOver(true)}
                                                 onMouseLeave={() => setOver(false)}
                                             />
@@ -289,7 +289,7 @@ export default function FormatsTables() {
                                                             onMouseLeave={() => setOver(false)}
                                                         >
                                                             <Link
-                                                                href="/templates"
+                                                                href={"/templates"}
                                                                 height={["45px", "55px", "55px", "55px"]}
                                                                 width={["100%", "100%", "90%", "90%", "70%"]}
                                                                 backgroundColor={"#d04141"}
@@ -337,9 +337,9 @@ export default function FormatsTables() {
                 maxW={["100%", "100%", "80%", "60%"]}
             >
                 <Box
-
-                    id="b3">
-                    <ResumeHeading text="3" />
+                    id={"b3"}
+                >
+                    <ResumeHeading text={"3"} />
                     {/* title */}
                     <Text
                         textAlign={"center"}
@@ -443,8 +443,8 @@ export default function FormatsTables() {
                 {/* Image */}
                 <Box>
                     <Image
-                        src="/resume_formats_main.jpg"
-                        alt="Image Not Found"
+                        src={"/resume_formats_main.jpg"}
+                        alt={"Image Not Found"}
                     />
                 </Box>
             </Container>
@@ -500,8 +500,8 @@ export default function FormatsTables() {
                         marginBottom={"30px"}
                     >
                         <Image
-                            src="/best_format_resume.jpg"
-                            alt="Image Not Found"
+                            src={"/best_format_resume.jpg"}
+                            alt={"Image Not Found"}
                         />
                     </Box>
 
@@ -532,7 +532,7 @@ export default function FormatsTables() {
 
                     {/* Examples */}
                     <Box
-                        id="b3i"
+                        id={"b3i"}
                     >
                         <Text
                             fontSize={"26px"}
@@ -562,8 +562,8 @@ export default function FormatsTables() {
                             marginBottom={"30px"}
                         >
                             <Image
-                                src="/resume_format_temp1.jpg"
-                                alt="Image Not Found"
+                                src={"/resume_format_temp1.jpg"}
+                                alt={"Image Not Found"}
                             />
                         </Box>
 
@@ -590,7 +590,7 @@ export default function FormatsTables() {
                             margin={"40px 0px 30px 0px"}
                         >
                             <Link
-                                href="/templates"
+                                href={"/templates"}
                                 height={["45px", "55px", "55px", "55px"]}
                                 backgroundColor={"#d04141"}
                                 width={["100%", "100%", "50%", "45%", "45%"]}
@@ -672,7 +672,7 @@ export default function FormatsTables() {
                             marginBottom={"30px"}
                             lineHeight={8}
                         >
-                            The reverse chronological resume format puts emphasis on your work history because that s what s most relevant for hiring managers. It"s considered the&nbsp;
+                            The reverse chronological resume format puts emphasis on your work history because that s what s most relevant for hiring managers. Its considered the&nbsp;
                             <Link
                                 color={"#3983fa"}
                             >
@@ -928,7 +928,7 @@ export default function FormatsTables() {
                         >
                             <strong>Pro Tip:</strong> You should also know the difference between a &nbsp;
                             <Link color={"#3983fa"} href={"/templates"}>CV vs a resume</Link>, depending on what part of the
-                            world you live in they can have a format that"s much the same, or completely different. So make sure you choose the right one.
+                            world you live in they can have a format thats much the same, or completely different. So make sure you choose the right one.
                         </Text>
 
                         <Text
@@ -946,7 +946,7 @@ export default function FormatsTables() {
 
                     {/* example 2 */}
                     <Box
-                        id="b3ii"
+                        id={"b3ii"}
                     >
                         {/* title */}
                         <Text
@@ -977,8 +977,8 @@ export default function FormatsTables() {
                             marginBottom={"30px"}
                         >
                             <Image
-                                src="/resume_format_skill1.jpg"
-                                alt="Image Not Found"
+                                src={"/resume_format_skill1.jpg"}
+                                alt={"Image Not Found"}
                             />
                         </Box>
 
@@ -1189,7 +1189,7 @@ export default function FormatsTables() {
                                 marginBottom={"20px"}
                                 lineHeight={8}
                             >
-                                Able to work with many kinds of clients in a wide variety of fields. Excellent at researching clients" brands, industries, and markets very quickly and efficiently.
+                                Able to work with many kinds of clients in a wide variety of fields. Excellent at researching clients brands, industries, and markets very quickly and efficiently.
                             </Text>
 
                             <Text
@@ -1443,7 +1443,7 @@ export default function FormatsTables() {
 
                     {/* example 3 */}
                     <Box
-                        id="b3iii"
+                        id={"b3iii"}
                     >
                         {/* title */}
                         <Text
@@ -1474,8 +1474,8 @@ export default function FormatsTables() {
                             marginBottom={"30px"}
                         >
                             <Image
-                                src="/resume_format_hybird1.jpg"
-                                alt="Image Not Found"
+                                src={"/resume_format_hybird1.jpg"}
+                                alt={"Image Not Found"}
                             />
                         </Box>
 
@@ -1502,7 +1502,7 @@ export default function FormatsTables() {
                             margin={"40px 0px 30px 0px"}
                         >
                             <Link
-                                href="/templates"
+                                href={"/templates"}
                                 height={["45px", "55px", "55px", "55px"]}
                                 backgroundColor={"#d04141"}
                                 width={["100%", "100%", "50%", "45%", "45%"]}
@@ -1668,7 +1668,6 @@ export default function FormatsTables() {
                                 color={"#35a235"}
                                 fontSize={"40px"}
                                 fontWeight={"semibold"}
-                            // padding={"10px 20px"}
                             >
                                 RIGHT
                             </Text>
@@ -1826,7 +1825,7 @@ export default function FormatsTables() {
 
                     {/* example 4 */}
                     <Box
-                        id="b3iv"
+                        id={"b3iv"}
                     >
                         {/* title */}
                         <Text
@@ -1956,8 +1955,8 @@ export default function FormatsTables() {
                     onMouseLeave={() => setOver(false)}
                 >
                     <Image
-                        src="/resume_tips1.jpg"
-                        alt="Image Not Found"
+                        src={"/resume_tips1.jpg"}
+                        alt={"Image Not Found"}
                         onMouseEnter={() => setOver(true)}
                         onMouseLeave={() => setOver(false)}
                     />
@@ -2034,9 +2033,9 @@ export default function FormatsTables() {
                 maxW={["100%", "100%", "80%", "60%"]}
             >
                 <Box
-                    id="b4"
+                    id={"b4"}
                 >
-                    <ResumeHeading text="4" />
+                    <ResumeHeading text={"4"} />
                     {/* title */}
                     <Text
                         textAlign={"center"}
@@ -2151,9 +2150,9 @@ export default function FormatsTables() {
                 maxW={["100%", "100%", "80%", "60%"]}
             >
                 <Box
-                    id="b5"
+                    id={"b5"}
                 >
-                    <ResumeHeading text="5" />
+                    <ResumeHeading text={"5"} />
                     {/* title */}
                     <Text
                         textAlign={"center"}
@@ -2216,7 +2215,7 @@ export default function FormatsTables() {
                         >
                             cover letter builder here
                         </Link>
-                        . Here"s what it may look like:
+                        . Heres what it may look like:
                     </Text>
                 </Box>
             </Container>
@@ -2232,8 +2231,8 @@ export default function FormatsTables() {
                     onMouseLeave={() => setOver(false)}
                 >
                     <Image
-                        src="/cover_letter_1.jpg"
-                        alt="Image Not Found"
+                        src={"/cover_letter_1.jpg"}
+                        alt={"Image Not Found"}
                         onMouseEnter={() => setOver(true)}
                         onMouseLeave={() => setOver(false)}
                     />
@@ -2248,7 +2247,7 @@ export default function FormatsTables() {
                                     onMouseLeave={() => setOver(false)}
                                 >
                                     <Link
-                                        href="/templates"
+                                        href={"/templates"}
                                         height={["45px", "55px", "55px", "55px"]}
                                         width={["100%", "100%", "80%", "80%", "50%"]}
                                         backgroundColor={"#d04141"}
@@ -2308,8 +2307,8 @@ export default function FormatsTables() {
                     {/* Imnage */}
                     <Box>
                         <Image
-                            src="/perfect_resume_format.jpg"
-                            alt="Image Not Found"
+                            src={"/perfect_resume_format.jpg"}
+                            alt={"Image Not Found"}
                         />
                     </Box>
 
