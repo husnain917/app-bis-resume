@@ -8,10 +8,10 @@ import { Button, Container } from '@chakra-ui/react'
 import { GrMail } from "react-icons/gr";
 import { Si1Password } from "react-icons/si";
 import { AiOutlineEdit, AiOutlineFileImage, AiOutlineFontColors } from "react-icons/ai";
-import contentImage from "../../public/contentImage.png"
-import HeadResume from "../../public/HeaderResume.png"
-import FaqsSection from "../../src/components/faqsComponent/FaqsSection";
-import Templates from "../templates";
+import contentImage from "../public/contentImage.png"
+import HeadResume from "../public/HeaderResume.png"
+import FaqsSection from "../src/components/faqsComponent/FaqsSection";
+import Templates from "./templates";
 import { GrTemplate } from "react-icons/gr"
 import { TbCircle1, TbCircle2, TbCircle3, TbCircle4, TbCircle5 } from "react-icons/tb"
 
