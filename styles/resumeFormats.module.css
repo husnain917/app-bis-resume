@@ -32,8 +32,62 @@
   line-height: normal;
 }
 
+.blogLinksDiv {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0px 0px 40px 0px;
+}
 
-/* @media (max-width: 960px) {
+.avatarDiv {
+  margin: 5rem 0px 20px 0px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.resumeTemplateDiv {
+  position: absolute;
+  top: 50%;
+  left: 38%;
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+  color: #2679C7 !important;
+  text-decoration: none;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+.links:hover {
+  color: #40a9ff;
+  text-decoration: underline;
+}
+
+
+
+@media (min-width: 1440px) {
+  .ctaHeading {
+    font-size: 2.6rem;
+  }
+
+  .resumeTemplateDiv {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .resumeTemplateDiv {
+    position: absolute;
+    top: 38%;
+    left: 25%;
+  }
+}
+
+@media (max-width: 960px) {
   .ctaContainer {
     background: linear-gradient(0deg,
         transparent 0%,
@@ -58,21 +112,35 @@
   }
 
   .ctaHeading {
-    font-size: 22px;
+    font-size: 2.6rem;
     text-align: center;
   }
-}
 
-@media (min-width: 1440px) {
-  .ctaHeading {
-    font-size: 2rem;
+  .blogLinksDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 25px 40px 25px;
   }
 
+  .avatarDiv {
+    margin: 2rem 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .resumeTemplateDiv {
+    position: absolute;
+    top: 32%;
+    left: 25%;
+  }
 }
 
 @media (max-width: 720px) {
   .ctaHeading {
-    font-size: 55px;
+    font-size: 2.6rem;
   }
 }
 
@@ -83,7 +151,7 @@
   }
 
   .ctaHeading {
-    font-size: 50px;
+    font-size: 2.2rem;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
@@ -97,10 +165,16 @@
   }
 
   .ctaHeading {
-    font-size: 35px;
+    font-size: 26px;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .resumeTemplateDiv {
+    position: absolute;
+    top: 18%;
+    left: 15%;
   }
 }
 
@@ -111,10 +185,16 @@
   }
 
   .ctaHeading {
-    font-size: 32px;
+    font-size: 22px;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .resumeTemplateDiv {
+    position: absolute;
+    top: 20%;
+    left: 15%;
   }
 }
 
@@ -125,6 +205,12 @@
   }
 
   .ctaHeading {
-    font-size: 24px;
+    font-size: 20px;
   }
-} */
+
+  .resumeTemplateDiv {
+    position: absolute;
+    top: 15%;
+    left: 14%;
+  }
+}
