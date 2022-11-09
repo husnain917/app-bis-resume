@@ -60,7 +60,7 @@ export default function resumeFormats() {
                 fontWeight: 'bold'
               }}
             >Want to save time and have your resume ready in 5 minutes? </span>
-            <span>Try our resume builder. It’s fast and easy to use. Plus, you’ll get ready-made content to add with one click.</span>
+            <span>Try our resume builder. Its fast and easy to use. Plus, you ll get ready-made content to add with one click.</span>
             <Link
               color={"#3983fa"}
             >
@@ -121,8 +121,6 @@ export default function resumeFormats() {
                   margin={'40px 0px 0px 0px'}
                   className={styles.resumeTemplateDiv}
                   width={['70%', '70%', '50%', '50%', '50%']}
-                  onMouseEnter={() => setOver(true)}
-                  onMouseLeave={() => setOver(false)}
                 >
                   <Link
                     href='/templates'

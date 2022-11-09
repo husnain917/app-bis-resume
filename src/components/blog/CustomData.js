@@ -3,7 +3,7 @@ export const RESUME_NOW = [
         text: 'The perfect resume format for 2022 has to pass applicant tracking systems. Show off your value as a future employee. And help recruiters make the right decision—invite you to the interview.'
     },
     {
-        text: 'Pick the wrong one, and you’ll annoy those little bots and their human overlords—'
+        text: 'Pick the wrong one, and you ll annoy those little bots and their human overlords—'
     },
     {
         text: 'But which resume format is best?'
@@ -84,7 +84,7 @@ export const RESUME_FORMATS = {
     },
     idealFormat: 'To learn more about ideal file formats for resumes, see:',
     idealFormatPDF: ` PDF? DOC? What's the Best File Format for a Resume`,
-    enoughTheory: 'Enough theory, though. Here are two examples of the bad vs the good way of how to format a resume. We’ve created the sample resume format on the right in our builder.'
+    enoughTheory: 'Enough theory, though. Here are two examples of the bad vs the good way of how to format a resume. We ve created the sample resume format on the right in our builder.'
 }
 
 
@@ -188,7 +188,7 @@ export const RESUME_EXAMPLES = {
             text: 'In each entry list: your position, the name of the company, and the dates worked.'
         },
         {
-            text: 'Under each job, put up to 5 bullet points. But don’t just list duties. Focus on achievements.'
+            text: 'Under each job, put up to 5 bullet points. But dont just list duties. Focus on achievements.'
         },
         {
             text: `Use action words. “Supervised” instead of “responsible for supervising.”`
@@ -200,7 +200,7 @@ export const RESUME_EXAMPLES = {
             text: 'At the bottom, add a “Key Achievement” subsection. Describe your proudest professional win.'
         },
         {
-            text: 'Don’t list all your professional responsibilities and accomplishments. Focus on what’s important for this particular position. Tailor your resume to the job description.'
+            text: 'Dont list all your professional responsibilities and accomplishments. Focus on whats important for this particular position. Tailor your resume to the job description.'
         },
     ],
     rightFormats: [
@@ -260,16 +260,16 @@ export const RESUME_EXAMPLES = {
             title: 'Functional Resume: Resume Objective and Skills Summary',
             data: [
                 {
-                    text: 'In the resume objective at the top, briefly explain your motivation for pursuing a given career and discuss the most important skills you’ve mastered so far.'
+                    text: 'In the resume objective at the top, briefly explain your motivation for pursuing a given career and discuss the most important skills you ve mastered so far.'
                 },
                 {
                     text: 'If you have one, add a link to your online portfolio, a blog, or a personal website to the resume objective.'
                 },
                 {
-                    text: 'For the skills summary, pick 4 to 5 skills that are most relevant to the job you’re applying for.'
+                    text: 'For the skills summary, pick 4 to 5 skills that are most relevant to the job you re applying for.'
                 },
                 {
-                    text: 'Don’t just list your skills. Be specific. Give examples of when and how you applied them. Mention software you’re proficient in and quantify whenever you can.'
+                    text: 'Dont just list your skills. Be specific. Give examples of when and how you applied them. Mention software you re proficient in and quantify whenever you can.'
                 },
                 {
                     text: 'Use bullet points or go for plain paragraphs.'
@@ -303,7 +303,7 @@ export const RESUME_EXAMPLES = {
             text: 'Military veterans transmitting into a civilian role.'
         },
         {
-            text: 'Ex-CEOs or high-level execs who don’t want to seem overqualified for a lower-level position they need to apply for.'
+            text: 'Ex-CEOs or high-level execs who dont want to seem overqualified for a lower-level position they need to apply for.'
         },
     ],
     hybridFormats: [
@@ -353,7 +353,7 @@ export const RESUME_EXAMPLES = {
                     text: 'Developed and built 20+ mobile apps and 30+ websites providing exceptional user experience.'
                 },
                 {
-                    text: 'Named BCD M&E’s “Top Programmer of The Year” for three consecutive years 2009-2011.'
+                    text: 'Named BCD M&Es “Top Programmer of The Year” for three consecutive years 2009-2011.'
                 },
                 {
                     text: '15+ years experience in C#, C++, Java, and Objective-C.'
@@ -370,7 +370,7 @@ export const RESUME_EXAMPLES = {
                     text: '8+ years experience in team management (teams of 10-50 colleagues) and project coordination.'
                 },
                 {
-                    text: 'Designed and implemented a new IT management model with Apple’s New York Branch, increasing quarterly productivity by 33% and boosting employee satisfaction by 22%.'
+                    text: 'Designed and implemented a new IT management model with Apples New York Branch, increasing quarterly productivity by 33% and boosting employee satisfaction by 22%.'
                 },
                 {
                     text: 'Trained and mentored 50+ junior developers to help them prepare for certification exams (88% success rate).'
@@ -384,10 +384,10 @@ export const RESUME_EXAMPLES = {
                     text: 'Coordinated 20+ projects with budgets over $200,000.'
                 },
                 {
-                    text: 'Optimized procurement processes to reduce BCD M&E’s annual costs by 27%.'
+                    text: 'Optimized procurement processes to reduce BCD M&Es annual costs by 27%.'
                 },
                 {
-                    text: 'Successfully cooperated with sales and marketing teams on new business strategies which helped increase Apple New York’s sales volume by 23%.'
+                    text: 'Successfully cooperated with sales and marketing teams on new business strategies which helped increase Apple New Yorks sales volume by 23%.'
                 },
             ]
         },
@@ -481,7 +481,7 @@ export const RESUME_EXAMPLES = {
                         text: 'Very common, might require tweaking',
                     },
                     {
-                        text: 'Suggests you’re hiding something',
+                        text: 'Suggests you re hiding something',
                     },
                     {
                         text: 'Suitable for few candidates',
@@ -497,7 +497,7 @@ export const RESUME_EXAMPLES = {
                         text: 'Virtually all candidates',
                     },
                     {
-                        text: 'Creative jobs, military transitioners, candidates who don’t want to seem overqualified',
+                        text: 'Creative jobs, military transitioners, candidates who dont want to seem overqualified',
                     },
                     {
                         text: 'Career changers, experienced professionals',
@@ -544,7 +544,7 @@ export const PASS_SCAN_FORMATS = {
             text: 'Paste them into a TXT text editor (such as Notepad)'
         },
         {
-            text: 'If the text in the editor isn’t scrambled, your resume is scannable'
+            text: 'If the text in the editor isnt scrambled, your resume is scannable'
         },
     ],
     description: 'For more information on how to beat the bots, see:',

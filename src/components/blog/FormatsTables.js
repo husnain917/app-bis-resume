@@ -150,14 +150,14 @@ export default function FormatsTables() {
                             </Link>
                         </ListItem>
                         <ListItem>
-                            <strong>Don’t use</strong> &nbsp;
+                            <strong>Dont use</strong> &nbsp;
                             <Link
                                 color={'#3983fa'}
                             >
                                 photos on your resume
                             </Link>
                             .&nbsp;
-                            Unless the job description specifically asks for them. You’re looking for a job, not a date!
+                            Unless the job description specifically asks for them. You re looking for a job, not a date!
                         </ListItem>
                     </OrderedList>
 
@@ -285,8 +285,6 @@ export default function FormatsTables() {
                                                             margin={'40px 0px 0px 0px'}
                                                             className={styles.resumeTemplateDiv}
                                                             width={['70%', '70%', '50%', '50%', '50%']}
-                                                            onMouseEnter={() => setOver(true)}
-                                                            onMouseLeave={() => setOver(false)}
                                                         >
                                                             <Link
                                                                 href='/templates'
@@ -546,7 +544,7 @@ export default function FormatsTables() {
                             fontSize={'15px'}
                             marginBottom={'30px'}
                         >
-                            For starters, here’s a sample reverse-chronological resume format created in our builder.
+                            For starters, here s a sample reverse-chronological resume format created in our builder.
                         </Text>
 
                         <Text
@@ -615,7 +613,7 @@ export default function FormatsTables() {
                             marginBottom={'30px'}
                             lineHeight={8}
                         >
-                            The reverse chronological resume format is useful to virtually all job seekers. That’s why this is the most popular US resume format.
+                            The reverse chronological resume format is useful to virtually all job seekers. That s why this is the most popular US resume format.
                         </Text>
 
                         <Text
@@ -624,7 +622,7 @@ export default function FormatsTables() {
                             lineHeight={8}
                             fontWeight={'medium'}
                         >
-                            Recruiters are familiar with it so it makes their job easier: helps them spot all relevant information in a flash. It’s also a really simple resume format to use.
+                            Recruiters are familiar with it so it makes their job easier: helps them spot all relevant information in a flash. It s also a really simple resume format to use.
                         </Text>
 
                         <Text
@@ -633,7 +631,7 @@ export default function FormatsTables() {
                             lineHeight={8}
                             fontWeight={'medium'}
                         >
-                            Here’s how to structure a resume in reverse-chronological order.
+                            Here s how to structure a resume in reverse-chronological order.
                         </Text>
 
                         <Text
@@ -672,7 +670,7 @@ export default function FormatsTables() {
                             marginBottom={'30px'}
                             lineHeight={8}
                         >
-                            The reverse chronological resume format puts emphasis on your work history because that’s what’s most relevant for hiring managers. It's considered the&nbsp;
+                            The reverse chronological resume format puts emphasis on your work history because that s what s most relevant for hiring managers. It's considered the&nbsp;
                             <Link
                                 color={'#3983fa'}
                             >
@@ -685,7 +683,7 @@ export default function FormatsTables() {
                             marginBottom={'30px'}
                             lineHeight={8}
                         >
-                            Its key part is the work experience section. Here’s how to write it:
+                            Its key part is the work experience section. Here s how to write it:
                         </Text>
 
                         <Text
@@ -864,14 +862,14 @@ export default function FormatsTables() {
                                     lineHeight={8}
                                     padding={'20px'}
                                 >
-                                    Recruiters are familiar with it. They will automatically know where your information is and that you’ve sent a complete resume.
+                                    Recruiters are familiar with it. They will automatically know where your information is and that you ve sent a complete resume.
                                 </Text>
                                 <Text
                                     fontSize={'15px'}
                                     lineHeight={8}
                                     padding={'20px'}
                                 >
-                                    It’s guaranteed to go through an Applicant Tracking Software (ATS) resume test.
+                                    It s guaranteed to go through an Applicant Tracking Software (ATS) resume test.
                                 </Text>
                                 <Text
                                     fontSize={'15px'}
@@ -902,7 +900,7 @@ export default function FormatsTables() {
                                     lineHeight={8}
                                     padding={'20px'}
                                 >
-                                    It will require tweaking. You will need to make some extra effort to catch the recruiter’s eye.
+                                    It will require tweaking. You will need to make some extra effort to catch the recruiter s eye.
                                 </Text>
                                 <Text
                                     fontSize={'15px'}
@@ -916,7 +914,7 @@ export default function FormatsTables() {
                                     lineHeight={8}
                                     padding={'20px'}
                                 >
-                                    It’s not an ideal format of a resume for career changers.
+                                    It s not an ideal format of a resume for career changers.
                                 </Text>
                             </Box>
                         </Box>
@@ -961,7 +959,7 @@ export default function FormatsTables() {
                             fontSize={'15px'}
                             marginBottom={'20px'}
                         >
-                            Here’s a functional resume example created in our resume builder.
+                            Here s a functional resume example created in our resume builder.
                         </Text>
 
                         <Text
@@ -1030,7 +1028,7 @@ export default function FormatsTables() {
                             lineHeight={8}
                             marginBottom={'20px'}
                         >
-                            A functional resume format focuses on your skills and abilities. That’s why it’s also called the skills-based resume format.
+                            A functional resume format focuses on your skills and abilities. That s why its also called the skills-based resume format.
                         </Text>
 
                         <Text
@@ -1038,7 +1036,7 @@ export default function FormatsTables() {
                             lineHeight={8}
                             marginBottom={'20px'}
                         >
-                            It lets you emphasize what you’re good at and takes the pressure off of your work experience.
+                            It lets you emphasize what you re good at and takes the pressure off of your work experience.
                         </Text>
 
                         <Text
@@ -1047,7 +1045,7 @@ export default function FormatsTables() {
                             marginBottom={'20px'}
                             fontWeight={'medium'}
                         >
-                            Here’s how to structure a functional resume:
+                            Here s how to structure a functional resume:
                         </Text>
 
                         <Text
@@ -1237,7 +1235,7 @@ export default function FormatsTables() {
                             fontSize={'15px'}
                             marginBottom={'20px'}
                         >
-                            A functional resume format most likely won’t get you far.
+                            A functional resume format most likely won t get you far.
                         </Text>
 
                         <Text
@@ -1367,14 +1365,14 @@ export default function FormatsTables() {
                                     lineHeight={8}
                                     padding={'20px'}
                                 >
-                                    It takes the focus off of your work history and places it on your skills. If you’ve gained your skills through various freelance projects, not full-time employment, this format will let you emphasize those skills.
+                                    It takes the focus off of your work history and places it on your skills. If you ve gained your skills through various freelance projects, not full-time employment, this format will let you emphasize those skills.
                                 </Text>
                                 <Text
                                     fontSize={'15px'}
                                     lineHeight={8}
                                     padding={'20px'}
                                 >
-                                    It’s a good <Link color={'#3983fa'}>creative resume</Link> format for non-traditional industries.
+                                    It s a good <Link color={'#3983fa'}>creative resume</Link> format for non-traditional industries.
                                 </Text>
                                 <Text
                                     fontSize={'15px'}
@@ -1405,21 +1403,21 @@ export default function FormatsTables() {
                                     lineHeight={8}
                                     padding={'20px'}
                                 >
-                                    Most recruiters hate the functional resume format because it’s not easy to scan in quickly.
+                                    Most recruiters hate the functional resume format because it s not easy to scan in quickly.
                                 </Text>
                                 <Text
                                     fontSize={'15px'}
                                     lineHeight={8}
                                     padding={'20px'}
                                 >
-                                    It’s an instant red flag—suggesting that you’re trying to hide something.
+                                    It s an instant red flag—suggesting that you re trying to hide something.
                                 </Text>
                                 <Text
                                     fontSize={'15px'}
                                     lineHeight={8}
                                     padding={'20px'}
                                 >
-                                    It’s very likely to fail the ATS resume scan.
+                                    It s very likely to fail the ATS resume scan.
                                 </Text>
                             </Box>
                         </Box>
@@ -1458,7 +1456,7 @@ export default function FormatsTables() {
                             fontSize={'15px'}
                             marginBottom={'20px'}
                         >
-                            Here’s a combination resume example created in our resume builder.
+                            Here s a combination resume example created in our resume builder.
                         </Text>
 
                         <Text
@@ -1541,7 +1539,7 @@ export default function FormatsTables() {
                             marginBottom={'20px'}
                             fontWeight={'medium'}
                         >
-                            Here’s how to structure a hybrid resume:
+                            Here s how to structure a hybrid resume:
                         </Text>
 
                         <Text
@@ -1794,14 +1792,14 @@ export default function FormatsTables() {
                                     lineHeight={8}
                                     padding={'20px'}
                                 >
-                                    It’s suitable for very few candidates: only people with a lot of work experience targeting a very specific position.
+                                    Its suitable for very few candidates: only people with a lot of work experience targeting a very specific position.
                                 </Text>
                                 <Text
                                     fontSize={'15px'}
                                     lineHeight={8}
                                     padding={'20px'}
                                 >
-                                    It’s the most difficult resume format to create properly.
+                                    Its the most difficult resume format to create properly.
                                 </Text>
                             </Box>
                         </Box>
@@ -1855,7 +1853,7 @@ export default function FormatsTables() {
                             fontSize={'15px'}
                             marginBottom={'25px'}
                         >
-                            Here’s a recap of what you’ve learned so far:
+                            Here s a recap of what you ve learned so far:
                         </Text>
 
                         <Text
@@ -1968,8 +1966,6 @@ export default function FormatsTables() {
                                     margin={'40px 0px 0px 0px'}
                                     className={styles.resumeTemplateDiv}
                                     width={['70%', '70%', '50%', '50%', '50%']}
-                                    onMouseEnter={() => setOver(true)}
-                                    onMouseLeave={() => setOver(false)}
                                 >
                                     <Link
                                         href='/templates'
@@ -2014,7 +2010,7 @@ export default function FormatsTables() {
                         textAlign={'center'}
                         fontSize={'16px'}
                     >
-                        When you’re done,&nbsp;
+                        When you re done,&nbsp;
                         <Link
                             color={'#3983fa'}
                             href={'/templates'}
@@ -2073,7 +2069,7 @@ export default function FormatsTables() {
                         fontSize={'15px'}
                         marginBottom={'25px'}
                     >
-                        Why’s that?
+                        Why s that?
                     </Text>
 
                     <Text
@@ -2178,7 +2174,7 @@ export default function FormatsTables() {
                         marginBottom={'30px'}
                         lineHeight={8}
                     >
-                        Whatever it is exactly that you’re looking for, here are the guides that will help you find it:
+                        Whatever it is exactly that you re looking for, here are the guides that will help you find it:
                     </Text>
 
                     <UnorderedList
@@ -2244,8 +2240,6 @@ export default function FormatsTables() {
                                     margin={'40px 0px 0px 0px'}
                                     className={styles.resumeTemplateDiv}
                                     width={['70%', '70%', '50%', '50%', '50%']}
-                                    onMouseEnter={() => setOver(true)}
-                                    onMouseLeave={() => setOver(false)}
                                 >
                                     <Link
                                         href='/templates'
