@@ -67,7 +67,7 @@ const WritingGuides = () => {
             position={"absolute"}
             display={["none", "none", "block", "block"]}
           >
-            <Image src="./top2.png" marginTop={"-59px"} bg={"transparent"} />
+            <Image src="./top2.png" marginTop={"-59px"} />
           </Box>
         </Box>
       </Box>
