@@ -73,6 +73,9 @@ export const styles = {
     return {
       fontSize: "1em",
       fontWeight: isBold ? "bold" : "normal",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
     };
   },
 };
