@@ -7,23 +7,14 @@ import Link from "next/link";
 
 export default function ContactUs() {
   const [active, setActive] = useState("");
+  const [cancel, setCancel] = useState(1);
   const onFocunHandler = (index) => {
+    setCancel(1);
     setActive(index);
     console.log("This is Index", index);
-    // if (index === 4) {
-    //   return (
-    //     <Box className="cursor">
-    //       <Link href="/templates/templateCEO">
-    //         <img
-    //           src="Chief_Exclusive_Office.jpg"
-    //           alt="Chief_Exclusive_Office"
-    //           height="200px"
-    //           width="250px"
-    //         />
-    //       </Link>
-    //     </Box>
-    //   );
-    // }
+    if (index === 4) {
+      setCancel(2);
+    }
   };
   return (
     <>
@@ -95,7 +86,9 @@ export default function ContactUs() {
               flexDir={["column", "column", "row", "row"]}
               alignItems="center"
             >
-              {false ? (
+              {cancel === 2 ? (
+                "Hellow World"
+              ) : (
                 <>
                   <Box w={["100%", "100%", "50%", "50%"]} mt="3%">
                     <CustomInput title="Email" height="50px" />
@@ -109,8 +102,6 @@ export default function ContactUs() {
                     />
                   </Box>{" "}
                 </>
-              ) : (
-                <h1>Hellow World</h1>
               )}
             </Box>
 
