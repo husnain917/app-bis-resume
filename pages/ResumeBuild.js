@@ -15,14 +15,10 @@ import Templates from "./templates";
 import { GrTemplate } from "react-icons/gr"
 import { TbCircle1, TbCircle2, TbCircle3, TbCircle4, TbCircle5 } from "react-icons/tb"
 
-
-
-
 export default function ResumeBuild() {
 
     return (
         <>
-
             <div >
                 <Box w={["100%", "100%", "100%"]} mt={["2%", "2%", "2%"]} display="flex" flexDirection={["column", "column", "row"]} justifyContent="space-around"    >
                     <Box
