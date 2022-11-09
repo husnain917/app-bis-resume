@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import {
     RESUME_TABLE_DATA,
 } from "./CustomData";
@@ -8,31 +8,31 @@ import {
     ListItem,
     OrderedList,
     Text
-} from '@chakra-ui/react'
+} from "@chakra-ui/react"
 import { Link } from "react-scroll";
 import styles from "../../../styles/resumeFormats.module.css";
 
 export default function ResumeTable() {
     return (
         <Container
-            maxW={['100%', '100%', '80%', '60%']}
+            maxW={["100%", "100%", "80%", "60%"]}
         >
             <Box
-                padding={'20px 0px 30px 0px'}
+                padding={"20px 0px 30px 0px"}
             >
                 <Text
-                    fontSize={'18px'}
-                    fontWeight={'bold'}
+                    fontSize={"18px"}
+                    fontWeight={"bold"}
                 >
                     TABLE OF CONTENTS
                 </Text>
             </Box>
             <Box
-                padding={'0px 30px 30px 30px'}
+                padding={"0px 30px 30px 30px"}
             >
                 <OrderedList
-                    fontSize={'16px'}
-                    fontWeight={'medium'}
+                    fontSize={"16px"}
+                    fontWeight={"medium"}
                     lineHeight={8}
                 >
                     <ListItem>
