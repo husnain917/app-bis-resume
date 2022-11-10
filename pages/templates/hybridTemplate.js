@@ -7,7 +7,7 @@ import { GoProject } from 'react-icons/go';
 import { TbCertificate } from 'react-icons/tb';
 import { FaHorseHead } from 'react-icons/fa';
 import style from '../../styles/templates/template1.module.scss';
-import Classes from '../../src/components/hybridTemplate/hybridStyle.module.css';
+import Classes from '../../styles/templates/hybridTemplate.module.css';
 import { Tooltip } from 'react-tippy';
 import ImageSection from '../../src/components/commonSection/ImageSection';
 import Name from '../../src/components/commonSection/Name';

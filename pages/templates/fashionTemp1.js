@@ -1,11 +1,11 @@
-import { Box, Flex, HStack, Text } from '@chakra-ui/react';
+import { Box, Flex, HStack } from '@chakra-ui/react';
 import React from 'react';
 import { BsFillPersonFill, BsLayersFill } from 'react-icons/bs';
 import { IoLanguageSharp } from 'react-icons/io5';
 import { MdCastForEducation, MdEmail } from 'react-icons/md';
 import style from '../../styles/templates/template1.module.scss';
 import Link from 'next/link';
-import Style from '../../src/components/fashionTemp1/fashionTemp1.module.css';
+import Classes from '../../styles/templates/fashionTemp1.module.css';
 import { Tooltip } from 'react-tippy';
 import WorkExperience from '../../src/components/commonSection/WorkExperience';
 import Reference from '../../src/components/commonSection/Reference';
@@ -52,10 +52,10 @@ const fashionTemp1 = () => {
               direction="column"
               FName={true}
               SName={true}
-              FNameStyle={Style.fashionName}
-              SNameStyle={Style.fashionName}
+              FNameStyle={Classes.fashionName}
+              SNameStyle={Classes.fashionName}
             />
-            <Profession professionStyle={Style.ProfessionFashion} />
+            <Profession professionStyle={Classes.ProfessionFashion} />
             <Heading
               title={'ABOUT ME'}
               headBg={'#3498DB'}
@@ -74,7 +74,7 @@ const fashionTemp1 = () => {
               margin={'10px 0px 0px 0px'}
             />
             &nbsp;
-            <About aboutStyle={Style.profileText} />
+            <About aboutStyle={Classes.profileText} />
             <Heading
               title={'PERSONAL'}
               headBg={'#3498DB'}
@@ -93,7 +93,7 @@ const fashionTemp1 = () => {
               margin={'10px 0px 0px 0px'}
             />
             &nbsp;
-            <Skill skillStyle={Style.personalText} />
+            <Skill skillStyle={Classes.personalText} />
             <Heading
               title={'LANGUAGES'}
               headBg={'#3498DB'}
@@ -112,7 +112,7 @@ const fashionTemp1 = () => {
               margin={'10px 0px 0px 0px'}
             />
             &nbsp;
-            <Language langStyle={Style.langText} />
+            <Language langStyle={Classes.langText} />
           </Box>
           <Box maxW={406} minW={406}>
             <Contact
@@ -148,10 +148,10 @@ const fashionTemp1 = () => {
               degree={true}
               institution={true}
               degree_placeholder="Study Program"
-              degreeStyle={Style.date}
-              dateStyle={Style.date}
-              institutionStyle={Style.date}
-              summaryStyle={Style.profileText}
+              degreeStyle={Classes.date}
+              dateStyle={Classes.date}
+              institutionStyle={Classes.date}
+              summaryStyle={Classes.profileText}
               dateDirection="row"
               direction="row"
             />
@@ -178,10 +178,10 @@ const fashionTemp1 = () => {
               date={true}
               position={true}
               summary={true}
-              dateStyle={Style.date}
-              companyStyle={Style.date}
-              positionStyle={Style.date}
-              summaryStyle={Style.profileText}
+              dateStyle={Classes.date}
+              companyStyle={Classes.date}
+              positionStyle={Classes.date}
+              summaryStyle={Classes.profileText}
               direction="row"
             />
             <Heading
@@ -205,10 +205,10 @@ const fashionTemp1 = () => {
               profession={true}
               email={true}
               phone={true}
-              phoneStyle={Style.profileText}
-              emailStyle={Style.profileText}
-              professionStyle={Style.profileText}
-              nameStyle={Style.referenceName}
+              phoneStyle={Classes.profileText}
+              emailStyle={Classes.profileText}
+              professionStyle={Classes.profileText}
+              nameStyle={Classes.referenceName}
               DndDirection="horizontal"
             />
           </Box>

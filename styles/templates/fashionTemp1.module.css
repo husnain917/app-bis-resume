@@ -1,0 +1,46 @@
+.profileText {
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+}
+.fashionName {
+  color: black;
+  text-align: left;
+  font-size: 50px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.ProfessionFashion {
+  font-weight: 500;
+  font-size: 1.4em;
+  padding: 0;
+  line-height: 32px;
+  text-align: left;
+  color: black;
+  letter-spacing: 1px;
+}
+.personalText {
+  font-size: 16px;
+  font-weight: 400;
+}
+.langText {
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+  text-align: left;
+}
+.date {
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}
+
+.referenceName {
+  font-size: 15px;
+  font-weight: 700;
+}
+.mt {
+  margin-top: 10px;
+}
