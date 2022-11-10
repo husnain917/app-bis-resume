@@ -71,7 +71,7 @@ const getListStyleHorizontal = (isDraggingOver) => ({
   'box-shadow': isDraggingOver
     ? 'inset 0px 0px 18px 0px rgba(0,0,0,0.08)'
     : 'none',
-  background: isDraggingOver ? 'rgba(250,250,250,1)' : 'none',
+  background: isDraggingOver ? 'none' : 'none',
   display: 'flex',
   flexDirection: 'row',
   flexWrap: 'wrap',

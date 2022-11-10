@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import {
   addNewObj,
   deleteObjInArray,
@@ -9,16 +9,21 @@ import {
 import Util from '../../../utils/templateUtils';
 import Dnd from './Dnd';
 import Text from './Text';
-
+import { onBlurField } from '../../../store/actions/builderAction';
+import { sampleData } from '../../../constants/sampleData';
 const Reference = (props) => {
   const path = 'references.items';
+  const { resumeData } = props;
+  const data = resumeData?.references?.items?.length
+    ? [...resumeData?.references?.items]
+    : [...sampleData?.data?.references?.items];
   const dispatch = useDispatch();
-  const onOrderUpdate = (data) => {
-    const storeReorder = Util.mapOrder(props.data, data, 'id');
+  const onOrderUpdate = (datas) => {
+    const storeReorder = Util.mapOrder(data, datas, 'id');
     dispatch(updateOrder(storeReorder, path));
   };
   const _addNewItem = () => {
-    dispatch(addNewObj(props.data[0], path));
+    dispatch(addNewObj(data[0], path));
   };
 
   const _removeItem = (index) => {
@@ -26,7 +31,6 @@ const Reference = (props) => {
     dispatch(deleteObjInArray(deletedPath));
   };
   const {
-    data,
     DndDirection,
     name,
     profession,
@@ -137,4 +141,9 @@ const Reference = (props) => {
   );
 };
 
-export default Reference;
+const mapStateToProps = (store) => ({
+  theme: store.editorReducer.theme,
+  resumeData: store.editorReducer.resumeData,
+  updater: store.editorReducer.updater,
+});
+export default connect(mapStateToProps, { onBlurField })(Reference);

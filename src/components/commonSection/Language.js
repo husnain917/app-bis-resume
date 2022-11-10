@@ -1,6 +1,6 @@
 import { Box, HStack, Input, ListItem, UnorderedList } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import {
   addNewObj,
   deleteObjInArray,
@@ -11,15 +11,21 @@ import Rating from '../rating/Rating';
 import Dnd from './Dnd';
 import Text from './Text';
 import { Line } from 'rc-progress';
+import { onBlurField } from '../../../store/actions/builderAction';
+import { sampleData } from '../../../constants/sampleData';
 const Language = (props) => {
   const dispatch = useDispatch();
+  const { resumeData } = props;
+  const data = resumeData?.languages?.items?.length
+    ? [...resumeData?.languages?.items]
+    : [...sampleData?.data?.languages?.items];
   const path = 'languages.items';
-  const onOrderUpdate = (data) => {
-    const storeReorder = Util.mapOrder(props.data, data, 'id');
+  const onOrderUpdate = (datas) => {
+    const storeReorder = Util.mapOrder(data, datas, 'id');
     dispatch(updateOrder(storeReorder, path));
   };
   const _addNewItem = () => {
-    dispatch(addNewObj(props.data[0], path));
+    dispatch(addNewObj(data[0], path));
   };
 
   const _removeItem = (index) => {
@@ -57,7 +63,6 @@ const Language = (props) => {
     setProgress(newArr);
   };
   const {
-    data,
     langPlaceholder,
     langStyle,
     percentageStyle,
@@ -74,6 +79,7 @@ const Language = (props) => {
     minWText = '130px',
     maxWText = '130px',
   } = props;
+
   return (
     <div className={`${langContainerStyle ? langContainerStyle : ''}`}>
       <Dnd
@@ -145,4 +151,9 @@ const Language = (props) => {
   );
 };
 
-export default Language;
+const mapStateToProps = (store) => ({
+  theme: store.editorReducer.theme,
+  resumeData: store.editorReducer.resumeData,
+  updater: store.editorReducer.updater,
+});
+export default connect(mapStateToProps, { onBlurField })(Language);

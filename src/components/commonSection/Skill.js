@@ -1,6 +1,6 @@
 import { Box, HStack, Input, ListItem, UnorderedList } from '@chakra-ui/react';
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import {
   addNewObj,
   deleteObjInArray,
@@ -12,8 +12,14 @@ import Dnd from './Dnd';
 import Text from './Text';
 import { Line } from 'rc-progress';
 import { useState } from 'react';
+import { sampleData } from '../../../constants/sampleData';
+import { onBlurField } from '../../../store/actions/builderAction';
 const Skill = (props) => {
   const path = 'skills.items';
+  const { resumeData } = props;
+  const data = resumeData?.skills?.items?.length
+    ? [...resumeData?.skills?.items]
+    : [...sampleData?.data?.skills?.items];
   const dispatch = useDispatch();
   const _addNewItem = () => {
     dispatch(addNewObj(data[0], path));
@@ -23,8 +29,8 @@ const Skill = (props) => {
     let deletedPath = `${path}.${index}`;
     dispatch(deleteObjInArray(deletedPath));
   };
-  const onOrderUpdate = (data) => {
-    const storeReorder = Util.mapOrder(props.data, data, 'id');
+  const onOrderUpdate = (datas) => {
+    const storeReorder = Util.mapOrder(data, datas, 'id');
     dispatch(updateOrder(storeReorder, path));
   };
   const [progress, setProgress] = useState([]);
@@ -58,7 +64,6 @@ const Skill = (props) => {
     setProgress(newArr);
   };
   const {
-    data,
     skillPlaceholder,
     skillStyle,
     percentageStyle,
@@ -149,4 +154,9 @@ const Skill = (props) => {
   );
 };
 
-export default Skill;
+const mapStateToProps = (store) => ({
+  theme: store.editorReducer.theme,
+  resumeData: store.editorReducer.resumeData,
+  updater: store.editorReducer.updater,
+});
+export default connect(mapStateToProps, { onBlurField })(Skill);

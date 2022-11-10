@@ -1,12 +1,8 @@
 import { Box, Flex, HStack, Text } from '@chakra-ui/react';
 import React from 'react';
-import { connect } from 'react-redux';
-import { onBlurField } from '../../store/actions/builderAction';
 import { BsFillPersonFill, BsLayersFill } from 'react-icons/bs';
 import { IoLanguageSharp } from 'react-icons/io5';
 import { MdCastForEducation, MdEmail } from 'react-icons/md';
-import FashTemp1sProfile from '../../src/components/fashionTemp1/FashTemp1Profile';
-import FashTemp1PersonalInfo from '../../src/components/fashionTemp1/FashTemp1PersonalInfo';
 import style from '../../styles/templates/template1.module.scss';
 import Link from 'next/link';
 import Style from '../../src/components/fashionTemp1/fashionTemp1.module.css';
@@ -20,9 +16,8 @@ import Education from '../../src/components/commonSection/Education';
 import Skill from '../../src/components/commonSection/Skill';
 import Name from '../../src/components/commonSection/Name';
 import Profession from '../../src/components/commonSection/Profession';
-const fashionTemp1 = (props) => {
-  const { resumeData } = props;
-  console.log('resumeData:', resumeData);
+import Contact from '../../src/components/commonSection/Contact';
+const fashionTemp1 = () => {
   return (
     <div className={style.main}>
       <Link href={'/templates'}>
@@ -64,93 +59,90 @@ const fashionTemp1 = (props) => {
             <Heading
               title={'ABOUT ME'}
               headBg={'#3498DB'}
+              iconHeading={true}
               icon={(props) => (
                 <BsFillPersonFill {...props} size={20} color={'#fff'} />
               )}
               color={'white'}
               fontSize={20}
               fontWeight="600"
-              pb={0.7}
-              pl={2}
               letterSpacing={3}
               minW={250}
               maxW={250}
+              textPadding={'0px 0px 1px 0px'}
+              padding={'0px 0px 0px 5px'}
+              margin={'10px 0px 0px 0px'}
             />
             &nbsp;
             <About aboutStyle={Style.profileText} />
             <Heading
               title={'PERSONAL'}
               headBg={'#3498DB'}
+              iconHeading={true}
               icon={(props) => (
                 <BsFillPersonFill {...props} size={20} color={'#fff'} />
               )}
               color={'white'}
               fontSize={20}
               fontWeight="600"
-              pb={0.7}
-              pl={2}
+              textPadding={'0px 0px 1px 0px'}
+              padding={'0px 0px 0px 5px'}
               letterSpacing={3}
               minW={250}
               maxW={250}
+              margin={'10px 0px 0px 0px'}
             />
             &nbsp;
-            <Skill
-              data={
-                resumeData?.skills?.items?.length
-                  ? [...resumeData?.skills?.items]
-                  : [...sampleData?.data?.skills?.items]
-              }
-              skillStyle={Style.personalText}
-            />
+            <Skill skillStyle={Style.personalText} />
             <Heading
               title={'LANGUAGES'}
               headBg={'#3498DB'}
+              iconHeading={true}
               icon={(props) => (
                 <IoLanguageSharp {...props} size={20} color={'#fff'} />
               )}
               color={'white'}
               fontSize={20}
               fontWeight="600"
-              pb={0.7}
-              pl={2}
+              textPadding={'0px 0px 1px 0px'}
+              padding={'0px 0px 0px 5px'}
               letterSpacing={3}
               minW={250}
               maxW={250}
+              margin={'10px 0px 0px 0px'}
             />
             &nbsp;
-            <Language
-              data={
-                resumeData?.languages?.items
-                  ? [...resumeData?.languages?.items]
-                  : [...sampleData?.data?.languages?.items]
-              }
-              langStyle={Style.langText}
-            />
+            <Language langStyle={Style.langText} />
           </Box>
           <Box maxW={406} minW={406}>
-            <FashTemp1PersonalInfo />
+            <Contact
+              location={true}
+              email={true}
+              website={true}
+              phone={true}
+              iconSize={'16px'}
+              iconColor="#3498DB"
+              circleIcon={true}
+            />
             <Heading
               title={'EDUCATION'}
               headBg={'#3498DB'}
+              iconHeading={true}
               icon={(props) => (
                 <MdCastForEducation {...props} size={20} color={'#fff'} />
               )}
               color={'white'}
               fontSize={20}
               fontWeight="600"
-              pb={0.7}
-              pl={2}
+              textPadding={'0px 0px 1px 0px'}
+              padding={'0px 0px 0px 5px'}
               letterSpacing={3}
               minW={400}
               maxW={400}
+              margin={'10px 0px 0px 0px'}
             />
             &nbsp;
             <Education
-              data={
-                resumeData?.education?.items.length
-                  ? [...resumeData?.education?.items]
-                  : [...sampleData?.data?.education?.items]
-              }
               date={true}
               summary={true}
               degree={true}
@@ -160,31 +152,28 @@ const fashionTemp1 = (props) => {
               dateStyle={Style.date}
               institutionStyle={Style.date}
               summaryStyle={Style.profileText}
-              direction="row"
               dateDirection="row"
+              direction="row"
             />
             <Heading
               title={'EXPERIENCE'}
+              margin={'10px 0px 0px 0px'}
               headBg={'#3498DB'}
+              iconHeading={true}
               icon={(props) => (
                 <BsLayersFill {...props} size={20} color={'#fff'} />
               )}
               color={'white'}
               fontSize={20}
               fontWeight="600"
-              pb={0.7}
-              pl={2}
+              textPadding={'0px 0px 1px 0px'}
+              padding={'0px 0px 0px 5px'}
               letterSpacing={3}
               minW={400}
               maxW={400}
             />
             &nbsp;
             <WorkExperience
-              data={
-                resumeData?.work?.items.length
-                  ? [...resumeData?.work?.items]
-                  : [...sampleData?.data?.work?.items]
-              }
               company={true}
               date={true}
               position={true}
@@ -198,23 +187,20 @@ const fashionTemp1 = (props) => {
             <Heading
               title={'REFERENCE'}
               headBg={'#3498DB'}
+              margin={'10px 0px 0px 0px'}
+              iconHeading={true}
               icon={(props) => <MdEmail {...props} size={20} color={'#fff'} />}
               color={'white'}
               fontSize={20}
               fontWeight="600"
-              pb={0.7}
-              pl={2}
+              textPadding={'0px 0px 1px 0px'}
+              padding={'0px 0px 0px 5px'}
               letterSpacing={3}
               minW={400}
               maxW={400}
             />
             &nbsp;
             <Reference
-              data={
-                resumeData?.references?.items.length
-                  ? [...resumeData?.references?.items]
-                  : [...sampleData?.data?.references?.items]
-              }
               name={true}
               profession={true}
               email={true}
@@ -231,10 +217,4 @@ const fashionTemp1 = (props) => {
     </div>
   );
 };
-const mapStateToProps = (store) => ({
-  theme: store.editorReducer.theme,
-  resumeData: store.editorReducer.resumeData,
-  updater: store.editorReducer.updater,
-});
-
-export default connect(mapStateToProps, { onBlurField })(fashionTemp1);
+export default fashionTemp1;

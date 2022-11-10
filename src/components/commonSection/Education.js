@@ -2,24 +2,31 @@ import React from 'react';
 import Util from '../../../utils/templateUtils';
 import Text from './Text';
 import Dnd from './Dnd';
-import { Box, HStack, Stack, VStack } from '@chakra-ui/react';
-import { useDispatch } from 'react-redux';
+import { Box, Stack } from '@chakra-ui/react';
+import { connect, useDispatch } from 'react-redux';
+import { onBlurField } from '../../../store/actions/builderAction';
 import {
   updateOrder,
   addNewObj,
   deleteObjInArray,
 } from '../../../store/actions/builderAction';
+import { sampleData } from '../../../constants/sampleData';
 const Education = (props) => {
+  const { resumeData } = props;
+  const data = resumeData?.education?.items?.length
+    ? [...resumeData?.education?.items]
+    : [...sampleData?.data?.education?.items];
+
   const dispatch = useDispatch();
   const path = 'education.items';
 
-  const onOrderUpdate = (data) => {
-    const storeReorder = Util.mapOrder(props.data, data, 'id');
+  const onOrderUpdate = (datas) => {
+    const storeReorder = Util.mapOrder(data, datas, 'id');
     dispatch(updateOrder(storeReorder, path));
   };
 
   const _addNewItem = () => {
-    dispatch(addNewObj(props.data[0], path));
+    dispatch(addNewObj(data[0], path));
   };
 
   const _removeItem = (index) => {
@@ -27,7 +34,6 @@ const Education = (props) => {
     dispatch(deleteObjInArray(deletedPath));
   };
   const {
-    data,
     textColor,
     fontSize,
     fontWeight,
@@ -39,15 +45,18 @@ const Education = (props) => {
     endDate_placeholder,
     summary_placeholder,
     extracurricular_placeholder,
+    location_placeholder,
     dateStyle,
     institutionStyle,
     degreeStyle,
     summaryStyle,
     extracurricularStyle,
+    locationStyle,
     degree,
     institution,
     date,
     summary,
+    location,
     extracurricular,
     direction,
     dateDirection = 'row',
@@ -67,7 +76,7 @@ const Education = (props) => {
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <VStack justifyContent={'flex-start'} alignItems="flex-start">
+          <Box display={'flex'} flexDir="column">
             <Stack direction={direction ? direction : 'column'}>
               {date && (
                 <Box
@@ -90,9 +99,9 @@ const Education = (props) => {
                     {dateDirection == 'row' && (
                       <p
                         style={{
-                          color: '#000',
                           fontWeight: 'bold',
                         }}
+                        className={dateStyle}
                       >
                         _
                       </p>
@@ -192,14 +201,34 @@ const Education = (props) => {
                   }`}
                   fontSize={fontSize}
                   color={textColor}
-                  textAlign="right"
+                  textAlign={textAlign}
                 />
               </>
             )}
-          </VStack>
+            {location && (
+              <>
+                <Text
+                  placeholder={
+                    location_placeholder ? location_placeholder : 'Location'
+                  }
+                  path={`${path}.${index}.location`}
+                  value={`${item.location}`}
+                  customClass={`${locationStyle ? locationStyle : ''}`}
+                  fontSize={fontSize}
+                  color={textColor}
+                  textAlign={textAlign}
+                />
+              </>
+            )}
+          </Box>
         )}
       />
     </div>
   );
 };
-export default Education;
+const mapStateToProps = (store) => ({
+  theme: store.editorReducer.theme,
+  resumeData: store.editorReducer.resumeData,
+  updater: store.editorReducer.updater,
+});
+export default connect(mapStateToProps, { onBlurField })(Education);

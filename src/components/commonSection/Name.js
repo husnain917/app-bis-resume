@@ -20,7 +20,7 @@ const Name = (props) => {
         <Text
           value={resumeData?.profile?.firstName}
           placeholder={FNamePlaceholder ? FNamePlaceholder : 'First Name'}
-          customClass={` ${SNameStyle}`}
+          customClass={`${FNameStyle}`}
           path={'profile.firstName'}
         />
       )}
@@ -28,7 +28,7 @@ const Name = (props) => {
         <Text
           value={resumeData?.profile?.lastName}
           placeholder={SNamePlaceholder ? SNamePlaceholder : 'Last Name'}
-          customClass={`${FNameStyle}`}
+          customClass={`${SNameStyle}`}
           path={'profile.lastName'}
         />
       )}
