@@ -211,3 +211,55 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 .skillTextTemplate5 {
   width: 120px;
 }
+/* swiper */
+#coverEffectSlider {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+  
+  #coverEffectSlider .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #coverEffectSlider .swiper-slide img {
+    width: 100%;
+  }
+  
+  #coverEffectSlider .swiper-button-next {
+    top: 40px !important;
+    color: #fff !important;
+  }
+  #coverEffectSlider .swiper-button-prev,
+  #coverEffectSlider .swiper-container-rtl .swiper-button-prev {
+    top: 40px !important;
+    right: 0px !important;
+    color: #fff !important;
+    left: 90% !important;
+
+  }
+  /* @media (max-width: 1199px) {
+    #coverEffectSlider .swiper-button-prev,
+  #coverEffectSlider .swiper-container-rtl .swiper-button-prev {
+    top: 40px !important;
+    right: 0px !important;
+    color: #fff !important;
+    left: 900px !important;
+
+  }
+} */
+
+  
+  #coverEffectSlider .swiper-button-next,
+  #coverEffectSlider .swiper-button-prev {
+    background-color: black;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    box-shadow: 2px 5px 25px rgb(0 0 0 / 21%);
+  }
+  
+  #coverEffectSlider .swiper-button-next::after,
+  #coverEffectSlider .swiper-button-prev:after {
+    font-size: 17px !important;
+  } 
