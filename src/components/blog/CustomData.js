@@ -114,13 +114,13 @@ export const RESUME_EXAMPLES = {
             description: `If you care for my personal opinion, I"d say Cubic is the prettiest resume format available in our builder. A perfect combination of classical elegance and modern creativity. Subtle shading helps guide the reader"s eyes across different sections, the side column for contact details and skills adds a dynamic twist to the design. A great choice for applicants hunting jobs in IT, marketing, or sales.`
         },
         {
-            title: "Diamond",
+            title: "Social Media Specialist",
             img: "/formateTemp4.jpg",
             description: `As the name of this format implies, diamonds highlight the key areas: section headings, skill levels, and bullets in the work history section. This resume is full-width from top to bottom (no side column featured), making it very easy to go through your work history, chronologically. A great pick for candidates with many years of experience under their belts.`
         },
         {
-            title: "Newcast",
-            img: "/formateTemp4.jpg",
+            title: "Marketing Manager",
+            img: "/formateTemp5.jpg",
             description: `A very minimalist template for everyone who likes to keep things simple and clear. With Newcast, you get a traditional resume with a few details that help your application stand out, like the tasteful icons for section headings and bar charts to indicate skill levels. If you"re applying for a job at a company with conservative culture, Newcast will be a great bet!`
         },
     ],
