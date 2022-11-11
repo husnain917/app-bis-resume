@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import ContactButton from "../src/components/contactUs/ContactButton";
 import CustomInput from "../src/components/contactUs/CustomInput";
 import { buttonData } from "../src/components/contactUs/buttonData";
+import CancelSubscription from "../src/components/cancelSubscription";
+
 import Link from "next/link";
 
 export default function ContactUs() {
@@ -88,6 +90,9 @@ export default function ContactUs() {
             >
               {cancel === 2 ? (
                 "Hellow World"
+                <Box mt={"2"}>
+                  <CancelSubscription />
+                </Box>
               ) : (
                 <>
                   <Box w={["100%", "100%", "50%", "50%"]} mt="3%">
