@@ -112,7 +112,7 @@ const fashionTemp1 = () => {
               margin={'10px 0px 0px 0px'}
             />
             &nbsp;
-            <Language langStyle={Classes.langText} />
+            <Language langStyle={Classes.langText} rating={true} />
           </Box>
           <Box maxW={406} minW={406}>
             <Contact
