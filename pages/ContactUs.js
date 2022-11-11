@@ -3,11 +3,19 @@ import React, { useState } from "react";
 import ContactButton from "../src/components/contactUs/ContactButton";
 import CustomInput from "../src/components/contactUs/CustomInput";
 import { buttonData } from "../src/components/contactUs/buttonData";
+import CancelSubscription from "../src/components/cancelSubscription";
+import Link from "next/link";
 
 export default function ContactUs() {
   const [active, setActive] = useState("");
+  const [cancel, setCancel] = useState(1);
   const onFocunHandler = (index) => {
+    setCancel(1);
     setActive(index);
+    console.log("This is Index", index);
+    if (index === 4) {
+      setCancel(2);
+    }
   };
   return (
     <>
@@ -65,6 +73,7 @@ export default function ContactUs() {
                         bgColor={active === index ? "#1B6672" : "none"}
                         color={active === index ? "white" : "grey"}
                         onFocunHandler={onFocunHandler}
+                        // onClick={button.link}
                       />
                     </div>
                   );
@@ -78,18 +87,27 @@ export default function ContactUs() {
               flexDir={["column", "column", "row", "row"]}
               alignItems="center"
             >
-              <Box w={["100%", "100%", "50%", "50%"]} mt="3%">
-                <CustomInput title="Email" height="50px" />
-                <CustomInput title="Name" marginTop="5%" height="50px" />
-              </Box>
-              <Box w={["100%", "100%", "50%", "50%"]} mt="3%">
-                <CustomInput
-                  title="Message"
-                  height="150px"
-                  paddingBottom="100px"
-                />
-              </Box>
+              {cancel === 2 ? (
+                <Box mt={"2"}>
+                  <CancelSubscription />
+                </Box>
+              ) : (
+                <>
+                  <Box w={["100%", "100%", "50%", "50%"]} mt="3%">
+                    <CustomInput title="Email" height="50px" />
+                    <CustomInput title="Name" marginTop="5%" height="50px" />
+                  </Box>
+                  <Box w={["100%", "100%", "50%", "50%"]} mt="3%">
+                    <CustomInput
+                      title="Message"
+                      height="150px"
+                      paddingBottom="100px"
+                    />
+                  </Box>{" "}
+                </>
+              )}
             </Box>
+
             <Box
               mt="5%"
               display="flex"
