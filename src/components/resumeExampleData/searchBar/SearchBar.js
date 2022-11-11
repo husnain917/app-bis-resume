@@ -1,4 +1,3 @@
-/* eslint-disable react/no-children-prop */
 import React from "react";
 import {
   InputRightElement,
@@ -26,7 +25,7 @@ const SearchBar = () => {
           color="gray.300"
           fontSize="1.2em"
           borderRadius={"4px"}
-          children={<SearchIcon color="gray.500" />}
+          // children={<SearchIcon color="gray.500" />}
         />
         <Input placeholder="Enter amount" borderRadius={"4px"} />
       </InputGroup>
