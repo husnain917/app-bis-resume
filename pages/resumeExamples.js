@@ -3,6 +3,7 @@ import { Box, Text, Button } from "@chakra-ui/react";
 import ResumeExampleData from "../src/components/resumeExampleData/resumeExampleData";
 import SearchBar from "../src/components/resumeExampleData/searchBar/SearchBar";
 import MostPopular from "../src/components/resumeExampleData/mostPopular/MostPopular";
+import CommonComponent from "../src/components/resumeExampleData/commonComponent/commonComponent";
 
 const ResumeExamples = () => {
   return (
@@ -13,6 +14,7 @@ const ResumeExamples = () => {
           <Box width={"100%"} flexGrow={"1"}>
             <SearchBar />
             <MostPopular />
+            <CommonComponent />
           </Box>
         </Box>
       </Box>
