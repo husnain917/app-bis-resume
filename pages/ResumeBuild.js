@@ -196,7 +196,7 @@ export default function ResumeBuild() {
                             </Text>
                         </Box>
 
-                        <Box mt={["3%", "3%", "3%"]} mb={["3%", "3%", "3%"]} marginLeft={["11%", "5%", "5%"]}>
+                        <Box mt={["4%", "4%", "4%"]} mb={["4%", "4%", "4%"]} textAlign="center" >
 
                             <Button fontWeight={650}
                                 color={"#fdfffc"}
