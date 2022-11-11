@@ -77,7 +77,7 @@ export default function Resume_Formats() {
             <Link
               href="/templates"
               height={["45px", "55px", "55px", "55px"]}
-              backgroundColor={"#d04141"}
+              backgroundColor={"#006772"}
               width={["100%", "100%", "50%", "45%", "45%"]}
               display={"flex"}
               alignItems={"center"}
@@ -88,7 +88,9 @@ export default function Resume_Formats() {
               textDecoration={"none"}
               _hover={{
                 textDecoration: "none",
-                color: "#fff"
+                color: "#fff",
+                backgroundColor: 'red',
+                transition: '0.5s'
               }}
             >
               CREATE YOUR RESUME NOW
@@ -100,7 +102,7 @@ export default function Resume_Formats() {
 
       {/* resume templates container */}
       <Container
-        maxW={["100%", "100%", "100%", "80%", "80%"]}
+        maxW={["100%", "100%", "80%", "60%"]}
         padding={"40px 10px 20px 10px"}
       >
         <Box
@@ -127,8 +129,8 @@ export default function Resume_Formats() {
                   <Link
                     href="/templates"
                     height={["45px", "55px", "55px", "55px"]}
-                    width={["100%", "100%", "80%", "80%", "50%"]}
-                    backgroundColor={"#d04141"}
+                    width={["100%", "100%", "90%", "90%", "70%"]}
+                    backgroundColor={"#006772"}
                     display={"flex"}
                     alignItems={"center"}
                     justifyContent={"center"}
@@ -138,7 +140,9 @@ export default function Resume_Formats() {
                     textDecoration={"none"}
                     _hover={{
                       textDecoration: "none",
-                      color: "#fff"
+                      color: "#fff",
+                      backgroundColor: 'red',
+                      transition: '0.5s'
                     }}
                   >
                     USE THIS RESUME TEMPLATE

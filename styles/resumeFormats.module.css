@@ -60,6 +60,7 @@
   font-size: 1.1em;
   line-height: 1.5;
 }
+
 .links:hover {
   color: #40a9ff;
   text-decoration: underline;
@@ -82,7 +83,7 @@
 @media (min-width: 1024px) {
   .resumeTemplateDiv {
     position: absolute;
-    top: 38%;
+    top: 34%;
     left: 25%;
   }
 }
@@ -133,7 +134,7 @@
 
   .resumeTemplateDiv {
     position: absolute;
-    top: 32%;
+    top: 34%;
     left: 25%;
   }
 }
@@ -173,7 +174,7 @@
 
   .resumeTemplateDiv {
     position: absolute;
-    top: 18%;
+    top: 28%;
     left: 15%;
   }
 }
@@ -193,7 +194,7 @@
 
   .resumeTemplateDiv {
     position: absolute;
-    top: 20%;
+    top: 24%;
     left: 15%;
   }
 }
@@ -210,7 +211,7 @@
 
   .resumeTemplateDiv {
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 14%;
   }
 }

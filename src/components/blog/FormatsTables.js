@@ -292,7 +292,7 @@ export default function FormatsTables() {
                                                                 href={"/templates"}
                                                                 height={["45px", "55px", "55px", "55px"]}
                                                                 width={["100%", "100%", "90%", "90%", "70%"]}
-                                                                backgroundColor={"#d04141"}
+                                                                backgroundColor={"#006772"}
                                                                 display={"flex"}
                                                                 alignItems={"center"}
                                                                 justifyContent={"center"}
@@ -302,7 +302,9 @@ export default function FormatsTables() {
                                                                 textDecoration={"none"}
                                                                 _hover={{
                                                                     textDecoration: "none",
-                                                                    color: "#fff"
+                                                                    color: "#fff",
+                                                                    backgroundColor: 'red',
+                                                                    transition: '0.5s'
                                                                 }}
                                                             >
                                                                 CREATE MY RESUME NOW
@@ -437,8 +439,10 @@ export default function FormatsTables() {
                     </Text>
                 </Box>
             </Container>
+
+            {/* main image */}
             <Container
-                maxW={["100%", "100%", "100%", "80%", "80%"]}
+                maxW={["100%", "100%", "80%", "60%"]}
             >
                 {/* Image */}
                 <Box>
@@ -592,7 +596,7 @@ export default function FormatsTables() {
                             <Link
                                 href={"/templates"}
                                 height={["45px", "55px", "55px", "55px"]}
-                                backgroundColor={"#d04141"}
+                                backgroundColor={"#006772"}
                                 width={["100%", "100%", "50%", "45%", "45%"]}
                                 display={"flex"}
                                 alignItems={"center"}
@@ -603,7 +607,9 @@ export default function FormatsTables() {
                                 textDecoration={"none"}
                                 _hover={{
                                     textDecoration: "none",
-                                    color: "#fff"
+                                    color: "#fff",
+                                    backgroundColor: 'red',
+                                    transition: '0.5s'
                                 }}
                             >
                                 CREATE YOUR RESUME NOW
@@ -1007,7 +1013,7 @@ export default function FormatsTables() {
                             <Link
                                 href="/templates"
                                 height={["45px", "55px", "55px", "55px"]}
-                                backgroundColor={"#d04141"}
+                                backgroundColor={"#006772"}
                                 width={["100%", "100%", "50%", "45%", "45%"]}
                                 display={"flex"}
                                 alignItems={"center"}
@@ -1018,7 +1024,9 @@ export default function FormatsTables() {
                                 textDecoration={"none"}
                                 _hover={{
                                     textDecoration: "none",
-                                    color: "#fff"
+                                    color: "#fff",
+                                    backgroundColor: 'red',
+                                    transition: '0.5s'
                                 }}
                             >
                                 CREATE YOUR RESUME NOW
@@ -1504,7 +1512,7 @@ export default function FormatsTables() {
                             <Link
                                 href={"/templates"}
                                 height={["45px", "55px", "55px", "55px"]}
-                                backgroundColor={"#d04141"}
+                                backgroundColor={"#006772"}
                                 width={["100%", "100%", "50%", "45%", "45%"]}
                                 display={"flex"}
                                 alignItems={"center"}
@@ -1515,7 +1523,9 @@ export default function FormatsTables() {
                                 textDecoration={"none"}
                                 _hover={{
                                     textDecoration: "none",
-                                    color: "#fff"
+                                    color: "#fff",
+                                    backgroundColor: 'red',
+                                    transition: '0.5s'
                                 }}
                             >
                                 CREATE YOUR RESUME NOW
@@ -1946,7 +1956,7 @@ export default function FormatsTables() {
 
             {/* resume templates container */}
             <Container
-                maxW={["100%", "100%", "100%", "80%", "80%"]}
+                maxW={["100%", "100%", "80%", "60%"]}
                 padding={"40px 10px 20px 10px"}
             >
                 <Box
@@ -1973,8 +1983,8 @@ export default function FormatsTables() {
                                     <Link
                                         href="/templates"
                                         height={["45px", "55px", "55px", "55px"]}
-                                        width={["100%", "100%", "80%", "80%", "50%"]}
-                                        backgroundColor={"#d04141"}
+                                        width={["100%", "100%", "90%", "90%", "70%"]}
+                                        backgroundColor={"#006772"}
                                         display={"flex"}
                                         alignItems={"center"}
                                         justifyContent={"center"}
@@ -1984,7 +1994,9 @@ export default function FormatsTables() {
                                         textDecoration={"none"}
                                         _hover={{
                                             textDecoration: "none",
-                                            color: "#fff"
+                                            color: "#fff",
+                                            backgroundColor: 'red',
+                                            transition: '0.5s'
                                         }}
                                     >
                                         CREATE MY RESUME NOW
@@ -2222,7 +2234,7 @@ export default function FormatsTables() {
 
             {/* resume templates container */}
             <Container
-                maxW={["100%", "100%", "100%", "80%", "80%"]}
+                maxW={["100%", "100%", "80%", "60%"]}
                 padding={"40px 10px 20px 10px"}
             >
                 <Box
@@ -2249,8 +2261,8 @@ export default function FormatsTables() {
                                     <Link
                                         href={"/templates"}
                                         height={["45px", "55px", "55px", "55px"]}
-                                        width={["100%", "100%", "80%", "80%", "50%"]}
-                                        backgroundColor={"#d04141"}
+                                        width={["100%", "100%", "90%", "90%", "70%"]}
+                                        backgroundColor={"#006772"}
                                         display={"flex"}
                                         alignItems={"center"}
                                         justifyContent={"center"}
@@ -2260,7 +2272,9 @@ export default function FormatsTables() {
                                         textDecoration={"none"}
                                         _hover={{
                                             textDecoration: "none",
-                                            color: "#fff"
+                                            color: "#fff",
+                                            backgroundColor: 'red',
+                                            transition: '0.5s'
                                         }}
                                     >
                                         CREATE MY RESUME NOW
