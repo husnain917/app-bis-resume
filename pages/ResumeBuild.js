@@ -14,12 +14,16 @@ import FaqsSection from "../src/components/faqsComponent/FaqsSection";
 import Templates from "./templates";
 import { GrTemplate } from "react-icons/gr"
 import { TbCircle1, TbCircle2, TbCircle3, TbCircle4, TbCircle5 } from "react-icons/tb"
+import Navbar from "../src/components/navbar/Navbar";
+import Footer from "../src/components/footer/Footer"
 
 export default function ResumeBuild() {
 
     return (
         <>
             <div >
+                <Navbar />
+
                 <Box w={["100%", "100%", "100%"]} mt={["2%", "2%", "2%"]} display="flex" flexDirection={["column", "column", "row"]} justifyContent="space-around"    >
                     <Box
                         w={["100%", "50%", "50%"]} mt={["2%", "2%", "2%"]} >
@@ -31,7 +35,14 @@ export default function ResumeBuild() {
 
 
                             </Text>
-                            <Button backgroundColor='#006772' color="white" _hover="red" >Build my Resume</Button>
+                            <Button fontWeight={650}
+                                color={"#fdfffc"}
+                                backgroundColor="#006772"
+                                _hover={{
+                                    textDecoration: "none",
+                                    color: "#fff",
+                                    backgroundColor: "red"
+                                }} >Build my Resume</Button>
 
 
                         </Box>
@@ -104,7 +115,7 @@ export default function ResumeBuild() {
                         maxW={['100%', '100%', '100%', '80%', '60%']}
                     >
                         <Box marginTop="10%">
-                            <Text fontSize="20px">With Canvas free resume builder, applying for your dream job is easy and fast. Choose from hundreds of free, designer-made templates and customize them within a few clicks.
+                            <Text fontSize="20px">With BisResumes free resume builder, applying for your dream job is easy and fast. Choose from hundreds of free, designer-made templates and customize them within a few clicks.
 
                             </Text>
 
@@ -115,11 +126,11 @@ export default function ResumeBuild() {
                                     alt={'Image Not Found'}
                                 />
                             </Box>
-                            <Text fontSize="20px" mt={["7%", "7%", "7%"]}>Forget spending hours formatting your resume, or choosing complimentary fonts for your cover letter. Creating a resume online with Canva’s free resume builder will give you a sleek and attractive resume, without the fuss.
+                            <Text fontSize="20px" mt={["7%", "7%", "7%"]}>Forget spending hours formatting your resume, or choosing complimentary fonts for your cover letter. Creating a resume online with BisResume’s free resume builder will give you a sleek and attractive resume, without the fuss.
                             </Text>
-                            <Text fontSize="20px" mt={["5%", "5%", "5%"]}>With Canvas free resume builder, applying for your dream job is easy and fast. Choose from hundreds of free, designer-made templates and customize them within a few clicks.
+                            <Text fontSize="20px" mt={["5%", "5%", "5%"]}>With BisResumes free resume builder, applying for your dream job is easy and fast. Choose from hundreds of free, designer-made templates and customize them within a few clicks.
                             </Text>
-                            <Text fontSize="20px" mt={["5%", "5%", "5%"]}>With Canvas free resume builder, applying for your dream job is easy and fast. Choose from hundreds of free, designer-made templates and customize them within a few clicks.
+                            <Text fontSize="20px" mt={["5%", "5%", "5%"]}>With BisResumes free resume builder, applying for your dream job is easy and fast. Choose from hundreds of free, designer-made templates and customize them within a few clicks.
                             </Text>
                         </Box>
                     </Container>
@@ -136,8 +147,8 @@ export default function ResumeBuild() {
 
                         <Text fontSize="28px" fontWeight="bold" color="black" mb={["5%"]} >How to Make A Resume</Text>
 
-                        <Box display="flex" flexDirection="row"><Text marginRight={["12px", "5px", "5px"]}  > <TbCircle1 size={30} color="red" /> </Text><Text fontSize="20px" fontWeight="800"  > Open Canva</Text></Box>
-                        <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]} mr={["2%", "2%", "0%"]} >Open up Canva and search for Resume to start designing your own.
+                        <Box display="flex" flexDirection="row"><Text marginRight={["12px", "5px", "5px"]}  > <TbCircle1 size={30} color="red" /> </Text><Text fontSize="20px" fontWeight="800"  > Open BisResume</Text></Box>
+                        <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]} mr={["2%", "2%", "0%"]} >Open up BisResume and search for Resume to start designing your own.
                         </Text>
 
 
@@ -157,7 +168,7 @@ export default function ResumeBuild() {
                                 Personalize your resume
                             </Text></Box>
                             <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]} mr={["2%", "2%", "0%"]}>
-                                After picking a template, use Canvas drag and drop design tools to tweak your resume. Change fonts, text and colors in a few clicks. Upload your own photo and rearrange any and all elements as much as you want.
+                                After picking a template, use BisResumes drag and drop design tools to tweak your resume. Change fonts, text and colors in a few clicks. Upload your own photo and rearrange any and all elements as much as you want.
 
 
                             </Text>
@@ -169,22 +180,32 @@ export default function ResumeBuild() {
 
                             </Text></Box>
                             <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]} mr={["2%", "2%", "0%"]}>
-                                After picking a template, use Canvas drag and drop design tools to tweak your resume. Change fonts, text and colors in a few clicks. Upload your own photo and rearrange any and all elements as much as you want.
+                                After picking a template, use BisResumes drag and drop design tools to tweak your resume. Change fonts, text and colors in a few clicks. Upload your own photo and rearrange any and all elements as much as you want.
 
 
                             </Text>
                         </Box>
+
                         <Box marginTop="5%">
                             <Box display="flex" flexDirection="row"><Text marginRight={["12px", "5px", "5px"]}  > <TbCircle5 size={30} color="red" /> </Text><Text fontSize="20px" fontWeight="800"  >
                                 Order your prints
 
                             </Text></Box>
                             <Text fontSize="18px" marginTop="2%" marginLeft={["11%", "5%", "5%"]} mr={["2%", "2%", "0%"]}>
-                                After picking a template, use Canvas drag and drop design tools to tweak your resume. Change fonts, text and colors in a few clicks. Upload your own photo and rearrange any and all elements as much as you want.
+                                After picking a template, use BisResumes drag and drop design tools to tweak your resume. Change fonts, text and colors in a few clicks. Upload your own photo and rearrange any and all elements as much as you want.
                             </Text>
                         </Box>
+
                         <Box mt={["3%", "3%", "3%"]} mb={["3%", "3%", "3%"]} marginLeft={["11%", "5%", "5%"]}>
-                            <Button backgroundColor='red' color="white" _hover="red" >Build my Resume</Button>
+
+                            <Button fontWeight={650}
+                                color={"#fdfffc"}
+                                backgroundColor="#006772"
+                                _hover={{
+                                    textDecoration: "none",
+                                    color: "#fff",
+                                    backgroundColor: "red"
+                                }} >Build my Resume</Button>
 
                         </Box>
 
@@ -200,13 +221,13 @@ export default function ResumeBuild() {
                         <Box marginTop="10%">
                             <Text fontSize="26px" fontWeight="bold" mb={["5%"]} >Save time on formatting and editing</Text>
                             <Text fontSize="20px">
-                                With Canvas free resume builder, weve taken the heavy lifting out of designing and formatting your resume. Using our flexible templates will save you hours—all you need to do is add your professional experience and customize the existing design as needed.
+                                With BisResumes free resume builder, weve taken the heavy lifting out of designing and formatting your resume. Using our flexible templates will save you hours—all you need to do is add your professional experience and customize the existing design as needed.
                             </Text>
 
                             <Text fontSize="20px" mt={["5%", "5%", "5%"]}>
-                                Rest assured that Canvas templates come designer-approved, so you dont have to worry about how they look—because they already look great!
+                                Rest assured that BisResumes templates come designer-approved, so you dont have to worry about how they look—because they already look great!
                             </Text>
-                            <Text fontSize="20px" mt={["5%", "5%", "5%"]}>With Canvas free resume builder, applying for your dream job is easy and fast. Choose from hundreds of free, designer-made templates and customize them within a few clicks.
+                            <Text fontSize="20px" mt={["5%", "5%", "5%"]}>With BisResumes free resume builder, applying for your dream job is easy and fast. Choose from hundreds of free, designer-made templates and customize them within a few clicks.
                             </Text>
 
 
@@ -219,7 +240,7 @@ export default function ResumeBuild() {
                                 </Text>
                                 <Text fontSize="20px">
 
-                                    Whether youre a lawyer who works in the corporate sector or an interior stylist in the creative industry, Canva’s graphic designers have created a wide range of templates that are suitable for whatever industry you find yourself in.
+                                    Whether youre a lawyer who works in the corporate sector or an interior stylist in the creative industry, BisResume’s graphic designers have created a wide range of templates that are suitable for whatever industry you find yourself in.
                                 </Text>
 
                                 <Text fontSize="20px" mt={["5%", "5%", "5%"]}>
@@ -237,7 +258,7 @@ export default function ResumeBuild() {
 
                                 </Text>
                                 <Text fontSize="20px">
-                                    On average, recruiters take six seconds to look at a resume. So, if youre looking for a distinctive way to highlight your skills, Canva’s templates offer unique designs that will help you stand out.
+                                    On average, recruiters take six seconds to look at a resume. So, if youre looking for a distinctive way to highlight your skills, BisResume’s templates offer unique designs that will help you stand out.
 
 
                                 </Text>
@@ -265,7 +286,7 @@ export default function ResumeBuild() {
 
                                 <Text fontSize="20px" mt={["5%", "5%", "5%"]}>
 
-                                    With Canvas free resume builder, all your cover letter and resume designs are saved automatically within the editor.
+                                    With BisResumes free resume builder, all your cover letter and resume designs are saved automatically within the editor.
 
                                 </Text>
                                 <Text fontSize="20px" mt={["5%", "5%", "5%"]}>
@@ -278,7 +299,7 @@ export default function ResumeBuild() {
                         </Box>
                     </Container>
                 </>
-                <Box style={{ borderBottom: "1px solid black" }} >
+                <Box >
                     <Text style={{ fontWeight: "bold", textAlign: "center" }} fontSize={["30px", "45px", "45px",]} w={["100%",]} marginTop={["8%", "10%", "10%"]} mb={["5%", "8%", "8%"]}  >
                         Frequently Asked Questions
                     </Text>
@@ -288,14 +309,15 @@ export default function ResumeBuild() {
 
 
                 </Box>
-                <Box ml={["3%", "3%", "3%"]}>
-                    <Text style={{ fontWeight: "bold", }} fontSize={["30px", "45px", "45px",]} w={["100%",]} marginTop={["5%", "5%", "5%"]} mb={["4%", "5%", "5%"]}  >
+                <Box ml={["3%", "3%", "3%"]} mb={["2%", "2%", "2%"]}>
+                    <Text style={{ fontWeight: "bold", }} fontSize={["30px", "45px", "45px",]} w={["100%",]} marginTop={["2%", "2%", "2%"]} mb={["3%", "4%", "4%"]}  >
                         Browse Templates
 
                     </Text>
 
                     <Templates />
                 </Box>
+                <Footer />
             </div>
         </>
     );
