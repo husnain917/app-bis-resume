@@ -19,14 +19,15 @@ const SearchBar = () => {
       padding={"0"}
       borderRadius={"4px"}
     >
-      <InputGroup borderWidth={1} borderColor={"blue.600"}>
+      <InputGroup borderWidth={1} borderRadius={"4px"} borderColor={"blue.600"}>
         <InputLeftElement
           pointerEvents="none"
           color="gray.300"
           fontSize="1.2em"
+          borderRadius={"4px"}
           children={<SearchIcon color="gray.500" />}
         />
-        <Input placeholder="Enter amount" />
+        <Input placeholder="Enter amount" borderRadius={"4px"} />
       </InputGroup>
     </Box>
   );

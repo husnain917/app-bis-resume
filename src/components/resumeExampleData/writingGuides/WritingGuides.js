@@ -37,8 +37,9 @@ const WritingGuides = () => {
         <Box
           position={"relative"}
           flexShrink={"0"}
-          alignSelf={"flex-end"}
+          alignSelf={["flex-end", "flex-end", "flex-end", "flex-end"]}
           marginLeft={"128px"}
+          maxW={["544px", "544px", "380px", "544px", "544px"]}
           w={["344px", "444px", "544px", "544px", "544px", "544px"]}
           display={"flex"}
         >
@@ -46,7 +47,14 @@ const WritingGuides = () => {
             <Image
               src="./top1.png"
               w={"200px"}
-              alignSelf={"flex-end"}
+              alignSelf={[
+                "center",
+                "flex-end",
+                "flex-end",
+                "flex-end",
+                "flex-end",
+                "flex-end",
+              ]}
               marginLeft={"-60px"}
               marginTop={"-36px"}
             />
@@ -54,8 +62,10 @@ const WritingGuides = () => {
           <Box
             overflow={"hidden"}
             borderRadius={"4px 4px 0 0"}
-            height={"480px"}
+            // height={"480px"}
             w={["550px", "550px", "550px", "550px", "550px"]}
+            display={"flex"}
+            alignItems={"center"}
           >
             <Image src="./new-york-resume.jpg" />
           </Box>{" "}

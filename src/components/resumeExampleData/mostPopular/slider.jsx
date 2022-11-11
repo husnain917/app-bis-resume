@@ -2,6 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/bundle";
+// import required modules
+import { Pagination } from "swiper";
 // import "./styles.css";
 
 const imagesArr = [
@@ -36,8 +38,8 @@ export default function Slider() {
       grabCursor
       initialSlide={1}
       loop
-      dots={true}
-      modules={[Navigation]}
+      pagination={true}
+      modules={[Navigation, Pagination]}
       breakpoints={{
         100: {
           slidesPerView: 1,
