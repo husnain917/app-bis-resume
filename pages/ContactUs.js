@@ -89,7 +89,6 @@ export default function ContactUs() {
               alignItems="center"
             >
               {cancel === 2 ? (
-                "Hellow World"
                 <Box mt={"2"}>
                   <CancelSubscription />
                 </Box>
