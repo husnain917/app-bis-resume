@@ -2,6 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/bundle";
+import { Box, Text, Button, Image } from "@chakra-ui/react";
+
 // import required modules
 import { Pagination } from "swiper";
 // import "./styles.css";
@@ -64,7 +66,7 @@ export default function Slider() {
       {imagesArr.map((img, index) => {
         return (
           <SwiperSlide key={index}>
-            <img src={img.src} alt={img.alt} />
+            <Image src={img.src} alt={img.alt} />
           </SwiperSlide>
         );
       })}

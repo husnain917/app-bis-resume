@@ -164,7 +164,7 @@ const MostPopular = () => {
               {imagesArr.map((img, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <img src={img.src} alt={img.alt} />
+                    <Image src={img.src} alt={img.alt} />
                   </SwiperSlide>
                 );
               })}
