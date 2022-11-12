@@ -31,6 +31,7 @@ export default function FormatsTables() {
     const [over, setOver] = useState(false)
     return (
         <>
+            {/* resume table */}
             <ResumeTable />
             {/* ist table heading explain */}
             <Container
@@ -2158,14 +2159,14 @@ export default function FormatsTables() {
 
 
             {/* 5th table heading explain */}
-            <Container
+            {/* <Container
                 maxW={["100%", "100%", "80%", "60%"]}
             >
                 <Box
                     id={"b5"}
                 >
                     <ResumeHeading text={"5"} />
-                    {/* title */}
+                    
                     <Text
                         textAlign={"center"}
                         fontSize={"30px"}
@@ -2175,7 +2176,7 @@ export default function FormatsTables() {
                         Bonus Resources (Templates, Layouts, <br />
                         Examples, and Extra Tips)
                     </Text>
-                    {/* description */}
+                    
                     <Text
                         fontSize={"15px"}
                         marginBottom={"30px"}
@@ -2230,10 +2231,10 @@ export default function FormatsTables() {
                         . Heres what it may look like:
                     </Text>
                 </Box>
-            </Container>
+            </Container> */}
 
             {/* resume templates container */}
-            <Container
+            {/* <Container
                 maxW={["100%", "100%", "80%", "60%"]}
                 padding={"40px 10px 20px 10px"}
             >
@@ -2285,10 +2286,10 @@ export default function FormatsTables() {
                             <></>
                     }
                 </Box>
-            </Container>
+            </Container> */}
             {/* resume template container end */}
 
-            <Container
+            {/* <Container
                 maxW={["100%", "100%", "80%", "60%"]}
             >
                 <Box
@@ -2318,7 +2319,7 @@ export default function FormatsTables() {
                         Key Takeaway
                     </Text>
 
-                    {/* Imnage */}
+                    
                     <Box>
                         <Image
                             src={"/perfect_resume_format.jpg"}
@@ -2360,7 +2361,7 @@ export default function FormatsTables() {
                         {RESUME_FORMATS_EXTRA_TIPS?.strategies?.description}
                     </Text>
                 </Box>
-            </Container>
+            </Container> */}
             {/* 5th table heading explain */}
         </>
     )

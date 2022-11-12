@@ -48,10 +48,10 @@ export const RESUME_TABLE_DATA = {
         title: "Make Sure Your Resume Format Beats the ATS Resume Test",
         link: "b4"
     },
-    fifthContent: {
-        title: "Bonus Resources (Templates, Layouts, Examples, and Extra Tips)",
-        link: "b5"
-    },
+    // fifthContent: {
+    //     title: "Bonus Resources (Templates, Layouts, Examples, and Extra Tips)",
+    //     link: "b5"
+    // },
 }
 
 export const RESUME_FORMATS = {
