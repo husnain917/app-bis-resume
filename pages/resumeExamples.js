@@ -17,11 +17,9 @@ const ResumeExamples = () => {
           <Box width={"100%"} flexGrow={"1"}>
             <SearchBar />
             <MostPopular />
-            {data.map((data) => {
-              console.log(data);
+            {data.map((data, index) => {
+              return <CommonComponent data={data} key={index} />;
             })}
-            <CommonComponent label={"Component"} data={""} />
-            <CommonComponent header={"Component"} data={""} />
           </Box>
         </Box>
       </Box>
