@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
-import { Box, Text, Button, Image } from "@chakra-ui/react";
+import React, { useRef, useState } from "react";
+import { Box, Text, Button, Image, SimpleGrid } from "@chakra-ui/react";
+import { Badge } from "@chakra-ui/react";
 
 import {
   PhoneIcon,
@@ -8,9 +9,39 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
-const CommonComponent = () => {
+const CommonComponent = ({ data }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  const imagesArr = [
+    {
+      label: "Education",
+      src: "https://source.unsplash.com/random/300x500",
+      alt: "random from unsplash",
+    },
+    {
+      label: "Education1",
+      src: "https://source.unsplash.com/random/300x500",
+      alt: "random from unsplash",
+    },
+    {
+      label: "Education2",
+      src: "https://source.unsplash.com/random/300x500",
+      alt: "random from unsplash",
+    },
+    {
+      label: "Education3",
+      src: "https://source.unsplash.com/random/300x500",
+      alt: "random from unsplash",
+    },
+    {
+      label: "Education4",
+      src: "https://source.unsplash.com/random/300x500",
+      alt: "random from unsplash",
+    },
+  ];
+  const dataForDisplay = expanded ? imagesArr : imagesArr.slice(0, 4);
   return (
-    <Box overflow={["visible", "visible", "hidden"]}>
+    <Box overflow={["visible", "visible", "hidden"]} mb={10}>
       <Box
         display={"flex"}
         flexDirection={["column", "column", "column", "row", "row"]}
@@ -20,53 +51,71 @@ const CommonComponent = () => {
         justifyContent={"space-between"}
       >
         <Box display={"flex"}>
-          <Image src="./diamond.png" h="auto" />
+          <Box>
+            <Image src={data.icon || "./diamond.png"} h="3.5em" />
+          </Box>
 
           <Box
             ml="10px"
-            fontSize="3em"
-            lineHeight={"40px"}
+            fontSize="2.5em"
             fontWeight={"400"}
             transition={"color .15s"}
+            display={"flex"}
           >
-            Most Popular
+            {data.title || "Add Header"}
+            <Badge
+              ml="3"
+              fontSize="0.4em"
+              colorScheme="green"
+              borderRadius={"50%"}
+              height={"30px"}
+              width={"30px"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+            >
+              <Text>{"5"}</Text>
+            </Badge>
           </Box>
         </Box>
         <Box display={["none", "none", "flex", "flex", "flex"]}>
           {" "}
-          <Box
-            borderRadius={"50%"}
-            bg={"gray.300"}
-            h={"12"}
-            w={"12"}
-            display={"flex"}
-            alignItems={"center"}
-            justifyContent={"center"}
-            mr={"10px"}
-            _hover={{
-              cursor: "pointer",
-            }}
-            onClick={() => swiperRef.current.slidePrev()}
-          >
-            <ChevronLeftIcon w={8} h={8} />
-          </Box>
-          <Box
-            borderRadius={"50%"}
-            bg={"gray.300"}
-            h={"12"}
-            w={"12"}
-            display={"flex"}
-            alignItems={"center"}
-            justifyContent={"center"}
-            _hover={{
-              cursor: "pointer",
-            }}
-            onClick={() => swiperRef.current.slideNext()}
-          >
-            <ChevronRightIcon w={8} h={8} />
+          <Box h={"12"} w={"40em"}>
+            <Text>
+              {data.description ||
+                "Our tailor-made samples and guides has all of the tools you needto easily craft a government CV in just minutes. Our samples have been field-tested and are expertly designed to set you up for success."}
+            </Text>
           </Box>
         </Box>
       </Box>
+      <SimpleGrid columns={[2, 2, null, 4]} spacing={10}>
+        {dataForDisplay.map((template, index) => {
+          return (
+            <Box
+              key={index}
+              bg={"whitesmoke"}
+              h={["auto", "440px"]}
+              padding={"5"}
+              borderRadius={"10"}
+              _hover={{
+                background: "white",
+                cursor: "pointer",
+              }}
+              onClick={() => {}}
+            >
+              <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                {template.label}
+              </Text>
+              <Box mt={1}>
+                <Image src={template.src} alt={template.alt} />
+              </Box>
+            </Box>
+          );
+        })}
+      </SimpleGrid>
+      <Button type="button" onClick={() => setExpanded(!expanded)} mt={"8"}>
+        {expanded ? "Show Less" : "Show More"}
+      </Button>
     </Box>
   );
 };

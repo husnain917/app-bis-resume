@@ -61,16 +61,16 @@ const MostPopular = () => {
         justifyContent={"space-between"}
       >
         <Box display={"flex"}>
-          <Image src="./diamond.png" h="auto" />
-
+          <Box>
+            <Image src="./diamond.png" h="3.5em" />
+          </Box>
           <Box
             ml="10px"
-            fontSize="3em"
-            lineHeight={"40px"}
+            fontSize="2.5em"
             fontWeight={"400"}
             transition={"color .15s"}
           >
-            Most Popular
+            {"Most Popular"}
           </Box>
         </Box>
         <Box display={["none", "none", "flex", "flex", "flex"]}>

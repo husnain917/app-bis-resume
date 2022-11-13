@@ -14,7 +14,7 @@ const SearchBar = () => {
   return (
     <Box
       position={"sticky"}
-      top={"16px"}
+      top={"0px"}
       margin={"0 0 68px"}
       padding={"0"}
       borderRadius={"4px"}
@@ -27,7 +27,7 @@ const SearchBar = () => {
           borderRadius={"4px"}
           // children={<SearchIcon color="gray.500" />}
         />
-        <Input placeholder="Enter amount" borderRadius={"4px"} />
+        <Input placeholder="Enter amount" borderRadius={"4px"} bg={"white"} />
       </InputGroup>
     </Box>
   );
