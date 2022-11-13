@@ -74,7 +74,7 @@ const CommonComponent = ({ data }) => {
               alignItems={"center"}
               justifyContent={"center"}
             >
-              <Text>{"5"}</Text>
+              <Text>{data.exampleData.length}</Text>
             </Badge>
           </Box>
         </Box>

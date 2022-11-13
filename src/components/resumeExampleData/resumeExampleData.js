@@ -30,6 +30,11 @@ export const data = [
         src: "https://source.unsplash.com/random/300x500",
         alt: "random from unsplash",
       },
+      {
+        label: "Education4",
+        src: "https://source.unsplash.com/random/300x500",
+        alt: "random from unsplash",
+      },
     ],
   },
   {
