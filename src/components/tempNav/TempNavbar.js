@@ -9,7 +9,17 @@ import {
 } from '@chakra-ui/icons';
 import LayoutModal from './LayoutModal';
 
-export default function TempNavbar() {
+export default function TempNavbar({
+  work,
+  education,
+  references,
+  skills,
+  languages,
+  projects,
+  organization,
+  hobbies,
+  certificate,
+}) {
   return (
     <Box
       display="flex"
@@ -60,7 +70,17 @@ export default function TempNavbar() {
           <MoonIcon mr="5px" />
           Theme
         </Button>
-        <LayoutModal />
+        <LayoutModal
+          work={work}
+          education={education}
+          references={references}
+          skills={skills}
+          languages={languages}
+          projects={projects}
+          organization={organization}
+          hobbies={hobbies}
+          certificate={certificate}
+        />
 
         <Button
           bgColor="transparent"

@@ -16,6 +16,7 @@ import {
   visibleSkillSection,
   visibleWorkSection,
 } from '../../../store/actions/builderAction';
+
 import style from '../../components/fashionTemp1/fashionTemp1.module.css';
 import {
   ABOUT,

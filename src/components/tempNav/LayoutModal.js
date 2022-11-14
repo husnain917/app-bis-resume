@@ -24,7 +24,17 @@ import {
 } from '@chakra-ui/react';
 import { AddIcon, AttachmentIcon, DeleteIcon } from '@chakra-ui/icons';
 import Btn from './Btn';
-export default function LayoutModal() {
+export default function LayoutModal({
+  work,
+  education,
+  references,
+  skills,
+  languages,
+  projects,
+  organization,
+  hobbies,
+  certificate,
+}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
@@ -54,81 +64,103 @@ export default function LayoutModal() {
           <ModalCloseButton color="white" />
           <ModalBody bgColor="#313C4E">
             <Box w="100%" display="flex" flexWrap="wrap" mt="5%">
-              {resumeData?.education?.visible ? (
-                <>
+              {education ? (
+                resumeData?.education?.visible ? (
+                  <>
+                    <Btn
+                      title="Education"
+                      bgColor="tomato"
+                      onClick={() => dispatch(visibleEduSection(false))}
+                    />
+                  </>
+                ) : (
                   <Btn
                     title="Education"
-                    bgColor="tomato"
-                    onClick={() => dispatch(visibleEduSection(false))}
+                    bgColor="green"
+                    onClick={() => dispatch(visibleEduSection(true))}
                   />
-                </>
+                )
               ) : (
-                <Btn
-                  title="Education"
-                  bgColor="green"
-                  onClick={() => dispatch(visibleEduSection(true))}
-                />
+                ''
               )}
-              {resumeData?.projects?.visible ? (
-                <>
+              {projects ? (
+                resumeData?.projects?.visible ? (
+                  <>
+                    <Btn
+                      bgColor="tomato"
+                      title="Project"
+                      onClick={() => dispatch(visibleProjectSection(false))}
+                    />
+                  </>
+                ) : (
                   <Btn
-                    bgColor="tomato"
                     title="Project"
-                    onClick={() => dispatch(visibleProjectSection(false))}
+                    bgColor="green"
+                    onClick={() => dispatch(visibleProjectSection(true))}
                   />
-                </>
+                )
               ) : (
-                <Btn
-                  title="Project"
-                  bgColor="green"
-                  onClick={() => dispatch(visibleProjectSection(true))}
-                />
+                ''
               )}
-              {resumeData?.work?.visible ? (
-                <>
+              {work ? (
+                resumeData?.work?.visible ? (
+                  <>
+                    <Btn
+                      title="Experience"
+                      bgColor="tomato"
+                      onClick={() => dispatch(visibleWorkSection(false))}
+                    />
+                  </>
+                ) : (
                   <Btn
+                    bgColor="green"
                     title="Experience"
-                    bgColor="tomato"
-                    onClick={() => dispatch(visibleWorkSection(false))}
+                    onClick={() => dispatch(visibleWorkSection(true))}
                   />
-                </>
+                )
               ) : (
-                <Btn
-                  bgColor="green"
-                  title="Experience"
-                  onClick={() => dispatch(visibleWorkSection(true))}
-                />
+                ''
               )}
 
-              {resumeData?.languages?.visible ? (
-                <>
+              {languages ? (
+                resumeData?.languages?.visible ? (
+                  <>
+                    <Btn
+                      title="Language"
+                      bgColor="tomato"
+                      onClick={() => dispatch(visibleLangSection(false))}
+                    />
+                  </>
+                ) : (
                   <Btn
                     title="Language"
-                    bgColor="tomato"
-                    onClick={() => dispatch(visibleLangSection(false))}
+                    bgColor="green"
+                    onClick={() => dispatch(visibleLangSection(true))}
                   />
-                </>
+                )
               ) : (
-                <Btn
-                  title="Language"
-                  bgColor="green"
-                  onClick={() => dispatch(visibleLangSection(true))}
-                />
+                ''
               )}
-              {resumeData?.organization?.visible ? (
-                <>
+              {organization ? (
+                resumeData?.organization?.visible ? (
+                  <>
+                    <Btn
+                      title="Organization"
+                      bgColor="tomato"
+                      onClick={() =>
+                        dispatch(visibleOrganizationSection(false))
+                      }
+                    />
+                  </>
+                ) : (
                   <Btn
                     title="Organization"
-                    bgColor="tomato"
-                    onClick={() => dispatch(visibleOrganizationSection(false))}
+                    bgColor="green"
+                    onClick={() => dispatch(visibleOrganizationSection(true))}
                   />
-                </>
+                )
               ) : (
-                <Btn
-                  title="Organization"
-                  bgColor="green"
-                  onClick={() => dispatch(visibleOrganizationSection(true))}
-                />
+                ''
               )}
               {/* {resumeData?.achievements?.visible ? (
                 <>
@@ -145,65 +177,83 @@ export default function LayoutModal() {
                   onClick={() => dispatch(visibleAchievementSection(true))}
                 />
               )} */}
-              {resumeData?.skills?.visible ? (
-                <>
+              {skills ? (
+                resumeData?.skills?.visible ? (
+                  <>
+                    <Btn
+                      title="Skills"
+                      bgColor="tomato"
+                      onClick={() => dispatch(visibleSkillSection(false))}
+                    />
+                  </>
+                ) : (
                   <Btn
                     title="Skills"
-                    bgColor="tomato"
-                    onClick={() => dispatch(visibleSkillSection(false))}
+                    bgColor="green"
+                    onClick={() => dispatch(visibleSkillSection(true))}
                   />
-                </>
+                )
               ) : (
-                <Btn
-                  title="Skills"
-                  bgColor="green"
-                  onClick={() => dispatch(visibleSkillSection(true))}
-                />
+                ''
               )}
-              {resumeData?.hobbies?.visible ? (
-                <>
+              {hobbies ? (
+                resumeData?.hobbies?.visible ? (
+                  <>
+                    <Btn
+                      title="Interest"
+                      bgColor="tomato"
+                      onClick={() => dispatch(visibleHobbiesSection(false))}
+                    />
+                  </>
+                ) : (
                   <Btn
                     title="Interest"
-                    bgColor="tomato"
-                    onClick={() => dispatch(visibleHobbiesSection(false))}
+                    bgColor="green"
+                    onClick={() => dispatch(visibleHobbiesSection(true))}
                   />
-                </>
+                )
               ) : (
-                <Btn
-                  title="Interest"
-                  bgColor="green"
-                  onClick={() => dispatch(visibleHobbiesSection(true))}
-                />
+                ''
               )}
-              {resumeData?.certifications?.visible ? (
-                <>
+              {certificate ? (
+                resumeData?.certifications?.visible ? (
+                  <>
+                    <Btn
+                      bgColor="tomato"
+                      title="Certificates"
+                      onClick={() =>
+                        dispatch(visibleCertificatesSection(false))
+                      }
+                    />
+                  </>
+                ) : (
                   <Btn
-                    bgColor="tomato"
                     title="Certificates"
-                    onClick={() => dispatch(visibleCertificatesSection(false))}
+                    bgColor="green"
+                    onClick={() => dispatch(visibleCertificatesSection(true))}
                   />
-                </>
+                )
               ) : (
-                <Btn
-                  title="Certificates"
-                  bgColor="green"
-                  onClick={() => dispatch(visibleCertificatesSection(true))}
-                />
+                ''
               )}
-              {resumeData?.references?.visible ? (
-                <>
+              {references ? (
+                resumeData?.references?.visible ? (
+                  <>
+                    <Btn
+                      bgColor="tomato"
+                      title="Reference"
+                      onClick={() => dispatch(visibleReferenceSection(false))}
+                    />
+                  </>
+                ) : (
                   <Btn
-                    bgColor="tomato"
                     title="Reference"
-                    onClick={() => dispatch(visibleReferenceSection(false))}
+                    bgColor="green"
+                    onClick={() => dispatch(visibleReferenceSection(true))}
                   />
-                </>
+                )
               ) : (
-                <Btn
-                  title="Reference"
-                  bgColor="green"
-                  onClick={() => dispatch(visibleReferenceSection(true))}
-                />
+                ''
               )}
             </Box>
           </ModalBody>

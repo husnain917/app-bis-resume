@@ -220,7 +220,7 @@ export const updateOrder = (data, path) => (dispatch, getState) => {
 };
 export const addNewObj = (old_data, path) => (dispatch, getState) => {
   let resumeObj = getState().editorReducer.resumeData;
-  const index_value = objectPath.get(resumeObj, path).length;
+  const index_value = objectPath.get(resumeObj, path)?.length;
 
   const data = { ...objectPath.get(sampleData.data, path)[0] };
 

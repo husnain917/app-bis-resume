@@ -22,6 +22,12 @@ export default function Heading({
   circleBg,
   circleBorderW,
   circleBorderColor,
+  borderTop,
+  borderBottom,
+  borderRight,
+  borderLeft,
+  borderRadius,
+  onSideSectionShow,
 }) {
   return (
     <>
@@ -32,6 +38,12 @@ export default function Heading({
         h={height ? height : 35}
         m={margin ? margin : ''}
         p={padding ? padding : ''}
+        borderTop={borderTop ? borderTop : ''}
+        borderBottom={borderBottom ? borderBottom : ''}
+        borderRight={borderRight ? borderRight : ''}
+        borderLeft={borderLeft ? borderLeft : ''}
+        borderRadius={borderRadius ? borderRadius : ''}
+        // onClick={()=>}
       >
         {iconHeading && <>{React.createElement(icon)} </>}
         {circleIconHeading && (
