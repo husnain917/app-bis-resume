@@ -2,6 +2,7 @@ import { Box } from '@chakra-ui/react';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { connect } from 'react-redux';
+import { sampleData } from '../../../constants/sampleData';
 import {
   addNewObj,
   deleteObjInArray,

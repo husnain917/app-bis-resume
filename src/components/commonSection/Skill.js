@@ -79,18 +79,23 @@ const Skill = (props) => {
     minWText = '130px',
     maxWText = '130px',
     lineStyle,
-    skillContainerStyle,
+    parentContainerStyle,
+    childContainerStyle,
   } = props;
 
   return (
-    <div className={`${skillContainerStyle ? skillContainerStyle : ''}`}>
+    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
       <Dnd
         data={data}
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         reorder={(e) => onOrderUpdate(e)}
         renderItem={(item, index) => (
-          <HStack maxW={maxW ? maxW : ''} minW={minW ? minW : ''}>
+          <HStack
+            maxW={maxW ? maxW : ''}
+            minW={minW ? minW : ''}
+            className={`${childContainerStyle ? childContainerStyle : ''}`}
+          >
             <Box
               minW={(rating || progressBar) && minWText}
               maxW={(rating || progressBar) && maxWText}

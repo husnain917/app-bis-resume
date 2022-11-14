@@ -17,7 +17,6 @@ import {
   visibleWorkSection,
 } from '../../../store/actions/builderAction';
 
-import style from '../../components/fashionTemp1/fashionTemp1.module.css';
 import {
   ABOUT,
   CERTIFICATE,
@@ -30,7 +29,7 @@ import {
   SKILL,
   WORK,
 } from './SectionSideConstant';
-const SectionSideMenu = ({ onDelete, onHide }) => {
+const SectionSideMenu = ({ onDelete, onHide, bg }) => {
   const dispatch = useDispatch();
   const onDeleteHandler = () => {
     switch (onDelete) {
@@ -75,7 +74,7 @@ const SectionSideMenu = ({ onDelete, onHide }) => {
         w={'22px'}
         px={'3px'}
         borderRadius={'13px'}
-        bg={'#2A78AB'}
+        bg={bg ? bg : '#2A78AB'}
         display="flex"
         flexDirection={'column'}
         justifyContent={'space-evenly'}

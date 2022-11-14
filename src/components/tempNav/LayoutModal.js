@@ -32,7 +32,7 @@ export default function LayoutModal({
   languages,
   projects,
   organization,
-  hobbies,
+  interest,
   certificate,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -196,7 +196,7 @@ export default function LayoutModal({
               ) : (
                 ''
               )}
-              {hobbies ? (
+              {interest ? (
                 resumeData?.hobbies?.visible ? (
                   <>
                     <Btn

@@ -1,7 +1,5 @@
 import React from 'react';
-import { Box, Circle, Flex, HStack, Stack, Text } from '@chakra-ui/react';
-import SectionSideMenu from '../tempSectionSide/SectionSideMenu';
-
+import { Box, Circle, HStack, Text } from '@chakra-ui/react';
 export default function Heading({
   title,
   headBg,
@@ -31,7 +29,7 @@ export default function Heading({
   onSideSectionShow,
 }) {
   return (
-    <Stack>
+    <>
       <HStack
         minW={minW ? minW : 250}
         maxW={maxW ? maxW : 250}
@@ -70,7 +68,6 @@ export default function Heading({
           {title}
         </Text>
       </HStack>
-      <SectionSideMenu />
-    </Stack>
+    </>
   );
 }

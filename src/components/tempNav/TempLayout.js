@@ -9,7 +9,7 @@ export default function TempLayout({
   languages,
   projects,
   organization,
-  hobbies,
+  interest,
   certificate,
 }) {
   return (
@@ -22,7 +22,7 @@ export default function TempLayout({
         languages={languages}
         projects={projects}
         organization={organization}
-        hobbies={hobbies}
+        interest={interest}
         certificate={certificate}
       />
 

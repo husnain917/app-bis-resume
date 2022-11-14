@@ -51,14 +51,13 @@ const Reference = (props) => {
     phoneStyle,
     emailStyle,
     addressStyle,
-    referenceContainerStyle,
+    parentContainerStyle,
+    childContainerStyle,
     minW = 180,
     maxW = 180,
   } = props;
   return (
-    <div
-      className={`${referenceContainerStyle ? referenceContainerStyle : ''}`}
-    >
+    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
       <Dnd
         data={data}
         direction={DndDirection ? DndDirection : ''}
@@ -69,6 +68,7 @@ const Reference = (props) => {
           <Box
             minW={DndDirection == 'horizontal' && minW}
             maxW={DndDirection == 'horizontal' && maxW}
+            className={`${childContainerStyle ? childContainerStyle : ''}`}
           >
             {name && (
               <Text

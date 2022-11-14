@@ -21,6 +21,8 @@ const RowSkill = (props) => {
     bg,
     skillStyle,
     skillPlaceholder,
+    parentContainerStyle,
+    childContainerStyle,
   } = props;
   const data = resumeData?.skills?.items?.length
     ? [...resumeData?.skills?.items]
@@ -41,28 +43,31 @@ const RowSkill = (props) => {
     dispatch(updateOrder(storeReorder, path));
   };
   return (
-    <Dnd
-      data={data}
-      direction="horizontal"
-      additem={_addNewItem}
-      removeitem={(index) => _removeItem(index)}
-      reorder={(e) => onOrderUpdate(e)}
-      renderItem={(item, index) => (
-        <Box
-          h={height ? height : '32px'}
-          m={margin ? margin : 0.4}
-          bg={bg ? bg : 'blackAlpha.400'}
-          borderRadius={borderRadius ? borderRadius : 6}
-        >
-          <Text
-            value={item.title}
-            placeholder={skillPlaceholder ? skillPlaceholder : 'Skill'}
-            customClass={`${skillStyle}`}
-            path={`${path}.${index}.title`}
-          />
-        </Box>
-      )}
-    />
+    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
+      <Dnd
+        data={data}
+        direction="horizontal"
+        additem={_addNewItem}
+        removeitem={(index) => _removeItem(index)}
+        reorder={(e) => onOrderUpdate(e)}
+        renderItem={(item, index) => (
+          <Box
+            h={height ? height : '32px'}
+            m={margin ? margin : 0.4}
+            bg={bg ? bg : 'blackAlpha.400'}
+            borderRadius={borderRadius ? borderRadius : 6}
+            className={`${childContainerStyle ? childContainerStyle : ''}`}
+          >
+            <Text
+              value={item.title}
+              placeholder={skillPlaceholder ? skillPlaceholder : 'Skill'}
+              customClass={`${skillStyle}`}
+              path={`${path}.${index}.title`}
+            />
+          </Box>
+        )}
+      />
+    </div>
   );
 };
 

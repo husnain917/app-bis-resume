@@ -13,9 +13,13 @@ const Name = (props) => {
     SNameStyle,
     FNamePlaceholder,
     SNamePlaceholder,
+    parentContainerStyle,
   } = props;
   return (
-    <Stack direction={direction ? direction : 'column'}>
+    <Stack
+      direction={direction ? direction : 'column'}
+      className={`${parentContainerStyle ? parentContainerStyle : ''}`}
+    >
       {FName && (
         <Text
           value={resumeData?.profile?.firstName}

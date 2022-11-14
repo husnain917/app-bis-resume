@@ -1,4 +1,4 @@
-import { Box, HStack, Input, ListItem, UnorderedList } from '@chakra-ui/react';
+import { Box, Input, ListItem, Stack, UnorderedList } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
 import {
@@ -78,6 +78,7 @@ const Language = (props) => {
     trailWidth,
     minWText = '130px',
     maxWText = '130px',
+    direction,
   } = props;
 
   return (
@@ -88,7 +89,11 @@ const Language = (props) => {
         reorder={(e) => onOrderUpdate(e)}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <HStack minW={minW ? minW : ''} maxW={maxW ? maxW : ''}>
+          <Stack
+            direction={direction ? direction : 'row'}
+            minW={minW ? minW : ''}
+            maxW={maxW ? maxW : ''}
+          >
             <Box
               minW={(rating || progressBar) && minWText}
               maxW={(rating || progressBar) && maxWText}
@@ -144,7 +149,7 @@ const Language = (props) => {
                 />
               </>
             )}
-          </HStack>
+          </Stack>
         )}
       />
     </div>

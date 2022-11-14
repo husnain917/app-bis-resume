@@ -4,9 +4,9 @@ import Text from './Text';
 
 const Profession = (props) => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  const { professionPlaceholder, professionStyle } = props;
+  const { professionPlaceholder, professionStyle, containerStyle } = props;
   return (
-    <div>
+    <div className={`${containerStyle ? containerStyle : ''}`}>
       <Text
         placeholder={
           professionPlaceholder ? professionPlaceholder : 'Profession'

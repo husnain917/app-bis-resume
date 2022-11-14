@@ -38,7 +38,8 @@ const Education = (props) => {
     fontSize,
     fontWeight,
     textAlign,
-    eduContainerStyle,
+    parentContainerStyle,
+    childContainerStyle,
     degree_placeholder,
     institution_placeholder,
     startDate_placeholder,
@@ -68,7 +69,7 @@ const Education = (props) => {
   } = props;
 
   return (
-    <div className={`${eduContainerStyle ? eduContainerStyle : ''}`}>
+    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
       <Dnd
         data={data}
         direction={DndDirection ? DndDirection : ''}
@@ -76,7 +77,11 @@ const Education = (props) => {
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <Box display={'flex'} flexDir="column">
+          <Box
+            display={'flex'}
+            flexDir="column"
+            className={`${childContainerStyle ? childContainerStyle : ''}`}
+          >
             <Stack direction={direction ? direction : 'column'}>
               {date && (
                 <Box

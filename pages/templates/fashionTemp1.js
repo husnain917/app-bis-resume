@@ -28,16 +28,14 @@ import {
   SKILL,
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
+import useShow from '../../src/components/tempSectionSide/useShow';
 const FashionTemp1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  const [show, setShow] = useState({
-    skill: false,
-    workExperience: false,
-    education: false,
-    languages: false,
-    references: false,
-  });
+  const [show, setShow] = useShow();
+
   return (
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~ Fashion Temp 1 Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
+    //Template Layout for Template Navbar//
     <TempLayout
       work={true}
       education={true}
@@ -83,7 +81,9 @@ const FashionTemp1 = () => {
                 FNameStyle={Classes.fashionName}
                 SNameStyle={Classes.fashionName}
               />
+              {/* Profession Section  */}
               <Profession professionStyle={Classes.ProfessionFashion} />
+              {/* Profession Heading  */}
               <Heading
                 title={'ABOUT ME'}
                 headBg={'#3498DB'}
@@ -102,10 +102,13 @@ const FashionTemp1 = () => {
                 margin={'10px 0px 0px 0px'}
               />
               &nbsp;
+              {/* About Section */}
               <About aboutStyle={Classes.profileText} />
+              {/* skill Section  */}
               {resumeData?.skills?.visible && (
                 <>
                   <HStack alignItems={'flex-start'}>
+                    {/* skill Heading */}
                     <Heading
                       title={'PERSONAL'}
                       headBg={'#3498DB'}
@@ -126,6 +129,7 @@ const FashionTemp1 = () => {
                         setShow({ ...show, skill: true })
                       }
                     />
+                    {/* Section Side Menu */}
                     {show.skill && (
                       <>
                         <SectionSideMenu
@@ -136,12 +140,15 @@ const FashionTemp1 = () => {
                     )}
                   </HStack>
                   &nbsp;
+                  {/* Skill  Components */}
                   <Skill skillStyle={Classes.personalText} />
                 </>
               )}
+              {/* Language Section */}
               {resumeData?.languages?.visible && (
                 <>
                   <HStack alignItems={'flex-start'}>
+                    {/* languages Heading */}
                     <Heading
                       title={'LANGUAGES'}
                       headBg={'#3498DB'}
@@ -162,6 +169,7 @@ const FashionTemp1 = () => {
                         setShow({ ...show, languages: true })
                       }
                     />
+                    {/* Section Side Menu */}
                     {show.languages && (
                       <SectionSideMenu
                         onHide={() => setShow({ ...show, languages: false })}
@@ -170,11 +178,13 @@ const FashionTemp1 = () => {
                     )}
                   </HStack>
                   &nbsp;
+                  {/* Language Component */}
                   <Language langStyle={Classes.langText} rating={true} />
                 </>
               )}
             </Box>
             <Box maxW={406} minW={406}>
+              {/* Contact Section  */}
               <Contact
                 location={true}
                 email={true}
@@ -184,9 +194,11 @@ const FashionTemp1 = () => {
                 iconColor="#3498DB"
                 circleIcon={true}
               />
+              {/* Education Section  */}
               {resumeData?.education?.visible && (
                 <>
                   <HStack alignItems={'flex-start'}>
+                    {/* Heading For Education Section  */}
                     <Heading
                       title={'EDUCATION'}
                       headBg={'#3498DB'}
@@ -211,6 +223,7 @@ const FashionTemp1 = () => {
                         setShow({ ...show, education: true })
                       }
                     />
+                    {/* Section Side Menu */}
                     {show.education && (
                       <SectionSideMenu
                         onHide={() => setShow({ ...show, education: false })}
@@ -219,6 +232,7 @@ const FashionTemp1 = () => {
                     )}
                   </HStack>
                   &nbsp;
+                  {/* Education Components */}
                   <Education
                     date={true}
                     summary={true}
@@ -234,9 +248,11 @@ const FashionTemp1 = () => {
                   />
                 </>
               )}
+              {/* Work Experience Section */}
               {resumeData?.work?.visible && (
                 <>
                   <HStack alignItems={'flex-start'}>
+                    {/* Work Experience Heading  */}
                     <Heading
                       title={'EXPERIENCE'}
                       margin={'10px 0px 0px 0px'}
@@ -257,6 +273,7 @@ const FashionTemp1 = () => {
                         setShow({ ...show, workExperience: true })
                       }
                     />
+                    {/* Section Side Menu */}
                     {show.workExperience && (
                       <>
                         <SectionSideMenu
@@ -269,6 +286,7 @@ const FashionTemp1 = () => {
                     )}
                   </HStack>
                   &nbsp;
+                  {/* Work Experience Components */}
                   <WorkExperience
                     company={true}
                     date={true}
@@ -282,9 +300,11 @@ const FashionTemp1 = () => {
                   />
                 </>
               )}
+              {/* Reference Section  */}
               {resumeData?.references?.visible && (
                 <>
                   <HStack alignItems={'flex-start'}>
+                    {/* Reference Section Heading */}
                     <Heading
                       title={'REFERENCE'}
                       headBg={'#3498DB'}
@@ -305,6 +325,7 @@ const FashionTemp1 = () => {
                         setShow({ ...show, references: true })
                       }
                     />
+                    {/* Section Side Menu */}
                     {show.references && (
                       <SectionSideMenu
                         onHide={() => setShow({ ...show, references: false })}
@@ -313,6 +334,7 @@ const FashionTemp1 = () => {
                     )}
                   </HStack>
                   &nbsp;
+                  {/* Reference Component */}
                   <Reference
                     name={true}
                     profession={true}
