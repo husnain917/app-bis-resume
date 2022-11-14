@@ -20,6 +20,7 @@ import UnderLineBox from "../../src/components/FashionDesigner2/UnderLineBox";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { GiSpiderWeb } from "react-icons/gi";
 import { MdLocationOn } from "react-icons/md";
+import ImageSelector from "../../src/components/imageSelector";
 
 class Manager extends Component {
   render() {
@@ -58,15 +59,22 @@ class Manager extends Component {
                   marginTop="10"
                 ></Box>
               </Box>
-              <Box display="flex" alignItems="center" justifyContent="center">
-                <Image
+              <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                // marginLeft={"10px"}
+                // marginTop={"15%"}
+              >
+                {/* <Image
                   src="/Profile.jpeg"
                   h={"12em"}
                   w={"12em"}
                   borderRadius="50%"
                   marginTop="-15%"
                   marginLeft="10px"
-                />
+                /> */}
+                <ImageSelector height={"12em"} width={"12em"} />
               </Box>
               <Box>
                 <Profile />

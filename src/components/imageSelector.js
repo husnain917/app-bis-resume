@@ -79,74 +79,102 @@
 
 // export default ImageSelector;
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Image } from "@chakra-ui/react";
 import { EditIcon } from "@chakra-ui/icons";
 
-const ImageSelector = () => {
+const ImageSelector = ({
+  height,
+  width,
+  marginTop,
+  marginBottom,
+  marginLeft,
+  borderRadius,
+  borderWidth,
+  borderColor,
+}) => {
+  useEffect(() => {
+    console.log("Height", height, "Width", width);
+  }, [height, width]);
+
   const [file, setFile] = useState();
-  function handleChange(e) {
-    console.log(e.target.files);
-    setFile(URL.createObjectURL(e.target.files[0]));
-  }
-  const chooseImage = () => {
-    return alert("You Clicked");
+  const uploadedImage = React.useRef(null);
+  const imageUploader = React.useRef(null);
+
+  const handleImageUpload = (e) => {
+    const [file] = e.target.files;
+    if (file) {
+      const reader = new FileReader();
+      const { current } = uploadedImage;
+      current.file = file;
+      reader.onload = (e) => {
+        current.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
   };
 
   return (
-    <Box>
-      <input type="file" onChange={handleChange} />
-      <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" />
-      <Box position={"absolute"}>
+    <Box
+      position={"absolute"}
+      marginTop={marginTop || ""}
+      marginLeft={marginLeft || ""}
+      marginBottom={marginBottom || ""}
+    >
+      <Box>
         <Box
           borderWidth={"1"}
           borderColor="black"
           className="pic_container"
           zIndex="-1"
         >
-          <Box
-            position={"absolute"}
-            zIndex={"1"}
-            top={"10"}
-            right={"6"}
-            h={6}
-            w={6}
-            display="flex"
-            alignItems={"center"}
-            justifyContent={"center"}
-            borderRadius={"50%"}
-            className="p-image"
-          >
+          <Box position={"absolute"} className="p-image">
             <input
               type="file"
-              onChange={handleChange}
+              accept="image/*"
+              onChange={handleImageUpload}
+              ref={imageUploader}
               className="imageHidden"
-              zIndex={3}
             />
-            <EditIcon w={4} h={4} zIndex={2} />
+          </Box>
+          <Box onClick={() => imageUploader.current.click()}>
+            <Image
+              ref={uploadedImage}
+              alt=""
+              width="100"
+              borderRadius={borderRadius || "50%"}
+              h={height || "16em"}
+              w={width || "16em"}
+              borderWidth={borderWidth || "4"}
+              borderColor={borderColor || "rgba(255,255,255,0)"}
+            />
           </Box>
 
-          {file ? (
-            <Image
-              src={file}
-              alt=""
-              width="100"
-              borderRadius="50%"
-              h={"16em"}
-              w={"16em"}
-              borderWidth={4}
-              borderColor="black"
-            />
+          {/* {file ? (
+            <Box onClick={() => imageUploader.current.click()}>
+              <Image
+                ref={uploadedImage}
+                alt=""
+                width="100"
+                borderRadius="50%"
+                h={"16em"}
+                w={"16em"}
+                borderWidth={4}
+                borderColor="black"
+              />
+            </Box>
           ) : (
-            <Image
-              src="./UploadImage.jpg"
-              alt=""
-              width="100"
-              borderRadius="50%"
-              h={"16em"}
-              w={"16em"}
-            />
-          )}
+            <Box onClick={() => imageUploader.current.click()}>
+              <Image
+                src="./UploadImage.jpg"
+                alt=""
+                width="100"
+                borderRadius="50%"
+                h={"16em"}
+                w={"16em"}
+              />
+            </Box>
+          )} */}
         </Box>
       </Box>
     </Box>
