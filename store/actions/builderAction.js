@@ -294,7 +294,7 @@ export const getResumeScan = (data) => async (dispatch) => {
             (n) => ({
               id: uniqid(),
               name: n,
-            }),
+            })
           );
           if (data?.builderResume && res.data?.oid) {
             localStorage.setItem('builderResumeOid', res.data.oid);
@@ -336,4 +336,76 @@ export const getResumeScan = (data) => async (dispatch) => {
       payload: 'not-done',
     });
   }
+};
+export const visibleWorkSection = (data) => {
+  return {
+    type: actionTypes.VISIBLE_WORK_SECTION,
+    payload: data,
+  };
+};
+export const visibleEduSection = (data) => {
+  return {
+    type: actionTypes.VISIBLE_EDU_SECTION,
+    payload: data,
+  };
+};
+export const visibleCertificatesSection = (data) => {
+  return {
+    type: actionTypes.VISIBLE_CERTIFICATES_SECTION,
+    payload: data,
+  };
+};
+export const visibleSkillSection = (data) => {
+  return {
+    type: actionTypes.VISIBLE_SKILL_SECTION,
+    payload: data,
+  };
+};
+export const visibleLangSection = (data) => {
+  return {
+    type: actionTypes.VISIBLE_LANG_SECTION,
+    payload: data,
+  };
+};
+export const visibleReferenceSection = (data) => {
+  return {
+    type: actionTypes.VISIBLE_REFERENCE_SECTION,
+    payload: data,
+  };
+};
+export const visibleOrganizationSection = (data) => {
+  return {
+    type: actionTypes.VISIBLE_ORGANIZATION_SECTION,
+    payload: data,
+  };
+};
+export const visibleProjectSection = (data) => {
+  return {
+    type: actionTypes.VISIBLE_PROJECT_SECTION,
+    payload: data,
+  };
+};
+export const visibleHobbiesSection = (data) => {
+  return {
+    type: actionTypes.VISIBLE_HOBBIES_SECTION,
+    payload: data,
+  };
+};
+export const visibleExpertiseSection = (data) => {
+  return {
+    type: actionTypes.VISIBLE_EXPERTISE_SECTION,
+    payload: data,
+  };
+};
+export const visibleAwardSection = (data) => {
+  return {
+    type: actionTypes.VISIBLE_AWARDS_SECTION,
+    payload: data,
+  };
+};
+export const visibleAchievementSection = (data) => {
+  return {
+    type: actionTypes.VISIBLE_ACHIEVEMENT_SECTION,
+    payload: data,
+  };
 };

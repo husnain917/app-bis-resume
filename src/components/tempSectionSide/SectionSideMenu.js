@@ -1,0 +1,95 @@
+import { Box } from '@chakra-ui/react';
+import React from 'react';
+import { MdRemoveCircleOutline } from 'react-icons/md';
+import { RiDeleteBin6Line } from 'react-icons/ri';
+import { useDispatch } from 'react-redux';
+import { Tooltip } from 'react-tippy';
+import {
+  visibleAchievementSection,
+  visibleCertificatesSection,
+  visibleEduSection,
+  visibleHobbiesSection,
+  visibleLangSection,
+  visibleOrganizationSection,
+  visibleProjectSection,
+  visibleReferenceSection,
+  visibleSkillSection,
+  visibleWorkSection,
+} from '../../../store/actions/builderAction';
+import style from '../../components/fashionTemp1/fashionTemp1.module.css';
+import {
+  ABOUT,
+  CERTIFICATE,
+  EDUCATION,
+  INTEREST,
+  LANGUAGES,
+  ORGANIZATION,
+  PROJECT,
+  REFERENCE,
+  SKILL,
+  WORK,
+} from './SectionSideConstant';
+const SectionSideMenu = ({ onDelete, onHide }) => {
+  const dispatch = useDispatch();
+  const onDeleteHandler = () => {
+    switch (onDelete) {
+      case SKILL:
+        dispatch(visibleSkillSection(false));
+        break;
+      case WORK:
+        dispatch(visibleWorkSection(false));
+        break;
+      case EDUCATION:
+        dispatch(visibleEduSection(false));
+        break;
+      case LANGUAGES:
+        dispatch(visibleLangSection(false));
+        break;
+      case REFERENCE:
+        dispatch(visibleReferenceSection(false));
+        break;
+      case ABOUT:
+        dispatch(visibleAchievementSection(false));
+        break;
+      case ORGANIZATION:
+        dispatch(visibleOrganizationSection(false));
+        break;
+      case PROJECT:
+        dispatch(visibleProjectSection(false));
+        break;
+      case CERTIFICATE:
+        dispatch(visibleCertificatesSection(false));
+        break;
+      case INTEREST:
+        dispatch(visibleHobbiesSection(false));
+        break;
+      default:
+        break;
+    }
+  };
+  return (
+    <div>
+      <Box
+        h={'70px'}
+        w={'auto'}
+        px={'3px'}
+        borderRadius={'13px'}
+        bg={'#2A78AB'}
+        display="flex"
+        flexDirection={'column'}
+        justifyContent={'space-evenly'}
+        alignItems="center"
+        className={`${style.mt1}`}
+      >
+        <Tooltip title="Back" arrow distance={20}>
+          <MdRemoveCircleOutline color="#fff" size={16} onClick={onHide} />
+        </Tooltip>
+        <Tooltip title="Remove Section" arrow distance={20}>
+          <RiDeleteBin6Line color="#fff" size={16} onClick={onDeleteHandler} />
+        </Tooltip>
+      </Box>
+    </div>
+  );
+};
+
+export default SectionSideMenu;

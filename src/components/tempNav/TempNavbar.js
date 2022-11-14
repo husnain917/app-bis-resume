@@ -7,7 +7,7 @@ import {
   SettingsIcon,
   HamburgerIcon,
 } from '@chakra-ui/icons';
-import LayoutModal from '../layoutModel/LayoutModel';
+import LayoutModal from './LayoutModal';
 
 export default function TempNavbar() {
   return (

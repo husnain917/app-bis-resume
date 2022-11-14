@@ -17,6 +17,7 @@ import Skill from '../../src/components/commonSection/Skill';
 import Name from '../../src/components/commonSection/Name';
 import Profession from '../../src/components/commonSection/Profession';
 import Contact from '../../src/components/commonSection/Contact';
+import TempNavbar from '../../src/components/tempNav/TempNavbar';
 const fashionTemp1 = () => {
   return (
     <div className={style.main}>
@@ -29,6 +30,7 @@ const fashionTemp1 = () => {
           </Tooltip>
         </div>
       </Link>
+      <TempNavbar criteria={true} />
       <Flex
         justifyContent={{ base: 'none', md: 'center' }}
         bg={{ md: 'none', lg: 'blackAlpha.100' }}
@@ -43,7 +45,8 @@ const fashionTemp1 = () => {
           alignItems="flex-start"
           borderRadius={6}
           bg={'#fff'}
-          my={10}
+          mb={10}
+          mt={'100px'}
           py={8}
           px={10}
         >

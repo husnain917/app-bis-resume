@@ -1,18 +1,18 @@
-import { actionTypes } from "../../constants/actionTypes";
-import { sampleData } from "../../constants/sampleData";
+import { actionTypes } from '../../constants/actionTypes';
+import { sampleData } from '../../constants/sampleData';
 
 const initialState = {
   resumeData: JSON.parse(JSON.stringify({ ...sampleData.data })),
   theme: {
-    color: "#03A9F4",
-    fontFamily: "Source Sans Pro",
+    color: '#03A9F4',
+    fontFamily: 'Source Sans Pro',
   },
   updater: new Date(),
   // serverUpdater: new Date(),
-  resumeName: "Resumas",
-  currentTemplate: "chonological",
-  getScanResultStatus: "loading",
-  getResumeBuilderChoice: "form",
+  resumeName: 'Resumas',
+  currentTemplate: 'chonological',
+  getScanResultStatus: 'loading',
+  getResumeBuilderChoice: 'form',
   builderResumeData: {},
 };
 
@@ -280,6 +280,115 @@ export default function resumeEditor(state = initialState, action) {
       return {
         ...state,
         resumeName: action.payload,
+      };
+    case actionTypes.VISIBLE_WORK_SECTION:
+      let newWork = { ...state.work, visible: action.payload };
+      return {
+        ...state,
+        resumeData: { ...state.resumeData, work: newWork },
+      };
+    case actionTypes.VISIBLE_EDU_SECTION:
+      let newEdu = { ...state.education, visible: action.payload };
+      return {
+        ...state,
+        resumeData: {
+          ...state.resumeData,
+          education: newEdu,
+        },
+      };
+
+    case actionTypes.VISIBLE_CERTIFICATES_SECTION:
+      let newCertificates = {
+        ...state.certifications,
+        visible: action.payload,
+      };
+      return {
+        ...state,
+        resumeData: {
+          ...state.resumeData,
+          certifications: newCertificates,
+        },
+      };
+    case actionTypes.VISIBLE_SKILL_SECTION:
+      let newSkill = { ...state.skills, visible: action.payload };
+      return {
+        ...state,
+        resumeData: {
+          ...state.resumeData,
+          skills: newSkill,
+        },
+      };
+    case actionTypes.VISIBLE_LANG_SECTION:
+      let newLang = { ...state.languages, visible: action.payload };
+      return {
+        ...state,
+        resumeData: {
+          ...state.resumeData,
+          languages: newLang,
+        },
+      };
+    case actionTypes.VISIBLE_REFERENCE_SECTION:
+      let newRef = { ...state.references, visible: action.payload };
+      return {
+        ...state,
+        resumeData: {
+          ...state.resumeData,
+          references: newRef,
+        },
+      };
+    case actionTypes.VISIBLE_ORGANIZATION_SECTION:
+      let newOrgan = { ...state.organization, visible: action.payload };
+      return {
+        ...state,
+        resumeData: {
+          ...state.resumeData,
+          organization: newOrgan,
+        },
+      };
+    case actionTypes.VISIBLE_PROJECT_SECTION:
+      let newProject = { ...state.projects, visible: action.payload };
+      return {
+        ...state,
+        resumeData: {
+          ...state.resumeData,
+          projects: newProject,
+        },
+      };
+    case actionTypes.VISIBLE_HOBBIES_SECTION:
+      let newHobbies = { ...state.hobbies, visible: action.payload };
+      return {
+        ...state,
+        resumeData: {
+          ...state.resumeData,
+          hobbies: newHobbies,
+        },
+      };
+    case actionTypes.VISIBLE_EXPERTISE_SECTION:
+      let newExpertise = { ...state.expertise, visible: action.payload };
+      return {
+        ...state,
+        resumeData: {
+          ...state.resumeData,
+          expertise: newExpertise,
+        },
+      };
+    case actionTypes.VISIBLE_AWARDS_SECTION:
+      let newAward = { ...state.awards, visible: action.payload };
+      return {
+        ...state,
+        resumeData: {
+          ...state.resumeData,
+          awards: newAward,
+        },
+      };
+    case actionTypes.VISIBLE_ACHIEVEMENT_SECTION:
+      let newAchieve = { ...state.achievements, visible: action.payload };
+      return {
+        ...state,
+        resumeData: {
+          ...state.resumeData,
+          achievements: newAchieve,
+        },
       };
     default:
       return { ...state };
