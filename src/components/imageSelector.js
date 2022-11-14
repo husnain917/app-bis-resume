@@ -89,6 +89,9 @@ const ImageSelector = () => {
     console.log(e.target.files);
     setFile(URL.createObjectURL(e.target.files[0]));
   }
+  const chooseImage = () => {
+    return alert("You Clicked");
+  };
 
   return (
     <Box>
@@ -106,15 +109,21 @@ const ImageSelector = () => {
             zIndex={"1"}
             top={"10"}
             right={"6"}
-            bg="whitesmoke"
             h={6}
             w={6}
             display="flex"
             alignItems={"center"}
             justifyContent={"center"}
             borderRadius={"50%"}
+            className="p-image"
           >
-            <EditIcon w={4} h={4} zIndex={"0.5"} />
+            <input
+              type="file"
+              onChange={handleChange}
+              className="imageHidden"
+              zIndex={3}
+            />
+            <EditIcon w={4} h={4} zIndex={2} />
           </Box>
 
           {file ? (
