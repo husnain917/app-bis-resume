@@ -1235,7 +1235,7 @@ export default function FormatsTables() {
                             </Text>
                         </Box>
 
-                        <Text
+                        {/* <Text
                             fontSize={"15px"}
                             marginBottom={"20px"}
                         >
@@ -1333,7 +1333,7 @@ export default function FormatsTables() {
                                     </>
                                 ))
                             }
-                        </UnorderedList>
+                        </UnorderedList> */}
 
                         <Text
                             fontSize={"15px"}

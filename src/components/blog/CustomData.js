@@ -281,31 +281,31 @@ export const RESUME_EXAMPLES = {
             title: "Example of a Resume Objective + Skills Summary"
         }
     },
-    reportFormats: [
-        {
-            text: "Your job titles"
-        },
-        {
-            text: "The highest level of responsibility you reached"
-        },
-        {
-            text: "Your career progression."
-        },
-    ],
-    professionalsFormats: [
-        {
-            text: "Professionals in creative industries."
-        },
-        {
-            text: "Freelancers without a clear career progression, but with a very solid portfolio."
-        },
-        {
-            text: "Military veterans transmitting into a civilian role."
-        },
-        {
-            text: "Ex-CEOs or high-level execs who dont want to seem overqualified for a lower-level position they need to apply for."
-        },
-    ],
+    // reportFormats: [
+    //     {
+    //         text: "Your job titles"
+    //     },
+    //     {
+    //         text: "The highest level of responsibility you reached"
+    //     },
+    //     {
+    //         text: "Your career progression."
+    //     },
+    // ],
+    // professionalsFormats: [
+    //     {
+    //         text: "Professionals in creative industries."
+    //     },
+    //     {
+    //         text: "Freelancers without a clear career progression, but with a very solid portfolio."
+    //     },
+    //     {
+    //         text: "Military veterans transmitting into a civilian role."
+    //     },
+    //     {
+    //         text: "Ex-CEOs or high-level execs who dont want to seem overqualified for a lower-level position they need to apply for."
+    //     },
+    // ],
     hybridFormats: [
         {
             text: "Contact information"
@@ -346,23 +346,23 @@ export const RESUME_EXAMPLES = {
         },
     ],
     hybridFormatsRights: [
-        {
-            title: "Programming and App Development",
-            data: [
-                {
-                    text: "Developed and built 20+ mobile apps and 30+ websites providing exceptional user experience."
-                },
-                {
-                    text: "Named BCD M&Es “Top Programmer of The Year” for three consecutive years 2009-2011."
-                },
-                {
-                    text: "15+ years experience in C#, C++, Java, and Objective-C."
-                },
-                {
-                    text: "C Certified Professional Programmer (2006), Objective-C Certified Professional Programmer (2009)."
-                },
-            ]
-        },
+        // {
+        //     title: "Programming and App Development",
+        //     data: [
+        //         {
+        //             text: "Developed and built 20+ mobile apps and 30+ websites providing exceptional user experience."
+        //         },
+        //         {
+        //             text: "Named BCD M&Es “Top Programmer of The Year” for three consecutive years 2009-2011."
+        //         },
+        //         {
+        //             text: "15+ years experience in C#, C++, Java, and Objective-C."
+        //         },
+        //         {
+        //             text: "C Certified Professional Programmer (2006), Objective-C Certified Professional Programmer (2009)."
+        //         },
+        //     ]
+        // },
         {
             title: "Leadership",
             data: [
@@ -377,20 +377,20 @@ export const RESUME_EXAMPLES = {
                 },
             ]
         },
-        {
-            title: "Business Management",
-            data: [
-                {
-                    text: "Coordinated 20+ projects with budgets over $200,000."
-                },
-                {
-                    text: "Optimized procurement processes to reduce BCD M&Es annual costs by 27%."
-                },
-                {
-                    text: "Successfully cooperated with sales and marketing teams on new business strategies which helped increase Apple New Yorks sales volume by 23%."
-                },
-            ]
-        },
+        // {
+        //     title: "Business Management",
+        //     data: [
+        //         {
+        //             text: "Coordinated 20+ projects with budgets over $200,000."
+        //         },
+        //         {
+        //             text: "Optimized procurement processes to reduce BCD M&Es annual costs by 27%."
+        //         },
+        //         {
+        //             text: "Successfully cooperated with sales and marketing teams on new business strategies which helped increase Apple New Yorks sales volume by 23%."
+        //         },
+        //     ]
+        // },
     ],
     recapFormatsTable: {
         tableHeadings: [
