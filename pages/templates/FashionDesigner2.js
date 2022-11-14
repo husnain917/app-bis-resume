@@ -74,7 +74,12 @@ class Manager extends Component {
                   marginTop="-15%"
                   marginLeft="10px"
                 /> */}
-                <ImageSelector height={"12em"} width={"12em"} />
+                <ImageSelector
+                  height={"12em"}
+                  width={"12em"}
+                  marginLeft={"10px"}
+                  marginTop={"-4%"}
+                />
               </Box>
               <Box>
                 <Profile />

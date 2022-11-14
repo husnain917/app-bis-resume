@@ -115,42 +115,38 @@ const ImageSelector = ({
   };
 
   return (
-    <Box
-      position={"absolute"}
-      marginTop={marginTop || ""}
-      marginLeft={marginLeft || ""}
-      marginBottom={marginBottom || ""}
-    >
-      <Box>
-        <Box
-          borderWidth={"1"}
-          borderColor="black"
-          className="pic_container"
-          zIndex="-1"
-        >
-          <Box position={"absolute"} className="p-image">
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageUpload}
-              ref={imageUploader}
-              className="imageHidden"
-            />
-          </Box>
-          <Box onClick={() => imageUploader.current.click()}>
-            <Image
-              ref={uploadedImage}
-              alt=""
-              width="100"
-              borderRadius={borderRadius || "50%"}
-              h={height || "16em"}
-              w={width || "16em"}
-              borderWidth={borderWidth || "4"}
-              borderColor={borderColor || "rgba(255,255,255,0)"}
-            />
-          </Box>
+    <Box>
+      <Box
+        position={"absolute"}
+        marginTop={marginTop || ""}
+        marginLeft={marginLeft || ""}
+        marginBottom={marginBottom || ""}
+      >
+        <Box>
+          <Box borderWidth={"1"} borderColor="black" className="pic_container">
+            <Box className="p-image">
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageUpload}
+                ref={imageUploader}
+                className="imageHidden"
+              />
+            </Box>
+            <Box onClick={() => imageUploader.current.click()}>
+              <Image
+                ref={uploadedImage}
+                alt=""
+                width="100"
+                borderRadius={borderRadius || "50%"}
+                h={height || "16em"}
+                w={width || "16em"}
+                borderWidth={borderWidth || "4"}
+                borderColor={borderColor || "rgba(255,255,255,0)"}
+              />
+            </Box>
 
-          {/* {file ? (
+            {/* {file ? (
             <Box onClick={() => imageUploader.current.click()}>
               <Image
                 ref={uploadedImage}
@@ -175,6 +171,7 @@ const ImageSelector = ({
               />
             </Box>
           )} */}
+          </Box>
         </Box>
       </Box>
     </Box>
