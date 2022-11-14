@@ -223,14 +223,14 @@ export const RESUME_EXAMPLES = {
     //         text: "Installed circuit breaker panels, switches, relays, and grounding leads."
     //     },
     // ],
-    KeyAchievements: [
-        {
-            text: `Increased efficiency by 33% by identifying our client"s complex wiring issue. Scheduled a repair plan and supervised a team of 6 specialists.`
-        },
-        {
-            text: "Supervised an internal training program, fully trained 11 apprentices."
-        }
-    ],
+    // KeyAchievements: [
+    //     {
+    //         text: `Increased efficiency by 33% by identifying our client"s complex wiring issue. Scheduled a repair plan and supervised a team of 6 specialists.`
+    //     },
+    //     {
+    //         text: "Supervised an internal training program, fully trained 11 apprentices."
+    //     }
+    // ],
     skillResumeFormats: {
         istContent: {
             title: "Functional Resume Order of Sections",
@@ -277,9 +277,9 @@ export const RESUME_EXAMPLES = {
             ],
             description: "Have another look at how Thomas did it:"
         },
-        thirdContent: {
-            title: "Example of a Resume Objective + Skills Summary"
-        }
+        // thirdContent: {
+        //     title: "Example of a Resume Objective + Skills Summary"
+        // }
     },
     // reportFormats: [
     //     {
@@ -363,20 +363,20 @@ export const RESUME_EXAMPLES = {
         //         },
         //     ]
         // },
-        {
-            title: "Leadership",
-            data: [
-                {
-                    text: "8+ years experience in team management (teams of 10-50 colleagues) and project coordination."
-                },
-                {
-                    text: "Designed and implemented a new IT management model with Apples New York Branch, increasing quarterly productivity by 33% and boosting employee satisfaction by 22%."
-                },
-                {
-                    text: "Trained and mentored 50+ junior developers to help them prepare for certification exams (88% success rate)."
-                },
-            ]
-        },
+        // {
+        //     title: "Leadership",
+        //     data: [
+        //         {
+        //             text: "8+ years experience in team management (teams of 10-50 colleagues) and project coordination."
+        //         },
+        //         {
+        //             text: "Designed and implemented a new IT management model with Apples New York Branch, increasing quarterly productivity by 33% and boosting employee satisfaction by 22%."
+        //         },
+        //         {
+        //             text: "Trained and mentored 50+ junior developers to help them prepare for certification exams (88% success rate)."
+        //         },
+        //     ]
+        // },
         // {
         //     title: "Business Management",
         //     data: [

@@ -730,17 +730,17 @@ export default function FormatsTables() {
                             Like Frank, the candidate from our example did:
                         </Text>
 
-                        <Text
+                        {/* <Text
                             fontSize={"16px"}
                             marginBottom={"30px"}
                             lineHeight={8}
                             fontWeight={"medium"}
                         >
                             Work Experience Entry Example
-                        </Text>
+                        </Text> */}
 
                         {/* right content */}
-                        <Box
+                        {/* <Box
                             backgroundColor={"#fafafa"}
                             marginBottom={"30px"}
                             padding={"20px"}
@@ -749,18 +749,18 @@ export default function FormatsTables() {
                                 color={"#35a235"}
                                 fontSize={"40px"}
                                 fontWeight={"semibold"}
-                            // padding={"10px 20px"}
+                            padding={"10px 20px"}
                             >
                                 RIGHT
                             </Text>
-                            {/* underline */}
+
                             <Box
                                 backgroundColor={"rgba(0,0,0,.06)"}
                                 height={"2px"}
                                 width={"100%"}
                             ></Box>
 
-                            {/* text */}
+
                             <Text
                                 fontSize={"16px"}
                                 padding={"10px 0px"}
@@ -783,7 +783,7 @@ export default function FormatsTables() {
                                 2012–
                             </Text>
 
-                            {/* <UnorderedList
+                            <UnorderedList
                                 fontSize={"15px"}
                                 lineHeight={8}
                                 marginBottom={"10px"}
@@ -800,7 +800,7 @@ export default function FormatsTables() {
                                         </>
                                     ))
                                 }
-                            </UnorderedList> */}
+                            </UnorderedList>
 
                             <Text
                                 fontSize={"16px"}
@@ -827,7 +827,7 @@ export default function FormatsTables() {
                                     ))
                                 }
                             </UnorderedList>
-                        </Box>
+                        </Box> */}
 
                         {/* <Text
                             fontSize={"15px"}
@@ -1131,17 +1131,17 @@ export default function FormatsTables() {
                             {RESUME_EXAMPLES?.skillResumeFormats?.secContent?.description}
                         </Text>
 
-                        <Text
+                        {/* <Text
                             fontSize={"18px"}
                             lineHeight={8}
                             marginBottom={"40px"}
                             fontWeight={"medium"}
                         >
                             {RESUME_EXAMPLES?.skillResumeFormats?.thirdContent?.title}
-                        </Text>
+                        </Text> */}
 
                         {/* right content */}
-                        <Box
+                        {/* <Box
                             backgroundColor={"#fafafa"}
                             marginBottom={"30px"}
                             padding={"20px"}
@@ -1150,19 +1150,19 @@ export default function FormatsTables() {
                                 color={"#35a235"}
                                 fontSize={"40px"}
                                 fontWeight={"semibold"}
-                            // padding={"10px 20px"}
+                                padding={"10px 20px"}
                             >
                                 RIGHT
                             </Text>
-                            {/* underline */}
+
                             <Box
                                 backgroundColor={"rgba(0,0,0,.06)"}
                                 height={"2px"}
                                 width={"100%"}
                             ></Box>
 
-                            {/* text */}
-                            {/* <Text
+
+                            <Text
                                 fontSize={"15px"}
                                 marginBottom={"20px"}
                                 lineHeight={8}
@@ -1175,15 +1175,15 @@ export default function FormatsTables() {
                                 &nbsp;<strong>www.pr-matters.wordpress.com</strong>.
                                 Interested in new digital PR solutions including the automatization of customer relations via
                                 AI-based email campaigns and chatbots.
-                            </Text> */}
+                            </Text>
 
-                            {/* <Text
+                            <Text
                                 fontSize={"16px"}
                                 marginBottom={"30px"}
                                 fontWeight={"medium"}
                             >
                                 Skills Summary
-                            </Text> */}
+                            </Text>
 
                             <Text
                                 fontSize={"16px"}
@@ -1202,7 +1202,7 @@ export default function FormatsTables() {
                                 Able to work with many kinds of clients in a wide variety of fields. Excellent at researching clients brands, industries, and markets very quickly and efficiently.
                             </Text>
 
-                            {/* <Text
+                            <Text
                                 fontSize={"16px"}
                                 marginBottom={"20px"}
                                 fontWeight={"medium"}
@@ -1216,7 +1216,7 @@ export default function FormatsTables() {
                                 lineHeight={8}
                             >
                                 Skilled at writing all types of Public Relations texts: press releases, blog posts, bulletins, emailing campaigns (outreach emails, sales emails, engagement emails). Able to produce up to 1,500 words of great, unique content on a daily basis.
-                            </Text> */}
+                            </Text>
 
                             <Text
                                 fontSize={"16px"}
@@ -1234,7 +1234,7 @@ export default function FormatsTables() {
                                 <br />
                                 Facebook, Twitter, Instagram, LinkedIn, Pinterest, Tumblr, Google+.
                             </Text>
-                        </Box>
+                        </Box> */}
 
                         {/* <Text
                             fontSize={"15px"}
@@ -1661,17 +1661,17 @@ export default function FormatsTables() {
                             }
                         </OrderedList>
 
-                        <Text
+                        {/* <Text
                             fontSize={"18px"}
                             lineHeight={8}
                             marginBottom={"30px"}
                             fontWeight={"medium"}
                         >
                             Example of a Skills Summary for a Hybrid Resume
-                        </Text>
+                        </Text> */}
 
                         {/* right content */}
-                        <Box
+                        {/* <Box
                             backgroundColor={"#fafafa"}
                             marginBottom={"30px"}
                             padding={"20px"}
@@ -1683,14 +1683,14 @@ export default function FormatsTables() {
                             >
                                 RIGHT
                             </Text>
-                            {/* underline */}
+
                             <Box
                                 backgroundColor={"rgba(0,0,0,.06)"}
                                 height={"2px"}
                                 width={"100%"}
                             ></Box>
 
-                            {/* text */}
+
                             <Box>
                                 {
                                     RESUME_EXAMPLES?.hybridFormatsRights?.map((item, index) => (
@@ -1730,7 +1730,7 @@ export default function FormatsTables() {
                                     ))
                                 }
                             </Box>
-                        </Box>
+                        </Box> */}
 
 
                         <Text
