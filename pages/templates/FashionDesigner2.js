@@ -78,7 +78,7 @@ class Manager extends Component {
                   height={"12em"}
                   width={"12em"}
                   marginLeft={"10px"}
-                  marginTop={"-4%"}
+                  marginTop={"-70%"}
                 />
               </Box>
               <Box>
