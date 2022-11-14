@@ -72,7 +72,7 @@ const SectionSideMenu = ({ onDelete, onHide }) => {
     <div>
       <Box
         h={'70px'}
-        w={'auto'}
+        w={'22px'}
         px={'3px'}
         borderRadius={'13px'}
         bg={'#2A78AB'}
@@ -80,7 +80,6 @@ const SectionSideMenu = ({ onDelete, onHide }) => {
         flexDirection={'column'}
         justifyContent={'space-evenly'}
         alignItems="center"
-        className={`${style.mt1}`}
       >
         <Tooltip title="Back" arrow distance={20}>
           <MdRemoveCircleOutline color="#fff" size={16} onClick={onHide} />

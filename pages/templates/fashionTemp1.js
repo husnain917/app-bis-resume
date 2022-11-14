@@ -17,10 +17,17 @@ import Skill from '../../src/components/commonSection/Skill';
 import Name from '../../src/components/commonSection/Name';
 import Profession from '../../src/components/commonSection/Profession';
 import Contact from '../../src/components/commonSection/Contact';
-import TempNavbar from '../../src/components/tempNav/TempNavbar';
 import TempLayout from '../../src/components/tempNav/TempLayout';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+import SectionSideMenu from '../../src/components/tempSectionSide/SectionSideMenu';
+import {
+  EDUCATION,
+  LANGUAGES,
+  REFERENCE,
+  SKILL,
+  WORK,
+} from '../../src/components/tempSectionSide/SectionSideConstant';
 const FashionTemp1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useState({
@@ -29,11 +36,6 @@ const FashionTemp1 = () => {
     education: false,
     languages: false,
     references: false,
-    achievements: false,
-    interest: false,
-    certificate: false,
-    project: false,
-    organization: false,
   });
   return (
     <TempLayout
@@ -103,46 +105,70 @@ const FashionTemp1 = () => {
               <About aboutStyle={Classes.profileText} />
               {resumeData?.skills?.visible && (
                 <>
-                  <Heading
-                    title={'PERSONAL'}
-                    headBg={'#3498DB'}
-                    iconHeading={true}
-                    icon={(props) => (
-                      <BsFillPersonFill {...props} size={20} color={'#fff'} />
+                  <HStack alignItems={'flex-start'}>
+                    <Heading
+                      title={'PERSONAL'}
+                      headBg={'#3498DB'}
+                      iconHeading={true}
+                      icon={(props) => (
+                        <BsFillPersonFill {...props} size={20} color={'#fff'} />
+                      )}
+                      color={'white'}
+                      fontSize={20}
+                      fontWeight="600"
+                      textPadding={'0px 0px 1px 0px'}
+                      padding={'0px 0px 0px 5px'}
+                      letterSpacing={3}
+                      minW={250}
+                      maxW={250}
+                      margin={'10px 0px 0px 0px'}
+                      onSideSectionShow={() =>
+                        setShow({ ...show, skill: true })
+                      }
+                    />
+                    {show.skill && (
+                      <>
+                        <SectionSideMenu
+                          onHide={() => setShow({ ...show, skill: false })}
+                          onDelete={SKILL}
+                        />
+                      </>
                     )}
-                    color={'white'}
-                    fontSize={20}
-                    fontWeight="600"
-                    textPadding={'0px 0px 1px 0px'}
-                    padding={'0px 0px 0px 5px'}
-                    letterSpacing={3}
-                    minW={250}
-                    maxW={250}
-                    margin={'10px 0px 0px 0px'}
-                  />
+                  </HStack>
                   &nbsp;
                   <Skill skillStyle={Classes.personalText} />
                 </>
               )}
               {resumeData?.languages?.visible && (
                 <>
-                  <Heading
-                    title={'LANGUAGES'}
-                    headBg={'#3498DB'}
-                    iconHeading={true}
-                    icon={(props) => (
-                      <IoLanguageSharp {...props} size={20} color={'#fff'} />
+                  <HStack alignItems={'flex-start'}>
+                    <Heading
+                      title={'LANGUAGES'}
+                      headBg={'#3498DB'}
+                      iconHeading={true}
+                      icon={(props) => (
+                        <IoLanguageSharp {...props} size={20} color={'#fff'} />
+                      )}
+                      color={'white'}
+                      fontSize={20}
+                      fontWeight="600"
+                      textPadding={'0px 0px 1px 0px'}
+                      padding={'0px 0px 0px 5px'}
+                      letterSpacing={3}
+                      minW={250}
+                      maxW={250}
+                      margin={'10px 0px 0px 0px'}
+                      onSideSectionShow={() =>
+                        setShow({ ...show, languages: true })
+                      }
+                    />
+                    {show.languages && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, languages: false })}
+                        onDelete={LANGUAGES}
+                      />
                     )}
-                    color={'white'}
-                    fontSize={20}
-                    fontWeight="600"
-                    textPadding={'0px 0px 1px 0px'}
-                    padding={'0px 0px 0px 5px'}
-                    letterSpacing={3}
-                    minW={250}
-                    maxW={250}
-                    margin={'10px 0px 0px 0px'}
-                  />
+                  </HStack>
                   &nbsp;
                   <Language langStyle={Classes.langText} rating={true} />
                 </>
@@ -160,23 +186,38 @@ const FashionTemp1 = () => {
               />
               {resumeData?.education?.visible && (
                 <>
-                  <Heading
-                    title={'EDUCATION'}
-                    headBg={'#3498DB'}
-                    iconHeading={true}
-                    icon={(props) => (
-                      <MdCastForEducation {...props} size={20} color={'#fff'} />
+                  <HStack alignItems={'flex-start'}>
+                    <Heading
+                      title={'EDUCATION'}
+                      headBg={'#3498DB'}
+                      iconHeading={true}
+                      icon={(props) => (
+                        <MdCastForEducation
+                          {...props}
+                          size={20}
+                          color={'#fff'}
+                        />
+                      )}
+                      color={'white'}
+                      fontSize={20}
+                      fontWeight="600"
+                      textPadding={'0px 0px 1px 0px'}
+                      padding={'0px 0px 0px 5px'}
+                      letterSpacing={3}
+                      minW={400}
+                      maxW={400}
+                      margin={'10px 0px 0px 0px'}
+                      onSideSectionShow={() =>
+                        setShow({ ...show, education: true })
+                      }
+                    />
+                    {show.education && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, education: false })}
+                        onDelete={EDUCATION}
+                      />
                     )}
-                    color={'white'}
-                    fontSize={20}
-                    fontWeight="600"
-                    textPadding={'0px 0px 1px 0px'}
-                    padding={'0px 0px 0px 5px'}
-                    letterSpacing={3}
-                    minW={400}
-                    maxW={400}
-                    margin={'10px 0px 0px 0px'}
-                  />
+                  </HStack>
                   &nbsp;
                   <Education
                     date={true}
@@ -195,23 +236,38 @@ const FashionTemp1 = () => {
               )}
               {resumeData?.work?.visible && (
                 <>
-                  <Heading
-                    title={'EXPERIENCE'}
-                    margin={'10px 0px 0px 0px'}
-                    headBg={'#3498DB'}
-                    iconHeading={true}
-                    icon={(props) => (
-                      <BsLayersFill {...props} size={20} color={'#fff'} />
+                  <HStack alignItems={'flex-start'}>
+                    <Heading
+                      title={'EXPERIENCE'}
+                      margin={'10px 0px 0px 0px'}
+                      headBg={'#3498DB'}
+                      iconHeading={true}
+                      icon={(props) => (
+                        <BsLayersFill {...props} size={20} color={'#fff'} />
+                      )}
+                      color={'white'}
+                      fontSize={20}
+                      fontWeight="600"
+                      textPadding={'0px 0px 1px 0px'}
+                      padding={'0px 0px 0px 5px'}
+                      letterSpacing={3}
+                      minW={400}
+                      maxW={400}
+                      onSideSectionShow={() =>
+                        setShow({ ...show, workExperience: true })
+                      }
+                    />
+                    {show.workExperience && (
+                      <>
+                        <SectionSideMenu
+                          onHide={() =>
+                            setShow({ ...show, workExperience: false })
+                          }
+                          onDelete={WORK}
+                        />
+                      </>
                     )}
-                    color={'white'}
-                    fontSize={20}
-                    fontWeight="600"
-                    textPadding={'0px 0px 1px 0px'}
-                    padding={'0px 0px 0px 5px'}
-                    letterSpacing={3}
-                    minW={400}
-                    maxW={400}
-                  />
+                  </HStack>
                   &nbsp;
                   <WorkExperience
                     company={true}
@@ -228,23 +284,34 @@ const FashionTemp1 = () => {
               )}
               {resumeData?.references?.visible && (
                 <>
-                  <Heading
-                    title={'REFERENCE'}
-                    headBg={'#3498DB'}
-                    margin={'10px 0px 0px 0px'}
-                    iconHeading={true}
-                    icon={(props) => (
-                      <MdEmail {...props} size={20} color={'#fff'} />
+                  <HStack alignItems={'flex-start'}>
+                    <Heading
+                      title={'REFERENCE'}
+                      headBg={'#3498DB'}
+                      margin={'10px 0px 0px 0px'}
+                      iconHeading={true}
+                      icon={(props) => (
+                        <MdEmail {...props} size={20} color={'#fff'} />
+                      )}
+                      color={'white'}
+                      fontSize={20}
+                      fontWeight="600"
+                      textPadding={'0px 0px 1px 0px'}
+                      padding={'0px 0px 0px 5px'}
+                      letterSpacing={3}
+                      minW={400}
+                      maxW={400}
+                      onSideSectionShow={() =>
+                        setShow({ ...show, references: true })
+                      }
+                    />
+                    {show.references && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, references: false })}
+                        onDelete={REFERENCE}
+                      />
                     )}
-                    color={'white'}
-                    fontSize={20}
-                    fontWeight="600"
-                    textPadding={'0px 0px 1px 0px'}
-                    padding={'0px 0px 0px 5px'}
-                    letterSpacing={3}
-                    minW={400}
-                    maxW={400}
-                  />
+                  </HStack>
                   &nbsp;
                   <Reference
                     name={true}
