@@ -88,7 +88,7 @@ const CommonComponent = ({ data }) => {
           </Box>
         </Box>
       </Box>
-      <SimpleGrid columns={[2, 2, null, 4]} spacing={10}>
+      <SimpleGrid columns={[2, null, 4]} spacing={10}>
         {dataForDisplay.map((template, index) => {
           return (
             <Box
