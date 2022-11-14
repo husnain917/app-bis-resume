@@ -5,6 +5,7 @@ import MostPopular from "../src/components/resumeExampleData/mostPopular/MostPop
 import CommonComponent from "../src/components/resumeExampleData/commonComponent/commonComponent";
 import WritingGuides from "../src/components/resumeExampleData/writingGuides/WritingGuides";
 import { data } from "../src/components/resumeExampleData/resumeExampleData";
+import TryResume from "../src/components/resumeExampleData/tryResume/tryResume";
 const ResumeExamples = () => {
   console.log("DATAAAAAAAAAAAAAAA", data);
   return (
@@ -20,6 +21,7 @@ const ResumeExamples = () => {
             {data.map((data, index) => {
               return <CommonComponent data={data} key={index} />;
             })}
+            <TryResume />
           </Box>
         </Box>
       </Box>
