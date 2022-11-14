@@ -829,13 +829,13 @@ export default function FormatsTables() {
                             </UnorderedList>
                         </Box>
 
-                        <Text
+                        {/* <Text
                             fontSize={"15px"}
                             marginBottom={"20px"}
                             lineHeight={8}
                         >
                             Not sure if the rev-chron resume format is your best shot? See the handy table below.
-                        </Text>
+                        </Text> */}
 
                         <Text
                             fontSize={"16px"}
@@ -1162,7 +1162,7 @@ export default function FormatsTables() {
                             ></Box>
 
                             {/* text */}
-                            <Text
+                            {/* <Text
                                 fontSize={"15px"}
                                 marginBottom={"20px"}
                                 lineHeight={8}
@@ -1175,20 +1175,21 @@ export default function FormatsTables() {
                                 &nbsp;<strong>www.pr-matters.wordpress.com</strong>.
                                 Interested in new digital PR solutions including the automatization of customer relations via
                                 AI-based email campaigns and chatbots.
-                            </Text>
+                            </Text> */}
 
-                            <Text
+                            {/* <Text
                                 fontSize={"16px"}
                                 marginBottom={"30px"}
                                 fontWeight={"medium"}
                             >
                                 Skills Summary
-                            </Text>
+                            </Text> */}
 
                             <Text
                                 fontSize={"16px"}
                                 marginBottom={"20px"}
                                 fontWeight={"medium"}
+                                padding={"10px 0px 0px 0px"}
                             >
                                 RESEARCH
                             </Text>
@@ -1201,7 +1202,7 @@ export default function FormatsTables() {
                                 Able to work with many kinds of clients in a wide variety of fields. Excellent at researching clients brands, industries, and markets very quickly and efficiently.
                             </Text>
 
-                            <Text
+                            {/* <Text
                                 fontSize={"16px"}
                                 marginBottom={"20px"}
                                 fontWeight={"medium"}
@@ -1215,7 +1216,7 @@ export default function FormatsTables() {
                                 lineHeight={8}
                             >
                                 Skilled at writing all types of Public Relations texts: press releases, blog posts, bulletins, emailing campaigns (outreach emails, sales emails, engagement emails). Able to produce up to 1,500 words of great, unique content on a daily basis.
-                            </Text>
+                            </Text> */}
 
                             <Text
                                 fontSize={"16px"}
