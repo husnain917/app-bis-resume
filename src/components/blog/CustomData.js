@@ -203,26 +203,26 @@ export const RESUME_EXAMPLES = {
             text: "Dont list all your professional responsibilities and accomplishments. Focus on whats important for this particular position. Tailor your resume to the job description."
         },
     ],
-    rightFormats: [
-        {
-            text: "Interpreted contract plans and specifications: one-line diagrams, cable and conduit schematics and wiring diagrams."
-        },
-        {
-            text: "Installed and repair electrical systems, wiring, fixtures, motors per plans.Supervised and assigned work to apprentices, electrical helpers, and journey-level electricians."
-        },
-        {
-            text: "Trained and mentored electrical apprentices."
-        },
-        {
-            text: "Diagnosed problems and checked leakages in low and high voltage systems."
-        },
-        {
-            text: "Took the highest level of care for keeping the workplace area safe and organized by implementing the NEC safety regulations and guidelines."
-        },
-        {
-            text: "Installed circuit breaker panels, switches, relays, and grounding leads."
-        },
-    ],
+    // rightFormats: [
+    //     {
+    //         text: "Interpreted contract plans and specifications: one-line diagrams, cable and conduit schematics and wiring diagrams."
+    //     },
+    //     {
+    //         text: "Installed and repair electrical systems, wiring, fixtures, motors per plans.Supervised and assigned work to apprentices, electrical helpers, and journey-level electricians."
+    //     },
+    //     {
+    //         text: "Trained and mentored electrical apprentices."
+    //     },
+    //     {
+    //         text: "Diagnosed problems and checked leakages in low and high voltage systems."
+    //     },
+    //     {
+    //         text: "Took the highest level of care for keeping the workplace area safe and organized by implementing the NEC safety regulations and guidelines."
+    //     },
+    //     {
+    //         text: "Installed circuit breaker panels, switches, relays, and grounding leads."
+    //     },
+    // ],
     KeyAchievements: [
         {
             text: `Increased efficiency by 33% by identifying our client"s complex wiring issue. Scheduled a repair plan and supervised a team of 6 specialists.`

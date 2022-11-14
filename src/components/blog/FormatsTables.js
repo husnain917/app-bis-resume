@@ -783,7 +783,7 @@ export default function FormatsTables() {
                                 2012–
                             </Text>
 
-                            <UnorderedList
+                            {/* <UnorderedList
                                 fontSize={"15px"}
                                 lineHeight={8}
                                 marginBottom={"10px"}
@@ -800,7 +800,7 @@ export default function FormatsTables() {
                                         </>
                                     ))
                                 }
-                            </UnorderedList>
+                            </UnorderedList> */}
 
                             <Text
                                 fontSize={"16px"}
