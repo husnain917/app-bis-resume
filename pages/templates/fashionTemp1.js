@@ -19,7 +19,6 @@ import Profession from '../../src/components/commonSection/Profession';
 import Contact from '../../src/components/commonSection/Contact';
 import TempLayout from '../../src/components/tempNav/TempLayout';
 import { useSelector } from 'react-redux';
-import { useState } from 'react';
 import SectionSideMenu from '../../src/components/tempSectionSide/SectionSideMenu';
 import {
   EDUCATION,

@@ -76,6 +76,50 @@ const WorkExperience = (props) => {
           <div className={`${childContainerStyle ? childContainerStyle : ''}`}>
             <VStack justifyContent={'flex-start'} alignItems="flex-start">
               <Stack direction={direction ? direction : 'column'}>
+                {position && (
+                  <Box
+                    minW={direction === 'row' && row1MinW}
+                    maxW={direction === 'row' && row1MaxW}
+                  >
+                    <Text
+                      value={item.position}
+                      placeholder={
+                        position_placeholder
+                          ? position_placeholder
+                          : 'Title/Position'
+                      }
+                      path={`${path}.${index}.position`}
+                      customClass={`${positionStyle ? positionStyle : ''}`}
+                      color={textColor}
+                      fontSize={fontSize}
+                      fontWeight={fontWeight}
+                      textAlign={textAlign}
+                    />
+                  </Box>
+                )}
+                {company && (
+                  <Box
+                    minW={direction === 'row' && row2MinW}
+                    maxW={direction === 'row' && row2MaxW}
+                  >
+                    <Text
+                      value={item.company}
+                      placeholder={
+                        company_placeholder
+                          ? company_placeholder
+                          : 'Workplace/Company'
+                      }
+                      path={`${path}.${index}.company`}
+                      customClass={`${companyStyle ? companyStyle : ''}`}
+                      color={textColor}
+                      fontSize={fontSize}
+                      fontWeight={fontWeight}
+                      textAlign={textAlign}
+                    />
+                  </Box>
+                )}
+              </Stack>
+              <Stack direction={direction ? direction : 'column'}>
                 {date && (
                   <Box
                     minW={direction === 'row' && row1MinW}
@@ -118,50 +162,6 @@ const WorkExperience = (props) => {
                         textAlign={textAlign}
                       />
                     </Stack>
-                  </Box>
-                )}
-                {position && (
-                  <Box
-                    minW={direction === 'row' && row2MinW}
-                    maxW={direction === 'row' && row2MaxW}
-                  >
-                    <Text
-                      value={item.position}
-                      placeholder={
-                        position_placeholder
-                          ? position_placeholder
-                          : 'Title/Position'
-                      }
-                      path={`${path}.${index}.position`}
-                      customClass={`${positionStyle ? positionStyle : ''}`}
-                      color={textColor}
-                      fontSize={fontSize}
-                      fontWeight={fontWeight}
-                      textAlign={textAlign}
-                    />
-                  </Box>
-                )}
-              </Stack>
-              <Stack direction={direction ? direction : 'column'}>
-                {company && (
-                  <Box
-                    minW={direction === 'row' && row1MinW}
-                    maxW={direction === 'row' && row1MaxW}
-                  >
-                    <Text
-                      value={item.company}
-                      placeholder={
-                        company_placeholder
-                          ? company_placeholder
-                          : 'Workplace/Company'
-                      }
-                      path={`${path}.${index}.company`}
-                      customClass={`${companyStyle ? companyStyle : ''}`}
-                      color={textColor}
-                      fontSize={fontSize}
-                      fontWeight={fontWeight}
-                      textAlign={textAlign}
-                    />
                   </Box>
                 )}
 

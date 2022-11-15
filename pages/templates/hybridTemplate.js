@@ -272,8 +272,8 @@ const HybridTemplate = () => {
                         fontSize="23px"
                         fontWeight={'bold'}
                         color="#313B47"
-                        minW={302}
-                        maxW={302}
+                        minW={250}
+                        maxW={250}
                         margin={'10px 0px'}
                         onSideSectionShow={() =>
                           setShow({ ...show, skills: true })

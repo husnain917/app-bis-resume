@@ -14,9 +14,14 @@ const About = (props) => {
     textAlign,
     maxW,
     minW,
+    margin,
   } = props;
   return (
-    <Box maxW={maxW ? maxW : 230} minW={minW ? minW : 230}>
+    <Box
+      maxW={maxW ? maxW : 230}
+      minW={minW ? minW : 230}
+      margin={margin ? margin : ''}
+    >
       <Text
         placeholder={
           aboutPlaceholder
