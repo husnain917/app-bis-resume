@@ -59,21 +59,7 @@ class Manager extends Component {
                   marginTop="10"
                 ></Box>
               </Box>
-              <Box
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                // marginLeft={"10px"}
-                // marginTop={"15%"}
-              >
-                {/* <Image
-                  src="/Profile.jpeg"
-                  h={"12em"}
-                  w={"12em"}
-                  borderRadius="50%"
-                  marginTop="-15%"
-                  marginLeft="10px"
-                /> */}
+              <Box display="flex" alignItems="center" justifyContent="center">
                 <ImageSelector
                   height={"12em"}
                   width={"12em"}
