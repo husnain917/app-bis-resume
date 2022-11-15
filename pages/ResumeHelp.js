@@ -15,6 +15,7 @@ import jobAd from "../public/jobAd.png"
 import EducationHelpImage from "../public/EducationHelpImage.png";
 import SkillImage from "../public/SkillImage.png"
 import ResumeHelp from "../public/ResumeHelp.png"
+import ProfileDescrip from "../public/ProfileDescrip.png"
 
 export default function ResumeBuild() {
 
@@ -29,7 +30,7 @@ export default function ResumeBuild() {
                         border="3px"
                     >
                         <Box p={["5%", "5%"]}>
-                            <Text fontSize={["35px", "50px", "50px"]} >How to Write a Resume in 2021 | Beginners Guide
+                            <Text fontSize={["35px", "50px", "50px"]} >How to Write a Resume in 2022 | Beginners Guide
                             </Text>
 
                             <Text fontSize={["20px"]} >How to Write a Resume - Step by step
@@ -295,17 +296,9 @@ export default function ResumeBuild() {
 
                                         The HR manager doesn’t need to know what you look like in order to evaluate your application, so there’s no real need to include it.                                    </ListItem>
                                 </UnorderedList>
-                                <Text fontSize={["18px", "20px", "20px"]} >
-                                    All clear? Good! Now, let’s examine what a successful example of the contact section looks like:
 
-
-                                </Text>
                             </Box>
-                            <Image
 
-                                src={ResumeHeader}
-                                alt={'Image Not Found'}
-                            />
                             <Box mt={["3%", "3%", "3%"]} >
                                 <Text fontSize={["24px"]} fontWeight={["bold"]} >Resume Summary or Objective</Text>
                                 <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
@@ -330,11 +323,13 @@ export default function ResumeBuild() {
                                 </Text>
 
                             </Box>
+                            <Box mt={["2%","2%","2%"]} ml={["0%",'10%']}>
                             <Image
 
-                                src={HelpDesci}
+                                src={ProfileDescrip}
                                 alt={'Image Not Found'}
                             />
+                            </Box>
 
 
                             <Box mt={["3%", "3%", "3%"]} >
