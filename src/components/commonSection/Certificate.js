@@ -41,6 +41,8 @@ const Certificate = (props) => {
     instituteStyle,
     parentContainerStyle,
     childContainerStyle,
+    iconShow,
+    icon,
   } = props;
   const data = resumeData?.certifications?.items?.length
     ? [...resumeData?.certifications?.items]
@@ -54,39 +56,45 @@ const Certificate = (props) => {
         reorder={(e) => onOrderUpdate(e)}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <div className={`${childContainerStyle ? childContainerStyle : ''}`}>
-            {certificate && (
-              <Text
-                value={item.title}
-                placeholder={
-                  certificatePlaceholder
-                    ? certificatePlaceholder
-                    : 'Certificate Name'
-                }
-                customClass={`${certificateStyle}`}
-                path={`${path}.${index}.title`}
-              />
-            )}
-            {issueDate && (
-              <Text
-                value={item.endDate}
-                placeholder={
-                  issueDatePlaceholder ? issueDatePlaceholder : 'Issue Date'
-                }
-                customClass={`${issueDateStyle}`}
-                path={`${path}.${index}.endDate`}
-              />
-            )}
-            {institute && (
-              <Text
-                value={item.issuer}
-                placeholder={
-                  institutePlaceholder ? issueDatePlaceholder : 'Institute'
-                }
-                customClass={`${instituteStyle}`}
-                path={`${path}.${index}.issuer`}
-              />
-            )}
+          <div
+            className={`${childContainerStyle ? childContainerStyle : ''}`}
+            style={{ display: 'flex' }}
+          >
+            {iconShow && React.createElement(icon)}
+            <div>
+              {certificate && (
+                <Text
+                  value={item.title}
+                  placeholder={
+                    certificatePlaceholder
+                      ? certificatePlaceholder
+                      : 'Certificate Name'
+                  }
+                  customClass={`${certificateStyle}`}
+                  path={`${path}.${index}.title`}
+                />
+              )}
+              {institute && (
+                <Text
+                  value={item.issuer}
+                  placeholder={
+                    institutePlaceholder ? issueDatePlaceholder : 'Institute'
+                  }
+                  customClass={`${instituteStyle}`}
+                  path={`${path}.${index}.issuer`}
+                />
+              )}
+              {issueDate && (
+                <Text
+                  value={item.endDate}
+                  placeholder={
+                    issueDatePlaceholder ? issueDatePlaceholder : 'Issue Date'
+                  }
+                  customClass={`${issueDateStyle}`}
+                  path={`${path}.${index}.endDate`}
+                />
+              )}
+            </div>
           </div>
         )}
       />

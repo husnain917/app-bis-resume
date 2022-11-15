@@ -83,7 +83,7 @@ const Contact = (props) => {
               icon={(props) => (
                 <HiPhone
                   {...props}
-                  size={iconSize ? iconSize : '20px'}
+                  size={iconSize ? iconSize : '16px'}
                   color={iconColor ? iconColor : '#000'}
                 />
               )}
@@ -111,7 +111,7 @@ const Contact = (props) => {
               icon={(props) => (
                 <MdEmail
                   {...props}
-                  size={iconSize ? iconSize : '20px'}
+                  size={iconSize ? iconSize : '16px'}
                   color={iconColor ? iconColor : '#000'}
                 />
               )}
@@ -139,7 +139,7 @@ const Contact = (props) => {
               icon={(props) => (
                 <TbWorld
                   {...props}
-                  size={iconSize ? iconSize : '20px'}
+                  size={iconSize ? iconSize : '16px'}
                   color={iconColor ? iconColor : '#000'}
                 />
               )}
@@ -166,7 +166,7 @@ const Contact = (props) => {
               icon={(props) => (
                 <MdLocationOn
                   {...props}
-                  size={iconSize ? iconSize : '20px'}
+                  size={iconSize ? iconSize : '16px'}
                   color={iconColor ? iconColor : '#000'}
                 />
               )}
@@ -194,7 +194,7 @@ const Contact = (props) => {
               icon={(props) => (
                 <FaLinkedinIn
                   {...props}
-                  size={iconSize ? iconSize : '20px'}
+                  size={iconSize ? iconSize : '16px'}
                   color={iconColor ? iconColor : '#000'}
                 />
               )}

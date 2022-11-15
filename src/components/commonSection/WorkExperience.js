@@ -62,6 +62,8 @@ const WorkExperience = (props) => {
     row2MaxW = 230,
     row2MinW = 230,
     DndDirection,
+    icon,
+    iconShow,
   } = props;
 
   return (
@@ -73,7 +75,11 @@ const WorkExperience = (props) => {
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <div className={`${childContainerStyle ? childContainerStyle : ''}`}>
+          <div
+            className={`${childContainerStyle ? childContainerStyle : ''}`}
+            style={{ display: 'flex' }}
+          >
+            {iconShow && React.createElement(icon)}
             <VStack justifyContent={'flex-start'} alignItems="flex-start">
               <Stack direction={direction ? direction : 'column'}>
                 {position && (

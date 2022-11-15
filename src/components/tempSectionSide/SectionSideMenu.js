@@ -29,7 +29,7 @@ import {
   SKILL,
   WORK,
 } from './SectionSideConstant';
-const SectionSideMenu = ({ onDelete, onHide, bg }) => {
+const SectionSideMenu = ({ onDelete, onHide, bg, iconColor }) => {
   const dispatch = useDispatch();
   const onDeleteHandler = () => {
     switch (onDelete) {
@@ -81,10 +81,18 @@ const SectionSideMenu = ({ onDelete, onHide, bg }) => {
         alignItems="center"
       >
         <Tooltip title="Back" arrow distance={20}>
-          <MdRemoveCircleOutline color="#fff" size={16} onClick={onHide} />
+          <MdRemoveCircleOutline
+            color={iconColor ? iconColor : '#fff'}
+            size={16}
+            onClick={onHide}
+          />
         </Tooltip>
         <Tooltip title="Remove Section" arrow distance={20}>
-          <RiDeleteBin6Line color="#fff" size={16} onClick={onDeleteHandler} />
+          <RiDeleteBin6Line
+            color={iconColor ? iconColor : '#fff'}
+            size={16}
+            onClick={onDeleteHandler}
+          />
         </Tooltip>
       </Box>
     </div>

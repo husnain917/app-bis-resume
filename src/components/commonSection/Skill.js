@@ -109,7 +109,7 @@ const Skill = (props) => {
                 />
               ) : (
                 <UnorderedList>
-                  <ListItem>
+                  <ListItem className={`${skillStyle}`}>
                     <Text
                       value={item.title}
                       placeholder={

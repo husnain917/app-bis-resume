@@ -14,11 +14,13 @@ const Name = (props) => {
     FNamePlaceholder,
     SNamePlaceholder,
     parentContainerStyle,
+    margin,
   } = props;
   return (
     <Stack
       direction={direction ? direction : 'column'}
       className={`${parentContainerStyle ? parentContainerStyle : ''}`}
+      m={margin ? margin : ''}
     >
       {FName && (
         <Text

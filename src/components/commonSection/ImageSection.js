@@ -2,8 +2,17 @@ import { Box, Image } from '@chakra-ui/react';
 import React from 'react';
 
 const ImageSection = (props) => {
-  const { minW, maxW, borderRadius, borderWidth, borderColor, margin, src } =
-    props;
+  const {
+    minW,
+    maxW,
+    borderRadius,
+    borderWidth,
+    borderColor,
+    margin,
+    src,
+    minH,
+    maxH,
+  } = props;
   return (
     <Box
       maxW={maxW ? maxW : 150}
@@ -12,12 +21,14 @@ const ImageSection = (props) => {
       borderWidth={borderWidth ? borderWidth : 4}
       borderRadius={borderRadius ? borderRadius : 'full'}
       m={margin ? margin : 0}
+      minH={minH ? minH : 150}
+      maxH={maxH ? maxH : 150}
     >
       <Image
         borderRadius={borderRadius ? borderRadius : 'full'}
-        boxSize="fit-content"
         src={src ? src : '/ProfilePic.jpg'}
         alt="Profile"
+        boxSize={'full'}
       />
     </Box>
   );
