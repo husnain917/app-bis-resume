@@ -288,3 +288,45 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
     /* left: auto !important; */
     margin: 0;
   }
+  .image1{
+    left: 16.3%;
+    top: 7.3%;
+    -webkit-transform: rotate(-22.2deg);
+    transform: rotate(-22.2deg);
+    position: absolute;
+    width: 45.8%;
+    border-radius: 6px;
+    background: var(--white);
+    background-size: cover;
+    background-position: 50% 0;
+    -webkit-box-shadow: 0 9px 15px rgb(100 100 123 / 7%);
+    box-shadow: 0 9px 15px rgb(100 100 123 / 7%);
+  }
+  .image2{
+    left: 28.3%;
+    top: 4.5%;
+    -webkit-transform: rotate(-4.51deg);
+    transform: rotate(-4.51deg);
+    position: absolute;
+    width: 45.8%;
+    border-radius: 6px;
+    background: var(--white);
+    background-size: cover;
+    background-position: 50% 0;
+    -webkit-box-shadow: 0 9px 15px rgb(100 100 123 / 7%);
+    box-shadow: 0 9px 15px rgb(100 100 123 / 7%);
+  }
+  .image3{
+    left: 40.9%;
+    top: 15.9%;
+    -webkit-transform: rotate(9.87deg);
+    transform: rotate(9.87deg);
+    position: absolute;
+    width: 45.8%;
+    border-radius: 6px;
+    background: var(--white);
+    background-size: cover;
+    background-position: 50% 0;
+    -webkit-box-shadow: 0 9px 15px rgb(100 100 123 / 7%);
+    box-shadow: 0 9px 15px rgb(100 100 123 / 7%);
+  }
