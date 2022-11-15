@@ -52,37 +52,72 @@
     font-weight: 600;
     font-size: 15px;
 }
+
 .educationDesHeading {
     color: #3D3D3D !important;
     font-weight: 600;
     font-size: 15px;
 }
+
 .educationDesTxt {
     color: #3D3D3D !important;
 }
+
 .experienceDesHeadings {
     color: #3D3D3D !important;
     font-weight: 700;
     font-size: 16px;
 }
+
 .experienceDesBody {
     color: #3D3D3D !important;
     font-size: 15px;
     text-align: justify;
 }
+
 .skillBodyHeading {
     font-size: 15px;
     color: #3D3D3D !important;
     font-weight: 500;
 }
+
 .inputData {
     font-size: 14px !important;
     color: #3D3D3D;
     margin-left: 10px;
 }
+
 .perD {
     display: inline-block;
     margin-left: -15px !important;
     font-size: 13px !important;
     color: #3D3D3D;
+}
+
+.swapCont {
+    position: absolute;
+    right: 80px;
+    top: 50px;
+}
+
+.swap {
+    width: 40px;
+    height: 40px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.swap:hover {
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+.swap img {
+    width: 70%;
+    filter: invert(1);
 }

@@ -59,8 +59,6 @@ export default function Education(props) {
               customclass={`${Style.date}`}
               path={`${path}.${index}.institution`}
             />
-          </Box>
-          <Box maxW={230} minW={230} ml={10}>
             <HybridText
               placeholder="Study Program"
               value={item.degree}

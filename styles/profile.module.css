@@ -1,0 +1,55 @@
+.uploadPhoto {
+  border-radius: 5px;
+  border: 1px solid #1f262e;
+}
+.photo {
+  min-width: 90px;
+  background-color: #00c8aa;
+  color: white;
+  text-decoration: none;
+  border-right: 1px solid #1f262e;
+  position: relative;
+  text-align: center !important;
+}
+.photo:hover {
+  color: #1f262e;
+}
+.del {
+  background-color: #1f262e;
+  margin-left: -12px;
+  min-width: 40px;
+  transition: background-color 0.4s ease-out;
+}
+.del:hover {
+  background-color: #e74c3c;
+}
+.rocket {
+  max-width: 79px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+}
+.avatar {
+  border-color: #1f262e !important;
+  transition: border-color 0.4s ease-out;
+}
+.avatar:hover {
+  border-color: #00c8aa !important;
+}
+.btn:hover {
+  box-shadow: -3px -6px #00c8aa64, 3px 6px #00c8aa64;
+}
+.mt {
+  margin-top: -50px !important;
+}
+.spn {
+  color: #00c8aa;
+  margin-left: 32px;
+}
+.spn:hover {
+  text-decoration: underline;
+}
+.rotate {
+}
+.rotate1 {
+}

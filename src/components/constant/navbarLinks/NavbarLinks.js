@@ -166,10 +166,10 @@ export const EnglishDropDown = [
 export const Login_Buttons = [
     {
         label : 'Register',
-        href: '#',
+        // href: '#',
     },
     {
         label : 'Login',
-        href: '#',
+        // href: '#',
     },
 ]
