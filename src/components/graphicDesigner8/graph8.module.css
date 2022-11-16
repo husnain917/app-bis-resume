@@ -1,0 +1,49 @@
+.aboutText {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.institute {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.program {
+  color: white;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.name {
+  color: #2a78ab;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+}
+.date {
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+}
+.workText {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+.skillText {
+  font-size: 18px;
+  color: black;
+  font-weight: 500;
+  text-align: left;
+  min-width: 170px;
+  max-width: 170px;
+  margin-right: 50px;
+}
+.bg {
+  width: 100px;
+  height: 10px;
+}

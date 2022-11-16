@@ -1,0 +1,156 @@
+.manager-aWrapper {
+    padding: 40;
+    background-color: white;
+    font-family: sans-serif;
+    max-width: 1080px;
+    margin: auto;
+  }
+  .main{
+    position: relative;
+  }
+  .swapCont{
+    position: fixed;
+    right: 60px;
+    top: 40px;
+  }
+  .swap{
+    width: 40px;
+    height: 40px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    transition: all .2s;
+  }
+  .swap:hover{
+    transform: scale(1.1);
+    transition: all .2s;
+  }
+  .swap img {
+    width: 70%;
+    filter: invert(1);
+  }
+  .managerTemplateRow {
+    flex-direction: row;
+    display: flex;
+  }
+  .managerTemplateCol {
+    flex-direction: column;
+    display: flex;
+  }
+  .managerTemplateTextCenter {
+    align-items: center;
+  }
+  .managerTemplateTextBold {
+    font-weight: bold;
+  }
+  .managerTemplateWrapper {
+    padding: 30px;
+    background-color: white;
+    font-family: sans-serif;
+    max-width: 100vw;
+    width: 88vw;
+  
+    margin: auto;
+  }
+  
+  .manager-fTitle {
+    font-weight: 700;
+    font-size: 1.2em;
+    padding: 0;
+    line-height: 20px;
+    text-align: center;
+  }
+  
+  .managerFSubRowA {
+    margin: 0 auto;
+  }
+  
+  .managerFName {
+    font-size: 0.95em !important;
+    line-height: 20px;
+  }
+  
+  .managerHeading {
+    justify-content: flex-start;
+    //   height: 80px;
+    width: 100%;
+    // border-top: 3px solid gray;
+    //   margin-top: 20px;
+    padding-top: 10px;
+  }
+  
+  .manager-border__top {
+    // border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+  }
+  
+  .managerFHeadingTitle {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  .managerF3HeadingTitle {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+  
+  .manager-mb-bottom-0 {
+    margin-bottom: 0 !important;
+  }
+  .a4Paper {
+    // background-color: red;
+    width: 80%;
+  
+    padding: 20px !important;
+    margin: auto;
+    border: 2px solid rgba($color: #000000, $alpha: 0.05);
+    padding: 5px;
+  }
+  .a4PaperFinancial {
+    // background-color: red;
+    width: 80%;
+    margin: auto;
+    border: 2px solid rgba($color: #000000, $alpha: 0.05);
+    background-color: green;
+    max-height:2500px;
+    min-height:5000px;
+  }
+
+//   Text Field Styling
+
+// @import '../../theme/colors';
+
+.contentEditableContainer {
+    padding: 6px 2px;
+    white-space: pre-line;
+    border: 1px dashed #fff;
+    border-radius: 4px;
+    outline: 0;
+  }
+  .contentEditableContainer:empty::before {
+    content: attr(data-placeholder);
+    opacity: 1;
+  }
+  
+  .contentEditableContainer:focus {
+    // border: 1px dashed #a1a1a1;
+    padding: auto;
+    white-space: pre-line;
+
+    border-radius: 4px;
+    outline: 0;
+  }
+  
+  .contentEditableContainer:active {
+    // border: 1px dashed #a1a1a1;
+    border-radius: 4px;
+    outline: 0;
+  }
+  
+  .contentEditableContainer:visited {
+    // border: 1px dashed #a1a1a1;
+    border-radius: 4px;
+    outline: 0;
+  }

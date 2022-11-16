@@ -1,0 +1,29 @@
+.about {
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+}
+.profileText {
+  color: white;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.name {
+  text-align: left;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.Profession {
+  font-size: 18px;
+  margin-top: 15px;
+}
+.summary {
+  font-size: 14px;
+  font-weight: 500;
+}
+.institute {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

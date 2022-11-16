@@ -1,0 +1,139 @@
+.manager-aWrapper {
+  padding: 40;
+  background-color: white;
+  font-family: sans-serif;
+  max-width: 1080px;
+  margin: auto;
+}
+
+.main {
+  position: relative;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.swapCont {
+  position: fixed;
+  right: 60px;
+  top: 40px;
+}
+
+.swap {
+  width: 40px;
+  height: 40px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: all .2s;
+}
+
+.swap:hover {
+  transform: scale(1.1);
+  transition: all .2s;
+}
+
+.swap img {
+  width: 70%;
+  filter: invert(1);
+}
+
+.managerTemplateRow {
+  flex-direction: row;
+  display: flex;
+}
+
+.rowWidth {
+  width: 48%;
+}
+
+.managerTemplateCol {
+  flex-direction: column;
+  display: flex;
+}
+
+.managerTemplateTextCenter {
+  align-items: center;
+}
+
+.managerTemplateTextBold {
+  font-weight: bold;
+}
+
+.managerTemplateWrapper {
+  padding: 30px;
+  background-color: white;
+  font-family: sans-serif;
+  max-width: 100vw;
+  width: 88vw;
+
+  margin: auto;
+}
+
+.manager-fTitle {
+  font-weight: 700;
+  font-size: 1.2em;
+  padding: 0;
+  line-height: 20px;
+  text-align: center;
+}
+
+.managerFSubRowA {
+  margin: 0 auto;
+}
+
+.managerFName {
+  font-size: 0.95em !important;
+  line-height: 20px;
+}
+
+.managerHeading {
+  justify-content: flex-start;
+  //   height: 80px;
+  width: 100%;
+  // border-top: 3px solid gray;
+  //   margin-top: 20px;
+  padding-top: 10px;
+}
+
+.manager-border__top {
+  border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+}
+
+.managerFHeadingTitle {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.manager-mb-bottom-0 {
+  margin-bottom: 0 !important;
+}
+
+.a4Paper {
+  width: 80%;
+
+  padding: 20px !important;
+  margin: auto;
+  border: 2px solid rgba($color: #000000, $alpha: 0.05);
+  padding: 5px;
+}
+.experience {
+  display: flex;
+}
+
+.position {
+  margin-left: 20px;
+}
+.positionName {
+  font-size: 1.1em !important;
+  line-height: 20px;
+  font-weight: 700;
+  color: #000000;
+}

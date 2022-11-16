@@ -1,0 +1,132 @@
+.contentEditableContainer {
+  padding: 4px 2px;
+  white-space: pre-line;
+  /* border: 1px dashed #fff; */
+  border-radius: 4px;
+  outline: 0;
+}
+.contentEditableContainer:empty::before {
+  content: attr(data-placeholder);
+  opacity: 1;
+}
+
+.contentEditableContainer:focus {
+  /* border: 1px dashed #a1a1a1; */
+  border-radius: 4px;
+  background-color: #efefef;
+  outline: 0;
+}
+
+.contentEditableContainer:active {
+  /* border: 1px dashed #a1a1a1; */
+  border-radius: 4px;
+  outline: 0;
+}
+
+.contentEditableContainer:visited {
+  /* border: 1px dashed #a1a1a1; */
+  border-radius: 4px;
+  outline: 0;
+}
+.main {
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+.swapCont {
+  position: absolute;
+  right: 80px;
+  top: 80px;
+}
+.swap {
+  width: 40px;
+  height: 40px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: all 0.2s;
+}
+.swap:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.swap img {
+  width: 70%;
+  filter: invert(1);
+}
+.summary_heading{
+  font-size: 1.7rem;
+  letter-spacing: 5px;
+  line-height: 70px;
+  font-weight: bold;
+  text-transform: uppercase;
+ 
+  
+}
+
+.summary {
+  font-size: 1.2rem;
+  margin-top: 5%;
+  line-height: 31px;
+  width: 80%;
+  opacity: 1;
+  color: black !important;
+}
+
+/* Education Section  */
+
+.institute_name { 
+  font-size: 1.2rem;
+  font-weight: bold;
+  opacity: 1;
+  color: black;
+  margin-top: 4%;
+  width: 80%;
+}
+.feild_name {
+  font-size: 0.8rem;
+  opacity: 1;
+  font-weight: 400;
+  line-height: 10px;
+  letter-spacing: 4px;
+text-transform: uppercase;
+
+}
+.fullName {
+  font-weight: bold;
+  letter-spacing: 22px;
+text-transform: uppercase;
+}
+/* Experience Section  */
+
+.workItem {
+  display: flex;
+  margin-top: 0px;
+}
+.contact_feild {
+  font-size: 1.2rem;
+  padding-left: 30px;
+  opacity: 1;
+}
+.position_name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  opacity: 1;
+  color: black;
+  margin-top: 2%;
+  width: 50%;
+}
+.prog_lang {
+  font-size: 1.2rem;
+  padding-left: 20px;
+  opacity: 1;
+}
+.workSummary {
+  font-size: 1.2rem;
+  padding-left: 0px;
+}
