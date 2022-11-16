@@ -1,11 +1,13 @@
 import React from "react";
 import { Box, Text, Button, Image } from "@chakra-ui/react";
 import YouTube from "react-youtube";
+import Link from "next/link";
+import { PhoneIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
 
 const BlogPost = () => {
   const opts = {
     height: "390",
-    width: "640",
+    width: "800",
     playerVars: {
       autoplay: 1,
     },
@@ -17,6 +19,126 @@ const BlogPost = () => {
           <Box className="blog-post__content-main">
             <Box className="blog-post__content-main-wrapper">
               <YouTube videoId="sTnm5jvjgjM" opts={opts} />
+              <Text
+                fontSize={["26px", "26px", "32px"]}
+                lineHeight={["28px", "28px", "34px"]}
+                marginBottom={["12px", "12px", "16px", "16px", "16px"]}
+                fontWeight={["", "", "", "", "600", "600"]}
+                marginTop={["", "", "", "48px", "48px"]}
+              >
+                Resume Samples
+              </Text>
+              <p>
+                A great resume is a key that opens doors to a better future.
+                Exceptional formatting is one way to stand out, but precise,
+                professional writing is equally important. That’s why we’ve
+                created more than 300 resume samples to get you started on
+                drafting the perfect resume no matter your industry or job
+                title. Each sample has been expertly crafted to reflect the best
+                practices of your field and walk you through every aspect of
+                resume creation, from the profile summary to the layout. And the
+                best part? Every single one is completely free.
+              </p>
+              <p>
+                We understand that resume writing can feel daunting. That’s why
+                our resume and{" "}
+                <Link href="/" mr={2}>
+                  <a>cover letter examples </a>
+                </Link>
+                guide you through the process and break down the anatomy of a
+                great resumes, section by section. We dive deep into the
+                realities of today’s job market and hiring practices to help you
+                overcome 22st century challenges like Applicant Tracking Systems
+                and the best file formats. What’s more, our resume samples
+                address common obstacles and choices you may face and help you
+                troubleshoot any issues.
+              </p>
+              <p>
+                When you’re on the job hunt, competition can be fierce. That’s
+                why our samples are chock full of practical tips to equip you
+                with the specific tools needed to create a resume that catches a
+                hiring manager’s attention and lands you your dream job. So go
+                ahead and get started! Search our ever-expanding collection of
+                resume samples and templates to level up your career in no time.
+              </p>
+              <Text
+                fontSize={["26px", "26px", "32px"]}
+                lineHeight={["28px", "28px", "34px"]}
+                marginBottom={["12px", "12px", "16px", "16px", "16px"]}
+                fontWeight={["", "", "", "", "600", "600"]}
+                marginTop={["", "", "", "48px", "48px"]}
+              >
+                Examples to get you hired fast
+              </Text>
+              <p>
+                Sometimes, a resume just won’t cut it. That’s why we’ve got you
+                covered when it comes to creating a flawless Curriculum Vitae
+                (CV). Our comprehensive CV examples are expertly designed to
+                simplify the process of creating a robust document that brings
+                your experience to life.
+              </p>
+              <p>
+                Whereas most American employers tend to request resumes,
+                international companies often deal with CVs. These documents
+                often contain multiple pages for a more thorough examination of
+                the candidate’s academic and professional history. In some
+                countries, a photo and information about the candidate’s family
+                and personal life are also commonplace.
+              </p>
+              <p>
+                When writing a CV, it’s important to understand the position
+                you’re applying for and the qualifications an employer is
+                seeking. Our field-tested CV examples help you get hired faster
+                with industry-specific tips and inside knowledge to{" "}
+                <Link href="/" mr={2}>
+                  <a>cover letter examples </a>
+                </Link>
+                a cut above the rest.
+              </p>
+              <p>
+                When it comes to making your resume, you’ve got options. That’s
+                great news because no candidate is alike. However, there are
+                some basic rules to help you pick the correct sample that best
+                suits the hiring manager’s needs.
+              </p>
+            </Box>
+            <Box
+              style={{
+                width: "calc((var(--vw) * 100) - 70px)",
+                position: "relative",
+                zIndex: 10,
+                maxWidth: "1130px",
+              }}
+            >
+              <Box
+                height={["260px"]}
+                className={
+                  "compare-resumes__view .compare-resumes__view--ready"
+                }
+              >
+                <Box className="cursor">
+                  <Link href="/templates/templateCEO">
+                    <img
+                      src="Chief_Exclusive_Office.jpg"
+                      alt="Chief_Exclusive_Office"
+                      height="200px"
+                      width="250px"
+                    />
+                  </Link>
+                  <PhoneIcon />
+                </Box>
+                <Box className="cursor">
+                  <Link href="/templates/templateCEO">
+                    <img
+                      src="Chief_Exclusive_Office.jpg"
+                      alt="Chief_Exclusive_Office"
+                      height="200px"
+                      width="250px"
+                    />
+                  </Link>
+                  <PhoneIcon />
+                </Box>
+              </Box>
             </Box>
             <Box
               maxWidth={["375px", "100%", "100%", "100%", "100%"]}

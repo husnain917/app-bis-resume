@@ -366,3 +366,22 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   line-height: 28px;
   font-family: tt tricks,serif;
 }
+.blog-post__content-main-wrapper p {
+  margin-bottom: 16px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.compare-resumes__view {
+  position: relative;
+  width: 100%;
+  background-color: var(--neutral-10);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.blog-post__content .compare-resumes__view--ready .compare-resumes__resume {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
