@@ -13,7 +13,7 @@ export default function sideBar() {
             <Box
                 width={'5rem'}
                 backgroundColor={'#ffffff'}
-                boxShadow={'md'}
+                boxShadow={'sm'}
                 borderRadius={'0.5rem'}
                 className={styles.sideBarContainer}
                 margin={'25px 0px'}
