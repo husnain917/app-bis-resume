@@ -20,7 +20,6 @@ import {
     RESUME_FORMATS,
     RESUME_EXAMPLES,
     PASS_SCAN_FORMATS,
-    RESUME_FORMATS_EXTRA_TIPS,
 } from "./CustomData";
 import ResumeHeading from "./ResumeHeading";
 import ResumeTable from "./ResumeTable";
@@ -35,7 +34,8 @@ export default function FormatsTables() {
             <ResumeTable />
             {/* ist table heading explain */}
             <Container
-                maxW={["100%", "100%", "80%", "60%"]}
+                maxW={"100%"}
+                p={0}
             >
                 <Box
                     id={"b1"}
@@ -219,7 +219,8 @@ export default function FormatsTables() {
 
             {/* 2nd table heading explain */}
             <Container
-                maxW={["100%", "100%", "80%", "60%"]}
+                maxW={"100%"}
+                p={0}
             >
                 <Box
                     id={"b2"}
@@ -337,7 +338,8 @@ export default function FormatsTables() {
 
             {/* 3rd table heading explain */}
             <Container
-                maxW={["100%", "100%", "80%", "60%"]}
+                maxW={"100%"}
+                p={0}
             >
                 <Box
                     id={"b3"}
@@ -443,7 +445,8 @@ export default function FormatsTables() {
 
             {/* main image */}
             <Container
-                maxW={["100%", "100%", "80%", "60%"]}
+                maxW={"100%"}
+                p={0}
             >
                 {/* Image */}
                 <Box>
@@ -455,7 +458,8 @@ export default function FormatsTables() {
             </Container>
 
             <Container
-                maxW={["100%", "100%", "80%", "60%"]}
+                maxW={"100%"}
+                p={0}
             >
                 <Box>
                     {/* content */}
@@ -729,113 +733,6 @@ export default function FormatsTables() {
                         >
                             Like Frank, the candidate from our example did:
                         </Text>
-
-                        {/* <Text
-                            fontSize={"16px"}
-                            marginBottom={"30px"}
-                            lineHeight={8}
-                            fontWeight={"medium"}
-                        >
-                            Work Experience Entry Example
-                        </Text> */}
-
-                        {/* right content */}
-                        {/* <Box
-                            backgroundColor={"#fafafa"}
-                            marginBottom={"30px"}
-                            padding={"20px"}
-                        >
-                            <Text
-                                color={"#35a235"}
-                                fontSize={"40px"}
-                                fontWeight={"semibold"}
-                            padding={"10px 20px"}
-                            >
-                                RIGHT
-                            </Text>
-
-                            <Box
-                                backgroundColor={"rgba(0,0,0,.06)"}
-                                height={"2px"}
-                                width={"100%"}
-                            ></Box>
-
-
-                            <Text
-                                fontSize={"16px"}
-                                padding={"10px 0px"}
-                                fontWeight={"medium"}
-                            >
-                                Master Electrician
-                            </Text>
-
-                            <Text
-                                fontSize={"15px"}
-                                padding={"0px 0px 10px 0px"}
-                            >
-                                Mosaic Life Claire, St Joseph, MO
-                            </Text>
-
-                            <Text
-                                fontSize={"15px"}
-                                padding={"0px 0px 10px 0px"}
-                            >
-                                2012–
-                            </Text>
-
-                            <UnorderedList
-                                fontSize={"15px"}
-                                lineHeight={8}
-                                marginBottom={"10px"}
-                                padding={"0px 20px"}
-                            >
-                                {
-                                    RESUME_EXAMPLES?.rightFormats?.map((item, index) => (
-                                        <>
-                                            <ListItem
-                                                key={index}
-                                            >
-                                                {item?.text}
-                                            </ListItem>
-                                        </>
-                                    ))
-                                }
-                            </UnorderedList>
-
-                            <Text
-                                fontSize={"16px"}
-                                padding={"10px 0px"}
-                                fontWeight={"medium"}
-                            >
-                                Key achievements:
-                            </Text>
-
-                            <UnorderedList
-                                fontSize={"15px"}
-                                lineHeight={8}
-                                padding={"0px 20px"}
-                            >
-                                {
-                                    RESUME_EXAMPLES?.KeyAchievements?.map((item, index) => (
-                                        <>
-                                            <ListItem
-                                                key={index}
-                                            >
-                                                {item?.text}
-                                            </ListItem>
-                                        </>
-                                    ))
-                                }
-                            </UnorderedList>
-                        </Box> */}
-
-                        {/* <Text
-                            fontSize={"15px"}
-                            marginBottom={"20px"}
-                            lineHeight={8}
-                        >
-                            Not sure if the rev-chron resume format is your best shot? See the handy table below.
-                        </Text> */}
 
                         <Text
                             fontSize={"16px"}
@@ -1130,211 +1027,6 @@ export default function FormatsTables() {
                         >
                             {RESUME_EXAMPLES?.skillResumeFormats?.secContent?.description}
                         </Text>
-
-                        {/* <Text
-                            fontSize={"18px"}
-                            lineHeight={8}
-                            marginBottom={"40px"}
-                            fontWeight={"medium"}
-                        >
-                            {RESUME_EXAMPLES?.skillResumeFormats?.thirdContent?.title}
-                        </Text> */}
-
-                        {/* right content */}
-                        {/* <Box
-                            backgroundColor={"#fafafa"}
-                            marginBottom={"30px"}
-                            padding={"20px"}
-                        >
-                            <Text
-                                color={"#35a235"}
-                                fontSize={"40px"}
-                                fontWeight={"semibold"}
-                                padding={"10px 20px"}
-                            >
-                                RIGHT
-                            </Text>
-
-                            <Box
-                                backgroundColor={"rgba(0,0,0,.06)"}
-                                height={"2px"}
-                                width={"100%"}
-                            ></Box>
-
-
-                            <Text
-                                fontSize={"15px"}
-                                marginBottom={"20px"}
-                                lineHeight={8}
-                                padding={"10px 0px 0px 0px"}
-                            >
-                                Results-driven Penn graduate in Journalism and Social Communication seeking to leverage two years of
-                                internship and freelancing PR experience with Newton Software Communications Team.
-                                Experienced in producing engaging online content
-                                &nbsp;<strong>(see my portfolio here)</strong>&nbsp;and press releases for tech start-ups and local IT companies.Non-profit blogger at
-                                &nbsp;<strong>www.pr-matters.wordpress.com</strong>.
-                                Interested in new digital PR solutions including the automatization of customer relations via
-                                AI-based email campaigns and chatbots.
-                            </Text>
-
-                            <Text
-                                fontSize={"16px"}
-                                marginBottom={"30px"}
-                                fontWeight={"medium"}
-                            >
-                                Skills Summary
-                            </Text>
-
-                            <Text
-                                fontSize={"16px"}
-                                marginBottom={"20px"}
-                                fontWeight={"medium"}
-                                padding={"10px 0px 0px 0px"}
-                            >
-                                RESEARCH
-                            </Text>
-
-                            <Text
-                                fontSize={"15px"}
-                                marginBottom={"20px"}
-                                lineHeight={8}
-                            >
-                                Able to work with many kinds of clients in a wide variety of fields. Excellent at researching clients brands, industries, and markets very quickly and efficiently.
-                            </Text>
-
-                            <Text
-                                fontSize={"16px"}
-                                marginBottom={"20px"}
-                                fontWeight={"medium"}
-                            >
-                                WRITING
-                            </Text>
-
-                            <Text
-                                fontSize={"15px"}
-                                marginBottom={"20px"}
-                                lineHeight={8}
-                            >
-                                Skilled at writing all types of Public Relations texts: press releases, blog posts, bulletins, emailing campaigns (outreach emails, sales emails, engagement emails). Able to produce up to 1,500 words of great, unique content on a daily basis.
-                            </Text>
-
-                            <Text
-                                fontSize={"16px"}
-                                marginBottom={"20px"}
-                                fontWeight={"medium"}
-                            >
-                                SOCIAL MEDIA RELATIONS
-                            </Text>
-
-                            <Text
-                                fontSize={"15px"}
-                                lineHeight={8}
-                            >
-                                Proficient at managing social media relations across all major social media platforms:
-                                <br />
-                                Facebook, Twitter, Instagram, LinkedIn, Pinterest, Tumblr, Google+.
-                            </Text>
-                        </Box> */}
-
-                        {/* <Text
-                            fontSize={"15px"}
-                            marginBottom={"20px"}
-                        >
-                            But remember—
-                        </Text>
-
-                        <Text
-                            fontSize={"15px"}
-                            marginBottom={"20px"}
-                        >
-                            A functional resume format most likely won t get you far.
-                        </Text>
-
-                        <Text
-                            fontSize={"15px"}
-                            marginBottom={"20px"}
-                        >
-                            Why?
-                        </Text>
-
-                        <Text
-                            fontSize={"15px"}
-                            marginBottom={"20px"}
-                        >
-                            In short, because recruiters and hiring managers hate it.
-                        </Text>
-
-                        <Text
-                            fontSize={"15px"}
-                            marginBottom={"20px"}
-                        >
-                            According to a Jobvite Recruiter Nation &nbsp;
-                            <Link
-                                color={"#3983fa"}
-                            >
-                                Report
-                            </Link>
-                            , the most important thing to recruiters is your job experience. This means:
-                        </Text>
-
-                        <UnorderedList
-                            fontSize={"15px"}
-                            lineHeight={8}
-                            marginBottom={"20px"}
-                            padding={"0px 15px"}
-                        >
-                            {
-                                RESUME_EXAMPLES?.reportFormats?.map((item, index) => (
-                                    <>
-                                        <ListItem
-                                            key={index}
-                                        >
-                                            {item?.text}
-                                        </ListItem>
-                                    </>
-                                ))
-                            }
-                        </UnorderedList>
-
-                        <Text
-                            fontSize={"15px"}
-                            marginBottom={"20px"}
-                        >
-                            And what does a functional resume do? It throws all of the above out of the window.
-                        </Text>
-
-                        <Text
-                            fontSize={"15px"}
-                            marginBottom={"20px"}
-                        >
-                            For most candidates, using a functional, “skills” resume format is against any sort of logic.
-                        </Text>
-
-                        <Text
-                            fontSize={"15px"}
-                            marginBottom={"30px"}
-                        >
-                            The only groups of job seekers who might entertain using this resume format are:
-                        </Text>
-
-                        <UnorderedList
-                            fontSize={"15px"}
-                            lineHeight={8}
-                            marginBottom={"30px"}
-                            padding={"0px 15px"}
-                        >
-                            {
-                                RESUME_EXAMPLES?.professionalsFormats?.map((item, index) => (
-                                    <>
-                                        <ListItem
-                                            key={index}
-                                        >
-                                            {item?.text}
-                                        </ListItem>
-                                    </>
-                                ))
-                            }
-                        </UnorderedList> */}
 
                         <Text
                             fontSize={"15px"}
@@ -1661,78 +1353,6 @@ export default function FormatsTables() {
                             }
                         </OrderedList>
 
-                        {/* <Text
-                            fontSize={"18px"}
-                            lineHeight={8}
-                            marginBottom={"30px"}
-                            fontWeight={"medium"}
-                        >
-                            Example of a Skills Summary for a Hybrid Resume
-                        </Text> */}
-
-                        {/* right content */}
-                        {/* <Box
-                            backgroundColor={"#fafafa"}
-                            marginBottom={"30px"}
-                            padding={"20px"}
-                        >
-                            <Text
-                                color={"#35a235"}
-                                fontSize={"40px"}
-                                fontWeight={"semibold"}
-                            >
-                                RIGHT
-                            </Text>
-
-                            <Box
-                                backgroundColor={"rgba(0,0,0,.06)"}
-                                height={"2px"}
-                                width={"100%"}
-                            ></Box>
-
-
-                            <Box>
-                                {
-                                    RESUME_EXAMPLES?.hybridFormatsRights?.map((item, index) => (
-                                        <>
-                                            <Box
-                                                key={index}
-                                            >
-                                                <Text
-                                                    fontSize={"16px"}
-                                                    marginBottom={"20px"}
-                                                    fontWeight={"medium"}
-                                                    padding={"10px 0px 0px 0px"}
-                                                >
-                                                    {item?.title}
-                                                </Text>
-
-                                                <UnorderedList
-                                                    fontSize={"15px"}
-                                                    lineHeight={8}
-                                                    marginBottom={"10px"}
-                                                    padding={"0px 15px"}
-                                                >
-                                                    {
-                                                        item?.data?.map((item, index) => (
-                                                            <>
-                                                                <ListItem
-                                                                    key={index}
-                                                                >
-                                                                    {item?.text}
-                                                                </ListItem>
-                                                            </>
-                                                        ))
-                                                    }
-                                                </UnorderedList>
-                                            </Box>
-                                        </>
-                                    ))
-                                }
-                            </Box>
-                        </Box> */}
-
-
                         <Text
                             fontSize={"15px"}
                             marginBottom={"30px"}
@@ -1939,7 +1559,7 @@ export default function FormatsTables() {
                         <Text
                             fontSize={"15px"}
                             lineHeight={8}
-                            margin={"30px 0px 0px 0px"}
+                            margin={"30px 0px 40px 0px"}
                         >
                             When making a resume in our builder, drag & drop bullet points, skills, and auto-fill the boring stuff. Spell check? Check. Start building a &nbsp;
                             <Link
@@ -1958,8 +1578,8 @@ export default function FormatsTables() {
 
             {/* resume templates container */}
             <Container
-                maxW={["100%", "100%", "80%", "60%"]}
-                padding={"40px 10px 20px 10px"}
+                maxW={"100%"}
+                p={0}
             >
                 <Box
                     position={"relative"}
@@ -2013,7 +1633,8 @@ export default function FormatsTables() {
             {/* resume template container end */}
 
             <Container
-                maxW={["100%", "100%", "80%", "60%"]}
+                maxW={"100%"}
+                p={0}
             >
                 <Box
                     backgroundColor={"#838fa0"}
@@ -2044,7 +1665,8 @@ export default function FormatsTables() {
 
             {/* 4th table heading explain */}
             <Container
-                maxW={["100%", "100%", "80%", "60%"]}
+                maxW={"100%"}
+                p={0}
             >
                 <Box
                     id={"b4"}
@@ -2157,213 +1779,6 @@ export default function FormatsTables() {
                 </Box>
             </Container>
             {/* 4th table heading explain */}
-
-
-            {/* 5th table heading explain */}
-            {/* <Container
-                maxW={["100%", "100%", "80%", "60%"]}
-            >
-                <Box
-                    id={"b5"}
-                >
-                    <ResumeHeading text={"5"} />
-                    
-                    <Text
-                        textAlign={"center"}
-                        fontSize={"30px"}
-                        fontWeight={"medium"}
-                        paddingBottom={"25px"}
-                    >
-                        Bonus Resources (Templates, Layouts, <br />
-                        Examples, and Extra Tips)
-                    </Text>
-                    
-                    <Text
-                        fontSize={"15px"}
-                        marginBottom={"30px"}
-                        lineHeight={8}
-                    >
-                        Resume formatting is a complex issue. Even the term “resume format” itself has multiple meanings.
-                    </Text>
-
-                    <Text
-                        fontSize={"15px"}
-                        marginBottom={"30px"}
-                        lineHeight={8}
-                    >
-                        Whatever it is exactly that you re looking for, here are the guides that will help you find it:
-                    </Text>
-
-                    <UnorderedList
-                        fontSize={"15px"}
-                        lineHeight={8}
-                        marginBottom={"30px"}
-                        padding={"0px 15px"}
-                        fontWeight={"medium"}
-                    >
-                        {
-                            RESUME_FORMATS_EXTRA_TIPS?.data.map((item, index) => (
-                                <>
-                                    <ListItem
-                                        key={index}
-                                    >
-                                        <Link
-                                            color={"#3983fa"}
-                                        >
-                                            {item?.text}
-                                        </Link>
-                                    </ListItem>
-                                </>
-                            ))
-                        }
-                    </UnorderedList>
-
-                    <Text
-                        fontSize={"15px"}
-                        lineHeight={8}
-                        marginBottom={"10px"}
-                    >
-                        Plus, a great cover letter that matches your resume will give you an advantage over other candidates. You can write it in our &nbsp;
-                        <Link
-                            color={"#3983fa"}
-                        >
-                            cover letter builder here
-                        </Link>
-                        . Heres what it may look like:
-                    </Text>
-                </Box>
-            </Container> */}
-
-            {/* resume templates container */}
-            {/* <Container
-                maxW={["100%", "100%", "80%", "60%"]}
-                padding={"40px 10px 20px 10px"}
-            >
-                <Box
-                    position={"relative"}
-                    onMouseEnter={() => setOver(true)}
-                    onMouseLeave={() => setOver(false)}
-                >
-                    <Image
-                        src={"/cover_letter_1.jpg"}
-                        alt={"Image Not Found"}
-                        onMouseEnter={() => setOver(true)}
-                        onMouseLeave={() => setOver(false)}
-                    />
-                    {
-                        over ?
-                            <>
-                                <Box
-                                    margin={"40px 0px 0px 0px"}
-                                    className={styles.resumeTemplateDiv}
-                                    width={["70%", "70%", "50%", "50%", "50%"]}
-                                    onMouseEnter={() => setOver(true)}
-                                    onMouseLeave={() => setOver(false)}
-                                >
-                                    <Link
-                                        href={"/templates"}
-                                        height={["45px", "55px", "55px", "55px"]}
-                                        width={["100%", "100%", "90%", "90%", "70%"]}
-                                        backgroundColor={"#006772"}
-                                        display={"flex"}
-                                        alignItems={"center"}
-                                        justifyContent={"center"}
-                                        color={"#fff"}
-                                        fontSize={["13px", "18px", "18px", "18px", "18px"]}
-                                        borderRadius={"30px 30px"}
-                                        textDecoration={"none"}
-                                        _hover={{
-                                            textDecoration: "none",
-                                            color: "#fff",
-                                            backgroundColor: 'red',
-                                            transition: '0.5s'
-                                        }}
-                                    >
-                                        CREATE MY RESUME NOW
-                                    </Link>
-                                </Box>
-                            </>
-                            :
-                            <></>
-                    }
-                </Box>
-            </Container> */}
-            {/* resume template container end */}
-
-            {/* <Container
-                maxW={["100%", "100%", "80%", "60%"]}
-            >
-                <Box
-                    backgroundColor={"#838fa0"}
-                    background={"#f2f2f2"}
-                    border={"1px solid #000"}
-                    borderRadius={"4px 4px"}
-                    margin={"30px 0px"}
-                >
-                    <Text
-                        padding={"20px 10px"}
-                        textAlign={"center"}
-                        fontSize={"16px"}
-                    >
-                        See more &nbsp;
-                        <Link color={"#3983fa"}>cover letter templates and start writing</Link>.
-                    </Text>
-                </Box>
-
-                <Box>
-                    <Text
-                        marginBottom={"30px"}
-                        fontSize={"30px"}
-                        fontWeight={"medium"}
-                        textAlign={"center"}
-                    >
-                        Key Takeaway
-                    </Text>
-
-                    
-                    <Box>
-                        <Image
-                            src={"/perfect_resume_format.jpg"}
-                            alt={"Image Not Found"}
-                        />
-                    </Box>
-
-                    <Text
-                        fontSize={"16px"}
-                        fontWeight={"bold"}
-                        margin={"30px 0px"}
-                    >
-                        {RESUME_FORMATS_EXTRA_TIPS?.strategies?.title}
-                    </Text>
-
-                    <OrderedList
-                        fontSize={"15px"}
-                        lineHeight={8}
-                        marginBottom={"30px"}
-                        padding={"0px 15px"}
-                    >
-                        {
-                            RESUME_FORMATS_EXTRA_TIPS?.strategies?.data.map((item, index) => (
-                                <>
-                                    <ListItem
-                                        key={index}
-                                    >
-                                        {item?.text}
-                                    </ListItem>
-                                </>
-                            ))
-                        }
-                    </OrderedList>
-
-                    <Text
-                        fontSize={"15px"}
-                        marginBottom={"30px"}
-                    >
-                        {RESUME_FORMATS_EXTRA_TIPS?.strategies?.description}
-                    </Text>
-                </Box>
-            </Container> */}
-            {/* 5th table heading explain */}
         </>
     )
 }

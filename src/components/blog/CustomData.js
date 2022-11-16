@@ -1,3 +1,8 @@
+import { AiOutlineLike, AiOutlineWhatsApp, AiOutlineComment } from "react-icons/ai";
+import { FiFacebook } from "react-icons/fi";
+import { SlSocialLinkedin, SlSocialTwitter } from "react-icons/sl";
+
+
 export const RESUME_NOW = [
     {
         text: "The perfect resume format for 2022 has to pass applicant tracking systems. Show off your value as a future employee. And help recruiters make the right decision—invite you to the interview."
@@ -48,10 +53,6 @@ export const RESUME_TABLE_DATA = {
         title: "Make Sure Your Resume Format Beats the ATS Resume Test",
         link: "b4"
     },
-    // fifthContent: {
-    //     title: "Bonus Resources (Templates, Layouts, Examples, and Extra Tips)",
-    //     link: "b5"
-    // },
 }
 
 export const RESUME_FORMATS = {
@@ -203,34 +204,6 @@ export const RESUME_EXAMPLES = {
             text: "Dont list all your professional responsibilities and accomplishments. Focus on whats important for this particular position. Tailor your resume to the job description."
         },
     ],
-    // rightFormats: [
-    //     {
-    //         text: "Interpreted contract plans and specifications: one-line diagrams, cable and conduit schematics and wiring diagrams."
-    //     },
-    //     {
-    //         text: "Installed and repair electrical systems, wiring, fixtures, motors per plans.Supervised and assigned work to apprentices, electrical helpers, and journey-level electricians."
-    //     },
-    //     {
-    //         text: "Trained and mentored electrical apprentices."
-    //     },
-    //     {
-    //         text: "Diagnosed problems and checked leakages in low and high voltage systems."
-    //     },
-    //     {
-    //         text: "Took the highest level of care for keeping the workplace area safe and organized by implementing the NEC safety regulations and guidelines."
-    //     },
-    //     {
-    //         text: "Installed circuit breaker panels, switches, relays, and grounding leads."
-    //     },
-    // ],
-    // KeyAchievements: [
-    //     {
-    //         text: `Increased efficiency by 33% by identifying our client"s complex wiring issue. Scheduled a repair plan and supervised a team of 6 specialists.`
-    //     },
-    //     {
-    //         text: "Supervised an internal training program, fully trained 11 apprentices."
-    //     }
-    // ],
     skillResumeFormats: {
         istContent: {
             title: "Functional Resume Order of Sections",
@@ -277,35 +250,7 @@ export const RESUME_EXAMPLES = {
             ],
             description: "Have another look at how Thomas did it:"
         },
-        // thirdContent: {
-        //     title: "Example of a Resume Objective + Skills Summary"
-        // }
     },
-    // reportFormats: [
-    //     {
-    //         text: "Your job titles"
-    //     },
-    //     {
-    //         text: "The highest level of responsibility you reached"
-    //     },
-    //     {
-    //         text: "Your career progression."
-    //     },
-    // ],
-    // professionalsFormats: [
-    //     {
-    //         text: "Professionals in creative industries."
-    //     },
-    //     {
-    //         text: "Freelancers without a clear career progression, but with a very solid portfolio."
-    //     },
-    //     {
-    //         text: "Military veterans transmitting into a civilian role."
-    //     },
-    //     {
-    //         text: "Ex-CEOs or high-level execs who dont want to seem overqualified for a lower-level position they need to apply for."
-    //     },
-    // ],
     hybridFormats: [
         {
             text: "Contact information"
@@ -344,53 +289,6 @@ export const RESUME_EXAMPLES = {
         {
             text: "A seasoned business executive."
         },
-    ],
-    hybridFormatsRights: [
-        // {
-        //     title: "Programming and App Development",
-        //     data: [
-        //         {
-        //             text: "Developed and built 20+ mobile apps and 30+ websites providing exceptional user experience."
-        //         },
-        //         {
-        //             text: "Named BCD M&Es “Top Programmer of The Year” for three consecutive years 2009-2011."
-        //         },
-        //         {
-        //             text: "15+ years experience in C#, C++, Java, and Objective-C."
-        //         },
-        //         {
-        //             text: "C Certified Professional Programmer (2006), Objective-C Certified Professional Programmer (2009)."
-        //         },
-        //     ]
-        // },
-        // {
-        //     title: "Leadership",
-        //     data: [
-        //         {
-        //             text: "8+ years experience in team management (teams of 10-50 colleagues) and project coordination."
-        //         },
-        //         {
-        //             text: "Designed and implemented a new IT management model with Apples New York Branch, increasing quarterly productivity by 33% and boosting employee satisfaction by 22%."
-        //         },
-        //         {
-        //             text: "Trained and mentored 50+ junior developers to help them prepare for certification exams (88% success rate)."
-        //         },
-        //     ]
-        // },
-        // {
-        //     title: "Business Management",
-        //     data: [
-        //         {
-        //             text: "Coordinated 20+ projects with budgets over $200,000."
-        //         },
-        //         {
-        //             text: "Optimized procurement processes to reduce BCD M&Es annual costs by 27%."
-        //         },
-        //         {
-        //             text: "Successfully cooperated with sales and marketing teams on new business strategies which helped increase Apple New Yorks sales volume by 23%."
-        //         },
-        //     ]
-        // },
     ],
     recapFormatsTable: {
         tableHeadings: [
@@ -601,3 +499,32 @@ export const RESUME_FORMATS_EXTRA_TIPS = {
         description: "All check? Then you can make any resume format template work for you."
     }
 }
+
+
+export const SIDEBAR_DATA = [
+    {
+        icon: <AiOutlineLike />,
+        like: '566',
+        text: 'likes',
+    },
+    {
+        icon: <FiFacebook />,
+        href: '#',
+    },
+    {
+        icon: <SlSocialLinkedin />,
+        href: '#',
+    },
+    {
+        icon: <SlSocialTwitter />,
+        href: '#',
+    },
+    {
+        icon: <AiOutlineWhatsApp />,
+        href: '#',
+    },
+    {
+        icon: <AiOutlineComment />,
+        text: 'comments',
+    }
+]

@@ -15,7 +15,8 @@ import styles from "../../../styles/resumeFormats.module.css";
 export default function ResumeTable() {
     return (
         <Container
-            maxW={["100%", "100%", "80%", "60%"]}
+            maxW={"100%"}
+            p={0}
         >
             <Box
                 padding={"20px 0px 30px 0px"}
@@ -100,17 +101,6 @@ export default function ResumeTable() {
                             {RESUME_TABLE_DATA?.fourthContent?.title}
                         </Link>
                     </ListItem>
-                    {/* <ListItem>
-                        <Link
-                            className={styles.links}
-                            to={RESUME_TABLE_DATA?.fifthContent?.link}
-                            smooth={true}
-                            duration={800}
-                            offset={0}
-                        >
-                            {RESUME_TABLE_DATA?.fifthContent?.title}
-                        </Link>
-                    </ListItem> */}
                 </OrderedList>
             </Box>
         </Container>
