@@ -18,13 +18,13 @@ const RatingComponent = ({ title, desc, date, name, rating }) => {
   };
 
   const handleClick = (value) => {
-    setCurrentValue(value);
+    console.log("Value", value);
   };
   const handleMouseOver = (value) => {
-    setHoverValue(value);
+    "";
   };
   const handleMouseLeave = () => {
-    setHoverValue(undefined);
+    "";
   };
   return (
     <Box paddingX={4}>

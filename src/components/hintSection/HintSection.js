@@ -7,7 +7,7 @@ import SideBar from "../sideBar/SideBar";
 export default function HintSection() {
   return (
     <div style={{ marginTop: "5%", marginBottom: "5%" }}>
-      <SideBar/>
+      <SideBar />
       <Text
         fontSize={["2.5rem", "2.5rem", "3rem", "3rem", "3rem", "4.5rem"]}
         color="#313B47"
@@ -36,7 +36,7 @@ export default function HintSection() {
       </div>
       <Text
         color="#313B47"
-        fontSize={["1.2rem", "1.5rem","1.8","1.7rem","1.5rem","2.5rem"]}
+        fontSize={["1.2rem", "1.5rem", "1.8", "1.7rem", "1.5rem", "2.5rem"]}
         fontWeight={["400", "400"]}
         align="center"
         pl={["7%", "14%"]}
