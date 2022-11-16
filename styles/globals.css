@@ -330,3 +330,39 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
     -webkit-box-shadow: 0 9px 15px rgb(100 100 123 / 7%);
     box-shadow: 0 9px 15px rgb(100 100 123 / 7%);
   }
+.blog-post--lazy {
+    content-visibility: auto;
+}
+
+.blog-post {
+    position: relative;
+    background-color: white;
+    padding-bottom: 96px;
+}
+.blog-post--with-single-aside .blog-post__content {
+  max-width: 1200px;
+}
+
+.blog-post__content {
+  padding-top: 60px;
+}
+.blog-post__content {
+  margin: 0 auto;
+  max-width: var(--blog-desktop-container-width);
+  width: 100%;
+  padding: 0 var(--blog-desktop-gutter);
+}
+.blog-post__content-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.blog-post__content-main {
+  z-index: 1;
+  min-width: 0;
+}
+.blog-post__content-main-wrapper {
+  font-size: 19px;
+  line-height: 28px;
+  font-family: tt tricks,serif;
+}

@@ -6,6 +6,7 @@ import CommonComponent from "../src/components/resumeExampleData/commonComponent
 import WritingGuides from "../src/components/resumeExampleData/writingGuides/WritingGuides";
 import { data } from "../src/components/resumeExampleData/resumeExampleData";
 import TryResume from "../src/components/resumeExampleData/tryResume/tryResume";
+import BlogPost from "../src/components/resumeExampleData/blogPost/blogPost";
 const ResumeExamples = () => {
   console.log("DATAAAAAAAAAAAAAAA", data);
   return (
@@ -22,6 +23,7 @@ const ResumeExamples = () => {
               return <CommonComponent data={data} key={index} />;
             })}
             <TryResume />
+            <BlogPost />
           </Box>
         </Box>
       </Box>
