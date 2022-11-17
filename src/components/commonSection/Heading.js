@@ -39,7 +39,7 @@ export default function Heading({
     <HStack
       minW={minW ? minW : 250}
       maxW={maxW ? maxW : 250}
-      bg={headBg}
+      bg={headBg ? headBg : ''}
       h={height ? height : 35}
       m={margin ? margin : ''}
       p={padding ? padding : ''}

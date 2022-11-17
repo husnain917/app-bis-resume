@@ -1,4 +1,11 @@
-import { Box, HStack, Input, ListItem, UnorderedList } from '@chakra-ui/react';
+import {
+  Box,
+  HStack,
+  Input,
+  ListItem,
+  UnorderedList,
+  VStack,
+} from '@chakra-ui/react';
 import React from 'react';
 import { connect, useDispatch } from 'react-redux';
 import {
@@ -78,6 +85,7 @@ const Skill = (props) => {
     trailWidth,
     minWText = '130px',
     maxWText = '130px',
+    direction,
     lineStyle,
     parentContainerStyle,
     childContainerStyle,
@@ -91,9 +99,10 @@ const Skill = (props) => {
         removeitem={(index) => _removeItem(index)}
         reorder={(e) => onOrderUpdate(e)}
         renderItem={(item, index) => (
-          <HStack
+          <VStack
             maxW={maxW ? maxW : ''}
             minW={minW ? minW : ''}
+            direction={direction ? direction : 'row'}
             className={`${childContainerStyle ? childContainerStyle : ''}`}
           >
             <Box
@@ -152,7 +161,7 @@ const Skill = (props) => {
                 />
               </>
             )}
-          </HStack>
+          </VStack>
         )}
       />
     </div>

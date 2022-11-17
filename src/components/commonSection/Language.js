@@ -79,6 +79,7 @@ const Language = (props) => {
     minWText = '130px',
     maxWText = '130px',
     direction,
+    lineStyle,
   } = props;
 
   return (
@@ -134,6 +135,7 @@ const Language = (props) => {
                   strokeColor={strokeColor ? strokeColor : '#000'}
                   trailColor={trailColor ? trailColor : 'gray'}
                   trailWidth={trailWidth ? trailWidth : '2px'}
+                  className={`${lineStyle ? lineStyle : ''}`}
                 />
 
                 <Input
