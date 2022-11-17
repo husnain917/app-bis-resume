@@ -385,3 +385,161 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
+.post-banner-cta {
+  position: relative;
+  display: block;
+}
+.post-banner-cta .post-banner-cta--wide {
+  width: 100%;
+  margin: 24px auto 48px;
+}
+.post-banner-cta__main {
+  min-height: 220px;
+  border-radius: 6px 6px 0 0;
+  background-color: var(--beige-10);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 12px 0 24px;
+}
+.post-banner-cta__title--top {
+  display: none;
+  text-align: center;
+  font-size: 19px;
+  line-height: 24px;
+  padding: 0 20px;
+  font-weight: 600;
+}
+.post-banner-cta.post-banner-cta--wide .post-banner-cta__text {
+  padding: 0;
+  text-align: left;
+}
+.post-banner-cta__title {
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.blog-post--with-single-aside .blog-post__content .blog-post__content-aside {
+  width: var(--blog-column-with-gutter-3);
+}
+.blog-post__content-aside--right {
+  margin-left: var(--blog-column-1);
+}
+.blog-post__content-aside {
+  width: calc(var(--blog-column-with-gutter-2) + var(--blog-desktop-gutter-step));
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+}
+.blog-aside {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 96px;
+  display: block;
+  -webkit-transition: opacity .15s ease;
+  transition: opacity .15s ease;
+  width: 100%;
+}
+.blog-aside__item .show {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity .35s ease,visibility 0s;
+  transition: opacity .35s ease,visibility 0s;
+}
+
+.blog-aside__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  visibility: hidden;
+  -webkit-transition: opacity .35s ease,visibility .35s 0s;
+  transition: opacity .35s ease,visibility .35s 0s;
+  will-change: opacity,visibility;
+}
+.post-banner-cta {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+.post-banner-cta:first-child {
+  margin-top: 0;
+}
+.post-banner-cta:last-child {
+  margin-bottom: 0;
+}
+.post-banner-cta__animation {
+  position: relative;
+  margin-bottom: 24px;
+  width: 100%;
+  padding-bottom: 88%;
+  overflow: hidden;
+}
+.post-banner-cta__animation-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.post-banner-cta__animation-frame:nth-child(1) {
+  background-image: url(/assets/media/paper-1df4441….svg);
+  -webkit-animation: fly1 5s linear infinite;
+  animation: fly1 5s linear infinite;
+  -webkit-transition: left .7s ease;
+  transition: left .7s ease;
+}
+.post-banner-cta__animation-frame:nth-child(2) {
+  background-image: url(/assets/media/paper-2ddf017….svg);
+  -webkit-animation: fly2 4s linear infinite;
+  animation: fly2 4s linear infinite;
+  -webkit-transition: left .6s ease;
+  transition: left .6s ease;
+}
+.post-banner-cta__animation-frame:nth-child(3) {
+  background-image: url(/assets/media/girl608127c….svg);
+  -webkit-animation: fly1 3s linear infinite;
+  animation: fly1 3s linear infinite;
+  -webkit-transition: left .3s ease;
+  transition: left .3s ease;
+}
+.post-banner-cta__animation-frame:nth-child(4) {
+  background-image: url(/assets/media/boy82e3ca0….svg);
+  -webkit-animation: fly2 3s .5s linear infinite;
+  animation: fly2 3s .5s linear infinite;
+  -webkit-transition: left .4s ease;
+  transition: left .4s ease;
+}
+.post-banner-cta__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-radius: 0 0 6px 6px;
+  background-color: "red";
+  color: var(--white);
+  font-weight: 600;
+  -webkit-transition: background-color .15s;
+  transition: background-color .15s;
+}

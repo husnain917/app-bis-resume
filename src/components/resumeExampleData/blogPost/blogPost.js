@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Text, Button, Image } from "@chakra-ui/react";
 import YouTube from "react-youtube";
 import Link from "next/link";
 import { PhoneIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BlogPost = () => {
+  useEffect(() => {
+    AOS.init();
+  });
   const opts = {
     height: "390",
     width: "800",
@@ -139,6 +144,30 @@ const BlogPost = () => {
                   <PhoneIcon />
                 </Box>
               </Box>
+              :&nbsp;
+              <Box
+                className=".post-banner-cta .post-banner-cta--wide"
+                marginTop={["40px"]}
+              >
+                <Box className="post-banner-cta__main">
+                  <Box className="post-banner-cta__title--top">
+                    Build your resume in 15 minutes
+                  </Box>
+                </Box>
+                <Box className="post-banner-cta__tex">
+                  <Box className="post-banner-cta__title">
+                    Build your resume in 15 mins
+                  </Box>
+                  <Box>
+                    Use professional field-tested resume templates that follow
+                    the exact ‘resume rules’ employers look for.
+                  </Box>
+                  <Box>
+                    <Text>Create my resume</Text>
+                    <PhoneIcon />
+                  </Box>
+                </Box>
+              </Box>
             </Box>
             <Box
               maxWidth={["375px", "100%", "100%", "100%", "100%"]}
@@ -149,15 +178,39 @@ const BlogPost = () => {
               }}
             ></Box>
           </Box>
-          <Box
-            style={{
-              width: "var(--blog-column-with-gutter-3)",
-              marginLeft: "var(--blog-column-1)",
-              flexShrink: 0,
-              position: "relative",
-            }}
-          >
-            Side Content
+          <Box className="blog-post__content-aside .blog-post__content-aside--right">
+            <Box className="blog-aside" style={{ opacity: "0" }}>
+              <Box className="blog-aside__item .show" position="static">
+                <Box className="post-banner-cta">
+                  <Box className="post-banner-cta__main">
+                    <Box class="post-banner-cta__title post-banner-cta__title--top">
+                      Build your resume in 15 minutes
+                    </Box>
+                    <Box className="post-banner-cta__animation">
+                      <Box class="post-banner-cta__animation-frame"></Box>
+                      <Box class="post-banner-cta__animation-frame"></Box>
+                      <Box class="post-banner-cta__animation-frame"></Box>
+                      <Box class="post-banner-cta__animation-frame"></Box>
+                    </Box>
+                    <Box className="post-banner-cta__text">
+                      <Box className="post-banner-cta__title">
+                        Build your resume in 15 minutes
+                      </Box>
+                      <Box class="post-banner-cta__caption">
+                        Use professional field-tested resume templates that
+                        follow the exact ‘resume rules’ employers look for.
+                      </Box>
+                    </Box>
+                  </Box>
+                  <Box className="post-banner-cta__button">
+                    <Link href="/" mr={2}>
+                      <a>cover letter examples </a>
+                    </Link>
+                    <PhoneIcon />
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Box>

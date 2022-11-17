@@ -88,13 +88,13 @@ const CommonComponent = ({ data }) => {
           </Box>
         </Box>
       </Box>
-      <SimpleGrid columns={[2, null, 4]} spacing={10}>
+      <SimpleGrid columns={[1, null, 4]} spacing={10}>
         {dataForDisplay.map((template, index) => {
           return (
             <Box
               key={index}
               bg={"whitesmoke"}
-              h={["auto", "440px"]}
+              h={["auto", "auto", "100px", "100px", "100px"]}
               padding={"5"}
               borderRadius={"10"}
               _hover={{
