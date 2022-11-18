@@ -59,13 +59,17 @@ export default function Experience(props) {
               customclass={`${Style.date}`}
               path={`${path}.${index}.company`}
             />
-          </Box>
-          <Box maxW={230} minW={230} ml={10}>
             <HybridText
               placeholder="Title/Position"
               value={item.position}
               customclass={`${Style.date}`}
               path={`${path}.${index}.position`}
+            />
+            <HybridText
+              placeholder="Location"
+              value={item.location}
+              customclass={`${Style.profileText}`}
+              path={`${path}.${index}.location`}
             />
             <HybridText
               placeholder="Short Description"

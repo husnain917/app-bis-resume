@@ -4,6 +4,7 @@ import {
     ListItem,
     UnorderedList,
 } from '@chakra-ui/react'
+import { Tooltip } from 'react-tippy';
 import Image from 'next/image';
 import React from 'react'
 import avatar from "../../public/avatar.jpg";
@@ -13,6 +14,7 @@ import {
     FaRegEnvelope,
     FaLocationArrow,
 } from "react-icons/fa";
+import Link from "next/link";
 import FashionCustomHook from "../../src/components/fashionTemp/FashionCustomHook";
 import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import styles from "../../styles/harumiGraphicTemp.module.css";
@@ -26,6 +28,15 @@ export default function harumiGraphicTemp() {
     const { resumeEditor } = FashionCustomHook();
     return (
         <>
+            <Link href={"/templates"}>
+                <div className={styles.swapCont}>
+                    <Tooltip title="Change Template" arrow distance={20}>
+                        <div className={styles.swap}>
+                            <img src="/icons/swap.png" />
+                        </div>
+                    </Tooltip>
+                </div>
+            </Link>
             <Container
                 minW={'70%'}
                 display={'flex'}

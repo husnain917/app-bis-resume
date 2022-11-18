@@ -6,6 +6,8 @@ import {
   UnorderedList,
 } from '@chakra-ui/react'
 import Image from 'next/image';
+import { Tooltip } from 'react-tippy';
+import Link from "next/link";
 import React from 'react'
 import avatar from "../../../public/avatar.jpg";
 import { Text } from "../../../src/components/template1/index";
@@ -26,6 +28,15 @@ export default function digitalMarketingTemp() {
 
   return (
     <>
+      <Link href={"/templates"}>
+        <div className={styles.swapCont}>
+          <Tooltip title="Change Template" arrow distance={20}>
+            <div className={styles.swap}>
+              <img src="/icons/swap.png" />
+            </div>
+          </Tooltip>
+        </div>
+      </Link>
       <Container
         minW={'70%'}
         display={'flex'}

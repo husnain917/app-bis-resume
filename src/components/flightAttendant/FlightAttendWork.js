@@ -10,7 +10,7 @@ import Util from '../../../utils/templateUtils';
 import DndFash from '../../components/fashionTemp5/DndFash';
 import HybridText from '../hybridTemplate/HybridText';
 import Style from './flightAttendant.module.css';
-import { BsFillLayersFill } from 'react-icons/bs';
+import { IoMdJet } from 'react-icons/io';
 const FlightAttendWork = (props) => {
   const dispatch = useDispatch();
   const { data } = props;
@@ -41,7 +41,7 @@ const FlightAttendWork = (props) => {
             minW={'470px'}
             maxW={'470px'}
           >
-            <BsFillLayersFill color="#2A78AB" size={32} />
+            <IoMdJet color="#2A78AB" size={32} />
             <div>
               <HybridText
                 placeholder="Title/Position"

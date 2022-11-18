@@ -7,9 +7,11 @@ const About = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const path = 'achievements.items';
   return (
-    <Box maxW={230}>
+    <Box maxW={270}>
       <HybridText
-        placeholder="Short and Engaging Pitch about Yourself"
+        placeholder="A passionate digital marketer who loves to make plans
+        to introduce products or services to the right people
+        digitally. Eirmod tempor invidunt ut labore."
         customclass={` ${Style.profileText}`}
         value={resumeData?.achievements?.items?.Description}
         path={`${path}.Description`}

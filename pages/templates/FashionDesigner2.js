@@ -22,7 +22,7 @@ import { GiSpiderWeb } from "react-icons/gi";
 import { MdLocationOn } from "react-icons/md";
 import ImageSelector from "../../src/components/imageSelector";
 
-class Manager extends Component {
+class FashionDesigner2 extends Component {
   render() {
     const { resumeData, updater, width } = this.props;
     console.log("resumeData", resumeData);
@@ -99,11 +99,13 @@ class Manager extends Component {
                     <Box>
                       <UnderLineBox />
                     </Box>
-                    <Text
-                      value={resumeData?.aboutMe?.body}
-                      placeholder="Short and engaging pitch about yourself."
-                      path={"aboutMe.body"}
-                    />
+                    <Box mt="3">
+                      <Text
+                        value={resumeData?.aboutMe?.body}
+                        placeholder="Short and engaging pitch about yourself."
+                        path={"aboutMe.body"}
+                      />
+                    </Box>
                   </Box>
                   <Box>
                     <Text
@@ -259,4 +261,4 @@ const mapStateToProps = (store) => ({
   updater: store.editorReducer.updater,
 });
 
-export default connect(mapStateToProps, { onBlurField })(Manager);
+export default connect(mapStateToProps, { onBlurField })(FashionDesigner2);
