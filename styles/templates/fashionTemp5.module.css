@@ -59,7 +59,18 @@
 }
 .parentWork {
   margin-top: 20px;
+  margin-left: 10px;
 }
 .childWork {
   margin-left: 15px;
+}
+.sideMenu {
+  display: flex;
+
+  align-items: flex-start;
+}
+.sideMenuBox {
+  width: 20px;
+  margin-left: -27px;
+  margin-top: 15px;
 }

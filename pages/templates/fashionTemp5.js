@@ -1,12 +1,4 @@
-import { Box, Flex, HStack, Image } from '@chakra-ui/react';
-import { connect } from 'react-redux';
-import FashTemp5Lang from '../../src/components/fashionTemp5/FashTemp5Lang';
-import FashTemp5Profile from '../../src/components/fashionTemp5/FashTemp5Profile';
-import FashTemp5Skill from '../../src/components/fashionTemp5/FashTemp5Skill';
-import { onBlurField } from '../../store/actions/builderAction';
-import FashTemp5About from '../../src/components/fashionTemp5/FashTempAbout';
-import FashTemp5Work from '../../src/components/fashionTemp5/FashTemp5Work';
-import FashTemp5Edu from '../../src/components/fashionTemp5/FashTemp5Edu';
+import { Box, Flex, HStack } from '@chakra-ui/react';
 import style from '../../styles/templates/template1.module.scss';
 import Link from 'next/link';
 import { Tooltip } from 'react-tippy';
@@ -21,205 +13,277 @@ import Profession from '../../src/components/commonSection/Profession';
 import About from '../../src/components/commonSection/About';
 import WorkExperience from '../../src/components/commonSection/WorkExperience';
 import Education from '../../src/components/commonSection/Education';
-const fashionTemp5 = (props) => {
-  const { resumeData } = props;
-  console.log('resumeData:', resumeData);
+import TempLayout from '../../src/components/tempNav/TempLayout';
+import useShow from '../../src/components/tempSectionSide/useShow';
+import SectionSideMenu from '../../src/components/tempSectionSide/SectionSideMenu';
+import {
+  EDUCATION,
+  LANGUAGES,
+  SKILL,
+  WORK,
+} from '../../src/components/tempSectionSide/SectionSideConstant';
+import { useSelector } from 'react-redux';
+const FashionTemp5 = () => {
+  let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const [show, setShow] = useShow();
   return (
     <div className={style.main}>
-      <Link href={'/templates'}>
-        <div className={style.swapCont}>
-          <Tooltip title="Change Template" arrow distance={20}>
-            <div className={style.swap}>
-              <img src="/icons/swap.png" />
-            </div>
-          </Tooltip>
-        </div>
-      </Link>
-      <Flex
-        justifyContent={{ base: 'none', md: 'center' }}
-        bg={{ md: 'none', lg: 'blackAlpha.100' }}
-      >
-        <HStack
-          minW={830}
-          maxW={830}
-          h={'full'}
-          alignItems="stretch"
-          borderRadius={6}
-          bg={'white'}
-          my={10}
-          mx={10}
+      <TempLayout work={true} education={true} languages={true} skills={true}>
+        <Link href={'/templates'}>
+          <div className={style.swapCont}>
+            <Tooltip title="Change Template" arrow distance={20}>
+              <div className={style.swap}>
+                <img src="/icons/swap.png" />
+              </div>
+            </Tooltip>
+          </div>
+        </Link>
+        <Flex
+          justifyContent={{ base: 'none', md: 'center' }}
+          bg={{ md: 'none', lg: 'blackAlpha.100' }}
         >
-          <Box
-            minW={280}
-            maxW={280}
-            bg={'#011A34'}
-            borderLeftRadius={6}
-            px={3}
-            py={5}
+          <HStack
+            minW={830}
+            maxW={830}
+            h={'full'}
+            alignItems="stretch"
+            borderRadius={6}
+            bg={'white'}
+            my={10}
+            mx={10}
+            mt="100px"
           >
-            {/* <Box maxW={250} minW={250} borderRadius="full" ml={2} mt={2} mb={3}>
-              <Image
-                borderRadius={'full'}
-                boxSize="240px"
-                src="/profileDigi.png"
-                alt="Profile"
+            <Box
+              minW={280}
+              maxW={280}
+              bg={'#011A34'}
+              borderLeftRadius={6}
+              pl={'30px'}
+              py={5}
+            >
+              <ImageSection
+                minW={210}
+                maxW={210}
+                minH={210}
+                maxH={210}
+                margin={'0px 0px 0px 3px'}
               />
-            </Box> */}
-            <ImageSection
-              minW={250}
-              maxW={250}
-              minH={250}
-              maxH={250}
-              margin={'0px 0px 0px 3px'}
-            />
-            <Heading
-              title={'CONTACT'}
-              color="#fff"
-              line={true}
-              minW={'full'}
-              lineW={'230px'}
-              margin="15px 0px 0px 15px"
-              lineBg={'#fff'}
-              lineH="3px"
-              fontWeight={700}
-              fontSize={'18px'}
-            />
-            <Contact
-              phone={true}
-              email={true}
-              location={true}
-              heading={true}
-              headingStyle={Classes.contactText}
-              style={Classes.profileText}
-              direction="column"
-              margin="0px 0px 0px 15px"
-              parentStyle={Classes.mt}
-            />
-            <Heading
-              title={'SKILLS'}
-              color="#fff"
-              line={true}
-              minW={'full'}
-              lineW={'230px'}
-              margin="15px 0px 0px 15px"
-              lineBg={'#fff'}
-              lineH="3px"
-              fontWeight={700}
-              fontSize={'18px'}
-            />
-            <Skill
-              skillStyle={Classes.skillText}
-              parentContainerStyle={Classes.ml}
-            />
 
-            {/* <FashTemp5Profile /> */}
-            {/* <FashTemp5Skill
-                data={
-                  resumeData?.skills?.items?.length
-                    ? [...resumeData?.skills?.items]
-                    : [...sampleData?.data?.skills?.items]
-                }
-              /> */}
-            <Heading
-              title={'LANGUAGES'}
-              color="#fff"
-              line={true}
-              minW={'full'}
-              lineW={'230px'}
-              margin="15px 0px 0px 15px"
-              lineBg={'#fff'}
-              lineH="3px"
-              fontWeight={700}
-              fontSize={'18px'}
-            />
-            <Language
-              langStyle={Classes.skillText}
-              langContainerStyle={Classes.ml}
-            />
-          </Box>
-          <Box
-            minW={540}
-            maxW={540}
-            borderRightRadius={6}
-            paddingTop={'60px'}
-            px={6}
-            pb={6}
-          >
-            <Name
-              FName={true}
-              SName={true}
-              FNameStyle={Classes.fashionName}
-              SNameStyle={Classes.fashionName}
-            />
-            <Profession professionStyle={Classes.ProfessionFashion} />
-            <Heading
-              title={'ABOUT ME'}
-              color="#000"
-              line={true}
-              minW={'full'}
-              lineW={'480px'}
-              margin="24px 0px 0px 0px"
-              lineBg={'#000'}
-              lineH="3px"
-              fontWeight={800}
-              fontSize={'25px'}
-            />
-            <About minW={'full'} maxW="full" aboutStyle={Classes.aboutText} />
-            <Heading
-              title={'WORK EXPERIENCE'}
-              color="#000"
-              line={true}
-              minW={'full'}
-              lineW={'480px'}
-              margin="24px 0px 0px 0px"
-              lineBg={'#000'}
-              lineH="3px"
-              fontWeight={800}
-              fontSize={'25px'}
-            />
-            <WorkExperience
-              position={true}
-              date={true}
-              summary={true}
-              sideLine={true}
-              childContainerStyle={Classes.childWork}
-              parentContainerStyle={Classes.parentWork}
-              positionStyle={Classes.workText}
-              dateStyle={Classes.workText}
-              summaryStyle={Classes.summaryText}
-              summary_placeholder="Summary"
-            />
-            <Heading
-              title={'EDUCATION'}
-              color="#000"
-              line={true}
-              minW={'full'}
-              lineW={'480px'}
-              margin="24px 0px 0px 0px"
-              lineBg={'#000'}
-              lineH="3px"
-              fontWeight={800}
-              fontSize={'25px'}
-            />
-            <Education
-              institution={true}
-              date={true}
-              summary={true}
-              institutionStyle={Classes.workText}
-              dateStyle={Classes.workText}
-              summaryStyle={Classes.summaryText}
-              summary_placeholder="Summary"
-              parentContainerStyle={Classes.parentWork}
-            />
-          </Box>
-        </HStack>
-      </Flex>
+              <Heading
+                title={'CONTACT'}
+                color="#fff"
+                line={true}
+                minW={'full'}
+                lineW={'230px'}
+                margin="15px 0px 0px 5px"
+                lineBg={'#fff'}
+                lineH="3px"
+                fontWeight={700}
+                fontSize={'18px'}
+              />
+              <Contact
+                phone={true}
+                email={true}
+                location={true}
+                heading={true}
+                headingStyle={Classes.contactText}
+                style={Classes.profileText}
+                direction="column"
+                margin="0px 0px 0px 5px"
+                parentStyle={Classes.mt}
+              />
+              {resumeData?.skills?.visible && (
+                <div className={Classes.sideMenu}>
+                  <div className={Classes.sideMenuBox}>
+                    {show.skills && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, skills: false })}
+                        bg="#fff"
+                        iconColor={'#011A34'}
+                        onDelete={SKILL}
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <Heading
+                      title={'SKILLS'}
+                      color="#fff"
+                      line={true}
+                      minW={'full'}
+                      lineW={'230px'}
+                      margin="15px 0px 0px 10px"
+                      lineBg={'#fff'}
+                      lineH="3px"
+                      fontWeight={700}
+                      fontSize={'18px'}
+                      onSideSectionShow={() =>
+                        setShow({ ...show, skills: true })
+                      }
+                    />
+                    <Skill
+                      skillStyle={Classes.skillText}
+                      parentContainerStyle={Classes.ml}
+                    />
+                  </div>
+                </div>
+              )}
+              {resumeData?.languages?.visible && (
+                <div className={Classes.sideMenu}>
+                  <div className={Classes.sideMenuBox}>
+                    {show.languages && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, languages: false })}
+                        bg="#fff"
+                        iconColor={'#011A34'}
+                        onDelete={LANGUAGES}
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <Heading
+                      title={'LANGUAGES'}
+                      color="#fff"
+                      line={true}
+                      minW={'full'}
+                      lineW={'230px'}
+                      margin="15px 0px 0px 10px"
+                      lineBg={'#fff'}
+                      lineH="3px"
+                      fontWeight={700}
+                      fontSize={'18px'}
+                      onSideSectionShow={() =>
+                        setShow({ ...show, languages: true })
+                      }
+                    />
+                    <Language
+                      langStyle={Classes.skillText}
+                      langContainerStyle={Classes.ml}
+                    />
+                  </div>
+                </div>
+              )}
+            </Box>
+            <Box
+              minW={540}
+              maxW={540}
+              borderRightRadius={6}
+              paddingTop={'60px'}
+              px={6}
+              pb={6}
+            >
+              <Name
+                FName={true}
+                SName={true}
+                FNameStyle={Classes.fashionName}
+                SNameStyle={Classes.fashionName}
+              />
+              <Profession professionStyle={Classes.ProfessionFashion} />
+              <Heading
+                title={'ABOUT ME'}
+                color="#000"
+                line={true}
+                minW={'full'}
+                lineW={'480px'}
+                margin="24px 0px 0px 0px"
+                lineBg={'#000'}
+                lineH="3px"
+                fontWeight={800}
+                fontSize={'25px'}
+              />
+              <About minW={'full'} maxW="full" aboutStyle={Classes.aboutText} />
+              {resumeData?.work?.visible && (
+                <div className={Classes.sideMenu}>
+                  <div
+                    className={Classes.sideMenuBox}
+                    style={{ marginTop: '30px' }}
+                  >
+                    {show.work && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, work: false })}
+                        bg="#011A34"
+                        iconColor={'#fff'}
+                        onDelete={WORK}
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <Heading
+                      title={'WORK EXPERIENCE'}
+                      color="#000"
+                      line={true}
+                      minW={'full'}
+                      lineW={'480px'}
+                      margin="24px 0px 0px 10px"
+                      lineBg={'#000'}
+                      lineH="3px"
+                      fontWeight={800}
+                      fontSize={'25px'}
+                      onSideSectionShow={() => setShow({ ...show, work: true })}
+                    />
+                    <WorkExperience
+                      position={true}
+                      date={true}
+                      summary={true}
+                      sideLine={true}
+                      childContainerStyle={Classes.childWork}
+                      parentContainerStyle={Classes.parentWork}
+                      positionStyle={Classes.workText}
+                      dateStyle={Classes.workText}
+                      summaryStyle={Classes.summaryText}
+                      summary_placeholder="Summary"
+                    />
+                  </div>
+                </div>
+              )}
+              {resumeData?.education?.visible && (
+                <div className={Classes.sideMenu}>
+                  <div
+                    className={Classes.sideMenuBox}
+                    style={{ marginTop: '30px' }}
+                  >
+                    {show.education && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, education: false })}
+                        bg="#011A34"
+                        iconColor={'#fff'}
+                        onDelete={EDUCATION}
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <Heading
+                      title={'EDUCATION'}
+                      color="#000"
+                      line={true}
+                      minW={'full'}
+                      lineW={'480px'}
+                      margin="24px 0px 0px 10px"
+                      lineBg={'#000'}
+                      lineH="3px"
+                      fontWeight={800}
+                      fontSize={'25px'}
+                      onSideSectionShow={() =>
+                        setShow({ ...show, education: true })
+                      }
+                    />
+                    <Education
+                      institution={true}
+                      date={true}
+                      summary={true}
+                      institutionStyle={Classes.workText}
+                      dateStyle={Classes.workText}
+                      summaryStyle={Classes.summaryText}
+                      summary_placeholder="Summary"
+                      parentContainerStyle={Classes.parentWork}
+                    />
+                  </div>
+                </div>
+              )}
+            </Box>
+          </HStack>
+        </Flex>
+      </TempLayout>
     </div>
   );
 };
-const mapStateToProps = (store) => ({
-  theme: store.editorReducer.theme,
-  resumeData: store.editorReducer.resumeData,
-  updater: store.editorReducer.updater,
-});
-export default connect(mapStateToProps, { onBlurField })(fashionTemp5);
+export default FashionTemp5;

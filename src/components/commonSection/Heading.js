@@ -49,6 +49,7 @@ export default function Heading({
       borderLeft={borderLeft ? borderLeft : ''}
       borderRadius={borderRadius ? borderRadius : ''}
       onClick={onSideSectionShow}
+      cursor={onSideSectionShow && 'pointer'}
       // alignItems={alignItems ? alignItems : ''}
       // justifyContent={justifyContent ? justifyContent : ''}
     >
