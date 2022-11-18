@@ -67,6 +67,7 @@ const Language = (props) => {
     langStyle,
     percentageStyle,
     langContainerStyle,
+    childContainerStyle,
     minW,
     maxW,
     rating,
@@ -94,6 +95,7 @@ const Language = (props) => {
             direction={direction ? direction : 'row'}
             minW={minW ? minW : ''}
             maxW={maxW ? maxW : ''}
+            className={`${childContainerStyle ? childContainerStyle : ''}`}
           >
             <Box
               minW={(rating || progressBar) && minWText}
@@ -108,7 +110,7 @@ const Language = (props) => {
                 />
               ) : (
                 <UnorderedList>
-                  <ListItem>
+                  <ListItem className={`${langStyle}`}>
                     <Text
                       value={item.title}
                       placeholder={

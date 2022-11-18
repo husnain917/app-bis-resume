@@ -15,6 +15,12 @@ import Heading from '../../src/components/commonSection/Heading';
 import Contact from '../../src/components/commonSection/Contact';
 import Classes from '../../styles/templates/fashionTemp5.module.css';
 import Skill from '../../src/components/commonSection/Skill';
+import Language from '../../src/components/commonSection/Language';
+import Name from '../../src/components/commonSection/Name';
+import Profession from '../../src/components/commonSection/Profession';
+import About from '../../src/components/commonSection/About';
+import WorkExperience from '../../src/components/commonSection/WorkExperience';
+import Education from '../../src/components/commonSection/Education';
 const fashionTemp5 = (props) => {
   const { resumeData } = props;
   console.log('resumeData:', resumeData);
@@ -72,7 +78,7 @@ const fashionTemp5 = (props) => {
               line={true}
               minW={'full'}
               lineW={'230px'}
-              margin="0px 0px 0px 15px"
+              margin="15px 0px 0px 15px"
               lineBg={'#fff'}
               lineH="3px"
               fontWeight={700}
@@ -95,30 +101,41 @@ const fashionTemp5 = (props) => {
               line={true}
               minW={'full'}
               lineW={'230px'}
-              margin="0px 0px 0px 15px"
+              margin="15px 0px 0px 15px"
               lineBg={'#fff'}
               lineH="3px"
               fontWeight={700}
               fontSize={'18px'}
             />
-            <Skill skillStyle={Classes.skillText} />
-            <Box ml={4} mt={6} mr={2}>
-              {/* <FashTemp5Profile /> */}
-              <FashTemp5Skill
+            <Skill
+              skillStyle={Classes.skillText}
+              parentContainerStyle={Classes.ml}
+            />
+
+            {/* <FashTemp5Profile /> */}
+            {/* <FashTemp5Skill
                 data={
                   resumeData?.skills?.items?.length
                     ? [...resumeData?.skills?.items]
                     : [...sampleData?.data?.skills?.items]
                 }
-              />
-              <FashTemp5Lang
-                data={
-                  resumeData?.languages?.items
-                    ? [...resumeData?.languages?.items]
-                    : [...sampleData?.data?.languages?.items]
-                }
-              />
-            </Box>
+              /> */}
+            <Heading
+              title={'LANGUAGES'}
+              color="#fff"
+              line={true}
+              minW={'full'}
+              lineW={'230px'}
+              margin="15px 0px 0px 15px"
+              lineBg={'#fff'}
+              lineH="3px"
+              fontWeight={700}
+              fontSize={'18px'}
+            />
+            <Language
+              langStyle={Classes.skillText}
+              langContainerStyle={Classes.ml}
+            />
           </Box>
           <Box
             minW={540}
@@ -128,20 +145,71 @@ const fashionTemp5 = (props) => {
             px={6}
             pb={6}
           >
-            <FashTemp5About />
-            <FashTemp5Work
-              data={
-                resumeData?.work?.items.length
-                  ? [...resumeData?.work?.items]
-                  : [...sampleData?.data?.work?.items]
-              }
+            <Name
+              FName={true}
+              SName={true}
+              FNameStyle={Classes.fashionName}
+              SNameStyle={Classes.fashionName}
             />
-            <FashTemp5Edu
-              data={
-                resumeData?.education?.items.length
-                  ? [...resumeData?.education?.items]
-                  : [...sampleData?.data?.education?.items]
-              }
+            <Profession professionStyle={Classes.ProfessionFashion} />
+            <Heading
+              title={'ABOUT ME'}
+              color="#000"
+              line={true}
+              minW={'full'}
+              lineW={'480px'}
+              margin="24px 0px 0px 0px"
+              lineBg={'#000'}
+              lineH="3px"
+              fontWeight={800}
+              fontSize={'25px'}
+            />
+            <About minW={'full'} maxW="full" aboutStyle={Classes.aboutText} />
+            <Heading
+              title={'WORK EXPERIENCE'}
+              color="#000"
+              line={true}
+              minW={'full'}
+              lineW={'480px'}
+              margin="24px 0px 0px 0px"
+              lineBg={'#000'}
+              lineH="3px"
+              fontWeight={800}
+              fontSize={'25px'}
+            />
+            <WorkExperience
+              position={true}
+              date={true}
+              summary={true}
+              sideLine={true}
+              childContainerStyle={Classes.childWork}
+              parentContainerStyle={Classes.parentWork}
+              positionStyle={Classes.workText}
+              dateStyle={Classes.workText}
+              summaryStyle={Classes.summaryText}
+              summary_placeholder="Summary"
+            />
+            <Heading
+              title={'EDUCATION'}
+              color="#000"
+              line={true}
+              minW={'full'}
+              lineW={'480px'}
+              margin="24px 0px 0px 0px"
+              lineBg={'#000'}
+              lineH="3px"
+              fontWeight={800}
+              fontSize={'25px'}
+            />
+            <Education
+              institution={true}
+              date={true}
+              summary={true}
+              institutionStyle={Classes.workText}
+              dateStyle={Classes.workText}
+              summaryStyle={Classes.summaryText}
+              summary_placeholder="Summary"
+              parentContainerStyle={Classes.parentWork}
             />
           </Box>
         </HStack>

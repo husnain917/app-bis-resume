@@ -64,6 +64,8 @@ const WorkExperience = (props) => {
     DndDirection,
     icon,
     iconShow,
+    sideLine,
+    lineColor,
   } = props;
 
   return (
@@ -77,9 +79,22 @@ const WorkExperience = (props) => {
         renderItem={(item, index) => (
           <div
             className={`${childContainerStyle ? childContainerStyle : ''}`}
-            style={{ display: 'flex' }}
+            style={{ display: 'flex', alignItems: sideLine && 'stretch' }}
           >
             {iconShow && React.createElement(icon)}
+            {sideLine && (
+              <Box w={1} bg={lineColor ? lineColor : '#06213D'} ml={-3} mr={4}>
+                <Box
+                  h={4}
+                  w={4}
+                  bg={lineColor ? lineColor : '#06213D'}
+                  borderRadius="full"
+                  mr={4}
+                  ml={-1.5}
+                  mt={-1}
+                ></Box>
+              </Box>
+            )}
             <VStack justifyContent={'flex-start'} alignItems="flex-start">
               <Stack direction={direction ? direction : 'column'}>
                 {position && (
