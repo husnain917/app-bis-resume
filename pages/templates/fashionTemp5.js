@@ -10,6 +10,11 @@ import FashTemp5Edu from '../../src/components/fashionTemp5/FashTemp5Edu';
 import style from '../../styles/templates/template1.module.scss';
 import Link from 'next/link';
 import { Tooltip } from 'react-tippy';
+import ImageSection from '../../src/components/commonSection/ImageSection';
+import Heading from '../../src/components/commonSection/Heading';
+import Contact from '../../src/components/commonSection/Contact';
+import Classes from '../../styles/templates/fashionTemp5.module.css';
+import Skill from '../../src/components/commonSection/Skill';
 const fashionTemp5 = (props) => {
   const { resumeData } = props;
   console.log('resumeData:', resumeData);
@@ -46,16 +51,59 @@ const fashionTemp5 = (props) => {
             px={3}
             py={5}
           >
-            <Box maxW={250} minW={250} borderRadius="full" ml={2} mt={2} mb={3}>
+            {/* <Box maxW={250} minW={250} borderRadius="full" ml={2} mt={2} mb={3}>
               <Image
                 borderRadius={'full'}
                 boxSize="240px"
                 src="/profileDigi.png"
                 alt="Profile"
               />
-            </Box>
+            </Box> */}
+            <ImageSection
+              minW={250}
+              maxW={250}
+              minH={250}
+              maxH={250}
+              margin={'0px 0px 0px 3px'}
+            />
+            <Heading
+              title={'CONTACT'}
+              color="#fff"
+              line={true}
+              minW={'full'}
+              lineW={'230px'}
+              margin="0px 0px 0px 15px"
+              lineBg={'#fff'}
+              lineH="3px"
+              fontWeight={700}
+              fontSize={'18px'}
+            />
+            <Contact
+              phone={true}
+              email={true}
+              location={true}
+              heading={true}
+              headingStyle={Classes.contactText}
+              style={Classes.profileText}
+              direction="column"
+              margin="0px 0px 0px 15px"
+              parentStyle={Classes.mt}
+            />
+            <Heading
+              title={'SKILLS'}
+              color="#fff"
+              line={true}
+              minW={'full'}
+              lineW={'230px'}
+              margin="0px 0px 0px 15px"
+              lineBg={'#fff'}
+              lineH="3px"
+              fontWeight={700}
+              fontSize={'18px'}
+            />
+            <Skill skillStyle={Classes.skillText} />
             <Box ml={4} mt={6} mr={2}>
-              <FashTemp5Profile />
+              {/* <FashTemp5Profile /> */}
               <FashTemp5Skill
                 data={
                   resumeData?.skills?.items?.length
