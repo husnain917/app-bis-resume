@@ -40,6 +40,9 @@ const FashionTemp5 = () => {
         </Link>
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
+          overflow="auto"
+          flexDir={'column'}
+          alignItems={{ sm: 'none', md: 'center' }}
           bg={{ md: 'none', lg: 'blackAlpha.100' }}
         >
           <HStack
@@ -75,7 +78,7 @@ const FashionTemp5 = () => {
                 line={true}
                 minW={'full'}
                 lineW={'230px'}
-                margin="15px 0px 0px 5px"
+                margin="30px 0px 0px 5px"
                 lineBg={'#fff'}
                 lineH="3px"
                 fontWeight={700}
@@ -167,7 +170,7 @@ const FashionTemp5 = () => {
               minW={540}
               maxW={540}
               borderRightRadius={6}
-              paddingTop={'60px'}
+              paddingTop={'37px'}
               px={6}
               pb={6}
             >
@@ -212,7 +215,7 @@ const FashionTemp5 = () => {
                       color="#000"
                       line={true}
                       minW={'full'}
-                      lineW={'480px'}
+                      lineW={'477px'}
                       margin="24px 0px 0px 10px"
                       lineBg={'#000'}
                       lineH="3px"
