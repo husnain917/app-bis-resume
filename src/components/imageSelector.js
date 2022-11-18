@@ -64,16 +64,16 @@ const ImageSelector = ({
                 background={"white"}
                 ref={uploadedImage}
                 alt=""
-                // width="100"
                 borderRadius={borderRadius || "50%"}
                 borderWidth={borderWidth || "4"}
                 borderColor={borderColor || "rgba(255,255,255,0)"}
-                // maxHeight={maxHeight || "8em"}
-                // overflow={"hidden"}
                 minHeight={minHeight || "15.7em"}
                 maxHeight={maxHeight || "15.7em"}
                 minWidth={minWidth || "15.7em"}
                 maxWidth={maxWidth || "15.7em"}
+                style={{
+                  objectFit: "contain",
+                }}
               />
             </Box>
           </Box>
