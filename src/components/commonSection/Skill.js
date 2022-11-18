@@ -3,6 +3,7 @@ import {
   HStack,
   Input,
   ListItem,
+  Stack,
   UnorderedList,
   VStack,
 } from '@chakra-ui/react';
@@ -99,13 +100,11 @@ const Skill = (props) => {
         removeitem={(index) => _removeItem(index)}
         reorder={(e) => onOrderUpdate(e)}
         renderItem={(item, index) => (
-          <VStack
+          <Stack
             maxW={maxW ? maxW : ''}
             minW={minW ? minW : ''}
             direction={direction ? direction : 'row'}
             className={`${childContainerStyle ? childContainerStyle : ''}`}
-            justifyContent="flex-start"
-            alignItems={'flex-start'}
           >
             <Box
               minW={(rating || progressBar) && minWText}
@@ -163,7 +162,7 @@ const Skill = (props) => {
                 />
               </>
             )}
-          </VStack>
+          </Stack>
         )}
       />
     </div>
