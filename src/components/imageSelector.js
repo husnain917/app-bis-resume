@@ -72,7 +72,9 @@ const ImageSelector = ({
                 minWidth={minWidth || "15.7em"}
                 maxWidth={maxWidth || "15.7em"}
                 style={{
-                  objectFit: "contain",
+                  // objectFit: "cover",
+                  objectPosition: "center",
+                  // objectFit: "contain",
                 }}
               />
             </Box>
