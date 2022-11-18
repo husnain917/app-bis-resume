@@ -40,6 +40,7 @@ const Contact = (props) => {
     justifyContent,
     alignItem,
     margin,
+    parentStyle,
   } = props;
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const CircleDesign = ({ icon }) => (
@@ -59,7 +60,7 @@ const Contact = (props) => {
   const Heading = ({ text }) => (
     <>
       {heading && (
-        <ChakraText className={`${headingStyle}`}>{text}:</ChakraText>
+        <ChakraText className={`${headingStyle}`}>{text} :</ChakraText>
       )}
     </>
   );
@@ -69,6 +70,7 @@ const Contact = (props) => {
       flexDir={parentDirection ? parentDirection : 'column'}
       justifyContent={justifyContent ? justifyContent : 'normal'}
       alignItems={alignItem ? alignItem : 'normal'}
+      className={`${parentStyle ? parentStyle : ''}`}
     >
       {phone && (
         <>

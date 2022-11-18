@@ -104,6 +104,8 @@ const Skill = (props) => {
             minW={minW ? minW : ''}
             direction={direction ? direction : 'row'}
             className={`${childContainerStyle ? childContainerStyle : ''}`}
+            justifyContent="flex-start"
+            alignItems={'flex-start'}
           >
             <Box
               minW={(rating || progressBar) && minWText}
