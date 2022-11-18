@@ -75,6 +75,7 @@ const ImageSelector = ({
                   // objectFit: "cover",
                   objectPosition: "center",
                   // objectFit: "contain",
+                  border: "1px solid #34495e",
                 }}
               />
             </Box>
