@@ -59,10 +59,17 @@ class Manager extends Component {
                   marginTop="10"
                 ></Box>
               </Box>
-              <Box display="flex" alignItems="center" justifyContent="center">
+              <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                maxHeight={"20px"}
+              >
                 <ImageSelector
-                  height={"12em"}
-                  width={"12em"}
+                  maxHeight={"12em"}
+                  maxWidth={"12em"}
+                  minHeight={"12em"}
+                  minWidth={"12em"}
                   marginLeft={"10px"}
                   marginTop={"-70%"}
                 />
