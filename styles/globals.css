@@ -359,7 +359,6 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 }
 .blog-post__content-main {
   z-index: 1;
-  min-width: 0;
 }
 .blog-post__content-main-wrapper {
   font-size: 19px;
@@ -543,3 +542,55 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   -webkit-transition: background-color .15s;
   transition: background-color .15s;
 }
+.App {
+  font-family: sans-serif;
+  /* text-align: center; */
+  background-color: #f6f9fe;
+  height: 100vh;
+}
+
+.image-item {
+  display: flex;
+  margin: 10px 0;
+}
+.image-item__btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+button {
+  height: 40px;
+}
+.pic_container{
+  border: 2px solid black;
+  border-radius: 50%;
+}
+.pic_container:hover{
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+}
+.hide {
+  display: none;
+}
+.hide:hover{
+  display: block;
+}
+.imageHidden{
+  display: none;
+}
+.p-image {
+  position: absolute;
+  top: 167px;
+  right: 30px;
+  color: #666666;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+/* .blog-post__content-main-wrapper .js-wide-element {
+  position: relative;
+  width: calc((var(--vw) * 100) - 80px);
+  max-width: 1400px;
+  position: relative;
+  z-index: 10;
+} */

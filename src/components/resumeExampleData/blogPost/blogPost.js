@@ -106,77 +106,90 @@ const BlogPost = () => {
                 some basic rules to help you pick the correct sample that best
                 suits the hiring manager’s needs.
               </p>
-            </Box>
-            <Box
-              style={{
-                width: "calc((var(--vw) * 100) - 70px)",
-                position: "relative",
-                zIndex: 10,
-                maxWidth: "1130px",
-              }}
-            >
               <Box
-                height={["260px"]}
-                className={
-                  "compare-resumes__view .compare-resumes__view--ready"
-                }
+                transform={["translateX(0)", "", "", "translateX(0)"]}
+                left={["12px", "12px", "0", "0", "0"]}
+                // maxWidth={["1130px", "1130px", "1130px", "1120px", "1120px"]}
+                position={["relative", "relative", "", "", ""]}
+                zIndex={["10", "10", "", "", ""]}
+                margin={["24px 0", "24px 0", "0px", "44px 0", "0px"]}
+                bg={"gray"}
               >
-                <Box className="cursor">
-                  <Link href="/templates/templateCEO">
-                    <img
-                      src="Chief_Exclusive_Office.jpg"
-                      alt="Chief_Exclusive_Office"
-                      height="200px"
-                      width="250px"
+                <Box
+                  width={"100%"}
+                  display={"flex"}
+                  position={"relative"}
+                  justifyContent={"space-around"}
+                >
+                  <Box className="cursor">
+                    <Link href="/templates/templateCEO">
+                      <img
+                        src="Chief_Exclusive_Office.jpg"
+                        alt="Chief_Exclusive_Office"
+                        height="300em"
+                        width="350em"
+                      />
+                    </Link>
+                    <PhoneIcon
+                      color={"red"}
+                      h={20}
+                      w={20}
+                      position={"relative"}
                     />
-                  </Link>
-                  <PhoneIcon />
+                  </Box>
+                  <Box className="cursor">
+                    <Link href="/templates/templateCEO">
+                      <img
+                        src="Chief_Exclusive_Office.jpg"
+                        alt="Chief_Exclusive_Office"
+                        height="300em"
+                        width="350em"
+                        left={0}
+                        marginTop={"-70px"}
+                      />
+                    </Link>
+                    <PhoneIcon
+                      color={"red"}
+                      h={20}
+                      w={20}
+                      position={"absolute"}
+                    />
+                  </Box>
                 </Box>
-                <Box className="cursor">
-                  <Link href="/templates/templateCEO">
-                    <img
-                      src="Chief_Exclusive_Office.jpg"
-                      alt="Chief_Exclusive_Office"
-                      height="200px"
-                      width="250px"
-                    />
-                  </Link>
-                  <PhoneIcon />
+                :&nbsp;
+                <Box
+                  className=".post-banner-cta .post-banner-cta--wide"
+                  marginTop={["40px"]}
+                >
+                  <Box className="post-banner-cta__main">
+                    <Box className="post-banner-cta__title--top">
+                      Build your resume in 15 minutes
+                    </Box>
+                  </Box>
+                  <Box className="post-banner-cta__tex">
+                    <Box className="post-banner-cta__title">
+                      Build your resume in 15 mins
+                    </Box>
+                    <Box>
+                      Use professional field-tested resume templates that follow
+                      the exact ‘resume rules’ employers look for.
+                    </Box>
+                    <Box>
+                      <Text>Create my resume</Text>
+                      <PhoneIcon color={"red"} h={20} w={20} />
+                    </Box>
+                  </Box>
                 </Box>
               </Box>
-              :&nbsp;
-              <Box
-                className=".post-banner-cta .post-banner-cta--wide"
-                marginTop={["40px"]}
-              >
-                <Box className="post-banner-cta__main">
-                  <Box className="post-banner-cta__title--top">
-                    Build your resume in 15 minutes
-                  </Box>
-                </Box>
-                <Box className="post-banner-cta__tex">
-                  <Box className="post-banner-cta__title">
-                    Build your resume in 15 mins
-                  </Box>
-                  <Box>
-                    Use professional field-tested resume templates that follow
-                    the exact ‘resume rules’ employers look for.
-                  </Box>
-                  <Box>
-                    <Text>Create my resume</Text>
-                    <PhoneIcon />
-                  </Box>
-                </Box>
-              </Box>
             </Box>
-            <Box
+            {/* <Box
               maxWidth={["375px", "100%", "100%", "100%", "100%"]}
               marginTop={["0px", "0px", "0px", "40px", "40px"]}
               style={{
                 width: "100%",
                 margin: "24px auto 48px",
               }}
-            ></Box>
+            ></Box> */}
           </Box>
           <Box className="blog-post__content-aside .blog-post__content-aside--right">
             <Box className="blog-aside" style={{ opacity: "0" }}>

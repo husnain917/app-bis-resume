@@ -29,7 +29,7 @@ export const sampleData = {
       enable: false,
       heading: 'Honors & Awards',
       items: [],
-      visible: false,
+      visible: true,
     },
     certifications: {
       heading: 'Certifications',
@@ -46,7 +46,7 @@ export const sampleData = {
           endDate: '',
         },
       ],
-      visible: false,
+      visible: true,
     },
     education: {
       enable: true,
@@ -103,7 +103,7 @@ export const sampleData = {
     languages: {
       enable: true,
       heading: 'Languages',
-      items: [{}],
+      items: [{ title: '' }],
       visible: true,
     },
     military: {
@@ -242,7 +242,7 @@ export const sampleData = {
           Summary: '',
         },
       ],
-      visible: false,
+      visible: true,
     },
     publications: {
       heading: 'Publications',
@@ -269,6 +269,7 @@ export const sampleData = {
           email: '',
         },
       ],
+      visible: true,
     },
     security_creds: {
       heading: 'Security Credentials',
@@ -349,6 +350,7 @@ export const sampleData = {
           endDate: '',
         },
       ],
+      visible: true,
     },
   },
   oid: '5fb681c7c8d2ca429821d3d2',

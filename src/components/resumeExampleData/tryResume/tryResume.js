@@ -8,7 +8,8 @@ const TryResume = () => {
       py={["48px", "48px", "64px", "80px", "80px"]}
       overflow={"hidden"}
       bg={"#EFF2F9"}
-      height={"14%"}
+      height={"35em"}
+      mb={"2em"}
     >
       <Box
         px={["22px", "22px", "32px", "44px", "44px"]}

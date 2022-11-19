@@ -18,6 +18,7 @@ const SearchBar = () => {
       margin={"0 0 68px"}
       padding={"0"}
       borderRadius={"4px"}
+      zIndex={100}
     >
       <InputGroup borderWidth={1} borderRadius={"4px"} borderColor={"blue.600"}>
         <InputLeftElement
