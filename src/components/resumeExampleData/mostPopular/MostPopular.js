@@ -3,6 +3,7 @@ import { Box, Text, Button, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { popularData } from "../resumeExampleData";
 
 import {
   PhoneIcon,
@@ -41,7 +42,7 @@ const imagesArr = [
 ];
 const MostPopular = () => {
   const swiperRef = useRef();
-  console.log("Swiper", swiperRef);
+  // console.log("Swiper", swiperRef);
   const settings = {
     infinite: true,
     speed: 300,
@@ -49,6 +50,7 @@ const MostPopular = () => {
     slidesToScroll: 2,
     autoplay: true,
   };
+  console.log("mostPopular", popularData);
   return (
     <Box overflow={["visible", "visible", "hidden"]}>
       <Box
@@ -70,7 +72,7 @@ const MostPopular = () => {
             fontWeight={"400"}
             transition={"color .15s"}
           >
-            {"Most Popular"}
+            {}
           </Box>
         </Box>
         <Box display={["none", "none", "flex", "flex", "flex"]}>
@@ -165,6 +167,7 @@ const MostPopular = () => {
                 return (
                   <SwiperSlide key={index}>
                     <Image src={img.src} alt={img.alt} />
+                    console
                   </SwiperSlide>
                 );
               })}

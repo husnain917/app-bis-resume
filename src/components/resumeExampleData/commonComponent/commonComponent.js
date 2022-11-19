@@ -12,7 +12,7 @@ import {
 
 const CommonComponent = ({ data }) => {
   const [expanded, setExpanded] = useState(false);
-  console.log("DATAAA", data);
+  // console.log("DATAAA", data);
 
   const imagesArr = [
     {
@@ -95,7 +95,7 @@ const CommonComponent = ({ data }) => {
       </Box>
       <SimpleGrid columns={[2, null, 4]} spacing={10}>
         {dataForDisplay.map((template, index) => {
-          console.log("TEMPLETE", template);
+          // console.log("TEMPLETE", template);
           return (
             <Box
               key={index}
