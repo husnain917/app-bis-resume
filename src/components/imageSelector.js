@@ -10,6 +10,10 @@ const ImageSelector = ({
   borderRadius,
   borderWidth,
   borderColor,
+  maxHeight,
+  maxWidth,
+  minHeight,
+  minWidth,
 }) => {
   useEffect(() => {
     console.log("Height", height, "Width", width);
@@ -22,6 +26,7 @@ const ImageSelector = ({
   const handleImageUpload = (e) => {
     const [file] = e.target.files;
     if (file) {
+      console.log("FileWidth: " + file.width);
       setIsImage(1);
       const reader = new FileReader();
       const { current } = uploadedImage;
@@ -36,17 +41,12 @@ const ImageSelector = ({
   return (
     <Box>
       <Box
-        // position={"absolute"}
         marginTop={marginTop || ""}
         marginLeft={marginLeft || ""}
         marginBottom={marginBottom || ""}
       >
         <Box>
-          <Box
-            className="pic_container"
-            width={width || "16em"}
-            marginTop={marginTop || ""}
-          >
+          <Box className="pic_container" marginTop={marginTop || ""}>
             <Box className="p-image">
               <input
                 type="file"
@@ -60,13 +60,23 @@ const ImageSelector = ({
 
             <Box onClick={() => imageUploader.current.click()}>
               <Image
-                src="/UploadImage.jpg"
+                src="/uploadpic1.png"
+                background={"white"}
                 ref={uploadedImage}
                 alt=""
-                width="100"
                 borderRadius={borderRadius || "50%"}
                 borderWidth={borderWidth || "4"}
                 borderColor={borderColor || "rgba(255,255,255,0)"}
+                minHeight={minHeight || "15.7em"}
+                maxHeight={maxHeight || "15.7em"}
+                minWidth={minWidth || "15.7em"}
+                maxWidth={maxWidth || "15.7em"}
+                style={{
+                  // objectFit: "cover",
+                  objectPosition: "center",
+                  // objectFit: "contain",
+                  border: "1px solid #34495e",
+                }}
               />
             </Box>
           </Box>
