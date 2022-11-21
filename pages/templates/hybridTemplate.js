@@ -37,6 +37,7 @@ import {
   SKILL,
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
+import ImageSelector from '../../src/components/imageSelector';
 
 const HybridTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
@@ -85,7 +86,13 @@ const HybridTemplate = () => {
           >
             <HStack>
               {/* Image Section  */}
-              <ImageSection margin=" 0px 0px 0px 40px" />
+              <ImageSelector
+                minWidth={150}
+                maxWidth={150}
+                minHeight={150}
+                maxHeight={150}
+                marginLeft="40px"
+              />
               <Box>
                 <Name
                   FName={true}
@@ -144,8 +151,11 @@ const HybridTemplate = () => {
                 <Box pl={8}>
                   {/* Education Section  */}
                   {resumeData?.education?.visible && (
-                    <>
-                      <HStack alignItems={'flex-start'}>
+                    <div className={Classes.sideMenu}>
+                      <div
+                        className={Classes.sideMenuBox}
+                        style={{ marginTop: '0px' }}
+                      >
                         {/* Section Side Menu */}
                         {show.education && (
                           <SectionSideMenu
@@ -156,6 +166,8 @@ const HybridTemplate = () => {
                             onDelete={EDUCATION}
                           />
                         )}
+                      </div>
+                      <div>
                         {/* Heading For Education Section  */}
                         <Heading
                           title="EDUCATION"
@@ -177,25 +189,25 @@ const HybridTemplate = () => {
                             setShow({ ...show, education: true })
                           }
                         />
-                      </HStack>
-                      {/* Education Components */}
-                      <Education
-                        institution={true}
-                        degree={true}
-                        degree_placeholder="Study Program"
-                        date={true}
-                        location={true}
-                        institutionStyle={Classes.institute}
-                        degreeStyle={Classes.programText}
-                        dateStyle={Classes.date}
-                        locationStyle={Classes.date}
-                      />
-                    </>
+                        {/* Education Components */}
+                        <Education
+                          institution={true}
+                          degree={true}
+                          degree_placeholder="Study Program"
+                          date={true}
+                          location={true}
+                          institutionStyle={Classes.institute}
+                          degreeStyle={Classes.programText}
+                          dateStyle={Classes.date}
+                          locationStyle={Classes.date}
+                        />
+                      </div>
+                    </div>
                   )}
                   {/* Work Experience Section */}
                   {resumeData?.work?.visible && (
-                    <>
-                      <HStack alignItems={'flex-start'}>
+                    <div className={Classes.sideMenu}>
+                      <div className={Classes.sideMenuBox}>
                         {/* Section Side Menu */}
                         {show.work && (
                           <SectionSideMenu
@@ -204,6 +216,8 @@ const HybridTemplate = () => {
                             onDelete={WORK}
                           />
                         )}
+                      </div>
+                      <div>
                         {/* Work Experience Heading  */}
                         <Heading
                           title="WORK EXPERIENCE"
@@ -227,32 +241,38 @@ const HybridTemplate = () => {
                             setShow({ ...show, work: true })
                           }
                         />
-                      </HStack>
-                      {/* Work Experience Components */}
-                      <WorkExperience
-                        date={true}
-                        position={true}
-                        company={true}
-                        location={true}
-                        summary={true}
-                        summary_placeholder="Company Description (optional,fill when the company is not well known"
-                        location_placeholder="Country,City"
-                        dateStyle={Classes.date}
-                        positionStyle={Classes.programText}
-                        companyStyle={Classes.institute}
-                        locationStyle={Classes.date}
-                        summaryStyle={Classes.date}
-                      />
-                    </>
+                        {/* Work Experience Components */}
+                        <WorkExperience
+                          date={true}
+                          position={true}
+                          company={true}
+                          location={true}
+                          summary={true}
+                          summary_placeholder="Company Description (optional,fill when the company is not well known"
+                          location_placeholder="Country,City"
+                          dateStyle={Classes.date}
+                          positionStyle={Classes.programText}
+                          companyStyle={Classes.institute}
+                          locationStyle={Classes.date}
+                          summaryStyle={Classes.date}
+                        />
+                      </div>
+                    </div>
                   )}
                 </Box>
               </Box>
-              <Box minW={302} maxW={302} bg="#D6D6D6" p={4} borderRadius={6}>
+              <Box
+                minW={302}
+                maxW={302}
+                bg="#D6D6D6"
+                py={4}
+                pr={2}
+                borderRadius={6}
+              >
                 {/* skill Section  */}
                 {resumeData?.skills?.visible && (
-                  <>
-                    <HStack alignItems={'flex-start'}>
-                      {/* Section Side Menu */}
+                  <div className={Classes.sideMenu}>
+                    <div className={Classes.width}>
                       {show.skills && (
                         <SectionSideMenu
                           bg={'#313B47'}
@@ -260,6 +280,8 @@ const HybridTemplate = () => {
                           onDelete={SKILL}
                         />
                       )}
+                    </div>
+                    <div>
                       {/* skill Heading */}
                       <Heading
                         title="SKILLS"
@@ -279,15 +301,15 @@ const HybridTemplate = () => {
                           setShow({ ...show, skills: true })
                         }
                       />
-                    </HStack>
-                    {/* Skill Row Components */}
-                    <RowSkill skillStyle={Classes.skillText} />
-                  </>
+                      {/* Skill Row Components */}
+                      <RowSkill skillStyle={Classes.skillText} />
+                    </div>
+                  </div>
                 )}
                 {/* Project Section  */}
                 {resumeData?.projects?.visible && (
-                  <>
-                    <HStack alignItems={'flex-start'}>
+                  <div className={Classes.sideMenu}>
+                    <div className={Classes.width}>
                       {/* Section Side Menu */}
                       {show.project && (
                         <SectionSideMenu
@@ -296,6 +318,8 @@ const HybridTemplate = () => {
                           onDelete={PROJECT}
                         />
                       )}
+                    </div>
+                    <div>
                       {/* project Section Heading */}
                       <Heading
                         title="PERSONAL PROJECTS"
@@ -315,25 +339,25 @@ const HybridTemplate = () => {
                           setShow({ ...show, project: true })
                         }
                       />
-                    </HStack>
-                    {/* project Component */}
-                    <Project
-                      project={true}
-                      duration={true}
-                      summary={true}
-                      projectStyle={Classes.projectTitleText}
-                      summaryStyle={Classes.description}
-                      durationStyle={Classes.description}
-                      projectPlaceholder={'Project Name'}
-                      durationPlaceholder="Project Duration"
-                      summaryPlaceholder="Project Summary"
-                    />
-                  </>
+                      {/* project Component */}
+                      <Project
+                        project={true}
+                        duration={true}
+                        summary={true}
+                        projectStyle={Classes.projectTitleText}
+                        summaryStyle={Classes.description}
+                        durationStyle={Classes.description}
+                        projectPlaceholder={'Project Name'}
+                        durationPlaceholder="Project Duration"
+                        summaryPlaceholder="Project Summary"
+                      />
+                    </div>
+                  </div>
                 )}
                 {/* Organization Section */}
                 {resumeData?.organization?.visible && (
-                  <>
-                    <HStack alignItems={'flex-start'}>
+                  <div className={Classes.sideMenu}>
+                    <div className={Classes.width}>
                       {/* Section Side Menu */}
                       {show.organization && (
                         <SectionSideMenu
@@ -344,6 +368,8 @@ const HybridTemplate = () => {
                           onDelete={ORGANIZATION}
                         />
                       )}
+                    </div>
+                    <div>
                       {/* Organization Heading */}
                       <Heading
                         title="ORGANIZATION"
@@ -363,23 +389,23 @@ const HybridTemplate = () => {
                           setShow({ ...show, organization: true })
                         }
                       />
-                    </HStack>
-                    {/* Organization Component */}
-                    <Organization
-                      organization={true}
-                      date={true}
-                      role={true}
-                      organizationStyle={Classes.projectTitleText}
-                      dateStyle={Classes.description}
-                      roleStyle={Classes.description}
-                      rolePlaceholder="Role"
-                    />
-                  </>
+                      {/* Organization Component */}
+                      <Organization
+                        organization={true}
+                        date={true}
+                        role={true}
+                        organizationStyle={Classes.projectTitleText}
+                        dateStyle={Classes.description}
+                        roleStyle={Classes.description}
+                        rolePlaceholder="Role"
+                      />
+                    </div>
+                  </div>
                 )}
                 {/* Certificate Section  */}
                 {resumeData?.certifications?.visible && (
-                  <>
-                    <HStack alignItems={'flex-start'}>
+                  <div className={Classes.sideMenu}>
+                    <div className={Classes.width}>
                       {/* Section Side Menu */}
                       {show.certificates && (
                         <SectionSideMenu
@@ -390,6 +416,8 @@ const HybridTemplate = () => {
                           onDelete={CERTIFICATE}
                         />
                       )}
+                    </div>
+                    <div>
                       {/* Certificate Heading */}
                       <Heading
                         title="CERTIFICATES"
@@ -409,22 +437,22 @@ const HybridTemplate = () => {
                           setShow({ ...show, certificates: true })
                         }
                       />
-                    </HStack>
-                    {/* Certificate Component */}
-                    <Certificate
-                      issueDate={true}
-                      certificate={true}
-                      institute={true}
-                      certificateStyle={Classes.projectTitleText}
-                      issueDateStyle={Classes.description}
-                      instituteStyle={Classes.description}
-                    />
-                  </>
+                      {/* Certificate Component */}
+                      <Certificate
+                        issueDate={true}
+                        certificate={true}
+                        institute={true}
+                        certificateStyle={Classes.projectTitleText}
+                        issueDateStyle={Classes.description}
+                        instituteStyle={Classes.description}
+                      />
+                    </div>
+                  </div>
                 )}
                 {/* Language Section */}
                 {resumeData?.languages?.visible && (
-                  <>
-                    <HStack alignItems={'flex-start'}>
+                  <div className={Classes.sideMenu}>
+                    <div className={Classes.width}>
                       {/* Section Side Menu */}
                       {show.languages && (
                         <SectionSideMenu
@@ -433,6 +461,8 @@ const HybridTemplate = () => {
                           onDelete={LANGUAGES}
                         />
                       )}
+                    </div>
+                    <div>
                       {/* languages Heading */}
                       <Heading
                         title="LANGUAGES"
@@ -456,48 +486,52 @@ const HybridTemplate = () => {
                           setShow({ ...show, languages: true })
                         }
                       />
-                    </HStack>
-                    {/* Language Component */}
-                    <Language langStyle={Classes.projectTitleText} />
-                  </>
+                      {/* Language Component */}
+                      <Language langStyle={Classes.projectTitleText} />
+                    </div>
+                  </div>
                 )}
                 {/* Interest Section */}
                 {resumeData?.hobbies?.visible && (
                   <>
-                    <HStack alignItems={'flex-start'}>
-                      {/* Section Side Menu */}
-                      {show.interest && (
-                        <SectionSideMenu
-                          bg={'#313B47'}
-                          onHide={() => setShow({ ...show, interest: false })}
-                          onDelete={INTEREST}
-                        />
-                      )}
-                      {/* Interest Heading */}
-                      <Heading
-                        title="INTEREST"
-                        circleSize="38px"
-                        circleBg="#313B47"
-                        circleIconHeading={true}
-                        icon={(props) => (
-                          <FaHorseHead {...props} size={18} color={'white'} />
+                    <div className={Classes.sideMenu}>
+                      <div className={Classes.width}>
+                        {/* Section Side Menu */}
+                        {show.interest && (
+                          <SectionSideMenu
+                            bg={'#313B47'}
+                            onHide={() => setShow({ ...show, interest: false })}
+                            onDelete={INTEREST}
+                          />
                         )}
-                        fontSize="23px"
-                        fontWeight={'bold'}
-                        color="#313B47"
-                        minW={250}
-                        maxW={250}
-                        margin={'15px 0px'}
-                        onSideSectionShow={() =>
-                          setShow({ ...show, interest: true })
-                        }
-                      />
-                    </HStack>
-                    {/* Interest Component  */}
-                    <Interest
-                      dndDirection="horizontal"
-                      interestStyle={Classes.skillText}
-                    />
+                      </div>
+                      <div>
+                        {/* Interest Heading */}
+                        <Heading
+                          title="INTEREST"
+                          circleSize="38px"
+                          circleBg="#313B47"
+                          circleIconHeading={true}
+                          icon={(props) => (
+                            <FaHorseHead {...props} size={18} color={'white'} />
+                          )}
+                          fontSize="23px"
+                          fontWeight={'bold'}
+                          color="#313B47"
+                          minW={250}
+                          maxW={250}
+                          margin={'15px 0px'}
+                          onSideSectionShow={() =>
+                            setShow({ ...show, interest: true })
+                          }
+                        />
+                        {/* Interest Component  */}
+                        <Interest
+                          dndDirection="horizontal"
+                          interestStyle={Classes.skillText}
+                        />
+                      </div>
+                    </div>
                   </>
                 )}
               </Box>

@@ -40,6 +40,7 @@
   text-align: left;
   color: #319795;
   margin-bottom: 35px;
+  margin-left: 3px;
 }
 .hybridName {
   color: #313c4e;
@@ -78,4 +79,19 @@
   font-size: 16px;
   font-weight: 500;
   margin: 1px;
+}
+.sideMenu {
+  display: flex;
+  align-items: flex-start;
+}
+.sideMenuBox {
+  width: 20px;
+  margin-left: -27px;
+  margin-right: 4px;
+  margin-top: 10px;
+}
+.width {
+  min-width: 25px !important;
+  margin-left: 3px;
+  margin-top: 10px;
 }

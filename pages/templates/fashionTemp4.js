@@ -19,6 +19,7 @@ import {
   EDUCATION,
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
+import ImageSelector from '../../src/components/imageSelector';
 const FashionTemp4 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
@@ -56,7 +57,12 @@ const FashionTemp4 = () => {
             mx={5}
           >
             <HStack>
-              <ImageSection borderColor="none" borderWidth="none" />
+              <ImageSelector
+                minWidth={150}
+                maxWidth={150}
+                minHeight={150}
+                maxHeight={150}
+              />
               <Name
                 FName={true}
                 SName={true}

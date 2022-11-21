@@ -156,15 +156,13 @@ const DigitalMarkTemp2 = () => {
                 )}
               </Box>
               <Box minW={410} maxW={410} alignItems="flex-start">
-                <ImageSection
-                  minW={300}
-                  maxW={300}
-                  minH={300}
-                  maxH={300}
-                  margin={'0px 0px 0px 50px'}
-                  borderColor="none"
+                <ImageSelector
+                  minWidth={300}
+                  maxWidth={300}
+                  minHeight={300}
+                  maxHeight={300}
+                  marginLeft="50px"
                 />
-                <ImageSelector />
                 <Box
                   bg={'#AED6F1'}
                   minW={372}

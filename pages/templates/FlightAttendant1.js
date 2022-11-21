@@ -2,7 +2,6 @@ import { Box, Flex, HStack } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 import { Tooltip } from 'react-tippy';
-import ImageSection from '../../src/components/commonSection/ImageSection';
 import Name from '../../src/components/commonSection/Name';
 import style from '../../styles/templates/template1.module.scss';
 import Classes from '../../styles/templates/flightAttendant.module.css';
@@ -26,6 +25,7 @@ import {
   SKILL,
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
+import ImageSelector from '../../src/components/imageSelector';
 const FlightAttendant1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
@@ -72,13 +72,11 @@ const FlightAttendant1 = () => {
               py={8}
             >
               {/* _____________ Profile _____________ */}
-              <ImageSection
-                minW="240px"
-                maxW="240px"
-                maxH="240px"
-                minH="240px"
-                borderColor="none"
-                borderWidth="none"
+              <ImageSelector
+                minWidth={'240px'}
+                maxWidth={'240px'}
+                minHeight={'240px'}
+                maxHeight={'240px'}
               />
               <Name
                 FName={true}
@@ -104,11 +102,15 @@ const FlightAttendant1 = () => {
                 margin={'10px 0px 0px 0px'}
                 style={Classes.profileText}
               />
+              &nbsp;
               {/* _____________ Skill _____________ */}
               {resumeData?.skills?.visible && (
                 <>
-                  <HStack alignItems={'flex-start'} mt={5}>
-                    <Box w="20px" ml={'-27px'}>
+                  <div className={Classes.sideMenu}>
+                    <div
+                      className={Classes.sideMenuBox}
+                      style={{ marginTop: '5px' }}
+                    >
                       {show.skills && (
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, skills: false })}
@@ -117,18 +119,19 @@ const FlightAttendant1 = () => {
                           onDelete={SKILL}
                         />
                       )}
-                    </Box>
-
-                    <Heading
-                      title={'RELEVANT SKILLS'}
-                      color="#fff"
-                      margin={'20px 0px 0px 0px'}
-                      onSideSectionShow={() =>
-                        setShow({ ...show, skills: true })
-                      }
-                    />
-                  </HStack>
-                  <Skill skillStyle={Classes.skillText} />
+                    </div>
+                    <div>
+                      <Heading
+                        title={'RELEVANT SKILLS'}
+                        color="#fff"
+                        margin={'0px 0px 0px 0px'}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, skills: true })
+                        }
+                      />
+                      <Skill skillStyle={Classes.skillText} />
+                    </div>
+                  </div>
                 </>
               )}
             </Box>
@@ -138,14 +141,17 @@ const FlightAttendant1 = () => {
               bg="white"
               h="auto"
               minW="510px"
-              pl={'30px'}
+              pl={'40px'}
               borderRightRadius={6}
               py="20px"
             >
               {resumeData?.work?.visible && (
                 <>
-                  <HStack alignItems={'flex-start'} mt={'20px'}>
-                    <Box w="20px" ml={'-27px'}>
+                  <div className={Classes.sideMenu}>
+                    <div
+                      className={Classes.sideMenuBox}
+                      style={{ marginTop: '15px' }}
+                    >
                       {show.work && (
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, work: false })}
@@ -154,48 +160,55 @@ const FlightAttendant1 = () => {
                           onDelete={WORK}
                         />
                       )}
-                    </Box>
-
-                    <Heading
-                      minW={'480px'}
-                      maxW={'480px'}
-                      headBg={'#E0EFFA'}
-                      title="WORK EXPERIENCE"
-                      padding={'0px 0px 0px 20px'}
-                      height={50}
-                      fontSize={17}
-                      fontWeight={700}
-                      onSideSectionShow={() => setShow({ ...show, work: true })}
-                    />
-                  </HStack>
-                  {/* _____________ Work Experience _____________ */}
-                  <WorkExperience
-                    company={true}
-                    position={true}
-                    date={true}
-                    summary={true}
-                    companyStyle={Classes.company}
-                    positionStyle={Classes.programText}
-                    dateStyle={Classes.date}
-                    summaryStyle={Classes.description}
-                    iconShow={true}
-                    icon={(props) => (
-                      <IoMdJet
-                        {...props}
-                        color="#2A78AB"
-                        size={32}
-                        className={Classes.mr}
+                    </div>
+                    <div>
+                      <Heading
+                        minW={'476px'}
+                        maxW={'476px'}
+                        headBg={'#E0EFFA'}
+                        title="WORK EXPERIENCE"
+                        margin={'20px 0px 0px 0px'}
+                        padding={'0px 0px 0px 20px'}
+                        height={50}
+                        fontSize={17}
+                        fontWeight={700}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, work: true })
+                        }
                       />
-                    )}
-                    parentContainerStyle={Classes.mt}
-                  />
+                      {/* _____________ Work Experience _____________ */}
+                      <WorkExperience
+                        company={true}
+                        position={true}
+                        date={true}
+                        summary={true}
+                        companyStyle={Classes.company}
+                        positionStyle={Classes.programText}
+                        dateStyle={Classes.date}
+                        summaryStyle={Classes.description}
+                        iconShow={true}
+                        icon={(props) => (
+                          <IoMdJet
+                            {...props}
+                            color="#2A78AB"
+                            size={32}
+                            className={Classes.mr}
+                          />
+                        )}
+                        parentContainerStyle={Classes.mt}
+                      />
+                    </div>
+                  </div>
                 </>
               )}
               {/* _____________ Education _____________ */}
               {resumeData?.education?.visible && (
                 <>
-                  <HStack alignItems={'flex-start'} mt={'20px'}>
-                    <Box w="20px" ml={'-27px'}>
+                  <div className={Classes.sideMenu}>
+                    <div
+                      className={Classes.sideMenuBox}
+                      style={{ marginTop: '15px' }}
+                    >
                       {show.education && (
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, education: false })}
@@ -204,49 +217,55 @@ const FlightAttendant1 = () => {
                           onDelete={EDUCATION}
                         />
                       )}
-                    </Box>
-                    <Heading
-                      minW={'480px'}
-                      maxW={'480px'}
-                      headBg={'#E0EFFA'}
-                      title="EDUCATION HISTORY"
-                      padding={'0px 0px 0px 20px'}
-                      height={50}
-                      fontSize={17}
-                      fontWeight={700}
-                      onSideSectionShow={() =>
-                        setShow({ ...show, education: true })
-                      }
-                    />
-                  </HStack>
-                  <Education
-                    degree={true}
-                    institution={true}
-                    date={true}
-                    summary={true}
-                    iconShow={true}
-                    icon={(props) => (
-                      <BsFillLayersFill
-                        {...props}
-                        color="#2A78AB"
-                        size={32}
-                        className={Classes.mr}
+                    </div>
+                    <div>
+                      <Heading
+                        minW={'476px'}
+                        maxW={'476px'}
+                        headBg={'#E0EFFA'}
+                        title="EDUCATION HISTORY"
+                        margin={'20px 0px 0px 0px'}
+                        padding={'0px 0px 0px 20px'}
+                        height={50}
+                        fontSize={17}
+                        fontWeight={700}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, education: true })
+                        }
                       />
-                    )}
-                    parentContainerStyle={Classes.mt}
-                    institutionStyle={Classes.company}
-                    degreeStyle={Classes.programText}
-                    dateStyle={Classes.date}
-                    summaryStyle={Classes.description}
-                    degree_placeholder="Study Program"
-                  />
+                      <Education
+                        degree={true}
+                        institution={true}
+                        date={true}
+                        summary={true}
+                        iconShow={true}
+                        icon={(props) => (
+                          <BsFillLayersFill
+                            {...props}
+                            color="#2A78AB"
+                            size={32}
+                            className={Classes.mr}
+                          />
+                        )}
+                        parentContainerStyle={Classes.mt}
+                        institutionStyle={Classes.company}
+                        degreeStyle={Classes.programText}
+                        dateStyle={Classes.date}
+                        summaryStyle={Classes.description}
+                        degree_placeholder="Study Program"
+                      />
+                    </div>
+                  </div>
                 </>
               )}
               {/* _____________ Certification _____________ */}
               {resumeData?.certifications?.visible && (
                 <>
-                  <HStack alignItems={'flex-start'} mt={'20px'}>
-                    <Box w="20px" ml={'-27px'}>
+                  <div className={Classes.sideMenu}>
+                    <div
+                      className={Classes.sideMenuBox}
+                      style={{ marginTop: '15px' }}
+                    >
                       {show.certificates && (
                         <SectionSideMenu
                           onHide={() =>
@@ -257,40 +276,42 @@ const FlightAttendant1 = () => {
                           onDelete={CERTIFICATE}
                         />
                       )}
-                    </Box>
-                    <Heading
-                      minW={'480px'}
-                      maxW={'480px'}
-                      headBg={'#E0EFFA'}
-                      title="CERTIFICATIONS"
-                      padding={'0px 0px 0px 20px'}
-                      margin={'20px 0px 0px 0px'}
-                      height={50}
-                      fontSize={17}
-                      fontWeight={700}
-                      onSideSectionShow={() =>
-                        setShow({ ...show, certificates: true })
-                      }
-                    />
-                  </HStack>
-                  <Certificate
-                    certificate={true}
-                    issueDate={true}
-                    institute={true}
-                    iconShow={true}
-                    icon={(props) => (
-                      <FaAward
-                        {...props}
-                        color="#2A78AB"
-                        size={32}
-                        className={Classes.mr}
+                    </div>
+                    <div>
+                      <Heading
+                        minW={'476px'}
+                        maxW={'476px'}
+                        headBg={'#E0EFFA'}
+                        title="CERTIFICATIONS"
+                        padding={'0px 0px 0px 20px'}
+                        margin={'20px 0px 0px 0px'}
+                        height={50}
+                        fontSize={17}
+                        fontWeight={700}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, certificates: true })
+                        }
                       />
-                    )}
-                    parentContainerStyle={Classes.mt}
-                    certificateStyle={Classes.programText}
-                    issueDateStyle={Classes.date}
-                    instituteStyle={Classes.company}
-                  />
+                      <Certificate
+                        certificate={true}
+                        issueDate={true}
+                        institute={true}
+                        iconShow={true}
+                        icon={(props) => (
+                          <FaAward
+                            {...props}
+                            color="#2A78AB"
+                            size={32}
+                            className={Classes.mr}
+                          />
+                        )}
+                        parentContainerStyle={Classes.mt}
+                        certificateStyle={Classes.programText}
+                        issueDateStyle={Classes.date}
+                        instituteStyle={Classes.company}
+                      />
+                    </div>
+                  </div>
                 </>
               )}
             </Box>

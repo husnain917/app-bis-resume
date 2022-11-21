@@ -2,7 +2,6 @@ import { Box, Flex, HStack } from '@chakra-ui/react';
 import style from '../../styles/templates/template1.module.scss';
 import Link from 'next/link';
 import { Tooltip } from 'react-tippy';
-import ImageSection from '../../src/components/commonSection/ImageSection';
 import Heading from '../../src/components/commonSection/Heading';
 import Contact from '../../src/components/commonSection/Contact';
 import Classes from '../../styles/templates/fashionTemp5.module.css';
@@ -23,6 +22,7 @@ import {
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import { useSelector } from 'react-redux';
+import ImageSelector from '../../src/components/imageSelector';
 const FashionTemp5 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
@@ -64,12 +64,12 @@ const FashionTemp5 = () => {
               pl={'30px'}
               py={5}
             >
-              <ImageSection
-                minW={210}
-                maxW={210}
-                minH={210}
-                maxH={210}
-                margin={'0px 0px 0px 3px'}
+              <ImageSelector
+                minWidth={210}
+                maxWidth={210}
+                minHeight={210}
+                maxHeight={210}
+                marginLeft="3px"
               />
 
               <Heading
