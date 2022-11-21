@@ -21,6 +21,7 @@ import {
   SKILL,
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
+import ImageSelector from '../../src/components/imageSelector';
 const DigitalMarkTemp2 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
@@ -163,6 +164,7 @@ const DigitalMarkTemp2 = () => {
                   margin={'0px 0px 0px 50px'}
                   borderColor="none"
                 />
+                <ImageSelector />
                 <Box
                   bg={'#AED6F1'}
                   minW={372}
