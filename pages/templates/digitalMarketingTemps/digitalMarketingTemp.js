@@ -1,6 +1,6 @@
 import { Box, Flex, HStack } from '@chakra-ui/react';
 import Link from 'next/link';
-import React from 'react';
+import React,{useState} from 'react';
 import { Tooltip } from 'react-tippy';
 import Name from '../../../src/components/commonSection/Name';
 import style from '../../../styles/templates/template1.module.scss';
@@ -24,7 +24,7 @@ import {
 } from '../../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../../src/components/imageSelector';
 
-export default function DigitalMarketingTemp() {
+export default function Digital_Marketing_Temp() {
   // redux Data
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
