@@ -2,7 +2,6 @@ import { Box, Flex, HStack } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 import { Tooltip } from 'react-tippy';
-// import ImageSection from '../../../src/components/commonSection/ImageSection';
 import Name from '../../../src/components/commonSection/Name';
 import style from '../../../styles/templates/template1.module.scss';
 import styles from '../../../styles/digitalMarketingTemp.module.css';
@@ -25,7 +24,7 @@ import {
 } from '../../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../../src/components/imageSelector';
 
-export default function digitalMarketingTemp() {
+export default function DigitalMarketingTemp() {
   // redux Data
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
@@ -265,7 +264,7 @@ export default function digitalMarketingTemp() {
                 backgroundColor={'#F2DB7A'}
                 marginTop={'10px'}
               >
-
+                {/* footer container */}
               </Box>
             </Box>
           </Box>
