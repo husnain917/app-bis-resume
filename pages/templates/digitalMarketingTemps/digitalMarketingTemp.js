@@ -2,7 +2,7 @@ import { Box, Flex, HStack } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 import { Tooltip } from 'react-tippy';
-import ImageSection from '../../../src/components/commonSection/ImageSection';
+// import ImageSection from '../../../src/components/commonSection/ImageSection';
 import Name from '../../../src/components/commonSection/Name';
 import style from '../../../styles/templates/template1.module.scss';
 import styles from '../../../styles/digitalMarketingTemp.module.css';
@@ -23,6 +23,7 @@ import {
   SKILL,
   WORK,
 } from '../../../src/components/tempSectionSide/SectionSideConstant';
+import ImageSelector from '../../../src/components/imageSelector';
 
 export default function digitalMarketingTemp() {
   // redux Data
@@ -72,14 +73,12 @@ export default function digitalMarketingTemp() {
               py={8}
             >
               {/* _____________ Profile _____________ */}
-              <ImageSection
-                minW="240px"
-                maxW="240px"
-                maxH="240px"
-                minH="240px"
-                margin={'30px 0px 0px 0px'}
-                borderColor="none"
-                borderWidth="none"
+              <ImageSelector
+                minWidth="240px"
+                maxWidth="240px"
+                maxHeight="240px"
+                minHeight="240px"
+                marginTop="30px"
               />
               <Heading
                 title={'CONTACT PERSON'}
