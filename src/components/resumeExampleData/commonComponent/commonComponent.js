@@ -18,9 +18,16 @@ const CommonComponent = ({ data }) => {
   const size = useWindowSizing();
   const width = size.width;
 
-  const dataForDisplay = expanded
-    ? data.exampleData
-    : data.exampleData.slice(0, 4);
+  const dataForDisplay =
+    !expanded && width > 1250
+      ? data.exampleData.slice(0, 4)
+      : !expanded && width <= 1250 && width > 767
+      ? data.exampleData.slice(0, 3)
+      : !expanded && width <= 767 && width > 500
+      ? data.exampleData.slice(0, 2)
+      : !expanded && width <= 500
+      ? data.exampleData.slice(0, 1)
+      : data.exampleData;
 
   return (
     <Box overflow={["visible", "visible", "hidden"]} mb={10}>
@@ -29,9 +36,9 @@ const CommonComponent = ({ data }) => {
         flexDirection={["column", "column", "column", "row", "row"]}
         paddingBottom={"20px"}
         borderBottom={"1px solid whitesmoke"}
-        marginBottom={"24px"}
         justifyContent={"space-between"}
         height={"100px"}
+        marginBottom={"inherit"}
       >
         <Box display={"flex"}>
           <Box>
@@ -73,7 +80,7 @@ const CommonComponent = ({ data }) => {
       </Box>
       <SimpleGrid columns={[1, 1, 3, 3, 4]} spacing={10}>
         {width <= 500
-          ? dataForDisplay.splice(0, 1).map((template, index) => {
+          ? dataForDisplay.map((template, index) => {
               return (
                 <Box
                   key={index}
@@ -104,7 +111,7 @@ const CommonComponent = ({ data }) => {
               );
             })
           : width <= 767
-          ? dataForDisplay.splice(0, 2).map((template, index) => {
+          ? dataForDisplay.map((template, index) => {
               return (
                 <Box
                   key={index}
@@ -135,7 +142,7 @@ const CommonComponent = ({ data }) => {
               );
             })
           : width <= 1250
-          ? dataForDisplay.splice(0, 3).map((template, index) => {
+          ? dataForDisplay.map((template, index) => {
               return (
                 <Box
                   key={index}
