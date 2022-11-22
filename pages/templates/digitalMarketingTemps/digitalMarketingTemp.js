@@ -1,6 +1,6 @@
 import { Box, Flex, HStack } from '@chakra-ui/react';
 import Link from 'next/link';
-import React,{useState} from 'react';
+import React from 'react';
 import { Tooltip } from 'react-tippy';
 import Name from '../../../src/components/commonSection/Name';
 import style from '../../../styles/templates/template1.module.scss';
