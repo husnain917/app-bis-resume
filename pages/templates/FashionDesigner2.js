@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Text } from "../../src/components/FashionDesigner2/index";
+import Text from "../../src/components/commonSection/Text";
 import style from "../../styles/templates/fashion2.module.scss";
 import { onBlurField } from "../../store/actions/builderAction";
 
@@ -84,10 +84,10 @@ class FashionDesigner2 extends Component {
                     <Text
                       value={resumeData?.aboutMe?.heading}
                       placeholder="Profile"
-                      customclass={"manager-f1-heading-title"}
+                      customClass={"manager-f1-heading-title"}
                       path={"aboutme.heading"}
                       editable={false}
-                      fontSize="1.5em"
+                      fontWeight="1.5em"
                     />
                     <Box>
                       <UnderLineBox />
@@ -104,56 +104,63 @@ class FashionDesigner2 extends Component {
                     <Text
                       value={resumeData?.objective?.Contact}
                       placeholder="My Contact"
-                      customclass={"manager-f-heading-title"}
+                      customClass={"manager-f-heading-title"}
                       path={"objective.contact"}
                       editable={false}
                     />
                     <UnderLineBox />
                     <Box display="flex" mt="2">
                       <AiOutlineMail size="26" />
-
-                      <Text
-                        value={resumeData?.profile?.email}
-                        placeholder="Email"
-                        customclass={"manager-f-name"}
-                        path={"profile.email"}
-                        margin={"4px"}
-                        marginLeft={"8px"}
-                        color={"black"}
-                      />
+                      <Box ml={1}>
+                        <Text
+                          value={resumeData?.profile?.email}
+                          placeholder="Email"
+                          customClass={"manager-f-name"}
+                          path={"profile.email"}
+                          margin={"4px"}
+                          marginLeft={"8px"}
+                          color={"black"}
+                        />
+                      </Box>
                     </Box>
                     <Box display="flex" mt="1">
                       <AiOutlinePhone size="26" />
-                      <Text
-                        value={resumeData?.profile?.phone}
-                        placeholder="Phone"
-                        customclass={"manager-f-name"}
-                        path={"profile.phone"}
-                        margin={"4px"}
-                        marginLeft={"8px"}
-                      />
+                      <Box ml={1}>
+                        <Text
+                          value={resumeData?.profile?.phone}
+                          placeholder="Phone"
+                          customClass={"manager-f-name"}
+                          path={"profile.phone"}
+                          margin={"4px"}
+                          marginLeft={"8px"}
+                        />
+                      </Box>
                     </Box>
                     <Box display="flex" mt="1">
                       <MdLocationOn size="26" />
-                      <Text
-                        value={resumeData?.profile?.address?.city}
-                        placeholder="City"
-                        path={"profile.address.city"}
-                        customclass={"manager-f-name"}
-                        margin={"4px"}
-                        marginLeft={"8px"}
-                      />
+                      <Box ml={1}>
+                        <Text
+                          value={resumeData?.profile?.address?.city}
+                          placeholder="City"
+                          path={"profile.address.city"}
+                          customClass={"manager-f-name"}
+                          margin={"4px"}
+                          marginLeft={"8px"}
+                        />
+                      </Box>
                     </Box>
                     <Box display="flex" mt="1">
                       <GiSpiderWeb size="26" />
-                      <Text
-                        value={resumeData?.profile?.websiteURL}
-                        placeholder="Website URL"
-                        customclass={"manager-f-name"}
-                        path={"profile.websiteURL"}
-                        margin={"4px"}
-                        marginLeft={"8px"}
-                      />
+                      <Box ml={1}>
+                        <Text
+                          value={resumeData?.profile?.websiteURL}
+                          placeholder="Website URL"
+                          customClass={"manager-f-name"}
+                          path={"profile.websiteURL"}
+                          margin={"4px"}
+                          marginLeft={"8px"}
+                        />
+                      </Box>
                     </Box>
                     {/* Skills */}
                     {resumeData?.skills?.visible && (
@@ -161,7 +168,7 @@ class FashionDesigner2 extends Component {
                         <Text
                           value={resumeData?.skills?.heading || "Skills"}
                           placeholder="Skills"
-                          customclass={"manager-f1-heading-title"}
+                          customClass={"manager-f1-heading-title"}
                           path={"skills.heading"}
                           editable={false}
                           style={styles.workHeading}
@@ -189,7 +196,7 @@ class FashionDesigner2 extends Component {
                       <Text
                         value={resumeData?.education?.heading}
                         placeholder="EDUCATION"
-                        customclass={"manager-f1-heading-title"}
+                        customClass={"manager-f1-heading-title"}
                         path={"education.heading"}
                         editable={false}
                         style={styles.workHeading}
@@ -216,7 +223,7 @@ class FashionDesigner2 extends Component {
                         <Text
                           value={resumeData?.Professional?.heading}
                           placeholder="Experience"
-                          customclass={"manager-f1-heading-title"}
+                          customClass={"manager-f1-heading-title"}
                           color="black"
                           path={"ProfessionalExperience.heading"}
                           editable={false}

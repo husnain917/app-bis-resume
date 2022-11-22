@@ -1,7 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Box, Text, Button, Image, SimpleGrid } from "@chakra-ui/react";
 import { Badge } from "@chakra-ui/react";
 import Link from "next/link";
+import { useWindowDimension } from "../../WindowDimension";
+import { useWindowSizing } from "../../../../customHooks/useWindowSizing";
 
 import {
   PhoneIcon,
@@ -9,41 +11,17 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
+import RenderData from "./renderData/renderData";
 
 const CommonComponent = ({ data }) => {
   const [expanded, setExpanded] = useState(false);
-  // console.log("DATAAA", data);
+  const size = useWindowSizing();
+  const width = size.width;
 
-  const imagesArr = [
-    {
-      label: "Education",
-      src: "https://source.unsplash.com/random/300x500",
-      alt: "random from unsplash",
-    },
-    {
-      label: "Education1",
-      src: "https://source.unsplash.com/random/300x500",
-      alt: "random from unsplash",
-    },
-    {
-      label: "Education2",
-      src: "https://source.unsplash.com/random/300x500",
-      alt: "random from unsplash",
-    },
-    {
-      label: "Education3",
-      src: "https://source.unsplash.com/random/300x500",
-      alt: "random from unsplash",
-    },
-    {
-      label: "Education4",
-      src: "https://source.unsplash.com/random/300x500",
-      alt: "random from unsplash",
-    },
-  ];
   const dataForDisplay = expanded
     ? data.exampleData
     : data.exampleData.slice(0, 4);
+
   return (
     <Box overflow={["visible", "visible", "hidden"]} mb={10}>
       <Box
@@ -93,37 +71,130 @@ const CommonComponent = ({ data }) => {
           </Box>
         </Box>
       </Box>
-      <SimpleGrid columns={[2, null, 4]} spacing={10}>
-        {dataForDisplay.map((template, index) => {
-          // console.log("TEMPLETE", template);
-          return (
-            <Box
-              key={index}
-              bg={"whitesmoke"}
-              // h={["auto", "auto", "200px", "200px", "200px"]}
-              padding={"5"}
-              borderRadius={"10"}
-              _hover={{
-                background: "white",
-                cursor: "pointer",
-              }}
-              onClick={() => {}}
-            >
-              <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
-                {template.label}
-              </Text>
-              <Box mt={2}>
-                <Link href={template.link || "/templates/templ"}>
-                  <Image
-                    src={template.src}
-                    alt={template.alt}
-                    height={"300px"}
-                  />
-                </Link>
-              </Box>
-            </Box>
-          );
-        })}
+      <SimpleGrid columns={[1, 1, 3, 3, 4]} spacing={10}>
+        {width <= 500
+          ? dataForDisplay.splice(0, 1).map((template, index) => {
+              return (
+                <Box
+                  key={index}
+                  bg={"whitesmoke"}
+                  // h={["auto", "auto", "200px", "200px", "200px"]}
+                  padding={"5"}
+                  borderRadius={"10"}
+                  _hover={{
+                    background: "white",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {}}
+                >
+                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                    {template.label}
+                  </Text>
+                  <Box mt={6}>
+                    <Link href={template.link || "/templates/templ"}>
+                      <Image
+                        src={template.src}
+                        alt={template.alt}
+                        minHeight={"300px"}
+                        width={"100%"}
+                      />
+                    </Link>
+                  </Box>
+                </Box>
+              );
+            })
+          : width <= 767
+          ? dataForDisplay.splice(0, 2).map((template, index) => {
+              return (
+                <Box
+                  key={index}
+                  bg={"whitesmoke"}
+                  // h={["auto", "auto", "200px", "200px", "200px"]}
+                  padding={"5"}
+                  borderRadius={"10"}
+                  _hover={{
+                    background: "white",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {}}
+                >
+                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                    {template.label}
+                  </Text>
+                  <Box mt={6}>
+                    <Link href={template.link || "/templates/templ"}>
+                      <Image
+                        src={template.src}
+                        alt={template.alt}
+                        minHeight={"300px"}
+                        width={"100%"}
+                      />
+                    </Link>
+                  </Box>
+                </Box>
+              );
+            })
+          : width <= 1250
+          ? dataForDisplay.splice(0, 3).map((template, index) => {
+              return (
+                <Box
+                  key={index}
+                  bg={"whitesmoke"}
+                  // h={["auto", "auto", "200px", "200px", "200px"]}
+                  padding={"5"}
+                  borderRadius={"10"}
+                  _hover={{
+                    background: "white",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {}}
+                >
+                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                    {template.label}
+                  </Text>
+                  <Box mt={6}>
+                    <Link href={template.link || "/templates/templ"}>
+                      <Image
+                        src={template.src}
+                        alt={template.alt}
+                        minHeight={"300px"}
+                        width={"100%"}
+                      />
+                    </Link>
+                  </Box>
+                </Box>
+              );
+            })
+          : dataForDisplay.map((template, index) => {
+              return (
+                <Box
+                  key={index}
+                  bg={"whitesmoke"}
+                  // h={["auto", "auto", "200px", "200px", "200px"]}
+                  padding={"5"}
+                  borderRadius={"10"}
+                  _hover={{
+                    background: "white",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {}}
+                >
+                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                    {template.label}
+                  </Text>
+                  <Box mt={6}>
+                    <Link href={template.link || "/templates/templ"}>
+                      <Image
+                        src={template.src}
+                        alt={template.alt}
+                        minHeight={"300px"}
+                        width={"100%"}
+                      />
+                    </Link>
+                  </Box>
+                </Box>
+              );
+            })}
       </SimpleGrid>
       <Button type="button" onClick={() => setExpanded(!expanded)} mt={"8"}>
         {expanded ? "Show Less" : "Show More"}

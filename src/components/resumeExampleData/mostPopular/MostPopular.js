@@ -3,7 +3,7 @@ import { Box, Text, Button, Image } from "@chakra-ui/react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { popularData } from "../resumeExampleData";
+import Link from "next/link";
 
 import {
   PhoneIcon,
@@ -18,29 +18,8 @@ import "swiper/css/bundle";
 // import required modules
 import { Pagination } from "swiper";
 import { Navigation } from "swiper";
-const imagesArr = [
-  {
-    src: "https://source.unsplash.com/random/300x500",
-    alt: "random from unsplash",
-  },
-  {
-    src: "https://source.unsplash.com/random/300x500",
-    alt: "random from unsplash",
-  },
-  {
-    src: "https://source.unsplash.com/random/300x500",
-    alt: "random from unsplash",
-  },
-  {
-    src: "https://source.unsplash.com/random/300x500",
-    alt: "random from unsplash",
-  },
-  {
-    src: "https://source.unsplash.com/random/300x500",
-    alt: "random from unsplash",
-  },
-];
-const MostPopular = () => {
+
+const MostPopular = ({ data }) => {
   const swiperRef = useRef();
   // console.log("Swiper", swiperRef);
   const settings = {
@@ -50,7 +29,7 @@ const MostPopular = () => {
     slidesToScroll: 2,
     autoplay: true,
   };
-  console.log("mostPopular", popularData);
+  // console.log("mostPopular >>>>>>>>", data.popularTemplates);
   return (
     <Box overflow={["visible", "visible", "hidden"]}>
       <Box
@@ -72,7 +51,7 @@ const MostPopular = () => {
             fontWeight={"400"}
             transition={"color .15s"}
           >
-            {}
+            {data.title}
           </Box>
         </Box>
         <Box display={["none", "none", "flex", "flex", "flex"]}>
@@ -149,8 +128,8 @@ const MostPopular = () => {
                 390: {
                   slidesPerView: 2,
                 },
-                550: {
-                  slidesPerView: 3,
+                786: {
+                  slidesPerView: 2,
                 },
                 992: {
                   slidesPerView: 3,
@@ -163,11 +142,34 @@ const MostPopular = () => {
                 },
               }}
             >
-              {imagesArr.map((img, index) => {
+              {data.popularTemplates.map((template, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <Image src={img.src} alt={img.alt} />
-                    console
+                    <Box
+                      key={index}
+                      bg={"whitesmoke"}
+                      // h={["auto", "auto", "200px", "200px", "200px"]}
+                      padding={"5"}
+                      borderRadius={"10"}
+                      _hover={{
+                        background: "white",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => {}}
+                    >
+                      <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                        {template.label}
+                      </Text>
+                      <Box mt={6}>
+                        <Link href={template.link || "/templates/templ"}>
+                          <Image
+                            src={template.src}
+                            alt={template.alt}
+                            height={"300px"}
+                          />
+                        </Link>
+                      </Box>
+                    </Box>
                   </SwiperSlide>
                 );
               })}

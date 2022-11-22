@@ -10,6 +10,7 @@ const TryResume = () => {
       bg={"#EFF2F9"}
       height={"35em"}
       mb={"2em"}
+      posiition={"relative"}
     >
       <Box
         px={["22px", "22px", "32px", "44px", "44px"]}

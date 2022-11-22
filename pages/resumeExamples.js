@@ -4,11 +4,13 @@ import SearchBar from "../src/components/resumeExampleData/searchBar/SearchBar";
 import MostPopular from "../src/components/resumeExampleData/mostPopular/MostPopular";
 import CommonComponent from "../src/components/resumeExampleData/commonComponent/commonComponent";
 import WritingGuides from "../src/components/resumeExampleData/writingGuides/WritingGuides";
-import { data } from "../src/components/resumeExampleData/resumeExampleData";
+import {
+  data,
+  popularData,
+} from "../src/components/resumeExampleData/resumeExampleData";
 import TryResume from "../src/components/resumeExampleData/tryResume/tryResume";
 import BlogPost from "../src/components/resumeExampleData/blogPost/blogPost";
 const ResumeExamples = () => {
-  console.log("DATAAAAAAAAAAAAAAA", data);
   return (
     <Box>
       <Box bg="lightcyan" height={"auto"} width={"100wv"}>
@@ -18,12 +20,15 @@ const ResumeExamples = () => {
         <Box maxWidth={"1120px"} display={"flex"} margin={"0 auto"}>
           <Box width={"100%"} flexGrow={"1"}>
             <SearchBar />
-            <MostPopular />
+            {/* <MostPopular /> */}
+            {popularData.map((data, index) => {
+              return <MostPopular data={data} key={index} />;
+            })}
             {data.map((data, index) => {
               return <CommonComponent data={data} key={index} />;
             })}
             <TryResume />
-            <BlogPost />
+            {/* <BlogPost /> */}
           </Box>
         </Box>
       </Box>
