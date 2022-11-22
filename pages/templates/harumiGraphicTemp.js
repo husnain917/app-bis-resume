@@ -1,386 +1,274 @@
-import {
-    Box,
-    Container,
-    ListItem,
-    UnorderedList,
-} from '@chakra-ui/react'
+import { Box, Flex, HStack } from '@chakra-ui/react';
+import Link from 'next/link';
+import React from 'react';
 import { Tooltip } from 'react-tippy';
-import Image from 'next/image';
-import React from 'react'
-import avatar from "../../public/avatar.jpg";
-import { Text } from "../../src/components/template1/index";
+import Name from '../../src/components/commonSection/Name';
+import style from '../../styles/templates/template1.module.scss';
+import Classes from '../../styles/templates/flightAttendant.module.css';
+import Profession from '../../src/components/commonSection/Profession';
+import Contact from '../../src/components/commonSection/Contact';
+import Heading from '../../src/components/commonSection/Heading';
+import Skill from '../../src/components/commonSection/Skill';
+import WorkExperience from '../../src/components/commonSection/WorkExperience';
+import Education from '../../src/components/commonSection/Education';
+import TempLayout from '../../src/components/tempNav/TempLayout';
+import { useSelector } from 'react-redux';
+import useShow from '../../src/components/tempSectionSide/useShow';
+import SectionSideMenu from '../../src/components/tempSectionSide/SectionSideMenu';
+import About from '../../src/components/commonSection/About';
 import {
-    FaPhoneAlt,
-    FaRegEnvelope,
-    FaLocationArrow,
-} from "react-icons/fa";
-import Link from "next/link";
-import FashionCustomHook from "../../src/components/fashionTemp/FashionCustomHook";
-import Underline from "../../src/components/aaronGraphicTemp/Underline";
+    EDUCATION,
+    SKILL,
+    WORK,
+} from '../../src/components/tempSectionSide/SectionSideConstant';
+import ImageSelector from '../../src/components/imageSelector';
 import styles from "../../styles/harumiGraphicTemp.module.css";
-import HarumiGraphicEducation from "../../src/components/harumiGraphicTemp/HarumiGraphicEducation";
-import HarumiGraphicExperience from "../../src/components/harumiGraphicTemp/HarumiGraphicExperience";
-import HarumiGraphicSkill from "../../src/components/harumiGraphicTemp/HarumiGraphicSkill";
-import HarumiGraphicHobbies from "../../src/components/harumiGraphicTemp/HarumiGraphicHobbies";
 
-export default function harumiGraphicTemp() {
+export default function Harumi_Graphic_Temp() {
     // redux Data
-    const { resumeEditor } = FashionCustomHook();
+    let resumeData = useSelector((state) => state.editorReducer.resumeData);
+    const [show, setShow] = useShow();
+
     return (
         <>
-            <Link href={"/templates"}>
-                <div className={styles.swapCont}>
-                    <Tooltip title="Change Template" arrow distance={20}>
-                        <div className={styles.swap}>
-                            <img src="/icons/swap.png" />
-                        </div>
-                    </Tooltip>
-                </div>
-            </Link>
-            <Container
-                minW={'70%'}
-                display={'flex'}
-            >
-                {/* ist container */}
-                <Box
-                    backgroundColor={'#0C1E37'}
-                    width={'40%'}
-                    padding={'50px 30px 20px 30px'}
-                    margin={'30px 0px'}
-                >
-                    {/* avatar */}
-                    <Box
-                        height={'330px'}
-                        width={'100%'}
-                        margin={'25px 0px'}
-                    >
-                        <Image
-                            src={avatar}
-                            alt={'Image Not Found'}
-                            style={{
-                                width: '100%',
-                                borderRadius: '100% 100%'
-                            }}
-                        />
-                    </Box>
+            <TempLayout work={true} education={true} skills={true}>
+                <Link href={'/templates'}>
+                    <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
+                        <Tooltip title="Change Template" arrow distance={20}>
+                            <div className={style.swap}>
+                                <img src="/icons/swap.png" />
+                            </div>
+                        </Tooltip>
+                    </div>
+                </Link>
 
-                    {/* contact section */}
-                    <Box
-                        marginTop={'50px'}
-                    >
-                        <Text
-                            value={resumeEditor?.resumeData?.contact?.heading}
-                            placeholder="CONTACTS"
-                            customclass={`${styles.contentHeadings}`}
-                            path={"contact.heading"}
-                            editable={false}
-                        />
-                        <Underline
-                            height='0.1em'
-                            width='30%'
-                            bgColor='#fff'
-                        />
-                    </Box>
-
-                    {/* contacts links */}
-                    <Box
-                        margin={'20px 0px'}
-                    >
-                        {/* phone No */}
-                        <Box
-                            margin={'10px 0px'}
-                            display={'flex'}
-                            alignItems={'center'}
-                        >
-                            <Box
-                                height={'35px'}
-                                width={'35px'}
-                                borderRadius={'100% 100%'}
-                                border={'2px solid #fff'}
-                                display={'flex'}
-                                alignItems={'center'}
-                                justifyContent={'center'}
-                            >
-                                <FaPhoneAlt color='#fff' />
-                            </Box>
-                            <Box>
-                                <Text
-                                    value={resumeEditor?.resumeData?.contact?.designerContectNo}
-                                    placeholder={`123-456-7890`}
-                                    customclass={`${styles.designerContectStyle}`}
-                                    path={"contact.designerContectNo"}
-                                />
-                            </Box>
-                        </Box>
-
-                        {/* E-mail */}
-                        <Box
-                            margin={'10px 0px'}
-                            display={'flex'}
-                            alignItems={'center'}
-                        >
-                            <Box
-                                height={'35px'}
-                                width={'35px'}
-                                borderRadius={'100% 100%'}
-                                border={'2px solid #fff'}
-                                display={'flex'}
-                                alignItems={'center'}
-                                justifyContent={'center'}
-                            >
-                                <FaRegEnvelope color='#fff' />
-                            </Box>
-                            <Box>
-                                <Text
-                                    value={resumeEditor?.resumeData?.contact?.designerContectEmail}
-                                    placeholder={`hello@reallygreatsite.com`}
-                                    customclass={`${styles.designerContectStyle}`}
-                                    path={"contact.designerContectEmail"}
-                                />
-                            </Box>
-                        </Box>
-
-                        {/* Live Location */}
-                        <Box
-                            margin={'10px 0px'}
-                            display={'flex'}
-                            alignItems={'center'}
-                        >
-                            <Box
-                                height={'35px'}
-                                width={'35px'}
-                                borderRadius={'100% 100%'}
-                                border={'2px solid #fff'}
-                                display={'flex'}
-                                alignItems={'center'}
-                                justifyContent={'center'}
-                            >
-                                <FaLocationArrow color='#fff' />
-                            </Box>
-                            <Box>
-                                <Text
-                                    value={resumeEditor?.resumeData?.contact?.designerContectLocation}
-                                    placeholder={`123 ANYWHERE ST., ANY CITY`}
-                                    customclass={`${styles.designerContectStyle}`}
-                                    path={"contact.designerContectLocation"}
-                                />
-                            </Box>
-                        </Box>
-                    </Box>
-
-
-                    {/* skill section */}
-                    <Box
-                        margin={'20px 0px 0px 0px'}
-                    >
-                        <Text
-                            value={resumeEditor?.resumeData?.skills?.heading}
-                            placeholder="SKILL"
-                            customclass={`${styles.contentHeadings}`}
-                            path={"skills.heading"}
-                            editable={false}
-                        />
-                        <Underline
-                            height='0.1em'
-                            width='12%'
-                            bgColor='#fff'
-                        />
-                    </Box>
-
-                    {/* skill description */}
-                    <Box
-                        margin={'20px 0px'}
-                    >
-                        {resumeEditor?.resumeData?.skills?.visible && (
-                            <>
-                                <HarumiGraphicSkill
-                                    data={
-                                        resumeEditor?.resumeData?.skills?.items?.length
-                                            ? [...resumeEditor?.resumeData?.skills?.items]
-                                            : [...sampleData?.data?.skills?.items]
-                                    }
-                                    color={resumeEditor?.color}
-                                    updater={resumeEditor?.updater}
-                                />
-                            </>
-                        )}
-                    </Box>
-                </Box>
-
-                {/* 2nd container */}
-                <Box
-                    width={'60%'}
-                    margin={'30px 0px'}
-                    padding={'50px 30px 20px 30px'}
-                    backgroundColor={'#0C1E37'}
+                <Flex
+                    justifyContent={{ base: 'none', md: 'center' }}
+                    overflow="auto"
+                    flexDir={'column'}
+                    alignItems={{ sm: 'none', md: 'center' }}
+                    bg={{ md: 'none', lg: 'blackAlpha.100' }}
+                    className={`${Classes.main}`}
                 >
                     <Box
-                        display={'flex'}
-                        flexDirection={'column'}
+                        display="flex"
+                        flexDir="row"
+                        w="100%"
+                        minW="850px"
+                        maxW="850px"
+                        mb={'20px'}
+                        mx={'20px'}
+                        mt="100px"
                     >
-                        {/* firstName */}
-                        <Text
-                            value={resumeEditor?.resumeData?.profile?.firstName}
-                            placeholder="HARUMI KOBAYASHI"
-                            customclass={`${styles.firstNameStyle}`}
-                            path={"profile.firstName"}
-                        />
+                        {/* =============== First Section ============== */}
+                        <Box
+                            w="40%"
+                            pb="10%"
+                            minW={'340px'}
+                            bgColor="#0C1E37"
+                            borderLeftRadius={6}
+                            pr={3}
+                            pl={12}
+                            py={8}
+                        >
+                            {/* _____________ Profile _____________ */}
+                            <ImageSelector
+                                minWidth="240px"
+                                maxWidth="240px"
+                                maxHeight="240px"
+                                minHeight="240px"
+                                marginTop="30px"
+                            />
+                            <Heading
+                                title={'CONTACT PERSON'}
+                                color="#fff"
+                                margin={'20px 0px 0px 0px'}
+                                line={true}
+                                lineW="100%"
+                                lineH="0.15em"
+                                lineBg="#fff"
+                            />
+                            <Contact
+                                phone={true}
+                                email={true}
+                                linkedinURL={true}
+                                website={true}
+                                circleIcon={true}
+                                circleBg="#fff"
+                                circleSize="25px"
+                                iconColor="#3A4D6C"
+                                margin={'10px 0px 0px 0px'}
+                                style={Classes.profileText}
+                            />
 
-                        {/* lastName */}
-                        <Text
-                            value={resumeEditor?.resumeData?.profile?.lastName}
-                            placeholder="GRAPHIC DESIGNER"
-                            customclass={`${styles.lastNameStyle}`}
-                            path={"profile.lastName"}
-                        />
+                            {/* _____________ About me _____________ */}
+                            <Heading
+                                title={'ABOUT ME'}
+                                color="#fff"
+                                margin={'20px 0px 0px 0px'}
+                                line={true}
+                                lineW="100%"
+                                lineH="0.13em"
+                                lineBg="#fff"
+                            />
+                            <About
+                                minW="100%"
+                                maxW="100%"
+                                aboutStyle={Classes.aboutText}
+                                textColor="#fff"
+                            />
+
+                            {/* _____________ Skill _____________ */}
+                            {resumeData?.skills?.visible && (
+                                <>
+                                    <HStack alignItems={'flex-start'} mt={5}>
+                                        <Box w="20px" ml={'-27px'}>
+                                            {show.skills && (
+                                                <SectionSideMenu
+                                                    onHide={() => setShow({ ...show, skills: false })}
+                                                    bg="#E0EFFA"
+                                                    iconColor={'#2A78AB'}
+                                                    onDelete={SKILL}
+                                                />
+                                            )}
+                                        </Box>
+
+                                        <Heading
+                                            title={'RELEVANT SKILLS'}
+                                            color="#fff"
+                                            margin={'20px 0px 0px 0px'}
+                                            onSideSectionShow={() =>
+                                                setShow({ ...show, skills: true })
+                                            }
+                                            line={true}
+                                            lineW="100%"
+                                            lineH="0.15em"
+                                            lineBg="#fff"
+                                        />
+                                    </HStack>
+                                    <Skill
+                                        skillStyle={Classes.skillText}
+                                        progressBar={true}
+                                        strokeWidth="2"
+                                        lineStyle={styles.line}
+                                        strokeColor="#1890ff"
+                                        trailColor="#fff"
+                                        percentageStyle={styles.percent}
+                                        parentContainerStyle={Classes.ml}
+                                    />
+                                </>
+                            )}
+                        </Box>
+                        {/* =============== Second Section ============== */}
+                        <Box
+                            w="60%"
+                            bg="#0C1E37"
+                            h="auto"
+                            minW="510px"
+                            borderRightRadius={6}
+                            paddingBottom={'40px'}
+                        >
+                            <Name
+                                FName={true}
+                                SName={true}
+                                direction="column"
+                                FNameStyle={styles.nameStyle}
+                                SNameStyle={styles.nameStyle}
+                                margin={'15% 0% 0% 10%'}
+                            />
+                            <Profession
+                                professionStyle={styles.profileSubTitle}
+                                margin={'2% 0% 10% 10%'}
+                            />
+                            {resumeData?.work?.visible && (
+                                <>
+                                    <HStack alignItems={'flex-start'} mt={'20px'}>
+                                        <Box w="20px" ml={'-27px'}>
+                                            {show.work && (
+                                                <SectionSideMenu
+                                                    onHide={() => setShow({ ...show, work: false })}
+                                                    bg="#2A78AB"
+                                                    iconColor={'#E0EFFA'}
+                                                    onDelete={WORK}
+                                                />
+                                            )}
+                                        </Box>
+
+                                        <Heading
+                                            color={'#fff'}
+                                            line={true}
+                                            lineW="100%"
+                                            lineH="0.15em"
+                                            lineBg="#fff"
+                                            title="WORK EXPERIENCE"
+                                            padding={'0px 0px 0px 50px'}
+                                            fontSize={'22px'}
+                                            onSideSectionShow={() => setShow({ ...show, work: true })}
+                                        />
+                                    </HStack>
+                                    {/* _____________ Work Experience _____________ */}
+                                    <WorkExperience
+                                        company={true}
+                                        position={true}
+                                        date={true}
+                                        summary={true}
+                                        companyStyle={Classes.company}
+                                        positionStyle={Classes.programText}
+                                        dateStyle={styles.date}
+                                        summaryStyle={Classes.description}
+                                        parentContainerStyle={styles.rightContainerWork}
+                                        textColor="#fff"
+                                    />
+                                </>
+                            )}
+                            {/* _____________ Education _____________ */}
+                            {resumeData?.education?.visible && (
+                                <>
+                                    <HStack alignItems={'flex-start'} mt={'20px'}>
+                                        <Box w="20px" ml={'-27px'}>
+                                            {show.education && (
+                                                <SectionSideMenu
+                                                    onHide={() => setShow({ ...show, education: false })}
+                                                    bg="#2A78AB"
+                                                    iconColor={'#E0EFFA'}
+                                                    onDelete={EDUCATION}
+                                                />
+                                            )}
+                                        </Box>
+                                        <Heading
+                                            color={'#fff'}
+                                            line={true}
+                                            lineW="100%"
+                                            lineH="0.15em"
+                                            lineBg="#fff"
+                                            title="EDUCATION"
+                                            padding={'0px 0px 0px 50px'}
+                                            fontSize={'22px'}
+                                            fontWeight={700}
+                                            onSideSectionShow={() =>
+                                                setShow({ ...show, education: true })
+                                            }
+                                        />
+                                    </HStack>
+                                    <Education
+                                        degree={true}
+                                        institution={true}
+                                        date={true}
+                                        summary={true}
+                                        parentContainerStyle={styles.rightContainerWork}
+                                        institutionStyle={Classes.company}
+                                        degreeStyle={Classes.programText}
+                                        dateStyle={styles.date}
+                                        summaryStyle={Classes.description}
+                                        degree_placeholder="Study Program"
+                                        textColor="#fff"
+                                    />
+                                </>
+                            )}
+                        </Box>
                     </Box>
-
-
-                    {/* about section */}
-                    <Box
-                        margin={'10px 0px 0px 0px'}
-                    >
-                        <Text
-                            value={resumeEditor?.resumeData?.objective?.aboutTitle}
-                            placeholder="About Me"
-                            customclass={`${styles.contentHeadings}`}
-                            path={"objective.aboutTitle"}
-                            editable={false}
-                        />
-                        <Underline
-                            height='0.1em'
-                            width='20%'
-                            bgColor='#fff'
-                        />
-                    </Box>
-
-                    {/* Profile */}
-                    <Box
-                        margin={'15px 0px 10px 0px'}
-                    >
-                        <Text
-                            value={resumeEditor?.resumeData?.objective?.aboutBody}
-                            placeholder="Short and engaging pitch about yourself."
-                            customclass={`${styles.profileBodyDes}`}
-                            path={"objective.aboutBody"}
-                        />
-                    </Box>
-
-
-                    {/* education section */}
-                    <Box
-                        margin={'10px 0px 0px 0px'}
-                    >
-                        <Text
-                            value={resumeEditor?.resumeData?.education?.heading}
-                            placeholder="EDUCATION"
-                            customclass={`${styles.contentHeadings}`}
-                            path={"education.heading"}
-                            editable={false}
-                        />
-                        <Underline
-                            height='0.1em'
-                            width='22%'
-                            bgColor='#fff'
-                        />
-                    </Box>
-
-                    {/* education description */}
-                    <Box
-                        margin={'20px 0px'}
-                    >
-                        {resumeEditor?.resumeData?.education?.visible && (
-                            <>
-                                <HarumiGraphicEducation
-                                    data={
-                                        resumeEditor?.resumeData?.education?.items?.length
-                                            ? [...resumeEditor?.resumeData?.education?.items]
-                                            : [...sampleData?.data?.education?.items]
-                                    }
-                                    color={resumeEditor?.color}
-                                    updater={resumeEditor?.updater}
-                                />
-                            </>
-                        )}
-                    </Box>
-
-
-                    {/* experience section */}
-                    <Box
-                        margin={'10px 0px 0px 0px'}
-                    >
-                        <Text
-                            value={resumeEditor?.resumeData?.experience?.heading}
-                            placeholder="WORK EXPERIENCE"
-                            customclass={`${styles.contentHeadings}`}
-                            path={"experience.heading"}
-                            editable={false}
-                        />
-                        <Underline
-                            height='0.1em'
-                            width='34%'
-                            bgColor='#fff'
-                        />
-                    </Box>
-
-                    {/* experience description */}
-                    <Box
-                        margin={'20px 0px'}
-                    >
-                        {resumeEditor?.resumeData?.work?.visible && (
-                            <>
-                                <HarumiGraphicExperience
-                                    data={
-                                        resumeEditor?.resumeData?.work?.items?.length
-                                            ? [...resumeEditor?.resumeData?.work?.items]
-                                            : [...sampleData?.data?.work?.items]
-                                    }
-                                    color={resumeEditor?.color}
-                                    updater={resumeEditor?.updater}
-                                />
-                            </>
-                        )}
-                    </Box>
-
-
-                    {/* hobbies section */}
-                    <Box
-                        margin={'10px 0px 0px 0px'}
-                    >
-                        <Text
-                            value={resumeEditor?.resumeData?.hobbies?.heading}
-                            placeholder="HOBBIES"
-                            customclass={`${styles.contentHeadings}`}
-                            path={"hobbies.heading"}
-                            editable={false}
-                        />
-                        <Underline
-                            height='0.1em'
-                            width='16%'
-                            bgColor='#fff'
-                        />
-                    </Box>
-
-                    {/* hobbies description */}
-                    <Box
-                        margin={'20px 0px'}
-                    >
-                        {resumeEditor?.resumeData?.hobbies?.visible && (
-                            <>
-                                <HarumiGraphicHobbies
-                                    data={
-                                        resumeEditor?.resumeData?.hobbies?.items?.length
-                                            ? [...resumeEditor?.resumeData?.hobbies?.items]
-                                            : [...sampleData?.data?.hobbies?.items]
-                                    }
-                                    color={resumeEditor?.color}
-                                    updater={resumeEditor?.updater}
-                                />
-                            </>
-                        )}
-                    </Box>
-                </Box>
-            </Container>
+                </Flex>
+            </TempLayout>
         </>
     )
 }
