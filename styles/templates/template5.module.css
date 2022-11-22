@@ -61,3 +61,13 @@
 .percent {
   margin-top: 4px !important ;
 }
+.sideMenu {
+  display: flex;
+  align-items: flex-start;
+}
+.sideMenuBox {
+  min-width: 20px;
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+  margin-top: 35px;
+}
