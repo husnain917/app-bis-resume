@@ -136,7 +136,7 @@ const Skill = (props) => {
               />
             )}
             {progressBar && (
-              <>
+              <Box display={'flex'}>
                 <Line
                   percent={progress[index]}
                   strokeWidth={strokeWidth ? strokeWidth : '6'}
@@ -165,7 +165,7 @@ const Skill = (props) => {
                 >
                   %
                 </div>
-              </>
+              </Box>
             )}
           </Stack>
         )}

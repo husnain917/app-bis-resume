@@ -37,7 +37,6 @@ const FashionTemp4 = () => {
         </Link>
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
-          bg={{ md: 'none', lg: 'blackAlpha.100' }}
           overflow="auto"
           flexDir={'column'}
           alignItems={{ sm: 'none', md: 'center' }}
@@ -55,6 +54,8 @@ const FashionTemp4 = () => {
             pt={8}
             pb={20}
             mx={5}
+            borderWidth="1px"
+            borderColor={'#00000023'}
           >
             <HStack>
               <ImageSelector

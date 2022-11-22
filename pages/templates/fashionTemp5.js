@@ -43,7 +43,6 @@ const FashionTemp5 = () => {
           overflow="auto"
           flexDir={'column'}
           alignItems={{ sm: 'none', md: 'center' }}
-          bg={{ md: 'none', lg: 'blackAlpha.100' }}
         >
           <HStack
             minW={830}
@@ -55,6 +54,8 @@ const FashionTemp5 = () => {
             my={10}
             mx={10}
             mt="100px"
+            borderWidth="1px"
+            borderColor={'#00000033'}
           >
             <Box
               minW={280}

@@ -47,7 +47,6 @@ const FlightAttendant1 = () => {
           overflow="auto"
           flexDir={'column'}
           alignItems={{ sm: 'none', md: 'center' }}
-          bg={{ md: 'none', lg: 'blackAlpha.100' }}
           className={`${Classes.main}`}
         >
           <Box
@@ -59,6 +58,8 @@ const FlightAttendant1 = () => {
             mb={'50px'}
             mx={'20px'}
             mt="100px"
+            borderWidth="1px"
+            borderColor={'#00000023'}
           >
             {/* =============== First Section ============== */}
             <Box
@@ -66,7 +67,7 @@ const FlightAttendant1 = () => {
               pb="10%"
               minW={'340px'}
               bgColor="#2A78AB"
-              borderLeftRadius={6}
+              // borderLeftRadius={6}
               pr={3}
               pl={12}
               py={8}
@@ -136,15 +137,7 @@ const FlightAttendant1 = () => {
               )}
             </Box>
             {/* =============== Second Section ============== */}
-            <Box
-              w="60%"
-              bg="white"
-              h="auto"
-              minW="510px"
-              pl={'40px'}
-              borderRightRadius={6}
-              py="20px"
-            >
+            <Box w="60%" bg="white" h="auto" minW="500px" pl={'40px'} py="20px">
               {resumeData?.work?.visible && (
                 <>
                   <div className={Classes.sideMenu}>

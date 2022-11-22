@@ -69,7 +69,6 @@ const HybridTemplate = () => {
         </Link>
         <Flex
           justifyContent={{ base: 'none', lg: 'center' }}
-          bg={'blackAlpha.100'}
           overflow="auto"
           flexDir={'column'}
           alignItems={{ sm: 'none', md: 'center' }}
@@ -83,6 +82,8 @@ const HybridTemplate = () => {
             m={4}
             mt="100px"
             borderRadius={6}
+            borderWidth="1px"
+            borderColor={'#00000023'}
           >
             <HStack>
               {/* Image Section  */}

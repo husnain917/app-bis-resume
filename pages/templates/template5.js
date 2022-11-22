@@ -81,6 +81,8 @@ const Template5 = () => {
             bg={'blackAlpha.300'}
             py={12}
             borderRadius={6}
+            borderWidth="1px"
+            borderColor={'#00000023'}
           >
             <HStack alignItems={'flex-start'}>
               <VStack align={'flex-end'} lineHeight="34px" pr={6} w="399px">

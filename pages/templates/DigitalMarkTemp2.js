@@ -43,10 +43,6 @@ const DigitalMarkTemp2 = () => {
           overflow="auto"
           flexDir={'column'}
           alignItems={{ sm: 'none', md: 'center' }}
-          bg={{
-            md: 'none',
-            lg: 'blackAlpha.100',
-          }}
         >
           <Box
             minW={820}
@@ -56,6 +52,8 @@ const DigitalMarkTemp2 = () => {
             h={'full'}
             pb={4}
             mt="100px"
+            borderWidth="1px"
+            borderColor={'#00000033'}
           >
             <Box
               bg={'#AED6F1'}
@@ -133,6 +131,7 @@ const DigitalMarkTemp2 = () => {
                         progressBar={true}
                         strokeWidth="2"
                         lineStyle={Classes.line}
+                        direction="row"
                         strokeColor="#9ccced"
                         trailColor="#80808073"
                         skillStyle={Classes.skillText}

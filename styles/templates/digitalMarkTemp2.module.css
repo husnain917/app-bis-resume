@@ -67,10 +67,11 @@
   margin-top: 15px !important;
 }
 .percent {
-  margin-top: 5px !important;
+  margin-top: 4px !important;
+  margin-left: 4px;
 }
 .percent2 {
-  margin-top: 8px !important;
+  margin-top: 9px !important;
 }
 .ml {
   margin-left: 20px;

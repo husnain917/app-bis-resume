@@ -64,7 +64,8 @@
   align-items: flex-start;
 }
 .sideMenuBox {
-  width: 20px;
+  min-width: 20px !important;
+  max-width: 20px !important;
   margin-left: -32px;
   margin-right: 6px;
 }

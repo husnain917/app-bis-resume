@@ -55,7 +55,6 @@ const FashionTemp1 = () => {
 
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
-          bg={{ md: 'none', lg: 'blackAlpha.100' }}
           overflow="auto"
           flexDir={'column'}
           alignItems={{ sm: 'none', md: 'center' }}
@@ -71,6 +70,8 @@ const FashionTemp1 = () => {
             mt={'100px'}
             py={8}
             px={10}
+            borderWidth="1px"
+            borderColor={'#00000030'}
           >
             <Box maxW={336} minW={336}>
               <Name
