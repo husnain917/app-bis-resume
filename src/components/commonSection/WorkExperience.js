@@ -66,6 +66,7 @@ const WorkExperience = (props) => {
     iconShow,
     sideLine,
     lineColor,
+    margin,
   } = props;
 
   return (
@@ -77,9 +78,10 @@ const WorkExperience = (props) => {
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <div
+          <Box
             className={`${childContainerStyle ? childContainerStyle : ''}`}
             style={{ display: 'flex', alignItems: sideLine && 'stretch' }}
+            m={margin ? margin : ''}
           >
             {iconShow && React.createElement(icon)}
             {sideLine && (
@@ -223,7 +225,7 @@ const WorkExperience = (props) => {
                 </>
               )}
             </VStack>
-          </div>
+          </Box>
         )}
       />
     </div>

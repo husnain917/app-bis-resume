@@ -137,6 +137,7 @@ const DigitalMarkTemp2 = () => {
                         trailColor="#80808073"
                         skillStyle={Classes.skillText}
                         percentageStyle={Classes.percent}
+                        percentStyle={Classes.percent2}
                         minWText="220px"
                         maxWText={'220px'}
                         parentContainerStyle={Classes.ml}

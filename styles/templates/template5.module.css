@@ -1,13 +1,15 @@
-.DetailStyleTemplate5 {
+.DetailStyle {
   font-size: 18px;
   font-weight: 500;
+  margin-top: -8px;
 }
 .professionNameTemplate5 {
   font-weight: 700;
   font-size: 1.7em;
   padding: 0;
   line-height: 30px;
-  text-align: center;
+  text-align: left;
+  margin-top: 10px;
 }
 .aboutTextTemplate5 {
   font-weight: 500;
@@ -24,4 +26,38 @@
 }
 .skillTextTemplate5 {
   width: 120px;
+}
+.name {
+  font-weight: 700;
+  font-size: 2.4em;
+  padding: 0;
+  line-height: 30px;
+  text-align: left;
+}
+.date {
+  font-size: 14px;
+  font-weight: bold;
+}
+.mWork {
+  margin-left: 13pc;
+  margin-top: 20px;
+  width: fit-content;
+}
+.line {
+  width: 100px;
+  height: 8px;
+  border-radius: 4px;
+  margin-top: 12px !important;
+}
+.skillTxt {
+  font-size: 14px;
+  font-weight: bold;
+}
+.m {
+  margin-left: 12pc;
+  margin-top: 20px;
+  width: fit-content;
+}
+.percent {
+  margin-top: 4px !important ;
 }
