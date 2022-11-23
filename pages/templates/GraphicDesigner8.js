@@ -1,124 +1,260 @@
 import { Box, Flex } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
-import { connect } from 'react-redux';
 import { Tooltip } from 'react-tippy';
-import Graph8Contact from '../../src/components/graphicDesigner8/Graph8Contact';
-import Graph8Edu from '../../src/components/graphicDesigner8/Graph8Edu';
-import Graph8Profile from '../../src/components/graphicDesigner8/Graph8Profile';
-import HybridText from '../../src/components/hybridTemplate/HybridText';
-import { onBlurField } from '../../store/actions/builderAction';
 import style from '../../styles/templates/template1.module.scss';
-import Style from '../../src/components/graphicDesigner8/graph8.module.css';
-import Graph8Exp from '../../src/components/graphicDesigner8/Graph8Exp';
-import Graph8Skill from '../../src/components/graphicDesigner8/Graph8Skill';
-const GraphicDesigner8 = (props) => {
-  const { resumeData } = props;
+import Heading from '../../src/components/commonSection/Heading';
+import ImageSelector from '../../src/components/imageSelector';
+import Classes from '../../styles/templates/graph8.module.css';
+import About from '../../src/components/commonSection/About';
+import Education from '../../src/components/commonSection/Education';
+import Contact from '../../src/components/commonSection/Contact';
+import { useSelector } from 'react-redux';
+import useShow from '../../src/components/tempSectionSide/useShow';
+import SectionSideMenu from '../../src/components/tempSectionSide/SectionSideMenu';
+import {
+  EDUCATION,
+  SKILL,
+  WORK,
+} from '../../src/components/tempSectionSide/SectionSideConstant';
+import Name from '../../src/components/commonSection/Name';
+import WorkExperience from '../../src/components/commonSection/WorkExperience';
+import Skill from '../../src/components/commonSection/Skill';
+import TempLayout from '../../src/components/tempNav/TempLayout';
+import Profession from '../../src/components/commonSection/Profession';
+const GraphicDesigner8 = () => {
+  let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  // custom Hook For Template
+  const [show, setShow] = useShow();
   return (
     // Graphic Designer Template 8 //
     <div className={style.main}>
-      <Link href={'/templates'}>
-        <div className={style.swapCont}>
-          <Tooltip title="Change Template" arrow distance={20}>
-            <div className={style.swap}>
-              <img src="/icons/swap.png" />
-            </div>
-          </Tooltip>
-        </div>
-      </Link>
-      <Flex
-        justifyContent={{ base: 'none', md: 'center' }}
-        bg={{ md: 'none', lg: 'blackAlpha.200' }}
-      >
-        <Box
-          minW={830}
-          maxW={830}
-          borderRadius={6}
-          bg={'#fff'}
-          my={10}
-          mx={5}
-          pr={'30px'}
-          py={'60px'}
-          display="flex"
-          alignItems={'stretch'}
+      <TempLayout education={true} work={true} skills={true}>
+        <Link href={'/templates'}>
+          <div className={style.swapCont}>
+            <Tooltip title="Change Template" arrow distance={20}>
+              <div className={style.swap}>
+                <img src="/icons/swap.png" />
+              </div>
+            </Tooltip>
+          </div>
+        </Link>
+        <Flex
+          justifyContent={{ base: 'none', md: 'center' }}
+          overflow="auto"
+          flexDir={'column'}
+          alignItems={{ sm: 'none', md: 'center' }}
         >
-          {/* _______________ First Section _______________  */}
           <Box
-            w="40%"
-            pb="10%"
-            minW={'340px'}
-            maxW={'340px'}
-            bgColor="#2A78AB"
-            borderBottomRadius={6}
-            borderTopRadius={'180px'}
-            pr={5}
-            pl={12}
-            ml={'40px'}
-            py={8}
+            minW={830}
+            maxW={830}
+            borderRadius={6}
+            bg={'#fff'}
+            mb={10}
+            mt="100px"
+            mx={5}
+            pr={'30px'}
+            py={'60px'}
+            display="flex"
+            alignItems={'stretch'}
+            borderWidth="1px"
+            borderColor={'#00000033'}
           >
-            {/* =============== Profile Section ============== */}
-            <Graph8Profile />
-            {/* =============== Education Section ============== */}
-            <Graph8Edu
-              data={
-                resumeData?.education?.items.length
-                  ? [...resumeData?.education?.items]
-                  : [...sampleData?.data?.education?.items]
-              }
-            />
-            {/* =============== Contact Section ============== */}
-            <Graph8Contact />
-          </Box>
-          {/* _______________ Second Section _______________  */}
-          <Box
-            w="60%"
-            bg="white"
-            minW="450"
-            maxW={'450'}
-            pl={'30px'}
-            pt={'100px'}
-            pr="30px"
-          >
-            {/* =============== Name Section ============== */}
-            <Box>
-              <HybridText
-                value={resumeData?.profile?.firstName}
-                placeholder="First Name"
-                customclass={` ${Style.name}`}
-                path={'profile.firstName'}
+            {/* _______________ First Section _______________  */}
+            <Box
+              w="40%"
+              pb="10%"
+              minW={'340px'}
+              maxW={'340px'}
+              bgColor="#2A78AB"
+              borderBottomRadius={6}
+              borderTopRadius={'180px'}
+              ml={'40px'}
+              py={8}
+              pr={6}
+            >
+              {/* =============== Profile Section ============== */}
+              <ImageSelector
+                minWidth={240}
+                maxWidth={240}
+                minHeight={240}
+                maxHeight={240}
+                marginTop="20px"
+                marginLeft={12}
               />
-              <HybridText
-                value={resumeData?.profile?.lastName}
-                placeholder="Last Name"
-                customclass={` ${Style.name}`}
-                path={'profile.lastName'}
+              <Heading
+                title={'ABOUT ME'}
+                color="#fff"
+                line={true}
+                lineH="2px"
+                lineBg={'#fff'}
+                lineW="17pc"
+                margin={'25px 0px 15px 30px'}
+                textMargin="0px 0px 8px 0px"
+              />
+              <About aboutStyle={Classes.aboutText} minW="full" maxW="full" />
+              {/* =============== Education Section ============== */}
+              {resumeData?.education?.visible && (
+                <div className={Classes.sideMenu}>
+                  <div className={Classes.sideMenuBox}>
+                    {show.education && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, education: false })}
+                        onDelete={EDUCATION}
+                        bg="#fff"
+                        iconColor={'#2A78AB'}
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <Heading
+                      title={'EDUCATION'}
+                      color="#fff"
+                      line={true}
+                      lineH="2px"
+                      lineBg={'#fff'}
+                      lineW="17pc"
+                      margin="15px 0px"
+                      textMargin="0px 0px 8px 0px"
+                      onSideSectionShow={() =>
+                        setShow({ ...show, education: true })
+                      }
+                    />
+                    <Education
+                      institution={true}
+                      degree={true}
+                      institutionStyle={Classes.institute}
+                      degreeStyle={Classes.program}
+                      degree_placeholder="Study Program"
+                    />
+                  </div>
+                </div>
+              )}
+              {/* =============== Contact Section ============== */}
+              <Heading
+                title={'CONTACT'}
+                color="#fff"
+                line={true}
+                lineH="2px"
+                lineBg={'#fff'}
+                lineW="17pc"
+                margin={'20px 0px 15px 30px'}
+                textMargin="0px 0px 8px 0px"
+              />
+              <Contact
+                email={true}
+                phone={true}
+                website={true}
+                circleIcon={true}
+                circleSize="25px"
+                circleBg="#fff"
+                iconColor="#2A78AB"
+                style={Classes.contact}
+                margin="10px 0px 0px 30px"
               />
             </Box>
-            {/* =============== Work Experience Section ============== */}
-            <Graph8Exp
-              data={
-                resumeData?.work?.items.length
-                  ? [...resumeData?.work?.items]
-                  : [...sampleData?.data?.work?.items]
-              }
-            />
-            {/* =============== Skill Section ============== */}
-            <Graph8Skill
-              data={
-                resumeData?.skills?.items?.length
-                  ? [...resumeData?.skills?.items]
-                  : [...sampleData?.data?.skills?.items]
-              }
-            />
+            {/* _______________ Second Section _______________  */}
+            <Box
+              w="60%"
+              bg="white"
+              minW="440px"
+              maxW={'440px'}
+              pt={'100px'}
+              pr="30px"
+            >
+              {/* =============== Name Section ============== */}
+              <Name
+                FNameStyle={Classes.name}
+                SNameStyle={Classes.name}
+                FName={true}
+                SName={true}
+                margin="0px 0px 0px 30px"
+              />
+              <Profession
+                professionStyle={Classes.profession}
+                margin="0px 0px 0px 30px"
+              />
+              {/* =============== Work Experience Section ============== */}
+              {resumeData?.work?.visible && (
+                <div className={Classes.sideMenu} style={{ marginTop: '28px' }}>
+                  <div className={Classes.sideMenuBox}>
+                    {show.work && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, work: false })}
+                        onDelete={WORK}
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <Heading
+                      title={'WORK EXPERIENCE'}
+                      color="#2A78AB"
+                      line={true}
+                      lineH="2px"
+                      lineBg={'gray'}
+                      lineW="24pc"
+                      fontWeight={700}
+                      textMargin="0px 0px 8px 0px"
+                      margin={'15px 0px'}
+                      onSideSectionShow={() => setShow({ ...show, work: true })}
+                    />
+                    <WorkExperience
+                      position={true}
+                      date={true}
+                      summary={true}
+                      positionStyle={Classes.workText}
+                      dateStyle={Classes.date}
+                      summaryStyle={Classes.date}
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* =============== Skill Section ============== */}
+              {resumeData?.skills?.visible && (
+                <div className={Classes.sideMenu}>
+                  <div className={Classes.sideMenuBox}>
+                    {show.skills && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, skills: false })}
+                        onDelete={SKILL}
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <Heading
+                      title={'SKILLS'}
+                      color="#2A78AB"
+                      line={true}
+                      lineH="2px"
+                      lineBg={'gray'}
+                      lineW="24pc"
+                      fontWeight={700}
+                      textMargin="0px 0px 8px 0px"
+                      margin={'15px 0px'}
+                      onSideSectionShow={() =>
+                        setShow({ ...show, skills: true })
+                      }
+                    />
+                    <Skill
+                      skillStyle={Classes.skillText}
+                      progressBar={true}
+                      lineStyle={Classes.line}
+                      strokeColor="#2A78AB"
+                      strokeWidth="2"
+                      trailColor="#80808073"
+                      percentStyle={Classes.mt}
+                      minWText="210px"
+                      maxWText="210px"
+                    />
+                  </div>
+                </div>
+              )}
+            </Box>
           </Box>
-        </Box>
-      </Flex>
+        </Flex>
+      </TempLayout>
     </div>
   );
 };
-const mapStateToProps = (store) => ({
-  theme: store.editorReducer.theme,
-  resumeData: store.editorReducer.resumeData,
-  updater: store.editorReducer.updater,
-});
-export default connect(mapStateToProps, { onBlurField })(GraphicDesigner8);
+export default GraphicDesigner8;

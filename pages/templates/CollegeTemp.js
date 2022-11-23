@@ -30,7 +30,9 @@ const CollegeTemp = (props) => {
       </Link>
       <Flex
         justifyContent={{ base: 'none', lg: 'center' }}
-        bg={'blackAlpha.100'}
+        overflow="auto"
+        flexDir={'column'}
+        alignItems={{ sm: 'none', md: 'center' }}
       >
         <Box
           minW={910}
