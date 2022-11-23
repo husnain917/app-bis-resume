@@ -42,6 +42,28 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
+          <Link href="/templates/SalesRepresentative">
+            <img
+              src="salesReprentative.png"
+              alt="Fashion Designer Temmplate 4"
+              height={'340'}
+              width={270}
+              mt={-2}
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/FinancialExpert.js">
+            <img
+              src="financialAdvisor.png"
+              alt="Fashion Designer Temmplate 4"
+              height={'340'}
+              width={270}
+              mt={-2}
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
           <Link href="/templates/FashionDesigner2">
             <Image
               src="FashionDesigner2.png"
@@ -289,6 +311,16 @@ function Templates() {
           <Link href="/templates/TechTemplate">
             <img
               src="TechTemp.png"
+              alt="Tech Editable Resume Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/softEngineer/SoftEngineer">
+            <img
+              src="softEngr.jpg"
               alt="Tech Resume Template"
               height="200px"
               width="250px"
@@ -300,6 +332,26 @@ function Templates() {
             <img
               src="fashionTemp.PNG"
               alt="Fashion Designer Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/CollegeTemp">
+            <img
+              src="CollegeTemp.png"
+              alt="College Resume Template"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
+        <Box className="cursor">
+          <Link href="/templates/simpleTempDesign">
+            <img
+              src="simpleTemp.png"
+              alt="Simple Template Design"
               height="200px"
               width="250px"
             />

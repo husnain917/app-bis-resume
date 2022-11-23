@@ -43,7 +43,7 @@ export default function GraphicDesigner3() {
         mb="3%"
         overflow="auto"
         h="auto"
-        ml={["", , , "5%", "13%"]}
+        ml={["", , , "8%", "15%","23%"]}
       >
         <Box w="100%" display="flex" flexDir="row" maxW="930px" minW="930px">
           <Box w="30%" h="auto" display="flex" flexDir="column">
