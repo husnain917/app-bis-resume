@@ -10,27 +10,18 @@ import style from "../../styles/templates/template1.module.scss";
 import Classes from "../../styles/templates/hybridTemplate.module.css";
 import Class from "../../styles/templates/fashion2.module.scss";
 import { Tooltip } from "react-tippy";
-import ImageSection from "../../src/components/commonSection/ImageSection";
 import Name from "../../src/components/commonSection/Name";
-import Profession from "../../src/components/commonSection/Profession";
 import About from "../../src/components/commonSection/About";
 import Contact from "../../src/components/commonSection/Contact";
 import Heading from "../../src/components/commonSection/Heading";
 import Education from "../../src/components/commonSection/Education";
 import WorkExperience from "../../src/components/commonSection/WorkExperience";
-import RowSkill from "../../src/components/commonSection/RowSkill";
 import Skill from "../../src/components/commonSection/Skill";
-import Project from "../../src/components/commonSection/Project";
-import Organization from "../../src/components/commonSection/Organization";
-import Certificate from "../../src/components/commonSection/Certificate";
-import Language from "../../src/components/commonSection/Language";
-import Interest from "../../src/components/commonSection/Interest";
 import TempLayout from "../../src/components/tempNav/TempLayout";
 import { useSelector } from "react-redux";
 import useShow from "../../src/components/tempSectionSide/useShow";
 import SectionSideMenu from "../../src/components/tempSectionSide/SectionSideMenu";
 import ImageSelector from "../../src/components/imageSelector";
-import Skills from "../../src/components/FashionDesigner2/Skills";
 import {
   CERTIFICATE,
   EDUCATION,
