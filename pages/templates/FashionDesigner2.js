@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import Text from "../../src/components/commonSection/Text";
 import style from "../../styles/templates/fashion2.module.scss";
 import { onBlurField } from "../../store/actions/builderAction";
-
+// import WorkExperience from "../../src/components/commonSection/WorkExperience";
 import WorkExperience from "../../src/components/FashionDesigner2/WorkExperience";
 import Skills from "../../src/components/FashionDesigner2/Skills";
 import EducationHistory from "../../src/components/FashionDesigner2/EducationHistory";
-import Profile from "../../src/components/FashionDesigner2/Profile";
+import Name from "../../src/components/commonSection/Name";
 import { sampleData } from "../../constants/sampleData";
 import { styles } from "../../src/components/componentStyles/template1Style";
 
@@ -67,8 +67,18 @@ class FashionDesigner2 extends Component {
                   marginTop={"-70%"}
                 />
               </Box>
-              <Box>
-                <Profile />
+              <Box
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"center"}
+              >
+                <Name
+                  parentContainerStyle="fD2textContainer"
+                  FNameStyle="fDesigner2"
+                  SNameStyle="fDesigner2a"
+                  FName={true}
+                  SName={true}
+                />
               </Box>
               <Box
                 bg="white"
@@ -215,6 +225,7 @@ class FashionDesigner2 extends Component {
                       />
                     </>
                   )}
+                  {/* {" Work Experience"} */}
                   {resumeData?.work?.visible && (
                     <>
                       <Box

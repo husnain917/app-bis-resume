@@ -147,7 +147,7 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   align-items: center;
 }
 .fDesigner2{
-  font-size: 2.4em;
+  font-size: 3.8em;
   padding: 0;
   line-height: 30px;
   text-align:left;
@@ -155,14 +155,16 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 4px;
   text-transform: uppercase;
+  font-weight: 500;
 }
 .fDesigner2a{
   padding: 0;
   line-height: 30px;
-  text-align:left;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 4px;
   text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
 }
 .manager-f-sub-rowA {
   margin: 0 auto;
@@ -210,6 +212,11 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 }
 .skillTextTemplate5 {
   width: 120px;
+}
+.fD2textContainer{
+    display: "flex";
+    flex-direction: "column";
+    align-items: "center"
 }
 /* swiper */
 #coverEffectSlider {
