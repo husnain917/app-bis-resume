@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Tooltip } from 'react-tippy';
+import { sampleData } from '../../constants/sampleData';
 import MarkManagExpertise from '../../src/components/marketingManager/MarkManagExpertise';
 import MarkMangEdu from '../../src/components/marketingManager/MarkMangEdu';
 import MarkMangeLang from '../../src/components/marketingManager/MarkMangeLang';
@@ -29,7 +30,9 @@ const marketingManager = (props) => {
       </Link>
       <Flex
         justifyContent={{ base: 'none', md: 'center' }}
-        bg={{ md: 'none', lg: 'blackAlpha.100' }}
+        overflow="auto"
+        flexDir={'column'}
+        alignItems={{ sm: 'none', md: 'center' }}
       >
         <HStack
           minW={830}
@@ -71,7 +74,7 @@ const marketingManager = (props) => {
               {/* ============== Education Section ============== */}
               <MarkMangEdu
                 data={
-                  resumeData?.education?.items.length
+                  resumeData?.education?.items?.length
                     ? [...resumeData?.education?.items]
                     : [...sampleData?.data?.education?.items]
                 }
@@ -101,7 +104,7 @@ const marketingManager = (props) => {
             {/* ============== Work Experience Section ============== */}
             <MarkMangExp
               data={
-                resumeData?.work?.items.length
+                resumeData?.work?.items?.length
                   ? [...resumeData?.work?.items]
                   : [...sampleData?.data?.work?.items]
               }
@@ -109,7 +112,7 @@ const marketingManager = (props) => {
             {/* ============== Reference Section ============== */}
             <MarkMangeReference
               data={
-                resumeData?.references?.items.length
+                resumeData?.references?.items?.length
                   ? [...resumeData?.references?.items]
                   : [...sampleData?.data?.references?.items]
               }

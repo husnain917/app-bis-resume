@@ -26,26 +26,23 @@ export default function TempNavbar({
       flexDir="column"
       justifyContent="center"
       alignItems="center"
-      overflow={'auto'}
     >
       <Box
         display="flex"
         alignItems="center"
         justifyContent="center"
         bgColor="#313C4E"
-        w="50%"
         h="50px"
-        pl={['100px', , '0px', , ,]}
-        ml={['100px', , '0px']}
         borderRadius={['0px', '100px', '100px']}
         mt={['5%', '7%', '10%', ,]}
-        minW="600px"
-        maxW="600px"
+        minW={{ base: 'full', md: '600px' }}
+        maxW={{ base: 'full', md: '600px' }}
         position={[, , 'fixed']}
         zIndex="999"
       >
         <Button
           bgColor="transparent"
+          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
           color="white"
           _hover={{
             backgroundColor: 'transparent',
@@ -59,6 +56,7 @@ export default function TempNavbar({
         </Button>
         <Button
           bgColor="transparent"
+          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
           color="white"
           _hover={{
             backgroundColor: 'transparent',
@@ -85,6 +83,7 @@ export default function TempNavbar({
         <Button
           bgColor="transparent"
           color="white"
+          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
           _hover={{
             backgroundColor: 'transparent',
 
