@@ -569,11 +569,11 @@ button {
   height: 40px;
 }
 .pic_container{
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 50%;
 }
 .pic_container:hover{
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 50%;
   cursor: pointer;
   display: block;
