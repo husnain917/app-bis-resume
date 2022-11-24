@@ -23,11 +23,13 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import { useSelector } from 'react-redux';
 import ImageSelector from '../../src/components/imageSelector';
+import Navbar from '../../src/components/navbar/Navbar';
 const FashionTemp5 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
   return (
     <div className={style.main}>
+      <Navbar />
       <TempLayout work={true} education={true} languages={true} skills={true}>
         <Link href={'/templates'}>
           <div className={style.swapCont}>

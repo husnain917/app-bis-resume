@@ -32,6 +32,7 @@ export default function Heading({
   lineH,
   lineBg,
   lineAlign,
+  lineStyle,
   alignItems,
   justifyContent,
 }) {
@@ -88,6 +89,7 @@ export default function Heading({
             w={lineW ? lineW : 'full'}
             bg={lineBg ? lineBg : '#000'}
             alignSelf={lineAlign ? lineAlign : 'flex-start'}
+            className={`${lineStyle ? lineStyle : ''}`}
           ></Box>
         )}
       </div>

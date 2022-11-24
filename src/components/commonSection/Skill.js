@@ -88,7 +88,10 @@ const Skill = (props) => {
   } = props;
 
   return (
-    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
+    <div
+      className={`${parentContainerStyle ? parentContainerStyle : ''}`}
+      style={{ margin: margin ? margin : '' }}
+    >
       <Dnd
         data={data}
         direction={DndDirection ? DndDirection : ''}
@@ -101,7 +104,6 @@ const Skill = (props) => {
             minW={minW ? minW : ''}
             direction={direction ? direction : 'row'}
             className={`${childContainerStyle ? childContainerStyle : ''}`}
-            m={margin ? margin : ''}
           >
             <Box
               minW={(rating || progressBar) && minWText}

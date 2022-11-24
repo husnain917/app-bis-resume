@@ -81,10 +81,14 @@ const Language = (props) => {
     maxWText = '130px',
     direction,
     lineStyle,
+    margin,
   } = props;
 
   return (
-    <div className={`${langContainerStyle ? langContainerStyle : ''}`}>
+    <div
+      className={`${langContainerStyle ? langContainerStyle : ''}`}
+      style={{ margin: margin ? margin : '' }}
+    >
       <Dnd
         data={data}
         additem={_addNewItem}
