@@ -1,0 +1,101 @@
+.firstNameStyle {
+    color: #fff !important;
+    font-size: 3.5em;
+    font-weight: 600;
+}
+
+.lastNameStyle {
+    color: #fff !important;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.designerContectStyle {
+    margin-left: 20px;
+    color: #fff !important;
+    font-size: 14px !important;
+}
+
+.profileTitle {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.educationDesHeading {
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.educationDesTxt {
+    color: #fff !important;
+}
+
+.experienceDesHeadings {
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.experienceDesBody {
+    color: #fff !important;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.profileBodyDes {
+    font-size: 15px;
+    color: #fff !important;
+    line-height: 20px;
+    text-align: justify;
+    padding: 20px 0px;
+}
+
+.skillBodyHeading {
+    font-size: 15px;
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.inputData {
+    font-size: 14px !important;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.perD {
+    display: inline-block;
+    margin-left: -15px !important;
+    font-size: 13px !important;
+    color: #fff;
+}
+
+.swapCont {
+    position: absolute;
+    right: 80px;
+    top: 10px;
+}
+
+.swap {
+    width: 40px;
+    height: 40px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.swap:hover {
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+.swap img {
+    width: 70%;
+    filter: invert(1);
+}

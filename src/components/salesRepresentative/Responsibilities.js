@@ -1,22 +1,28 @@
 import React from "react";
 import Util from "../../../utils/templateUtils";
-import { Text, Dnd } from "./index";
+
 import { useDispatch } from "react-redux";
 import {
   updateOrder,
   addNewObj,
   deleteObjInArray,
 } from "../../../store/actions/builderAction";
-import { Box } from "@chakra-ui/react";
-
-function SoftSkills(props) {
+import { Dnd, Text } from "../template1";
+import { styles } from "../componentStyles/template1Style";
+import {
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
+  Box,
+} from "@chakra-ui/react";
+function Responsibilities(props) {
   const dispatch = useDispatch();
-  const path = "soft_skills.items";
+  const path = "responsibilities.items";
 
   const onOrderUpdate = (data) => {
     const storeReorder = Util.mapOrder(props.data, data, "id");
-
-    //
     dispatch(updateOrder(storeReorder, path));
   };
 
@@ -31,35 +37,28 @@ function SoftSkills(props) {
   const { data } = props;
 
   return (
-    <Box>
+    <div>
       <Dnd
-        direction="horizontal"
         data={data}
         reorder={(e) => onOrderUpdate(e)}
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <Box
-            display="flex"
-            flexDir="row"
-            alignItems="center"
-            h="30px"
-            mt="2px"
-          >
-            <Box fontSize="3rem" mb="7">
-              .
+          <>
+            <Box>
+              <UnorderedList ml={8} fontSize={18}>
+                <ListItem
+                  value={item.responsibilities}
+                  placeholder="responsibilities"
+                  customclass={"manager-fName manager-template-text-bold"}
+                  path={`${path}.${index}.responsibilities`}
+                ></ListItem>
+              </UnorderedList>
             </Box>
-            <Text
-              value={item?.name}
-              placeholder="Soft Skill"
-              customclass={"manager-fName"}
-              path={`${path}.${index}.name`}
-            />
-            {/* {data.length - 1 !== index && <p className="aPadding">|</p>} */}
-          </Box>
+          </>
         )}
       />
-    </Box>
+    </div>
   );
 }
-export default SoftSkills;
+export default Responsibilities;

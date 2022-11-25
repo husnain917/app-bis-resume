@@ -1,6 +1,7 @@
 import React from "react";
 import Util from "../../../utils/templateUtils";
-import { Text, Dnd } from "./index";
+import Text from "./Text";
+import Dnd from "./Dnd";
 import { useDispatch } from "react-redux";
 import {
   updateOrder,
@@ -8,15 +9,13 @@ import {
   deleteObjInArray,
 } from "../../../store/actions/builderAction";
 import { Box } from "@chakra-ui/react";
-
-function HardSkills(props) {
+function Language(props) {
   const dispatch = useDispatch();
-  const path = "hard_skills.items";
+  const path = "certifications.items";
 
   const onOrderUpdate = (data) => {
     const storeReorder = Util.mapOrder(props.data, data, "id");
 
-    //
     dispatch(updateOrder(storeReorder, path));
   };
 
@@ -29,40 +28,33 @@ function HardSkills(props) {
     dispatch(deleteObjInArray(deletedPath));
   };
   const { data } = props;
+  console.log({ data });
 
   return (
-    <Box>
+    <div>
       <Dnd
-        direction="horizontal"
         data={data}
         reorder={(e) => onOrderUpdate(e)}
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <Box
-            display="flex"
-            flexDir="row"
-            alignItems="center"
-            h="30px"
-            mt="2px"
-            textAlign="center"
-          >
-            <Box fontSize="3rem" mb="7">
-              .
-            </Box>
-            <Box>
+          <>
+            <Box display="flex" alignItems="center" ml="10px" mt="2%">
+              <Box bgColor="white" w="5px" h="5px" borderRadius="100px"></Box>
               <Text
-                value={item?.name}
-                placeholder="Hard Skill"
-                customclass={"manager-fName"}
-                path={`${path}.${index}.name`}
+                value={item.title}
+                placeholder="English"
+                path={`${path}.${index}.title`}
+                color="white"
+                fontSize="1rem"
+                marginLeft="10px"
+                lineHeight="10px"
               />
             </Box>
-            {/* {data.length - 1 !== index && <p className="aPadding">|</p>} */}
-          </Box>
+          </>
         )}
       />
-    </Box>
+    </div>
   );
 }
-export default HardSkills;
+export default Language;

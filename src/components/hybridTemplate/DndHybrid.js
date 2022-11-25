@@ -14,6 +14,7 @@ const getDragIconStyle = () => ({
   top: -13,
   right: 30,
 });
+
 const getAddIconStyle = () => ({
   userSelect: 'none',
   width: '26px',

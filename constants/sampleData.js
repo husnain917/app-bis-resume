@@ -29,7 +29,7 @@ export const sampleData = {
       enable: false,
       heading: 'Honors & Awards',
       items: [],
-      visible: false,
+      visible: true,
     },
     certifications: {
       heading: 'Certifications',
@@ -46,7 +46,7 @@ export const sampleData = {
           endDate: '',
         },
       ],
-      visible: false,
+      visible: true,
     },
     education: {
       enable: true,
@@ -80,9 +80,10 @@ export const sampleData = {
       visible: true,
     },
     expertise: {
+      enable: true,
       heading: 'Areas of Expertise include:',
-      items: [],
-      visible: false,
+      items: [{}],
+      visible: true,
     },
     extras: {
       enable: false,
@@ -90,19 +91,19 @@ export const sampleData = {
       items: [],
     },
     hobbies: {
-      enable: false,
+      enable: true,
       heading: 'Hobbies',
       items: [
         {
           title: '',
         },
       ],
-      visible: false,
+      visible: true,
     },
     languages: {
       enable: true,
       heading: 'Languages',
-      items: [{}],
+      items: [{ title: '' }],
       visible: true,
     },
     military: {
@@ -241,7 +242,7 @@ export const sampleData = {
           Summary: '',
         },
       ],
-      visible: false,
+      visible: true,
     },
     publications: {
       heading: 'Publications',
@@ -256,7 +257,7 @@ export const sampleData = {
       visible: false,
     },
     references: {
-      enable: false,
+      enable: true,
       heading: 'References',
       items: [
         {
@@ -264,8 +265,10 @@ export const sampleData = {
           profession: '',
           address: '',
           phone: '',
+          email: '',
         },
       ],
+      visible: true,
     },
     security_creds: {
       heading: 'Security Credentials',
@@ -346,6 +349,7 @@ export const sampleData = {
           endDate: '',
         },
       ],
+      visible: true,
     },
   },
   oid: '5fb681c7c8d2ca429821d3d2',
