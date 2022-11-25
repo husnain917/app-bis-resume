@@ -35,10 +35,6 @@ import Certificate from '../../src/components/commonSection/Certificate';
 import Skill from '../../src/components/commonSection/Skill'
 import Language from '../../src/components/commonSection/Language'
 
-
-
-
-
 import Link from "next/link";
 import { Tooltip } from "react-tippy";
 
@@ -113,7 +109,7 @@ export default function TemplateMarket() {
 
 
 
-                                {/*Pro Skill Box and language*/}
+
 
                                 <div>
 
@@ -140,7 +136,7 @@ export default function TemplateMarket() {
                                         <>
                                             <div className={styles.sideMenu}>
                                                 <div>
-                                                    {/* skill Heading */}
+
                                                     <Heading
                                                         title={'Skill'}
                                                         headBg={'black'}
@@ -162,7 +158,7 @@ export default function TemplateMarket() {
                                                         }
                                                     />
 
-                                                    {/* Skill  Components */}
+
                                                     <div className={styles.skillMain}>
 
                                                         <Skill
@@ -411,17 +407,6 @@ export default function TemplateMarket() {
                                     </div>
 
                                     <div>
-                                        {/* <div>
-                                        <WorkCertificate
-                                            data={
-                                                resumeData?.certifications?.items.length
-                                                    ? [...resumeData?.certifications?.items]
-                                                    : [...sampleData?.data?.certifications?.items]
-                                            }
-                                            color={theme.color}
-                                            updater={updater}
-                                        />
-                                    </div> */}
                                         {resumeData?.certifications?.visible && (
                                             <>
                                                 <HStack alignItems={'flex-start'} mt={'20px'}>

@@ -4,31 +4,21 @@
     height: 100vh;
     padding-top: 5%;
     overflow: auto;
-
-
-
 }
 
 .innerMainDiv {}
 
 .innerMainDiv1 {
     background-color: white;
-
     width: 900px;
     padding: 0 25px;
     margin-top: 5%;
     margin-left: 10%;
-
-
 }
 
 .profileDiv {
     margin: 40px 50px;
 }
-
-
-
-
 .contactHeadingTitle {
     font-size: 1.4em;
     font-weight: 600;

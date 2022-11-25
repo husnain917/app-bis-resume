@@ -188,7 +188,7 @@ export default function TemplateContentCreater() {
                                     {resumeData?.work?.visible && (
                                         <>
                                             <HStack alignItems={'flex-start'}>
-                                                {/* Section Side Menu */}
+
                                                 {show.work && (
                                                     <SectionSideMenu
                                                         bg={'black'}
@@ -196,7 +196,6 @@ export default function TemplateContentCreater() {
                                                         onDelete={WORK}
                                                     />
                                                 )}
-                                                {/* Work Experience Heading  */}
                                                 <div className={Classes.workExp}>
                                                     <div className={Classes.bgImage}>
                                                         <Box marginLeft="35%">
@@ -216,7 +215,7 @@ export default function TemplateContentCreater() {
                                                     </div>
                                                 </div>
                                             </HStack>
-                                            {/* Work Experience Components */}
+
                                             <WorkExperience
 
                                                 position={true}
@@ -244,7 +243,6 @@ export default function TemplateContentCreater() {
                                         {resumeData?.education?.visible && (
                                             <>
                                                 <HStack alignItems={'flex-start'}>
-                                                    {/* Section Side Menu */}
                                                     {show.education && (
                                                         <SectionSideMenu
                                                             bg={'black'}
@@ -254,7 +252,6 @@ export default function TemplateContentCreater() {
                                                             onDelete={EDUCATION}
                                                         />
                                                     )}
-                                                    {/* Heading For Education Section  */}
                                                     <div className={Classes.workExp}>
                                                         <div className={Classes.bgImage}>
                                                             <Box marginLeft="40%">
@@ -279,7 +276,6 @@ export default function TemplateContentCreater() {
                                                     </div>
 
                                                 </HStack>
-                                                {/* Education Components */}
                                                 <Education
                                                     institution={true}
                                                     date={true}

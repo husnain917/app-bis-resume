@@ -113,30 +113,9 @@ export default function TemplateBabySitter() {
 
                                 </Box>
 
-                                {/* <div >
-                                <Text
-                                    value={resumeData?.education?.heading}
-                                    placeholder="EDUCATION"
-                                    path={"education.heading"}
-                                    customclass={`${Classes.ProfileCon}`}
+                             
+                                 
 
-                                    editable={false}
-                                />
-                                <div>
-                                    <div>
-                                        <EducationHistory
-                                            data={
-                                                resumeData?.education?.items.length
-                                                    ? [...resumeData?.education?.items]
-                                                    : [...sampleData?.data?.education?.items]
-                                            }
-                                            color={theme.color}
-                                            updater={updater}
-                                        />
-                                    </div>
-                                </div>
-                            </div> */}
-                                {/*Pro Skill Box and language*/}
                                 <div >
 
                                     {resumeData?.education?.visible && (
@@ -188,24 +167,8 @@ export default function TemplateBabySitter() {
                                     )}
                                 </div>
 
-                                {/* <Box flexDirection={"row"} >
+                               
 
-                                    <Skill
-                                        progressBar={true}
-                                        strokeWiidth={5}
-                                        lineStyle={Classes.line}
-                                        strokeColor={"red"}
-                                        trailColor={"black"}
-                                        skillStyle={Classes.skillText}
-                                        direction="column"
-                            
-                                        percentageStyle={Classes.percent}
-                                    
-
-
-                                    />
-
-                                </Box> */}
                                 <Box mb="10%">
                                     {resumeData?.skills?.visible && (
                                         <>
@@ -261,24 +224,6 @@ export default function TemplateBabySitter() {
                             <div className={Classes.innerMainDiv2} >
                                 <Profile cId='babysitter' />
 
-                                {/* <div>
-                                    <Text
-                                        value={resumeData?.profile?.heading}
-                                        placeholder="Profile"
-                                        customclass={`${Classes.ProfileCon}`}
-                                        path={"profile.heading"}
-                                        editable={false}
-                                    />
-                                    <div>
-                                        <Text
-                                            value={resumeData?.objective?.body}
-                                            placeholder="Profile Summary"
-
-                                            customclass={`${style.managerFName} ${Classes.managerPadding} `}
-                                            path={"objective.body"}
-                                        />
-                                    </div>
-                                </div> */}
 
 
 
@@ -299,27 +244,8 @@ export default function TemplateBabySitter() {
 
                                 />
 
-                                {/* <div >
-                                <Text
-                                    value={resumeData?.work?.heading}
-                                    placeholder="Experience History"
-                                    customclass={`${Classes.ProfileCon}`}
-
-                                    path={"experience.heading"}
-                                    editable={false}
-                                />
-                                <div>
-                                    <WorkExperience
-                                        data={
-                                            resumeData?.work?.items.length
-                                                ? [...resumeData?.work?.items]
-                                                : [...sampleData?.data?.work?.items]
-                                        }
-                                        color={theme.color}
-                                        updater={updater}
-                                    />
-                                </div>
-                            </div> */}
+                             
+                            
 
 
                                 <div>
@@ -342,12 +268,7 @@ export default function TemplateBabySitter() {
                                                     maxW={'480px'}
                                                     font-size={"1.7em"}
                                                     font-weight={900}
-                                                    // text-transform: uppercase;
-                                                    // border-radius: 0% !important;
-                                                    // margin-bottom: 10px !important;
-                                                    // padding-left: 5px;
-                                                    // color: black;
-
+                                                    
                                                     color={"black"}
                                                     title="WORK EXPERIENCE"
 
@@ -357,7 +278,6 @@ export default function TemplateBabySitter() {
                                                     onSideSectionShow={() => setShow({ ...show, work: true })}
                                                 />
                                             </HStack>
-                                            {/* _____________ Work Experience _____________ */}
                                             <WorkExperience
 
                                                 position={true}

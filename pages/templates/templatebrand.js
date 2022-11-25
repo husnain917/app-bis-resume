@@ -27,11 +27,6 @@ import Reference from "../../src/components/commonSection/Reference"
 import Contact from '../../src/components/commonSection/Contact';
 import Skill from '../../src/components/commonSection/Skill';
 
-
-
-
-
-
 export default function Templatebrand() {
     const {
         resumeData,
@@ -60,7 +55,7 @@ export default function Templatebrand() {
                         <div className={`${styles.outerDiv}`}>
                             <div className={styles.innerMainDiv} >
                                 <div className={styles.innerMainDiv1}>
-                                    {/* className={styles.ImageDiv}  */}
+
                                     <Box height={300} display='flex' pl={35} justifyContent='left' alignItems='center' >
                                         <Box style={{ border: "7px solid white" }} borderRadius="100%" >
                                             <ImageSelector
@@ -71,24 +66,10 @@ export default function Templatebrand() {
                                         </Box>
                                     </Box>
                                     <div className={styles.innerDivEducation}>
-                                        {/* Education box*/}
+
                                         <div >
-                                            {/* <Text
-                                            value={resumeData?.education?.heading}
-                                            placeholder="EDUCATION"
-                                            customclass={`${styles.templateceoHeadingTitle}`}
-                                            path={"education.heading"}
-                                            editable={false}
-                                        />
-                                        <EducationHistory
-                                            data={
-                                                resumeData?.education?.items.length
-                                                    ? [...resumeData?.education?.items]
-                                                    : [...sampleData?.data?.education?.items]
-                                            }
-                                            color={theme.color}
-                                            updater={updater}
-                                        /> */}
+                                           
+                                       
                                             <div>
 
                                                 {resumeData?.education?.visible && (
@@ -148,25 +129,7 @@ export default function Templatebrand() {
                                             </div>
 
                                         </div>
-                                        {/* Expertise box*/}
-                                        {/* <div >
-                                        <Text
-                                            value={resumeData?.skill?.heading}
-                                            placeholder="EXPERTISE"
-                                            customclass={`${styles.templateceoHeadingTitle}`}
-                                            path={"skill.heading"}
-                                            editable={false}
-                                        />
-                                        <Expertise
-                                            data={
-                                                resumeData?.skills?.items.length
-                                                    ? [...resumeData?.skills?.items]
-                                                    : [...sampleData?.data?.skills?.items]
-                                            }
-                                            color={theme.color}
-                                            updater={updater}
-                                        />
-                                    </div> */}
+                                       
                                         <div>
                                             {resumeData?.skills?.visible && (
                                                 <>
@@ -212,7 +175,7 @@ export default function Templatebrand() {
                                                 </>
                                             )}
                                         </div>
-                                        {/* reference box*/}
+
                                         {resumeData?.references?.visible && (
                                             <>
                                                 <div className={styles.sideMenu}>
@@ -228,7 +191,7 @@ export default function Templatebrand() {
                                                                     />
                                                                 )}
                                                             </Box>
-                                                            {/* Reference Section Heading */}
+
                                                             <Box mt="10%">
                                                                 <Heading
                                                                     title="REFERENCE"
@@ -245,7 +208,6 @@ export default function Templatebrand() {
                                                                 />
                                                             </Box>
                                                         </HStack>
-                                                        {/* Reference Component */}
                                                         <Reference
                                                             name={true}
 
@@ -259,7 +221,6 @@ export default function Templatebrand() {
 
                                                         />
                                                     </div>
-                                                    {/* Section Side Menu */}
 
                                                 </div>
                                             </>
@@ -269,10 +230,8 @@ export default function Templatebrand() {
                                     </div>
                                 </div>
 
-                                {/* summary right side */}
                                 <div className={styles.innerMainDiv2} >
                                     <Profile cId='bs' />
-                                    {/* Experiance box*/}
                                     <div className={styles.innerDivExperiance}>
                                         <div>
                                             {resumeData?.work?.visible && (
@@ -294,11 +253,7 @@ export default function Templatebrand() {
                                                             minW={'450'}
                                                             fontSize={"2.5em"}
 
-                                                            // text-transform: uppercase;
-                                                            // border-radius: 0% !important;
-                                                            // margin-bottom: 10px !important;
-                                                            // padding-left: 5px;
-                                                            // color: black;
+                                                        
                                                             textMargin={"30px 0px 10px 20px"}
 
                                                             color={"black"}
@@ -310,7 +265,6 @@ export default function Templatebrand() {
                                                             onSideSectionShow={() => setShow({ ...show, work: true })}
                                                         />
                                                     </HStack>
-                                                    {/* _____________ Work Experience _____________ */}
                                                     <WorkExperience
 
                                                         position={true}
@@ -342,7 +296,6 @@ export default function Templatebrand() {
 
 
                                         </div>
-                                        {/* Contact box*/}
                                         <div >
                                             <Text
                                                 value={resumeData?.contact?.heading}

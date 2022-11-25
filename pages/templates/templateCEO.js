@@ -74,7 +74,7 @@ export default function TemplateCEO() {
                                         />
                                     </Box>
                                 </Box>
-                                {/* Contact Box */}
+
                                 <Box mb="10%">
                                     <HStack alignItems={'flex-start'} mt={5} >
 
@@ -178,10 +178,10 @@ export default function TemplateCEO() {
 
 
                             </div>
-                            {/* summary right side */}
+
                             <div className={styles.innerMainDiv2} >
                                 <Profile cId='ceo' />
-                                {/* professional summary box*/}
+
 
                                 <div>
                                     <div className={styles.templateceoHeadingTitle}>
@@ -208,7 +208,7 @@ export default function TemplateCEO() {
                                     />
                                 </div>
 
-                                {/* professional summary box*/}
+
                                 <div >
                                     <div>
                                         {resumeData?.work?.visible && (
@@ -230,12 +230,7 @@ export default function TemplateCEO() {
                                                             maxW={'670px'}
                                                             font-size={"1.4em"}
                                                             font-weight={900}
-                                                            // text-transform: uppercase;
-                                                            // border-radius: 0% !important;
-                                                            // margin-bottom: 10px !important;
-                                                            // padding-left: 5px;
-                                                            // color: black;
-
+                                            
                                                             color={"black"}
                                                             title="WORK EXPERIENCE"
 
@@ -246,7 +241,7 @@ export default function TemplateCEO() {
                                                         />
                                                     </div>
                                                 </HStack>
-                                                {/* _____________ Work Experience _____________ */}
+
                                                 <WorkExperience
 
                                                     position={true}
@@ -271,17 +266,10 @@ export default function TemplateCEO() {
                                         )}
                                     </div>
 
-                                    {/* <WorkExperience
-                                    data={
-                                        resumeData?.work?.items.length
-                                            ? [...resumeData?.work?.items]
-                                            : [...sampleData?.data?.work?.items]
-                                    }
-                                    color={theme.color}
-                                    updater={updater}
-                                /> */}
+
+                                    
                                 </div>
-                                {/* Education box*/}
+
                                 <div >
 
                                     {resumeData?.education?.visible && (
@@ -304,11 +292,7 @@ export default function TemplateCEO() {
                                                         maxW={'670px'}
                                                         font-size={"1.4em"}
                                                         font-weight={900}
-                                                        // text-transform: uppercase;
-                                                        // border-radius: 0% !important;
-                                                        // margin-bottom: 10px !important;
-                                                        // padding-left: 5px;
-                                                        // color: black;
+                                                    
 
                                                         color={"black"}
                                                         title="EDUCATION"
