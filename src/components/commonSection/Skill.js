@@ -149,7 +149,7 @@ const Skill = (props) => {
                   className={`${lineStyle ? lineStyle : ''}`}
                 />
                 {
-                  props.cId  === 'bs' ?
+                  props.cId  === 'bs' || props.cId==='market' ?
                     <>
                       <Input
                         maxW={50}
