@@ -41,16 +41,7 @@ const FashionDesigner2 = () => {
   return (
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     //Template Layout for Template Navbar
-    <TempLayout
-      education={true}
-      skills={true}
-      languages={true}
-      work={true}
-      organization={true}
-      projects={true}
-      certificate={true}
-      interest={true}
-    >
+    <TempLayout education={true} skills={true} work={true}>
       <div className={style.main}>
         <Link href={"/templates"}>
           <div style={{ position: "fixed", top: "30px", right: "30px" }}>
