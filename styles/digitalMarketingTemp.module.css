@@ -1,0 +1,173 @@
+/* ------------------------------------Editable container styles ----------------------------------- */
+/* // @import '../../theme/colors'; */
+
+.digitalContentEditableContainer {
+  padding: 4px 2px;
+  white-space: pre-line;
+  /*  border: 1px dashed #fff; */
+  border-radius: 4px;
+  outline: 0;
+}
+
+.digitalContentEditableContainer:empty::before {
+  content: attr(data-placeholder);
+  opacity: 1;
+}
+
+.digitalContentEditableContainer:focus {
+  /*  border: 1px dashed #a1a1a1; */
+  border-radius: 4px;
+  background-color: #efefef;
+  outline: 0;
+}
+
+.digitalContentEditableContainer:active {
+  /*  border: 1px dashed #a1a1a1; */
+  border-radius: 4px;
+  outline: 0;
+}
+
+.digitalContentEditableContainer:visited {
+  /*  border: 1px dashed #a1a1a1; */
+  border-radius: 4px;
+  outline: 0;
+}
+
+/* --------------------------------------- Editable container styles end ------------------------------------- */
+
+
+.digitalContectStyle {
+  margin-left: 20px;
+  color: #e9ecef !important;
+  font-size: 14px !important;
+  background-color: #3A4D6C !important;
+}
+
+.leftContainerHeadings {
+  color: #fff !important;
+  font-size: 1.4em;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+}
+
+.educationDesHeadingDiv {
+  padding: 5px 30px;
+}
+
+.educationDesHeading {
+  color: #fff !important;
+  font-size: 15px;
+  background-color: #3A4D6C !important;
+}
+
+.educationDesAbout {
+  color: #fff !important;
+  font-size: 14px;
+  background-color: #3A4D6C !important;
+}
+
+.skillBodyHeading {
+  font-size: 14px;
+  margin: 0px 0px 6px 0px;
+  color: #fff !important;
+  background-color: #3A4D6C !important;
+}
+
+.nameStyle {
+  font-size: 2.8em;
+  font-weight: 500;
+  color: #3A4D6C !important;
+  background-color: #F2DB7A !important;
+}
+
+.profileSubTitle {
+  font-size: 1.6em;
+  font-weight: 500;
+  color: #3A4D6C !important;
+  background-color: #F2DB7A !important;
+}
+
+.rightContainerHeading {
+  color: #3A4D6C !important;
+  font-size: 1.4em;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+}
+
+.aboutBodyDes {
+  font-size: 16px;
+  color: #3A4D6C !important;
+  background-color: #fff !important;
+  line-height: 20px;
+  text-align: justify;
+}
+
+.experienceDesContainer {
+  margin: 10px 30px;
+}
+
+.experienceDesDiv {
+  color: #3A4D6C !important;
+}
+
+.experienceYear {
+  color: #3A4D6C !important;
+  font-size: 20px;
+  background-color: #fff !important;
+}
+
+.experienceDesTitle {
+  color: #3A4D6C !important;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: justify;
+  background-color: #fff !important;
+}
+
+.experienceDes {
+  color: #3A4D6C !important;
+  font-size: 15px;
+  background-color: #fff !important;
+  text-align: justify;
+}
+
+.inputData {
+  font-size: 14px !important;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.perD {
+  display: inline-block;
+  margin-left: -15px !important;
+  font-size: 13px !important;
+  color: #fff;
+}
+
+.swapCont {
+  position: absolute;
+  right: 80px;
+  top: 60px;
+}
+
+.swap {
+  width: 40px;
+  height: 40px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.swap:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+
+.swap img {
+  width: 70%;
+  filter: invert(1);
+}

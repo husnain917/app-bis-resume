@@ -19,10 +19,10 @@ import Image from 'next/image'
 import useStoreData from '../../src/components/templateCEO/useStoreData'
 
 export default function TemplateCEO() {
-   const {
+    const {
         resumeData,
-            theme,
-            updater
+        theme,
+        updater
     } = useStoreData();
     return (
         <div className={style.main}>

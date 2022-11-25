@@ -1,0 +1,10 @@
+export const WORK = 'workExperience';
+export const SKILL = 'skill';
+export const EDUCATION = 'education';
+export const LANGUAGES = 'languages';
+export const REFERENCE = 'references';
+export const ABOUT = 'about';
+export const CERTIFICATE = 'certificates';
+export const ORGANIZATION = 'organization';
+export const PROJECT = 'project';
+export const INTEREST = 'interest';

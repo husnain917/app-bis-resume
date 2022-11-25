@@ -45,7 +45,11 @@ function EducationHistory(props) {
               justifyContent="space-between"
             >
               <Box>
+<<<<<<< HEAD
                 <Box ml="1">
+=======
+                <Box>
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
                   <Text
                     value={item.institution}
                     placeholder="College Name"
@@ -53,7 +57,11 @@ function EducationHistory(props) {
                     path={`${path}.${index}.institution`}
                   />
                 </Box>
+<<<<<<< HEAD
                 <Box ml="1">
+=======
+                <Box>
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
                   <Text
                     value={item.degree}
                     placeholder="Degree"
@@ -61,6 +69,11 @@ function EducationHistory(props) {
                     path={`${path}.${index}.degree`}
                   />
                 </Box>
+<<<<<<< HEAD
+=======
+                <p style={styles.paraStyles(true)}></p>
+
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
                 <Box>
                   <Text
                     value={item.summary}

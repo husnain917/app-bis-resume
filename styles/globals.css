@@ -112,20 +112,34 @@ input[type='date']:in-range::-webkit-datetime-edit-day-field,
 input[type='date']:in-range::-webkit-datetime-edit-text {
   color: #999;
 }
-
+.educationManage {
+  display: flex;
+  flex-direction: row !important;
+}
 .fullName {
   font-weight: 700;
   font-size: 2.4em;
   padding: 0;
   line-height: 30px;
-  text-align:center;
+  text-align: center;
 }
 .fullName1 {
   font-weight: 700;
   font-size: 2.4em;
   padding: 0;
-  line-height: 30px;
-  text-align:left;
+  
+  text-align: left;
+  font-size: 60px;
+  color:white;
+}
+.fullName2 {
+  font-weight: 700;
+  font-size: 2.4em;
+  padding: 0;
+  
+  text-align: left;
+  font-size: 30px;
+  color: white;
 }
 .fDesigner2{
   font-size: 2.4em;
@@ -162,11 +176,27 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 .manager-template-text-center {
   align-items: center;
 }
-
+.fDesigner2{
+  font-size: 2.4em;
+  padding: 0;
+  line-height: 30px;
+  text-align:left;
+  margin-top: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.fDesigner2a{
+  padding: 0;
+  line-height: 30px;
+  text-align:left;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
 .manager-f-sub-rowA {
   margin: 0 auto;
 }
-
 .slick-prev:before,
 .slick-next:before {
   color: black !important;
@@ -210,4 +240,48 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 }
 .skillTextTemplate5 {
   width: 120px;
+}
+.App {
+  font-family: sans-serif;
+  /* text-align: center; */
+  background-color: #f6f9fe;
+  height: 100vh;
+}
+.image-item {
+  display: flex;
+  margin: 10px 0;
+}
+.image-item__btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+button {
+  height: 40px;
+}
+.pic_container{
+  /* border: 2px solid black; */
+  border-radius: 50%;
+}
+.pic_container:hover{
+  /* border: 2px solid black; */
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+}
+.hide {
+  display: none;
+}
+.hide:hover{
+  display: block;
+}
+.imageHidden{
+  display: none;
+}
+.p-image {
+  position: absolute;
+  top: 167px;
+  right: 30px;
+  color: #666666;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
 }

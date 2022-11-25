@@ -12,6 +12,12 @@ import { BsCircle } from "react-icons/bs";
 import { BsCircleFill } from "react-icons/bs";
 
 function Skills(props) {
+<<<<<<< HEAD
+=======
+  const [currentValue, setCurrentValue] = useState("");
+  const [hoverValue, setHoverValue] = useState(undefined);
+
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
   const dispatch = useDispatch();
   const path = "skills.items";
 
@@ -30,12 +36,29 @@ function Skills(props) {
     let deletedPath = `${path}.${index}`;
     dispatch(deleteObjInArray(deletedPath));
   };
+<<<<<<< HEAD
   const [currentValue, setCurrentValue] = useState("");
   const [hoverValue, setHoverValue] = useState(undefined);
   const { data } = props;
 
   return (
     <Box>
+=======
+
+  const handleClick = (value) => {
+    setCurrentValue(value);
+  };
+  const handleMouseOver = (value) => {
+    setHoverValue(value);
+  };
+  const handleMouseLeave = () => {
+    setHoverValue(undefined);
+  };
+  const { data } = props;
+
+  return (
+    <Box mt={3}>
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
       <Dnd
         direction="horizontal"
         data={data}
@@ -47,12 +70,19 @@ function Skills(props) {
             display="flex"
             flexDirection="row"
             justifyContent={"space-between"}
+<<<<<<< HEAD
             h="20px"
             mt="2px"
+=======
+            alignItems="center"
+            pt={1}
+            pb={1}
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
           >
             <Text
               value={item?.name}
               placeholder="Skill"
+<<<<<<< HEAD
               customclass={"manager-fName"}
               path={`${path}.${index}.name`}
             />
@@ -73,6 +103,36 @@ function Skills(props) {
                 <BsCircle />
               </Box>
             </Box>
+=======
+              // customclass={"manager-fName"}
+              path={`${path}.${index}.name`}
+              fontSize="18px"
+              fontWeight="600"
+            />
+            <Box display={"flex"} flexDirection="row" marginRight={8}>
+              {Array(5)
+                .fill(0)
+                .map((_, index) => (
+                  <>
+                    <Box margin={"6px"}>
+                      <BsCircleFill
+                        size={"0.8em"}
+                        key={index}
+                        color={
+                          (hoverValue || currentValue) > index
+                            ? "#077BBD"
+                            : "black"
+                        }
+                        onClick={() => handleClick(index + 1)}
+                        onMouseOver={() => handleMouseOver(index + 1)}
+                        onMouseLeave={handleMouseLeave}
+                      />
+                    </Box>
+                  </>
+                ))}
+            </Box>
+
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
             {/* {data.length - 1 !== index && <p className="aPadding">|</p>} */}
           </Box>
         )}

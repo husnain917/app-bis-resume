@@ -7,7 +7,11 @@ import {
   addNewObj,
   deleteObjInArray,
 } from "../../../store/actions/builderAction";
+<<<<<<< HEAD
 import { styles } from "../financialStyles/template1Style";
+=======
+import { styles } from "../FD2Styles/FD2Styles";
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
 import { Box, Image } from "@chakra-ui/react";
 import Responsibilities from "./Responsibilities";
 import { connect } from "react-redux";
@@ -73,14 +77,27 @@ function WorkExperience(props) {
               />
             </Box>
 
+<<<<<<< HEAD
             <Box display="flex" style={styles.workItem}>
+=======
+            <Box
+              display="flex"
+              // className="manager-template-row"
+              justifyContent={"center"}
+              style={styles.workItem}
+            >
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
               <Text
                 value={item.startDate}
                 placeholder="Start Date"
                 customclass={"manager-fName"}
                 path={`${path}.${index}.startDate`}
               />
+<<<<<<< HEAD
               <p style={styles.paraStyles(true)}>-</p>
+=======
+              <p style={styles.paraStyles(true)}> - </p>
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
               <Text
                 value={item.endDate}
                 placeholder="End Date"

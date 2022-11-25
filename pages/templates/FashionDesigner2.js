@@ -20,8 +20,14 @@ import UnderLineBox from "../../src/components/FashionDesigner2/UnderLineBox";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { GiSpiderWeb } from "react-icons/gi";
 import { MdLocationOn } from "react-icons/md";
+<<<<<<< HEAD
 
 class Manager extends Component {
+=======
+import ImageSelector from "../../src/components/imageSelector";
+
+class FashionDesigner2 extends Component {
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
   render() {
     const { resumeData, updater, width } = this.props;
     console.log("resumeData", resumeData);
@@ -44,13 +50,21 @@ class Manager extends Component {
           maxW="1050"
           w={1050}
         >
+<<<<<<< HEAD
           <Box className={width < 500 ? "" : style.a4PaperFinancial}>
+=======
+          <Box className={width < 500 ? "" : style.a4PaperFashion2}>
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
             <Box>
               {/* <Profile /> */}
               <Box display="flex" flexDirection="row">
                 <Box
                   w="100%"
+<<<<<<< HEAD
                   minH="20vh"
+=======
+                  minH="10em"
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
                   display="flex"
                   justifyContent="center"
                   flexDirection="column"
@@ -58,6 +72,7 @@ class Manager extends Component {
                   marginTop="10"
                 ></Box>
               </Box>
+<<<<<<< HEAD
               <Box display="flex" alignItems="center" justifyContent="center">
                 <Image
                   src="/Profile.jpeg"
@@ -66,6 +81,21 @@ class Manager extends Component {
                   borderRadius="50%"
                   marginTop="-150px"
                   marginLeft="10px"
+=======
+              <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                maxHeight={"20px"}
+              >
+                <ImageSelector
+                  maxHeight={"12em"}
+                  maxWidth={"12em"}
+                  minHeight={"12em"}
+                  minWidth={"12em"}
+                  marginLeft={"10px"}
+                  marginTop={"-70%"}
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
                 />
               </Box>
               <Box>
@@ -93,6 +123,7 @@ class Manager extends Component {
                     <Box>
                       <UnderLineBox />
                     </Box>
+<<<<<<< HEAD
                     <Text
                       value={resumeData?.aboutMe?.body}
                       placeholder="Dedicated and detail-oriented Financial Analyst with 10
@@ -105,6 +136,15 @@ class Manager extends Component {
                       "
                       path={"aboutMe.body"}
                     />
+=======
+                    <Box mt="3">
+                      <Text
+                        value={resumeData?.aboutMe?.body}
+                        placeholder="Short and engaging pitch about yourself."
+                        path={"aboutMe.body"}
+                      />
+                    </Box>
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7
                   </Box>
                   <Box>
                     <Text
@@ -260,4 +300,8 @@ const mapStateToProps = (store) => ({
   updater: store.editorReducer.updater,
 });
 
+<<<<<<< HEAD
 export default connect(mapStateToProps, { onBlurField })(Manager);
+=======
+export default connect(mapStateToProps, { onBlurField })(FashionDesigner2);
+>>>>>>> 70cf1ff85038859a5d61edc08a9f1e419f0c85a7

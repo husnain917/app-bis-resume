@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { onBlurField } from '../../../store/actions/builderAction';
-import styles from '../../../styles/templates/text.module.scss';
+import styles from '../../../styles/templates/Fashion.module.css';
 import { colors } from '../../../constants/colors';
 
 function Text(props) {
@@ -29,6 +29,7 @@ function Text(props) {
           fontSize: props.fontSize,
           lineHeight: props.lineHeight,
           color: props.color,
+         marginTop:props.marginTop
         }}
         // style={{
 
