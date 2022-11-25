@@ -46,12 +46,7 @@ export default function Profile({ cId }) {
           className={`manager-template-row manager-template-text-center manager-f-sub-rowA`}
         >
           {cId === 'ceo' ? (
-            // <Text
-            //   value={resumeData?.profile?.jobTitle}
-            //   placeholder="CHIEF EXLUSIVE OFFICER"
-            //   path={'profile.jobTitle'}
-            //   customclass={'manager-jobtitle '}
-            // />
+
             <Profession
               margin={'0px 0px 0px 0px'}
               professionStyle={styles.profession}
