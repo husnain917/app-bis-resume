@@ -1,4 +1,4 @@
-import { Box, Flex, HStack } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 import { Tooltip } from 'react-tippy';
@@ -113,27 +113,26 @@ export default function Digital_Marketing_Temp() {
               {/* _____________ Skill _____________ */}
               {resumeData?.skills?.visible && (
                 <>
-                  <HStack alignItems={'flex-start'} mt={5}>
-                    <Box w="20px" ml={'-27px'}>
-                      {show.skills && (
-                        <SectionSideMenu
-                          onHide={() => setShow({ ...show, skills: false })}
-                          bg="#E0EFFA"
-                          iconColor={'#2A78AB'}
-                          onDelete={SKILL}
-                        />
-                      )}
-                    </Box>
-
+                  <Box
+                    mt={5}
+                    display={'flex'}
+                  >
                     <Heading
                       title={'RELEVANT SKILLS'}
                       color="#fff"
-                      margin={'20px 0px 0px 0px'}
                       onSideSectionShow={() =>
                         setShow({ ...show, skills: true })
                       }
                     />
-                  </HStack>
+                    {show.skills && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, skills: false })}
+                        bg="#F2DB7A"
+                        iconColor={'#3A4D6C'}
+                        onDelete={SKILL}
+                      />
+                    )}
+                  </Box>
                   <Skill
                     skillStyle={Classes.skillText}
                     progressBar={true}
@@ -177,21 +176,13 @@ export default function Digital_Marketing_Temp() {
               </Box>
               {resumeData?.work?.visible && (
                 <>
-                  <HStack alignItems={'flex-start'} mt={'20px'}>
-                    <Box w="20px" ml={'-27px'}>
-                      {show.work && (
-                        <SectionSideMenu
-                          onHide={() => setShow({ ...show, work: false })}
-                          bg="#2A78AB"
-                          iconColor={'#E0EFFA'}
-                          onDelete={WORK}
-                        />
-                      )}
-                    </Box>
-
+                  <Box
+                    mt={'20px'}
+                    display={'flex'}
+                    justifyContent={'space-between'}
+                    pr={'8px'}
+                  >
                     <Heading
-                      minW={'480px'}
-                      maxW={'480px'}
                       color={'#3A4D6C'}
                       title="WORK EXPERIENCE"
                       padding={'0px 0px 0px 20px'}
@@ -199,7 +190,15 @@ export default function Digital_Marketing_Temp() {
                       fontWeight={700}
                       onSideSectionShow={() => setShow({ ...show, work: true })}
                     />
-                  </HStack>
+                    {show.work && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, work: false })}
+                        bg="#F2DB7A"
+                        iconColor={'#3A4D6C'}
+                        onDelete={WORK}
+                      />
+                    )}
+                  </Box>
                   {/* _____________ Work Experience _____________ */}
                   <WorkExperience
                     company={true}
@@ -218,17 +217,12 @@ export default function Digital_Marketing_Temp() {
               {/* _____________ Education _____________ */}
               {resumeData?.education?.visible && (
                 <>
-                  <HStack alignItems={'flex-start'} mt={'20px'}>
-                    <Box w="20px" ml={'-27px'}>
-                      {show.education && (
-                        <SectionSideMenu
-                          onHide={() => setShow({ ...show, education: false })}
-                          bg="#2A78AB"
-                          iconColor={'#E0EFFA'}
-                          onDelete={EDUCATION}
-                        />
-                      )}
-                    </Box>
+                  <Box
+                    mt={'20px'}
+                    display={'flex'}
+                    justifyContent={'space-between'}
+                    pr={'35px'}
+                  >
                     <Heading
                       minW={'480px'}
                       maxW={'480px'}
@@ -241,7 +235,15 @@ export default function Digital_Marketing_Temp() {
                         setShow({ ...show, education: true })
                       }
                     />
-                  </HStack>
+                    {show.education && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, education: false })}
+                        bg="#F2DB7A"
+                        iconColor={'#3A4D6C'}
+                        onDelete={EDUCATION}
+                      />
+                    )}
+                  </Box>
                   <Education
                     degree={true}
                     institution={true}
