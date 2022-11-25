@@ -26,7 +26,7 @@ import ImageSelector from '../../../src/components/imageSelector';
 import { MdCastForEducation } from 'react-icons/md';
 import { FaSignLanguage, FaRegUser } from "react-icons/fa";
 
-export default function fashionTemp() {
+export default function Fashion_Temp() {
   // redux Data
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
