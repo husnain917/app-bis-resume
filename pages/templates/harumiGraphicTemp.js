@@ -121,22 +121,13 @@ export default function Harumi_Graphic_Temp() {
                             {/* _____________ Skill _____________ */}
                             {resumeData?.skills?.visible && (
                                 <>
-                                    <HStack alignItems={'flex-start'} mt={5}>
-                                        <Box w="20px" ml={'-27px'}>
-                                            {show.skills && (
-                                                <SectionSideMenu
-                                                    onHide={() => setShow({ ...show, skills: false })}
-                                                    bg="#E0EFFA"
-                                                    iconColor={'#2A78AB'}
-                                                    onDelete={SKILL}
-                                                />
-                                            )}
-                                        </Box>
-
+                                    <Box
+                                        mt={5}
+                                        display={'flex'}
+                                    >
                                         <Heading
                                             title={'RELEVANT SKILLS'}
                                             color="#fff"
-                                            margin={'20px 0px 0px 0px'}
                                             onSideSectionShow={() =>
                                                 setShow({ ...show, skills: true })
                                             }
@@ -145,7 +136,15 @@ export default function Harumi_Graphic_Temp() {
                                             lineH="0.15em"
                                             lineBg="#fff"
                                         />
-                                    </HStack>
+                                        {show.skills && (
+                                            <SectionSideMenu
+                                                onHide={() => setShow({ ...show, skills: false })}
+                                                bg="#E0EFFA"
+                                                iconColor={'#2A78AB'}
+                                                onDelete={SKILL}
+                                            />
+                                        )}
+                                    </Box>
                                     <Skill
                                         skillStyle={Classes.skillText}
                                         progressBar={true}
@@ -182,18 +181,12 @@ export default function Harumi_Graphic_Temp() {
                             />
                             {resumeData?.work?.visible && (
                                 <>
-                                    <HStack alignItems={'flex-start'} mt={'20px'}>
-                                        <Box w="20px" ml={'-27px'}>
-                                            {show.work && (
-                                                <SectionSideMenu
-                                                    onHide={() => setShow({ ...show, work: false })}
-                                                    bg="#2A78AB"
-                                                    iconColor={'#E0EFFA'}
-                                                    onDelete={WORK}
-                                                />
-                                            )}
-                                        </Box>
-
+                                    <Box
+                                        mt={'20px'}
+                                        display={'flex'}
+                                        justifyContent={'space-between'}
+                                        padding={'0px 30px 0px 50px'}
+                                    >
                                         <Heading
                                             color={'#fff'}
                                             line={true}
@@ -201,11 +194,18 @@ export default function Harumi_Graphic_Temp() {
                                             lineH="0.15em"
                                             lineBg="#fff"
                                             title="WORK EXPERIENCE"
-                                            padding={'0px 0px 0px 50px'}
                                             fontSize={'22px'}
                                             onSideSectionShow={() => setShow({ ...show, work: true })}
                                         />
-                                    </HStack>
+                                        {show.work && (
+                                            <SectionSideMenu
+                                                onHide={() => setShow({ ...show, work: false })}
+                                                bg="#E0EFFA"
+                                                iconColor={'#2A78AB'}
+                                                onDelete={WORK}
+                                            />
+                                        )}
+                                    </Box>
                                     {/* _____________ Work Experience _____________ */}
                                     <WorkExperience
                                         company={true}
@@ -224,17 +224,12 @@ export default function Harumi_Graphic_Temp() {
                             {/* _____________ Education _____________ */}
                             {resumeData?.education?.visible && (
                                 <>
-                                    <HStack alignItems={'flex-start'} mt={'20px'}>
-                                        <Box w="20px" ml={'-27px'}>
-                                            {show.education && (
-                                                <SectionSideMenu
-                                                    onHide={() => setShow({ ...show, education: false })}
-                                                    bg="#2A78AB"
-                                                    iconColor={'#E0EFFA'}
-                                                    onDelete={EDUCATION}
-                                                />
-                                            )}
-                                        </Box>
+                                    <Box
+                                        mt={'20px'}
+                                        display={'flex'}
+                                        justifyContent={'space-between'}
+                                        padding={'0px 30px 0px 50px'}
+                                    >
                                         <Heading
                                             color={'#fff'}
                                             line={true}
@@ -242,14 +237,22 @@ export default function Harumi_Graphic_Temp() {
                                             lineH="0.15em"
                                             lineBg="#fff"
                                             title="EDUCATION"
-                                            padding={'0px 0px 0px 50px'}
                                             fontSize={'22px'}
                                             fontWeight={700}
                                             onSideSectionShow={() =>
                                                 setShow({ ...show, education: true })
                                             }
                                         />
-                                    </HStack>
+                                        {show.education && (
+                                            <SectionSideMenu
+                                                onHide={() => setShow({ ...show, education: false })}
+                                                bg="#E0EFFA"
+                                                iconColor={'#2A78AB'}
+                                                onDelete={EDUCATION}
+                                            />
+                                        )}
+
+                                    </Box>
                                     <Education
                                         degree={true}
                                         institution={true}
