@@ -2,8 +2,6 @@ import { Box, Flex, HStack, Link } from "@chakra-ui/react";
 import { MdCastForEducation } from "react-icons/md";
 import { BsFillLayersFill } from "react-icons/bs";
 import { GoProject } from "react-icons/go";
-import { TbCertificate } from "react-icons/tb";
-import { FaHorseHead } from "react-icons/fa";
 import style from "../../styles/templates/template1.module.scss";
 import Classes from "../../styles/templates/hybridTemplate.module.css";
 import Class from "../../styles/templates/financialExpert.module.scss";
@@ -35,7 +33,7 @@ import {
   WORK,
 } from "../../src/components/tempSectionSide/SectionSideConstant";
 
-const FinancialExpert1 = () => {
+const FinancialExpert = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
   const [show, setShow] = useShow();
@@ -334,4 +332,4 @@ const FinancialExpert1 = () => {
   );
 };
 
-export default FinancialExpert1;
+export default FinancialExpert;
