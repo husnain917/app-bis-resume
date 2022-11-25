@@ -7,7 +7,7 @@ import {
   addNewObj,
   deleteObjInArray,
 } from "../../../store/actions/builderAction";
-import { styles } from "../financialStyles/template1Style";
+import { styles } from "../FD2Styles/FD2Styles";
 import { Box, Image } from "@chakra-ui/react";
 import Responsibilities from "./Responsibilities";
 import { connect } from "react-redux";
@@ -75,7 +75,8 @@ function WorkExperience(props) {
 
             <Box
               display="flex"
-              className="manager-template-row"
+              // className="manager-template-row"
+              justifyContent={"center"}
               style={styles.workItem}
             >
               <Text
@@ -84,7 +85,7 @@ function WorkExperience(props) {
                 customclass={"manager-fName"}
                 path={`${path}.${index}.startDate`}
               />
-              <p style={styles.paraStyles(true)}>-</p>
+              <p style={styles.paraStyles(true)}> - </p>
               <Text
                 value={item.endDate}
                 placeholder="End Date"

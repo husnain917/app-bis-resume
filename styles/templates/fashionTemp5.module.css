@@ -1,0 +1,54 @@
+.profileText {
+  font-size: 15px;
+  color: white;
+  font-weight: 400;
+  margin-top: -6px;
+}
+.skillText {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+.fashionName {
+  color: black;
+  text-align: left;
+  font-size: 50px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.ProfessionFashion {
+  font-weight: 500;
+  font-size: 1.7em;
+  padding: 0;
+  line-height: 32px;
+  text-align: left;
+  color: black;
+  letter-spacing: 1px;
+}
+.aboutText {
+  font-size: 14px;
+  color: black;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.workText {
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+}
+.summaryText {
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}
+.contactText {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+}
+.mt {
+  margin-top: 5px;
+}

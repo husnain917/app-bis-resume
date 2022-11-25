@@ -35,13 +35,13 @@ export default function SocialSpecialist() {
         pb="100px"
         ml={["", , , "5%", "15%"]}
         mr="0%"
->
+      >
         <Box
           display="flex"
           flexDir="row"
           w="100%"
           mt="10%"
-          maxW="900px"
+          maxW="2150px"
           minW="900px"
         >
           <Box w="50%" ml="5%" mt="5%">

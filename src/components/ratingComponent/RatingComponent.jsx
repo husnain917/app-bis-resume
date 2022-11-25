@@ -3,6 +3,7 @@ import { Box, Image, Badge } from "@chakra-ui/react";
 import StarRatings from "react-star-ratings";
 import { Text } from "@chakra-ui/react";
 import { CheckCircleIcon, StarIcon } from "@chakra-ui/icons";
+
 const RatingComponent = ({ title, desc, date, name, rating }) => {
   console.log("RatingComponent:", rating);
   const [currentValue, setCurrentValue] = useState(rating);
@@ -17,13 +18,14 @@ const RatingComponent = ({ title, desc, date, name, rating }) => {
   };
 
   const handleClick = (value) => {
-    setCurrentValue(value);
+    // setCurrentValue(value);
+    console.log("value: " + value);
   };
   const handleMouseOver = (value) => {
-    setHoverValue(value);
+    // setHoverValue(value);
   };
   const handleMouseLeave = () => {
-    setHoverValue(undefined);
+    // setHoverValue(undefined);
   };
   return (
     <Box paddingX={4}>
@@ -47,10 +49,6 @@ const RatingComponent = ({ title, desc, date, name, rating }) => {
                 </Badge>
               </>
             ))}
-
-          {/* <Box as="span" ml="2" color="gray.600" fontSize="sm">
-            {property.reviewCount} reviews
-          </Box> */}
           <Box ml="3">
             <CheckCircleIcon boxSize={4} color="gray" mb={0.5} />
           </Box>

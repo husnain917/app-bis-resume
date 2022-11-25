@@ -40,7 +40,7 @@ const FashTemp1Lang = (props) => {
             value={item.Name}
             placeholder="Language "
             customclass={`${Style.langText}`}
-            path={`languages.items.Name`}
+            path={`languages.items.${index}.Name`}
           />
           <Rating activeColor={'#3498DB'} size={24} />
         </HStack>
