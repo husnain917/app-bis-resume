@@ -223,9 +223,9 @@ const Template5 = () => {
                     DndDirection="horizontal"
                     skillStyle={Classes.skillTxt}
                     percentageStyle={Classes.percentageStyle}
-                    minWText="100px"
-                    maxWText="100px"
-                    margin={'0px 20px'}
+                    minWText="90px"
+                    maxWText="90px"
+                    margin={'0px 20px '}
                     percentStyle={Classes.percent}
                   />
                 </div>

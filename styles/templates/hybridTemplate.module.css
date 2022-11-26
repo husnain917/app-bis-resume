@@ -3,34 +3,9 @@
   font-size: 16px;
   font-weight: 400;
 }
-
-.contentEditableHybridContainer {
-  padding: 4px 2px;
-  white-space: pre-line;
-
-  border-radius: 4px;
-  outline: 0;
-}
-.contentEditableHybridContainer:empty::before {
-  content: attr(data-placeholder);
-  opacity: 0.6;
-}
-
-.contentEditableHybridContainer:focus {
-  border-radius: 4px;
-  background-color: transparent;
-  opacity: 1;
-  outline: 0;
-}
-
-.contentEditableHybridContainer:active {
-  border-radius: 4px;
-  outline: 0;
-}
-
-.contentEditableHybridContainer:visited {
-  border-radius: 4px;
-  outline: 0;
+.profile {
+  font-size: 16px;
+  font-weight: 400;
 }
 .ProfessionHybrid {
   font-weight: 500;
