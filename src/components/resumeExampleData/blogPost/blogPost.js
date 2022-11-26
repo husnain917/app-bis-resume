@@ -19,7 +19,7 @@ const BlogPost = () => {
   };
   return (
     <Box className={"blog-post--lazy blog-post .blog-post--with-single-aside"}>
-      <Box className="blog-post__content">
+      <Box className="blog-post__content" padding={"0 10px 0px 10px"}>
         <Box className="blog-post__content-inner">
           <Box className="blog-post__content-main">
             <Box className="blog-post__content-main-wrapper">
@@ -107,19 +107,25 @@ const BlogPost = () => {
                 suits the hiring manager’s needs.
               </p>
               <Box
-                transform={["translateX(0)", "", "", "translateX(0)"]}
-                left={["12px", "12px", "0", "0", "0"]}
-                // maxWidth={["1130px", "1130px", "1130px", "1120px", "1120px"]}
-                position={["relative", "relative", "", "", ""]}
-                zIndex={["10", "10", "", "", ""]}
-                margin={["24px 0", "24px 0", "0px", "44px 0", "0px"]}
-                bg={"gray"}
+                // transform={["translateX(0)", "", "", "translateX(0)"]}
+                // left={["12px", "12px", "0", "0", "0"]}
+                // // maxWidth={["1130px", "1130px", "1130px", "1120px", "1120px"]}
+                // position={[
+                //   "relative",
+                //   "relative",
+                //   "relative",
+                //   "relative",
+                //   "relative",
+                // ]}
+                // zIndex={["10", "10", "", "", ""]}
+                // margin={["24px 0", "24px 0", "0px", "44px 0", "0px"]}
+                // bg={"gray"}
+                className={"compare-resumes js-wide-element"}
               >
                 <Box
-                  width={"100%"}
-                  display={"flex"}
-                  position={"relative"}
-                  justifyContent={"space-around"}
+                  className={
+                    "compare-resumes__view compare-resumes__view--intro compare-resumes__view--ready"
+                  }
                 >
                   <Box className="cursor">
                     <Link href="/templates/templateCEO">
@@ -192,7 +198,7 @@ const BlogPost = () => {
             ></Box> */}
           </Box>
           <Box className="blog-post__content-aside .blog-post__content-aside--right">
-            <Box className="blog-aside" style={{ opacity: "0" }}>
+            <Box className="blog-aside" opacity={["1"]}>
               <Box className="blog-aside__item .show" position="static">
                 <Box className="post-banner-cta">
                   <Box className="post-banner-cta__main">

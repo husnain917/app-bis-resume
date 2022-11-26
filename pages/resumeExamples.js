@@ -27,11 +27,11 @@ const ResumeExamples = () => {
             {data.map((data, index) => {
               return <CommonComponent data={data} key={index} />;
             })}
-            <TryResume />
-            {/* <BlogPost /> */}
           </Box>
         </Box>
       </Box>
+      <TryResume />
+      <BlogPost />
     </Box>
   );
 };
