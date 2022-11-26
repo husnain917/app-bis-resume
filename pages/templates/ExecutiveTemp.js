@@ -1,32 +1,13 @@
-import { Box, Circle, Flex, HStack, Link, Text } from '@chakra-ui/react';
+import { Box, Flex, HStack } from '@chakra-ui/react';
 import { MdCastForEducation } from 'react-icons/md';
 import { BsFillLayersFill } from 'react-icons/bs';
 import { GiSkills, GiOrganigram } from 'react-icons/gi';
 import { IoLanguageOutline } from 'react-icons/io5';
-import { connect } from 'react-redux';
 import { GoProject } from 'react-icons/go';
 import { TbCertificate } from 'react-icons/tb';
 import { FaHorseHead } from 'react-icons/fa';
-import EducationHybridTemplate from '../../src/components/hybridTemplate/EducationHybridTemplate';
-import HybridProfile from '../../src/components/hybridTemplate/HybridProfile';
-import { onBlurField } from '../../store/actions/builderAction';
-import WorkExperienceHybrid from '../../src/components/hybridTemplate/WorkExperienceHybrid';
-import HybridSkill from '../../src/components/hybridTemplate/HybridSkill';
-import HybridProject from '../../src/components/hybridTemplate/HybridProject';
-import HybridOrganization from '../../src/components/hybridTemplate/HybridOrganization';
-import HybridCertificates from '../../src/components/hybridTemplate/HybridCertificates';
-import HybridLanguage from '../../src/components/hybridTemplate/HybridLanguage';
-import HybridHobbies from '../../src/components/hybridTemplate/HybridHobbies';
 import style from '../../styles/templates/template1.module.scss';
-import { sampleData } from '../../constants/sampleData';
 import { Tooltip } from 'react-tippy';
-import ExecutiveProfile from '../../src/components/executiveTemp/ExecutiveProfile';
-import ExecutiveCertificates from '../../src/components/executiveTemp/ExecutiveCertificates';
-import ExecutiveLang from '../../src/components/executiveTemp/ExecutiveLang';
-import ExecutiveOrganization from '../../src/components/executiveTemp/ExecutiveOrganiztion';
-import ExecutiveProject from '../../src/components/executiveTemp/ExecutiveProject';
-import ExecutiveInterest from '../../src/components/executiveTemp/ExecutiveInterest';
-import ExecutiveSkill from '../../src/components/executiveTemp/ExecutiveSkill';
 import ImageSelector from '../../src/components/imageSelector';
 import Name from '../../src/components/commonSection/Name';
 import Profession from '../../src/components/commonSection/Profession';
@@ -56,6 +37,7 @@ import {
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import TempLayout from '../../src/components/tempNav/TempLayout';
+import Link from 'next/link';
 const ExecutiveTemp = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
