@@ -1,8 +1,14 @@
 import React, { useEffect } from "react";
-import { Box, Text, Button, Image } from "@chakra-ui/react";
+import { Box, Text, Button, Image, calc } from "@chakra-ui/react";
 import YouTube from "react-youtube";
 import Link from "next/link";
-import { PhoneIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
+import {
+  PhoneIcon,
+  AddIcon,
+  WarningIcon,
+  ArrowRightIcon,
+  ArrowForwardIcon,
+} from "@chakra-ui/icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -18,8 +24,8 @@ const BlogPost = () => {
     },
   };
   return (
-    <Box className={"blog-post--lazy blog-post .blog-post--with-single-aside"}>
-      <Box className="blog-post__content" padding={"0 10px 0px 10px"}>
+    <Box className={"blog-post blog-post--lazy  blog-post--with-single-aside"}>
+      <Box className="blog-post__content">
         <Box className="blog-post__content-inner">
           <Box className="blog-post__content-main">
             <Box className="blog-post__content-main-wrapper">
@@ -106,116 +112,106 @@ const BlogPost = () => {
                 some basic rules to help you pick the correct sample that best
                 suits the hiring manager’s needs.
               </p>
-              <Box
-                // transform={["translateX(0)", "", "", "translateX(0)"]}
-                // left={["12px", "12px", "0", "0", "0"]}
-                // // maxWidth={["1130px", "1130px", "1130px", "1120px", "1120px"]}
-                // position={[
-                //   "relative",
-                //   "relative",
-                //   "relative",
-                //   "relative",
-                //   "relative",
-                // ]}
-                // zIndex={["10", "10", "", "", ""]}
-                // margin={["24px 0", "24px 0", "0px", "44px 0", "0px"]}
-                // bg={"gray"}
-                className={"compare-resumes js-wide-element"}
-              >
+              <Box className={"compare-resumes js-wide-element"}>
                 <Box
                   className={
                     "compare-resumes__view compare-resumes__view--intro compare-resumes__view--ready"
                   }
                 >
-                  <Box className="cursor">
-                    <Link href="/templates/templateCEO">
-                      <img
-                        src="Chief_Exclusive_Office.jpg"
-                        alt="Chief_Exclusive_Office"
-                        height="300em"
-                        width="350em"
-                      />
-                    </Link>
-                    <PhoneIcon
-                      color={"red"}
-                      h={20}
-                      w={20}
-                      position={"relative"}
-                    />
+                  <a
+                    data-lazy-bg="https://s3.resume.io/cdn-cgi/image/width=770,dpr=1,format=auto/uploads/local_template_image/image/370/persistent-resource/stockholm-resume-templates.jpg 1x, https://s3.resume.io/cdn-cgi/image/width=770,dpr=2,format=auto/uploads/local_template_image/image/370/persistent-resource/stockholm-resume-templates.jpg 2x"
+                    href="/app/create-resume"
+                    className="compare-resumes__resume compare-resumes__resume--good is-image-loaded"
+                    style={{
+                      backgroundImage: `url(${"/FashTemp4.png"})`,
+                      backgroundSize: "cover",
+                      backgroundRepeat: false,
+                    }}
+                  >
+                    <Box className={"compare-resumes__mark"}>
+                      <Box
+                        className={"compare-resumes__mark-icon"}
+                        style={{
+                          backgroundImage: `url(${"/correct.jpg"})`,
+                          backgroundRepeat: false,
+                          backgroundSize: "cover",
+                        }}
+                      ></Box>
+                    </Box>
+                  </a>
+                  <Box
+                    className="compare-resumes__resume compare-resumes__resume--bad"
+                    style={{
+                      backgroundImage: `url(${"/FashTemp4.png"})`,
+                      backgroundSize: "cover",
+                      backgroundRepeat: false,
+                    }}
+                  >
+                    <Box className="compare-resumes__mark">
+                      <Box className="compare-resumes__mark-icon"></Box>
+                    </Box>
                   </Box>
-                  <Box className="cursor">
-                    <Link href="/templates/templateCEO">
-                      <img
-                        src="Chief_Exclusive_Office.jpg"
-                        alt="Chief_Exclusive_Office"
-                        height="300em"
-                        width="350em"
-                        left={0}
-                        marginTop={"-70px"}
-                      />
-                    </Link>
-                    <PhoneIcon
-                      color={"red"}
-                      h={20}
-                      w={20}
-                      position={"absolute"}
-                    />
-                  </Box>
+                  <Button className="compare-resumes__create-resume button">
+                    Use This Template{" "}
+                  </Button>
                 </Box>
                 :&nbsp;
+              </Box>
+            </Box>
+            <Box className="post-banner-cta post-banner-cta--wide">
+              <Box className="post-banner-cta__main">
+                <Box className="post-banner-cta__title post-banner-cta__title--top">
+                  Build your resume in 15 minutes
+                </Box>
                 <Box
-                  className=".post-banner-cta .post-banner-cta--wide"
-                  marginTop={["40px"]}
-                >
-                  <Box className="post-banner-cta__main">
-                    <Box className="post-banner-cta__title--top">
-                      Build your resume in 15 minutes
-                    </Box>
+                  className="post-banner-cta__image is-image-loaded"
+                  data-lazy-bg="/FashTemp4.png"
+                  style={{
+                    backgroundImage: `url(${"/FashTemp4.png"})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: false,
+                  }}
+                ></Box>
+                <Box className="post-banner-cta__text">
+                  <Box className="post-banner-cta__title">
+                    Build your resume in 15 minutes
                   </Box>
-                  <Box className="post-banner-cta__tex">
-                    <Box className="post-banner-cta__title">
-                      Build your resume in 15 mins
-                    </Box>
-                    <Box>
-                      Use professional field-tested resume templates that follow
-                      the exact ‘resume rules’ employers look for.
-                    </Box>
-                    <Box>
-                      <Text>Create my resume</Text>
-                      <PhoneIcon color={"red"} h={20} w={20} />
-                    </Box>
+                  <Box class="post-banner-cta__caption">
+                    Use professional field-tested resume templates that follow
+                    the exact ‘resume rules’ employers look for.
                   </Box>
                 </Box>
               </Box>
+              <Box
+                className="post-banner-cta__button"
+                display={"flex"}
+                justifyContent={"center"}
+                alignItems={"center"}
+              >
+                <Text mr={4}>Create my resume</Text>
+                <ArrowForwardIcon color={"white"} h={5} w={5} />
+              </Box>
             </Box>
-            {/* <Box
-              maxWidth={["375px", "100%", "100%", "100%", "100%"]}
-              marginTop={["0px", "0px", "0px", "40px", "40px"]}
-              style={{
-                width: "100%",
-                margin: "24px auto 48px",
-              }}
-            ></Box> */}
           </Box>
-          <Box className="blog-post__content-aside .blog-post__content-aside--right">
+          <Box className="blog-post__content-aside blog-post__content-aside--right">
             <Box className="blog-aside" opacity={["1"]}>
-              <Box className="blog-aside__item .show" position="static">
+              <Box className="blog-aside__item show" position="static">
                 <Box className="post-banner-cta">
                   <Box className="post-banner-cta__main">
-                    <Box class="post-banner-cta__title post-banner-cta__title--top">
+                    <Box className="post-banner-cta__title post-banner-cta__title--top">
                       Build your resume in 15 minutes
                     </Box>
                     <Box className="post-banner-cta__animation">
-                      <Box class="post-banner-cta__animation-frame"></Box>
-                      <Box class="post-banner-cta__animation-frame"></Box>
-                      <Box class="post-banner-cta__animation-frame"></Box>
-                      <Box class="post-banner-cta__animation-frame"></Box>
+                      <Box className="post-banner-cta__animation-frame"></Box>
+                      <Box className="post-banner-cta__animation-frame"></Box>
+                      <Box className="post-banner-cta__animation-frame"></Box>
+                      <Box className="post-banner-cta__animation-frame"></Box>
                     </Box>
                     <Box className="post-banner-cta__text">
                       <Box className="post-banner-cta__title">
                         Build your resume in 15 minutes
                       </Box>
-                      <Box class="post-banner-cta__caption">
+                      <Box className="post-banner-cta__caption">
                         Use professional field-tested resume templates that
                         follow the exact ‘resume rules’ employers look for.
                       </Box>
@@ -223,9 +219,9 @@ const BlogPost = () => {
                   </Box>
                   <Box className="post-banner-cta__button">
                     <Link href="/" mr={2}>
-                      <a>cover letter examples </a>
+                      <a>Cover letter examples </a>
                     </Link>
-                    <PhoneIcon />
+                    <ArrowForwardIcon w={6} h={6} />
                   </Box>
                 </Box>
               </Box>
