@@ -318,8 +318,9 @@ function Templates() {
           </Link>
         </Box>
         <Box className="cursor">
-          <Link href="/templates/softEngineer/SoftEngineer">
+          <Link href="/templates/templatebrand">
             <img
+<<<<<<< HEAD
               src="softEngr.jpg"
               alt="Tech Resume Template"
               height="200px"
@@ -352,6 +353,10 @@ function Templates() {
             <img
               src="simpleTemp.png"
               alt="Simple Template Design"
+=======
+              src="BRAND_STRATEGIST.jpg"
+              alt="Brand Template"
+>>>>>>> c8d53cf0fa94e2dd33adc69075fb9026c8484d58
               height="200px"
               width="250px"
             />

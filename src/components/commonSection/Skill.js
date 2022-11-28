@@ -139,7 +139,7 @@ const Skill = (props) => {
               />
             )}
             {progressBar && (
-              <>
+              <Box display={"flex"}>
                 <Line
                   percent={progress[index]}
                   strokeWidth={strokeWidth ? strokeWidth : '6'}
@@ -148,19 +148,60 @@ const Skill = (props) => {
                   trailWidth={trailWidth ? trailWidth : '2'}
                   className={`${lineStyle ? lineStyle : ''}`}
                 />
+                {
+                  props.cId  === 'bs' || props.cId==='market' ?
+                    <>
+                      <Input
+                        maxW={50}
+                        maxH={30}
+                        borderColor="none"
+                        variant="unstyled"
 
-                <Input
-                  maxW={50}
-                  maxH={30}
-                  borderColor="none"
-                  variant="unstyled"
-                  placeholder="%"
-                  value={`${progress[index]}`}
-                  onChange={(e) => validateData(e, index)}
-                  type="number"
-                  className={`${percentageStyle}`}
-                />
-              </>
+
+                        placeholder="0"
+                        value={`${progress[index]}`}
+                        onChange={(e) => validateData(e, index)}
+                        type="number"
+                        className={`${percentageStyle}`}
+                      />
+                      <div style={{
+                        marginTop: "4px",
+                        marginLeft: progress[index] > 99 ? '-22px' : '-30px'
+                      }}
+
+                      >
+                        %
+                      </div>
+                    </>
+                    :
+                    <>
+                      <Input
+                        maxW={50}
+                        maxH={30}
+                        borderColor="none"
+                        variant="unstyled"
+
+
+                        placeholder="%"
+                        value={`${progress[index]}`}
+                        onChange={(e) => validateData(e, index)}
+                        type="number"
+                        className={`${percentageStyle}`}
+                      />
+                      <div style={{
+
+                        marginLeft: progress[index] > 99 ? '-22px' : '-30px'
+                      }}
+
+                      >
+                        %
+                      </div>
+                    </>
+
+                }
+
+              </Box>
+
             )}
           </Stack>
         )}
