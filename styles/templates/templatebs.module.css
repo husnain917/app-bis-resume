@@ -1,0 +1,451 @@
+.mainDiv {
+    background-color: #005063;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 5%;
+    overflow: auto;
+}
+
+.innerMainDiv {
+    max-width: 950px;
+    min-width: 950px;
+    display: flex;
+    height: 100%;
+    margin-top: 5%;
+
+
+}
+
+.innerMainDiv1 {
+    background-color: #ffffff;
+    width: 475px;
+    padding: 40px 20px;
+    min-height: 100%;
+}
+
+.innerMainDiv2 {
+    background-color: #ffffff;
+    width: 475px;
+    padding: 80px 0;
+    padding-left: 60px;
+    padding-right: 30px;
+    min-height: 100%;
+
+}
+
+.templateceoHeadingTitle {
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: -4px;
+    margin-top: 0.5rem;
+}
+
+.templateceoHeadingTitle:empty::before {
+    opacity: 1 !important;
+}
+
+.innerDivEducation {
+    padding: 10px 0rem 10px 3rem;
+}
+
+.innerDivExperiance {
+    margin-right: 2rem;
+    margin-left: -3rem;
+    margin-top: 8.5rem;
+}
+
+.ImageDiv {
+    border: 1px solid black;
+    clip-path: polygon(100% 0, 100% 12%, 86% 39%, 71% 80%, 0 100%, 0 0);
+    z-index: -300;
+    background-color: aqua;
+}
+
+.headingtext {
+    font-size: 1.4em !important;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.headingtextN {
+    font-size: 1.4em !important;
+    font-weight: 500;
+
+}
+
+.headingtextN:empty::before {
+    opacity: 1 !important;
+}
+
+.dash {
+    font-size: 1.5em !important;
+    font-weight: 600;
+    line-height: 29px;
+    margin: 0px 2px;
+}
+
+.headingtext {
+    font-size: 1.4em !important;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.bssummary {
+    font-size: 1.1em !important;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.bssummaryleft {
+    font-size: 1.1em !important;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left !important;
+}
+
+.cgpaDiv {
+    position: relative;
+    height: 30px;
+    margin-top: -1px;
+}
+
+.dot {
+    font-size: 1.5em !important;
+    font-weight: 800;
+    margin: 0 4px;
+    height: 10px !important;
+    line-height: -20px;
+    position: absolute;
+    top: -10px;
+}
+
+.cgpa {
+    font-size: 1.1em !important;
+    font-weight: 700;
+    line-height: 20px;
+    position: absolute !important;
+    left: 15px;
+    display: inline-block !important;
+}
+
+.cgpainput {
+    font-size: 1.1em !important;
+    font-weight: 700;
+    position: absolute !important;
+    left: 70px;
+    top: -4px;
+    display: inline-block !important;
+}
+
+.refCompDiv {
+    width: 100%;
+}
+
+.DesignationText {
+    font-size: 1.1em !important;
+    font-weight: 700;
+    max-width: 100%;
+
+}
+
+.DesignationDiv {
+    display: inline-block !important;
+    max-width: 100%;
+}
+
+.CompanyText {
+    font-size: 1.1em !important;
+    font-weight: 700;
+    max-width: 100%;
+}
+
+.CompanyDiv {
+    display: inline-block !important;
+    max-width: 100%;
+}
+
+.pline {
+    font-size: 1.1em !important;
+    font-weight: 700;
+    display: inline-block !important;
+    max-width: 2%;
+}
+
+.headingtextExpertise {
+    width: 69%;
+    display: inline-block !important;
+    padding-right: 8px;
+
+}
+
+.expertiseDiv {
+    max-width: 98%;
+    margin: 4px;
+    display: flex;
+}
+
+.progressDiv {
+    display: flex;
+    padding: 10px;
+}
+
+.percDiv {
+    padding: 2px;
+}
+
+.addressDiv {
+    margin: 20px 0;
+}
+
+.dotsImgDiv {
+    display: flex;
+    justify-content: right;
+    align-items: bottom;
+    padding-top: 50px;
+}
+
+.emailDiv {
+    display: flex !important;
+}
+
+.perD {
+    padding-top: 3px;
+    margin-left: -18px;
+
+}
+
+.name {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+
+}
+
+.profession {
+    color: black;
+    font-size: 18px;
+
+    padding: 0px !important;
+    margin-bottom: 20px;
+}
+
+.postion {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 15px;
+    font-weight: 500;
+    min-width: 660px;
+    max-width: 660px;
+}
+
+.Educationdescription {
+    font-size: 15px;
+    font-weight: 500;
+    min-width: 660px;
+    max-width: 660px;
+}
+
+.date {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.company {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 220px;
+    max-width: 220px;
+}
+
+.skillText {
+    font-size: 16px;
+
+    color: white !important;
+    min-width: 260px;
+    max-width: 260px;
+
+
+}
+
+.line {
+    width: 200px !important;
+    height: 10px;
+    border-radius: 4px;
+    margin-top: 15px !important;
+}
+
+.percent {
+    margin-top: 5px !important;
+}
+
+.projectTitleText {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+
+}
+
+.mt {
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}
+
+.profileText {
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 5px !important;
+    padding: 0 !important;
+    width: 380px
+}
+
+.name {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+
+}
+
+.profession {
+    color: black;
+    font-size: 18px;
+
+    padding: 0px !important;
+    margin-bottom: 20px;
+}
+
+.postion {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 15px;
+    font-weight: 500;
+    min-width: 380px;
+    max-width: 380px;
+}
+
+.Educationdescription {
+    font-size: 15px;
+    font-weight: 500;
+    min-width: 380px;
+    max-width: 380px;
+}
+
+.date {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.company {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 220px;
+    max-width: 220px;
+}
+
+.skillText {
+    font-size: 16px;
+
+    color: black !important;
+    min-width: 180px;
+    max-width: 180px;
+}
+
+.line {
+    width: 200px !important;
+    height: 10px;
+    border-radius: 4px;
+    margin-top: 15px !important;
+}
+
+.percent {
+    margin-top: 5px !important;
+}
+
+.projectTitleText {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+
+}
+
+.mt {
+    margin-top: 4%;
+    margin-bottom: 2%;
+
+}
+
+.profileText {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 5px !important;
+    padding: 0 !important;
+}
+
+.date {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+.referenceName {
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.sideMenu {
+    display: flex;
+    align-items: flex-start;
+}
+
+.sideMenuBox {
+    width: 20px;
+
+}
+
+.proContcat {
+    font-size: 20px;
+}
+
+.contactAddress {
+    font-size: 20px;
+    font-weight: 500;
+    min-width: 380px;
+    max-width: 380px;
+}
+
+.lineText {
+    height: 10px;
+    width: 120px;
+    border-radius: 4px;
+    margin-top: 10px !important;
+
+    margin-left: 70px;
+}
+
+.percentExp {
+    color: black;
+    font-size: 14px !important;
+}
+
+.company1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 380px;
+    max-width: 380px;
+}
