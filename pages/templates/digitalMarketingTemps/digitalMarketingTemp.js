@@ -1,339 +1,277 @@
-import {
-  Box,
-  Container,
-  // Text,
-  ListItem,
-  UnorderedList,
-} from '@chakra-ui/react'
-import Image from 'next/image';
+import { Box, Flex } from '@chakra-ui/react';
+import Link from 'next/link';
+import React from 'react';
 import { Tooltip } from 'react-tippy';
-import Link from "next/link";
-import React from 'react'
-import avatar from "../../../public/avatar.jpg";
-import { Text } from "../../../src/components/template1/index";
+import Name from '../../../src/components/commonSection/Name';
+import style from '../../../styles/templates/template1.module.scss';
+import styles from '../../../styles/digitalMarketingTemp.module.css';
+import Classes from '../../../styles/templates/flightAttendant.module.css';
+import Profession from '../../../src/components/commonSection/Profession';
+import Contact from '../../../src/components/commonSection/Contact';
+import Heading from '../../../src/components/commonSection/Heading';
+import Skill from '../../../src/components/commonSection/Skill';
+import WorkExperience from '../../../src/components/commonSection/WorkExperience';
+import Education from '../../../src/components/commonSection/Education';
+import TempLayout from '../../../src/components/tempNav/TempLayout';
+import { useSelector } from 'react-redux';
+import useShow from '../../../src/components/tempSectionSide/useShow';
+import SectionSideMenu from '../../../src/components/tempSectionSide/SectionSideMenu';
+import About from '../../../src/components/commonSection/About';
 import {
-  FaPhoneAlt,
-  FaRegEnvelope,
-  FaLocationArrow,
-} from "react-icons/fa";
-import FashionCustomHook from "../../../src/components/fashionTemp/FashionCustomHook";
-import styles from "../../../styles/digitalMarketingTemp.module.css";
-import DigitalMarketingEducation from "../../../src/components/digitalMarketingTemp/DigitalMarketingEducation";
-import DigitalMarketingSkill from "../../../src/components/digitalMarketingTemp/DigitalMarketingSkill";
-import DigitalMarketingExperience from "../../../src/components/digitalMarketingTemp/DigitalMarketingExperience";
+  EDUCATION,
+  SKILL,
+  WORK,
+} from '../../../src/components/tempSectionSide/SectionSideConstant';
+import ImageSelector from '../../../src/components/imageSelector';
 
-export default function digitalMarketingTemp() {
+export default function Digital_Marketing_Temp() {
   // redux Data
-  const { resumeEditor } = FashionCustomHook();
+  let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const [show, setShow] = useShow();
 
   return (
     <>
-      <Link href={"/templates"}>
-        <div className={styles.swapCont}>
-          <Tooltip title="Change Template" arrow distance={20}>
-            <div className={styles.swap}>
-              <img src="/icons/swap.png" />
-            </div>
-          </Tooltip>
-        </div>
-      </Link>
-      <Container
-        minW={'70%'}
-        display={'flex'}
-      >
-        {/* ist content box */}
-        <Box
-          backgroundColor={'#3A4D6C'}
-          width={'30%'}
-          margin={'30px 0px'}
-          padding={'50px 20px 30px 20px'}
-        >
-          {/* avatar */}
-          <Box
-            height={'250px'}
-            width={'100%'}
-            margin={'25px 0px'}
-          >
-            <Image
-              src={avatar}
-              alt={'Image Not Found'}
-              style={{
-                width: '100%',
-                borderRadius: '100% 100%'
-              }}
-            />
-          </Box>
-          {/* links */}
-          <Box
-            marginTop={'50px'}
-          >
-            <Text
-              value={resumeEditor?.resumeData?.contact?.heading}
-              placeholder="CONTACT PERSON"
-              customclass={`${styles.leftContainerHeadings} ${styles.digitalContentEditableContainer}`}
-              path={"contact.heading"}
-              editable={false}
-            />
-          </Box>
-          <Box
-            margin={'10px 0px'}
-          >
-            {/* phone No */}
-            <Box
-              margin={'10px 0px'}
-              display={'flex'}
-              alignItems={'center'}
-            >
-              <Box
-                height={'35px'}
-                width={'35px'}
-                borderRadius={'100% 100%'}
-                border={'1px solid #CCC'}
-                display={'flex'}
-                alignItems={'center'}
-                justifyContent={'center'}
-              >
-                <FaPhoneAlt color='#fff' />
-              </Box>
-              <Box>
-                <Text
-                  value={resumeEditor?.resumeData?.contact?.fashionContectNo}
-                  placeholder={`123-456-7890`}
-                  customclass={`${styles.digitalContectStyle} ${styles.digitalContentEditableContainer}`}
-                  path={"contact.fashionContectNo"}
-                />
-              </Box>
-            </Box>
+      <TempLayout work={true} education={true} skills={true}>
+        <Link href={'/templates'}>
+          <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
+            <Tooltip title="Change Template" arrow distance={20}>
+              <div className={style.swap}>
+                <img src="/icons/swap.png" />
+              </div>
+            </Tooltip>
+          </div>
+        </Link>
 
-
-            {/* Live Location */}
-            <Box
-              margin={'10px 0px'}
-              display={'flex'}
-              alignItems={'center'}
-            >
-              <Box
-                height={'35px'}
-                width={'35px'}
-                borderRadius={'100% 100%'}
-                border={'1px solid #CCC'}
-                display={'flex'}
-                alignItems={'center'}
-                justifyContent={'center'}
-              >
-                <FaLocationArrow color='#fff' />
-              </Box>
-              <Box>
-                <Text
-                  value={resumeEditor?.resumeData?.contact?.fashionContectLocation}
-                  placeholder={`123 Anywhere St., Any City`}
-                  customclass={`${styles.digitalContectStyle} ${styles.digitalContentEditableContainer}`}
-                  path={"contact.fashionContectLocation"}
-                />
-              </Box>
-            </Box>
-
-
-            {/* E-mail */}
-            <Box
-              margin={'10px 0px'}
-              display={'flex'}
-              alignItems={'center'}
-            >
-              <Box
-                height={'35px'}
-                width={'35px'}
-                borderRadius={'100% 100%'}
-                border={'1px solid #CCC'}
-                display={'flex'}
-                alignItems={'center'}
-                justifyContent={'center'}
-              >
-                <FaRegEnvelope color='#fff' />
-              </Box>
-              <Box>
-                <Text
-                  value={resumeEditor?.resumeData?.contact?.fashionContectEmail}
-                  placeholder={`hello@reallygreatsite.com`}
-                  customclass={`${styles.digitalContectStyle} ${styles.digitalContentEditableContainer}`}
-                  path={"contact.fashionContectEmail"}
-                />
-              </Box>
-            </Box>
-          </Box>
-
-          {/* education section */}
-          <Box
-            margin={'30px 0px 10px 0px'}
-          >
-            <Text
-              value={resumeEditor?.resumeData?.education?.heading}
-              placeholder="EDUCATION"
-              customclass={`${styles.leftContainerHeadings} ${styles.digitalContentEditableContainer}`}
-              path={"education.heading"}
-              editable={false}
-            />
-          </Box>
-
-          {/* education description */}
-          <Box>
-            {resumeEditor?.resumeData?.education?.visible && (
-              <>
-                <DigitalMarketingEducation
-                  data={
-                    resumeEditor?.resumeData?.education?.items?.length
-                      ? [...resumeEditor?.resumeData?.education?.items]
-                      : [...sampleData?.data?.education?.items]
-                  }
-                  color={resumeEditor?.color}
-                  updater={resumeEditor?.updater}
-                />
-              </>
-            )}
-          </Box>
-
-          {/* skill section */}
-          <Box
-            margin={'30px 0px 10px 0px'}
-          >
-            <Text
-              value={resumeEditor?.resumeData?.skills?.heading}
-              placeholder="SKILL"
-              customclass={`${styles.leftContainerHeadings} ${styles.digitalContentEditableContainer}`}
-              path={"skills.heading"}
-              editable={false}
-            />
-          </Box>
-
-          {/* skill description */}
-          <Box
-            margin={'0px 0px 25px 0px'}
-          >
-            {resumeEditor?.resumeData?.skills?.visible && (
-              <>
-                <DigitalMarketingSkill
-                  data={
-                    resumeEditor?.resumeData?.skills?.items?.length
-                      ? [...resumeEditor?.resumeData?.skills?.items]
-                      : [...sampleData?.data?.skills?.items]
-                  }
-                  color={resumeEditor?.color}
-                  updater={resumeEditor?.updater}
-                />
-              </>
-            )}
-          </Box>
-        </Box>
-
-        {/* 2nd content box */}
-        <Box
-          width={'70%'}
-          margin={'30px 0px'}
+        <Flex
+          justifyContent={{ base: 'none', md: 'center' }}
+          overflow="auto"
+          flexDir={'column'}
+          alignItems={{ sm: 'none', md: 'center' }}
+          bg={{ md: 'none', lg: 'blackAlpha.100' }}
+          className={`${Classes.main}`}
         >
           <Box
-            backgroundColor={'#F2DB7A'}
-            padding={'25px 0px 25px 0px'}
-            marginTop={'12%'}
-            display={'flex'}
-            flexDirection={'column'}
-            justifyContent={'center'}
-            alignItems={'center'}
+            display="flex"
+            flexDir="row"
+            w="100%"
+            minW="850px"
+            maxW="850px"
+            mb={'20px'}
+            mx={'20px'}
+            mt="100px"
           >
-            {/* firstName */}
-            <Text
-              value={resumeEditor?.resumeData?.profile?.firstName}
-              placeholder="SEBASTIAN"
-              customclass={`${styles.nameStyle} ${styles.digitalContentEditableContainer}`}
-              path={"profile.firstName"}
-            />
+            {/* =============== First Section ============== */}
+            <Box
+              w="40%"
+              pb="10%"
+              minW={'340px'}
+              bgColor="#3A4D6C"
+              borderLeftRadius={6}
+              pr={3}
+              pl={12}
+              py={8}
+            >
+              {/* _____________ Profile _____________ */}
+              <ImageSelector
+                minWidth="240px"
+                maxWidth="240px"
+                maxHeight="240px"
+                minHeight="240px"
+                marginTop="30px"
+              />
+              <Heading
+                title={'CONTACT PERSON'}
+                color="#fff"
+                margin={'20px 0px 0px 0px'}
+              />
+              <Contact
+                phone={true}
+                email={true}
+                linkedinURL={true}
+                website={true}
+                circleIcon={true}
+                circleBg="#fff"
+                circleSize="25px"
+                iconColor="#3A4D6C"
+                margin={'10px 0px 0px 0px'}
+                style={Classes.profileText}
+              />
 
-            {/* lastName */}
-            <Text
-              value={resumeEditor?.resumeData?.profile?.lastName}
-              placeholder="BENNETT"
-              customclass={`${styles.nameStyle} ${styles.digitalContentEditableContainer}`}
-              path={"profile.lastName"}
-            />
+              {/* _____________ About me _____________ */}
+              <Heading
+                title={'ABOUT ME'}
+                color="#fff"
+                margin={'20px 0px 0px 0px'}
+              />
+              <About
+                minW="100%"
+                maxW="100%"
+                aboutStyle={Classes.aboutText}
+                textColor="#fff"
+              />
 
-            {/* subtitle */}
-            <Text
-              value={resumeEditor?.resumeData?.profile?.subtitle}
-              placeholder="DIGITAL MARKETING"
-              customclass={`${styles.profileSubTitle} ${styles.digitalContentEditableContainer}`}
-              path={"profile.subtitle"}
-            />
-          </Box>
-
-          {/* about section */}
-          <Box
-            padding={'30px 25px 0px 25px'}
-          >
-            <Text
-              value={resumeEditor?.resumeData?.objective?.aboutTitle}
-              placeholder="About Me"
-              customclass={`${styles.rightContainerHeading} ${styles.digitalContentEditableContainer}`}
-              path={"objective.aboutTitle"}
-              editable={false}
-            />
-          </Box>
-
-          {/* about description */}
-          <Box
-            padding={'0px 30px'}
-          >
-            <Text
-              value={resumeEditor?.resumeData?.objective?.aboutBody}
-              placeholder="A passionate digital marketer who loves to make plans
-              to introduce products or services to the right people
-              digitally. And love to make clients satisfied and feel their
-              excitement during the whole process."
-              customclass={`${styles.aboutBodyDes} ${styles.digitalContentEditableContainer}`}
-              path={"objective.aboutBody"}
-            />
-          </Box>
-
-          {/* experience section */}
-          <Box
-            padding={'25px 25px 0px 25px'}
-          >
-            <Text
-              value={resumeEditor?.resumeData?.experience?.heading}
-              placeholder="EXPERIENCE WORK"
-              customclass={`${styles.rightContainerHeading} ${styles.digitalContentEditableContainer}`}
-              path={"experience.heading"}
-              editable={false}
-            />
-          </Box>
-          {/* experience description */}
-          <Box
-            padding={'0px 30px'}
-          >
-            {resumeEditor?.resumeData?.work?.visible && (
-              <>
-                <DigitalMarketingExperience
-                  data={
-                    resumeEditor?.resumeData?.work?.items?.length
-                      ? [...resumeEditor?.resumeData?.work?.items]
-                      : [...sampleData?.data?.work?.items]
-                  }
-                  color={resumeEditor?.color}
-                  updater={resumeEditor?.updater}
+              {/* _____________ Skill _____________ */}
+              {resumeData?.skills?.visible && (
+                <>
+                  <Box
+                    mt={5}
+                    display={'flex'}
+                  >
+                    <Heading
+                      title={'RELEVANT SKILLS'}
+                      color="#fff"
+                      onSideSectionShow={() =>
+                        setShow({ ...show, skills: true })
+                      }
+                    />
+                    {show.skills && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, skills: false })}
+                        bg="#F2DB7A"
+                        iconColor={'#3A4D6C'}
+                        onDelete={SKILL}
+                      />
+                    )}
+                  </Box>
+                  <Skill
+                    skillStyle={Classes.skillText}
+                    progressBar={true}
+                    strokeWidth="2"
+                    lineStyle={styles.line}
+                    strokeColor="#F2DB7A"
+                    trailColor="#fff"
+                    percentageStyle={styles.percent}
+                    parentContainerStyle={Classes.ml}
+                  />
+                </>
+              )}
+            </Box>
+            {/* =============== Second Section ============== */}
+            <Box
+              w="60%"
+              bg="#fff"
+              h="auto"
+              minW="510px"
+              borderRightRadius={6}
+            >
+              <Box
+                width={'100%'}
+                backgroundColor={'#F2DB7A'}
+                padding={'20px 0px 20px 0px'}
+                marginTop={'15%'}
+                display={'flex'}
+                alignItems={'center'}
+                flexDir={'column'}
+              >
+                <Name
+                  FName={true}
+                  SName={true}
+                  direction="column"
+                  FNameStyle={styles.nameStyle}
+                  SNameStyle={styles.nameStyle}
                 />
-              </>
-            )}
-          </Box>
+                <Profession
+                  professionStyle={styles.profileSubTitle}
+                />
+              </Box>
+              {resumeData?.work?.visible && (
+                <>
+                  <Box
+                    mt={'20px'}
+                    display={'flex'}
+                    justifyContent={'space-between'}
+                    pr={'8px'}
+                  >
+                    <Heading
+                      color={'#3A4D6C'}
+                      title="WORK EXPERIENCE"
+                      padding={'0px 0px 0px 20px'}
+                      fontSize={'22px'}
+                      fontWeight={700}
+                      onSideSectionShow={() => setShow({ ...show, work: true })}
+                    />
+                    {show.work && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, work: false })}
+                        bg="#F2DB7A"
+                        iconColor={'#3A4D6C'}
+                        onDelete={WORK}
+                      />
+                    )}
+                  </Box>
+                  {/* _____________ Work Experience _____________ */}
+                  <WorkExperience
+                    company={true}
+                    position={true}
+                    date={true}
+                    summary={true}
+                    companyStyle={Classes.company}
+                    positionStyle={Classes.programText}
+                    dateStyle={Classes.date}
+                    summaryStyle={Classes.description}
+                    parentContainerStyle={styles.rightContainerWork}
+                    textColor="#3A4D6C"
+                  />
+                </>
+              )}
+              {/* _____________ Education _____________ */}
+              {resumeData?.education?.visible && (
+                <>
+                  <Box
+                    mt={'20px'}
+                    display={'flex'}
+                    justifyContent={'space-between'}
+                    pr={'35px'}
+                  >
+                    <Heading
+                      minW={'480px'}
+                      maxW={'480px'}
+                      color={'#3A4D6C'}
+                      title="EDUCATION"
+                      padding={'0px 0px 0px 20px'}
+                      fontSize={'22px'}
+                      fontWeight={700}
+                      onSideSectionShow={() =>
+                        setShow({ ...show, education: true })
+                      }
+                    />
+                    {show.education && (
+                      <SectionSideMenu
+                        onHide={() => setShow({ ...show, education: false })}
+                        bg="#F2DB7A"
+                        iconColor={'#3A4D6C'}
+                        onDelete={EDUCATION}
+                      />
+                    )}
+                  </Box>
+                  <Education
+                    degree={true}
+                    institution={true}
+                    date={true}
+                    summary={true}
+                    parentContainerStyle={styles.rightContainerWork}
+                    institutionStyle={Classes.company}
+                    degreeStyle={Classes.programText}
+                    dateStyle={Classes.date}
+                    summaryStyle={Classes.description}
+                    degree_placeholder="Study Program"
+                    textColor="#3A4D6C"
+                  />
+                </>
+              )}
 
-          {/* footer */}
-          <Box
-            height={'60px'}
-            width={'100%'}
-            backgroundColor={'#F2DB7A'}
-            marginTop={'28%'}
-          >
-            {/* footer */}
+              <Box
+                height={'50px'}
+                width={'100%'}
+                backgroundColor={'#F2DB7A'}
+                marginTop={'10px'}
+              >
+                {/* footer container */}
+              </Box>
+            </Box>
           </Box>
-        </Box>
-      </Container>
+        </Flex>
+      </TempLayout>
     </>
   )
 }
