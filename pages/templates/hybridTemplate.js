@@ -49,7 +49,7 @@ const HybridTemplate = () => {
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     //Template Layout for Template Navbar
     <>
-      <div className={style.main}>
+      <div className={style.main} style={{ overflow: 'auto' }}>
         <TempLayout
           education={true}
           skills={true}
