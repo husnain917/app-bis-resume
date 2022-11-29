@@ -42,13 +42,20 @@ export default function TempNavbar({
       pos={{ base: 'relative', md: 'fixed' }}
       justifyContent={'center'}
     >
-      <Image
+      {/* <Image
         src={Logo ? Logo : '/bisResumeLogo.svg'}
         w={'200px'}
         h="auto"
         position={'absolute'}
         left="20px"
         top="0px"
+        alt="Image not Found"
+      /> */}
+      <img
+        src={'https://www.linkpicture.com/q/bisResumeLogo.svg'}
+        width="200px"
+        height={'auto'}
+        style={{ position: 'absolute', left: '20px', top: '0px' }}
         alt="Image not Found"
       />
       {/* <Image
