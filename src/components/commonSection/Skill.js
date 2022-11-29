@@ -158,12 +158,14 @@ const Skill = (props) => {
                   onChange={(e) => validateData(e, index)}
                   type="number"
                   className={`${percentageStyle}`}
+                  style={{ marginLeft: '5px' }}
                 />
                 <div
                   style={{
                     marginLeft: progress[index] > 99 ? '-22px' : '-30px',
+                    marginTop: '5px',
                   }}
-                  className={`${percentStyle}`}
+                  className={`${percentStyle} ${percentageStyle}`}
                 >
                   %
                 </div>
