@@ -10,6 +10,7 @@ import {
 } from "../src/components/resumeExampleData/resumeExampleData";
 import TryResume from "../src/components/resumeExampleData/tryResume/tryResume";
 import BlogPost from "../src/components/resumeExampleData/blogPost/blogPost";
+import SelectResume from "../src/components/resumeExampleData/selectResume/SelectResume";
 const ResumeExamples = () => {
   return (
     <Box>
@@ -32,6 +33,7 @@ const ResumeExamples = () => {
       </Box>
       <TryResume />
       <BlogPost />
+      <SelectResume />
     </Box>
   );
 };

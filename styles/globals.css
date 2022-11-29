@@ -1130,3 +1130,82 @@ p {
     transform: translateX(-50%);
 }
 }
+/* // SELECT RESUME // */
+.resume-templates__content {
+  position: relative;
+  max-width: 384px;
+  margin-right: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: opacity .2s ease-in,-webkit-transform .2s ease-in;
+  transition: opacity .2s ease-in,-webkit-transform .2s ease-in;
+  transition: transform .2s ease-in,opacity .2s ease-in;
+  transition: transform .2s ease-in,opacity .2s ease-in,-webkit-transform .2s ease-in;
+}
+.resume-templates__slider-arrow-container {
+  position: absolute;
+  right: -112px;
+  width: 36px;
+  height: 24px;
+  top: calc(50% - 12px);
+  color: var(--white);
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transition: opacity .2s ease,-webkit-transform .2s ease;
+  transition: opacity .2s ease,-webkit-transform .2s ease;
+  transition: transform .2s ease,opacity .2s ease;
+  transition: transform .2s ease,opacity .2s ease,-webkit-transform .2s ease;
+}
+.resume-templates__arrow:first-child {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+.resume-templates__arrow:last-child {
+  left: 12px;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+.resume-templates__arrow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  -webkit-animation: arrowPulse 1.5s ease infinite;
+  animation: arrowPulse 1.5s ease infinite;
+}
+svg {
+  fill: currentColor;
+}
+audio, canvas, iframe, img, svg, video {
+  vertical-align: middle;
+}
+.resume-templates__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 16px;
+  margin-left: -2px;
+}
+.resume-templates__star {
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  margin-right: 2px;
+  background-image: url(/public/stars1-removebg-preview.png);
+}
