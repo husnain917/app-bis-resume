@@ -49,17 +49,17 @@ const HybridTemplate = () => {
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     //Template Layout for Template Navbar
     <>
-      <TempLayout
-        education={true}
-        skills={true}
-        languages={true}
-        work={true}
-        organization={true}
-        projects={true}
-        certificate={true}
-        interest={true}
-      >
-        <div className={style.main}>
+      <div className={style.main}>
+        <TempLayout
+          education={true}
+          skills={true}
+          languages={true}
+          work={true}
+          organization={true}
+          projects={true}
+          certificate={true}
+          interest={true}
+        >
           {/* <Link href={'/templates'}>
             <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
               <Tooltip title="Change Template" arrow distance={20}>
@@ -559,8 +559,8 @@ const HybridTemplate = () => {
               </HStack>
             </Box>
           </Flex>
-        </div>
-      </TempLayout>
+        </TempLayout>
+      </div>
     </>
   );
 };

@@ -445,7 +445,7 @@ const MobileNav = () => {
   );
 };
 
-const MobileNavItem = ({ label, children, href }) => {
+export const MobileNavItem = ({ label, children, href }) => {
   const { isOpen, onToggle } = useDisclosure();
   const mobileNavColor = useColorModeValue('gray.600', 'gray.200');
   const mobileNavBorder = useColorModeValue('gray.200', 'gray.700');
