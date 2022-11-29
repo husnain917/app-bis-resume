@@ -13,7 +13,7 @@ export default function TempLayout({
   certificate,
 }) {
   return (
-    <>
+    <div>
       <TempNavbar
         work={work}
         education={education}
@@ -27,6 +27,6 @@ export default function TempLayout({
       />
 
       <main>{children}</main>
-    </>
+    </div>
   );
 }

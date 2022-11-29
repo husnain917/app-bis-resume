@@ -39,6 +39,7 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../src/components/imageSelector';
 import TempNavbar from '../../src/components/tempNav/TempNavbar';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 
 const HybridTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
@@ -60,22 +61,11 @@ const HybridTemplate = () => {
           certificate={true}
           interest={true}
         >
-          {/* <Link href={'/templates'}>
-            <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
-              <Tooltip title="Change Template" arrow distance={20}>
-                <div className={style.swap}>
-                  <img src="/icons/swap.png" />
-                </div>
-              </Tooltip>
-            </div>
-          </Link> */}
+          <ChangeTempBtn />
           <Flex
             justifyContent={{ base: 'none', lg: 'center' }}
-            overflow="auto"
             flexDir={'column'}
             alignItems={{ sm: 'none', md: 'center' }}
-            minW={{ base: '1000px', lg: '100vw' }}
-            maxW={{ base: '1000px', lg: '100vw' }}
           >
             <Box
               minW={910}
@@ -84,6 +74,7 @@ const HybridTemplate = () => {
               px={2}
               bg={'white'}
               m={4}
+              mx={4}
               mt="100px"
               borderRadius={6}
               borderWidth="1px"

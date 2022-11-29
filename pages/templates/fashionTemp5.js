@@ -29,7 +29,7 @@ const FashionTemp5 = () => {
   const [show, setShow] = useShow();
   return (
     <div className={style.main}>
-      <Navbar />
+      {/* <Navbar /> */}
       <TempLayout work={true} education={true} languages={true} skills={true}>
         <Link href={'/templates'}>
           <div className={style.swapCont}>

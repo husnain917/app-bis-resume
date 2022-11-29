@@ -36,17 +36,18 @@ export default function TempNavbar({
     <Box
       display={'flex'}
       h="50px"
-      minW={{ base: '1000px', md: '95vw' }}
+      minW={{ base: '1000px', md: '100vw' }}
+      mt={1}
       zIndex="999"
-      pos="relative"
+      pos={{ base: 'relative', md: 'fixed' }}
       justifyContent={'center'}
     >
       <Image
         src="/bisResumelogo.svg"
-        w={{ base: '180px', lg: '200px' }}
+        w={'200px'}
         h="auto"
         position={'absolute'}
-        left="0px"
+        left="20px"
         top="0px"
         alt="Image not Found"
       />
@@ -113,7 +114,7 @@ export default function TempNavbar({
         </Button>
       </Box>
 
-      <Box position={'absolute'} right={'15px'}>
+      <Box position={'absolute'} right={{ base: '10px', lg: '25px' }}>
         {showNav ? (
           <Box
             px={4}

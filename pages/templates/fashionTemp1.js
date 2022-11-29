@@ -28,6 +28,7 @@ import {
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import useShow from '../../src/components/tempSectionSide/useShow';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 const FashionTemp1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
@@ -35,27 +36,17 @@ const FashionTemp1 = () => {
   return (
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Fashion Temp 1 Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     //Template Layout for Template Navbar//
-    <TempLayout
-      work={true}
-      education={true}
-      references={true}
-      skills={true}
-      languages={true}
-    >
-      <div className={style.main}>
-        <Link href={'/templates'}>
-          <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
-
+    <div className={style.main} style={{ overflow: 'auto' }}>
+      <TempLayout
+        work={true}
+        education={true}
+        references={true}
+        skills={true}
+        languages={true}
+      >
+        <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
-          overflow="auto"
           flexDir={'column'}
           alignItems={{ sm: 'none', md: 'center' }}
         >
@@ -378,8 +369,8 @@ const FashionTemp1 = () => {
             </Box>
           </HStack>
         </Flex>
-      </div>
-    </TempLayout>
+      </TempLayout>
+    </div>
   );
 };
 export default FashionTemp1;
