@@ -1,509 +1,429 @@
-import {
-    Box,
-    Container,
-} from '@chakra-ui/react';
-import Image from 'next/image';
-import { Tooltip } from 'react-tippy';
-import Link from "next/link";
+import { Box, Flex } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
-import avatar from "../../public/designer.jpg";
-import { Text } from "../../src/components/template1/index";
-import FashionCustomHook from "../../src/components/fashionTemp/FashionCustomHook";
-import {
-    FaPhoneAlt,
-    FaRegEnvelope,
-    FaLocationArrow,
-    FaUserAlt,
-    FaCog,
-    FaBookOpen,
-    FaRegAddressBook
-} from "react-icons/fa";
+import { Tooltip } from 'react-tippy';
+import Name from '../../src/components/commonSection/Name';
+import style from '../../styles/templates/template1.module.scss';
 import styles from "../../styles/designerTemplate.module.css";
+import Classes from '../../styles/templates/flightAttendant.module.css';
+import Profession from '../../src/components/commonSection/Profession';
+import Contact from '../../src/components/commonSection/Contact';
+import Heading from '../../src/components/commonSection/Heading';
+import Skill from '../../src/components/commonSection/Skill';
+import WorkExperience from '../../src/components/commonSection/WorkExperience';
+import Education from '../../src/components/commonSection/Education';
+import Interest from '../../src/components/commonSection/Interest';
+import Language from '../../src/components/commonSection/Language';
+import TempLayout from '../../src/components/tempNav/TempLayout';
+import { useSelector } from 'react-redux';
+import useShow from '../../src/components/tempSectionSide/useShow';
+import SectionSideMenu from '../../src/components/tempSectionSide/SectionSideMenu';
+import About from '../../src/components/commonSection/About';
+import {
+    EDUCATION,
+    SKILL,
+    WORK,
+    INTEREST,
+    LANGUAGES,
+} from '../../src/components/tempSectionSide/SectionSideConstant';
+import ImageSelector from '../../src/components/imageSelector';
+import {
+    FaUserAlt,
+    FaBookOpen,
+    FaSignLanguage
+} from "react-icons/fa";
 import Underline from '../../src/components/digitalTemplate/Underline';
-import DigitalSkill from "../../src/components/digitalTemplate/DigitalSkill";
-import DigitalHobbies from "../../src/components/digitalTemplate/DigitalHobbies";
-import DigitalEducation from "../../src/components/digitalTemplate/DigitalEducation";
-import DigitalExperience from "../../src/components/digitalTemplate/DigitalExperience";
+import { MdCastForEducation } from 'react-icons/md';
+import { IoLanguageOutline } from 'react-icons/io5';
 
-export default function designerTemplate() {
+export default function Designer_Template() {
     // redux Data
-    const { resumeEditor } = FashionCustomHook();
+    let resumeData = useSelector((state) => state.editorReducer.resumeData);
+    const [show, setShow] = useShow();
+
     return (
         <>
-            <Link href={"/templates"}>
-                <div className={styles.swapCont}>
-                    <Tooltip title="Change Template" arrow distance={20}>
-                        <div className={styles.swap}>
-                            <img src="/icons/swap.png" />
-                        </div>
-                    </Tooltip>
-                </div>
-            </Link>
-            <Container
-                minW={'70%'}
-            >
-                {/* profile container */}
-                <Box
-                    backgroundColor={'#253439'}
-                    marginTop={'30px'}
-                    padding={'30px 30px 50px 30px'}
-                    width={'100%'}
+            <TempLayout work={true} education={true} skills={true} interest={true} languages={true}>
+                <Link href={'/templates'}>
+                    <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
+                        <Tooltip title="Change Template" arrow distance={20}>
+                            <div className={style.swap}>
+                                <img src="/icons/swap.png" />
+                            </div>
+                        </Tooltip>
+                    </div>
+                </Link>
+                <Flex
+                    justifyContent={{ base: 'none', md: 'center' }}
+                    overflow="auto"
+                    flexDir={'column'}
+                    alignItems={{ sm: 'none', md: 'center' }}
+                    bg={{ md: 'none', lg: 'blackAlpha.100' }}
+                    className={`${Classes.main}`}
                 >
                     <Box
-                        display={'flex'}
-                        justifyContent={'space-between'}
-                        alignItems={'center'}
-                        width={'100%'}
+                        w="100%"
+                        minW="850px"
+                        maxW="850px"
+                        mb={'20px'}
+                        mx={'20px'}
+                        mt="100px"
                     >
+                        {/* profile container */}
                         <Box
-                            width={'50%'}
-                        >
-                            {/* firstName */}
-                            <Text
-                                value={resumeEditor?.resumeData?.profile?.firstName}
-                                placeholder="Your Name"
-                                customclass={`${styles.firstNameStyle}`}
-                                path={"profile.firstName"}
-                            />
-                        </Box>
-                        <Underline
-                            height='0.1em'
-                            width='50%'
-                            bgColor='#fff'
-                        />
-                    </Box>
-                    {/* lastName */}
-                    <Text
-                        value={resumeEditor?.resumeData?.profile?.lastName}
-                        placeholder="Profession"
-                        customclass={`${styles.lastNameStyle}`}
-                        path={"profile.lastName"}
-                    />
-                </Box>
-
-                {/* avatar container */}
-                <Box
-                    backgroundColor={'#423E3A'}
-                    display={'flex'}
-                    justifyContent={'space-between'}
-                    width={'100%'}
-                    marginTop={'2px'}
-                >
-                    {/* avatar */}
-                    <Box
-                        width={'40%'}
-                        position={'relative'}
-                    >
-                        <Box
-                            width={'250px'}
-                            position={'absolute'}
-                            bottom={'-20%'}
-                            left={'8%'}
-                        >
-                            <Image
-                                src={avatar}
-                                alt={'Image Not Found'}
-                                height={'230px'}
-                                width={'250px'}
-                            />
-                        </Box>
-                    </Box>
-
-                    {/* links */}
-                    <Box
-                        width={'50%'}
-                        margin={'10px 0px'}
-                    >
-                        {/* phone No */}
-                        <Box
-                            margin={'10px 0px'}
-                            display={'flex'}
-                            alignItems={'center'}
+                            backgroundColor={'#253439'}
+                            padding={'30px'}
+                            width={'100%'}
                         >
                             <Box
-                                height={'35px'}
-                                width={'35px'}
-                                borderRadius={'100% 100%'}
-                                border={'2px solid #fff'}
                                 display={'flex'}
+                                justifyContent={'space-between'}
                                 alignItems={'center'}
-                                justifyContent={'center'}
+                                width={'100%'}
                             >
-                                <FaPhoneAlt color='#fff' />
-                            </Box>
-                            <Box>
-                                <Text
-                                    value={resumeEditor?.resumeData?.contact?.designerContectNo}
-                                    placeholder={`123-456-7890`}
-                                    customclass={`${styles.designerContectStyle}`}
-                                    path={"contact.designerContectNo"}
-                                />
-                            </Box>
-                        </Box>
-
-                        {/* E-mail */}
-                        <Box
-                            margin={'10px 0px'}
-                            display={'flex'}
-                            alignItems={'center'}
-                        >
-                            <Box
-                                height={'35px'}
-                                width={'35px'}
-                                borderRadius={'100% 100%'}
-                                border={'2px solid #fff'}
-                                display={'flex'}
-                                alignItems={'center'}
-                                justifyContent={'center'}
-                            >
-                                <FaRegEnvelope color='#fff' />
-                            </Box>
-                            <Box>
-                                <Text
-                                    value={resumeEditor?.resumeData?.contact?.designerContectEmail}
-                                    placeholder={`HELLO@REALLYGREATSITE.COM`}
-                                    customclass={`${styles.designerContectStyle}`}
-                                    path={"contact.designerContectEmail"}
-                                />
-                            </Box>
-                        </Box>
-
-                        {/* Live Location */}
-                        <Box
-                            margin={'10px 0px'}
-                            display={'flex'}
-                            alignItems={'center'}
-                        >
-                            <Box
-                                height={'35px'}
-                                width={'35px'}
-                                borderRadius={'100% 100%'}
-                                border={'2px solid #fff'}
-                                display={'flex'}
-                                alignItems={'center'}
-                                justifyContent={'center'}
-                            >
-                                <FaLocationArrow color='#fff' />
-                            </Box>
-                            <Box>
-                                <Text
-                                    value={resumeEditor?.resumeData?.contact?.designerContectLocation}
-                                    placeholder={`123 ANYWHERE ST., ANY CITY`}
-                                    customclass={`${styles.designerContectStyle}`}
-                                    path={"contact.designerContectLocation"}
-                                />
-                            </Box>
-                        </Box>
-                    </Box>
-                </Box>
-
-                {/* container */}
-                <Box
-                    width={'100%'}
-                    display={'flex'}
-                    justifyContent={'space-between'}
-                    marginTop={'35px'}
-                >
-                    {/* left contaiiner */}
-                    <Box
-                        width={'35%'}
-                        padding={'0px 60px 0px 30px'}
-                    >
-                        {/* content box */}
-                        <Box
-                            backgroundColor={'#CEB99E'}
-                            padding={'25px 15px'}
-                            borderRadius={'15px 15px'}
-                            marginBottom={'30px'}
-                        >
-                            {/* title */}
-                            <Box>
                                 <Box
-                                    display={'flex'}
-                                    alignItems={'center'}
-                                    justifyContent={'space-between'}
-                                    width={'100%'}
+                                    width={'50%'}
                                 >
-                                    <Box
-                                        width={'25%'}
-                                        backgroundColor={'#253439'}
-                                        padding={'15px 0px'}
-                                        display={'flex'}
-                                        justifyContent={'center'}
-                                        alignItems={'center'}
-                                    >
-                                        <FaUserAlt color='#fff' size={'30px'} />
-                                    </Box>
-                                    <Box
-                                        width={'70%'}
-                                    >
-                                        <Text
-                                            value={resumeEditor?.resumeData?.objective?.aboutTitle}
-                                            placeholder="PROFILE"
-                                            customclass={`${styles.profileTitle}`}
-                                            path={"objective.aboutTitle"}
-                                            editable={false}
-                                        />
-                                    </Box>
+                                    <Name
+                                        FName={true}
+                                        SName={true}
+                                        direction="column"
+                                        FNameStyle={styles.nameStyle}
+                                        SNameStyle={styles.nameStyle}
+                                    />
                                 </Box>
                                 <Underline
                                     height='0.1em'
-                                    width='100%'
-                                    bgColor='#253439'
+                                    width='50%'
+                                    bgColor='#fff'
                                 />
                             </Box>
+                            <Profession
+                                professionStyle={styles.profileSubTitle}
+                            />
+                        </Box>
 
-                            {/* Profile */}
-                            <Box>
-                                <Text
-                                    value={resumeEditor?.resumeData?.objective?.aboutBody}
-                                    placeholder="Short and engaging pitch about yourself."
-                                    customclass={`${styles.profileBodyDes}`}
-                                    path={"objective.aboutBody"}
-                                />
-                            </Box>
-
-                            {/* skill */}
-                            {/* title */}
+                        {/* avatar container */}
+                        <Box
+                            backgroundColor={'#423E3A'}
+                            display={'flex'}
+                            width={'100%'}
+                            marginTop={'2px'}
+                        >
                             <Box
-                                marginTop={'10px'}
+                                width={'30%'}
+                                padding={'10px 0px 10px 20px'}
                             >
-                                <Box
-                                    display={'flex'}
-                                    alignItems={'center'}
-                                    justifyContent={'space-between'}
-                                    width={'100%'}
-                                >
-                                    <Box
-                                        width={'25%'}
-                                        backgroundColor={'#253439'}
-                                        padding={'15px 0px'}
-                                        display={'flex'}
-                                        justifyContent={'center'}
-                                        alignItems={'center'}
-                                    >
-                                        <FaCog color='#fff' size={'30px'} />
-                                    </Box>
-                                    <Box
-                                        width={'70%'}
-                                    >
-                                        <Text
-                                            value={resumeEditor?.resumeData?.skills?.heading}
-                                            placeholder="SKILL"
-                                            customclass={`${styles.profileTitle}`}
-                                            path={"skills.heading"}
-                                            editable={false}
+                                <ImageSelector
+                                    minWidth="220px"
+                                    maxWidth="220px"
+                                    maxHeight="220px"
+                                    minHeight="220px"
+                                />
+                            </Box>
+                            <Box
+                                width={'70%'}
+                                display={'flex'}
+                                justifyContent={'center'}
+                                alignItems={'center'}
+                            >
+                                <Contact
+                                    phone={true}
+                                    email={true}
+                                    linkedinURL={true}
+                                    website={true}
+                                    circleIcon={true}
+                                    circleBg="#fff"
+                                    circleSize="28px"
+                                    iconColor="#423E3A"
+                                    margin={'5px 0px 0px 0px'}
+                                    style={styles.profileText}
+                                />
+                            </Box>
+                        </Box>
+                        <Box
+                            width={'100%'}
+                            display={'flex'}
+                            justifyContent={'space-between'}
+                            marginTop={'10px'}
+                        >
+                            {/* left contaiiner */}
+                            <Box
+                                width={'40%'}
+                                backgroundColor={'#CEB99E'}
+                                padding={'20px 15px 0px 15px'}
+                                borderRadius={'15px 15px'}
+                            >
+                                {/* _____________ About me _____________ */}
+                                <Heading
+                                    title={'ABOUT ME'}
+                                    color="#253439"
+                                    fontSize={'20px'}
+                                    fontWeight={700}
+                                    circleSize="48px"
+                                    circleBg="#253439"
+                                    circleIconHeading={true}
+                                    icon={(props) => (
+                                        <FaUserAlt
+                                            {...props}
+                                            size={22}
+                                            color={'#fff'}
                                         />
-                                    </Box>
-                                </Box>
-                                <Underline
-                                    height='0.1em'
-                                    width='100%'
-                                    bgColor='#253439'
+                                    )}
                                 />
-                            </Box>
-
-                            {/* skill description */}
-                            <Box
-                                margin={'20px 0px'}
-                            >
-                                {resumeEditor?.resumeData?.skills?.visible && (
+                                <About
+                                    minW="100%"
+                                    maxW="100%"
+                                    aboutStyle={Classes.aboutText}
+                                    textColor="#000000"
+                                    fontSize="15px"
+                                    fontWeight={600}
+                                    margin={'5px 10px 30px 10px'}
+                                />
+                                {/* _____________ Skill _____________ */}
+                                {resumeData?.skills?.visible && (
                                     <>
-                                        <DigitalSkill
-                                            data={
-                                                resumeEditor?.resumeData?.skills?.items?.length
-                                                    ? [...resumeEditor?.resumeData?.skills?.items]
-                                                    : [...sampleData?.data?.skills?.items]
-                                            }
-                                            color={resumeEditor?.color}
-                                            updater={resumeEditor?.updater}
+                                        <Box
+                                            mt={5}
+                                            display={'flex'}
+                                            justifyContent={'space-between'}
+                                        >
+                                            <Heading
+                                                title={'SKILLS'}
+                                                onSideSectionShow={() =>
+                                                    setShow({ ...show, skills: true })
+                                                }
+                                                color="#253439"
+                                                fontSize={'20px'}
+                                                fontWeight={700}
+                                                circleSize="48px"
+                                                circleBg="#253439"
+                                                circleIconHeading={true}
+                                                icon={(props) => (
+                                                    <FaSignLanguage
+                                                        {...props}
+                                                        size={22}
+                                                        color={'#fff'}
+                                                    />
+                                                )}
+                                            />
+                                            {show.skills && (
+                                                <SectionSideMenu
+                                                    onHide={() => setShow({ ...show, skills: false })}
+                                                    bg="#253439"
+                                                    iconColor={'#fff'}
+                                                    onDelete={SKILL}
+                                                />
+                                            )}
+                                        </Box>
+                                        <Skill
+                                            skillStyle={styles.skillText}
+                                            progressBar={true}
+                                            strokeWidth="2"
+                                            lineStyle={styles.line}
+                                            strokeColor="#000000"
+                                            trailColor="#fff"
+                                            percentageStyle={styles.percent}
+                                            parentContainerStyle={styles.rightContainerWork}
+                                        />
+                                    </>
+                                )}
+                                {/* _____________ Interst _____________ */}
+                                {resumeData?.hobbies?.visible && (
+                                    <>
+                                        <Box
+                                            mt={5}
+                                            display={'flex'}
+                                            justifyContent={'space-between'}
+                                        >
+                                            <Heading
+                                                title="INTEREST"
+                                                color="#253439"
+                                                fontSize={'20px'}
+                                                fontWeight={700}
+                                                circleSize="48px"
+                                                circleBg="#253439"
+                                                circleIconHeading={true}
+                                                icon={(props) => (
+                                                    <FaBookOpen
+                                                        {...props}
+                                                        size={22}
+                                                        color={'#fff'}
+                                                    />
+                                                )}
+                                                onSideSectionShow={() =>
+                                                    setShow({ ...show, interest: true })
+                                                }
+                                            />
+                                            {show.interest && (
+                                                <SectionSideMenu
+                                                    bg="#253439"
+                                                    iconColor={'#fff'}
+                                                    onHide={() => setShow({ ...show, interest: false })}
+                                                    onDelete={INTEREST}
+                                                />
+                                            )}
+                                        </Box>
+                                        {/* Interest Component  */}
+                                        <Interest
+                                            interestStyle={styles.skillText}
+                                            parentContainerStyle={styles.rightContainerWork}
+                                        />
+                                    </>
+                                )}
+                                {/* _____________ Languages _____________ */}
+                                {resumeData?.languages?.visible && (
+                                    <>
+                                        <Box
+                                            mt={5}
+                                            display={'flex'}
+                                            justifyContent={'space-between'}
+                                        >
+                                            <Heading
+                                                title="LANGUAGES"
+                                                color="#253439"
+                                                fontSize={'20px'}
+                                                fontWeight={700}
+                                                circleSize="48px"
+                                                circleBg="#253439"
+                                                circleIconHeading={true}
+                                                icon={(props) => (
+                                                    <IoLanguageOutline
+                                                        {...props}
+                                                        size={22}
+                                                        color={'#fff'}
+                                                    />
+                                                )}
+                                                onSideSectionShow={() =>
+                                                    setShow({ ...show, languages: true })
+                                                }
+                                            />
+                                            {show.languages && (
+                                                <SectionSideMenu
+                                                    bg="#253439"
+                                                    iconColor={'#fff'}
+                                                    onHide={() => setShow({ ...show, languages: false })}
+                                                    onDelete={LANGUAGES}
+                                                />
+                                            )}
+                                        </Box>
+                                        {/* Language Component */}
+                                        <Language
+                                            langStyle={styles.skillText}
+                                            langContainerStyle={styles.rightContainerWork}
                                         />
                                     </>
                                 )}
                             </Box>
-
-                            {/* hobbies */}
-                            {/* title */}
+                            {/* right container */}
                             <Box
-                                marginTop={'20px'}
+                                width={'55%'}
+                                padding={'20px 15px 0px 15px'}
                             >
-                                <Box
-                                    display={'flex'}
-                                    alignItems={'center'}
-                                    justifyContent={'space-between'}
-                                    width={'100%'}
-                                >
-                                    <Box
-                                        width={'25%'}
-                                        backgroundColor={'#253439'}
-                                        padding={'15px 0px'}
-                                        display={'flex'}
-                                        justifyContent={'center'}
-                                        alignItems={'center'}
-                                    >
-                                        <FaBookOpen color='#fff' size={'30px'} />
-                                    </Box>
-                                    <Box
-                                        width={'70%'}
-                                    >
-                                        <Text
-                                            value={resumeEditor?.resumeData?.hobbies?.heading}
-                                            placeholder="HOBBIES"
-                                            customclass={`${styles.profileTitle}`}
-                                            path={"hobbies.heading"}
-                                            editable={false}
-                                        />
-                                    </Box>
-                                </Box>
-                                <Underline
-                                    height='0.1em'
-                                    width='100%'
-                                    bgColor='#253439'
-                                />
-                            </Box>
-
-                            {/* hobbies description */}
-                            <Box
-                                margin={'20px 0px'}
-                            >
-                                {resumeEditor?.resumeData?.hobbies?.visible && (
+                                {/* _____________ Work _____________ */}
+                                {resumeData?.work?.visible && (
                                     <>
-                                        <DigitalHobbies
-                                            data={
-                                                resumeEditor?.resumeData?.hobbies?.items?.length
-                                                    ? [...resumeEditor?.resumeData?.hobbies?.items]
-                                                    : [...sampleData?.data?.hobbies?.items]
-                                            }
-                                            color={resumeEditor?.color}
-                                            updater={resumeEditor?.updater}
+                                        <Box
+                                            display={'flex'}
+                                            justifyContent={'space-between'}
+                                        >
+                                            <Heading
+                                                title="WORK EXPERIENCE"
+                                                color="#253439"
+                                                fontSize={'20px'}
+                                                fontWeight={700}
+                                                circleSize="48px"
+                                                circleBg="#253439"
+                                                circleIconHeading={true}
+                                                icon={(props) => (
+                                                    <MdCastForEducation
+                                                        {...props}
+                                                        size={22}
+                                                        color={'#fff'}
+                                                    />
+                                                )}
+                                                onSideSectionShow={() => setShow({ ...show, work: true })}
+                                            />
+                                            {show.work && (
+                                                <SectionSideMenu
+                                                    onHide={() => setShow({ ...show, work: false })}
+                                                    bg="#253439"
+                                                    iconColor={'#fff'}
+                                                    onDelete={WORK}
+                                                />
+                                            )}
+                                        </Box>
+                                        {/* _____________ Work Experience _____________ */}
+                                        <WorkExperience
+                                            company={true}
+                                            position={true}
+                                            date={true}
+                                            summary={true}
+                                            companyStyle={Classes.company}
+                                            positionStyle={Classes.programText}
+                                            dateStyle={Classes.date}
+                                            summaryStyle={Classes.description}
+                                            parentContainerStyle={styles.rightContainerWork}
+                                            textColor="#000000"
+                                        />
+                                    </>
+                                )}
+                                {/* _____________ Education _____________ */}
+                                {resumeData?.education?.visible && (
+                                    <>
+                                        <Box
+                                            mt={5}
+                                            display={'flex'}
+                                            justifyContent={'space-between'}
+                                        >
+                                            <Heading
+                                                title="EDUCATION"
+                                                color="#253439"
+                                                fontSize={'20px'}
+                                                fontWeight={700}
+                                                circleSize="48px"
+                                                circleBg="#253439"
+                                                circleIconHeading={true}
+                                                icon={(props) => (
+                                                    <MdCastForEducation
+                                                        {...props}
+                                                        size={22}
+                                                        color={'#fff'}
+                                                    />
+                                                )}
+                                                onSideSectionShow={() =>
+                                                    setShow({ ...show, education: true })
+                                                }
+                                            />
+                                            {show.education && (
+                                                <SectionSideMenu
+                                                    onHide={() => setShow({ ...show, education: false })}
+                                                    bg="#253439"
+                                                    iconColor={'#fff'}
+                                                    onDelete={EDUCATION}
+                                                />
+                                            )}
+                                        </Box>
+                                        <Education
+                                            degree={true}
+                                            institution={true}
+                                            date={true}
+                                            summary={true}
+                                            parentContainerStyle={styles.rightContainerWork}
+                                            institutionStyle={Classes.company}
+                                            degreeStyle={Classes.programText}
+                                            dateStyle={Classes.date}
+                                            summaryStyle={Classes.description}
+                                            degree_placeholder="Study Program"
+                                            textColor="#000000"
                                         />
                                     </>
                                 )}
                             </Box>
                         </Box>
                     </Box>
-
-                    {/* right container */}
-                    <Box
-                        width={'60%'}
-                    >
-                        {/* education */}
-                        {/* title */}
-                        <Box>
-                            <Box
-                                display={'flex'}
-                                alignItems={'center'}
-                                justifyContent={'space-between'}
-                                width={'100%'}
-                            >
-                                <Box
-                                    width={'10%'}
-                                    backgroundColor={'#253439'}
-                                    padding={'15px 0px'}
-                                    display={'flex'}
-                                    justifyContent={'center'}
-                                    alignItems={'center'}
-                                >
-                                    <FaBookOpen color='#fff' size={'30px'} />
-                                </Box>
-                                <Box
-                                    width={'88%'}
-                                >
-                                    <Text
-                                        value={resumeEditor?.resumeData?.education?.heading}
-                                        placeholder="EDUCATION"
-                                        customclass={`${styles.profileTitle}`}
-                                        path={"education.heading"}
-                                        editable={false}
-                                    />
-                                </Box>
-                            </Box>
-                            <Underline
-                                height='0.2em'
-                                width='100%'
-                                bgColor='#253439'
-                            />
-                        </Box>
-
-                        {/* education description */}
-                        <Box
-                            margin={'20px 0px'}
-                        >
-                            {resumeEditor?.resumeData?.education?.visible && (
-                                <>
-                                    <DigitalEducation
-                                        data={
-                                            resumeEditor?.resumeData?.education?.items?.length
-                                                ? [...resumeEditor?.resumeData?.education?.items]
-                                                : [...sampleData?.data?.education?.items]
-                                        }
-                                        color={resumeEditor?.color}
-                                        updater={resumeEditor?.updater}
-                                    />
-                                </>
-                            )}
-                        </Box>
-
-
-                        {/* experience */}
-                        {/* title */}
-                        <Box>
-                            <Box
-                                display={'flex'}
-                                alignItems={'center'}
-                                justifyContent={'space-between'}
-                                width={'100%'}
-                            >
-                                <Box
-                                    width={'10%'}
-                                    backgroundColor={'#253439'}
-                                    padding={'15px 0px'}
-                                    display={'flex'}
-                                    justifyContent={'center'}
-                                    alignItems={'center'}
-                                >
-                                    <FaRegAddressBook color='#fff' size={'30px'} />
-                                </Box>
-                                <Box
-                                    width={'88%'}
-                                >
-                                    <Text
-                                        value={resumeEditor?.resumeData?.experience?.heading}
-                                        placeholder="WORK EXPERIENCE"
-                                        customclass={`${styles.profileTitle}`}
-                                        path={"experience.heading"}
-                                        editable={false}
-                                    />
-                                </Box>
-                            </Box>
-                            <Underline
-                                height='0.2em'
-                                width='100%'
-                                bgColor='#253439'
-                            />
-                        </Box>
-
-                        {/* experience description */}
-                        <Box
-                            margin={'20px 0px'}
-                        >
-                            {resumeEditor?.resumeData?.work?.visible && (
-                                <>
-                                    <DigitalExperience
-                                        data={
-                                            resumeEditor?.resumeData?.work?.items?.length
-                                                ? [...resumeEditor?.resumeData?.work?.items]
-                                                : [...sampleData?.data?.work?.items]
-                                        }
-                                        color={resumeEditor?.color}
-                                        updater={resumeEditor?.updater}
-                                    />
-                                </>
-                            )}
-                        </Box>
-                    </Box>
-                </Box>
-            </Container>
+                </Flex>
+            </TempLayout>
         </>
     )
 }
