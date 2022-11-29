@@ -1,4 +1,4 @@
-import { Box, Button } from '@chakra-ui/react';
+import { Box, Button, Image } from '@chakra-ui/react';
 import React from 'react';
 
 import {
@@ -23,22 +23,29 @@ export default function TempNavbar({
   return (
     <Box
       display="flex"
-      flexDir="column"
-      justifyContent="center"
-      alignItems="center"
+      h="50px"
+      w="full"
+      zIndex="999"
+      pos="fixed"
+      justifyContent={'center'}
     >
+      <Image
+        src="/bisResumelogo.svg"
+        w={{ base: '180px', lg: '200px' }}
+        h="auto"
+        position={'absolute'}
+        left="0px"
+        top="0px"
+        alt="Image not Found"
+      />
       <Box
+        w="500px"
         display="flex"
-        alignItems="center"
+        bgColor="#006772"
+        borderRadius={'100px'}
         justifyContent="center"
-        bgColor="#313C4E"
-        h="50px"
-        borderRadius={['0px', '100px', '100px']}
-        mt={['5%', '7%', '10%', ,]}
-        minW={{ base: 'full', md: '600px' }}
-        maxW={{ base: 'full', md: '600px' }}
-        position={[, , 'fixed']}
-        zIndex="999"
+        alignSelf={'center'}
+        py={1}
       >
         <Button
           bgColor="transparent"
@@ -79,7 +86,6 @@ export default function TempNavbar({
           interest={interest}
           certificate={certificate}
         />
-
         <Button
           bgColor="transparent"
           color="white"
@@ -95,6 +101,7 @@ export default function TempNavbar({
           Setting
         </Button>
       </Box>
+
       {/* <Box w="20%" h="40px" bgColor="#313C4E" borderRadius="100px" mt="5px">
         <HamburgerIcon color="whiteAlpha.800" />
      
