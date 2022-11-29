@@ -44,7 +44,10 @@ const FinancialExpert = () => {
     <TempLayout education={true} skills={true} work={true} projects={true}>
       <div className={style.main}>
         <Link href={"/templates"}>
-          <div style={{ position: "fixed", top: "30px", right: "30px" }}>
+          <div
+            style={{ position: "fixed", top: "70px", right: "30px" }}
+            // marginTop={["10px", "10px", "0px", "0px", "0px", "0px"]}
+          >
             <Tooltip title="Change Template" arrow distance={20}>
               <div className={style.swap}>
                 <img src="/icons/swap.png" />
