@@ -1,6 +1,6 @@
-import { Box, Button, Circle, Icon, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Circle, Icon, Text, Image } from '@chakra-ui/react';
 import React from 'react';
-
+import Logo from '../../../public/bisResumeLogo.svg';
 import {
   MoonIcon,
   EditIcon,
@@ -43,7 +43,7 @@ export default function TempNavbar({
       justifyContent={'center'}
     >
       <Image
-        src="/bisResumelogo.svg"
+        src={Logo ? Logo : '/bisResumeLogo.svg'}
         w={'200px'}
         h="auto"
         position={'absolute'}
@@ -51,6 +51,17 @@ export default function TempNavbar({
         top="0px"
         alt="Image not Found"
       />
+      {/* <Image
+        src={Logo}
+        alt="Image not Found"
+        style={{
+          width: '200px',
+          height: 'auto',
+          position: 'absolute',
+          left: '20px',
+          top: '0px',
+        }}
+      /> */}
       <Box
         w="500px"
         display="flex"
