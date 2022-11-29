@@ -2,20 +2,9 @@ import React, { useEffect } from "react";
 import { Box, Text, Button, Image, calc } from "@chakra-ui/react";
 import YouTube from "react-youtube";
 import Link from "next/link";
-import {
-  PhoneIcon,
-  AddIcon,
-  WarningIcon,
-  ArrowRightIcon,
-  ArrowForwardIcon,
-} from "@chakra-ui/icons";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 const BlogPost = () => {
-  useEffect(() => {
-    AOS.init();
-  });
   const opts = {
     height: "390",
     width: "800",
@@ -30,15 +19,7 @@ const BlogPost = () => {
           <Box className="blog-post__content-main">
             <Box className="blog-post__content-main-wrapper">
               <YouTube videoId="sTnm5jvjgjM" opts={opts} />
-              <Text
-                fontSize={["26px", "26px", "32px"]}
-                lineHeight={["28px", "28px", "34px"]}
-                marginBottom={["12px", "12px", "16px", "16px", "16px"]}
-                fontWeight={["", "", "", "", "600", "600"]}
-                marginTop={["", "", "", "48px", "48px"]}
-              >
-                Resume Samples
-              </Text>
+              <Text className={"headline"}>Resume Samples</Text>
               <p>
                 A great resume is a key that opens doors to a better future.
                 Exceptional formatting is one way to stand out, but precise,
@@ -72,15 +53,7 @@ const BlogPost = () => {
                 ahead and get started! Search our ever-expanding collection of
                 resume samples and templates to level up your career in no time.
               </p>
-              <Text
-                fontSize={["26px", "26px", "32px"]}
-                lineHeight={["28px", "28px", "34px"]}
-                marginBottom={["12px", "12px", "16px", "16px", "16px"]}
-                fontWeight={["", "", "", "", "600", "600"]}
-                marginTop={["", "", "", "48px", "48px"]}
-              >
-                Examples to get you hired fast
-              </Text>
+              <Text className={"headline"}>Examples to get you hired fast</Text>
               <p>
                 Sometimes, a resume just won’t cut it. That’s why we’ve got you
                 covered when it comes to creating a flawless Curriculum Vitae
@@ -129,14 +102,7 @@ const BlogPost = () => {
                     }}
                   >
                     <Box className={"compare-resumes__mark"}>
-                      <Box
-                        className={"compare-resumes__mark-icon"}
-                        style={{
-                          backgroundImage: `url(${"/correct.jpg"})`,
-                          backgroundRepeat: false,
-                          backgroundSize: "cover",
-                        }}
-                      ></Box>
+                      <Box className={"compare-resumes__mark-icon"}></Box>
                     </Box>
                   </a>
                   <Box
@@ -151,9 +117,9 @@ const BlogPost = () => {
                       <Box className="compare-resumes__mark-icon"></Box>
                     </Box>
                   </Box>
-                  <Button className="compare-resumes__create-resume button">
+                  <Box className="compare-resumes__create-resume button">
                     Use This Template{" "}
-                  </Button>
+                  </Box>
                 </Box>
                 :&nbsp;
               </Box>
@@ -167,7 +133,7 @@ const BlogPost = () => {
                   className="post-banner-cta__image is-image-loaded"
                   data-lazy-bg="/FashTemp4.png"
                   style={{
-                    backgroundImage: `url(${"/FashTemp4.png"})`,
+                    backgroundImage: `url(${"/planet.webp"})`,
                     backgroundSize: "cover",
                     backgroundRepeat: false,
                   }}
