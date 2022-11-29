@@ -1,119 +1,36 @@
-/* ------------------------------------Editable container styles ----------------------------------- */
-/* // @import '../../theme/colors'; */
-
-.fashionContentEditableContainer {
-  padding: 4px 2px;
-  white-space: pre-line;
-  /*  border: 1px dashed #fff; */
-  border-radius: 4px;
-  outline: 0;
-}
-.fashionContentEditableContainer:empty::before {
-  content: attr(data-placeholder);
-  opacity: 1;
-}
-
-.fashionContentEditableContainer:focus {
-  /*  border: 1px dashed #a1a1a1; */
-  border-radius: 4px;
-  background-color: #efefef;
-  outline: 0;
-}
-
-.fashionContentEditableContainer:active {
-  /*  border: 1px dashed #a1a1a1; */
-  border-radius: 4px;
-  outline: 0;
-}
-
-.fashionContentEditableContainer:visited {
-  /*  border: 1px dashed #a1a1a1; */
-  border-radius: 4px;
-  outline: 0;
-}
-
-/* --------------------------------------- Editable container styles end ------------------------------------- */
-
-
-.firstNameStyle{
-    background-color: #FDC726 !important;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 40px;
-    color: #000000 !important;
-    margin: 30px 0px 20px 0px;
-    text-align: center;
-}
-.lastNameStyle{
-    background-color: #FDC726 !important;
-    color: #000000 !important;
-    font-weight: 600;
-    font-size: 22px !important;
-    line-height: 25px;
-    text-align: center;
-}
-.aboutHeadingTitle{
-    font-size: 26px !important;
-    font-weight: 700;
-    margin-left: 20px;
-    color: #000000 !important;
-}
-.languageHeading{
-  text-transform: uppercase;
-}
-.aboutFbody{
-    font-size: 1.1em !important;
-    color: #000000 !important;
-    background-color: #FDC726 !important;
-    line-height: 25px;
-    font-weight: 600;
-    text-align: justify;
-    margin: 15px 0px 10px 0px;
-}
-.languageBodyHeadings{
-    font-size: 14px !important;
-    color: #000000 !important;
-    font-weight: 700;
-    margin: 10px 0px 5px 0px;
-    background-color: #FDC726 !important;
-    line-height: 20px;
-}
-.fashionContectStyle{
-    margin-left: 20px;
-    color: #e9ecef !important;
-    font-size: 14px !important;
-    background-color: #0F0F0F !important;
-    line-height: 20px;
-}
-.experienceSumHeading{
-    font-size: 26px;
-    margin-left: 20px;
-    color: #fff !important;
-    background-color: #0F0F0F !important;
-}
-.expertiseBodyStyle{
-    color: #e9ecef !important;
-    font-size: 14px !important;
-    background-color: #0F0F0F !important;
-    line-height: 20px;
-}
-.editContectCollege{
-  color: #e9ecef !important;
-  background-color: #0F0F0F !important;
-}
-.editContentHeadings{
-  font-size: 1.3em;
-  margin-top: 4px;
+.nameStyle {
+  font-size: 2.8em;
   font-weight: 500;
-  color: #fff !important;
+  color: #000000 !important;
 }
-.editContentsBody{
-  color: #e9ecef !important;
-  background-color: #0F0F0F !important;
-  font-size: 13px !important;
-  line-height: 20px;
+
+.profileSubTitle {
+  font-size: 1.6em;
+  font-weight: 500;
+  color: #000000 !important;
 }
-.managerTemplateContentRow {
-  flex-direction: row;
-  display: flex;
+
+.rightContainerWork {
+  padding: 5px 35px 20px 35px;
+}
+
+.workDiv {
+  padding: 0px 40px 20px 40px;
+}
+
+.skillText {
+  color: #000000;
+  font-weight: 600
+}
+
+.line {
+  height: 10px;
+  width: 100px;
+  border-radius: 4px;
+  margin-top: 10px !important;
+}
+
+.percent {
+  color: #000000;
+  font-size: 14px !important;
 }
