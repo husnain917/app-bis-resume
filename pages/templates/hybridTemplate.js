@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Link } from '@chakra-ui/react';
+import { Box, Flex, HStack } from '@chakra-ui/react';
 import { MdCastForEducation } from 'react-icons/md';
 import { BsFillLayersFill } from 'react-icons/bs';
 import { GiSkills, GiOrganigram } from 'react-icons/gi';
@@ -6,10 +6,7 @@ import { IoLanguageOutline } from 'react-icons/io5';
 import { GoProject } from 'react-icons/go';
 import { TbCertificate } from 'react-icons/tb';
 import { FaHorseHead } from 'react-icons/fa';
-import style from '../../styles/templates/template1.module.scss';
 import Classes from '../../styles/templates/hybridTemplate.module.css';
-import { Tooltip } from 'react-tippy';
-import ImageSection from '../../src/components/commonSection/ImageSection';
 import Name from '../../src/components/commonSection/Name';
 import Profession from '../../src/components/commonSection/Profession';
 import About from '../../src/components/commonSection/About';
@@ -38,9 +35,7 @@ import {
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../src/components/imageSelector';
-import TempNavbar from '../../src/components/tempNav/TempNavbar';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-
 const HybridTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
@@ -50,7 +45,7 @@ const HybridTemplate = () => {
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     //Template Layout for Template Navbar
     <>
-      <div className={style.main} style={{ overflow: 'auto' }}>
+      <div style={{ overflow: 'auto', position: 'relative' }}>
         <TempLayout
           education={true}
           skills={true}

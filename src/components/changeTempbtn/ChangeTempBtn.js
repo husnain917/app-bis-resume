@@ -6,10 +6,15 @@ const ChangeTempBtn = () => {
   return (
     <Link href={'/templates'}>
       <div
-        style={{ position: 'fixed', top: '80px', left: '50px', zIndex: '9999' }}
+        style={{
+          position: 'fixed',
+          top: '100px',
+          left: '50px',
+          zIndex: '9999',
+        }}
       >
         <Tooltip title="Change Template" arrow distance={20}>
-          <div className={style.swap}>
+          <div className={style.swap} style={{ background: '#006772' }}>
             <img src="/icons/swap.png" />
           </div>
         </Tooltip>

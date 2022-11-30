@@ -176,7 +176,7 @@ export default function TempNavbar({
             <Text
               fontSize={'16px'}
               _hover={{
-                color: '#00c8aa',
+                color: '#006772',
                 transition: 'all .2s  ease-in',
               }}
               cursor="pointer"
