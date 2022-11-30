@@ -1,14 +1,25 @@
-import { Box, Button, Circle, Icon, Text, Image } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Circle,
+  Icon,
+  Text,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+  DrawerFooter,
+  useDisclosure,
+} from '@chakra-ui/react';
 import React from 'react';
-import Logo from '../../../public/bisResumeLogo.svg';
 import {
   MoonIcon,
   EditIcon,
   SettingsIcon,
   HamburgerIcon,
 } from '@chakra-ui/icons';
-import { SlArrowDown } from 'react-icons/sl';
-import { SlArrowUp } from 'react-icons/sl';
 import {
   FaFacebookF,
   FaInstagram,
@@ -19,7 +30,7 @@ import LayoutModal from './LayoutModal';
 import { useState } from 'react';
 import { MobileNavItem } from '../navbar/Navbar';
 import { NAV_ITEMS } from '../constant/navbarLinks/NavbarLinks';
-
+import Link from 'next/link';
 export default function TempNavbar({
   work,
   education,
@@ -31,44 +42,33 @@ export default function TempNavbar({
   interest,
   certificate,
 }) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
   const [showNav, setShowNav] = useState(false);
   return (
     <Box
       display={'flex'}
-      h="50px"
+      h="auto"
       minW={{ base: '1000px', md: '100vw' }}
       mt={1}
       zIndex="999"
       pos={{ base: 'relative', md: 'fixed' }}
       justifyContent={'center'}
     >
-      {/* <Image
-        src={Logo ? Logo : '/bisResumeLogo.svg'}
-        w={'200px'}
-        h="auto"
-        position={'absolute'}
-        left="20px"
-        top="0px"
-        alt="Image not Found"
-      /> */}
-      <img
-        src={'https://www.linkpicture.com/q/bisResumeLogo.svg'}
-        width="200px"
-        height={'auto'}
-        style={{ position: 'absolute', left: '20px', top: '0px' }}
-        alt="Image not Found"
-      />
-      {/* <Image
-        src={Logo}
-        alt="Image not Found"
-        style={{
-          width: '200px',
-          height: 'auto',
-          position: 'absolute',
-          left: '20px',
-          top: '0px',
-        }}
-      /> */}
+      <Link href={'/'}>
+        <img
+          src={'https://www.linkpicture.com/q/bisResumeLogo.svg'}
+          width="200px"
+          height={'auto'}
+          style={{
+            position: 'absolute',
+            left: '20px',
+            top: '0px',
+            cursor: 'pointer',
+          }}
+          alt="Image not Found"
+        />
+      </Link>
       <Box
         w="500px"
         display="flex"
@@ -84,7 +84,7 @@ export default function TempNavbar({
           _hover={{
             backgroundColor: 'transparent',
 
-            color: '#1C6672',
+            color: '#313C4E',
             transition: '0.4s',
           }}
         >
@@ -98,7 +98,7 @@ export default function TempNavbar({
           _hover={{
             backgroundColor: 'transparent',
 
-            color: '#1C6672',
+            color: '#313C4E',
             transition: '0.4s',
           }}
         >
@@ -123,7 +123,7 @@ export default function TempNavbar({
           _hover={{
             backgroundColor: 'transparent',
 
-            color: '#1C6672',
+            color: '#313C4E',
             transition: '0.4s',
           }}
         >
@@ -133,52 +133,46 @@ export default function TempNavbar({
       </Box>
 
       <Box position={'absolute'} right={{ base: '10px', lg: '25px' }}>
-        {showNav ? (
-          <Box
-            px={4}
-            bg="white"
-            minW="300px"
-            maxW={'300px'}
-            position="relative"
-            pb={5}
-            pt={'50px'}
-          >
-            <Box
-              display={'flex'}
-              flexDir="column"
-              cursor={'pointer'}
-              h={'39px'}
-              position="absolute"
-              top={'10px'}
-              right="10px"
-            >
-              <Icon
-                as={SlArrowDown}
-                w={5}
-                h={5}
-                mb="-5px"
-                _hover={{
-                  marginBottom: '-0px',
-                  transition: 'all .3s  ease-out',
+        <Icon
+          as={HamburgerIcon}
+          onClick={onOpen}
+          h="30px"
+          w="30px"
+          cursor="pointer"
+          color={'#006772'}
+          mr={{ base: '0px', md: '10px', lg: '0px' }}
+        />
+      </Box>
+      <Drawer
+        isOpen={isOpen}
+        placement="right"
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>
+            <Link href={'/'}>
+              <img
+                src={'https://www.linkpicture.com/q/bisResumeLogo.svg'}
+                width="200px"
+                height={'auto'}
+                style={{
+                  cursor: 'pointer',
+                  marginLeft: '-30px',
+                  marginBottom: '30px',
+                  marginTop: '30px',
                 }}
-                onClick={() => setShowNav(false)}
+                alt="Image not Found"
               />
-              <Icon
-                as={SlArrowUp}
-                w={5}
-                h={5}
-                mt="-5px"
-                _hover={{
-                  marginTop: '-0px',
-                  transition: 'all .3s  ease-out',
-                }}
-                onClick={() => setShowNav(false)}
-              />
-            </Box>
+            </Link>
+          </DrawerHeader>
+          <DrawerBody>
             {NAV_ITEMS.map((navItem) => (
               <MobileNavItem key={navItem.label} {...navItem} />
             ))}
-            <Box w="full" bg="gray" h="1px" mb="10px"></Box>
+            <Box w="full" bg="gray" h="1px" mb="10px" mt="10px"></Box>
             <Text
               fontSize={'16px'}
               _hover={{
@@ -232,21 +226,11 @@ export default function TempNavbar({
                 <FaInstagram color="#fff" size={'20px'} />
               </Circle>
             </Box>
-          </Box>
-        ) : (
-          <Icon
-            as={HamburgerIcon}
-            onClick={() => setShowNav(true)}
-            h="30px"
-            w="30px"
-            cursor="pointer"
-          />
-        )}
-      </Box>
-      {/* <Box w="20%" h="40px" bgColor="#313C4E" borderRadius="100px" mt="5px">
-        <HamburgerIcon color="whiteAlpha.800" />
-     
-      </Box> */}
+          </DrawerBody>
+
+          <DrawerFooter></DrawerFooter>
+        </DrawerContent>
+      </Drawer>
     </Box>
   );
 }

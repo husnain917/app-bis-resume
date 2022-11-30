@@ -5,7 +5,9 @@ import style from '../../../styles/templates/template1.module.scss';
 const ChangeTempBtn = () => {
   return (
     <Link href={'/templates'}>
-      <div style={{ position: 'fixed', top: '80px', left: '50px' }}>
+      <div
+        style={{ position: 'fixed', top: '80px', left: '50px', zIndex: '9999' }}
+      >
         <Tooltip title="Change Template" arrow distance={20}>
           <div className={style.swap}>
             <img src="/icons/swap.png" />
