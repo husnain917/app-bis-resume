@@ -11,9 +11,11 @@ import {
 import TryResume from "../src/components/resumeExampleData/tryResume/tryResume";
 import BlogPost from "../src/components/resumeExampleData/blogPost/blogPost";
 import SelectResume from "../src/components/resumeExampleData/selectResume/SelectResume";
+import ChatButton from "../src/components/resumeExampleData/chatButton/chatButton";
 const ResumeExamples = () => {
   return (
     <Box>
+      <ChatButton />
       <Box bg="lightcyan" height={"auto"} width={"100wv"}>
         <WritingGuides />
       </Box>

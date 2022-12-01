@@ -287,3 +287,102 @@ export const popularData = [
     ],
   },
 ];
+
+export const sliderData = [
+  {
+    label: "Fashion Designer ",
+    src: "FashTemp5.png",
+    alt: "random from unsplash",
+    link: "/templates/fashionTemp5",
+  },
+  {
+    label: "FashTemplate4",
+    src: "FashTemp4.png",
+    alt: "random from unsplash",
+    link: "/templates/fashionTemp4",
+  },
+  {
+    label: "College Resume Template",
+    src: "CollegeTemp.png",
+    alt: "random from unsplash",
+    link: "/templates/CollegeTemp",
+  },
+  {
+    label: "Student Resume Template",
+    src: "studentTemp.png",
+    alt: "random from unsplash",
+    link: "/templates/StudentTemplate",
+  },
+  {
+    label: "Graphic Designer 8",
+    src: "graphDes8.png",
+    alt: "random from unsplash",
+    link: "/templates/GraphicDesigner8",
+  },
+  {
+    label: "Designer Template",
+    src: "designerTemplate.PNG",
+    alt: "random from unsplash",
+    link: "/templates/designerTemplate",
+  },
+  {
+    label: "Software Engineer",
+    src: "softEngr.jpg",
+    alt: "random from unsplash",
+    link: "/templates/softEngineer/SoftEngineer",
+  },
+  {
+    label: "TechTemp.png",
+    src: "TechTemp.png",
+    alt: "random from unsplash",
+    link: "/templates/TechTemplate",
+  },
+  {
+    label: " Baby Resume",
+    src: "templateBaby.png",
+    alt: "random from unsplash",
+    link: "/templates/TemplateBabySitter",
+  },
+  {
+    label: "Flight Attendant Template",
+    src: "FlightAttendantTemplate.png",
+    alt: "random from unsplash",
+    link: "/templates/FlightAttendant1",
+  },
+  {
+    label: "Resume Digital Market",
+    src: "resumeMarket.png",
+    alt: "random from unsplash",
+    link: "/templates/templateMarket",
+  },
+  {
+    label: "Simple Template",
+    src: "simpleTemp.png",
+    alt: "random from unsplash",
+    link: "/templates/simpleTempDesign",
+  },
+  {
+    label: "Content Template",
+    src: "templateContent.png",
+    alt: "random from unsplash",
+    link: "/templates/TemplateContentCreater",
+  },
+  {
+    label: " Baby Resume",
+    src: "templateBaby.png",
+    alt: "random from unsplash",
+    link: "/templates/TemplateBabySitter",
+  },
+  {
+    label: "Flight Attendant Template",
+    src: "FlightAttendantTemplate.png",
+    alt: "random from unsplash",
+    link: "/templates/FlightAttendant1",
+  },
+  {
+    label: "Resume Digital Market",
+    src: "resumeMarket.png",
+    alt: "random from unsplash",
+    link: "/templates/templateMarket",
+  },
+];

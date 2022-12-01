@@ -303,7 +303,7 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
     position: absolute;
     width: 45.8%;
     border-radius: 6px;
-    background: var(--white);
+    background: white;
     background-size: cover;
     background-position: 50% 0;
     -webkit-box-shadow: 0 9px 15px rgb(100 100 123 / 7%);
@@ -317,7 +317,7 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
     position: absolute;
     width: 45.8%;
     border-radius: 6px;
-    background: var(--white);
+    background: white;
     background-size: cover;
     background-position: 50% 0;
     -webkit-box-shadow: 0 9px 15px rgb(100 100 123 / 7%);
@@ -331,7 +331,7 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
     position: absolute;
     width: 45.8%;
     border-radius: 6px;
-    background: var(--white);
+    background: white;
     background-size: cover;
     background-position: 50% 0;
     -webkit-box-shadow: 0 9px 15px rgb(100 100 123 / 7%);
@@ -393,7 +393,7 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 .post-banner-cta__main {
   min-height: 220px;
   border-radius: 6px 6px 0 0;
-  background-color: var(--beige-10);
+  background-color: #f3f1eb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,28 +499,28 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   background-size: cover;
 }
 .post-banner-cta__animation-frame:nth-child(1) {
-  background-image: url(/public/1stsvg.png);
+  background-image: url(/1stsvg.png);
   -webkit-animation: fly1 5s linear infinite;
   animation: fly1 5s linear infinite;
   -webkit-transition: left .7s ease;
   transition: left .7s ease;
 }
 .post-banner-cta__animation-frame:nth-child(2) {
-  background-image: url(/public/2ndsvg.png);
+  background-image: url(/2ndsvg.png);
   -webkit-animation: fly2 4s linear infinite;
   animation: fly2 4s linear infinite;
   -webkit-transition: left .6s ease;
   transition: left .6s ease;
 }
 .post-banner-cta__animation-frame:nth-child(3) {
-  background-image: url(/public/3rdsvg.png);
+  background-image: url(/3rdsvg.png);
   -webkit-animation: fly1 3s linear infinite;
   animation: fly1 3s linear infinite;
   -webkit-transition: left .3s ease;
   transition: left .3s ease;
 }
 .post-banner-cta__animation-frame:nth-child(4) {
-  background-image: url(/public/4thsvg.png);
+  background-image: url(/4thsvg.png);
   -webkit-animation: fly2 3s .5s linear infinite;
   animation: fly2 3s .5s linear infinite;
   -webkit-transition: left .4s ease;
@@ -671,13 +671,15 @@ button {
   box-shadow: 0 24px 60px rgb(186 200 227 / 20%), 0 16px 36px rgb(186 200 227 / 50%);
 }
 .blog-post__content .compare-resumes__mark {
-  width: 88px;
-  height: 88px;
+  width: 76px;
+  height: 76px;
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -44px 0 0 -44px;
   color: whitesmoke;
+  background-color: #eff2f9;
+  border-radius: 50%;
   opacity: 1;
   -webkit-transition: opacity .2s .4s ease;
   transition: opacity .2s .4s ease;
@@ -700,6 +702,60 @@ button {
   transform: scale(0);
   will-change: transform;
 }
+@media only screen and (max-width: 1023px){
+.resume-templates__content {
+    max-width: 100% !important;
+    width: 100%;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    margin: 0 !important;
+}
+}
+.resume-templates__content {
+  position: relative;
+  max-width: 384px;
+  margin-right: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: opacity .2s ease-in,-webkit-transform .2s ease-in;
+  transition: opacity .2s ease-in,-webkit-transform .2s ease-in;
+  transition: transform .2s ease-in,opacity .2s ease-in;
+  transition: transform .2s ease-in,opacity .2s ease-in,-webkit-transform .2s ease-in;
+}
+@media only screen and (max-width: 1023px){
+.resume-templates__trustpilot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+}
+@media only screen and (max-width: 1023px){
+.resume-templates__slider-arrow-container {
+    display: none;
+}
+}
 /* Compare mark resume icon */
 
 .blog-post__content .compare-resumes__view--intro .compare-resumes__mark-icon {
@@ -710,7 +766,7 @@ button {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('/public/correct.png') no-repeat center;
+  background: url(/correct.png) no-repeat center;
   background-size: 32px;
   top: 0;
   left: 0;
@@ -740,7 +796,7 @@ div {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: green;
+  background: white;
   border-radius: 50%;
   opacity: .2;
   -webkit-transform: scale(0);
@@ -759,7 +815,19 @@ div {
     opacity: 1;
     -webkit-transform: translateX(252px) translateY(48px);
     transform: translateX(252px) translateY(48px);
-    background-image: url(/public/DigitalMarketingTemp2.png);
+}
+
+@media only screen and (max-width: 1023px){
+.blog-post__content .compare-resumes__resume--bad {
+    -webkit-transform: translateX(167px) translateY(32px);
+    transform: translateX(167px) translateY(32px);
+}
+}
+@media only screen and (max-width: 767px){
+.blog-post__content .compare-resumes__resume--bad {
+    -webkit-transform: translateX(85px) translateY(24px);
+    transform: translateX(85px) translateY(24px);
+}
 }
 .blog-post__content .compare-resumes__create-resume {
   color: white;
@@ -1130,35 +1198,30 @@ p {
     transform: translateX(-50%);
 }
 }
-/* // SELECT RESUME // */
-.resume-templates__content {
-  position: relative;
-  max-width: 384px;
-  margin-right: 96px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-transition: opacity .2s ease-in,-webkit-transform .2s ease-in;
-  transition: opacity .2s ease-in,-webkit-transform .2s ease-in;
-  transition: transform .2s ease-in,opacity .2s ease-in;
-  transition: transform .2s ease-in,opacity .2s ease-in,-webkit-transform .2s ease-in;
+/* @media only screen and (max-width: 767px){
+.blog-post__content .compare-resumes__resume {
+  width: 150px;
+  height: 212px;
+  margin-left: -75px;
 }
+}
+@media only screen and (max-width: 1023px){
+.blog-post__content .compare-resumes__resume {
+  width: 294px;
+  height: 416px;
+  margin-left: -147px;
+}
+} */
+
+/* // SELECT RESUME // */
+
 .resume-templates__slider-arrow-container {
   position: absolute;
   right: -112px;
   width: 36px;
   height: 24px;
   top: calc(50% - 12px);
-  color: var(--white);
+  color: white;
   cursor: pointer;
   z-index: 1;
   -webkit-transition: opacity .2s ease,-webkit-transform .2s ease;
@@ -1207,5 +1270,164 @@ audio, canvas, iframe, img, svg, video {
   height: 32px;
   background-size: contain;
   margin-right: 2px;
-  background-image: url(/public/stars1-removebg-preview.png);
+  background-image: url(/stars1.png);
 }
+.resume-templates__slider-wrapper {
+  position: absolute;
+  left: 0;
+  top: 86px;
+  bottom: 74px;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.resume-templates__slider-container {
+  position: relative;
+  max-width: 1372px;
+}
+.resume-templates__slider-button--left {
+  left: 64px;
+}
+
+.resume-templates__slider-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #1a91f0;
+  color: white;
+  z-index: 2;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  cursor: pointer;
+  will-change: transform;
+  -webkit-transition: opacity .25s ease-in,background-color .15s ease,-webkit-transform .25s ease-in;
+  transition: opacity .25s ease-in,background-color .15s ease,-webkit-transform .25s ease-in;
+  transition: transform .25s ease-in,opacity .25s ease-in,background-color .15s ease;
+  transition: transform .25s ease-in,opacity .25s ease-in,background-color .15s ease,-webkit-transform .25s ease-in;
+}
+.resume-templates__slider-button--right {
+  right: 64px;
+}
+
+@media only screen and (max-width: 1023px){
+.resume-templates__slider-wrapper {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    width: 100%;
+}
+}
+
+
+
+/* Chat Button Styling
+.BeaconFabButtonFrame {
+  border: none;
+  bottom: 40px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 40px;
+  top: auto;
+  transition: box-shadow 250ms ease, opacity 0.4s ease, scale 1000ms ease-in-out,
+    transform 0.2s ease-in-out
+}
+
+.BeaconFabButtonFrame:active {
+    box-shadow: none;
+  }
+
+.BeaconFabButtonFrame iframe {
+    border: none;
+    height: 100%;
+    width: 100%;
+    color-scheme: light !important;
+  }
+
+  @media only screen and (max-height: 740px) {
+
+.BeaconFabButtonFrame {
+    bottom: 10px;
+    right: 20px
+}
+  }
+
+@supports (--css: variables) {
+  .BeaconFabButtonFrame.has-pulse-animation::before {
+    -webkit-animation: puff-out-center 2s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+            animation: puff-out-center 2s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+    background-color: var(--pulse-background);
+    border-radius: 250px;
+    bottom: var(--pulse-bottom-offset);
+    content: '';
+    height: 250px;
+    opacity: 1;
+    pointer-events: none;
+    position: absolute;
+    right: var(--pulse-right-offset);
+    width: 250px;
+    will-change: transform;
+    z-index: -1;
+  }
+
+  @-webkit-keyframes puff-out-center {
+    0% {
+      transform: scale(0.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes puff-out-center {
+    0% {
+      transform: scale(0.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+}
+
+.BeaconFabButtonFrame--left {
+  left: 40px;
+  right: initial
+}
+
+@media (max-height: 740px) {
+
+.BeaconFabButtonFrame--left {
+    left: 20px;
+    right: initial
+}
+  } */

@@ -101,7 +101,14 @@ const BlogPost = () => {
                       backgroundRepeat: false,
                     }}
                   >
-                    <Box className={"compare-resumes__mark"}>
+                    <Box
+                      className={"compare-resumes__mark"}
+                      style={{
+                        backgroundImage: `url(${"/correct.png"})`,
+                        backgroundSize: "cover",
+                        backgroundRepeat: false,
+                      }}
+                    >
                       <Box className={"compare-resumes__mark-icon"}></Box>
                     </Box>
                   </a>
@@ -113,7 +120,14 @@ const BlogPost = () => {
                       backgroundRepeat: false,
                     }}
                   >
-                    <Box className="compare-resumes__mark">
+                    <Box
+                      className="compare-resumes__mark"
+                      style={{
+                        backgroundImage: `url(${"/wrong.png"})`,
+                        backgroundSize: "cover",
+                        backgroundRepeat: false,
+                      }}
+                    >
                       <Box className="compare-resumes__mark-icon"></Box>
                     </Box>
                   </Box>
