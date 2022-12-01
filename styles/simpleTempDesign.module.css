@@ -11,54 +11,7 @@
 }
 
 .profileText {
+    color: #000;
     font-size: 1.2em;
     font-weight: 400;
-}
-
-.contentHeadings {
-    color: #313B47 !important;
-    font-weight: 700;
-    font-size: 1.6em;
-    text-transform: uppercase;
-}
-
-.educationDesHeading {
-    color: #313B47 !important;
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.educationDesTxt {
-    font-size: 14px;
-    font-weight: 500;
-    color: #449399;
-}
-
-.experienceDesHeadings {
-    color: #313B47 !important;
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.experienceDesBody {
-    color: #449399 !important;
-    font-size: 14px;
-    text-align: justify;
-    font-weight: 500;
-}
-
-.skillText {
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.projectTitleText {
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.description {
-    font-size: 14px;
-    font-weight: 400;
-    color: #000000;
 }
