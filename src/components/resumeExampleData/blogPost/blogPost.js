@@ -9,7 +9,7 @@ const BlogPost = () => {
     height: "390",
     width: "800",
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
     },
   };
   return (
@@ -103,6 +103,8 @@ const BlogPost = () => {
                   >
                     <Box
                       className={"compare-resumes__mark"}
+                      width={"20px"}
+                      height={"20px"}
                       style={{
                         backgroundImage: `url(${"/correct.png"})`,
                         backgroundSize: "cover",
