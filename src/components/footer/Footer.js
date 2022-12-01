@@ -46,7 +46,7 @@ export default function Footer() {
         <div className={styles.linkDiv}>
           <p className={styles.footerP}>Bisresume</p>
           <div>
-            <Link href="/test">Homepage</Link>
+            <Link href="/">Homepage</Link>
           </div>
           <div>
             <Link href="/templates">Resume Templates</Link>
@@ -55,7 +55,7 @@ export default function Footer() {
             <Link href="/templates">CV Templates</Link>
           </div>
           <div>
-            <Link href="/templates">Cover Letters</Link>
+            <Link href="/test">Cover Letters</Link>
           </div>
         </div>
         <div className={styles.linkDiv}>
@@ -64,55 +64,55 @@ export default function Footer() {
             <Link href="/test">Career Blog</Link>
           </div>
           <div>
-            <Link href="/templates">How to Write a Resume</Link>
+            <Link href="/ResumeBuild">How to Write a Resume</Link>
           </div>
           <div>
-            <Link href="/templates">How to Write a CV</Link>
+            <Link href="/test">How to Write a CV</Link>
           </div>
           <div>
-            <Link href="/templates">How to Write a Cover Letters</Link>
+            <Link href="/test">How to Write a Cover Letters</Link>
           </div>
           <div>
-            <Link href="/templates">Resume Examples</Link>
+            <Link href="/blog/resumeFormats">Resume Examples</Link>
           </div>
           <div>
-            <Link href="/templates">Cover Letters Examples</Link>
+            <Link href="/test">Cover Letters Examples</Link>
           </div>
         </div>
         <div className={styles.linkDiv}>
           <p className={styles.footerP}>Other</p>
           <div>
-            <Link href="/test">Pricing</Link>
+            <Link href="/page/Pricing">Pricing</Link>
           </div>
           <div>
-            <Link href="/templates">About Us</Link>
+            <Link href="/test">About Us</Link>
           </div>
           <div>
-            <Link href="/templates">E-Book:How to get a job in 2022</Link>
+            <Link href="/test">E-Book:How to get a job in 2022</Link>
           </div>
           <div>
-            <Link href="/templates">Media Kit</Link>
+            <Link href="/test">Media Kit</Link>
           </div>
           <div>
-            <Link href="/templates">Help Center</Link>
+            <Link href="/ContactUs">Help Center</Link>
           </div>
         </div>
         <div className={styles.linkDiv}>
           <p className={styles.footerP}>Legal/Contact</p>
           <div>
-            <Link href="/test">Terms of Use</Link>
+            <Link href="/legal/termsAndConditions">Terms of Use</Link>
           </div>
           <div>
-            <Link href="/templates">Privacy Policy</Link>
+            <Link href="/test">Privacy Policy</Link>
           </div>
           <div>
-            <Link href="/templates">Cookie Policy</Link>
+            <Link href="/Cookie">Cookie Policy</Link>
           </div>
           <div>
-            <Link href="/templates">Media Kit</Link>
+            <Link href="/test">Media Kit</Link>
           </div>
           <div>
-            <Link href="/templates">Contact@bisresume.com</Link>
+            <Link href="mailto:Contact@bisresume.com">Contact@bisresume.com</Link>
           </div>
         </div>
       </div>

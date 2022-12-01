@@ -15,10 +15,12 @@ import {
 } from "../../src/components/legal/CustomData";
 import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import TableOfContent from '../../src/components/legal/TableOfContent';
+import Layout from '../../src/Layout';
 
 export default function termsAndConditions() {
     return (
         <>
+        <Layout>
             <Container
                 maxW={['100%', '100%', '100%', '80%', '60%']}
             >
@@ -588,6 +590,9 @@ export default function termsAndConditions() {
                     </Box>
                 </Box>
             </Container>
+        </Layout>
         </>
+    
+
     )
 }

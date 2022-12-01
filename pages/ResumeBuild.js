@@ -16,13 +16,15 @@ import { GrTemplate } from "react-icons/gr"
 import { TbCircle1, TbCircle2, TbCircle3, TbCircle4, TbCircle5 } from "react-icons/tb"
 import Navbar from "../src/components/navbar/Navbar";
 import Footer from "../src/components/footer/Footer"
+import Link from "next/link";
+import Layout from "../src/Layout";
 
 export default function ResumeBuild() {
 
     return (
         <>
             <div >
-                <Navbar />
+                <Layout>
 
                 <Box w={["100%", "100%", "100%"]} mt={["2%", "2%", "2%"]} display="flex" flexDirection={["column", "column", "row"]} justifyContent="space-around"    >
                     <Box
@@ -35,6 +37,9 @@ export default function ResumeBuild() {
 
 
                             </Text>
+                            <Box className="cursor">
+                                <Link href="/templates">
+
                             <Button fontWeight={650}
                                 color={"#fdfffc"}
                                 backgroundColor="#006772"
@@ -43,6 +48,10 @@ export default function ResumeBuild() {
                                     color: "#fff",
                                     backgroundColor: "red"
                                 }} >Build my Resume</Button>
+
+                        
+                                </Link>
+                            </Box>
 
 
                         </Box>
@@ -197,16 +206,19 @@ export default function ResumeBuild() {
                         </Box>
 
                         <Box mt={["4%", "4%", "4%"]} mb={["4%", "4%", "4%"]} textAlign="center" >
+                            <Box className="cursor">
+                                <Link href="/templates">
 
-                            <Button fontWeight={650}
-                                color={"#fdfffc"}
-                                backgroundColor="#006772"
-                                _hover={{
-                                    textDecoration: "none",
-                                    color: "#fff",
-                                    backgroundColor: "red"
-                                }} >Build my Resume</Button>
-
+                                    <Button fontWeight={650}
+                                        color={"#fdfffc"}
+                                        backgroundColor="#006772"
+                                        _hover={{
+                                            textDecoration: "none",
+                                            color: "#fff",
+                                            backgroundColor: "red"
+                                        }} >Build my Resume</Button>
+                                </Link>
+                            </Box>
                         </Box>
 
 
@@ -317,7 +329,7 @@ export default function ResumeBuild() {
 
                     <Templates />
                 </Box>
-                <Footer />
+                </Layout>
             </div>
         </>
     );

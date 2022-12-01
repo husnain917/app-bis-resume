@@ -8,12 +8,12 @@ export const NAV_ITEMS = [
             {
                 label: 'Resume Builder',
                 subLabel: 'Use our builder to create a resume in 5 minutes.',
-                href: '#',
+                href: '/ResumeBuild',
             },
             {
                 label: 'Resume Templates',
                 subLabel: 'Find the perfect resume template.',
-                href: '#',
+                href: '/templates',
             },
             {
                 label: 'Resume Examples',
@@ -23,17 +23,17 @@ export const NAV_ITEMS = [
             {
                 label: 'Resume Format',
                 subLabel: 'Choose the right resume format for your needs.',
-                href: '#',
+                href: '/blog/resumeFormats',
             },
             {
                 label: 'How to Write a Resume',
                 subLabel: 'Learn how to write a resume that lands you jobs.',
-                href: '#',
+                href: '/ResumeBuild',
             },
             {
                 label: 'Resume Help',
                 subLabel: 'Use our expert guides to improve your resume writing.',
-                href: '#',
+                href: '/ResumeHelp',
             },
         ],
     },
@@ -165,11 +165,11 @@ export const EnglishDropDown = [
 
 export const Login_Buttons = [
     {
-        label : 'Register',
+        label: 'Register',
         // href: '#',
     },
     {
-        label : 'Login',
+        label: 'Login',
         // href: '#',
     },
 ]

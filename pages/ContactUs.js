@@ -5,6 +5,7 @@ import CustomInput from "../src/components/contactUs/CustomInput";
 import { buttonData } from "../src/components/contactUs/buttonData";
 import CancelSubscription from "../src/components/cancelSubscription";
 import Link from "next/link";
+import Layout from "../src/Layout";
 
 export default function ContactUs() {
   const [active, setActive] = useState("");
@@ -20,6 +21,7 @@ export default function ContactUs() {
   return (
     <>
       {/* main div  */}
+      <Layout>
       <Box
         w="100%"
         h="auto"
@@ -141,6 +143,8 @@ export default function ContactUs() {
           </Box>
         </Box>
       </Box>
+  
+    </Layout>
     </>
   );
 }

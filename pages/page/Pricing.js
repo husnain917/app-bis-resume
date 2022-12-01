@@ -6,11 +6,14 @@ import Image from 'next/image'
 import SliderComponent from "../../src/components/sliderComponent/SliderComponent"
 import { AiOutlineQuestionCircle, AiOutlineMail } from "react-icons/ai";
 import bottomprice from '../../public/bottomPrice.png';
+import Layout from "../../src/Layout";
 
 export default function Pricing() {
 
     return (
         <>
+        <Layout>
+
 
             <div style={{ marginTop: "5%", }}>
                 <Box
@@ -120,6 +123,7 @@ export default function Pricing() {
                 </Box>
 
             </div>
+            </Layout>
 
         </>
     );

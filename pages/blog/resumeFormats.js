@@ -13,6 +13,7 @@ import Sidebar from "../../src/components/blog/Sidebar";
 import styles from "../../styles/resumeFormats.module.css";
 import FormatsTables from "../../src/components/blog/FormatsTables";
 import Footer from "../../src/components/footer/Footer";
+import Layout from "../../src/Layout";
 
 export default function Resume_Formats() {
   // state
@@ -20,7 +21,7 @@ export default function Resume_Formats() {
 
   return (
     <>
-      <Navbar />
+      <Layout>
       <ResumeFormats />
       {/* content container */}
       <Container
@@ -212,7 +213,7 @@ export default function Resume_Formats() {
       {/* content container end */}
 
       {/* Footer */}
-      <Footer />
+      </Layout>
     </>
   )
 }
