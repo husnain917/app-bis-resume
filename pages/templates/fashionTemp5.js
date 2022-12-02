@@ -1,7 +1,4 @@
 import { Box, Flex, HStack } from '@chakra-ui/react';
-import style from '../../styles/templates/template1.module.scss';
-import Link from 'next/link';
-import { Tooltip } from 'react-tippy';
 import Heading from '../../src/components/commonSection/Heading';
 import Contact from '../../src/components/commonSection/Contact';
 import Classes from '../../styles/templates/fashionTemp5.module.css';
@@ -23,28 +20,19 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import { useSelector } from 'react-redux';
 import ImageSelector from '../../src/components/imageSelector';
-import Navbar from '../../src/components/navbar/Navbar';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 const FashionTemp5 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
   return (
-    <div className={style.main}>
+    <div style={{ overflow: 'auto' }}>
       {/* <Navbar /> */}
       <TempLayout work={true} education={true} languages={true} skills={true}>
-        <Link href={'/templates'}>
-          <div className={style.swapCont}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
+        <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
-          overflow="auto"
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
+          alignItems={{ base: 'none', lg: 'center' }}
         >
           <HStack
             minW={830}
@@ -56,6 +44,7 @@ const FashionTemp5 = () => {
             my={10}
             mx={10}
             mt="100px"
+            ml={{ base: 20, lg: 0 }}
             borderWidth="1px"
             borderColor={'#00000033'}
           >

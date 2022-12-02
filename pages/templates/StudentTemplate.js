@@ -38,7 +38,7 @@ const StudentTemplate = () => {
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
+          alignItems={{ base: 'none', lg: 'center' }}
           pt="70px"
         >
           <Box
@@ -46,7 +46,7 @@ const StudentTemplate = () => {
             maxW={830}
             borderRadius={6}
             my={10}
-            mx={5}
+            ml={{ base: 20, lg: 0 }}
             pt={'50px'}
             bg="white"
             borderWidth="1px"

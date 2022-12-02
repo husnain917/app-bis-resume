@@ -45,7 +45,7 @@ const HybridTemplate = () => {
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     //Template Layout for Template Navbar
     <>
-      <div style={{ overflow: 'auto', position: 'relative' }}>
+      <div style={{ overflow: 'auto' }}>
         <TempLayout
           education={true}
           skills={true}
@@ -60,16 +60,16 @@ const HybridTemplate = () => {
           <Flex
             justifyContent={{ base: 'none', lg: 'center' }}
             flexDir={'column'}
-            alignItems={{ sm: 'none', md: 'center' }}
+            alignItems={{ base: 'none', lg: 'center' }}
           >
             <Box
               minW={910}
+              maxW={910}
               pt={12}
               pb={2}
               px={2}
               bg={'white'}
-              m={4}
-              mx={4}
+              ml={{ base: 10, lg: 0 }}
               mt="100px"
               borderRadius={6}
               borderWidth="1px"

@@ -1,19 +1,5 @@
-import { Box, Flex, HStack, Link, Text } from '@chakra-ui/react';
-import { connect } from 'react-redux';
-import EducationHybridTemplate from '../../src/components/hybridTemplate/EducationHybridTemplate';
-import { onBlurField } from '../../store/actions/builderAction';
-import WorkExperienceHybrid from '../../src/components/hybridTemplate/WorkExperienceHybrid';
-import style from '../../styles/templates/template1.module.scss';
-import { sampleData } from '../../constants/sampleData';
-import { Tooltip } from 'react-tippy';
-import ExecutiveCertificates from '../../src/components/executiveTemp/ExecutiveCertificates';
-import ExecutiveLang from '../../src/components/executiveTemp/ExecutiveLang';
-import ExecutiveOrganization from '../../src/components/executiveTemp/ExecutiveOrganiztion';
+import { Box, Flex, HStack } from '@chakra-ui/react';
 import Classes from '../../styles/templates/hybridTemplate.module.css';
-import ExecutiveProject from '../../src/components/executiveTemp/ExecutiveProject';
-import ExecutiveInterest from '../../src/components/executiveTemp/ExecutiveInterest';
-import ExecutiveSkill from '../../src/components/executiveTemp/ExecutiveSkill';
-import CollegeProfile from '../../src/components/collegeTemp/CollegeProfile';
 import ImageSelector from '../../src/components/imageSelector';
 import Name from '../../src/components/commonSection/Name';
 import Profession from '../../src/components/commonSection/Profession';
@@ -23,9 +9,7 @@ import Interest from '../../src/components/commonSection/Interest';
 import Heading from '../../src/components/commonSection/Heading';
 import SectionSideMenu from '../../src/components/tempSectionSide/SectionSideMenu';
 import Language from '../../src/components/commonSection/Language';
-import { IoLanguageOutline } from 'react-icons/io5';
 import Certificate from '../../src/components/commonSection/Certificate';
-import { TbCertificate } from 'react-icons/tb';
 import Organization from '../../src/components/commonSection/Organization';
 import Project from '../../src/components/commonSection/Project';
 import RowSkill from '../../src/components/commonSection/RowSkill';
@@ -43,7 +27,6 @@ import {
   SKILL,
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
-import { MdCastForEducation } from 'react-icons/md';
 import TempLayout from '../../src/components/tempNav/TempLayout';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 const CollegeTemp = () => {
@@ -52,7 +35,7 @@ const CollegeTemp = () => {
   const [show, setShow] = useShow();
   return (
     //  ~~~~~~~~~~~~~~ Executive Resume Template ~~~~~~~~~~~~~~  //
-    <div style={{ overflow: 'auto', position: 'relative' }}>
+    <div style={{ overflow: 'auto' }}>
       <TempLayout
         education={true}
         skills={true}
@@ -67,7 +50,7 @@ const CollegeTemp = () => {
         <Flex
           justifyContent={{ base: 'none', lg: 'center' }}
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
+          alignItems={{ sm: 'none', lg: 'center' }}
           pt="70px"
         >
           <Box
@@ -77,6 +60,7 @@ const CollegeTemp = () => {
             px={2}
             bg={'white'}
             m={4}
+            ml={{ base: 10, lg: 0 }}
             borderRadius={6}
             borderWidth="1px"
             borderColor={'#00000023'}
@@ -481,9 +465,4 @@ const CollegeTemp = () => {
     </div>
   );
 };
-const mapStateToProps = (store) => ({
-  theme: store.editorReducer.theme,
-  resumeData: store.editorReducer.resumeData,
-  updater: store.editorReducer.updater,
-});
-export default connect(mapStateToProps, { onBlurField })(CollegeTemp);
+export default CollegeTemp;

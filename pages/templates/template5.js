@@ -1,26 +1,5 @@
-import {
-  Box,
-  Circle,
-  Divider,
-  Flex,
-  HStack,
-  SimpleGrid,
-  Stack,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Flex, HStack, SimpleGrid, VStack } from '@chakra-ui/react';
 import React from 'react';
-import { sampleData } from '../../constants/sampleData';
-import { connect } from 'react-redux';
-import { onBlurField } from '../../store/actions/builderAction';
-import SkillBase from '../../src/components/template5/SkillTemplate5';
-import ProfileTemplate5 from '../../src/components/template5/ProfileTemplate5';
-import ExperienceTemplate5 from '../../src/components/template5/ExperienceTemplate5';
-import EducationTemplate5 from '../../src/components/template5/EducationTemplate5';
-import AboutTemplate5 from '../../src/components/template5/AboutTemplate5';
-import CertificationTemplate5 from '../../src/components/template5/CertificationTemplate5';
-import Link from 'next/link';
-import style from '../../styles/templates/template1.module.scss';
-import { Tooltip } from 'react-tippy';
 import Name from '../../src/components/commonSection/Name';
 import Classes from '../.././styles/templates/template5.module.css';
 import Profession from '../../src/components/commonSection/Profession';
@@ -39,6 +18,7 @@ import {
   SKILL,
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 const Template5 = () => {
   const MainHeading = ({ title, w, side }) => (
     <Box display={'flex'} alignItems="flex-end" justifyContent={'flex-start'}>
@@ -58,28 +38,21 @@ const Template5 = () => {
   // custom Hook For Template
   const [show, setShow] = useShow();
   return (
-    <div className={style.main}>
+    <div style={{ overflow: 'auto' }}>
       <TempLayout education={true} work={true} skills={true}>
-        <Link href={'/templates'}>
-          <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
-
+        <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', lg: 'center' }}
-          mt="100px"
           mb="30px"
+          alignItems={{ base: 'none', lg: 'center' }}
         >
           <SimpleGrid
             minW={850}
             maxW={850}
+            mt="100px"
             bg={'blackAlpha.300'}
             py={12}
+            ml={{ base: 20, lg: 0 }}
             borderRadius={6}
             borderWidth="1px"
             borderColor={'#00000023'}

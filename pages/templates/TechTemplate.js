@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Link, Text } from '@chakra-ui/react';
+import { Box, Flex, HStack } from '@chakra-ui/react';
 import { MdCastForEducation } from 'react-icons/md';
 import { BsFillLayersFill } from 'react-icons/bs';
 import { GiSkills, GiOrganigram } from 'react-icons/gi';
@@ -42,7 +42,7 @@ const TechTemplate = () => {
   const [show, setShow] = useShow();
   return (
     //  ~~~~~~~~~~~~~~ Executive Resume Template ~~~~~~~~~~~~~~  //
-    <div style={{ overflow: 'auto', position: 'relative' }}>
+    <div style={{ overflow: 'auto' }}>
       <TempLayout
         education={true}
         skills={true}
@@ -57,7 +57,7 @@ const TechTemplate = () => {
         <Flex
           justifyContent={{ base: 'none', lg: 'center' }}
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
+          alignItems={{ base: 'none', lg: 'center' }}
           pt="70px"
         >
           <Box
@@ -66,6 +66,7 @@ const TechTemplate = () => {
             px={2}
             bg={'white'}
             m={4}
+            ml={{ base: 10, lg: 0 }}
             borderRadius={6}
             borderWidth="1px"
             borderColor={'#00000023'}

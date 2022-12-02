@@ -1,21 +1,8 @@
 import { Box, Flex, HStack, Image } from '@chakra-ui/react';
-import Link from 'next/link';
 import React from 'react';
-import { connect } from 'react-redux';
-import { Tooltip } from 'react-tippy';
-import { sampleData } from '../../constants/sampleData';
 import Contact from '../../src/components/commonSection/Contact';
 import Heading from '../../src/components/commonSection/Heading';
 import ImageSelector from '../../src/components/imageSelector';
-import MarkManagExpertise from '../../src/components/marketingManager/MarkManagExpertise';
-import MarkMangEdu from '../../src/components/marketingManager/MarkMangEdu';
-import MarkMangeLang from '../../src/components/marketingManager/MarkMangeLang';
-import MarkMangeReference from '../../src/components/marketingManager/MarkMangeReference';
-import MarkMangExp from '../../src/components/marketingManager/MarkMangExp';
-import MarkMangpersonal from '../../src/components/marketingManager/MarkMangpersonal';
-import MarkProfile from '../../src/components/marketingManager/MarkProfile';
-import { onBlurField } from '../../store/actions/builderAction';
-import style from '../../styles/templates/template1.module.scss';
 import Classes from '../../styles/templates/marketingManager.module.css';
 import Education from '../../src/components/commonSection/Education';
 import Skill from '../../src/components/commonSection/Skill';
@@ -36,12 +23,13 @@ import Profession from '../../src/components/commonSection/Profession';
 import About from '../../src/components/commonSection/About';
 import WorkExperience from '../../src/components/commonSection/WorkExperience';
 import TempLayout from '../../src/components/tempNav/TempLayout';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 const MarketingManager = (props) => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
   return (
     // ___________ Marketing Manager Template ____________
-    <div className={style.main}>
+    <div style={{ overflow: 'auto' }}>
       <TempLayout
         education={true}
         references={true}
@@ -49,20 +37,11 @@ const MarketingManager = (props) => {
         languages={true}
         skills={true}
       >
-        <Link href={'/templates'}>
-          <div className={style.swapCont}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
+        <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
-          overflow="auto"
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
+          alignItems={{ base: 'none', lg: 'center' }}
         >
           <HStack
             minW={830}
@@ -73,7 +52,7 @@ const MarketingManager = (props) => {
             bg={'white'}
             my={10}
             mt="100px"
-            mx={10}
+            ml={{ base: 20, lg: 0 }}
             borderWidth="1px"
             borderColor={'#00000023'}
           >

@@ -50,6 +50,12 @@
   font-weight: 500;
   margin: 3px;
 }
+.baseText {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 3px;
+  color: #fff;
+}
 .languageText {
   font-size: 16px;
   font-weight: 500;
@@ -84,4 +90,13 @@
   color: white;
   font-size: 14px;
   font-weight: 400;
+}
+.baseTempProfession {
+  font-weight: 500;
+  font-size: 1.4em;
+  padding: 0;
+  line-height: 30px;
+  text-align: left;
+  color: #319795;
+  margin-left: 3px;
 }

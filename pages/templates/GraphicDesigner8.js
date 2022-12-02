@@ -1,8 +1,5 @@
 import { Box, Flex } from '@chakra-ui/react';
-import Link from 'next/link';
 import React from 'react';
-import { Tooltip } from 'react-tippy';
-import style from '../../styles/templates/template1.module.scss';
 import Heading from '../../src/components/commonSection/Heading';
 import ImageSelector from '../../src/components/imageSelector';
 import Classes from '../../styles/templates/graph8.module.css';
@@ -22,28 +19,20 @@ import WorkExperience from '../../src/components/commonSection/WorkExperience';
 import Skill from '../../src/components/commonSection/Skill';
 import TempLayout from '../../src/components/tempNav/TempLayout';
 import Profession from '../../src/components/commonSection/Profession';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 const GraphicDesigner8 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
   const [show, setShow] = useShow();
   return (
     // Graphic Designer Template 8 //
-    <div className={style.main}>
+    <div style={{ overflow: 'auto' }}>
       <TempLayout education={true} work={true} skills={true}>
-        <Link href={'/templates'}>
-          <div className={style.swapCont}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
+        <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
-          overflow="auto"
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
+          alignItems={{ base: 'none', lg: 'center' }}
         >
           <Box
             minW={830}
@@ -54,6 +43,7 @@ const GraphicDesigner8 = () => {
             mt="100px"
             mx={5}
             pr={'30px'}
+            ml={{ base: 20, lg: 0 }}
             py={'60px'}
             display="flex"
             alignItems={'stretch'}

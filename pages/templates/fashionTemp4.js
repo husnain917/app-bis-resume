@@ -1,9 +1,5 @@
 import { Box, Flex, HStack } from '@chakra-ui/react';
-import Link from 'next/link';
 import React from 'react';
-import { Tooltip } from 'react-tippy';
-import style from '../../styles/templates/template1.module.scss';
-import ImageSection from '../../src/components/commonSection/ImageSection';
 import Name from '../../src/components/commonSection/Name';
 import Classes from '../../styles/templates/fashionTemp4.module.css';
 import Heading from '../../src/components/commonSection/Heading';
@@ -20,26 +16,18 @@ import {
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../src/components/imageSelector';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 const FashionTemp4 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
   return (
-    <TempLayout work={true} education={true}>
-      <div className={style.main}>
-        <Link href={'/templates'}>
-          <div className={style.swapCont}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
+    <div style={{ overflow: 'auto' }}>
+      <TempLayout work={true} education={true}>
+        <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
-          overflow="auto"
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
+          alignItems={{ base: 'none', lg: 'center' }}
         >
           <Box
             minW={830}
@@ -50,10 +38,11 @@ const FashionTemp4 = () => {
             mb={10}
             mt={'100px'}
             pl={'90px'}
+            ml={{ base: 20, lg: 0 }}
             pr={'70px'}
             pt={8}
             pb={20}
-            mx={5}
+            mr={5}
             borderWidth="1px"
             borderColor={'#00000023'}
           >
@@ -205,8 +194,8 @@ const FashionTemp4 = () => {
             </HStack>
           </Box>
         </Flex>
-      </div>
-    </TempLayout>
+      </TempLayout>
+    </div>
   );
 };
 

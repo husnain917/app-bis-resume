@@ -6,8 +6,6 @@ import { IoLanguageOutline } from 'react-icons/io5';
 import { GoProject } from 'react-icons/go';
 import { TbCertificate } from 'react-icons/tb';
 import { FaHorseHead } from 'react-icons/fa';
-import style from '../../styles/templates/template1.module.scss';
-import { Tooltip } from 'react-tippy';
 import ImageSelector from '../../src/components/imageSelector';
 import Name from '../../src/components/commonSection/Name';
 import Profession from '../../src/components/commonSection/Profession';
@@ -38,13 +36,14 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import TempLayout from '../../src/components/tempNav/TempLayout';
 import Link from 'next/link';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 const ExecutiveTemp = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
   const [show, setShow] = useShow();
   return (
     //  ~~~~~~~~~~~~~~ Executive Resume Template ~~~~~~~~~~~~~~  //
-    <div className={style.main}>
+    <div style={{ overflow: 'auto' }}>
       <TempLayout
         education={true}
         skills={true}
@@ -55,21 +54,11 @@ const ExecutiveTemp = () => {
         certificate={true}
         interest={true}
       >
-        <Link href={'/templates'}>
-          <div className={style.swapCont}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
+        <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', lg: 'center' }}
-          overflow="auto"
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
-          mt="100px"
+          alignItems={{ base: 'none', lg: 'center' }}
         >
           <Box
             minW={910}
@@ -78,9 +67,11 @@ const ExecutiveTemp = () => {
             px={2}
             bg={'white'}
             m={4}
+            ml={{ base: 10, lg: 0 }}
             borderRadius={6}
             borderWidth="1px"
             borderColor={'#00000023'}
+            mt="100px"
           >
             {/* =============== Profile Section =============== */}
             <HStack>

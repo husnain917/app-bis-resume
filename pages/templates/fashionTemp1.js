@@ -3,10 +3,7 @@ import React from 'react';
 import { BsFillPersonFill, BsLayersFill } from 'react-icons/bs';
 import { IoLanguageSharp } from 'react-icons/io5';
 import { MdCastForEducation, MdEmail } from 'react-icons/md';
-import style from '../../styles/templates/template1.module.scss';
-import Link from 'next/link';
 import Classes from '../../styles/templates/fashionTemp1.module.css';
-import { Tooltip } from 'react-tippy';
 import WorkExperience from '../../src/components/commonSection/WorkExperience';
 import Reference from '../../src/components/commonSection/Reference';
 import About from '../../src/components/commonSection/About';
@@ -36,7 +33,7 @@ const FashionTemp1 = () => {
   return (
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Fashion Temp 1 Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     //Template Layout for Template Navbar//
-    <div className={style.main} style={{ overflow: 'auto' }}>
+    <div style={{ overflow: 'auto' }}>
       <TempLayout
         work={true}
         education={true}
@@ -48,7 +45,7 @@ const FashionTemp1 = () => {
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
+          alignItems={{ base: 'none', lg: 'center' }}
         >
           <HStack
             minW={830}
@@ -60,6 +57,7 @@ const FashionTemp1 = () => {
             mb={10}
             mt={'100px'}
             py={8}
+            ml={{ base: 20, lg: 0 }}
             px={10}
             borderWidth="1px"
             borderColor={'#00000030'}

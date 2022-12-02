@@ -1,8 +1,5 @@
 import { Box, Flex } from '@chakra-ui/react';
-import Link from 'next/link';
 import React from 'react';
-import { Tooltip } from 'react-tippy';
-import style from '../../styles/templates/template1.module.scss';
 import Name from '../../src/components/commonSection/Name';
 import Classes from '../../styles/templates/marketingManager1.module.css';
 import ImageSelector from '../../src/components/imageSelector';
@@ -21,6 +18,7 @@ import {
   SKILL,
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 const MarketingManager1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
@@ -67,22 +65,13 @@ const MarketingManager1 = () => {
   );
   return (
     // ==========Marketing Manager Template 1 ===========
-    <div className={style.main}>
+    <div style={{ overflow: 'auto' }}>
       <TempLayout education={true} work={true} skills={true}>
-        <Link href={'/templates'}>
-          <div className={style.swapCont}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
+        <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
-          overflow="auto"
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
+          alignItems={{ base: 'none', lg: 'center' }}
         >
           <Box
             minW={830}
@@ -91,7 +80,7 @@ const MarketingManager1 = () => {
             bg={'#01012a'}
             my={10}
             mt={'100px'}
-            mx={5}
+            ml={{ base: 20, lg: 0 }}
             pr={'30px'}
             borderWidth="1px"
             borderColor={'black'}

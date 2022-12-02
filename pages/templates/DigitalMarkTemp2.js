@@ -1,8 +1,5 @@
 import { Box, Flex, HStack } from '@chakra-ui/react';
-import Link from 'next/link';
-import { Tooltip } from 'react-tippy';
 import Name from '../../src/components/commonSection/Name';
-import style from '../../styles/templates/template1.module.scss';
 import Classes from '../../styles/templates/digitalMarkTemp2.module.css';
 import Profession from '../../src/components/commonSection/Profession';
 import About from '../../src/components/commonSection/About';
@@ -22,32 +19,25 @@ import {
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../src/components/imageSelector';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 const DigitalMarkTemp2 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
   return (
-    <div className={`${style.main}`}>
+    <div style={{ overflow: 'auto' }}>
       <TempLayout skills={true} education={true} work={true}>
-        <Link href={'/templates'}>
-          <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
+        <ChangeTempBtn />
         <Box
           display={'flex'}
           justifyContent={{ base: 'none', md: 'center' }}
-          overflow="auto"
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
+          alignItems={{ base: 'none', lg: 'center' }}
         >
           <Box
             minW={820}
             bg={'white'}
             m={4}
+            ml={{ base: 20, lg: 0 }}
             borderRadius={6}
             h={'full'}
             pb={4}

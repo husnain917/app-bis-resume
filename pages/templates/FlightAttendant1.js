@@ -1,9 +1,6 @@
-import { Box, Flex, HStack } from '@chakra-ui/react';
-import Link from 'next/link';
+import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
-import { Tooltip } from 'react-tippy';
 import Name from '../../src/components/commonSection/Name';
-import style from '../../styles/templates/template1.module.scss';
 import Classes from '../../styles/templates/flightAttendant.module.css';
 import Profession from '../../src/components/commonSection/Profession';
 import Contact from '../../src/components/commonSection/Contact';
@@ -26,27 +23,19 @@ import {
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../src/components/imageSelector';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 const FlightAttendant1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
   return (
-    <div className={`${style.main} `}>
+    <div style={{ overflow: 'auto' }}>
       <TempLayout work={true} education={true} certificate={true} skills={true}>
-        <Link href={'/templates'}>
-          <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
+        <ChangeTempBtn />
 
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
-          overflow="auto"
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
+          alignItems={{ base: 'none', lg: 'center' }}
           className={`${Classes.main}`}
         >
           <Box
@@ -57,6 +46,7 @@ const FlightAttendant1 = () => {
             maxW="850px"
             mb={'50px'}
             mx={'20px'}
+            ml={{ base: 20, lg: 0 }}
             mt="100px"
             borderWidth="1px"
             borderColor={'#00000023'}
