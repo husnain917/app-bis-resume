@@ -55,28 +55,28 @@ export default function Footer() {
             <Link href="/templates">CV Templates</Link>
           </div>
           <div>
-            <Link href="/test">Cover Letters</Link>
+            <Link href="#/">Cover Letters</Link>
           </div>
         </div>
         <div className={styles.linkDiv}>
           <p className={styles.footerP}>Learn</p>
           <div>
-            <Link href="/test">Career Blog</Link>
+            <Link href="#/">Career Blog</Link>
           </div>
           <div>
             <Link href="/ResumeBuild">How to Write a Resume</Link>
           </div>
           <div>
-            <Link href="/test">How to Write a CV</Link>
+            <Link href="#/">How to Write a CV</Link>
           </div>
           <div>
-            <Link href="/test">How to Write a Cover Letters</Link>
+            <Link href="#/">How to Write a Cover Letters</Link>
           </div>
           <div>
             <Link href="/blog/resumeFormats">Resume Examples</Link>
           </div>
           <div>
-            <Link href="/test">Cover Letters Examples</Link>
+            <Link href="#/">Cover Letters Examples</Link>
           </div>
         </div>
         <div className={styles.linkDiv}>
@@ -85,13 +85,13 @@ export default function Footer() {
             <Link href="/page/Pricing">Pricing</Link>
           </div>
           <div>
-            <Link href="/test">About Us</Link>
+            <Link href="#/">About Us</Link>
           </div>
           <div>
-            <Link href="/test">E-Book:How to get a job in 2022</Link>
+            <Link href="#/">E-Book:How to get a job in 2022</Link>
           </div>
           <div>
-            <Link href="/test">Media Kit</Link>
+            <Link href="#/">Media Kit</Link>
           </div>
           <div>
             <Link href="/ContactUs">Help Center</Link>
@@ -103,13 +103,13 @@ export default function Footer() {
             <Link href="/legal/termsAndConditions">Terms of Use</Link>
           </div>
           <div>
-            <Link href="/test">Privacy Policy</Link>
+            <Link href="#/">Privacy Policy</Link>
           </div>
           <div>
             <Link href="/Cookie">Cookie Policy</Link>
           </div>
           <div>
-            <Link href="/test">Media Kit</Link>
+            <Link href="#/">Media Kit</Link>
           </div>
           <div>
             <Link href="mailto:Contact@bisresume.com">Contact@bisresume.com</Link>
