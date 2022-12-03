@@ -357,6 +357,16 @@ function Templates() {
             />
           </Link>
         </Box>
+        <Box className="cursor">
+          <Link href="/templates/SkillBaseTemp">
+            <img
+              src="Skilled_Base_Template.png"
+              alt="Simple Template Design"
+              height="200px"
+              width="250px"
+            />
+          </Link>
+        </Box>
       </SimpleGrid>
     </div>
   );
