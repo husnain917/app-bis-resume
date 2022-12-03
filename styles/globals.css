@@ -1431,3 +1431,67 @@ audio, canvas, iframe, img, svg, video {
     right: initial
 }
   } */
+/* 
+  #selectResume .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  #selectResume .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  #selectResume .swiper-slide img {
+    display: block;
+    width: 100%;
+  } */
+
+  #selectResume .swiper-container {
+    position: relative;
+    width: 90vw;
+    height: 300px;
+}
+#selectResume .swiper-container > .swiper-slide__content {
+   position:absolute; 
+   top:0;
+}
+
+#selectResume .swiper-slide {
+  height: 1100px;
+  display: flex;
+  /* background: #eee; */
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms linear;
+  transform: scale(0.8);
+}
+  
+#selectResume .swiper-slide-active{
+    transform: scale(1);
+    /* background: #fc0 */
+  }
+
+#selectResume .swiper-slide__content {
+  height: 300px;
+}
+#selectResume .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: rgb(228, 217, 217);
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#selectResume .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+}
+
+  

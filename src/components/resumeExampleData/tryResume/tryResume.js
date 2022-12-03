@@ -8,7 +8,7 @@ const TryResume = () => {
       py={["48px", "48px", "64px", "80px", "80px"]}
       overflow={"hidden"}
       bg={"#EFF2F9"}
-      height={"35em"}
+      height={["50em", "50em", "40em", "40em", "40em"]}
       // mb={"2em"}
       posiition={"relative"}
     >
@@ -16,6 +16,7 @@ const TryResume = () => {
         <Box
           display={"flex"}
           flexDirection={["column", "column", "row", "row", "row"]}
+          alignItems={["center", "center", "", "", ""]}
         >
           <Box
             width={["100%", "100%", "45%", "57%", "57%"]}
@@ -23,15 +24,30 @@ const TryResume = () => {
             marginBottom={["16px"]}
             position="relative"
             marginRight={["0", "0", "0", "16px", "32px"]}
-            flexShrink={["", "", "", "", "0"]}
+            flexShrink={["0", "0", "", "", "0"]}
             minWidth={["50%", "", "", "0%", "0%"]}
+            height={["320px"]}
             // className={"builder-cta__visual"}
           >
             <Image src="/sampleTemplate.AVIF" className="image1" />
             <Image src="/sampleTemplate.AVIF" className="image2" />
             <Image src="/sampleTemplate.AVIF" className="image3" />
           </Box>
-          <Box textAlign={"left"} flexGrow={"1"} minWidth={"50%"}>
+          <Box
+            textAlign={"left"}
+            flexGrow={"1"}
+            minWidth={"50%"}
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={[
+              "center",
+              "center",
+              "baseline",
+              "baseline",
+              "baseline",
+            ]}
+            justifyContent={"center"}
+          >
             <Text
               fontWeight={700}
               fontSize={["2em", "2.8em", "2.5em", "3.8em", "3.8em"]}

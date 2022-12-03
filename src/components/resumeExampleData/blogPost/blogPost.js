@@ -18,7 +18,7 @@ const BlogPost = () => {
         <Box className="blog-post__content-inner">
           <Box className="blog-post__content-main">
             <Box className="blog-post__content-main-wrapper">
-              <YouTube videoId="sTnm5jvjgjM" opts={opts} />
+              <YouTube videoId="Who2Xax1GX8" opts={opts} />
               <Text className={"headline"}>Resume Samples</Text>
               <p>
                 A great resume is a key that opens doors to a better future.
@@ -117,7 +117,7 @@ const BlogPost = () => {
                   <Box
                     className="compare-resumes__resume compare-resumes__resume--bad"
                     style={{
-                      backgroundImage: `url(${"/FashTemp4.png"})`,
+                      backgroundImage: `url(${"/GraphicDesigner5.png"})`,
                       backgroundSize: "cover",
                       backgroundRepeat: false,
                     }}

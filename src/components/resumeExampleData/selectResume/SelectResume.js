@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Box, Text, Button, Image } from "@chakra-ui/react";
 import { Grid } from "@chakra-ui/react";
 // Swiper js
@@ -11,9 +11,15 @@ import { Navigation } from "swiper";
 import Slider from "react-slick";
 import { sliderData } from "../resumeExampleData";
 import Link from "next/link";
+import { useWindowSizing } from "../../../../customHooks/useWindowSizing";
+import Carasol from "../carasol/Carasol";
+import Carasol1 from "../carasol/Carasol1";
 const SelectResume = () => {
+  const [showCarasol, setShowCarasol] = useState("");
+  const size = useWindowSizing();
+  const width = size.width;
   const swiperRef = useRef();
-  console.log("SLIDER DATA >>>>>>", sliderData);
+  // console.log("SLIDER DATA >>>>>>", sliderData);
   var settings = {
     infinite: true,
     speed: 300,
@@ -75,147 +81,169 @@ const SelectResume = () => {
     ],
   };
   return (
-    <Box
-      position={"relative"}
-      padding={[
-        "80px 44px",
-        "80px 44px",
-        "80px 44px",
-        "120px 44px 144px",
-        "120px 44px 144px",
-      ]}
-      backgroundColor={["#282b8f"]}
-      overflow={["hidden"]}
-    >
+    <>
       <Box
         position={"relative"}
-        maxW={["100%", "100%", "100%", "1120px", "1120px"]}
-        margin={["0 auto"]}
-        display={["flex"]}
-        flexDirection={["column", "column", "column", "row", "row"]}
+        padding={[
+          "80px 44px",
+          "80px 44px",
+          "80px 44px",
+          "120px 44px 144px",
+          "120px 44px 144px",
+        ]}
+        backgroundColor={["#282b8f"]}
+        overflow={["hidden"]}
       >
         <Box
-          transition={["none 0s ease 0s"]}
-          transform={["translateX(0px)"]}
-          opacity={["1"]}
-          className={"resume-templates__content"}
+          position={"relative"}
+          maxW={["100%", "100%", "100%", "1120px", "1120px"]}
+          margin={["0 auto"]}
+          display={["flex"]}
+          flexDirection={["column", "column", "column", "row", "row"]}
         >
-          <Box className={"resume-templates__slider-arrow-container"}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              class="resume-templates__arrow"
-            >
-              <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              class="resume-templates__arrow"
-            >
-              <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
-            </svg>
-          </Box>
-          <Box className={"resume-templates__info"}>
-            <Text
-              fontSize={["32px", "32px", "32px", "46px", "46px"]}
-              fontWeight={"700"}
-              lineHeight={["34px", "34px", "34px", "40px", "40px"]}
-              color={"white"}
-              marginBottom={["8px", "8px", "8px", "24px", "24px"]}
-              textAlign={["center", "center", "center", "left", "left", "left"]}
-            >
-              Beautiful ready-to-use resume templates
-            </Text>
+          <Box
+            transition={["none 0s ease 0s"]}
+            transform={["translateX(0px)"]}
+            opacity={["1"]}
+            className={"resume-templates__content"}
+          >
             <Box
-              color={"white"}
-              marginBottom={"24px"}
-              textAlign={["center", "center", "center", "left", "left", "left"]}
+              className={"resume-templates__slider-arrow-container"}
+              onClick={() => setShowCarasol(!showCarasol)}
             >
-              Win over employers and recruiters by using one of our 18 elegant,
-              professionally-designed resume templates. Download to word or PDF.
-            </Box>
-            <Box
-              marginBottom={"142px"}
-              display={["none", "none", "none", "block", "block"]}
-            >
-              <a className="button" href="/app/create-resume">
-                Select Template
-              </a>
-            </Box>
-          </Box>
-          <Box className="resume-templates__trustpilot">
-            <Box className={"resume-templates__stars"}>
-              <Box className={"resume-templates__star"}></Box>
-              <Box className={"resume-templates__star"}></Box>
-              <Box className={"resume-templates__star"}></Box>
-              <Box className={"resume-templates__star"}></Box>
-              <Box className={"resume-templates__star"}></Box>
-            </Box>
-            <Text color={"white"}> 4.5 out of 5 </Text>
-            <Box fontSize={["14px"]} lineHeight={["16px"]} color={["white"]}>
-              based on 42,982 reviews on
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="/resume-examples"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="resume-templates__arrow"
               >
-                Trustpilot
-              </a>
+                <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="resume-templates__arrow"
+              >
+                <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
+              </svg>
+            </Box>
+            <Box className={"resume-templates__info"}>
+              <Text
+                fontSize={["32px", "32px", "32px", "46px", "46px"]}
+                fontWeight={"700"}
+                lineHeight={["34px", "34px", "34px", "40px", "40px"]}
+                color={"white"}
+                marginBottom={["8px", "8px", "8px", "24px", "24px"]}
+                textAlign={[
+                  "center",
+                  "center",
+                  "center",
+                  "left",
+                  "left",
+                  "left",
+                ]}
+              >
+                Beautiful ready-to-use resume templates
+              </Text>
+              <Box
+                color={"white"}
+                marginBottom={"24px"}
+                textAlign={[
+                  "center",
+                  "center",
+                  "center",
+                  "left",
+                  "left",
+                  "left",
+                ]}
+              >
+                Win over employers and recruiters by using one of our 18
+                elegant, professionally-designed resume templates. Download to
+                word or PDF.
+              </Box>
+              <Box
+                marginBottom={"142px"}
+                display={["none", "none", "none", "block", "block"]}
+              >
+                <a className="button" href="/app/create-resume">
+                  Select Template
+                </a>
+              </Box>
+            </Box>
+            <Box className="resume-templates__trustpilot">
+              <Box className={"resume-templates__stars"}>
+                <Box className={"resume-templates__star"}></Box>
+                <Box className={"resume-templates__star"}></Box>
+                <Box className={"resume-templates__star"}></Box>
+                <Box className={"resume-templates__star"}></Box>
+                <Box className={"resume-templates__star"}></Box>
+              </Box>
+              <Text color={"white"}> 4.5 out of 5 </Text>
+              <Box fontSize={["14px"]} lineHeight={["16px"]} color={["white"]}>
+                based on 42,982 reviews on
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="/resume-examples"
+                >
+                  Trustpilot
+                </a>
+              </Box>
             </Box>
           </Box>
         </Box>
-      </Box>
-      <Box
-        transform="
-          scale(0.835681, 0.8) 
-          translateX(900px) translateY(-59.2002px)"
-        transition={"opacity 0.1s ease-in 0s"}
-        opacity={["1"]}
-        pointerEvents={["auto"]}
-        className={"resume-templates__slider-wrapper"}
-      >
         <Box
-          className={"resume-templates__slider-container"}
-          width={"1406px"}
-          display={"flex"}
-          flexDirection={"column"}
-          justifyContent={"center"}
-          // alignItems={"center"}
+          transform="
+          scale(0.835681, 0.8) 
+          translateX(900px) 
+          translateY(-59.2002px)
+          "
+          transition={"opacity 0.1s ease-in 0s"}
+          opacity={["1"]}
+          pointerEvents={["auto"]}
+          className={"resume-templates__slider-wrapper"}
         >
           <Box
-            className={
-              "resume-templates__slider-button--left resume-templates__slider-button"
-            }
+            className={"resume-templates__slider-container"}
+            width={"1406px"}
+            display={"flex"}
+            flexDirection={"column"}
+            justifyContent={"center"}
+            // alignItems={"center"}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
+            <Box
+              className={
+                "resume-templates__slider-button--left resume-templates__slider-button"
+              }
             >
-              <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
-            </svg>
-          </Box>
-          <Box
-            className={
-              "resume-templates__slider-button--right resume-templates__slider-button"
-            }
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
+              </svg>
+            </Box>
+            <Box
+              className={
+                "resume-templates__slider-button--right resume-templates__slider-button"
+              }
             >
-              <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
-            </svg>
-          </Box>
-          <Slider {...settings}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
+              </svg>
+            </Box>
+            <Carasol />
+            {/* <Slider {...settings}>
             {sliderData.map((template, index) => {
               return (
                 <Box
@@ -244,8 +272,8 @@ const SelectResume = () => {
                 </Box>
               );
             })}
-          </Slider>
-          {/* <Swiper
+          </Slider> */}
+            {/* <Swiper
             id="coverEffectSlider"
             spaceBetween={15}
             grabCursor
@@ -308,9 +336,11 @@ const SelectResume = () => {
               );
             })}
           </Swiper> */}
+          </Box>
         </Box>
+        {/* <Carasol1 /> */}
       </Box>
-    </Box>
+    </>
   );
 };
 
