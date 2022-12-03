@@ -421,6 +421,7 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 .post-banner-cta.post-banner-cta--wide .post-banner-cta__text {
   padding: 0;
   text-align: left;
+  padding:10px
 }
 .post-banner-cta__title {
   font-size: 26px;
