@@ -51,6 +51,28 @@ const Slider = ({ title, desc, date, name, rating }) => {
         // navigation={true}
         modules={[Pagination, Navigation]}
         className="wrap-slides"
+        breakpoints={{
+          100: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+          },
+          390: {
+            slidesPerView: 2,
+            slidesPerGroup: 4,
+          },
+          550: {
+            slidesPerView: 2,
+            slidesPerGroup: 4,
+          },
+          786: {
+            slidesPerView: 4,
+            slidesPerGroup: 8,
+          },
+          992: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+          },
+        }}
       >
         {data.map((item, index) => {
           return (

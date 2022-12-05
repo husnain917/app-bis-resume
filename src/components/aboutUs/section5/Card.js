@@ -14,7 +14,7 @@ import Item from "antd/lib/list/Item";
 
 const Card = () => {
   return (
-    <SimpleGrid columns={3} spacing={10}>
+    <SimpleGrid columns={[1, 1, 2, 3, 3]} spacing={10}>
       {cardData.map((card, index) => {
         return (
           <>

@@ -9,7 +9,7 @@ const RatingComponent = ({ title, date, name, rating, feedback }) => {
   const [currentValue, setCurrentValue] = useState(rating);
   const [hoverValue, setHoverValue] = useState(undefined);
   return (
-    <Box paddingX={4} bg="white">
+    <Box paddingX={4} bg="white" borderRadius={"30px"}>
       <Box>
         <Box display="flex" mt="2" alignItems="center">
           {Array(5)

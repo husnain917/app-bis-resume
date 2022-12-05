@@ -34,7 +34,6 @@ const AboutUs = () => {
   });
   return (
     <Box className="masterWrapper">
-      <Box>navBar</Box>
       <Box>
         <Box>
           <Box
@@ -50,6 +49,8 @@ const AboutUs = () => {
                 justifyContent={"space-between"}
                 maxWidth={"1140px"}
                 margin={"0 auto"}
+                flexDirection={["column", "column", "row", "row", "row"]}
+                alignItems={["center", "center", "", "", ""]}
               >
                 <Box
                   width={"57%"}
@@ -60,15 +61,38 @@ const AboutUs = () => {
                   justifyContent={"center"}
                   flexDirection={"column"}
                 >
-                  <Text fontSize={"4.8rem"} lineHeight={"7rem"}>
+                  <Text
+                    fontSize={[
+                      "2.6rem",
+                      "3.4rem",
+                      "4.8rem",
+                      "4.8rem",
+                      "4.8rem",
+                    ]}
+                    lineHeight={"7rem"}
+                    textAlign={"centers"}
+                  >
                     About Us
                   </Text>
-                  <Text margin={"0 0 20px"}>
+                  <Text
+                    margin={"0 0 20px"}
+                    textAlign={[
+                      "center",
+                      "center",
+                      "initial",
+                      "initial",
+                      "initial",
+                    ]}
+                  >
                     We give you the tools, expert advice and knowledge to help
                     you build your career and be successful
                   </Text>
                 </Box>
-                <Box width={"45%"} textAlign={"center"} position={"relative"}>
+                <Box
+                  width={["85%", "85%", "45%", "45%", "45%"]}
+                  textAlign={"center"}
+                  position={"relative"}
+                >
                   <Image src="/about-us.webp" />
                 </Box>
               </Box>
@@ -163,7 +187,10 @@ const AboutUs = () => {
         </Box>
       </Box>
       <Box className="section4" paddingTop={"50px"} bg={"#f6f5f0"}>
-        <Box className="container" width={["750", "970", "1170px"]}>
+        <Box
+          className="container"
+          width={["", "750px", "750px", "970px", "1170px"]}
+        >
           <Box>
             <Text
               textAlign={"center"}
@@ -238,7 +265,7 @@ const AboutUs = () => {
       <Box className="section5">
         <Section5 />
       </Box>
-      <Box className="awardsSection">
+      <Box className="awardsSection" padding={"0 15px"}>
         <Box
           maxW={"960px"}
           width={"100%"}
