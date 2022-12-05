@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Box, Text, Button, Image, calc } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import SecondSection from "./secondSection/SecondSection";
@@ -19,13 +19,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-// import "./styles.css";
-
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
+import RatingComponent from "../ratingComponent/RatingComponent";
+import Slider from "./slider/Slider";
+import Section5 from "./section5/Section5";
+
 const AboutUs = () => {
+  const swiperRef = useRef();
+  console.log("Swiper>>>>>>>>>>>>", swiperRef);
   useEffect(() => {
     AOS.init();
   });
@@ -226,48 +229,128 @@ const AboutUs = () => {
                 </p>
               </Box>
               <Box className="reviews">
-                <Swiper
-                  id={"aboutUs"}
-                  slidesPerView={3}
-                  spaceBetween={30}
-                  slidesPerGroup={3}
-                  loop={true}
-                  loopFillGroupWithBlank={true}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  navigation={false}
-                  modules={[Pagination, Navigation]}
-                  className="wrap-slides"
-                >
-                  <SwiperSlide>Slide 1</SwiperSlide>
-                  <SwiperSlide>Slide 2</SwiperSlide>
-                  <SwiperSlide>Slide 3</SwiperSlide>
-                  <SwiperSlide>Slide 4</SwiperSlide>
-                  <SwiperSlide>Slide 5</SwiperSlide>
-                  <SwiperSlide>Slide 6</SwiperSlide>
-                  <SwiperSlide>Slide 7</SwiperSlide>
-                  <SwiperSlide>Slide 8</SwiperSlide>
-                  <SwiperSlide>Slide 9</SwiperSlide>
-                </Swiper>
-                <Box
-                  margin={["15px auto"]}
-                  width={"100%"}
-                  height={"20px"}
-                  position={"relative"}
-                  textAlign={"center"}
-                ></Box>
-              </Box>
-              <Box class="arrow-position">
-                <Button class="left-arrow arrows eos" onclick="arrowPrev()">
-                  ←
-                </Button>
-                <Button class="right-arrow arrows" onclick="arrowNext()">
-                  →
-                </Button>
+                <Slider />
               </Box>
             </Box>
           </Box>
+        </Box>
+      </Box>
+      <Box className="section5">
+        <Section5 />
+      </Box>
+      <Box className="awardsSection">
+        <Box
+          maxW={"960px"}
+          width={"100%"}
+          background={"#f6f5f0"}
+          padding={"50px 30px 70px 30px"}
+          borderRadius={"100px 0"}
+          margin={"0 auto"}
+        >
+          <Box>
+            <Text textAlign={"center"} fontSize={"3rem"} fontFamily={"heading"}>
+              Awards and recognitions
+            </Text>
+            <UnorderedList
+              margin={["0px"]}
+              padding={["0px"]}
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              flexWrap={"wrap"}
+              width={"100%"}
+              style={{
+                listStyle: "none",
+              }}
+              mt={"30px"}
+            >
+              <ListItem>
+                <Image src="/s1.png" />
+              </ListItem>
+              <ListItem>
+                <Image src="/s2.png" width={"145"} height={"118"} />
+              </ListItem>
+              <ListItem>
+                <Image src="/s3.png" />
+              </ListItem>
+              <ListItem>
+                <Image src="/s4.png" />
+              </ListItem>
+            </UnorderedList>
+          </Box>
+        </Box>
+      </Box>
+      <Box className="contactSection" paddingTop={"50px"}>
+        <Box width={"100%"} padding="0 30px">
+          <Box
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            flexWrap={"wrap"}
+          >
+            <Text
+              textAlign={"center"}
+              fontSize={"2rem"}
+              minW={"330px"}
+              margin={"0"}
+              fontWeight={"bold"}
+            >
+              Get in Touch
+            </Text>
+            <Box className="cta-wrap" margin={"0 30px"}>
+              <Button
+                // className="btn btn-primary"
+                href="https://www.bold.com/bold-jobs/"
+                target="_blank"
+                rel="noopener"
+                backgroundColor="#02818c"
+                color={"white"}
+                _hover={{
+                  backgroundColor: "#02818c",
+                }}
+              >
+                JOIN OUR TEAM
+              </Button>
+            </Box>
+            <Button
+              className="btn btn-primary"
+              margin={"0 30px"}
+              backgroundColor="#02818c"
+              color={"white"}
+              href="https://www.myperfectresume.com/contact-us"
+              _hover={{
+                border: "1px dashed gray",
+              }}
+            >
+              CONTACT US
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+      <Box
+        style={{
+          color: "#46464e",
+          fontSize: "12px",
+          margin: "30px 0 0",
+          textAlign: "center",
+        }}
+      >
+        Advertisement
+      </Box>
+      <Box
+        className="footerNotes"
+        maxW={"1020px"}
+        padding={"0 15px"}
+        margin={"30px auto 0 auto"}
+        lineHeight={"1.2"}
+        fontSize={"0.5rem"}
+        textAlign={"center"}
+      >
+        <Box margin={"0 0 20px"}>
+          *The names and logos of the companies referred to above are all
+          trademarks of their respective holders. Unless specifically stated
+          otherwise, such references are not intended to imply any affiliation
+          or association with MyPerfectResume
         </Box>
       </Box>
     </Box>
