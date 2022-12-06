@@ -1,432 +1,404 @@
-import {
-  Box,
-  Container,
-} from '@chakra-ui/react';
-import { Tooltip } from 'react-tippy';
-import Image from 'next/image';
+import { Box, Flex } from '@chakra-ui/react';
+import Link from 'next/link';
 import React from 'react';
-import avatar from "../../public/avatar.jpg";
-import { Text } from "../../src/components/template1/index";
-import FashionCustomHook from "../../src/components/fashionTemp/FashionCustomHook";
+import { Tooltip } from 'react-tippy';
+import Name from '../../src/components/commonSection/Name';
+import style from '../../styles/templates/template1.module.scss';
 import styles from "../../styles/graphicDesignerTemp.module.css";
+import Classes from '../../styles/templates/flightAttendant.module.css';
+import Profession from '../../src/components/commonSection/Profession';
+import Contact from '../../src/components/commonSection/Contact';
+import Heading from '../../src/components/commonSection/Heading';
+import Skill from '../../src/components/commonSection/Skill';
+import WorkExperience from '../../src/components/commonSection/WorkExperience';
+import Education from '../../src/components/commonSection/Education';
+import Interest from '../../src/components/commonSection/Interest';
+import TempLayout from '../../src/components/tempNav/TempLayout';
+import { useSelector } from 'react-redux';
+import useShow from '../../src/components/tempSectionSide/useShow';
+import SectionSideMenu from '../../src/components/tempSectionSide/SectionSideMenu';
+import About from '../../src/components/commonSection/About';
 import {
-  FaPhoneAlt,
-  FaRegEnvelope,
-  FaLocationArrow,
-  FaIntercom,
-} from "react-icons/fa";
-import Link from "next/link";
-import Underline from '../../src/components/graphicDesignerTemp/Underline';
-import DesignerExpertise from "../../src/components/graphicDesignerTemp/DesignerExpertise";
-import DigitalEducation from "../../src/components/graphicDesignerTemp/DigitalEducation";
-import DigitalExperience from "../../src/components/graphicDesignerTemp/DigitalExperience";
-import DigitalSkill from "../../src/components/graphicDesignerTemp/DigitalSkill";
+  EDUCATION,
+  SKILL,
+  WORK,
+  INTEREST
+} from '../../src/components/tempSectionSide/SectionSideConstant';
+import ImageSelector from '../../src/components/imageSelector';
+import Underline from "../../src/components/graphicDesignerTemp/Underline";
 
-export default function graphicDesignTemp() {
+export default function Graphic_Design_Temp() {
   // redux Data
-  const { resumeEditor } = FashionCustomHook();
+  let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const [show, setShow] = useShow();
 
   return (
     <>
-      <Link href={"/templates"}>
-        <div className={styles.swapCont}>
-          <Tooltip title="Change Template" arrow distance={20}>
-            <div className={styles.swap}>
-              <img src="/icons/swap.png" />
-            </div>
-          </Tooltip>
-        </div>
-      </Link>
-      <Container
-        minW={'70%'}
-        display={'flex'}
-      >
-        <Box
-          backgroundColor={'#F4F5F7'}
-          margin={'30px 0px'}
-          padding={'10px 30px'}
-          width={'100%'}
+      <TempLayout work={true} education={true} skills={true} interest={true}>
+        <Link href={'/templates'}>
+          <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
+            <Tooltip title="Change Template" arrow distance={20}>
+              <div className={style.swap}>
+                <img src="/icons/swap.png" />
+              </div>
+            </Tooltip>
+          </div>
+        </Link>
+        <Flex
+          justifyContent={{ base: 'none', md: 'center' }}
+          overflow="auto"
+          flexDir={'column'}
+          alignItems={{ sm: 'none', md: 'center' }}
+          bg={{ md: 'none', lg: '#fff' }}
+          className={`${Classes.main}`}
         >
-          {/* profile heading */}
           <Box
-            display={'flex'}
-            justifyContent={'center'}
-            flexDirection={'column'}
-            alignItems={'center'}
+            display="flex"
+            flexDir="row"
+            w="100%"
+            minW="850px"
+            maxW="850px"
+            mb={'20px'}
+            mx={'20px'}
+            mt="100px"
           >
-            {/* firstName */}
-            <Text
-              value={resumeEditor?.resumeData?.profile?.firstName}
-              placeholder="Your Name"
-              customclass={`${styles.nameStyle}`}
-              path={"profile.firstName"}
-            />
-
-            {/* lastName */}
-            <Text
-              value={resumeEditor?.resumeData?.profile?.lastName}
-              placeholder="Your Profession"
-              customclass={`${styles.lastNameStyle}`}
-              path={"profile.lastName"}
-            />
-          </Box>
-          {/* profile heading end */}
-
-
-          {/* avatar container */}
-          <Box
-            border={'3px solid #3D3D3D'}
-            display={'flex'}
-            justifyContent={'space-between'}
-            padding={'0px 100px'}
-            width={'100%'}
-            margin={'50px 0px'}
-          >
-            {/* left container */}
+            {/* =============== First Section ============== */}
             <Box
-              display={'flex'}
-              alignItems={'flex-end'}
-              flexDirection={'column'}
-              margin={'25px 0px'}
-              width={'32%'}
-            >
-              {/* phone No */}
-              <Box
-                margin={'10px 0px'}
-                display={'flex'}
-                alignItems={'center'}
-              >
-                <Box>
-                  <Text
-                    value={resumeEditor?.resumeData?.contact?.graphicContectNo}
-                    placeholder={`+123-456-7890`}
-                    customclass={`${styles.graphicContectLeftStyle}`}
-                    path={"contact.graphicContectNo"}
-                  />
-                </Box>
-                <Box
-                  height={'35px'}
-                  width={'35px'}
-                  borderRadius={'100% 100%'}
-                  backgroundColor={'#947F57'}
-                  display={'flex'}
-                  alignItems={'center'}
-                  justifyContent={'center'}
-                >
-                  <FaPhoneAlt color='#fff' />
-                </Box>
-              </Box>
-
-              {/* E-mail */}
-              <Box
-                margin={'10px 0px'}
-                display={'flex'}
-                alignItems={'center'}
-              >
-                <Box>
-                  <Text
-                    value={resumeEditor?.resumeData?.contact?.graphicContectEmail}
-                    placeholder={`hello@reallygreatsite.com`}
-                    customclass={`${styles.graphicContectLeftStyle}`}
-                    path={"contact.graphicContectEmail"}
-                  />
-                </Box>
-                <Box
-                  height={'35px'}
-                  width={'35px'}
-                  borderRadius={'100% 100%'}
-                  backgroundColor={'#947F57'}
-                  display={'flex'}
-                  alignItems={'center'}
-                  justifyContent={'center'}
-                >
-                  <FaRegEnvelope color='#fff' />
-                </Box>
-              </Box>
-            </Box>
-            {/* center container */}
-            <Box
-              width={'32%'}
+              w="100%"
+              bgColor="#F4F5F7"
+              borderLeftRadius={6}
+              py={2}
+              px={8}
               position={'relative'}
             >
-              {/* avatar */}
+              {/* _____________ Profile _____________ */}
               <Box
-                height={'200px'}
-                width={'100%'}
-                position={'absolute'}
-                bottom={'0%'}
+                display={'flex'}
+                flexDirection={'column'}
+                alignItems={'center'}
               >
-                <Image
-                  src={avatar}
-                  alt={'Image Not Found'}
-                  style={{
-                    height: '200px',
-                    width: '100%',
-                    borderRadius: '50% 50%'
-                  }}
+                <Name
+                  FName={true}
+                  SName={true}
+                  direction="row"
+                  FNameStyle={styles.nameStyle}
+                  SNameStyle={styles.nameStyle}
+                />
+                <Profession
+                  professionStyle={styles.profileSubTitle}
                 />
               </Box>
-            </Box>
-
-
-            {/* right container */}
-            <Box
-              display={'flex'}
-              alignItems={'flex-start'}
-              flexDirection={'column'}
-              margin={'25px 0px'}
-              width={'32%'}
-            >
-              {/* Real Site */}
+              {/* _____________ Image _____________ */}
               <Box
-                margin={'10px 0px'}
+                border={'3px solid #3D3D3D'}
                 display={'flex'}
-                alignItems={'center'}
+                justifyContent={'space-between'}
+                width={'100%'}
+                margin={'50px 0px 30px 0px'}
               >
+                {/* left container */}
                 <Box
-                  height={'35px'}
-                  width={'35px'}
-                  borderRadius={'100% 100%'}
-                  backgroundColor={'#947F57'}
                   display={'flex'}
-                  alignItems={'center'}
-                  justifyContent={'center'}
+                  justifyContent={'flex-end'}
+                  margin={'25px 0px'}
+                  width={'34%'}
                 >
-                  <FaIntercom color='#fff' />
+                  <Contact
+                    phone={true}
+                    email={true}
+                    circleIcon={true}
+                    circleBg="#947F57"
+                    circleSize="35px"
+                    iconColor="#fff"
+                    margin={'12px 0px 0px 0px'}
+                    parentStyle={styles.contactFont}
+                  />
                 </Box>
-                <Box>
-                  <Text
-                    value={resumeEditor?.resumeData?.contact?.graphicContectRealSite}
-                    placeholder={`reallygreatsite.com`}
-                    customclass={`${styles.graphicContectRightStyle}`}
-                    path={"contact.graphicContectRealSite"}
+                {/* center container */}
+                <Box
+                  width={'26%'}
+                >
+                  {/* avatar */}
+                  <Box
+                    position={'absolute'}
+                    top={'19%'}
+                  >
+                    <ImageSelector
+                      minWidth="200px"
+                      maxWidth="200px"
+                      maxHeight="200px"
+                      minHeight="200px"
+                    />
+                  </Box>
+                </Box>
+                {/* right container */}
+                <Box
+                  display={'flex'}
+                  justifyContent={'flex-start'}
+                  margin={'25px 0px'}
+                  width={'34%'}
+                >
+                  <Contact
+                    linkedinURL={true}
+                    website={true}
+                    circleIcon={true}
+                    circleBg="#947F57"
+                    circleSize="35px"
+                    iconColor="#fff"
+                    margin={'12px 0px 0px 0px'}
+                    parentStyle={styles.contactFont}
                   />
                 </Box>
               </Box>
-
-              {/* Live Location */}
+              {/* _____________ About me _____________ */}
               <Box
-                margin={'10px 0px'}
-                display={'flex'}
-                alignItems={'center'}
+                paddingTop={'20px'}
               >
+                <Underline
+                  width='100%'
+                  bgColor='#947F57'
+                />
                 <Box
-                  height={'35px'}
-                  width={'35px'}
-                  borderRadius={'100% 100%'}
-                  backgroundColor={'#947F57'}
                   display={'flex'}
-                  alignItems={'center'}
                   justifyContent={'center'}
                 >
-                  <FaLocationArrow color='#fff' />
+                  <Heading
+                    title={'PROFILE'}
+                    color="#947F57"
+                    padding={'0px 0px 0px 86px'}
+                  />
                 </Box>
-                <Box>
-                  <Text
-                    value={resumeEditor?.resumeData?.contact?.graphicContectLocation}
-                    placeholder={`123 Anywhere St., Any City`}
-                    customclass={`${styles.graphicContectRightStyle}`}
-                    path={"contact.graphicContectLocation"}
+                <Underline
+                  width='100%'
+                  bgColor='#947F57'
+                />
+                <Box
+                  display={'flex'}
+                  justifyContent={'center'}
+                >
+                  <About
+                    minW="40%"
+                    maxW="40%"
+                    aboutStyle={Classes.aboutText}
+                    textColor="#947F57"
+                    fontSize="16px"
+                    fontWeight={600}
                   />
                 </Box>
               </Box>
+              {/* _____________ main container _____________ */}
+              <Box
+                marginTop={'30px'}
+                width={'100%'}
+                display={'flex'}
+              >
+                {/* left container */}
+                <Box
+                  width={'40%'}
+                  borderRight={'2px solid #947F57'}
+                  padding={'0px 40px 0px 0px'}
+                >
+                  {/* expertise section */}
+                  {resumeData?.hobbies?.visible && (
+                    <>
+                      <Box>
+                        <Underline
+                          width='100%'
+                          bgColor='#947F57'
+                        />
+                        <Box
+                          display={'flex'}
+                        >
+                          <Heading
+                            title="INTEREST"
+                            color="#947F57"
+                            fontSize={'20px'}
+                            fontWeight={600}
+                            onSideSectionShow={() =>
+                              setShow({ ...show, interest: true })
+                            }
+                          />
+                          {show.interest && (
+                            <SectionSideMenu
+                              bg="#947F57"
+                              iconColor={'#fff'}
+                              onHide={() => setShow({ ...show, interest: false })}
+                              onDelete={INTEREST}
+                            />
+                          )}
+                        </Box>
+                        <Underline
+                          width='100%'
+                          bgColor='#947F57'
+                        />
+                      </Box>
+                      {/* Interest Component  */}
+                      <Interest
+                        interestStyle={styles.contactFont}
+                        parentContainerStyle={styles.parentDiv}
+                      />
+                    </>
+                  )}
+                  {/* skill */}
+                  {resumeData?.skills?.visible && (
+                    <>
+                      <Box>
+                        <Underline
+                          width='100%'
+                          bgColor='#947F57'
+                        />
+                        <Box
+                          display={'flex'}
+                        >
+                          <Heading
+                            title={'RELEVANT SKILLS'}
+                            color="#947F57"
+                            fontSize={'20px'}
+                            fontWeight={600}
+                            onSideSectionShow={() =>
+                              setShow({ ...show, skills: true })
+                            }
+                          />
+                          {show.skills && (
+                            <SectionSideMenu
+                              onHide={() => setShow({ ...show, skills: false })}
+                              bg="#947F57"
+                              iconColor={'#fff'}
+                              onDelete={SKILL}
+                            />
+                          )}
+                        </Box>
+                        <Underline
+                          width='100%'
+                          bgColor='#947F57'
+                        />
+                      </Box>
+                      {/* skill component */}
+                      <Skill
+                        skillStyle={styles.contactFont}
+                        progressBar={true}
+                        strokeWidth="2"
+                        lineStyle={styles.line}
+                        strokeColor="#947F57"
+                        trailColor="#fff"
+                        percentageStyle={styles.percent}
+                        parentContainerStyle={styles.parentDiv}
+                      />
+                    </>
+                  )}
+                </Box>
+
+                {/* right container */}
+                <Box
+                  width={'60%'}
+                  padding={'0px 0px 0px 40px'}
+                >
+                  {/* work experience */}
+                  {resumeData?.work?.visible && (
+                    <>
+                      <Box>
+                        <Underline
+                          width='100%'
+                          bgColor='#947F57'
+                        />
+                        <Box
+                          display={'flex'}
+                          justifyContent={'space-between'}
+                        >
+                          <Heading
+                            color={'#947F57'}
+                            title="WORK EXPERIENCE"
+                            fontSize={'20px'}
+                            fontWeight={600}
+                            onSideSectionShow={() => setShow({ ...show, work: true })}
+                          />
+                          {show.work && (
+                            <SectionSideMenu
+                              onHide={() => setShow({ ...show, work: false })}
+                              bg="#947F57"
+                              iconColor={'#fff'}
+                              onDelete={WORK}
+                            />
+                          )}
+                        </Box>
+                        <Underline
+                          width='100%'
+                          bgColor='#947F57'
+                        />
+                      </Box>
+                      {/* _____________ Work Experience _____________ */}
+                      <WorkExperience
+                        company={true}
+                        position={true}
+                        date={true}
+                        summary={true}
+                        companyStyle={Classes.company}
+                        positionStyle={Classes.programText}
+                        dateStyle={Classes.date}
+                        summaryStyle={Classes.description}
+                        parentContainerStyle={styles.parentDiv}
+                        textColor="#947F57"
+                        direction='row'
+                      />
+                    </>
+                  )}
+                  {/* education */}
+                  {resumeData?.education?.visible && (
+                    <>
+                      <Box>
+                        <Underline
+                          width='100%'
+                          bgColor='#947F57'
+                        />
+                        <Box
+                          display={'flex'}
+                          justifyContent={'space-between'}
+                        >
+                          <Heading
+                            color={'#947F57'}
+                            title="EDUCATION"
+                            fontSize={'20px'}
+                            fontWeight={600}
+                            onSideSectionShow={() =>
+                              setShow({ ...show, education: true })
+                            }
+                          />
+                          {show.education && (
+                            <SectionSideMenu
+                              onHide={() => setShow({ ...show, education: false })}
+                              bg="#947F57"
+                              iconColor={'#fff'}
+                              onDelete={EDUCATION}
+                            />
+                          )}
+                        </Box>
+                        <Underline
+                          width='100%'
+                          bgColor='#947F57'
+                        />
+                      </Box>
+                      <Education
+                        degree={true}
+                        institution={true}
+                        date={true}
+                        summary={true}
+                        parentContainerStyle={styles.parentDiv}
+                        institutionStyle={Classes.company}
+                        degreeStyle={Classes.programText}
+                        dateStyle={Classes.date}
+                        summaryStyle={Classes.description}
+                        degree_placeholder="Study Program"
+                        textColor="#947F57"
+                        direction='row'
+                      />
+                    </>
+                  )}
+                </Box>
+              </Box>
             </Box>
-            {/* right container end */}
           </Box>
-          {/* avatar container end */}
-
-
-          {/* profile section */}
-          <Box
-            marginTop={'100px'}
-          >
-            <Underline
-              width='100%'
-              bgColor='#947F57'
-            />
-            <Text
-              value={resumeEditor?.resumeData?.objective?.aboutTitle}
-              placeholder="PROFILE"
-              customclass={`${styles.profileTxt}`}
-              path={"objective.aboutTitle"}
-              editable={false}
-            />
-            <Underline
-              width='100%'
-              bgColor='#947F57'
-            />
-
-            {/* profile description */}
-            <Box
-              display={'flex'}
-              justifyContent={'center'}
-            >
-              <Text
-                value={resumeEditor?.resumeData?.objective?.aboutBody}
-                placeholder="Short and engaging pitch about yourself."
-                customclass={`${styles.aboutBodyDes}`}
-                path={"objective.aboutBody"}
-              />
-            </Box>
-          </Box>
-
-          {/* main section */}
-          <Box
-            marginTop={'30px'}
-            width={'100%'}
-            display={'flex'}
-          >
-            {/* left container */}
-            <Box
-              width={'40%'}
-              borderRight={'2px solid #947F57'}
-              padding={'0px 40px 0px 0px'}
-            >
-              {/* expertise section */}
-              <Underline
-                width='100%'
-                bgColor='#947F57'
-              />
-              <Text
-                value={resumeEditor?.resumeData?.expertise?.expertiseTitle}
-                placeholder='EXPERTISE'
-                customclass={`${styles.sectionHeadings}`}
-                path={"expertise.expertiseTitle"}
-                editable={false}
-              />
-              <Underline
-                width='100%'
-                bgColor='#947F57'
-              />
-              <Box
-                margin={'20px 0px'}
-              >
-                {resumeEditor?.resumeData?.expertise?.visible && (
-                  <>
-                    <DesignerExpertise
-                      data={
-                        resumeEditor?.resumeData?.expertise?.items?.length
-                          ? [...resumeEditor?.resumeData?.expertise?.items]
-                          : [...sampleData?.data?.expertise?.items]
-                      }
-                      color={resumeEditor?.color}
-                      updater={resumeEditor?.updater}
-                    />
-                  </>
-                )}
-              </Box>
-
-              {/* education section */}
-              <Underline
-                width='100%'
-                bgColor='#947F57'
-              />
-              <Text
-                value={resumeEditor?.resumeData?.education?.heading}
-                placeholder="EDUCATION"
-                customclass={`${styles.sectionHeadings}`}
-                path={"education.heading"}
-                editable={false}
-              />
-              <Underline
-                width='100%'
-                bgColor='#947F57'
-              />
-              <Box
-                margin={'20px 0px'}
-              >
-                {resumeEditor?.resumeData?.education?.visible && (
-                  <>
-                    <DigitalEducation
-                      data={
-                        resumeEditor?.resumeData?.education?.items?.length
-                          ? [...resumeEditor?.resumeData?.education?.items]
-                          : [...sampleData?.data?.education?.items]
-                      }
-                      color={resumeEditor?.color}
-                      updater={resumeEditor?.updater}
-                    />
-                  </>
-                )}
-              </Box>
-            </Box>
-
-            {/* right container */}
-            <Box
-              width={'60%'}
-              padding={'0px 0px 0px 40px'}
-            >
-              {/* work experience */}
-              <Underline
-                width='100%'
-                bgColor='#947F57'
-              />
-              <Text
-                value={resumeEditor?.resumeData?.experience?.heading}
-                placeholder="WORK EXPERIENCE"
-                customclass={`${styles.sectionHeadings}`}
-                path={"experience.heading"}
-                editable={false}
-              />
-              <Underline
-                width='100%'
-                bgColor='#947F57'
-              />
-              <Box
-                margin={'20px 0px'}
-              >
-                {resumeEditor?.resumeData?.work?.visible && (
-                  <>
-                    <DigitalExperience
-                      data={
-                        resumeEditor?.resumeData?.work?.items?.length
-                          ? [...resumeEditor?.resumeData?.work?.items]
-                          : [...sampleData?.data?.work?.items]
-                      }
-                      color={resumeEditor?.color}
-                      updater={resumeEditor?.updater}
-                    />
-                  </>
-                )}
-              </Box>
-
-              {/* skill */}
-              <Underline
-                width='100%'
-                bgColor='#947F57'
-              />
-              <Text
-                value={resumeEditor?.resumeData?.skills?.heading}
-                placeholder="SKILL"
-                customclass={`${styles.sectionHeadings}`}
-                path={"skills.heading"}
-                editable={false}
-              />
-              <Underline
-                width='100%'
-                bgColor='#947F57'
-              />
-              <Box
-                margin={'20px 0px'}
-              >
-                {resumeEditor?.resumeData?.skills?.visible && (
-                  <>
-                    <DigitalSkill
-                      data={
-                        resumeEditor?.resumeData?.skills?.items?.length
-                          ? [...resumeEditor?.resumeData?.skills?.items]
-                          : [...sampleData?.data?.skills?.items]
-                      }
-                      color={resumeEditor?.color}
-                      updater={resumeEditor?.updater}
-                    />
-                  </>
-                )}
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-      </Container>
+        </Flex>
+      </TempLayout>
     </>
   )
 }
