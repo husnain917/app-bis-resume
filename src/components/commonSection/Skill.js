@@ -193,6 +193,16 @@ const Skill = (props) => {
                     </>
                   )}
                 </Box>
+                <Box display={"flex"}>
+                  <Line
+                    percent={progress[index]}
+                    strokeWidth={strokeWidth ? strokeWidth : "6"}
+                    strokeColor={strokeColor ? strokeColor : "#000"}
+                    trailColor={trailColor ? trailColor : "gray"}
+                    trailWidth={trailWidth ? trailWidth : "2"}
+                    className={`${lineStyle ? lineStyle : ""}`}
+                  />
+                </Box>
 
                 <Input
                   maxW={50}
