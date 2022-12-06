@@ -1,12 +1,4 @@
-import {
-  Box,
-  HStack,
-  Input,
-  ListItem,
-  Stack,
-  UnorderedList,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Input, ListItem, Stack, UnorderedList } from '@chakra-ui/react';
 import React from 'react';
 import { connect, useDispatch } from 'react-redux';
 import {
@@ -90,12 +82,19 @@ const Skill = (props) => {
     lineStyle,
     parentContainerStyle,
     childContainerStyle,
+    DndDirection,
+    margin,
+    percentStyle,
   } = props;
 
   return (
-    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
+    <div
+      className={`${parentContainerStyle ? parentContainerStyle : ''}`}
+      style={{ margin: margin ? margin : '' }}
+    >
       <Dnd
         data={data}
+        direction={DndDirection ? DndDirection : ''}
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         reorder={(e) => onOrderUpdate(e)}
@@ -139,7 +138,7 @@ const Skill = (props) => {
               />
             )}
             {progressBar && (
-              <>
+              <Box display={'flex'}>
                 <Line
                   percent={progress[index]}
                   strokeWidth={strokeWidth ? strokeWidth : '6'}
@@ -154,13 +153,23 @@ const Skill = (props) => {
                   maxH={30}
                   borderColor="none"
                   variant="unstyled"
-                  placeholder="%"
+                  placeholder="0"
                   value={`${progress[index]}`}
                   onChange={(e) => validateData(e, index)}
                   type="number"
                   className={`${percentageStyle}`}
+                  style={{ marginLeft: '5px' }}
                 />
-              </>
+                <div
+                  style={{
+                    marginLeft: progress[index] > 99 ? '-22px' : '-30px',
+                    marginTop: '5px',
+                  }}
+                  className={`${percentStyle} ${percentageStyle}`}
+                >
+                  %
+                </div>
+              </Box>
             )}
           </Stack>
         )}

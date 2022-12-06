@@ -29,6 +29,12 @@ const SalesRepresentative = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
   const [show, setShow] = useShow();
+import Link from "next/link";
+import { Box, Center, Image } from "@chakra-ui/react";
+import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+import { GiSpiderWeb } from "react-icons/gi";
+import { MdLocationOn } from "react-icons/md";
+
 
   return (
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//

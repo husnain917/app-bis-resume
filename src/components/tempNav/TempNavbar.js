@@ -1,14 +1,36 @@
-import { Box, Button } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Circle,
+  Icon,
+  Text,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+  DrawerFooter,
+  useDisclosure,
+} from '@chakra-ui/react';
 import React from 'react';
-
 import {
   MoonIcon,
   EditIcon,
   SettingsIcon,
   HamburgerIcon,
 } from '@chakra-ui/icons';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from 'react-icons/fa';
 import LayoutModal from './LayoutModal';
-
+import { useState } from 'react';
+import { MobileNavItem } from '../navbar/Navbar';
+import { NAV_ITEMS } from '../constant/navbarLinks/NavbarLinks';
+import Link from 'next/link';
 export default function TempNavbar({
   work,
   education,
@@ -20,37 +42,49 @@ export default function TempNavbar({
   interest,
   certificate,
 }) {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
+  const [showNav, setShowNav] = useState(false);
   return (
     <Box
-      display="flex"
-      flexDir="column"
-      justifyContent="center"
-      alignItems="center"
-      overflow={'auto'}
+      display={'flex'}
+      h="auto"
+      minW={{ base: '1000px', lg: '100vw' }}
+      mt={1}
+      zIndex="999"
+      pos={{ base: 'relative', lg: 'fixed' }}
+      justifyContent={'center'}
     >
+      <Link href={'/'}>
+        <img
+          src={'https://www.linkpicture.com/q/bisResumeLogo.svg'}
+          width="200px"
+          height={'auto'}
+          style={{
+            position: 'absolute',
+            left: '20px',
+            top: '0px',
+            cursor: 'pointer',
+          }}
+          alt="Image not Found"
+        />
+      </Link>
       <Box
+        w="500px"
         display="flex"
-        alignItems="center"
+        bgColor="#006772"
+        borderRadius={'100px'}
         justifyContent="center"
-        bgColor="#313C4E"
-        w="50%"
-        h="50px"
-        pl={['100px', , '0px', , ,]}
-        ml={['100px', , '0px']}
-        borderRadius={['0px', '100px', '100px']}
-        mt={['5%', '7%', '10%', ,]}
-        minW="600px"
-        maxW="600px"
-        position={[, , 'fixed']}
-        zIndex="999"
+        py={1}
       >
         <Button
           bgColor="transparent"
+          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
           color="white"
           _hover={{
             backgroundColor: 'transparent',
 
-            color: '#1C6672',
+            color: '#313C4E',
             transition: '0.4s',
           }}
         >
@@ -59,11 +93,12 @@ export default function TempNavbar({
         </Button>
         <Button
           bgColor="transparent"
+          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
           color="white"
           _hover={{
             backgroundColor: 'transparent',
 
-            color: '#1C6672',
+            color: '#313C4E',
             transition: '0.4s',
           }}
         >
@@ -81,14 +116,14 @@ export default function TempNavbar({
           interest={interest}
           certificate={certificate}
         />
-
         <Button
           bgColor="transparent"
           color="white"
+          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
           _hover={{
             backgroundColor: 'transparent',
 
-            color: '#1C6672',
+            color: '#313C4E',
             transition: '0.4s',
           }}
         >
@@ -96,10 +131,106 @@ export default function TempNavbar({
           Setting
         </Button>
       </Box>
-      {/* <Box w="20%" h="40px" bgColor="#313C4E" borderRadius="100px" mt="5px">
-        <HamburgerIcon color="whiteAlpha.800" />
-     
-      </Box> */}
+
+      <Box position={'absolute'} right={{ base: '10px', lg: '25px' }}>
+        <Icon
+          as={HamburgerIcon}
+          onClick={onOpen}
+          h="30px"
+          w="30px"
+          cursor="pointer"
+          color={'#006772'}
+          mr={{ base: '0px', md: '10px', lg: '0px' }}
+        />
+      </Box>
+      <Drawer
+        isOpen={isOpen}
+        placement="right"
+        onClose={onClose}
+        finalFocusRef={btnRef}
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>
+            <Link href={'/'}>
+              <img
+                src={'https://www.linkpicture.com/q/bisResumeLogo.svg'}
+                width="200px"
+                height={'auto'}
+                style={{
+                  cursor: 'pointer',
+                  marginLeft: '-30px',
+                  marginBottom: '30px',
+                  marginTop: '30px',
+                }}
+                alt="Image not Found"
+              />
+            </Link>
+          </DrawerHeader>
+          <DrawerBody>
+            {NAV_ITEMS.map((navItem) => (
+              <MobileNavItem key={navItem.label} {...navItem} />
+            ))}
+            <Box w="full" bg="gray" h="1px" mb="10px" mt="10px"></Box>
+            <Text
+              fontSize={'16px'}
+              _hover={{
+                color: '#006772',
+                transition: 'all .2s  ease-in',
+              }}
+              cursor="pointer"
+            >
+              Sign Out
+            </Text>
+            <Box display={'flex'} justifyContent="space-evenly" mt="20px">
+              <Circle
+                size={'35px'}
+                bg={'#313C4E'}
+                _hover={{
+                  bg: ' #002D6C',
+                  transition: 'background .1s ease-out',
+                }}
+              >
+                <FaFacebookF color="#fff" size={'20px'} />
+              </Circle>
+
+              <Circle
+                size={'35px'}
+                bg={'#313C4E'}
+                _hover={{
+                  bg: '#0073b1',
+                  transition: 'background .1s ease-out',
+                }}
+              >
+                <FaLinkedinIn color="#fff" size={'20px'} />
+              </Circle>
+              <Circle
+                size={'35px'}
+                bg={'#313C4E'}
+                _hover={{
+                  bg: '#0073b1',
+                  transition: 'background .1s ease-out',
+                }}
+              >
+                <FaTwitter color="#fff" size={'20px'} />
+              </Circle>
+              <Circle
+                size={'35px'}
+                bg={'#313C4E'}
+                _hover={{
+                  bg: '#cf4848',
+                  transition: 'background .3s ease-out',
+                }}
+              >
+                <FaInstagram color="#fff" size={'20px'} />
+              </Circle>
+            </Box>
+          </DrawerBody>
+
+          <DrawerFooter></DrawerFooter>
+        </DrawerContent>
+      </Drawer>
     </Box>
   );
 }
