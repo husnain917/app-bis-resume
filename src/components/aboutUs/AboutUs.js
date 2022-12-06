@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Box, Text, Button, Image, calc } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import SecondSection from "./secondSection/SecondSection";
@@ -25,8 +25,24 @@ import { Pagination, Navigation } from "swiper";
 import RatingComponent from "../ratingComponent/RatingComponent";
 import Slider from "./slider/Slider";
 import Section5 from "./section5/Section5";
-import SideBar from "./SideBar/SideBar";
+import SideBar from "../sideBar/SideBar";
+import SideBarSection from "./SideBarSection/SideBarSection";
 const AboutUs = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const listenToScroll = () => {
+    let heightToHidden = 550;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (winScroll > heightToHidden) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+  }, []);
   const swiperRef = useRef();
   console.log("Swiper>>>>>>>>>>>>", swiperRef);
   useEffect(() => {
@@ -35,9 +51,20 @@ const AboutUs = () => {
   return (
     <Box classNam="siteContainer">
       <Box className="masterWrapper">
-        <SideBar />
         <Box>
           <Box>
+            <Box
+              borderRadius={["60px"]}
+              width={["60px"]}
+              position={["fixed"]}
+              zIndex={"1049"}
+              transform={["scale(1)"]}
+              display={"flex"}
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
+              {isVisible && <SideBarSection />}
+            </Box>
             <Box
               padding={"50px 0px 50px 0px"}
               className={"mainWrapper"}
