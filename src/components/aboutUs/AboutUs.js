@@ -12,6 +12,7 @@ import {
   OrderedList,
   UnorderedList,
 } from "@chakra-ui/react";
+import Fade from "react-reveal/Fade";
 // / Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -27,14 +28,18 @@ import Slider from "./slider/Slider";
 import Section5 from "./section5/Section5";
 import SideBar from "../sideBar/SideBar";
 import SideBarSection from "./SideBarSection/SideBarSection";
+import GoTopButton from "./goToTopButton/GoTopButton";
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {
-    let heightToHidden = 550;
+    let heightToHidden = 20;
+    let againHide = 4800;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (winScroll > heightToHidden) {
+    if (winScroll < heightToHidden || winScroll > againHide) {
+      setIsVisible(false);
+    } else if (winScroll > heightToHidden) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -53,17 +58,22 @@ const AboutUs = () => {
       <Box className="masterWrapper">
         <Box>
           <Box>
+            <GoTopButton />
             <Box
               borderRadius={["60px"]}
               width={["60px"]}
               position={["fixed"]}
               zIndex={"1049"}
               transform={["scale(1)"]}
-              display={"flex"}
-              justifyContent={"center"}
-              alignItems={"center"}
+              marginLeft={"10px"}
+              display={["none", "none", "block", "block", "block"]}
             >
-              {isVisible && <SideBarSection />}
+              {isVisible && (
+                <Fade>
+                  {" "}
+                  <SideBarSection />{" "}
+                </Fade>
+              )}
             </Box>
             <Box
               padding={"50px 0px 50px 0px"}
