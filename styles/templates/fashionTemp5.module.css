@@ -26,6 +26,7 @@
   text-align: left;
   color: black;
   letter-spacing: 1px;
+  margin-top: 5px;
 }
 .aboutText {
   font-size: 14px;
@@ -51,4 +52,24 @@
 }
 .mt {
   margin-top: 5px;
+}
+.ml {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.parentWork {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.childWork {
+  margin-left: 15px;
+}
+.sideMenu {
+  display: flex;
+  align-items: flex-start;
+}
+.sideMenuBox {
+  width: 20px;
+  margin-left: -27px;
+  margin-top: 15px;
 }

@@ -3,34 +3,9 @@
   font-size: 16px;
   font-weight: 400;
 }
-
-.contentEditableHybridContainer {
-  padding: 4px 2px;
-  white-space: pre-line;
-
-  border-radius: 4px;
-  outline: 0;
-}
-.contentEditableHybridContainer:empty::before {
-  content: attr(data-placeholder);
-  opacity: 0.6;
-}
-
-.contentEditableHybridContainer:focus {
-  border-radius: 4px;
-  background-color: transparent;
-  opacity: 1;
-  outline: 0;
-}
-
-.contentEditableHybridContainer:active {
-  border-radius: 4px;
-  outline: 0;
-}
-
-.contentEditableHybridContainer:visited {
-  border-radius: 4px;
-  outline: 0;
+.profile {
+  font-size: 16px;
+  font-weight: 400;
 }
 .ProfessionHybrid {
   font-weight: 500;
@@ -40,6 +15,7 @@
   text-align: left;
   color: #319795;
   margin-bottom: 35px;
+  margin-left: 3px;
 }
 .hybridName {
   color: #313c4e;
@@ -74,8 +50,53 @@
   font-weight: 500;
   margin: 3px;
 }
+.baseText {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 3px;
+  color: #fff;
+}
 .languageText {
   font-size: 16px;
   font-weight: 500;
   margin: 1px;
+}
+.sideMenu {
+  display: flex;
+  align-items: flex-start;
+}
+.sideMenuBox {
+  width: 20px;
+  margin-left: -27px;
+  margin-right: 4px;
+  margin-top: 10px;
+}
+.width {
+  min-width: 25px !important;
+  margin-left: 3px;
+  margin-top: 10px;
+}
+.techName {
+  color: #313c4e;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 700;
+}
+.techAbout {
+  color: 'black';
+  margin-top: -37px;
+}
+.techContact {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+.baseTempProfession {
+  font-weight: 500;
+  font-size: 1.4em;
+  padding: 0;
+  line-height: 30px;
+  text-align: left;
+  color: #319795;
+  margin-left: 3px;
 }

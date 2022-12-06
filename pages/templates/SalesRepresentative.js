@@ -18,7 +18,6 @@ import Achievements from "../../src/components/FinancialTemplat/Achievements";
 import { Tooltip } from "react-tippy";
 import Link from "next/link";
 import { Box, Center, Image } from "@chakra-ui/react";
-import UnderLineBox from "../../src/components/FashionDesigner2/UnderLineBox";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { GiSpiderWeb } from "react-icons/gi";
 import { MdLocationOn } from "react-icons/md";
