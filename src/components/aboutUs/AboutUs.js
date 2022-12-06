@@ -25,7 +25,7 @@ import { Pagination, Navigation } from "swiper";
 import RatingComponent from "../ratingComponent/RatingComponent";
 import Slider from "./slider/Slider";
 import Section5 from "./section5/Section5";
-import SideBar from "../SideBar/SideBar";
+import SideBar from "./SideBar/SideBar";
 const AboutUs = () => {
   const swiperRef = useRef();
   console.log("Swiper>>>>>>>>>>>>", swiperRef);
