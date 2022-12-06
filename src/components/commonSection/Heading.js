@@ -50,6 +50,7 @@ export default function Heading({
       borderLeft={borderLeft ? borderLeft : ""}
       borderRadius={borderRadius ? borderRadius : ""}
       onClick={onSideSectionShow}
+      cursor={onSideSectionShow && 'pointer'}
       // alignItems={alignItems ? alignItems : ''}
       // justifyContent={justifyContent ? justifyContent : ''}
     >
@@ -85,10 +86,12 @@ export default function Heading({
         {line && (
           <Box
             h={lineH ? lineH : 1.5}
-            w={lineW ? lineW : "full"}
-            bg={lineBg ? lineBg : "#000"}
-            alignSelf={lineAlign ? lineAlign : "flex-start"}
-            className={`${lineStyle}`}
+
+            w={lineW ? lineW : 'full'}
+            bg={lineBg ? lineBg : '#000'}
+            alignSelf={lineAlign ? lineAlign : 'flex-start'}
+            className={`${lineStyle ? lineStyle : ''}`}
+
           ></Box>
         )}
       </div>
