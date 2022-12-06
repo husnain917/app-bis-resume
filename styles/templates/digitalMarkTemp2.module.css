@@ -25,6 +25,7 @@
   font-size: 17px;
   color: black;
   font-weight: 500;
+  margin-top: -10px;
 }
 .skillText {
   font-size: 20px;
@@ -52,4 +53,41 @@
 }
 .bg {
   width: 100px;
+}
+.contactHead {
+  font-size: 16px;
+  font-weight: 800;
+  color: black;
+  text-transform: uppercase;
+}
+.line {
+  width: 100px;
+  height: 10px;
+  border-radius: 4px;
+  margin-top: 15px !important;
+}
+.percent {
+  margin-top: 4px !important;
+  margin-left: 4px;
+}
+.percent2 {
+  margin-top: 9px !important;
+}
+.ml {
+  margin-left: 20px;
+}
+.sideMenu {
+  display: flex;
+  align-items: flex-start;
+}
+.sideMenuBox {
+  width: 20px;
+  margin-left: -115px !important;
+  margin-top: 15px;
+}
+.sideMenuBox1 {
+  width: 20px;
+  margin-left: -25px !important;
+  margin-top: 10px;
+  margin-right: 5px;
 }

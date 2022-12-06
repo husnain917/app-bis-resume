@@ -341,6 +341,15 @@ function Templates() {
             />
             <Button />
           </Box>
+          <Box className="container">
+            <img
+              src="Skilled_Base_Template.png"
+              alt="Simple Template Design"
+              height="200px"
+              width="250px"
+            />
+            <Button />
+          </Box>
         </SimpleGrid>
       </Box>
       <Footer />
