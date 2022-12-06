@@ -67,6 +67,7 @@ const Language = (props) => {
     langStyle,
     percentageStyle,
     langContainerStyle,
+    childContainerStyle,
     minW,
     maxW,
     rating,
@@ -80,10 +81,14 @@ const Language = (props) => {
     maxWText = '130px',
     direction,
     lineStyle,
+    margin,
   } = props;
 
   return (
-    <div className={`${langContainerStyle ? langContainerStyle : ''}`}>
+    <div
+      className={`${langContainerStyle ? langContainerStyle : ''}`}
+      style={{ margin: margin ? margin : '' }}
+    >
       <Dnd
         data={data}
         additem={_addNewItem}
@@ -94,6 +99,7 @@ const Language = (props) => {
             direction={direction ? direction : 'row'}
             minW={minW ? minW : ''}
             maxW={maxW ? maxW : ''}
+            className={`${childContainerStyle ? childContainerStyle : ''}`}
           >
             <Box
               minW={(rating || progressBar) && minWText}
@@ -108,7 +114,7 @@ const Language = (props) => {
                 />
               ) : (
                 <UnorderedList>
-                  <ListItem>
+                  <ListItem className={`${langStyle}`}>
                     <Text
                       value={item.title}
                       placeholder={

@@ -1,12 +1,4 @@
-import {
-  Box,
-  HStack,
-  Input,
-  ListItem,
-  Stack,
-  UnorderedList,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Input, ListItem, Stack, UnorderedList } from '@chakra-ui/react';
 import React from 'react';
 import { connect, useDispatch } from 'react-redux';
 import {
@@ -90,12 +82,19 @@ const Skill = (props) => {
     lineStyle,
     parentContainerStyle,
     childContainerStyle,
+    DndDirection,
+    margin,
+    percentStyle,
   } = props;
 
   return (
-    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
+    <div
+      className={`${parentContainerStyle ? parentContainerStyle : ''}`}
+      style={{ margin: margin ? margin : '' }}
+    >
       <Dnd
         data={data}
+        direction={DndDirection ? DndDirection : ''}
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         reorder={(e) => onOrderUpdate(e)}
@@ -139,7 +138,7 @@ const Skill = (props) => {
               />
             )}
             {progressBar && (
-              <Box display={"flex"}>
+              <Box display={'flex'}>
                 <Line
                   percent={progress[index]}
                   strokeWidth={strokeWidth ? strokeWidth : '6'}
@@ -148,60 +147,29 @@ const Skill = (props) => {
                   trailWidth={trailWidth ? trailWidth : '2'}
                   className={`${lineStyle ? lineStyle : ''}`}
                 />
-                {
-                  props.cId  === 'bs' || props.cId==='market' ?
-                    <>
-                      <Input
-                        maxW={50}
-                        maxH={30}
-                        borderColor="none"
-                        variant="unstyled"
 
-
-                        placeholder="0"
-                        value={`${progress[index]}`}
-                        onChange={(e) => validateData(e, index)}
-                        type="number"
-                        className={`${percentageStyle}`}
-                      />
-                      <div style={{
-                        marginTop: "4px",
-                        marginLeft: progress[index] > 99 ? '-22px' : '-30px'
-                      }}
-
-                      >
-                        %
-                      </div>
-                    </>
-                    :
-                    <>
-                      <Input
-                        maxW={50}
-                        maxH={30}
-                        borderColor="none"
-                        variant="unstyled"
-
-
-                        placeholder="%"
-                        value={`${progress[index]}`}
-                        onChange={(e) => validateData(e, index)}
-                        type="number"
-                        className={`${percentageStyle}`}
-                      />
-                      <div style={{
-
-                        marginLeft: progress[index] > 99 ? '-22px' : '-30px'
-                      }}
-
-                      >
-                        %
-                      </div>
-                    </>
-
-                }
-
+                <Input
+                  maxW={50}
+                  maxH={30}
+                  borderColor="none"
+                  variant="unstyled"
+                  placeholder="0"
+                  value={`${progress[index]}`}
+                  onChange={(e) => validateData(e, index)}
+                  type="number"
+                  className={`${percentageStyle}`}
+                  style={{ marginLeft: '5px' }}
+                />
+                <div
+                  style={{
+                    marginLeft: progress[index] > 99 ? '-22px' : '-30px',
+                    marginTop: '5px',
+                  }}
+                  className={`${percentStyle} ${percentageStyle}`}
+                >
+                  %
+                </div>
               </Box>
-
             )}
           </Stack>
         )}
