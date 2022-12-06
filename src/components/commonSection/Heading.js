@@ -33,7 +33,9 @@ export default function Heading({
   lineBg,
   lineAlign,
   lineStyle,
+
   marginTop,
+
   alignItems,
   justifyContent,
 }) {
@@ -51,7 +53,11 @@ export default function Heading({
       borderLeft={borderLeft ? borderLeft : ""}
       borderRadius={borderRadius ? borderRadius : ""}
       onClick={onSideSectionShow}
+
       marginTop={marginTop ? marginTop : ""}
+
+      cursor={onSideSectionShow && 'pointer'}
+
       // alignItems={alignItems ? alignItems : ''}
       // justifyContent={justifyContent ? justifyContent : ''}
     >
@@ -87,10 +93,11 @@ export default function Heading({
         {line && (
           <Box
             h={lineH ? lineH : 1.5}
-            w={lineW ? lineW : "full"}
-            bg={lineBg ? lineBg : "#000"}
-            alignSelf={lineAlign ? lineAlign : "flex-start"}
-            className={`${lineStyle ? lineStyle : ""}`}
+
+            w={lineW ? lineW : 'full'}
+            bg={lineBg ? lineBg : '#000'}
+            alignSelf={lineAlign ? lineAlign : 'flex-start'}
+            className={`${lineStyle ? lineStyle : ''}`}
           ></Box>
         )}
       </div>

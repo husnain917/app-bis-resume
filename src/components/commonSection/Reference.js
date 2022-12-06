@@ -55,9 +55,13 @@ const Reference = (props) => {
     childContainerStyle,
     minW = 180,
     maxW = 180,
+    margin,
   } = props;
   return (
-    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
+    <div
+      className={`${parentContainerStyle ? parentContainerStyle : ''}`}
+      style={{ margin: margin ? margin : '' }}
+    >
       <Dnd
         data={data}
         direction={DndDirection ? DndDirection : ''}

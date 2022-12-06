@@ -11,21 +11,16 @@
   font-weight: 400;
   text-align: left;
 }
-.company {
+.position {
   font-size: 18px;
   font-weight: 700;
 }
-.description {
-  font-size: 14px;
-  margin-left: 14px;
-  margin-bottom: 15px;
-}
+
 .profileText {
   color: white;
   min-width: 220px;
   max-width: 220px;
-  margin: 0 !important;
-  padding: 0 !important;
+  margin-top: -4px;
 }
 .institute {
   color: white;
@@ -35,17 +30,19 @@
 .date {
   color: white;
 }
-.position {
+.company {
   font-size: 16px;
   font-weight: 600;
   padding: 0 !important;
 }
-.ml {
-  margin-left: 14px;
+.sideMenu {
+  display: flex;
+  align-items: flex-start;
 }
-.expDate {
-  color: black;
-}
-.mb {
-  margin-bottom: 20px !important;
+.sideMenuBox {
+  min-width: 20px !important;
+  max-width: 20px !important;
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+  margin-top: 5px;
 }

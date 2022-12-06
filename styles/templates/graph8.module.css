@@ -1,0 +1,82 @@
+.aboutText {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 30px;
+}
+.program {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.contact {
+  color: white;
+  font-size: 14px;
+  margin-top: -2px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.institute {
+  color: white;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.name {
+  color: #2a78ab;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+}
+.date {
+  color: black;
+  font-size: 15px;
+  font-weight: 500;
+}
+.workText {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+}
+.skillText {
+  font-size: 18px;
+  color: black;
+  font-weight: 500;
+  text-align: left;
+  min-width: 170px;
+  max-width: 170px;
+  margin-right: 50px;
+}
+.bg {
+  width: 100px;
+  height: 10px;
+}
+.sideMenu {
+  display: flex;
+  align-items: flex-start;
+}
+.sideMenuBox {
+  min-width: 20px !important;
+  max-width: 20px !important;
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+  margin-top: 20px;
+}
+.line {
+  width: 110px;
+  height: 10px;
+  margin-top: 11px !important;
+  margin-right: 6px;
+}
+.mt {
+  margin-top: 4px !important;
+}
+.profession {
+  color: #2a78ab;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: left;
+}

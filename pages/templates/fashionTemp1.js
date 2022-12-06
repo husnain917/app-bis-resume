@@ -3,10 +3,7 @@ import React from 'react';
 import { BsFillPersonFill, BsLayersFill } from 'react-icons/bs';
 import { IoLanguageSharp } from 'react-icons/io5';
 import { MdCastForEducation, MdEmail } from 'react-icons/md';
-import style from '../../styles/templates/template1.module.scss';
-import Link from 'next/link';
 import Classes from '../../styles/templates/fashionTemp1.module.css';
-import { Tooltip } from 'react-tippy';
 import WorkExperience from '../../src/components/commonSection/WorkExperience';
 import Reference from '../../src/components/commonSection/Reference';
 import About from '../../src/components/commonSection/About';
@@ -28,6 +25,7 @@ import {
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import useShow from '../../src/components/tempSectionSide/useShow';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 const FashionTemp1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
@@ -35,30 +33,19 @@ const FashionTemp1 = () => {
   return (
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Fashion Temp 1 Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     //Template Layout for Template Navbar//
-    <TempLayout
-      work={true}
-      education={true}
-      references={true}
-      skills={true}
-      languages={true}
-    >
-      <div className={style.main}>
-        <Link href={'/templates'}>
-          <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
-
+    <div style={{ overflow: 'auto' }}>
+      <TempLayout
+        work={true}
+        education={true}
+        references={true}
+        skills={true}
+        languages={true}
+      >
+        <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
-          bg={{ md: 'none', lg: 'blackAlpha.100' }}
-          overflow="auto"
           flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
+          alignItems={{ base: 'none', lg: 'center' }}
         >
           <HStack
             minW={830}
@@ -70,7 +57,10 @@ const FashionTemp1 = () => {
             mb={10}
             mt={'100px'}
             py={8}
+            ml={{ base: 20, lg: 0 }}
             px={10}
+            borderWidth="1px"
+            borderColor={'#00000030'}
           >
             <Box maxW={336} minW={336}>
               <Name
@@ -106,79 +96,95 @@ const FashionTemp1 = () => {
               {/* skill Section  */}
               {resumeData?.skills?.visible && (
                 <>
-                  <HStack alignItems={'flex-start'}>
-                    {/* skill Heading */}
-                    <Heading
-                      title={'PERSONAL'}
-                      headBg={'#3498DB'}
-                      iconHeading={true}
-                      icon={(props) => (
-                        <BsFillPersonFill {...props} size={20} color={'#fff'} />
-                      )}
-                      color={'white'}
-                      fontSize={20}
-                      fontWeight="600"
-                      textPadding={'0px 0px 1px 0px'}
-                      padding={'0px 0px 0px 5px'}
-                      letterSpacing={3}
-                      minW={250}
-                      maxW={250}
-                      margin={'10px 0px 0px 0px'}
-                      onSideSectionShow={() =>
-                        setShow({ ...show, skill: true })
-                      }
-                    />
+                  <div className={Classes.sideMenu}>
+                    <div>
+                      {/* skill Heading */}
+                      <Heading
+                        title={'PERSONAL'}
+                        headBg={'#3498DB'}
+                        iconHeading={true}
+                        icon={(props) => (
+                          <BsFillPersonFill
+                            {...props}
+                            size={20}
+                            color={'#fff'}
+                          />
+                        )}
+                        color={'white'}
+                        fontSize={20}
+                        fontWeight="600"
+                        textPadding={'0px 0px 1px 0px'}
+                        padding={'0px 0px 0px 5px'}
+                        letterSpacing={3}
+                        minW={250}
+                        maxW={250}
+                        margin={'10px 0px 10px 0px'}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, skill: true })
+                        }
+                      />
+
+                      {/* Skill  Components */}
+                      <Skill skillStyle={Classes.personalText} />
+                    </div>
                     {/* Section Side Menu */}
-                    {show.skill && (
-                      <>
-                        <SectionSideMenu
-                          onHide={() => setShow({ ...show, skill: false })}
-                          onDelete={SKILL}
-                        />
-                      </>
-                    )}
-                  </HStack>
-                  &nbsp;
-                  {/* Skill  Components */}
-                  <Skill skillStyle={Classes.personalText} />
+                    <div className={Classes.sideMenuBox}>
+                      {show.skill && (
+                        <>
+                          <SectionSideMenu
+                            onHide={() => setShow({ ...show, skill: false })}
+                            onDelete={SKILL}
+                          />
+                        </>
+                      )}
+                    </div>
+                  </div>
                 </>
               )}
               {/* Language Section */}
               {resumeData?.languages?.visible && (
                 <>
-                  <HStack alignItems={'flex-start'}>
+                  <div className={Classes.sideMenu}>
                     {/* languages Heading */}
-                    <Heading
-                      title={'LANGUAGES'}
-                      headBg={'#3498DB'}
-                      iconHeading={true}
-                      icon={(props) => (
-                        <IoLanguageSharp {...props} size={20} color={'#fff'} />
-                      )}
-                      color={'white'}
-                      fontSize={20}
-                      fontWeight="600"
-                      textPadding={'0px 0px 1px 0px'}
-                      padding={'0px 0px 0px 5px'}
-                      letterSpacing={3}
-                      minW={250}
-                      maxW={250}
-                      margin={'10px 0px 0px 0px'}
-                      onSideSectionShow={() =>
-                        setShow({ ...show, languages: true })
-                      }
-                    />
-                    {/* Section Side Menu */}
-                    {show.languages && (
-                      <SectionSideMenu
-                        onHide={() => setShow({ ...show, languages: false })}
-                        onDelete={LANGUAGES}
+                    <div>
+                      <Heading
+                        title={'LANGUAGES'}
+                        headBg={'#3498DB'}
+                        iconHeading={true}
+                        icon={(props) => (
+                          <IoLanguageSharp
+                            {...props}
+                            size={20}
+                            color={'#fff'}
+                          />
+                        )}
+                        color={'white'}
+                        fontSize={20}
+                        fontWeight="600"
+                        textPadding={'0px 0px 1px 0px'}
+                        padding={'0px 0px 0px 5px'}
+                        letterSpacing={3}
+                        minW={250}
+                        maxW={250}
+                        margin={'10px 0px 10px 0px'}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, languages: true })
+                        }
                       />
-                    )}
-                  </HStack>
-                  &nbsp;
-                  {/* Language Component */}
-                  <Language langStyle={Classes.langText} rating={true} />
+
+                      {/* Language Component */}
+                      <Language langStyle={Classes.langText} rating={true} />
+                    </div>
+                    {/* Section Side Menu */}
+                    <div className={Classes.sideMenuBox}>
+                      {show.languages && (
+                        <SectionSideMenu
+                          onHide={() => setShow({ ...show, languages: false })}
+                          onDelete={LANGUAGES}
+                        />
+                      )}
+                    </div>
+                  </div>
                 </>
               )}
             </Box>
@@ -196,162 +202,173 @@ const FashionTemp1 = () => {
               {/* Education Section  */}
               {resumeData?.education?.visible && (
                 <>
-                  <HStack alignItems={'flex-start'}>
-                    {/* Heading For Education Section  */}
-                    <Heading
-                      title={'EDUCATION'}
-                      headBg={'#3498DB'}
-                      iconHeading={true}
-                      icon={(props) => (
-                        <MdCastForEducation
-                          {...props}
-                          size={20}
-                          color={'#fff'}
+                  <div className={Classes.sideMenu}>
+                    <div>
+                      {/* Heading For Education Section  */}
+                      <Heading
+                        title={'EDUCATION'}
+                        headBg={'#3498DB'}
+                        iconHeading={true}
+                        icon={(props) => (
+                          <MdCastForEducation
+                            {...props}
+                            size={20}
+                            color={'#fff'}
+                          />
+                        )}
+                        color={'white'}
+                        fontSize={20}
+                        fontWeight="600"
+                        textPadding={'0px 0px 1px 0px'}
+                        padding={'0px 0px 0px 5px'}
+                        letterSpacing={3}
+                        minW={400}
+                        maxW={400}
+                        margin={'10px 0px 10px 0px'}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, education: true })
+                        }
+                      />
+                      {/* Education Components */}
+                      <Education
+                        date={true}
+                        summary={true}
+                        degree={true}
+                        institution={true}
+                        degree_placeholder="Study Program"
+                        degreeStyle={Classes.date}
+                        dateStyle={Classes.date}
+                        institutionStyle={Classes.date}
+                        summaryStyle={Classes.profileText}
+                        dateDirection="row"
+                        direction="row"
+                      />
+                    </div>
+                    {/* Section Side Menu */}
+                    <div className={Classes.sideMenuBox}>
+                      {show.education && (
+                        <SectionSideMenu
+                          onHide={() => setShow({ ...show, education: false })}
+                          onDelete={EDUCATION}
                         />
                       )}
-                      color={'white'}
-                      fontSize={20}
-                      fontWeight="600"
-                      textPadding={'0px 0px 1px 0px'}
-                      padding={'0px 0px 0px 5px'}
-                      letterSpacing={3}
-                      minW={400}
-                      maxW={400}
-                      margin={'10px 0px 0px 0px'}
-                      onSideSectionShow={() =>
-                        setShow({ ...show, education: true })
-                      }
-                    />
-                    {/* Section Side Menu */}
-                    {show.education && (
-                      <SectionSideMenu
-                        onHide={() => setShow({ ...show, education: false })}
-                        onDelete={EDUCATION}
-                      />
-                    )}
-                  </HStack>
+                    </div>
+                  </div>
                   &nbsp;
-                  {/* Education Components */}
-                  <Education
-                    date={true}
-                    summary={true}
-                    degree={true}
-                    institution={true}
-                    degree_placeholder="Study Program"
-                    degreeStyle={Classes.date}
-                    dateStyle={Classes.date}
-                    institutionStyle={Classes.date}
-                    summaryStyle={Classes.profileText}
-                    dateDirection="row"
-                    direction="row"
-                  />
                 </>
               )}
               {/* Work Experience Section */}
               {resumeData?.work?.visible && (
                 <>
-                  <HStack alignItems={'flex-start'}>
-                    {/* Work Experience Heading  */}
-                    <Heading
-                      title={'EXPERIENCE'}
-                      margin={'10px 0px 0px 0px'}
-                      headBg={'#3498DB'}
-                      iconHeading={true}
-                      icon={(props) => (
-                        <BsLayersFill {...props} size={20} color={'#fff'} />
-                      )}
-                      color={'white'}
-                      fontSize={20}
-                      fontWeight="600"
-                      textPadding={'0px 0px 1px 0px'}
-                      padding={'0px 0px 0px 5px'}
-                      letterSpacing={3}
-                      minW={400}
-                      maxW={400}
-                      onSideSectionShow={() =>
-                        setShow({ ...show, workExperience: true })
-                      }
-                    />
+                  <div className={Classes.sideMenu}>
+                    <div>
+                      {/* Work Experience Heading  */}
+
+                      <Heading
+                        title={'EXPERIENCE'}
+                        margin={'10px 0px 10px 0px'}
+                        headBg={'#3498DB'}
+                        iconHeading={true}
+                        icon={(props) => (
+                          <BsLayersFill {...props} size={20} color={'#fff'} />
+                        )}
+                        color={'white'}
+                        fontSize={20}
+                        fontWeight="600"
+                        textPadding={'0px 0px 1px 0px'}
+                        padding={'0px 0px 0px 5px'}
+                        letterSpacing={3}
+                        minW={400}
+                        maxW={400}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, workExperience: true })
+                        }
+                      />
+                      {/* Work Experience Components */}
+                      <WorkExperience
+                        company={true}
+                        date={true}
+                        position={true}
+                        summary={true}
+                        dateStyle={Classes.date}
+                        companyStyle={Classes.date}
+                        positionStyle={Classes.date}
+                        summaryStyle={Classes.profileText}
+                        direction="row"
+                      />
+                    </div>
                     {/* Section Side Menu */}
-                    {show.workExperience && (
-                      <>
-                        <SectionSideMenu
-                          onHide={() =>
-                            setShow({ ...show, workExperience: false })
-                          }
-                          onDelete={WORK}
-                        />
-                      </>
-                    )}
-                  </HStack>
-                  &nbsp;
-                  {/* Work Experience Components */}
-                  <WorkExperience
-                    company={true}
-                    date={true}
-                    position={true}
-                    summary={true}
-                    dateStyle={Classes.date}
-                    companyStyle={Classes.date}
-                    positionStyle={Classes.date}
-                    summaryStyle={Classes.profileText}
-                    direction="row"
-                  />
+                    <div className={Classes.sideMenuBox}>
+                      {show.workExperience && (
+                        <>
+                          <SectionSideMenu
+                            onHide={() =>
+                              setShow({ ...show, workExperience: false })
+                            }
+                            onDelete={WORK}
+                          />
+                        </>
+                      )}
+                    </div>
+                  </div>
                 </>
               )}
               {/* Reference Section  */}
               {resumeData?.references?.visible && (
                 <>
-                  <HStack alignItems={'flex-start'}>
-                    {/* Reference Section Heading */}
-                    <Heading
-                      title={'REFERENCE'}
-                      headBg={'#3498DB'}
-                      margin={'10px 0px 0px 0px'}
-                      iconHeading={true}
-                      icon={(props) => (
-                        <MdEmail {...props} size={20} color={'#fff'} />
-                      )}
-                      color={'white'}
-                      fontSize={20}
-                      fontWeight="600"
-                      textPadding={'0px 0px 1px 0px'}
-                      padding={'0px 0px 0px 5px'}
-                      letterSpacing={3}
-                      minW={400}
-                      maxW={400}
-                      onSideSectionShow={() =>
-                        setShow({ ...show, references: true })
-                      }
-                    />
-                    {/* Section Side Menu */}
-                    {show.references && (
-                      <SectionSideMenu
-                        onHide={() => setShow({ ...show, references: false })}
-                        onDelete={REFERENCE}
+                  <div className={Classes.sideMenu}>
+                    <div>
+                      {/* Reference Section Heading */}
+                      <Heading
+                        title={'REFERENCE'}
+                        headBg={'#3498DB'}
+                        margin={'10px 0px 10px 0px'}
+                        iconHeading={true}
+                        icon={(props) => (
+                          <MdEmail {...props} size={20} color={'#fff'} />
+                        )}
+                        color={'white'}
+                        fontSize={20}
+                        fontWeight="600"
+                        textPadding={'0px 0px 1px 0px'}
+                        padding={'0px 0px 0px 5px'}
+                        letterSpacing={3}
+                        minW={400}
+                        maxW={400}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, references: true })
+                        }
                       />
-                    )}
-                  </HStack>
-                  &nbsp;
-                  {/* Reference Component */}
-                  <Reference
-                    name={true}
-                    profession={true}
-                    email={true}
-                    phone={true}
-                    phoneStyle={Classes.profileText}
-                    emailStyle={Classes.profileText}
-                    professionStyle={Classes.profileText}
-                    nameStyle={Classes.referenceName}
-                    DndDirection="horizontal"
-                  />
+                      {/* Reference Component */}
+                      <Reference
+                        name={true}
+                        profession={true}
+                        email={true}
+                        phone={true}
+                        phoneStyle={Classes.profileText}
+                        emailStyle={Classes.profileText}
+                        professionStyle={Classes.profileText}
+                        nameStyle={Classes.referenceName}
+                        DndDirection="horizontal"
+                      />
+                    </div>
+                    {/* Section Side Menu */}
+                    <div className={Classes.sideMenuBox}>
+                      {show.references && (
+                        <SectionSideMenu
+                          onHide={() => setShow({ ...show, references: false })}
+                          onDelete={REFERENCE}
+                        />
+                      )}
+                    </div>
+                  </div>
                 </>
               )}
             </Box>
           </HStack>
         </Flex>
-      </div>
-    </TempLayout>
+      </TempLayout>
+    </div>
   );
 };
 export default FashionTemp1;
