@@ -44,8 +44,6 @@ const SecondSection = ({ heading, content, image, direction, subHeading }) => {
           data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"
-          marginInlineStart="40px"
-          marginInlineEnd="40px"
           area={"image"}
         >
           <Image objectFit="cover" src={image} alt="Loading" />
