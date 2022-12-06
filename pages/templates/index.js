@@ -1,5 +1,6 @@
-import { SimpleGrid, Box, Image, Button as ChkraBtn } from '@chakra-ui/react';
 import React from 'react';
+import Link from "next/link";
+import { SimpleGrid, Box, Image, Button as ChkraBtn } from '@chakra-ui/react';
 import AuthModal from '../../src/components/authModal/AuthModal';
 import Navbar from '../../src/components/navbar/Navbar';
 import Footer from '../../src/components/footer/Footer';
@@ -60,7 +61,7 @@ function Templates() {
             <img
               src="salesReprentative.png"
               alt="Fashion Designer Temmplate 4"
-              height={'340'}
+              height={"340"}
               width={270}
               mt={-2}
             />
@@ -70,7 +71,7 @@ function Templates() {
             <img
               src="financialAdvisor.png"
               alt="Fashion Designer Temmplate 4"
-              height={'340'}
+              height={"340"}
               width={270}
               mt={-2}
             />
