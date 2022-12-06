@@ -24,7 +24,7 @@ export default function ResumeBuild() {
     return (
         <>
             <div >
-                <Layout>
+    
 
                 <Box w={["100%", "100%", "100%"]} mt={["2%", "2%", "2%"]} display="flex" flexDirection={["column", "column", "row"]} justifyContent="space-around"    >
                     <Box
@@ -329,7 +329,7 @@ export default function ResumeBuild() {
 
                     <Templates />
                 </Box>
-                </Layout>
+    
             </div>
         </>
     );

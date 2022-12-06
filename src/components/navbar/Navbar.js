@@ -56,22 +56,25 @@ export default function Navbar() {
           justify={{ base: 'start' }}
           alignItems={{ base: 'center' }}
         >
-          <Image
-            src={logoIcon}
-            alt="Image Not Found"
-            height={useBreakpointValue({
-              xl: '90px',
-              lg: '60px',
-              md: '70px',
-              sm: '70px',
-            })}
-            width={useBreakpointValue({
-              xl: '230px',
-              lg: '170px',
-              md: '200px',
-              sm: '180px',
-            })}
-          />
+          <Link href="/#">
+
+            <Image
+              src={logoIcon}
+              alt="Image Not Found"
+              height={useBreakpointValue({
+                xl: '90px',
+                lg: '60px',
+                md: '70px',
+                sm: '70px',
+              })}
+              width={useBreakpointValue({
+                xl: '230px',
+                lg: '170px',
+                md: '200px',
+                sm: '180px',
+              })}
+            />
+          </Link>
 
           {/* deskTop Nav */}
           <Flex
@@ -155,8 +158,8 @@ export default function Navbar() {
                     items?.label === 'Register'
                       ? '#006772'
                       : items?.label === 'Login'
-                      ? '#006772'
-                      : ''
+                        ? '#006772'
+                        : ''
                   }
                   textAlign={'center'}
                   padding={'10px 5px'}
@@ -273,8 +276,8 @@ const DesktopNav = () => {
                 >
                   {navItem?.label}
                   {navItem.label === 'Resume' ||
-                  navItem.label === 'CV' ||
-                  navItem.label === 'Cover Letter' ? (
+                    navItem.label === 'CV' ||
+                    navItem.label === 'Cover Letter' ? (
                     <>
                       <Icon color={'black.400'} w={5} h={5} as={navItem.icon} />
                     </>
@@ -386,8 +389,8 @@ const MobileNav = () => {
                   items?.label === 'Register'
                     ? '#006772'
                     : items?.label === 'Login'
-                    ? '#006772'
-                    : ''
+                      ? '#006772'
+                      : ''
                 }
                 justifyContent={'center'}
                 padding={'10px 0px'}

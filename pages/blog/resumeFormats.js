@@ -21,7 +21,7 @@ export default function Resume_Formats() {
 
   return (
     <>
-      <Layout>
+  
       <ResumeFormats />
       {/* content container */}
       <Container
@@ -212,8 +212,7 @@ export default function Resume_Formats() {
       </Container>
       {/* content container end */}
 
-      {/* Footer */}
-      </Layout>
+  
     </>
   )
 }

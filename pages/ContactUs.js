@@ -22,7 +22,7 @@ export default function ContactUs() {
   return (
     <>
       {/* main div  */}
-      <Layout>
+  
       <Box
         w="100%"
         h="auto"
@@ -145,7 +145,7 @@ export default function ContactUs() {
         </Box>
       </Box>
   
-    </Layout>
+    
     </>
   );
 }

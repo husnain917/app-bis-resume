@@ -20,7 +20,7 @@ import Layout from '../../src/Layout';
 export default function termsAndConditions() {
     return (
         <>
-        <Layout>
+    
             <Container
                 maxW={['100%', '100%', '100%', '80%', '60%']}
             >
@@ -590,7 +590,7 @@ export default function termsAndConditions() {
                     </Box>
                 </Box>
             </Container>
-        </Layout>
+    
         </>
     
 

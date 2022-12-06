@@ -12,7 +12,7 @@ export default function Pricing() {
 
     return (
         <>
-        <Layout>
+    
 
 
             <div style={{ marginTop: "5%", }}>
@@ -123,7 +123,7 @@ export default function Pricing() {
                 </Box>
 
             </div>
-            </Layout>
+
 
         </>
     );

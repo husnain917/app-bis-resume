@@ -31,7 +31,7 @@ export default function Home() {
         <title>Bis Resume App</title>
         <meta name="description" content="Create resume with ease!" />
       </Head>
-      <Layout>
+    
         <CallToAction />
         <SliderComponent />
 
@@ -44,7 +44,7 @@ export default function Home() {
         <CompProfessionalResume />
         <FaqsSection />
         <BuildResume />
-      </Layout>
+  
     </>
   );
 }

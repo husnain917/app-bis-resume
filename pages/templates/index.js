@@ -21,7 +21,7 @@ function Templates() {
   );
   return (
     <div>
-      <Navbar />
+  
       <Box display={{ base: 'flex', sm: '' }} justifyContent={'center'} m={4}>
         <AuthModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
         <SimpleGrid
@@ -353,7 +353,7 @@ function Templates() {
           </Box>
         </SimpleGrid>
       </Box>
-      <Footer />
+  
     </div>
   );
 }

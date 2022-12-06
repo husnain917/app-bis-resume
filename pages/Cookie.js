@@ -22,7 +22,7 @@ export default function Cookie() {
     return (
         <>
 
-            <Layout>
+
                 <Container
                     maxW={['100%', '100%', '100%', '80%', '60%']}
                 >
@@ -422,7 +422,7 @@ export default function Cookie() {
                         </Box>
                     </Box>
                 </Container>
-            </Layout>
+    
         </>
     )
 }

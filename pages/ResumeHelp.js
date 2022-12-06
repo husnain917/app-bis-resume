@@ -22,7 +22,7 @@ export default function ResumeBuild() {
 
     return (
         <>
-            <Layout>
+    
                 <>
                     <Box bgColor={"#f2f4f6"} h={["100%", "100%"]}  >
                         <Container
@@ -818,7 +818,7 @@ export default function ResumeBuild() {
                         </Container>
                     </Box>
                 </>
-            </Layout>
+    
         </>
     );
 }
