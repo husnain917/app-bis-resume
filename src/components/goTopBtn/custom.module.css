@@ -1,0 +1,33 @@
+.btn {
+  font-size: 20px;
+  width: 75px;
+  height: 75px;
+  color: #fff;
+  background-color: #cad5e2;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 999;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  animation: goToTop 1.2s linear infinite alternate-reverse;
+}
+@keyframes goToTop {
+  0% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0.4rem);
+  }
+}
