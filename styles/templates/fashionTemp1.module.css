@@ -44,3 +44,11 @@
 .mt {
   margin-top: 10px;
 }
+.sideMenu {
+  display: flex;
+  align-items: flex-start;
+}
+.sideMenuBox {
+  width: 20px;
+  margin-left: 5px;
+}

@@ -37,6 +37,7 @@ const Interest = (props) => {
     interestStyle,
     parentContainerStyle,
     childContainerStyle,
+    borderColor,
   } = props;
   return (
     <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
@@ -51,7 +52,7 @@ const Interest = (props) => {
             {dndDirection == 'horizontal' ? (
               <Box
                 borderWidth={2}
-                borderColor={'blackAlpha.400'}
+                borderColor={borderColor ? borderColor : 'blackAlpha.400'}
                 borderRadius={6}
                 m={0.5}
               >

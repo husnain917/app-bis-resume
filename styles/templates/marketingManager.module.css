@@ -1,0 +1,74 @@
+.profileText {
+  color: white;
+  min-width: 220px;
+  max-width: 220px;
+  margin-top: -12px;
+}
+.programText {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+.date {
+  color: white;
+}
+.skillText {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+}
+.name {
+  text-align: left;
+  color: #2e4053;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+}
+.lastName {
+  font-weight: 500;
+  text-align: left;
+  color: #2e4053;
+  font-size: 40px;
+  line-height: 40px;
+}
+.ProfessionFashion {
+  font-weight: 500;
+  font-size: 1.5em;
+  line-height: 32px;
+  text-align: left;
+  color: #2e4053;
+  letter-spacing: 1px;
+}
+.aboutText {
+  font-size: 13px;
+  color: #2e4053;
+}
+.workText {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2e4053;
+}
+.workDate {
+  color: #2e4053;
+}
+.referenceText {
+  color: #2e4053;
+  font-size: 16px;
+  font-weight: 700;
+}
+.head {
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+}
+.sideMenu {
+  display: flex;
+  align-items: flex-start;
+}
+.sideMenuBox {
+  min-width: 20px !important;
+  max-width: 20px !important;
+  margin-left: 4px !important;
+  margin-right: 6px !important;
+  margin-top: 20px;
+}

@@ -5,119 +5,29 @@
     margin-top: 15px;
 }
 
-.lastNameStyle {
+.profileSubTitle {
     color: #947F57 !important;
     font-size: 1.4em;
     font-weight: 500;
 }
 
-.graphicContectLeftStyle {
-    margin-right: 20px;
-    color: #947F57 !important;
+.contactFont {
+    font-size: 16px !important;
+    color: #947F57;
+}
+
+.parentDiv {
+    margin: 10px 0px;
+}
+
+.line {
+    height: 10px;
+    width: 100px;
+    border-radius: 4px;
+    margin-top: 10px !important;
+}
+
+.percent {
+    color: #947F57;
     font-size: 14px !important;
-}
-
-.graphicContectRightStyle {
-    margin-left: 20px;
-    color: #947F57 !important;
-    font-size: 14px !important;
-}
-
-.profileTxt {
-    color: #947F57 !important;
-    text-align: center;
-    padding: 10px 0px;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.aboutBodyDes {
-    font-size: 16px;
-    color: #947F57 !important;
-    line-height: 20px;
-    text-align: justify;
-    padding: 15px 25px;
-}
-
-.sectionHeadings {
-    color: #947F57 !important;
-    padding: 5px 0px;
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-.expertiseBodyHeadings {
-    color: #947F57 !important;
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.educationDesHeading {
-    color: #3D3D3D !important;
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.educationDesTxt {
-    color: #3D3D3D !important;
-}
-
-.experienceDesHeadings {
-    color: #3D3D3D !important;
-    font-weight: 700;
-    font-size: 16px;
-}
-
-.experienceDesBody {
-    color: #3D3D3D !important;
-    font-size: 15px;
-    text-align: justify;
-}
-
-.skillBodyHeading {
-    font-size: 15px;
-    color: #3D3D3D !important;
-    font-weight: 500;
-}
-
-.inputData {
-    font-size: 14px !important;
-    color: #3D3D3D;
-    margin-left: 10px;
-}
-
-.perD {
-    display: inline-block;
-    margin-left: -15px !important;
-    font-size: 13px !important;
-    color: #3D3D3D;
-}
-
-.swapCont {
-    position: absolute;
-    right: 80px;
-    top: 50px;
-}
-
-.swap {
-    width: 40px;
-    height: 40px;
-    background-color: #03a9f4;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.swap:hover {
-    transform: scale(1.1);
-    transition: all 0.2s;
-}
-
-.swap img {
-    width: 70%;
-    filter: invert(1);
 }

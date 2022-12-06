@@ -1,100 +1,36 @@
-.contentHeadings {
+.nameStyle {
+    font-size: 2.8em;
+    font-weight: 500;
     color: #fff !important;
-    font-weight: 600;
-    font-size: 20px;
-    text-transform: uppercase;
+    background-color: #0C1E37 !important;
 }
 
-.designerContectStyle {
-    margin-left: 20px;
+.profileSubTitle {
+    font-size: 1.6em;
+    font-weight: 500;
     color: #fff !important;
+    background-color: #0C1E37 !important;
+}
+
+.rightContainerWork {
+    padding: 0px 30px;
+    margin: 0px 0px 0px 21px;
+}
+
+.line {
+    height: 10px;
+    width: 100px;
+    border-radius: 4px;
+    margin-top: 10px !important;
+}
+
+.percent {
+    color: #fff;
     font-size: 14px !important;
 }
 
-.educationDesHeading {
-    color: #fff !important;
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.educationDesTxt {
-    color: #fff !important;
-}
-
-.firstNameStyle {
-    color: #fff !important;
-    font-size: 3em;
-    font-weight: 600;
-}
-
-.lastNameStyle {
-    color: #fff !important;
-    font-size: 1.8em;
-    font-weight: 500;
-}
-
-.profileBodyDes {
-    font-size: 15px;
-    color: #fff !important;
-    line-height: 20px;
-    text-align: justify;
-}
-
-.experienceDesHeadings {
-    color: #fff !important;
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.experienceDesBody {
-    color: #fff !important;
-    font-size: 15px;
-    text-align: justify;
-}
-
-.skillBodyHeading {
-    font-size: 15px;
-    color: #fff !important;
-    font-weight: 500;
-}
-
-.inputData {
-    font-size: 14px !important;
+.date {
     color: #fff;
-    margin-left: 10px;
-}
-
-.perD {
-    display: inline-block;
-    margin-left: -15px !important;
-    font-size: 13px !important;
-    color: #fff;
-}
-
-.swapCont {
-    position: absolute;
-    right: 80px;
-    top: 60px;
-}
-
-.swap {
-    width: 40px;
-    height: 40px;
-    background-color: #03a9f4;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.swap:hover {
-    transform: scale(1.1);
-    transition: all 0.2s;
-}
-
-.swap img {
-    width: 70%;
-    filter: invert(1);
+    font-size: 15px;
+    font-weight: 600;
 }
