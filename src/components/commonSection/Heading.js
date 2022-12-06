@@ -33,6 +33,9 @@ export default function Heading({
   lineBg,
   lineAlign,
   lineStyle,
+
+  marginTop,
+
   alignItems,
   justifyContent,
 }) {
@@ -50,7 +53,11 @@ export default function Heading({
       borderLeft={borderLeft ? borderLeft : ""}
       borderRadius={borderRadius ? borderRadius : ""}
       onClick={onSideSectionShow}
+
+      marginTop={marginTop ? marginTop : ""}
+
       cursor={onSideSectionShow && 'pointer'}
+
       // alignItems={alignItems ? alignItems : ''}
       // justifyContent={justifyContent ? justifyContent : ''}
     >
