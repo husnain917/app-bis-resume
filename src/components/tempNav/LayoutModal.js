@@ -50,9 +50,10 @@ export default function LayoutModal({
         _hover={{
           backgroundColor: 'transparent',
 
-          color: '#1C6672',
+          color: '#313C4E',
           transition: '0.4s',
         }}
+        fontSize={{ base: '12px', sm: '14px', md: '16px' }}
       >
         <AttachmentIcon mr="5px" />
         Section
