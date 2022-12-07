@@ -99,6 +99,7 @@ const AboutUs = () => {
                     display={"flex"}
                     justifyContent={"center"}
                     flexDirection={"column"}
+                    marginLeft={["0px", "0px", "15px", "0px", "0px"]}
                   >
                     <Text
                       fontSize={[
@@ -204,23 +205,24 @@ const AboutUs = () => {
               style={{
                 listStyle: "none",
               }}
+              flexDirection={["column", "column", "row", "row", "row"]}
             >
               <ListItem>As seen in: </ListItem>
               <ListItem>
-                <Image src="/msn-blue.png" />
+                <Image src="/thegaurdian-blue.png" />
               </ListItem>
               <ListItem>
-                <Image src="/thegaurdian-blue.png" />
+                <Image src="/time-blue.png" />
               </ListItem>
               <ListItem>
                 <Image src="/thenewyorktimes-blue.png" />
               </ListItem>
               <ListItem>
-                <Image src="/forbes-blue.png" />
+                <Image src="/msn-blue.png" />
               </ListItem>
               <ListItem>
                 {" "}
-                <Image src="/time-blue.png" />
+                <Image src="/forbes-blue.png" />
               </ListItem>
             </UnorderedList>
           </Box>
@@ -235,9 +237,9 @@ const AboutUs = () => {
                 textAlign={"center"}
                 maxW={"960px"}
                 margin={"0 auto"}
-                fontSize={"3.4rem"}
+                fontSize={["2.6rem", "3.0rem", "3.4rem", "3.4rem", "3.4rem"]}
                 fontFamily={"heading"}
-                lineHeight={"1"}
+                lineHeight={"1.1"}
                 fontWeight={600}
               >
                 Building better lives, one resume and cover letter at a time
