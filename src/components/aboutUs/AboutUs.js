@@ -33,7 +33,7 @@ const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {
     let heightToHidden = 20;
-    let againHide = 5000;
+    let againHide = 4800;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
