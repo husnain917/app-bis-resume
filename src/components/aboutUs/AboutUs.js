@@ -54,7 +54,7 @@ const AboutUs = () => {
     AOS.init();
   });
   return (
-    <Box classNam="siteContainer">
+    <Box classNam="sitecontainer1">
       <Box className="masterWrapper">
         <Box>
           <Box>
@@ -141,7 +141,7 @@ const AboutUs = () => {
           </Box>
         </Box>
         <Box className={"section1"} padding={"50px 0px 50px 0px"}>
-          <Box maxW={"750px"} className={"container"}>
+          <Box maxW={"750px"} className={"container1"}>
             <Box maxW={"750px"} margin={"0 auto"} fontSize={"1.1rem"}>
               <Text my={6}>
                 Since 2013, MyPerfectResume has helped more than 15 million
@@ -194,7 +194,7 @@ const AboutUs = () => {
             padding: "30px 0",
           }}
         >
-          <Box maxWidth={"960px"} className="container">
+          <Box maxWidth={"960px"} className="container1">
             <UnorderedList
               margin={["0px"]}
               padding={["0px"]}
@@ -229,15 +229,16 @@ const AboutUs = () => {
         </Box>
         <Box className="section4" paddingTop={"50px"} bg={"#f6f5f0"}>
           <Box
-            className="container"
-            width={["", "750px", "750px", "970px", "1170px"]}
+            className="container1"
+            width={["", "502px", "750px", "970px", "1170px"]}
+            maxW={["1000px"]}
           >
             <Box>
               <Text
                 textAlign={"center"}
                 maxW={"960px"}
                 margin={"0 auto"}
-                fontSize={["2.6rem", "3.0rem", "3.4rem", "3.4rem", "3.4rem"]}
+                fontSize={["2.6rem", "2.6rem", "2.6rem", "3.4rem", "3.4rem"]}
                 fontFamily={"heading"}
                 lineHeight={"1.1"}
                 fontWeight={600}
@@ -245,7 +246,7 @@ const AboutUs = () => {
                 Building better lives, one resume and cover letter at a time
               </Text>
               <Box
-                className="container tpilot"
+                className="container1 tpilot"
                 style={{
                   width: "100%",
                   margin: "auto",
