@@ -40,16 +40,16 @@ export default function ResumeBuild() {
                             <Box className="cursor">
                                 <Link href="/templates">
 
-                            <Button fontWeight={650}
-                                color={"#fdfffc"}
-                                backgroundColor="#006772"
-                                _hover={{
-                                    textDecoration: "none",
-                                    color: "#fff",
-                                    backgroundColor: "red"
-                                }} >Build my Resume</Button>
+                                    <Button fontWeight={650}
+                                        color={"#fdfffc"}
+                                        backgroundColor="#006772"
+                                        _hover={{
+                                            textDecoration: "none",
+                                            color: "#fff",
+                                            backgroundColor: "red"
+                                        }} >Build my Resume</Button>
 
-                        
+
                                 </Link>
                             </Box>
 
@@ -329,7 +329,7 @@ export default function ResumeBuild() {
 
                     <Templates />
                 </Box>
-    
+
             </div>
         </>
     );
