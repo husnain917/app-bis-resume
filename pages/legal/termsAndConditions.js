@@ -18,8 +18,7 @@ import TableOfContent from '../../src/components/legal/TableOfContent';
 import SideBarSection from '../../src/components/aboutUs/SideBarSection/SideBarSection';
 import Fade from "react-reveal/Fade";
 
-export default function termsAndConditions() {
-    
+export default function Terms_And_Conditions() {
     // sidebar state
     const [isVisible, setIsVisible] = useState(false);
     const listenToScroll = () => {
