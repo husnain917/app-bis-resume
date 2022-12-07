@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 import Link from "next/link";
-import { SimpleGrid, Box, Image, Button as ChkraBtn } from '@chakra-ui/react';
-import AuthModal from '../../src/components/authModal/AuthModal';
-import Navbar from '../../src/components/navbar/Navbar';
-import Footer from '../../src/components/footer/Footer';
+import { SimpleGrid, Box, Image, Button as ChkraBtn } from "@chakra-ui/react";
+import AuthModal from "../../src/components/authModal/AuthModal";
+import Navbar from "../../src/components/navbar/Navbar";
+import Footer from "../../src/components/footer/Footer";
 function Templates() {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const Button = () => (
     <ChkraBtn
-      w={'130px'}
-      _hover={{ background: '#5d6d7e' }}
+      w={"130px"}
+      _hover={{ background: "#5d6d7e" }}
       bg=" #5d6d7e;"
       className="btn"
-      borderRadius={'12px'}
-      fontSize={{ base: '12px', md: '14px' }}
+      borderRadius={"12px"}
+      fontSize={{ base: "12px", md: "14px" }}
       onClick={() => setIsModalOpen(true)}
     >
       Create My Resume
@@ -22,7 +22,7 @@ function Templates() {
   return (
     <div>
       <Navbar />
-      <Box display={{ base: 'flex', sm: '' }} justifyContent={'center'} m={4}>
+      <Box display={{ base: "flex", sm: "" }} justifyContent={"center"} m={4}>
         <AuthModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
         <SimpleGrid
           columns={{ base: 1, sm: 2, md: 3, lg: 4 }}

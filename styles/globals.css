@@ -127,9 +127,39 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   font-weight: 700;
   font-size: 2.4em;
   padding: 0;
-  line-height: 30px;
+  
   text-align: left;
+  font-size: 60px;
+  color:white;
 }
+.fullName2 {
+  font-weight: 700;
+  font-size: 2.4em;
+  padding: 0;
+  
+  text-align: left;
+  font-size: 30px;
+  color: white;
+}
+.fDesigner2{
+  font-size: 2.4em;
+  padding: 0;
+  line-height: 30px;
+  text-align:left;
+  margin-top: 20px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.fDesigner2a{
+  padding: 0;
+  line-height: 30px;
+  text-align:left;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
 
 .manager-template-row {
   flex-direction: row;
