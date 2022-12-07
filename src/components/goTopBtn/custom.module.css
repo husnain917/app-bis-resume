@@ -1,7 +1,7 @@
 .btn {
   font-size: 20px;
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
   color: #fff;
   background-color: #cad5e2;
   border-radius: 50%;
@@ -13,7 +13,8 @@
   align-items: center;
   flex-direction: column;
   cursor: pointer;
-  z-index: 999;
+  transition: 1s;
+  z-index: 99999;
 }
 .container {
   display: flex;
