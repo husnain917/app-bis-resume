@@ -23,11 +23,7 @@ import SectionSideMenu from "../../src/components/tempSectionSide/SectionSideMen
 import ImageSelector from "../../src/components/imageSelector";
 
 import {
-  CERTIFICATE,
   EDUCATION,
-  INTEREST,
-  LANGUAGES,
-  ORGANIZATION,
   PROJECT,
   SKILL,
   WORK,
