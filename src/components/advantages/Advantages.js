@@ -48,7 +48,7 @@ export default function Advantages() {
           pt="2%"
           p="10px"
         >
-          Advantages of My BisResume
+          Advantages of Using My Perfect BisResume
         </Text>
         {width > 767 ? (
           <Box
