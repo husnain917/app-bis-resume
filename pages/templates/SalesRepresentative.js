@@ -25,6 +25,8 @@ import {
   REFERENCE,
 } from "../../src/components/tempSectionSide/SectionSideConstant";
 
+import { Center, Image } from "@chakra-ui/react";
+
 const SalesRepresentative = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
