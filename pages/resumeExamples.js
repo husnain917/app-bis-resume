@@ -19,7 +19,7 @@ const ResumeExamples = () => {
     <Box>
       {/* <Carasol1 />
       <Carasol /> */}
-      <ChatButton />
+      {/* <ChatButton />
       <Box bg="lightcyan" height={"auto"} width={"100wv"}>
         <WritingGuides />
       </Box>
@@ -27,7 +27,7 @@ const ResumeExamples = () => {
         <Box maxWidth={"1120px"} display={"flex"} margin={"0 auto"}>
           <Box width={"100%"} flexGrow={"1"}>
             <SearchBar />
-            {/* <MostPopular /> */}
+            
             {popularData.map((data, index) => {
               return <MostPopular data={data} key={index} />;
             })}
@@ -38,7 +38,7 @@ const ResumeExamples = () => {
         </Box>
       </Box>
       <TryResume />
-      <BlogPost />
+      <BlogPost /> */}
       <SelectResume />
     </Box>
   );

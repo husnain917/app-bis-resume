@@ -27,27 +27,33 @@ const Carasol1 = () => {
           swiperRef.current = swiper;
         }}
         pagination={true}
+        paginationClickable={true}
         modules={[Pagination]}
         breakpoints={{
           100: {
-            slidesPerView: 1,
+            slidesPerView: 3,
+            pagination: true,
           },
           390: {
-            slidesPerView: 2,
+            slidesPerView: 3,
+            pagination: true,
           },
           786: {
             slidesPerView: 2,
+            pagination: true,
           },
           992: {
             slidesPerView: 3,
+            pagination: true,
           },
           1300: {
             slidesPerView: 3,
+            pagination: true,
           },
           1600: {
             slidesPerView: 3,
             pagination: true,
-            spaceBetween: 1,
+            spaceBetween: 4,
           },
         }}
       >

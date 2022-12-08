@@ -17,8 +17,7 @@ const Carasol = () => {
   return (
     <Box marginLeft="60px">
       <Swiper
-        // id="selectResume"
-
+        id="selectResume"
         spaceBetween={15}
         grabCursor
         initialSlide={1}
@@ -32,12 +31,18 @@ const Carasol = () => {
         breakpoints={{
           100: {
             slidesPerView: 1,
+
+            spaceBetween: 2,
           },
           390: {
             slidesPerView: 2,
+
+            spaceBetween: 2,
           },
           786: {
             slidesPerView: 2,
+
+            spaceBetween: 2,
           },
           992: {
             slidesPerView: 3,

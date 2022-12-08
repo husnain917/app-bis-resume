@@ -19,67 +19,6 @@ const SelectResume = () => {
   const size = useWindowSizing();
   const width = size.width;
   const swiperRef = useRef();
-  // console.log("SLIDER DATA >>>>>>", sliderData);
-  var settings = {
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    className: "resume-templates__slider",
-    // autoplay: true,
-
-    responsive: [
-      {
-        breakpoint: 2200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: false,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 1900,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: false,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 1500,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          mobileFirst: true,
-        },
-      },
-    ],
-  };
   return (
     <>
       <Box
@@ -196,12 +135,6 @@ const SelectResume = () => {
           </Box>
         </Box>
         <Box
-          // transform="
-          // scale(0.835681, 0.8)
-          // translateX(900px)
-          // translateY(-59.2002px)
-          // "
-          // marginLeft={["830px", "830px", "830px", "830px", "830px"]}
           marginTop={["-57px", "-57px", "-57px", "-57px", "-80px", "-80px"]}
           transition={"opacity 0.1s ease-in 0s"}
           opacity={["1"]}
@@ -245,10 +178,11 @@ const SelectResume = () => {
                 <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
               </svg>
             </Box>
-            <Carasol />
+            {/* <Carasol /> */}
+            {/* <Carasol1 /> */}
           </Box>
         </Box>
-        {/* <Carasol1 /> */}
+        <Carasol1 />
       </Box>
     </>
   );

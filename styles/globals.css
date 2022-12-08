@@ -270,7 +270,7 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   #coverEffectSlider .swiper-button-prev:after {
     font-size: 17px !important;
   } 
-  .swiper-pagination-bullet {
+  #coverEffectSlider .swiper-pagination-bullet {
     /* padding: 5px 10px; */
     /* margin-top: 30px; */
     border-radius: 0;
@@ -283,11 +283,11 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
     opacity: 1;
     background: rgba(0,0,0,0.2);
   }
-  .swiper-pagination-bullet-active {
+  #coverEffectSlider .swiper-pagination-bullet-active {
     color:#fff;
     background: #007aff;
   }
-  .swiper-pagination {
+  #coverEffectSlider .swiper-pagination {
     /* position: absolute; */
     /* top: 10px; */
     left: 10px;
@@ -1431,8 +1431,7 @@ audio, canvas, iframe, img, svg, video {
     left: 20px;
     right: initial
 }
-  } */
-/* 
+  } */ 
   #selectResume .swiper {
     width: 100%;
     padding-top: 50px;
@@ -1449,11 +1448,11 @@ audio, canvas, iframe, img, svg, video {
   #selectResume .swiper-slide img {
     display: block;
     width: 100%;
-  } */
+  }
 
   #selectResume .swiper-container {
     position: relative;
-    width: 90vw;
+    /* width: 90vw; */
     height: 300px;
 }
 #selectResume .swiper-container > .swiper-slide__content {
