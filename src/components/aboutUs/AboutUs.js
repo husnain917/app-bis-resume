@@ -364,15 +364,15 @@ const AboutUs = () => {
               <Text
                 textAlign={"center"}
                 fontSize={"2rem"}
-                minW={"330px"}
+                minW={["360px", "360px", "360px", "330px", "330px"]}
                 margin={"0"}
                 fontWeight={"bold"}
               >
                 Get in Touch
               </Text>
-              <Box className="cta-wrap" margin={"0 30px"}>
+              <Box className="cta-wrap">
                 <Button
-                  // className="btn btn-primary"
+                  className="btn btn-primary"
                   href="https://www.bold.com/bold-jobs/"
                   target="_blank"
                   rel="noopener"
@@ -384,19 +384,19 @@ const AboutUs = () => {
                 >
                   JOIN OUR TEAM
                 </Button>
+                <Button
+                  className="btn btn-primary"
+                  margin={"0 17px"}
+                  backgroundColor="#02818c"
+                  color={"white"}
+                  href="https://www.myperfectresume.com/contact-us"
+                  _hover={{
+                    border: "1px dashed gray",
+                  }}
+                >
+                  CONTACT US
+                </Button>
               </Box>
-              <Button
-                className="btn btn-primary"
-                margin={"0 30px"}
-                backgroundColor="#02818c"
-                color={"white"}
-                href="https://www.myperfectresume.com/contact-us"
-                _hover={{
-                  border: "1px dashed gray",
-                }}
-              >
-                CONTACT US
-              </Button>
             </Box>
           </Box>
         </Box>
