@@ -102,7 +102,13 @@ const Slider = ({ title, desc, date, name, rating }) => {
         >
           ←
         </Box>
-        <Box className="swiper-pagination" position="relative"></Box>
+        <Box
+          className="swiper-pagination"
+          position="relative"
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"center"}
+        ></Box>
 
         <Box
           className="right-arrow arrows"
