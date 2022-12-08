@@ -17,13 +17,15 @@ import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import TableOfContent from '../../src/components/legal/TableOfContent';
 import SideBarSection from '../../src/components/aboutUs/SideBarSection/SideBarSection';
 import Fade from "react-reveal/Fade";
+import Footer from "../../src/components/footer/Footer";
+import Navbar from "../../src/components/navbar/Navbar";
 
 export default function Terms_And_Conditions() {
     // sidebar state
     const [isVisible, setIsVisible] = useState(false);
     const listenToScroll = () => {
         let heightToHidden = 20;
-        let againHide = 4300;
+        let againHide = 4410;
         const winScroll =
             document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -41,6 +43,7 @@ export default function Terms_And_Conditions() {
 
     return (
         <>
+        <Navbar />
             <Container
                 maxW={["100%", "100%", "80%", "80%"]}
                 display={"flex"}
@@ -48,7 +51,7 @@ export default function Terms_And_Conditions() {
             >
                 <Box
                     maxW={["0%", "0%", "0%", "10%"]}
-                    padding={'70px 0px 0px 0px'}
+                    // padding={'70px 0px 0px 0px'}
                     display={["none", "none", "none", "block"]}
                 >
                     <Box
@@ -631,6 +634,7 @@ export default function Terms_And_Conditions() {
                     </Box>
                 </Box>
             </Container>
+            <Footer />
         </>
     )
 }
