@@ -4,7 +4,6 @@ import { BsFillLayersFill } from "react-icons/bs";
 import style from "../../styles/templates/template1.module.scss";
 import Classes from "../../styles/templates/hybridTemplate.module.css";
 import Class from "../../styles/templates/fashion2.module.scss";
-import { Tooltip } from "react-tippy";
 import Name from "../../src/components/commonSection/Name";
 import About from "../../src/components/commonSection/About";
 import Contact from "../../src/components/commonSection/Contact";
