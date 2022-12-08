@@ -196,15 +196,18 @@ const SelectResume = () => {
           </Box>
         </Box>
         <Box
-          transform="
-          scale(0.835681, 0.8) 
-          translateX(900px) 
-          translateY(-59.2002px)
-          "
+          // transform="
+          // scale(0.835681, 0.8)
+          // translateX(900px)
+          // translateY(-59.2002px)
+          // "
+          // marginLeft={["830px", "830px", "830px", "830px", "830px"]}
+          marginTop={["-57px", "-57px", "-57px", "-57px", "-80px", "-80px"]}
           transition={"opacity 0.1s ease-in 0s"}
           opacity={["1"]}
           pointerEvents={["auto"]}
           className={"resume-templates__slider-wrapper"}
+          left={["44%", "44%", "44%", "48%", "44%"]}
         >
           <Box
             className={"resume-templates__slider-container"}
@@ -243,99 +246,6 @@ const SelectResume = () => {
               </svg>
             </Box>
             <Carasol />
-            {/* <Slider {...settings}>
-            {sliderData.map((template, index) => {
-              return (
-                <Box
-                  key={index}
-                  bg={"whitesmoke"}
-                  maxW={"395px"}
-                  height={"520px"}
-                  //   padding={"5"}
-                  borderRadius={"10"}
-                  _hover={{
-                    background: "white",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => {}}
-                >
-                  <Box>
-                    <Link href={template.link || "/templates/templ"}>
-                      <Image
-                        src={template.src}
-                        alt={template.alt}
-                        height={"520px"}
-                        minW={"395px"}
-                      />
-                    </Link>
-                  </Box>
-                </Box>
-              );
-            })}
-          </Slider> */}
-            {/* <Swiper
-            id="coverEffectSlider"
-            spaceBetween={15}
-            grabCursor
-            initialSlide={1}
-            loop
-            onSwiper={(swiper) => {
-              swiperRef.current = swiper;
-            }}
-            pagination={true}
-            modules={[Pagination]}
-            breakpoints={{
-              100: {
-                slidesPerView: 1,
-              },
-              390: {
-                slidesPerView: 2,
-              },
-              786: {
-                slidesPerView: 2,
-              },
-              992: {
-                slidesPerView: 3,
-              },
-              1300: {
-                slidesPerView: 3,
-              },
-              1600: {
-                slidesPerView: 4,
-              },
-            }}
-          >
-            {sliderData.map((template, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <Box
-                    key={index}
-                    bg={"whitesmoke"}
-                    maxW={"395px"}
-                    height={"520px"}
-                    //   padding={"5"}
-                    borderRadius={"10"}
-                    _hover={{
-                      background: "white",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => {}}
-                  >
-                    <Box>
-                      <Link href={template.link || "/templates/templ"}>
-                        <Image
-                          src={template.src}
-                          alt={template.alt}
-                          height={"520px"}
-                          minW={"395px"}
-                        />
-                      </Link>
-                    </Box>
-                  </Box>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper> */}
           </Box>
         </Box>
         {/* <Carasol1 /> */}
