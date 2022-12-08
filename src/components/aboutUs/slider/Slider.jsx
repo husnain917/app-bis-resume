@@ -91,23 +91,27 @@ const Slider = ({ title, desc, date, name, rating }) => {
         })}
       </Swiper>
       <Box
-        class="arrow-position"
+        // className="arrow-position"
         display={"flex"}
         justifyContent={"space-between"}
       >
-        <Button
-          class="left-arrow arrows"
+        <Box
+          className="left-arrow arrows"
           onClick={() => swiperRef.current.slidePrev()}
         >
           ←
-        </Button>
+        </Box>
+        <Box
+          className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
+          position="relative"
+        ></Box>
 
-        <Button
-          class="right-arrow arrows"
+        <Box
+          className="right-arrow arrows"
           onClick={() => swiperRef.current.slideNext()}
         >
           →
-        </Button>
+        </Box>
       </Box>
     </>
   );
