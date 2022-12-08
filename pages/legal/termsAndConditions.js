@@ -25,7 +25,7 @@ export default function Terms_And_Conditions() {
     const [isVisible, setIsVisible] = useState(false);
     const listenToScroll = () => {
         let heightToHidden = 20;
-        let againHide = 4380;
+        let againHide = 4330;
         const winScroll =
             document.body.scrollTop || document.documentElement.scrollTop;
 
