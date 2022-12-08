@@ -8,6 +8,7 @@ import 'react-tippy/dist/tippy.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { createWrapper } from 'next-redux-wrapper';
+import GoToTopBtn from '../src/components/goTopBtn/GoToTopBtn';
 import Layout from '../src/Layout';
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
           <Component {...pageProps} />
         </Layout>
       </ChakraProvider>
+      <GoToTopBtn />
     </SessionProvider>
   );
 }
