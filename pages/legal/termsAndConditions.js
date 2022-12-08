@@ -17,8 +17,6 @@ import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import TableOfContent from '../../src/components/legal/TableOfContent';
 import SideBarSection from '../../src/components/aboutUs/SideBarSection/SideBarSection';
 import Fade from "react-reveal/Fade";
-import Footer from "../../src/components/footer/Footer";
-import Navbar from "../../src/components/navbar/Navbar";
 
 export default function Terms_And_Conditions() {
     // sidebar state
@@ -43,7 +41,6 @@ export default function Terms_And_Conditions() {
 
     return (
         <>
-        <Navbar />
             <Container
                 maxW={["100%", "100%", "80%", "80%"]}
                 display={"flex"}
@@ -634,7 +631,6 @@ export default function Terms_And_Conditions() {
                     </Box>
                 </Box>
             </Container>
-            <Footer />
         </>
     )
 }
