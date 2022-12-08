@@ -43,6 +43,7 @@ const Slider = ({ title, desc, date, name, rating }) => {
         loop={true}
         loopFillGroupWithBlank={true}
         pagination={{
+          el: ".swiper-pagination",
           clickable: true,
         }}
         onSwiper={(swiper) => {
@@ -101,10 +102,7 @@ const Slider = ({ title, desc, date, name, rating }) => {
         >
           ←
         </Box>
-        <Box
-          className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
-          position="relative"
-        ></Box>
+        <Box className="swiper-pagination" position="relative"></Box>
 
         <Box
           className="right-arrow arrows"
