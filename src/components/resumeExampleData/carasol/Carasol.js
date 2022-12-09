@@ -17,7 +17,7 @@ const Carasol = () => {
   return (
     <Box marginLeft="60px">
       <Swiper
-        id="selectResume"
+        // id="selectResume"
         spaceBetween={15}
         grabCursor
         initialSlide={1}
@@ -37,12 +37,12 @@ const Carasol = () => {
           390: {
             slidesPerView: 2,
 
-            spaceBetween: 2,
+            spaceBetween: 1,
           },
           786: {
-            slidesPerView: 2,
+            slidesPerView: 3,
 
-            spaceBetween: 2,
+            spaceBetween: 1,
           },
           992: {
             slidesPerView: 3,
@@ -78,8 +78,9 @@ const Carasol = () => {
                     <Image
                       src={template.src}
                       alt={template.alt}
-                      height={"520px"}
-                      minW={"395px"}
+                      height={["520px"]}
+                      minW={["250px", "250px", "250px", "395px", "395px"]}
+                      maxW={["250px", "250px", "250px", "395px", "395px"]}
                     />
                   </Link>
                 </Box>

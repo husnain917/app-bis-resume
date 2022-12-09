@@ -178,11 +178,11 @@ const SelectResume = () => {
                 <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
               </svg>
             </Box>
-            {/* <Carasol /> */}
+            <Carasol />
             {/* <Carasol1 /> */}
           </Box>
         </Box>
-        <Carasol1 />
+        {/* <Carasol1 /> */}
       </Box>
     </>
   );
