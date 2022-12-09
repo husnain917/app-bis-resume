@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from "react";
 import { Box, Text, Button, Image, SimpleGrid } from "@chakra-ui/react";
 import { Badge } from "@chakra-ui/react";
 import Link from "next/link";
-import { useWindowDimension } from "../../WindowDimension";
 import { useWindowSizing } from "../../../../customHooks/useWindowSizing";
 
 import {

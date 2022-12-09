@@ -1,84 +1,98 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import Text from "../../src/components/commonSection/Text";
-import style from "../../styles/templates/fashion2.module.scss";
-import { onBlurField } from "../../store/actions/builderAction";
-// import WorkExperience from "../../src/components/commonSection/WorkExperience";
-import WorkExperience from "../../src/components/FashionDesigner2/WorkExperience";
-import Skills from "../../src/components/FashionDesigner2/Skills";
-import EducationHistory from "../../src/components/FashionDesigner2/EducationHistory";
-import Name from "../../src/components/commonSection/Name";
-import { sampleData } from "../../constants/sampleData";
-import { styles } from "../../src/components/componentStyles/template1Style";
-
-import Achievements from "../../src/components/FinancialTemplat/Achievements";
-
+import { Box, Flex, HStack, Link } from "@chakra-ui/react";
+import { MdCastForEducation } from "react-icons/md";
+import { BsFillLayersFill } from "react-icons/bs";
+import { GiSkills, GiOrganigram } from "react-icons/gi";
+import { IoLanguageOutline } from "react-icons/io5";
+import { GoProject } from "react-icons/go";
+import { TbCertificate } from "react-icons/tb";
+import { FaHorseHead } from "react-icons/fa";
+import style from "../../styles/templates/template1.module.scss";
+import Classes from "../../styles/templates/hybridTemplate.module.css";
+import Class from "../../styles/templates/fashion2.module.scss";
 import { Tooltip } from "react-tippy";
-import Link from "next/link";
-import { Box, Center, Image } from "@chakra-ui/react";
-import UnderLineBox from "../../src/components/FashionDesigner2/UnderLineBox";
-import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
-import { GiSpiderWeb } from "react-icons/gi";
-import { MdLocationOn } from "react-icons/md";
+import Name from "../../src/components/commonSection/Name";
+import About from "../../src/components/commonSection/About";
+import Contact from "../../src/components/commonSection/Contact";
+import Heading from "../../src/components/commonSection/Heading";
+import Education from "../../src/components/commonSection/Education";
+import WorkExperience from "../../src/components/commonSection/WorkExperience";
+import Skill from "../../src/components/commonSection/Skill";
+import TempLayout from "../../src/components/tempNav/TempLayout";
+import { useSelector } from "react-redux";
+import useShow from "../../src/components/tempSectionSide/useShow";
+import SectionSideMenu from "../../src/components/tempSectionSide/SectionSideMenu";
 import ImageSelector from "../../src/components/imageSelector";
+import {
+  CERTIFICATE,
+  EDUCATION,
+  INTEREST,
+  LANGUAGES,
+  ORGANIZATION,
+  PROJECT,
+  SKILL,
+  WORK,
+} from "../../src/components/tempSectionSide/SectionSideConstant";
 
-class FashionDesigner2 extends Component {
-  render() {
-    const { resumeData, updater, width } = this.props;
-    console.log("resumeData", resumeData);
-    return (
-      <Box position="relative" overflow="auto">
+const FashionDesigner2 = () => {
+  let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  // custom Hook For Template
+  const [show, setShow] = useShow();
+
+  return (
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
+    //Template Layout for Template Navbar
+    <TempLayout education={true} skills={true} work={true}>
+      <div className={style.main}>
         <Link href={"/templates"}>
-          <Box position="fixed" right="60px" top="40px">
+          <div style={{ position: "fixed", top: "70px", right: "30px" }}>
             <Tooltip title="Change Template" arrow distance={20}>
-              <Box className={style.swap}>
+              <div className={style.swap}>
                 <img src="/icons/swap.png" />
-              </Box>
+              </div>
             </Tooltip>
-          </Box>
+          </div>
         </Link>
-        <Box
-          padding="30px"
-          backgroundColor="white"
-          fontFamily="sans-serif"
-          margin="auto"
-          maxW="1050"
-          w={1050}
+        <Flex
+          justifyContent={{ base: "none", lg: "center" }}
+          bg={"blackAlpha.100"}
+          overflow="auto"
+          flexDir={"column"}
+          alignItems={{ sm: "none", md: "center" }}
         >
-          <Box className={width < 500 ? "" : style.a4PaperFashion2}>
-            <Box>
-              {/* <Profile /> */}
-              <Box display="flex" flexDirection="row">
-                <Box
-                  w="100%"
-                  minH="10em"
-                  display="flex"
-                  justifyContent="center"
-                  flexDirection="column"
-                  backgroundColor="#077BBD"
-                  marginTop="10"
-                ></Box>
-              </Box>
-              <Box
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                maxHeight={"20px"}
-              >
-                <ImageSelector
-                  maxHeight={"12em"}
-                  maxWidth={"12em"}
-                  minHeight={"12em"}
-                  minWidth={"12em"}
-                  marginLeft={"10px"}
-                  marginTop={"-70%"}
-                />
-              </Box>
-              <Box
-                display={"flex"}
-                alignItems={"center"}
-                justifyContent={"center"}
-              >
+          <Box
+            minW={910}
+            pt={12}
+            pb={2}
+            // px={2}
+            bg={"white"}
+            m={4}
+            mt="100px"
+            borderRadius={6}
+          >
+            <Box
+              w="100%"
+              minH="10em"
+              display="flex"
+              justifyContent="center"
+              flexDirection="column"
+              backgroundColor="#077BBD"
+            ></Box>
+            <HStack
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+              flexDir={"column"}
+            >
+              {/* Image Section  */}
+              <ImageSelector
+                maxHeight={"12em"}
+                maxWidth={"12em"}
+                minHeight={"12em"}
+                minWidth={"12em"}
+                marginLeft={"10px"}
+                marginTop={"-70%"}
+              />
+              <Box>
                 <Name
                   parentContainerStyle="fD2textContainer"
                   FNameStyle="fDesigner2"
@@ -86,197 +100,211 @@ class FashionDesigner2 extends Component {
                   FName={true}
                   SName={true}
                 />
+                {/* Profession Section  */}
+                {/* <Profession professionStyle={Classes.ProfessionHybrid} /> */}
               </Box>
-              <Box
-                bg="white"
-                padding="30px"
-                backgroundColor="white"
-                fontFamily="sans-serif"
-                display="flex"
-                flexDirection="row"
-                justifyContent="space-around"
-              >
-                <Box w="40%">
-                  <Box>
-                    <Text
-                      value={resumeData?.aboutMe?.heading}
-                      placeholder="Profile"
-                      customClass={"manager-f1-heading-title"}
-                      path={"aboutme.heading"}
-                      editable={false}
-                      fontWeight="1.5em"
-                    />
-                    <Box>
-                      <UnderLineBox />
-                    </Box>
-                    <Box mt="3">
-                      <Text
-                        value={resumeData?.aboutMe?.body}
-                        placeholder="Short and engaging pitch about yourself."
-                        path={"aboutMe.body"}
-                      />
-                    </Box>
-                  </Box>
-                  <Box>
-                    <Text
-                      value={resumeData?.objective?.Contact}
-                      placeholder="My Contact"
-                      customClass={"manager-f-heading-title"}
-                      path={"objective.contact"}
-                      editable={false}
-                    />
-                    <UnderLineBox />
-                    <Box display="flex" mt="2">
-                      <AiOutlineMail size="26" />
-                      <Box ml={1}>
-                        <Text
-                          value={resumeData?.profile?.email}
-                          placeholder="Email"
-                          customClass={"manager-f-name"}
-                          path={"profile.email"}
-                          margin={"4px"}
-                          marginLeft={"8px"}
-                          color={"black"}
-                        />
-                      </Box>
-                    </Box>
-                    <Box display="flex" mt="1">
-                      <AiOutlinePhone size="26" />
-                      <Box ml={1}>
-                        <Text
-                          value={resumeData?.profile?.phone}
-                          placeholder="Phone"
-                          customClass={"manager-f-name"}
-                          path={"profile.phone"}
-                          margin={"4px"}
-                          marginLeft={"8px"}
-                        />
-                      </Box>
-                    </Box>
-                    <Box display="flex" mt="1">
-                      <MdLocationOn size="26" />
-                      <Box ml={1}>
-                        <Text
-                          value={resumeData?.profile?.address?.city}
-                          placeholder="City"
-                          path={"profile.address.city"}
-                          customClass={"manager-f-name"}
-                          margin={"4px"}
-                          marginLeft={"8px"}
-                        />
-                      </Box>
-                    </Box>
-                    <Box display="flex" mt="1">
-                      <GiSpiderWeb size="26" />
-                      <Box ml={1}>
-                        <Text
-                          value={resumeData?.profile?.websiteURL}
-                          placeholder="Website URL"
-                          customClass={"manager-f-name"}
-                          path={"profile.websiteURL"}
-                          margin={"4px"}
-                          marginLeft={"8px"}
-                        />
-                      </Box>
-                    </Box>
-                    {/* Skills */}
-                    {resumeData?.skills?.visible && (
-                      <>
-                        <Text
-                          value={resumeData?.skills?.heading || "Skills"}
-                          placeholder="Skills"
-                          customClass={"manager-f1-heading-title"}
-                          path={"skills.heading"}
-                          editable={false}
-                          style={styles.workHeading}
-                        />
-                        <Box>
-                          <UnderLineBox />
+            </HStack>
+            <HStack mt={5} alignItems="stretch" justifyContent={"space-evenly"}>
+              <Box minW={280} maxW={380} h="full">
+                <Box pl={8}>
+                  <Heading
+                    title={"Profile"}
+                    color="black"
+                    margin={"20px 0px 0px 0px"}
+                    line={true}
+                    lineW="45%"
+                    lineH="0.30em"
+                    lineBg="#077BBD"
+                    fontSize={"1.8em"}
+                    lineStyle={Class.lineStyle}
+                  />
+
+                  <About
+                    minW="100%"
+                    maxW="100%"
+                    aboutStyle={Classes.aboutText}
+                    textColor="black"
+                    fontWeight="600"
+                  />
+
+                  <Heading
+                    title={"My Contact"}
+                    color="black"
+                    margin={"35px 0px 0px 0px"}
+                    line={true}
+                    lineW="45%"
+                    lineH="0.30em"
+                    lineBg="#077BBD"
+                    fontSize={"1.8em"}
+                    lineStyle={Class.lineStyle}
+                  />
+                  <Contact
+                    parentDirection="column"
+                    phone={true}
+                    email={true}
+                    location={true}
+                    website={true}
+                    circleIcon={true}
+                    iconColor="black"
+                    iconSize={"24px"}
+                    // style={"manager-f-name"}
+                    margin={"0px 4px 0px 4px"}
+                    parentStyle={Class.parentStyle}
+                    style={Class.style}
+                  />
+                  {/* _____________ Skill _____________ */}
+                  {resumeData?.skills?.visible && (
+                    <>
+                      <HStack alignItems={"flex-start"} mt={10}>
+                        <Box w="20px" ml={"-27px"}>
+                          {show.skills && (
+                            <SectionSideMenu
+                              onHide={() => setShow({ ...show, skills: false })}
+                              bg="#E0EFFA"
+                              iconColor={"#2A78AB"}
+                              onDelete={SKILL}
+                            />
+                          )}
                         </Box>
-                        <Skills
-                          data={
-                            resumeData?.skills?.items.length
-                              ? [...resumeData?.skills?.items]
-                              : [...sampleData?.data?.skills?.items]
-                          }
-                          color={this.props.theme.color}
-                          updater={updater}
-                        />
-                      </>
-                    )}
-                  </Box>
-                </Box>
-                <Box w="40%">
-                  {/* Education Histroy */}
-                  {resumeData?.education?.visible && (
-                    <>
-                      <Text
-                        value={resumeData?.education?.heading}
-                        placeholder="EDUCATION"
-                        customClass={"manager-f1-heading-title"}
-                        path={"education.heading"}
-                        editable={false}
-                        style={styles.workHeading}
-                      />
-                      <Box>
-                        <UnderLineBox />
-                      </Box>
-                      <EducationHistory
-                        data={
-                          resumeData?.education?.items.length
-                            ? [...resumeData?.education?.items]
-                            : [...sampleData?.data?.education?.items]
-                        }
-                        color={this.props.theme.color}
-                        updater={updater}
-                      />
-                    </>
-                  )}
-                  {/* {" Work Experience"} */}
-                  {resumeData?.work?.visible && (
-                    <>
-                      <Box
-                        className={`${style.managerTemplateCol} ${style.managerFHeading}`}
-                      >
-                        <Text
-                          value={resumeData?.Professional?.heading}
-                          placeholder="Experience"
-                          customClass={"manager-f1-heading-title"}
+
+                        <Heading
+                          title={"Skills"}
                           color="black"
-                          path={"ProfessionalExperience.heading"}
-                          editable={false}
-                          style={styles.workHeading}
-                        />
-                        <Box>
-                          <UnderLineBox />
-                        </Box>
-
-                        <WorkExperience
-                          data={
-                            resumeData?.work?.items.length
-                              ? [...resumeData?.work?.items]
-                              : [...sampleData?.data?.work?.items]
+                          margin={"20px 0px 0px 0px"}
+                          onSideSectionShow={() =>
+                            setShow({ ...show, skills: true })
                           }
-                          color={this.props.theme.color}
-                          updater={updater}
+                          line={true}
+                          lineW="45%"
+                          lineH="0.30em"
+                          lineBg="#077BBD"
+                          fontSize={"1.8em"}
+                          lineStyle={Class.lineStyle}
                         />
-                      </Box>
+                      </HStack>
+                      <Skill
+                        skillStyle={Classes.skillText}
+                        rating={true}
+                        strokeWidth="2"
+                        // lineStyle={styles.line}
+                        strokeColor="#1890ff"
+                        trailColor="#fff"
+                        // percentageStyle={styles.percent}
+                        // parentContainerStyle={Classes.ml}
+                      />
                     </>
                   )}
                 </Box>
               </Box>
-            </Box>
+              <Box minW={302} maxW={302} p={4} borderRadius={6}>
+                {/* Education Section  */}
+                {resumeData?.education?.visible && (
+                  <>
+                    <HStack alignItems={"flex-start"}>
+                      {/* Section Side Menu */}
+                      {show.education && (
+                        <SectionSideMenu
+                          bg={"#313B47"}
+                          onHide={() => setShow({ ...show, education: false })}
+                          onDelete={EDUCATION}
+                        />
+                      )}
+                      {/* Heading For Education Section  */}
+                      <Heading
+                        title="EDUCATION"
+                        circleSize="38px"
+                        circleBg="#313B47"
+                        circleIconHeading={true}
+                        icon={(props) => (
+                          <MdCastForEducation
+                            {...props}
+                            size={18}
+                            color={"white"}
+                          />
+                        )}
+                        fontSize="23px"
+                        fontWeight={"bold"}
+                        color="#313B47"
+                        margin={"0px 0px 10px 0px"}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, education: true })
+                        }
+                      />
+                    </HStack>
+                    {/* Education Components */}
+                    <Education
+                      institution={true}
+                      degree={true}
+                      degree_placeholder="Study Program"
+                      date={true}
+                      location={true}
+                      institutionStyle={Classes.institute}
+                      degreeStyle={Classes.programText}
+                      dateStyle={Classes.date}
+                      locationStyle={Classes.date}
+                    />
+                  </>
+                )}
+                {/* Work Experience Section */}
+                {resumeData?.work?.visible && (
+                  <>
+                    <HStack alignItems={"flex-start"}>
+                      {/* Section Side Menu */}
+                      {show.work && (
+                        <SectionSideMenu
+                          bg={"#313B47"}
+                          onHide={() => setShow({ ...show, work: false })}
+                          onDelete={WORK}
+                        />
+                      )}
+                      {/* Work Experience Heading  */}
+                      <Heading
+                        title="WORK EXPERIENCE"
+                        circleSize="38px"
+                        circleBg="#313B47"
+                        circleIconHeading={true}
+                        icon={(props) => (
+                          <BsFillLayersFill
+                            {...props}
+                            size={18}
+                            color={"white"}
+                          />
+                        )}
+                        fontSize="23px"
+                        fontWeight={"bold"}
+                        color="#313B47"
+                        minW={"full"}
+                        maxW="full"
+                        margin={"10px 0px"}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, work: true })
+                        }
+                      />
+                    </HStack>
+                    {/* Work Experience Components */}
+                    <WorkExperience
+                      date={true}
+                      position={true}
+                      company={true}
+                      location={true}
+                      summary={true}
+                      summary_placeholder="Company Description (optional,fill when the company is not well known"
+                      location_placeholder="Country,City"
+                      dateStyle={Classes.date}
+                      positionStyle={Classes.programText}
+                      companyStyle={Classes.institute}
+                      locationStyle={Classes.date}
+                      summaryStyle={Classes.date}
+                    />
+                  </>
+                )}
+              </Box>
+            </HStack>
           </Box>
-        </Box>
-      </Box>
-    );
-  }
-}
+        </Flex>
+      </div>
+    </TempLayout>
+  );
+};
 
-const mapStateToProps = (store) => ({
-  theme: store.editorReducer.theme,
-  resumeData: store.editorReducer.resumeData,
-  updater: store.editorReducer.updater,
-});
-
-export default connect(mapStateToProps, { onBlurField })(FashionDesigner2);
+export default FashionDesigner2;
