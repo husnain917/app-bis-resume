@@ -23,7 +23,6 @@ export default function Pricing() {
                     <Sidebar />
                 </Box>
                 <Box
-
                     maxW={["100%", "100%", "100%", "100%"]}
                 >
                     <div style={{ marginTop: "5%", }}>
