@@ -21,7 +21,7 @@ export const TABLE_CONTENT_DATA = [
     href: "a5",
   },
   {
-    label: "Cookies, Pixels, Conversion Tracking",
+    label: "Governing Law",
     href: "a6",
   },
   {
