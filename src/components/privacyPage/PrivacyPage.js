@@ -10,15 +10,9 @@ import {
   OrderedList,
 } from "@chakra-ui/react";
 import React from "react";
-import {
-  PREMIUM_ACCOUNT_DATA,
-  PREMIUM_ACCOUNT_DATA_LINKS,
-  CONTACT_US_DATA,
-  TERMS_DATA,
-} from "./data";
+import { CONTACT_US_DATA, PRIVACY_DATA } from "./data";
 import Underline from "../aaronGraphicTemp/Underline";
-import TableOfContent from "../legal/TableOfContent";
-import { TABLE_CONTENT_DATA } from "./data";
+import { PRIVACY_PAGE_DATA } from "./data";
 import { extendTheme } from "@chakra-ui/react";
 import fonts from "./fonts";
 // const theme = extendTheme({
@@ -38,7 +32,7 @@ const PrivacyPage = () => {
           <Box>
             {/* main title */}
             <Box padding={"40px 0px"} marginBottom={10}>
-              {TERMS_DATA?.TermsOfUse?.heading?.map((item, index) => (
+              {PRIVACY_DATA?.TermsOfUse?.heading?.map((item, index) => (
                 <>
                   <Text
                     key={index}
@@ -55,7 +49,7 @@ const PrivacyPage = () => {
 
             {/* description */}
             <Box>
-              {TERMS_DATA?.TermsOfUse?.data?.map((item, index) => (
+              {PRIVACY_DATA?.TermsOfUse?.data?.map((item, index) => (
                 <>
                   <Text
                     key={index}
@@ -74,7 +68,7 @@ const PrivacyPage = () => {
                 marginBottom={"1rem"}
                 color={"#757575"}
               >
-                {TERMS_DATA?.TermsOfUse?.description}
+                {PRIVACY_DATA?.TermsOfUse?.description}
               </Text>
             </Box>
 
@@ -85,13 +79,13 @@ const PrivacyPage = () => {
                 fontWeight={"bold"}
                 color={"#313B47"}
               >
-                {TERMS_DATA?.TableOfContents?.heading}
+                {PRIVACY_DATA?.TableOfContents?.heading}
               </Text>
 
               {/* description */}
               <Box margin={"10px 0px 40px 0px"}>
                 <OrderedList>
-                  {TABLE_CONTENT_DATA?.map((item, index) => (
+                  {PRIVACY_PAGE_DATA?.map((item, index) => (
                     <>
                       <ListItem key={index}>
                         <Link
@@ -125,23 +119,25 @@ const PrivacyPage = () => {
                 fontWeight={"bold"}
                 color={"#313B47"}
               >
-                {TERMS_DATA?.TheNovoresumeContent?.heading}
+                {PRIVACY_DATA?.TheNovoresumeContent?.heading}
               </Text>
 
               {/* description */}
               <Box margin={"10px 0px 40px 0px"}>
-                {TERMS_DATA?.TheNovoresumeContent?.data?.map((item, index) => (
-                  <>
-                    <Text
-                      key={index}
-                      fontSize={"1rem"}
-                      lineHeight={"1.5"}
-                      marginBottom={"1rem"}
-                    >
-                      {item?.text}
-                    </Text>
-                  </>
-                ))}
+                {PRIVACY_DATA?.TheNovoresumeContent?.data?.map(
+                  (item, index) => (
+                    <>
+                      <Text
+                        key={index}
+                        fontSize={"1rem"}
+                        lineHeight={"1.5"}
+                        marginBottom={"1rem"}
+                      >
+                        {item?.text}
+                      </Text>
+                    </>
+                  )
+                )}
               </Box>
             </Box>
 
@@ -152,7 +148,7 @@ const PrivacyPage = () => {
                 fontWeight={"bold"}
                 color={"#313B47"}
               >
-                {TERMS_DATA?.AcceptableUse?.heading}
+                {PRIVACY_DATA?.AcceptableUse?.heading}
               </Text>
 
               {/* description */}
@@ -163,10 +159,10 @@ const PrivacyPage = () => {
                   color={"#313B47"}
                   marginBottom={4}
                 >
-                  {TERMS_DATA?.AcceptableUse?.description}
+                  {PRIVACY_DATA?.AcceptableUse?.description}
                 </Text>
                 <UnorderedList mb={6} ml={7}>
-                  {TERMS_DATA?.AcceptableUse?.data?.map((item, index) => {
+                  {PRIVACY_DATA?.AcceptableUse?.data?.map((item, index) => {
                     return (
                       <>
                         <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
@@ -182,7 +178,7 @@ const PrivacyPage = () => {
                   color={"#313B47"}
                   marginBottom={4}
                 >
-                  {TERMS_DATA?.AcceptableUse?.description2}
+                  {PRIVACY_DATA?.AcceptableUse?.description2}
                 </Text>
                 <Text
                   fontSize={["1.1em", "1.1em", "1.3em", "1.3em"]}
@@ -190,7 +186,7 @@ const PrivacyPage = () => {
                   color={"#313B47"}
                   marginBottom={4}
                 >
-                  {TERMS_DATA?.AcceptableUse?.description3}
+                  {PRIVACY_DATA?.AcceptableUse?.description3}
                 </Text>
                 <Text
                   fontSize={["1.1em", "1.1em", "1.3em", "1.3em"]}
@@ -198,7 +194,7 @@ const PrivacyPage = () => {
                   color={"#313B47"}
                   marginBottom={4}
                 >
-                  {TERMS_DATA?.AcceptableUse?.description4}
+                  {PRIVACY_DATA?.AcceptableUse?.description4}
                 </Text>
                 <Text
                   fontSize={["1.1em", "1.1em", "1.3em", "1.3em"]}
@@ -206,7 +202,7 @@ const PrivacyPage = () => {
                   color={"#313B47"}
                   marginBottom={4}
                 >
-                  {TERMS_DATA?.AcceptableUse?.description5}
+                  {PRIVACY_DATA?.AcceptableUse?.description5}
                 </Text>
                 <Text
                   fontSize={["1.1em", "1.1em", "1.3em", "1.3em"]}
@@ -214,7 +210,7 @@ const PrivacyPage = () => {
                   color={"#313B47"}
                   marginBottom={4}
                 >
-                  {TERMS_DATA?.AcceptableUse?.description6}
+                  {PRIVACY_DATA?.AcceptableUse?.description6}
                 </Text>
               </Box>
             </Box>
@@ -226,7 +222,7 @@ const PrivacyPage = () => {
                 fontWeight={"bold"}
                 color={"#313B47"}
               >
-                {TERMS_DATA?.Security?.heading}
+                {PRIVACY_DATA?.Security?.heading}
               </Text>
 
               {/* description */}
@@ -236,7 +232,7 @@ const PrivacyPage = () => {
                   lineHeight={"1.5"}
                   marginBottom={"1rem"}
                 >
-                  {TERMS_DATA?.Security?.data}
+                  {PRIVACY_DATA?.Security?.data}
                 </Text>
               </Box>
             </Box>
@@ -248,7 +244,7 @@ const PrivacyPage = () => {
                 fontWeight={"bold"}
                 color={"#313B47"}
               >
-                {TERMS_DATA?.LinksToOtherSoftware?.heading}
+                {PRIVACY_DATA?.LinksToOtherSoftware?.heading}
               </Text>
 
               {/* description */}
@@ -258,56 +254,58 @@ const PrivacyPage = () => {
                   fontWeight={"500"}
                   color={"#313B47"}
                 >
-                  {TERMS_DATA?.LinksToOtherSoftware?.subHeading}
+                  {PRIVACY_DATA?.LinksToOtherSoftware?.subHeading}
                 </Text>
-                {TERMS_DATA?.LinksToOtherSoftware?.data?.map((item, index) => (
-                  <>
-                    <Text fontSize={"1.3rem"} fontWeight={700} my={"5"}>
-                      {item.heading}
-                    </Text>
-                    <Text
-                      fontSize={"1.2rem"}
-                      lineHeight={"1.5"}
-                      marginBottom={"1rem"}
-                    >
-                      {item.description}
-                      <Link
-                        href={"#"}
-                        color={"#2679C7"}
-                        lineHeight={"1.5"}
+                {PRIVACY_DATA?.LinksToOtherSoftware?.data?.map(
+                  (item, index) => (
+                    <>
+                      <Text fontSize={"1.3rem"} fontWeight={700} my={"5"}>
+                        {item.heading}
+                      </Text>
+                      <Text
                         fontSize={"1.2rem"}
-                      >
-                        {item?.link1}
-                      </Link>
-                    </Text>
-                    <UnorderedList mb={6}>
-                      {item?.data?.map((item, index) => {
-                        return (
-                          <>
-                            <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
-                              {item?.text}
-                            </ListItem>
-                          </>
-                        );
-                      })}
-                    </UnorderedList>
-                    <Text
-                      fontSize={"1.2rem"}
-                      lineHeight={"1.5"}
-                      marginBottom={"1rem"}
-                    >
-                      {item?.description2}
-                      <Link
-                        href={"#"}
-                        color={"#2679C7"}
                         lineHeight={"1.5"}
-                        fontSize={"1.2rem"}
+                        marginBottom={"1rem"}
                       >
-                        {item?.link1}
-                      </Link>
-                    </Text>
-                  </>
-                ))}
+                        {item.description}
+                        <Link
+                          href={"#"}
+                          color={"#2679C7"}
+                          lineHeight={"1.5"}
+                          fontSize={"1.2rem"}
+                        >
+                          {item?.link1}
+                        </Link>
+                      </Text>
+                      <UnorderedList mb={6}>
+                        {item?.data?.map((item, index) => {
+                          return (
+                            <>
+                              <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
+                                {item?.text}
+                              </ListItem>
+                            </>
+                          );
+                        })}
+                      </UnorderedList>
+                      <Text
+                        fontSize={"1.2rem"}
+                        lineHeight={"1.5"}
+                        marginBottom={"1rem"}
+                      >
+                        {item?.description2}
+                        <Link
+                          href={"#"}
+                          color={"#2679C7"}
+                          lineHeight={"1.5"}
+                          fontSize={"1.2rem"}
+                        >
+                          {item?.link1}
+                        </Link>
+                      </Text>
+                    </>
+                  )
+                )}
               </Box>
             </Box>
 
@@ -318,13 +316,13 @@ const PrivacyPage = () => {
                 fontWeight={"bold"}
                 color={"#313B47"}
               >
-                {TERMS_DATA?.WarrantyAndPremiumAccount?.heading}
+                {PRIVACY_DATA?.WarrantyAndPremiumAccount?.heading}
               </Text>
 
               {/* description */}
               <Box margin={"10px 0px 40px 0px"}>
                 <Box>
-                  {TERMS_DATA?.WarrantyAndPremiumAccount?.data?.map(
+                  {PRIVACY_DATA?.WarrantyAndPremiumAccount?.data?.map(
                     (item, index) => (
                       <>
                         <Text fontSize={"1.3rem"} fontWeight={700} my={"6"}>
@@ -351,7 +349,7 @@ const PrivacyPage = () => {
                 fontWeight={"bold"}
                 color={"#313B47"}
               >
-                {TERMS_DATA?.GoverningLaw?.heading}
+                {PRIVACY_DATA?.GoverningLaw?.heading}
               </Text>
 
               {/* description */}
@@ -361,7 +359,7 @@ const PrivacyPage = () => {
                   lineHeight={"1.5"}
                   marginBottom={"1rem"}
                 >
-                  {TERMS_DATA?.GoverningLaw?.data}
+                  {PRIVACY_DATA?.GoverningLaw?.data}
                 </Text>
               </Box>
             </Box>
@@ -373,12 +371,12 @@ const PrivacyPage = () => {
                 fontWeight={"bold"}
                 color={"#313B47"}
               >
-                {TERMS_DATA?.Changes?.heading}
+                {PRIVACY_DATA?.Changes?.heading}
               </Text>
 
               {/* description */}
 
-              {TERMS_DATA?.Changes?.data.map((item, index) => {
+              {PRIVACY_DATA?.Changes?.data.map((item, index) => {
                 return (
                   <>
                     <Box margin={"10px 0px 40px 0px"}>
@@ -410,7 +408,7 @@ const PrivacyPage = () => {
                 fontWeight={"bold"}
                 color={"#313B47"}
               >
-                {TERMS_DATA?.BreachesOfTheseTermsOfUse?.heading}
+                {PRIVACY_DATA?.BreachesOfTheseTermsOfUse?.heading}
               </Text>
 
               {/* description */}
@@ -420,9 +418,9 @@ const PrivacyPage = () => {
                   lineHeight={"1.5"}
                   marginBottom={"1rem"}
                 >
-                  {TERMS_DATA?.BreachesOfTheseTermsOfUse?.data}
+                  {PRIVACY_DATA?.BreachesOfTheseTermsOfUse?.data}
                 </Text>
-                {TERMS_DATA?.BreachesOfTheseTermsOfUse?.subData.map(
+                {PRIVACY_DATA?.BreachesOfTheseTermsOfUse?.subData.map(
                   (item, index) => {
                     return (
                       <>
@@ -496,12 +494,12 @@ const PrivacyPage = () => {
                 fontWeight={"bold"}
                 color={"#313B47"}
               >
-                {TERMS_DATA?.Termination?.heading}
+                {PRIVACY_DATA?.Termination?.heading}
               </Text>
 
               {/* description */}
               <Box margin={"10px 0px 40px 0px"}>
-                {TERMS_DATA?.Termination?.data?.map((item, index) => (
+                {PRIVACY_DATA?.Termination?.data?.map((item, index) => (
                   <>
                     <Text
                       key={index}
@@ -526,7 +524,7 @@ const PrivacyPage = () => {
                 fontWeight={"bold"}
                 color={"#313B47"}
               >
-                {TERMS_DATA?.ContactUs?.heading}
+                {PRIVACY_DATA?.ContactUs?.heading}
               </Text>
 
               {/* description */}
@@ -536,7 +534,7 @@ const PrivacyPage = () => {
                   lineHeight={"1.5"}
                   marginBottom={"1rem"}
                 >
-                  {TERMS_DATA?.ContactUs?.subHeading}
+                  {PRIVACY_DATA?.ContactUs?.subHeading}
                 </Text>
 
                 <Box>

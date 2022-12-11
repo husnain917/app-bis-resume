@@ -1,4 +1,4 @@
-export const TABLE_CONTENT_DATA = [
+export const PRIVACY_PAGE_DATA = [
   {
     label: "What personal data does BisResume ApS’s use?",
     href: "a1",
@@ -62,33 +62,6 @@ export const PREMIUM_ACCOUNT_DATA = [
   },
 ];
 
-export const PREMIUM_ACCOUNT_DATA_LINKS = [
-  {
-    label: "Purchased on:",
-    link: "[insert date of Subscription]",
-  },
-  {
-    label: "Order No:",
-    link: "[insert your Receipt ID number]",
-  },
-  {
-    label: "Your full name:",
-    link: "[insert your full name]",
-  },
-  {
-    label: "Your address:",
-    link: "[insert your address]",
-  },
-  {
-    label: "Tel No:",
-    link: "[insert your telephone]",
-  },
-  {
-    label: "Date:",
-    link: "[insert date of purchase]",
-  },
-];
-
 export const CONTACT_US_DATA = [
   {
     label: "secondLink",
@@ -119,7 +92,7 @@ export const CONTACT_US_DATA = [
   //   },
 ];
 
-export const TERMS_DATA = {
+export const PRIVACY_DATA = {
   TermsOfUse: {
     heading: [
       {
