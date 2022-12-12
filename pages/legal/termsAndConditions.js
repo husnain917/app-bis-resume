@@ -15,7 +15,30 @@ import {
 } from "../../src/components/legal/CustomData";
 import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import TableOfContent from '../../src/components/legal/TableOfContent';
-import Layout from '../../src/Layout';
+import SideBarSection from '../../src/components/aboutUs/SideBarSection/SideBarSection';
+import Fade from "react-reveal/Fade";
+
+export default function Terms_And_Conditions() {
+    // sidebar state
+    const [isVisible, setIsVisible] = useState(false);
+    const listenToScroll = () => {
+        let heightToHidden = 20;
+        let againHide = 4310;
+        const winScroll =
+            document.body.scrollTop || document.documentElement.scrollTop;
+
+        if (winScroll < heightToHidden || winScroll > againHide) {
+            setIsVisible(false);
+        } else if (winScroll > heightToHidden) {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+    useEffect(() => {
+        window.addEventListener("scroll", listenToScroll);
+    }, []);
+
 
     return (
         <>
