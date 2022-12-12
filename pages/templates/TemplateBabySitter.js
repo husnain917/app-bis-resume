@@ -28,6 +28,8 @@ import Contact from '../../src/components/commonSection/Contact';
 import Skill from "../../src/components/commonSection/Skill"
 import Link from "next/link";
 import { Tooltip } from "react-tippy";
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
+
 
 export default function TemplateBabySitter() {
     const {
@@ -38,18 +40,11 @@ export default function TemplateBabySitter() {
     const [show, setShow] = useShow();
 
     return (
-        <div className={style.main}>
-            <TempLayout work={true} education={true} skills={true}>
+        <div style={{ overflow: 'auto' }}>
 
-                <Link href={'/templates'}>
-                    <div className={style.swapCont}>
-                        <Tooltip title="Change Template" arrow distance={20}>
-                            <div className={style.swap} >
-                                <img src='/icons/swap.png' />
-                            </div>
-                        </Tooltip>
-                    </div>
-                </Link>
+            <TempLayout work={true} education={true} skills={true}>
+            <ChangeTempBtn />
+              
                 <div className={Classes.mainDiv} >
                     <Box ml={["", , , "5%", "13%", "25%"]} >
 
