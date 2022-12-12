@@ -15,19 +15,17 @@ import Underline from "../aaronGraphicTemp/Underline";
 import { PRIVACY_PAGE_DATA } from "./data";
 import { extendTheme } from "@chakra-ui/react";
 import fonts from "./fonts";
-// const theme = extendTheme({
-//   fonts: {
-//     heading: "Open Sans",
-//     body: "Raleway",
-//   },
-// })
+const theme = extendTheme({
+  fonts: {
+    heading: "Open Sans",
+    body: "'Euclid Circular B', sans-serif",
+  },
+});
 
 const PrivacyPage = () => {
   return (
     <>
-      <ChakraProvider
-      // theme={theme}
-      >
+      <ChakraProvider theme={theme}>
         <Container maxW={["100%", "100%", "100%", "80%", "50%"]}>
           <Box>
             {/* main title */}
