@@ -6,6 +6,8 @@ import styles from "../../../styles/Index.module.css";
 import CardSliderFunc from "../compProfessionalResume/compComponents/CardSlider";
 import { useWindowSizing } from "../../../customHooks/useWindowSizing";
 import AdvSlider from "./AdvSlider";
+import Link from "next/link";
+
 export default function Advantages() {
   const [isTabActive, setIsTabActive] = useState(0);
   const [Width, setWidth] = useState("500");
@@ -28,11 +30,9 @@ export default function Advantages() {
     }, 2000);
 
     const interval = setInterval(() => {
-      setIsTabActive(
-        (prev) => (prev + 1) % data.length
-      );
+      setIsTabActive((prev) => (prev + 1) % data.length);
     }, 8000);
-  }, [])
+  }, []);
 
   return (
     <>
@@ -90,23 +90,34 @@ export default function Advantages() {
           <AdvSlider />
         )}
         <Box display="flex" alignItems="center" justifyContent="space-around">
-          <Button
-            colorScheme="#027C87"
-            bgColor="#027C87"
-            color="white"
-            borderRadius="50px"
-            fontSize={["1rem", "1rem", "1.2rem", "1.2rem", "1.2rem", "1.5rem"]}
-            fontWeight="bold"
-            textAlign="center"
-            mb="5%"
-            p={["0px", , "25px", "25px", "25px", "30px"]}
-            pl="40px"
-            pr="40px"
-            mt={["10%", "10%", "0%"]}
-            className={styles.benefitBtn}
-          >
-            Build my resume
-          </Button>
+          <Box className="cursor">
+            <Link href="/templates">
+              <Button
+                colorScheme="#027C87"
+                bgColor="#027C87"
+                color="white"
+                borderRadius="50px"
+                fontSize={[
+                  "1rem",
+                  "1rem",
+                  "1.2rem",
+                  "1.2rem",
+                  "1.2rem",
+                  "1.5rem",
+                ]}
+                fontWeight="bold"
+                textAlign="center"
+                mb="5%"
+                p={["0px", , "25px", "25px", "25px", "30px"]}
+                pl="40px"
+                pr="40px"
+                mt={["10%", "10%", "0%"]}
+                className={styles.benefitBtn}
+              >
+                Build my resume
+              </Button>
+            </Link>
+          </Box>
         </Box>
       </Box>
     </>

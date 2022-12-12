@@ -7,15 +7,15 @@ import FaqsSection from "../src/components/faqsComponent/FaqsSection";
 import Advantages from "../src/components/advantages/Advantages";
 import { useState, useEffect } from "react";
 import Fade from "react-reveal/Fade";
-import 'react-toastify/dist/ReactToastify.css';
 import SliderComponent from "../src/components/sliderComponent/SliderComponent";
+import BuildResume from "../src/components/BuildResume";
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {
     let heightToHidden = 2550;
     const winScroll =
-    document.body.scrollTop || document.documentElement.scrollTop;
-    
+      document.body.scrollTop || document.documentElement.scrollTop;
+
     if (winScroll > heightToHidden) {
       setIsVisible(true);
     } else {
@@ -32,19 +32,19 @@ export default function Home() {
         <title>Bis Resume App</title>
         <meta name="description" content="Create resume with ease!" />
       </Head>
-      <Layout>
-        <CallToAction />
-        <SliderComponent />
 
-        <HintSection />
-        {isVisible && (
-          <Fade center>
-            <Advantages />
-          </Fade>
-        )}
-        <CompProfessionalResume />
-        <FaqsSection />
-      </Layout>
+      <CallToAction />
+      <SliderComponent />
+
+      <HintSection />
+      {isVisible && (
+        <Fade center>
+          <Advantages />
+        </Fade>
+      )}
+      <CompProfessionalResume />
+      <FaqsSection />
+      <BuildResume />
     </>
   );
 }

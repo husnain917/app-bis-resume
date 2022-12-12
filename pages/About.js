@@ -6,9 +6,9 @@ import Navbar from "../src/components/navbar/Navbar";
 const About = () => {
   return (
     <div>
-      <Navbar />
+    
       <AboutUs />
-      <Footer />
+      
     </div>
   );
 };
