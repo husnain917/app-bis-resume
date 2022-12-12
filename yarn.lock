@@ -7058,9 +7058,9 @@ rc-table@~7.26.0:
     shallowequal "^1.1.0"
 
 rc-tabs@~12.4.1:
-  version "12.4.1"
-  resolved "https://registry.yarnpkg.com/rc-tabs/-/rc-tabs-12.4.1.tgz#a45aa7560ae4e2a91426e74a2e76566f5c8ec9cc"
-  integrity sha512-yViBZypldDnPffk3IPTarplF1RAv8VQDDnOt9sHDU7pjCnqE72csCU+7kjbLPtPpYniIMQJYyWxh/lsBUcagSA==
+  version "12.4.2"
+  resolved "https://registry.yarnpkg.com/rc-tabs/-/rc-tabs-12.4.2.tgz#487a1b3f8d8cf0bfc121224013dab00d4a8e0532"
+  integrity sha512-FFlGwuTjQUznWzJtyhmHc6KAp5lRQFxKUv9Aj1UtsOYe2e7WGmuzcrd+/LQchuPe0VjhaZPdGkmFGcqGqNO6ow==
   dependencies:
     "@babel/runtime" "^7.11.2"
     classnames "2.x"
