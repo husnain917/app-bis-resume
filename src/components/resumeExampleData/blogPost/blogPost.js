@@ -1,10 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Text, Button, Image, calc } from "@chakra-ui/react";
 import YouTube from "react-youtube";
 import Link from "next/link";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import Fade from "react-reveal/Fade";
 
 const BlogPost = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const listenToScroll = () => {
+    let heightToHidden = 50;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (winScroll > heightToHidden) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+  };
+
+  // useEffect(() => {
+  //   console.log("WIN SCROL >>>", winScroll);
+  // }, []);
+
   const opts = {
     height: "390",
     width: "800",
@@ -140,6 +158,7 @@ const BlogPost = () => {
                 :&nbsp;
               </Box>
             </Box>
+
             <Box className="post-banner-cta post-banner-cta--wide">
               <Box className="post-banner-cta__main">
                 <Box className="post-banner-cta__title post-banner-cta__title--top">
@@ -173,11 +192,15 @@ const BlogPost = () => {
                 <Text mr={4}>Create my resume</Text>
                 <ArrowForwardIcon color={"white"} h={5} w={5} />
               </Box>
+              {/* <Box bg="black" w="50" h="50"></Box> */}
             </Box>
           </Box>
+
           <Box className="blog-post__content-aside blog-post__content-aside--right">
             <Box className="blog-aside" opacity={["1"]}>
               <Box className="blog-aside__item show" position="static">
+                {/* {isVisible && (
+                  <Fade> */}
                 <Box className="post-banner-cta">
                   <Box className="post-banner-cta__main">
                     <Box className="post-banner-cta__title post-banner-cta__title--top">
@@ -206,6 +229,9 @@ const BlogPost = () => {
                     <ArrowForwardIcon w={6} h={6} />
                   </Box>
                 </Box>
+                {/* </Fade>
+                )} */}
+                <Box height={"400px"}></Box>
               </Box>
             </Box>
           </Box>

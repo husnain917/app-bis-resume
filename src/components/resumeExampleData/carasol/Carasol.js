@@ -31,21 +31,22 @@ const Carasol = () => {
         breakpoints={{
           100: {
             slidesPerView: 1,
-
+            pagination: true,
             spaceBetween: 2,
           },
           390: {
             slidesPerView: 2,
-
+            pagination: true,
             spaceBetween: 1,
           },
           786: {
             slidesPerView: 3,
-
+            pagination: true,
             spaceBetween: 1,
           },
           992: {
             slidesPerView: 3,
+            spaceBetween: 1,
           },
           1300: {
             slidesPerView: 3,
@@ -79,8 +80,8 @@ const Carasol = () => {
                       src={template.src}
                       alt={template.alt}
                       height={["520px"]}
-                      minW={["250px", "250px", "250px", "395px", "395px"]}
-                      maxW={["250px", "250px", "250px", "395px", "395px"]}
+                      minW={["395px", "395px", "395px", "395px", "395px"]}
+                      maxW={["395px", "395px", "395px", "395px", "395px"]}
                     />
                   </Link>
                 </Box>
