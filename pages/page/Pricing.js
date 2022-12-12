@@ -6,12 +6,15 @@ import Image from 'next/image'
 import SliderComponent from "../../src/components/sliderComponent/SliderComponent"
 import { AiOutlineQuestionCircle, AiOutlineMail } from "react-icons/ai";
 import bottomprice from '../../public/bottomPrice.png';
+import Layout from "../../src/Layout";
 import Sidebar from "../../src/components/blog/Sidebar"
 
 export default function Pricing() {
 
     return (
         <>
+    
+
 
             <Box
                 maxW={["100%", "100%", "100%", "100%"]}
@@ -137,6 +140,23 @@ export default function Pricing() {
                     <Image src={bottomprice} height='250px' width='400px' />
                 </Box>
             </Box>
+                <Box backgroundColor="#E8E8E8"
+                    mt={["8%", "8%", "8%"]}
+                    display="flex" flexDirection={["column", "row", "row"]}
+                    p={["8%", "0%", "0%"]} >
+                    <Box ml={["3%", "3%", "15%"]} w={["100%", "50%", "30%"]} >
+                        <Text fontSize={["26px", "40px", '40px']} pt={["5%", '5%', "10%"]} fontWeight={["bold", "bold", "bold"]} >Have a particular question?</Text>
+                        <Text fontSize={["16px", "18px", "18px"]} marginTop={["5%", "5%", "8%"]} >No, our pricing model is not subscription based. Therefore, you will not be charged automatically without your consent.</Text>
+                        <Box display="flex" flexDirection="row" mt={["5%", "5%", '8%']} mb={["5%"]}
+                        ><Text marginRight="5px"  > <AiOutlineMail size={25} color="red" /> </Text><Text fontSize="18px"  >contact@bisresume.com</Text></Box>
+                    </Box>
+                    <Box ml={["2px", "2px", "15%"]} w={["100%", "50%", "70%"]} mt={["8%", "8%", "8%"]}  >
+                        <Image src={bottomprice} height='250px' width='400px' />
+                    </Box>
+                </Box>
+
+
+
         </>
     );
 }

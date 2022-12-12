@@ -3,6 +3,7 @@ import { Button, Box } from '@chakra-ui/react'
 import { FaArrowRight } from 'react-icons/fa';
 import Image from 'next/image'
 import ImageBuild from "../../public/mainImageBuild.webp"
+import Link from "next/link";
 
 
 export default function BuildResume() {
@@ -14,11 +15,16 @@ export default function BuildResume() {
                 <Box className={styles.ctaHr} mt={2} mb={3}></Box>
 
                 <div >
+                    <Box className="cursor">
+                        <Link href="/templates">
 
-                    <Button className={styles.ctaBtn} bg="#2CACD5" colorScheme="#2CACD5" borderRadius="20px" fontWeight="bold" color="white" rightIcon={<FaArrowRight color="white" fontWeight="bold" />} mt={5} mb={1}>
-                        Build Your Resume
-                    </Button>
+                            <Button className={styles.ctaBtn} bg="#2CACD5" colorScheme="#2CACD5" borderRadius="20px" fontWeight="bold" color="white" rightIcon={<FaArrowRight color="white" fontWeight="bold" />} mt={5} mb={1}>
+                                Build Your Resume
+                            </Button>
+                        </Link>
+                    </Box>
                     <p>No credit card required</p>
+
 
                 </div>
                 <div>

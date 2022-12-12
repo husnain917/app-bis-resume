@@ -39,8 +39,10 @@ export default function Terms_And_Conditions() {
         window.addEventListener("scroll", listenToScroll);
     }, []);
 
+
     return (
         <>
+    
             <Container
                 maxW={["100%", "100%", "80%", "80%"]}
                 display={"flex"}
@@ -631,6 +633,9 @@ export default function Terms_And_Conditions() {
                     </Box>
                 </Box>
             </Container>
+    
         </>
+    
+
     )
 }
