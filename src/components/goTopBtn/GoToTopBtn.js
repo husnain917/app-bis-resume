@@ -29,8 +29,8 @@ const GoToTopBtn = () => {
       {visible && (
         <div className={Classes.container}>
           <div className={Classes.btn} onClick={onClickHandler}>
-            <FaMinus color="#006772" size={'28px'} />
-            <FaArrowUp color="#006772" className={Classes.icon} size={'28px'} />
+            <FaMinus color="#002d6b" size={'20px'} />
+            <FaArrowUp color="#002d6b" className={Classes.icon} size={'20px'} />
           </div>
         </div>
       )}
