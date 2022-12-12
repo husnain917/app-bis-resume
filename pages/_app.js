@@ -9,13 +9,14 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { createWrapper } from 'next-redux-wrapper';
 import GoToTopBtn from '../src/components/goTopBtn/GoToTopBtn';
-// import Navbar from "../src/components/navbar/Navbar";
+import Layout from '../src/Layout';
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
     <SessionProvider session={session}>
       <ChakraProvider>
-        {/* <Navbar /> */}
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ChakraProvider>
       <GoToTopBtn />
     </SessionProvider>

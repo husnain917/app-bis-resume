@@ -58,7 +58,7 @@ const AboutUs = () => {
       <Box className="masterWrapper">
         <Box>
           <Box>
-            <GoTopButton />
+            {/* <GoTopButton /> */}
             <Box
               borderRadius={["60px"]}
               width={["60px"]}
