@@ -73,6 +73,7 @@ const HybridTemplate = () => {
               bg={'white'}
               ml={{ base: 10, lg: 0 }}
               mt="100px"
+              mb="30px"
               borderRadius={6}
               borderWidth="1px"
               borderColor={'#00000023'}
