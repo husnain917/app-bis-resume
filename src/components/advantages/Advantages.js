@@ -26,17 +26,14 @@ export default function Advantages() {
   useEffect(() => {
     const progressBar = setInterval(() => {
       setToastWidth((prev) => (prev + 25) % 100);
-    }, 1400);
+    }, 1000);
 
     const interval = setInterval(() => {
-      setIsTabActive((prevTab) => {
-        if (prevTab === 5) return 0;
-
-        return (prevTab += 1);
-      });
-    }, 7000);
-  }, []);
-
+      setIsTabActive(
+        (prev) => (prev + 1) % data.length
+      );
+    }, 4000);
+  },[])
   return (
     <>
       <Box bgColor="#F6F5F0">

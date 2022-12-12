@@ -43,6 +43,7 @@ const Slider = ({ title, desc, date, name, rating }) => {
         loop={true}
         loopFillGroupWithBlank={true}
         pagination={{
+          el: ".swiper-pagination",
           clickable: true,
         }}
         onSwiper={(swiper) => {
@@ -91,23 +92,30 @@ const Slider = ({ title, desc, date, name, rating }) => {
         })}
       </Swiper>
       <Box
-        class="arrow-position"
+        // className="arrow-position"
         display={"flex"}
         justifyContent={"space-between"}
       >
-        <Button
-          class="left-arrow arrows"
+        <Box
+          className="left-arrow arrows"
           onClick={() => swiperRef.current.slidePrev()}
         >
           ←
-        </Button>
+        </Box>
+        <Box
+          className="swiper-pagination"
+          position="relative"
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"center"}
+        ></Box>
 
-        <Button
-          class="right-arrow arrows"
+        <Box
+          className="right-arrow arrows"
           onClick={() => swiperRef.current.slideNext()}
         >
           →
-        </Button>
+        </Box>
       </Box>
     </>
   );

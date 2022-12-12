@@ -6,7 +6,7 @@ import {
     Text,
     UnorderedList,
 } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
     PREMIUM_ACCOUNT_DATA,
     PREMIUM_ACCOUNT_DATA_LINKS,
@@ -17,14 +17,34 @@ import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import TableOfContent from '../../src/components/legal/TableOfContent';
 import Layout from '../../src/Layout';
 
-export default function termsAndConditions() {
     return (
         <>
     
             <Container
-                maxW={['100%', '100%', '100%', '80%', '60%']}
+                maxW={["100%", "100%", "80%", "80%"]}
+                display={"flex"}
+                justifyContent={"space-between"}
             >
-                <Box>
+                <Box
+                    maxW={["0%", "0%", "0%", "10%"]}
+                    // padding={'70px 0px 0px 0px'}
+                    display={["none", "none", "none", "block"]}
+                >
+                    <Box
+                        position={["fixed"]}
+                        zIndex={"1049"}
+                    >
+                        {isVisible && (
+                            <Fade>
+                                {" "}
+                                <SideBarSection />{" "}
+                            </Fade>
+                        )}
+                    </Box>
+                </Box>
+                <Box
+                    maxW={["100%", "100%", "100%", "88%"]}
+                >
                     {/* main title */}
                     <Box
                         padding={'40px 0px'}

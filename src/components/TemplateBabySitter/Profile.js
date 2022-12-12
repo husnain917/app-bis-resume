@@ -3,6 +3,10 @@ import Text from '../template1/Text';
 import { useSelector } from 'react-redux';
 import { useWindowSize } from '@react-hook/window-size';
 import { Row } from 'antd';
+import Profession from '../commonSection/Profession';
+import styles from '../../../styles/templates/templatebabysitter.module.css';
+import Name from '../commonSection/Name';
+
 
 export default function Profile({ cId }) {
   const [width] = useWindowSize();
@@ -10,33 +14,29 @@ export default function Profile({ cId }) {
 
   return (
     <>
-      <div style={{ display: 'flex', marginTop: 60 }}>
-        <Row>
-          <Text
-            value={resumeData?.profile?.firstName}
-            placeholder="First Name"
-            customclass={'fullName1'}
-            path={'profile.firstName'}
+      {cId === 'babysitter' ?
+  
+          <Name
+            FName={true}
+            SName={true}
+            direction="column"
+            FNameStyle={styles.name}
+            SNameStyle={styles.name}
+
           />
-          &nbsp;
-          <Text
-            value={resumeData?.profile?.lastName}
-            placeholder="Last Name"
-            customclass={'fullName1'}
-            path={'profile.lastName'}
-          />
-        </Row>
-      </div>
+
+      : null
+       
+      }
 
       <div
         className={`manager-template-row manager-template-text-center manager-f-sub-rowA`}
       >
         {cId === 'babysitter' ? (
-          <Text
-            value={resumeData?.profile?.address?.city}
-            placeholder="DIGITAL MARKETING "
-            path={'profile.address.jobTitle'}
-            customclass={'manager-jobtitleBabySitter '}
+          <Profession
+            margin={'0px 0px 0px 0px'}
+            professionStyle={styles.profession}
+            professionPlaceholder="Digital Market"
           />
         ) : (
           <>

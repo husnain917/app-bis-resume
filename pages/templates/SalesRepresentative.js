@@ -24,6 +24,7 @@ import {
   WORK,
   REFERENCE,
 } from "../../src/components/tempSectionSide/SectionSideConstant";
+import ChangeTempBtn from "../../src/components/changeTempbtn/ChangeTempBtn";
 
 import { Center, Image } from "@chakra-ui/react";
 
@@ -34,328 +35,323 @@ const SalesRepresentative = () => {
 
   return (
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
-    //Template Layout for Template Navbar
-    <TempLayout education={true} skills={true} work={true} reference={true}>
-      <div className={style.main}>
-        <Link href={"/templates"}>
-          <div style={{ position: "fixed", top: "70px", right: "30px" }}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
-        <Flex
-          justifyContent={{ base: "none", lg: "center" }}
-          bg={"blackAlpha.100"}
-          overflow="auto"
-          flexDir={"column"}
-          alignItems={{ sm: "none", md: "center" }}
-        >
-          <Box
-            minW={910}
-            pb={2}
-            background={"whitesmoke"}
-            m={4}
-            mt="100px"
-            borderRadius={6}
+    <Box style={{ overflow: "auto" }}>
+      {/* //Template Layout for Template Navbar */}
+      <TempLayout education={true} skills={true} work={true} reference={true}>
+        <div className={style.main}>
+          <ChangeTempBtn />
+
+          <Flex
+            justifyContent={{ base: "none", lg: "center" }}
+            bg={"blackAlpha.100"}
+            overflow="auto"
+            flexDir={"column"}
+            alignItems={{ sm: "none", md: "center" }}
           >
-            <Box display="flex" flexDirection="row" background={"whitesmoke"}>
-              <Box w="20%" minH="25em" backgroundColor="#DBCABA"></Box>
-            </Box>
-            <HStack
-              display="flex"
-              alignItems={"center"}
-              justifyContent="center"
+            <Box
+              minW={910}
+              pb={2}
               background={"whitesmoke"}
+              m={4}
+              mt="100px"
+              borderRadius={6}
             >
+              <Box display="flex" flexDirection="row" background={"whitesmoke"}>
+                <Box w="20%" minH="25em" backgroundColor="#DBCABA"></Box>
+              </Box>
               <HStack
-                mt={5}
-                alignItems="stretch"
-                // borderWidth={1}
-                // borderColor={"black"}
-                marginTop={"-35%"}
-                width={"92%"}
+                display="flex"
+                alignItems={"center"}
+                justifyContent="center"
+                background={"whitesmoke"}
               >
-                <Box
-                  w="40%"
-                  h="full"
-                  borderWidth={1}
-                  borderColor={"black"}
-                  display={"flex"}
-                  justifyContent={"center"}
-                  alignItems={"center"}
-                  bg={"whitesmoke"}
+                <HStack
+                  mt={5}
+                  alignItems="stretch"
+                  // borderWidth={1}
+                  // borderColor={"black"}
+                  marginTop={"-35%"}
+                  width={"92%"}
                 >
-                  <Box pl={8}>
-                    <ImageSelector
-                      maxH={"16em"}
-                      maxW={"16em"}
-                      borderRadius="50%"
-                      marginTop={"8"}
-                    />
-                    <Heading
-                      title={"My Contact"}
-                      color="black"
-                      margin={"35px 0px 0px 0px"}
-                      line={true}
-                      lineW="45%"
-                      lineH="0.30em"
-                      lineBg="#077BBD"
-                      fontSize={"1.8em"}
-                      lineStyle={Class.lineStyle}
-                    />
-                    <Contact
-                      parentDirection="column"
-                      phone={true}
-                      email={true}
-                      location={true}
-                      website={true}
-                      circleIcon={true}
-                      iconColor="black"
-                      iconSize={"24px"}
-                      // style={"manager-f-name"}
-                      margin={"2px 0px 2px 0px"}
-                      parentStyle={Class.parentStyle}
-                      style={Class.style}
-                    />
-                    {/* _____________ Skill _____________ */}
-                    {resumeData?.skills?.visible && (
-                      <>
-                        <HStack alignItems={"flex-start"} mt={10}>
-                          <Box w="20px" ml={"-27px"}>
-                            {show.skills && (
+                  <Box
+                    w="40%"
+                    h="full"
+                    borderWidth={1}
+                    borderColor={"black"}
+                    display={"flex"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    bg={"whitesmoke"}
+                  >
+                    <Box pl={8}>
+                      <ImageSelector
+                        maxH={"16em"}
+                        maxW={"16em"}
+                        borderRadius="50%"
+                        marginTop={"8"}
+                      />
+                      <Heading
+                        title={"My Contact"}
+                        color="black"
+                        margin={"35px 0px 0px 0px"}
+                        line={true}
+                        lineW="45%"
+                        lineH="0.30em"
+                        lineBg="#077BBD"
+                        fontSize={"1.8em"}
+                        lineStyle={Class.lineStyle}
+                      />
+                      <Contact
+                        parentDirection="column"
+                        phone={true}
+                        email={true}
+                        location={true}
+                        website={true}
+                        circleIcon={true}
+                        iconColor="black"
+                        iconSize={"24px"}
+                        // style={"manager-f-name"}
+                        margin={"2px 0px 2px 0px"}
+                        parentStyle={Class.parentStyle}
+                        style={Class.style}
+                      />
+                      {/* _____________ Skill _____________ */}
+                      {resumeData?.skills?.visible && (
+                        <>
+                          <HStack alignItems={"flex-start"} mt={10}>
+                            <Box w="20px" ml={"-27px"}>
+                              {show.skills && (
+                                <SectionSideMenu
+                                  onHide={() =>
+                                    setShow({ ...show, skills: false })
+                                  }
+                                  bg="#E0EFFA"
+                                  iconColor={"#2A78AB"}
+                                  onDelete={SKILL}
+                                />
+                              )}
+                            </Box>
+
+                            <Heading
+                              title={"Skills"}
+                              color="black"
+                              margin={"20px 0px 0px 0px"}
+                              onSideSectionShow={() =>
+                                setShow({ ...show, skills: true })
+                              }
+                              line={true}
+                              lineW="45%"
+                              lineH="0.30em"
+                              lineBg="#077BBD"
+                              fontSize={"1.8em"}
+                              lineStyle={Class.lineStyle}
+                            />
+                          </HStack>
+                          <Skill
+                            skillStyle={Classes.skillText}
+                            rating={true}
+                            strokeWidth="2"
+                            // lineStyle={styles.line}
+                            strokeColor="#1890ff"
+                            trailColor="#fff"
+                            // percentageStyle={styles.percent}
+                            // parentContainerStyle={Classes.ml}
+                          />
+                        </>
+                      )}
+                      {/* Reference Section  */}
+                      {resumeData?.references?.visible && (
+                        <>
+                          <HStack alignItems={"flex-start"}>
+                            {/* Reference Section Heading */}
+                            <Heading
+                              title={"REFERENCE"}
+                              // headBg={"#3498DB"}
+                              margin={"10px 0px 0px 0px"}
+                              iconHeading={true}
+                              icon={(props) => (
+                                <MdEmail {...props} size={20} color={"blue"} />
+                              )}
+                              color={"black"}
+                              fontSize={20}
+                              fontWeight="600"
+                              textPadding={"0px 0px 1px 0px"}
+                              padding={"0px 0px 0px 5px"}
+                              letterSpacing={3}
+                              minW={250}
+                              maxW={400}
+                              onSideSectionShow={() =>
+                                setShow({ ...show, references: true })
+                              }
+                            />
+                            {/* Section Side Menu */}
+                            {show.references && (
                               <SectionSideMenu
                                 onHide={() =>
-                                  setShow({ ...show, skills: false })
+                                  setShow({ ...show, references: false })
                                 }
-                                bg="#E0EFFA"
-                                iconColor={"#2A78AB"}
-                                onDelete={SKILL}
+                                onDelete={REFERENCE}
                               />
                             )}
-                          </Box>
-
-                          <Heading
-                            title={"Skills"}
-                            color="black"
-                            margin={"20px 0px 0px 0px"}
-                            onSideSectionShow={() =>
-                              setShow({ ...show, skills: true })
-                            }
-                            line={true}
-                            lineW="45%"
-                            lineH="0.30em"
-                            lineBg="#077BBD"
-                            fontSize={"1.8em"}
-                            lineStyle={Class.lineStyle}
+                          </HStack>
+                          {/* &nbsp; */}
+                          {/* Reference Component */}
+                          <Reference
+                            name={true}
+                            profession={true}
+                            email={true}
+                            phone={true}
+                            phoneStyle={Class.profileText}
+                            emailStyle={Class.profileText}
+                            professionStyle={Class.profileText}
+                            nameStyle={Class.profileText}
+                            DndDirection="horizontal"
+                            parentContainerStyle={Class.parentContainerStyle}
                           />
-                        </HStack>
-                        <Skill
-                          skillStyle={Classes.skillText}
-                          rating={true}
-                          strokeWidth="2"
-                          // lineStyle={styles.line}
-                          strokeColor="#1890ff"
-                          trailColor="#fff"
-                          // percentageStyle={styles.percent}
-                          // parentContainerStyle={Classes.ml}
-                        />
-                      </>
-                    )}
-                    {/* Reference Section  */}
-                    {resumeData?.references?.visible && (
-                      <>
-                        <HStack alignItems={"flex-start"}>
-                          {/* Reference Section Heading */}
-                          <Heading
-                            title={"REFERENCE"}
-                            // headBg={"#3498DB"}
-                            margin={"10px 0px 0px 0px"}
-                            iconHeading={true}
-                            icon={(props) => (
-                              <MdEmail {...props} size={20} color={"blue"} />
-                            )}
-                            color={"black"}
-                            fontSize={20}
-                            fontWeight="600"
-                            textPadding={"0px 0px 1px 0px"}
-                            padding={"0px 0px 0px 5px"}
-                            letterSpacing={3}
-                            minW={250}
-                            maxW={400}
-                            onSideSectionShow={() =>
-                              setShow({ ...show, references: true })
-                            }
-                          />
-                          {/* Section Side Menu */}
-                          {show.references && (
-                            <SectionSideMenu
-                              onHide={() =>
-                                setShow({ ...show, references: false })
-                              }
-                              onDelete={REFERENCE}
-                            />
-                          )}
-                        </HStack>
-                        {/* &nbsp; */}
-                        {/* Reference Component */}
-                        <Reference
-                          name={true}
-                          profession={true}
-                          email={true}
-                          phone={true}
-                          phoneStyle={Class.profileText}
-                          emailStyle={Class.profileText}
-                          professionStyle={Class.profileText}
-                          nameStyle={Class.profileText}
-                          DndDirection="horizontal"
-                          parentContainerStyle={Class.parentContainerStyle}
-                        />
-                      </>
-                    )}
-                  </Box>
-                </Box>
-                <Box>
-                  <Box
-                    minW={350}
-                    maxW={500}
-                    bg="whitesmoke"
-                    //   p={4}
-                    borderRadius={6}
-                    marginLeft={"2em"}
-                  >
-                    <Box mt={-5}>
-                      <Name
-                        FName={true}
-                        SName={true}
-                        direction="column"
-                        FNameStyle={Class.fName}
-                        SNameStyle={Class.sName}
-                      />
-                      {/* About Section  */}
-                      {/* <Profession professionStyle={Classes.ProfessionHybrid} /> */}
-                      <Box mt="4">
-                        <About
-                          aboutStyle={Class.profileText}
-                          maxW={"660px"}
-                          minW={"660px"}
-                        />
-                      </Box>
+                        </>
+                      )}
                     </Box>
-                    {/* Work Experience Section */}
-                    {resumeData?.work?.visible && (
-                      <>
-                        <HStack alignItems={"flex-start"} mt={4}>
-                          {/* Section Side Menu */}
-                          {show.work && (
-                            <SectionSideMenu
-                              bg={"#313B47"}
-                              onHide={() => setShow({ ...show, work: false })}
-                              onDelete={WORK}
-                            />
-                          )}
-                          {/* Work Experience Heading  */}
-                          <Heading
-                            maxW={"400"}
-                            title="WORK EXPERIENCE"
-                            circleSize="38px"
-                            circleBg="#313B47"
-                            circleIconHeading={true}
-                            icon={(props) => (
-                              <BsFillLayersFill
-                                {...props}
-                                size={18}
-                                color={"white"}
-                              />
-                            )}
-                            fontSize="23px"
-                            fontWeight={"bold"}
-                            color="#313B47"
-                            // minW={"full"}
-                            // maxW="full"
-                            margin={"10px 0px"}
-                            onSideSectionShow={() =>
-                              setShow({ ...show, work: true })
-                            }
-                          />
-                        </HStack>
-                        {/* Work Experience Components */}
-                        <WorkExperience
-                          date={true}
-                          position={true}
-                          company={true}
-                          location={true}
-                          summary={true}
-                          summary_placeholder="Company Description (optional,fill when the company is not well known"
-                          location_placeholder="Country,City"
-                          dateStyle={Classes.date}
-                          positionStyle={Classes.programText}
-                          companyStyle={Classes.institute}
-                          locationStyle={Classes.date}
-                          summaryStyle={Classes.date}
-                        />
-                      </>
-                    )}
-                    {/* Education Section  */}
-                    {resumeData?.education?.visible && (
-                      <>
-                        <HStack alignItems={"flex-start"} mt={4}>
-                          {/* Section Side Menu */}
-                          {show.education && (
-                            <SectionSideMenu
-                              bg={"#313B47"}
-                              onHide={() =>
-                                setShow({ ...show, education: false })
-                              }
-                              onDelete={EDUCATION}
-                            />
-                          )}
-                          {/* Heading For Education Section  */}
-                          <Heading
-                            title="EDUCATION"
-                            circleSize="38px"
-                            circleBg="#313B47"
-                            circleIconHeading={true}
-                            icon={(props) => (
-                              <MdCastForEducation
-                                {...props}
-                                size={18}
-                                color={"white"}
-                              />
-                            )}
-                            fontSize="23px"
-                            fontWeight={"bold"}
-                            color="#313B47"
-                            margin={"0px 0px 10px 0px"}
-                            onSideSectionShow={() =>
-                              setShow({ ...show, education: true })
-                            }
-                          />
-                        </HStack>
-                        {/* Education Components */}
-                        <Education
-                          institution={true}
-                          degree={true}
-                          degree_placeholder="Study Program"
-                          date={true}
-                          location={true}
-                          institutionStyle={Classes.institute}
-                          degreeStyle={Classes.programText}
-                          dateStyle={Classes.date}
-                          locationStyle={Classes.date}
-                        />
-                      </>
-                    )}
                   </Box>
-                </Box>
+                  <Box>
+                    <Box
+                      minW={350}
+                      maxW={500}
+                      bg="whitesmoke"
+                      //   p={4}
+                      borderRadius={6}
+                      marginLeft={"2em"}
+                    >
+                      <Box mt={-5}>
+                        <Name
+                          FName={true}
+                          SName={true}
+                          direction="column"
+                          FNameStyle={Class.fName}
+                          SNameStyle={Class.sName}
+                        />
+                        {/* About Section  */}
+                        {/* <Profession professionStyle={Classes.ProfessionHybrid} /> */}
+                        <Box mt="4">
+                          <About
+                            aboutStyle={Class.profileText}
+                            maxW={"660px"}
+                            minW={"660px"}
+                          />
+                        </Box>
+                      </Box>
+                      {/* Work Experience Section */}
+                      {resumeData?.work?.visible && (
+                        <>
+                          <HStack alignItems={"flex-start"} mt={4}>
+                            {/* Section Side Menu */}
+                            {show.work && (
+                              <SectionSideMenu
+                                bg={"#313B47"}
+                                onHide={() => setShow({ ...show, work: false })}
+                                onDelete={WORK}
+                              />
+                            )}
+                            {/* Work Experience Heading  */}
+                            <Heading
+                              maxW={"400"}
+                              title="WORK EXPERIENCE"
+                              circleSize="38px"
+                              circleBg="#313B47"
+                              circleIconHeading={true}
+                              icon={(props) => (
+                                <BsFillLayersFill
+                                  {...props}
+                                  size={18}
+                                  color={"white"}
+                                />
+                              )}
+                              fontSize="23px"
+                              fontWeight={"bold"}
+                              color="#313B47"
+                              // minW={"full"}
+                              // maxW="full"
+                              margin={"10px 0px"}
+                              onSideSectionShow={() =>
+                                setShow({ ...show, work: true })
+                              }
+                            />
+                          </HStack>
+                          {/* Work Experience Components */}
+                          <WorkExperience
+                            date={true}
+                            position={true}
+                            company={true}
+                            location={true}
+                            summary={true}
+                            summary_placeholder="Company Description (optional,fill when the company is not well known"
+                            location_placeholder="Country,City"
+                            dateStyle={Classes.date}
+                            positionStyle={Classes.programText}
+                            companyStyle={Classes.institute}
+                            locationStyle={Classes.date}
+                            summaryStyle={Classes.date}
+                          />
+                        </>
+                      )}
+                      {/* Education Section  */}
+                      {resumeData?.education?.visible && (
+                        <>
+                          <HStack alignItems={"flex-start"} mt={4}>
+                            {/* Section Side Menu */}
+                            {show.education && (
+                              <SectionSideMenu
+                                bg={"#313B47"}
+                                onHide={() =>
+                                  setShow({ ...show, education: false })
+                                }
+                                onDelete={EDUCATION}
+                              />
+                            )}
+                            {/* Heading For Education Section  */}
+                            <Heading
+                              title="EDUCATION"
+                              circleSize="38px"
+                              circleBg="#313B47"
+                              circleIconHeading={true}
+                              icon={(props) => (
+                                <MdCastForEducation
+                                  {...props}
+                                  size={18}
+                                  color={"white"}
+                                />
+                              )}
+                              fontSize="23px"
+                              fontWeight={"bold"}
+                              color="#313B47"
+                              margin={"0px 0px 10px 0px"}
+                              onSideSectionShow={() =>
+                                setShow({ ...show, education: true })
+                              }
+                            />
+                          </HStack>
+                          {/* Education Components */}
+                          <Education
+                            institution={true}
+                            degree={true}
+                            degree_placeholder="Study Program"
+                            date={true}
+                            location={true}
+                            institutionStyle={Classes.institute}
+                            degreeStyle={Classes.programText}
+                            dateStyle={Classes.date}
+                            locationStyle={Classes.date}
+                          />
+                        </>
+                      )}
+                    </Box>
+                  </Box>
+                </HStack>
               </HStack>
-            </HStack>
-          </Box>
-        </Flex>
-      </div>
-    </TempLayout>
+            </Box>
+          </Flex>
+        </div>
+      </TempLayout>
+    </Box>
   );
 };
 

@@ -43,6 +43,8 @@ import { GoProject } from 'react-icons/go';
 import { TbCertificate } from 'react-icons/tb';
 import { FaHorseHead } from 'react-icons/fa';
 import WorkExperience from '../../src/components/commonSection/WorkExperience';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
+
 
 
 import {
@@ -68,33 +70,24 @@ export default function TemplateContentCreater() {
     const [show, setShow] = useShow();
 
     return (
-        <TempLayout
-            education={true}
-            work={true}
+        <div style={{ overflow: 'auto' }}>
 
-        >
+            <TempLayout
+                education={true}
+                work={true}
+            >
+                <ChangeTempBtn />
 
-            <div className={style.main}>
-                <Link href={'/templates'}>
-                    <div className={style.swapCont}>
-                        <Tooltip title="Change Template" arrow distance={20}>
-                            <div className={style.swap} >
-                                <img src='/icons/swap.png' />
-                            </div>
-                        </Tooltip>
-                    </div>
-                </Link>
                 <div className={Classes.mainDiv} >
-                    <Box ml={["", , , "5%", "13%", "25%"]} >
+                    <Box ml={["", , , "3%", "15%", "25%"]} >
+
                         <div className={Classes.innerMainDiv} >
+
+
 
                             <div className={Classes.innerMainDiv1}>
                                 <Box display="flex" flexDirection="row"  >
-
-
                                     <Box w="50%" marginTop="30px" >
-
-
                                         <Box style={{ overflow: 'hidden' }} >
                                             <Name
                                                 FName={true}
@@ -102,13 +95,11 @@ export default function TemplateContentCreater() {
                                                 direction="column"
                                                 FNameStyle={Classes.name}
                                                 SNameStyle={Classes.name}
-
-
                                             />
 
                                         </Box>
 
-                                        <Box bgColor="#E2CDC1" w="100%" h="5px" mt="2%"></Box>
+                                        <Box bgColor="#E2CDC1" w="100%" h="5px" mt="2%" ml="10%"></Box>
 
                                         <Profession
 
@@ -297,25 +288,15 @@ export default function TemplateContentCreater() {
                                 </div>
 
                                 <Box bgColor="#E2CDC1" w="100%" h="5px" mt="2%" mb="5%"></Box>
-
-
-
-
-
                             </div>
-
-
-
-
-
                         </div>
                     </Box>
                 </div>
-            </div >
 
 
 
-        </TempLayout >
+            </TempLayout >
+        </div>
 
 
 
