@@ -1278,6 +1278,7 @@ svg:not(:root) {
 }
 .resume-templates__arrow {
   position: absolute;
+  cursor: pointer;
   left: 0;
   top: 0;
   width: 24px;
@@ -1513,7 +1514,7 @@ audio, canvas, iframe, img, svg, video {
 #selectResume .swiper-slide__content {
   height: 300px;
 }
-#selectResume .swiper-pagination-bullet {
+/* #selectResume .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
   text-align: center;
@@ -1527,7 +1528,7 @@ audio, canvas, iframe, img, svg, video {
 #selectResume .swiper-pagination-bullet-active {
   color: #fff;
   background: #007aff;
-}
+} */
 /* .mainWrapper:after {
   content: " ";
   width: 220px;

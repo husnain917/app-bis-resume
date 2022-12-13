@@ -13,7 +13,6 @@ import { sliderData } from "../resumeExampleData";
 import Link from "next/link";
 const Carasol1 = () => {
   const swiperRef = useRef();
-  console.log("SLIDER DATA >>>>>>", sliderData);
   return (
     <Box>
       <Swiper
@@ -26,29 +25,36 @@ const Carasol1 = () => {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
-        pagination={true}
+        pagination={{
+          dynamicBullets: true,
+        }}
         paginationClickable={true}
-        modules={[Pagination]}
+        modules={[Pagination, Navigation]}
         breakpoints={{
           100: {
             slidesPerView: 3,
             pagination: true,
+            spaceBetween: 2,
           },
           390: {
             slidesPerView: 3,
             pagination: true,
+            spaceBetween: 2,
           },
           786: {
             slidesPerView: 2,
             pagination: true,
+            spaceBetween: 2,
           },
           992: {
             slidesPerView: 3,
             pagination: true,
+            spaceBetween: 2,
           },
           1300: {
             slidesPerView: 3,
             pagination: true,
+            spaceBetween: 2,
           },
           1600: {
             slidesPerView: 3,
@@ -79,7 +85,22 @@ const Carasol1 = () => {
                       src={template.src}
                       alt={template.alt}
                       height={"700px"}
-                      minW={"600px"}
+                      minW={[
+                        "200px",
+                        "280px",
+                        "380px",
+                        "340px",
+                        "450px",
+                        "500px",
+                      ]}
+                      maxW={[
+                        "200px",
+                        "280px",
+                        "380px",
+                        "340px",
+                        "450px",
+                        "600px",
+                      ]}
                     />
                   </Link>
                 </Box>
@@ -88,6 +109,17 @@ const Carasol1 = () => {
           );
         })}
       </Swiper>
+      {/* <Swiper pagination={true} modules={[Pagination]}>
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper> */}
     </Box>
   );
 };

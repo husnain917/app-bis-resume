@@ -17,8 +17,8 @@ import Carasol1 from "../src/components/resumeExampleData/carasol/Carasol1";
 const ResumeExamples = () => {
   return (
     <Box>
-      {/* <Carasol1 />
-      <Carasol /> */}
+      <Carasol1 />
+      {/* <Carasol /> */}
       {/* <ChatButton /> */}
       <Box bg="lightcyan" height={"auto"} width={"100wv"}>
         <WritingGuides />

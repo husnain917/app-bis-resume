@@ -13,9 +13,8 @@ import { sliderData } from "../resumeExampleData";
 import Link from "next/link";
 const Carasol = () => {
   const swiperRef = useRef();
-  console.log("SLIDER DATA >>>>>>", sliderData);
   return (
-    <Box marginLeft="60px">
+    <Box marginLeft="30px">
       <Swiper
         // id="selectResume"
         spaceBetween={15}
