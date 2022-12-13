@@ -29,6 +29,7 @@ import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 
 
 
+
 export default function SocialSpecialist() {
   const {
     resumeData,

@@ -16,6 +16,7 @@ import EducationHelpImage from "../public/EducationHelpImage.png";
 import SkillImage from "../public/SkillImage.png"
 import ResumeHelp from "../public/ResumeHelp.png"
 import ProfileDescrip from "../public/ProfileDescrip.png"
+import SideBar from "../src/components/sideBar/SideBar";
 
 export default function ResumeBuild() {
 
@@ -24,6 +25,7 @@ export default function ResumeBuild() {
             <Navbar />
             <>
                 <Box bgColor={"#f2f4f6"} h={["100%", "100%"]}  >
+                    <SideBar/>
                     <Container
                         maxW={['100%', '100%', '100%', '70%', '70%']}
                         bgColor="white"
@@ -76,6 +78,7 @@ export default function ResumeBuild() {
                                 src={ResumeHelp}
                                 alt={'Image Not Found'}
                             />
+
 
 
                             <Box mt={["3%", "3%", "3%"]} >
@@ -323,12 +326,12 @@ export default function ResumeBuild() {
                                 </Text>
 
                             </Box>
-                            <Box mt={["2%","2%","2%"]} ml={["0%",'10%']}>
-                            <Image
+                            <Box mt={["2%", "2%", "2%"]} ml={["0%", '10%']}>
+                                <Image
 
-                                src={ProfileDescrip}
-                                alt={'Image Not Found'}
-                            />
+                                    src={ProfileDescrip}
+                                    alt={'Image Not Found'}
+                                />
                             </Box>
 
 

@@ -15,12 +15,19 @@ import {
   FaCloudscale,
   FaAddressBook,
 } from "react-icons/fa";
-import Contact from "../../src/components/graphicDesigner3/Contact";
 import WorkExperience from "../../src/components/graphicDesigner3/WorkExperience";
 import Education from "../../src/components/graphicDesigner3/Education";
 import Language from "../../src/components/graphicDesigner3/Language";
 import Reference from "../../src/components/graphicDesigner3/Reference";
 import Skills from "../../src/components/graphicDesigner3/Skills";
+import Name from "../../src/components/commonSection/Name";
+import Profession from '../../src/components/commonSection/Profession';
+import Contact from '../../src/components/commonSection/Contact';
+
+
+
+
+
 export default function GraphicDesigner3() {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   let updater = useSelector((state) => state.editorReducer.updater);
@@ -43,13 +50,13 @@ export default function GraphicDesigner3() {
         mb="3%"
         overflow="auto"
         h="auto"
-        ml={["", , , "8%", "15%","23%"]}
+        ml={["", , , "8%", "15%", "23%"]}
       >
         <Box w="100%" display="flex" flexDir="row" maxW="930px" minW="930px">
           <Box w="30%" h="auto" display="flex" flexDir="column">
             <Box bgColor="#56C8EA" pb="30px">
               <Image src="/gdMan2.png" w="75%" mt="12%" ml="12%" />
-              <Text
+              {/* <Text
                 value={resumeData?.profile?.firstName}
                 placeholder="YOUR"
                 path={"profile.firstName"}
@@ -69,8 +76,20 @@ export default function GraphicDesigner3() {
                 textAlign="center"
                 textTransform="uppercase"
                 lineHeight="20px"
+              /> */}
+
+
+
+              <Name
+                FName={true}
+                SName={true}
+                direction="column"
+                FNameStyle={styles.name}
+                SNameStyle={styles.name}
+
               />
-              <Text
+
+              {/* <Text
                 value={resumeData?.objective?.title}
                 placeholder="Profession"
                 path={"profile.objective.heading"}
@@ -80,6 +99,11 @@ export default function GraphicDesigner3() {
                 textAlign="center"
                 fontWeight="600"
                 lineHeight="30px"
+              /> */}
+              <Profession
+                margin={'0px 0px 0px 0px'}
+                professionStyle={styles.profession}
+                professionPlaceholder="PROFESSION"
               />
             </Box>
             <Box bgColor="#3C4240" h="100%" pb="100px">
@@ -96,7 +120,20 @@ export default function GraphicDesigner3() {
                 </Box>
                 <Box bgColor="white" h="3px" w="80%"></Box>
               </div>
-              <Contact />
+              <Box ml="8%">
+                <Contact
+                  phone={true}
+                  email={true}
+                  linkedinURL={true}
+                  website={true}
+                  circleIcon={true}
+                  circleBg="#fff"
+                  circleSize="35px"
+                  iconColor="#1C2125"
+                  margin={'10px 0px 0px 0px'}
+                  style={styles.profileText}
+                />
+              </Box>
               <div style={{ marginLeft: "30px", marginTop: "20px" }}>
                 <Box display="flex">
                   <Icon as={FaBookOpen} w={6} h={6} color="#56C8EA" />
@@ -163,7 +200,7 @@ export default function GraphicDesigner3() {
               <Box bgColor="#3C4240" h="3px" w="100%"></Box>
             </div>
 
-            <Text
+            {/* <Text
               value={resumeData?.objective?.body}
               placeholder="Write Short Description About Your Self"
               path={"profile.objective.body"}
@@ -173,7 +210,7 @@ export default function GraphicDesigner3() {
               textAlign="left"
               fontWeight="400"
               marginRight="50px"
-            />
+            /> */}
             <div style={{ marginTop: "50px" }}>
               <Box display="flex" alignItems="center" mb="5px">
                 <Icon as={FaBriefcase} w={8} h={8} color="#56C8EA" />
