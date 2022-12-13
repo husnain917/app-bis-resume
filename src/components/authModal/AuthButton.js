@@ -3,7 +3,6 @@ import React from "react";
 import styles from "../../../styles/Auth.module.css";
 export default function AuthButton({
   btn,
-  index,
   bgColor,
   onChangeHandler,
   color,
@@ -19,7 +18,7 @@ export default function AuthButton({
         borderRadius="10px"
         _hover={{ bg: "#00C8AA", color: " white", borderRadius: "10px" }}
         _focus={{ bg: "#00C8AA", color: " white", borderRadius: "10px" }}
-        onClick={() => onChangeHandler(index)}
+        onClick={() => onChangeHandler(btn.id)}
       >
         {btn.btnName}
       </Button>
