@@ -1497,7 +1497,7 @@ audio, canvas, iframe, img, svg, video {
 }
 
 #selectResume .swiper-slide {
-  height: 1100px;
+  height: 700px;
   display: flex;
   /* background: #eee; */
   align-items: center;

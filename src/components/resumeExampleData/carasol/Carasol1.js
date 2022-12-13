@@ -8,7 +8,6 @@ import "swiper/css/bundle";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
 import { Navigation } from "swiper";
-import Slider from "react-slick";
 import { sliderData } from "../resumeExampleData";
 import Link from "next/link";
 const Carasol1 = () => {
@@ -65,7 +64,7 @@ const Carasol1 = () => {
       >
         {sliderData.map((template, index) => {
           return (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} mb={15}>
               <Box
                 key={index}
                 bg={"whitesmoke"}
@@ -109,17 +108,6 @@ const Carasol1 = () => {
           );
         })}
       </Swiper>
-      {/* <Swiper pagination={true} modules={[Pagination]}>
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper> */}
     </Box>
   );
 };
