@@ -1,13 +1,13 @@
-import React from 'react';
-import Slider from 'react-slick';
-import Adv from './Adv';
-import { data } from './Constant';
-import MobileAdv from './MobileAdv';
+import React from "react";
+import Slider from "react-slick";
+import Adv from "./Adv";
+import { data } from "./Constant";
+import MobileAdv from "./MobileAdv";
 
 export default function AdvSlider() {
   const settings = {
     dots: true,
-    dotsClass: 'slick-dots slick-thumb',
+    dotsClass: "slick-dots slick-thumb",
     infinite: true,
     autoplay: true,
     speed: 700,
