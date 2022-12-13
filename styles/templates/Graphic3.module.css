@@ -4,11 +4,13 @@
   display: flex;
   justify-content: center;
 }
+
 .swapCont {
   position: absolute;
   right: 80px;
   top: 80px;
 }
+
 .swap {
   width: 40px;
   height: 40px;
@@ -21,29 +23,35 @@
 
   transition: all 0.2s;
 }
+
 .swap:hover {
   transform: scale(1.1);
   transition: all 0.2s;
 }
+
 .swap img {
   width: 70%;
   filter: invert(1);
 }
+
 .barContainer {
   display: flex;
   align-items: center;
   margin-right: 40px;
   width: 50%;
 }
+
 .lineBar {
   background-color: #ffffff;
   width: 100%;
   height: 6px;
 }
+
 .skillInput {
   color: grey;
   margin-left: 5px;
 }
+
 .contactHeading {
   color: white;
   font-weight: bold;
@@ -51,7 +59,7 @@
 }
 
 .skillContainer {
-  flex-wrap:nowrap;
+  flex-wrap: nowrap;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -59,14 +67,17 @@
   /* margin-right:30px; */
   margin-left: 40px;
 }
+
 .skillsInput {
-  color:black;
+  color: black;
   margin-left: 5px;
 }
+
 .skillLineBar {
   height: 7px;
   background-color: rgb(198, 188, 188);
 }
+
 .name {
   font-size: 2.2rem !important;
   font-weight: bold;
@@ -86,7 +97,7 @@
   font-weight: 500;
   margin-left: 70px;
 
-  
+
 
   padding: 0px !important;
   margin-bottom: 20px;
@@ -98,10 +109,10 @@
 }
 
 .description {
-  font-size: "1.3rem" !important;
+  font-size: "0.9rem" !important;
   font-weight: 500;
-  min-width: 350px !important;
-  max-width: 350px !important;
+  min-width: 450px !important;
+  max-width: 450px !important;
 }
 
 .Educationdescription {
@@ -128,7 +139,7 @@
 .skillText {
   font-size: 16px;
 
-  color: white !important;
+  color: red !important;
   min-width: 260px;
   max-width: 260px;
 
@@ -154,7 +165,7 @@
 }
 
 .mt {
-  margin-top: 3%;
+  margin-top: 4%;
   margin-bottom: 2%;
 
 }
@@ -206,26 +217,37 @@
 }
 
 .date {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 18px !important;
+  font-weight: 500;
+  color: white !important;
 }
 
 .company {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   margin: 0 !important;
   padding: 0 !important;
   min-width: 220px;
   max-width: 220px;
+  color: white !important;
 }
 
 .skillText {
+  font-size: 16px;
+
+  color: black !important;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+.skillText1 {
   font-size: 16px;
 
   color: white !important;
   min-width: 180px;
   max-width: 180px;
 }
+
 
 .line {
   width: 200px !important;
@@ -314,10 +336,33 @@
   min-width: 380px;
   max-width: 380px;
 }
-.positionSty{
-  font-size: 22px;
+
+.positionSty {
+  font-size: 18px;
   font-weight: 500;
-  max-width: 350px;
-  min-width: 350px;
+  max-width: 400px;
+  min-width: 400px;
 }
 
+.profileText1 {
+  color: black !important;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 5px !important;
+  padding: 0 !important;
+  width: 380px;
+  max-width: 180px !important;
+  min-width: 180px !important;
+}
+
+.subText1 {
+  color: black !important;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 5px !important;
+  padding: 0 !important;
+  width: 380px;
+  max-width: 180px !important;
+  min-width: 180px !important;
+
+}
