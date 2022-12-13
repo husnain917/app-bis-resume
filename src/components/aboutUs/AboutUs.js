@@ -49,7 +49,6 @@ const AboutUs = () => {
     window.addEventListener("scroll", listenToScroll);
   }, []);
   const swiperRef = useRef();
-  console.log("Swiper>>>>>>>>>>>>", swiperRef);
   useEffect(() => {
     AOS.init();
   });
@@ -58,7 +57,7 @@ const AboutUs = () => {
       <Box className="masterWrapper">
         <Box>
           <Box>
-            <GoTopButton />
+            {/* <GoTopButton /> */}
             <Box
               borderRadius={["60px"]}
               width={["60px"]}

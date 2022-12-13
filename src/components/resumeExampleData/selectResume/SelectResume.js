@@ -14,7 +14,16 @@ import Link from "next/link";
 import { useWindowSizing } from "../../../../customHooks/useWindowSizing";
 import Carasol from "../carasol/Carasol";
 import Carasol1 from "../carasol/Carasol1";
-import { ArrowLeftIcon } from "@chakra-ui/icons";
+import {
+  ArrowLeftIcon,
+  ArrowBackIcon,
+  ArrowForwardIcon,
+} from "@chakra-ui/icons";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+
 const SelectResume = () => {
   const [showCarasol, setShowCarasol] = useState("");
   const size = useWindowSizing();
@@ -51,38 +60,6 @@ const SelectResume = () => {
                 opacity={["1"]}
                 className={"resume-templates__content"}
               >
-                {/* <Box
-                  className={"resume-templates__slider-arrow-container"}
-                  onClick={() => setShowCarasol(!showCarasol)}
-                  _hover={{
-                    cursor: "pointer",
-                  }}
-                  height={"30px"}
-                  width={"30px"}
-                  bg={"black"}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="resume-templates__arrow"
-                    // _hover={{
-                    //   cursor: "pointer",
-                    // }}
-                  >
-                    <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
-                  </svg>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="resume-templates__arrow"
-                  >
-                    <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
-                  </svg>
-                </Box> */}
                 <Box className={"resume-templates__info"}>
                   <Text
                     fontSize={["32px", "32px", "32px", "46px", "46px"]}
@@ -153,7 +130,7 @@ const SelectResume = () => {
               </Box>
             </Box>
             <Box
-              marginTop={["-57px", "-57px", "-57px", "-57px", "-80px", "-80px"]}
+              marginTop={["10px", "10px", "10px", "-57px", "-80px", "-80px"]}
               transition={"opacity 0.1s ease-in 0s"}
               opacity={["1"]}
               pointerEvents={["auto"]}
@@ -165,7 +142,7 @@ const SelectResume = () => {
                 _hover={{
                   cursor: "pointer",
                 }}
-                display={"flex"}
+                display={["none", "none", "none", "block", "block"]}
               >
                 <ArrowLeftIcon />
               </Box>
@@ -177,34 +154,6 @@ const SelectResume = () => {
                 justifyContent={"center"}
                 // alignItems={"center"}
               >
-                <Box
-                  className={
-                    "resume-templates__slider-button--left resume-templates__slider-button"
-                  }
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
-                  </svg>
-                </Box>
-                <Box
-                  className={
-                    "resume-templates__slider-button--right resume-templates__slider-button"
-                  }
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M14.6 16.7l-1.4 1.5-5.9-5.5a1 1 0 010-1.4l6-5.5 1.3 1.5L9.5 12l5 4.7z"></path>
-                  </svg>
-                </Box>
                 <Carasol />
               </Box>
             </Box>

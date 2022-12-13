@@ -10,12 +10,17 @@ import { EffectCoverflow, Pagination } from "swiper";
 import { Navigation } from "swiper";
 import { sliderData } from "../resumeExampleData";
 import Link from "next/link";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 const Carasol1 = () => {
   const swiperRef = useRef();
   return (
     <Box>
       <Swiper
         id="selectResume"
+        dots="true"
         spaceBetween={5}
         grabCursor
         initialSlide={1}
@@ -24,8 +29,11 @@ const Carasol1 = () => {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
+        // navigation={true}
         pagination={{
           dynamicBullets: true,
+          // el: ".swiper-pagination",
+          clickable: true,
         }}
         paginationClickable={true}
         modules={[Pagination, Navigation]}
@@ -52,13 +60,13 @@ const Carasol1 = () => {
           },
           1300: {
             slidesPerView: 3,
-            pagination: true,
+            // pagination: true,
             spaceBetween: 2,
           },
           1600: {
             slidesPerView: 3,
-            pagination: true,
-            spaceBetween: 4,
+            // pagination: true,
+            spaceBetween: 3,
           },
         }}
       >
@@ -108,6 +116,20 @@ const Carasol1 = () => {
           );
         })}
       </Swiper>
+      <Box
+        className={"resume-templates__slider-button"}
+        left={["35%", "28%", "25%", "15%", "15%"]}
+        onClick={() => swiperRef.current.slidePrev()}
+      >
+        <MdOutlineKeyboardArrowLeft size={30} />
+      </Box>
+      <Box
+        className={"resume-templates__slider-button"}
+        right={["35%", "28%", "25%", "15%", "15%"]}
+        onClick={() => swiperRef.current.slideNext()}
+      >
+        <MdOutlineKeyboardArrowRight size={30} />
+      </Box>
     </Box>
   );
 };

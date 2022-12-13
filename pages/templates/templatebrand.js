@@ -27,6 +27,9 @@ import Reference from "../../src/components/commonSection/Reference"
 import Contact from '../../src/components/commonSection/Contact';
 import Skill from '../../src/components/commonSection/Skill';
 
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
+
+
 export default function Templatebrand() {
     const {
         resumeData,
@@ -36,19 +39,12 @@ export default function Templatebrand() {
     const [show, setShow] = useShow();
 
     return (
-
-        <div className={style.main}>
+        <div style={{ overflow: 'auto' }}>
             <TempLayout work={true} education={true} skills={true} references={true} >
+            <ChangeTempBtn />
 
-                <Link href={'/templates'} >
-                    <div className={style.swapCont}>
-                        <Tooltip title="Change Template" arrow distance={20}>
-                            <div className={style.swap} >
-                                <img src='/icons/swap.png' />
-                            </div>
-                        </Tooltip>
-                    </div>
-                </Link>
+
+              
                 <div className={styles.mainDiv} >
                     <Box ml={["", , , "5%", "13%", "25%"]} >
 
@@ -356,6 +352,7 @@ export default function Templatebrand() {
                 </div>
             </TempLayout>
         </div>
+        
 
     )
 }

@@ -11,6 +11,10 @@ import { Navigation } from "swiper";
 import Slider from "react-slick";
 import { sliderData } from "../resumeExampleData";
 import Link from "next/link";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 const Carasol = () => {
   const swiperRef = useRef();
   return (
@@ -89,6 +93,22 @@ const Carasol = () => {
           );
         })}
       </Swiper>
+      <Box
+        className={"resume-templates__slider-button"}
+        left={["35%", "28%", "25%", "23%", "23%"]}
+        opacity={["1", "1", "1", "0", "0"]}
+        onClick={() => swiperRef.current.slidePrev()}
+      >
+        <MdOutlineKeyboardArrowLeft size={30} />
+      </Box>
+      <Box
+        className={"resume-templates__slider-button"}
+        right={["35%", "28%", "25%", "23%", "23%"]}
+        opacity={["1", "1", "1", "0", "0"]}
+        onClick={() => swiperRef.current.slideNext()}
+      >
+        <MdOutlineKeyboardArrowRight size={30} />
+      </Box>
     </Box>
   );
 };
