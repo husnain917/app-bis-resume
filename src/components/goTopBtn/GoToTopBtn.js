@@ -28,10 +28,7 @@ const GoToTopBtn = () => {
   return (
     <>
       {visible && (
-        <Box
-          display={{ base: 'none', md: 'block' }}
-          className={Classes.container}
-        >
+        <Box className={Classes.container}>
           <div className={Classes.btn} onClick={onClickHandler}>
             <FaMinus color="#002d6b" size={'20px'} />
             <FaArrowUp color="#002d6b" className={Classes.icon} size={'20px'} />
