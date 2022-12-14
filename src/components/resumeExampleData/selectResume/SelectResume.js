@@ -57,7 +57,7 @@ const SelectResume = () => {
         <>
           <Box
             position={"relative"}
-            padding={["40px 44px", "40px 44px", "40px 44px", "40px 44px"]}
+            padding={["40px 44px", "40px 44px", "40px 44px", "80px 100px"]}
             backgroundColor={["#282b8f"]}
             overflow={["hidden"]}
           >
@@ -109,7 +109,7 @@ const SelectResume = () => {
                     to word or PDF.
                   </Box>
                   <Box
-                    marginBottom={"142px"}
+                    marginBottom={"60px"}
                     display={["none", "none", "none", "block", "block"]}
                   >
                     <a className="button" href="/app/create-resume">
