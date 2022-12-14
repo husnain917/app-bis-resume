@@ -25,26 +25,9 @@ import {
 import ImageSelector from '../../../src/components/imageSelector';
 import { MdCastForEducation } from 'react-icons/md';
 import { FaSignLanguage, FaRegUser } from "react-icons/fa";
-import Name from '../../../src/components/commonSection/Name';
-import Profession from '../../../src/components/commonSection/Profession';
-import About from '../../../src/components/commonSection/About';
-import Contact from '../../../src/components/commonSection/Contact';
-import useShow from '../../../src/components/tempSectionSide/useShow';
-import SectionSideMenu from '../../../src/components/tempSectionSide/SectionSideMenu';
-import {
-  EDUCATION,
-  LANGUAGES,
-  SKILL,
-  WORK,
-} from '../../../src/components/tempSectionSide/SectionSideConstant';
-import TempLayout from '../../../src/components/tempNav/TempLayout';
+
 import useStoreData from "../../../src/components/useStoreData";
-import Education from '../../../src/components/commonSection/Education';
-import Heading from '../../../src/components/commonSection/Heading';
-import Skill from "../../../src/components/commonSection/Skill";
-import WorkExperience from '../../../src/components/commonSection/WorkExperience';
 import ChangeTempBtn from '../../../src/components/changeTempbtn/ChangeTempBtn';
-import ImageSelector from '../../../src/components/imageSelector';
 
 export default function Fashion_Temp() {
   // redux Data

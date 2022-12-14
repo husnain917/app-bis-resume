@@ -14,7 +14,7 @@ import ExpImage from "../public/ExpImage.png"
 import jobAd from "../public/jobAd.png"
 import EducationHelpImage from "../public/EducationHelpImage.png";
 import SkillImage from "../public/SkillImage.png"
-import ResumeHelp from "../public/ResumeHelp.png"
+import {ResumeHelpi} from "../public/ResumeHelp.png"
 import ProfileDescrip from "../public/ProfileDescrip.png"
 import SideBar from "../src/components/sideBar/SideBar";
 import Layout from "../src/Layout";
@@ -35,44 +35,33 @@ export default function ResumeHelp() {
                         <Box p={["5%", "5%"]}>
                             <Text fontSize={["35px", "50px", "50px"]} >How to Write a Resume in 2022 | Beginners Guide
                             </Text>
-    
-                <>
-                    <Box bgColor={"#f2f4f6"} h={["100%", "100%"]}  >
-                        <Container
-                            maxW={['100%', '100%', '100%', '70%', '70%']}
-                            bgColor="white"
-                            border="3px"
-                        >
-                            <Box p={["5%", "5%"]}>
-                                <Text fontSize={["35px", "50px", "50px"]} >How to Write a Resume in 2022 | Beginners Guide
-                                </Text>
 
-                                <Text fontSize={["20px"]} >How to Write a Resume - Step by step
-                                </Text>
-                                <Text fontSize={["18px", "20px", "20px"]} mt={["2%", "3%", "3%"]}>
-                                    For most job-seekers, a good resume is what stands between a dream job and Choice D. Get your resume right, and you’ll be getting replies from every other company you apply to.
-                                </Text>
+                            <Text fontSize={["20px"]} >How to Write a Resume - Step by step
+                            </Text>
+                            <Text fontSize={["18px", "20px", "20px"]} mt={["2%", "3%", "3%"]}>
+                                For most job-seekers, a good resume is what stands between a dream job and Choice D. Get your resume right, and you’ll be getting replies from every other company you apply to.
+                            </Text>
 
-                                <Text fontSize={["18px", "20px", "20px"]} mt={["2%", "3%", "3%"]}>
-                                    If your resume game is weak, though, you’ll end up sitting around for weeks, maybe even months, before you even get a single response.
-                                </Text>
+                            <Text fontSize={["18px", "20px", "20px"]} mt={["2%", "3%", "3%"]}>
+                                If your resume game is weak, though, you’ll end up sitting around for weeks, maybe even months, before you even get a single response.
+                            </Text>
 
-                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
-                                    So you’re probably wondering how you can write a resume that leads to HR managers inviting you to interviews daily.
-                                </Text>
-                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                            <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                So you’re probably wondering how you can write a resume that leads to HR managers inviting you to interviews daily.
+                            </Text>
+                            <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
 
-                                    In this guide, we’re going to teach you everything you need to know about how to make a resume:
-                                </Text>
+                                In this guide, we’re going to teach you everything you need to know about how to make a resume:
+                            </Text>
 
-                                {/*  step  */}
-                                <Box mt={["3%", "3%", "3%"]}>
-                                    <Text fontSize={["24px"]} >How to Write a Resume - Step by step </Text>
-                                    <OrderedList ml={["4%", "5%", "5%"]}>
-                                        <ListItem fontSize={["18px", "20px", "20px"]}>Pick the Right Resume Format & Layout</ListItem>
-                                        <ListItem fontSize={["18px", "20px", "20px"]}>Mention Your Personal Details & Contact Information</ListItem>
-                                        <ListItem fontSize={["18px", "20px", "20px"]}>Use a Resume Summary or Objective</ListItem>
-                                        <ListItem fontSize={["18px", "20px", "20px"]}>List Your Work Experience & Achievements</ListItem>
+                            {/*  step  */}
+                            <Box mt={["3%", "3%", "3%"]}>
+                                <Text fontSize={["24px"]} >How to Write a Resume - Step by step </Text>
+                                <OrderedList ml={["4%", "5%", "5%"]}>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>Pick the Right Resume Format & Layout</ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>Mention Your Personal Details & Contact Information</ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>Use a Resume Summary or Objective</ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>List Your Work Experience & Achievements</ListItem>
 
                                     <ListItem fontSize={["18px", "20px", "20px"]}>Mention Your Top Soft & Hard Skills</ListItem>
                                     <ListItem fontSize={["18px", "20px", "20px"]}>(Optional) Include Additional Resume Sections - Languages, Hobbies, etc.</ListItem>
@@ -80,16 +69,16 @@ export default function ResumeHelp() {
                                     <ListItem fontSize={["18px", "20px", "20px"]}>Craft a Convincing Cover Letter</ListItem>
                                     <ListItem fontSize={["18px", "20px", "20px"]}>Proofread Your Resume and Cover Letter</ListItem>
 
-                                    </OrderedList>
+                                </OrderedList>
 
 
 
-                                </Box>
-                                <Image
+                            </Box>
+                            <Image
 
-                                    src={ResumeHelp}
-                                    alt={'Image Not Found'}
-                                />
+                                src={ResumeHelpi}
+                                alt={'Image Not Found'}
+                            />
 
 
 
@@ -701,18 +690,12 @@ export default function ResumeHelp() {
                                 </Box>
                                 <Box mt={["2%", "2%", "2%"]} ml={["0%", '10%']}>
                                     <Image
-                            </Box>
-                            <Box mt={["2%", "2%", "2%"]} ml={["0%", '10%']}>
-                                <Image
 
                                         src={ProfileDescrip}
                                         alt={'Image Not Found'}
                                     />
                                 </Box>
-                                    src={ProfileDescrip}
-                                    alt={'Image Not Found'}
-                                />
-                            </Box>
+                                </Box>
 
 
                                 <Box mt={["3%", "3%", "3%"]} >
