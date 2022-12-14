@@ -47,7 +47,7 @@ const SelectResume = () => {
       {showCarasol ? (
         <Box
           position={"relative"}
-          padding={["40px 44px", "40px 44px", "40px 44px", "40px 44px"]}
+          padding={["40px 44px", "30px 44px", "30px 44px", "30px 44px"]}
           backgroundColor={["#282b8f"]}
           overflow={["hidden"]}
         >

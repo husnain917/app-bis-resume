@@ -1465,12 +1465,12 @@ audio, canvas, iframe, img, svg, video {
     padding-bottom: 50px;
   }
   
-  #selectResume .swiper-slide {
+  /* #selectResume .swiper-slide {
     background-position: center;
     background-size: cover;
     width: 300px;
     height: 300px;
-  }
+  } */
   
   #selectResume .swiper-slide img {
     display: block;
@@ -1495,6 +1495,18 @@ audio, canvas, iframe, img, svg, video {
   justify-content: center;
   transition: all 200ms linear;
   transform: scale(0.8);
+}
+@media only screen and(min-width:1440px) {
+  #selectResume .swiper-slide {
+    height: 500px;
+    display: flex;
+    /* background: #eee; */
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms linear;
+    transform: scale(0.8);
+  }
+  
 }
   
 #selectResume .swiper-slide-active{

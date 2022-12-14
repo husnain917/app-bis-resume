@@ -43,17 +43,17 @@ const Carasol1 = () => {
           100: {
             slidesPerView: 3,
             pagination: true,
-            spaceBetween: 2,
+            spaceBetween: 1,
           },
           390: {
             slidesPerView: 3,
             pagination: true,
-            spaceBetween: 2,
+            spaceBetween: 1,
           },
           786: {
             slidesPerView: 2,
             pagination: true,
-            spaceBetween: 2,
+            spaceBetween: 1,
           },
           992: {
             slidesPerView: 3,
@@ -74,12 +74,12 @@ const Carasol1 = () => {
       >
         {sliderData.map((template, index) => {
           return (
-            <SwiperSlide key={index} mb={15}>
+            <SwiperSlide key={index}>
               <Box
                 key={index}
                 bg={"whitesmoke"}
                 maxW={"600px"}
-                height={"700px"}
+                height={["300px", "400px", "500px", "500px", "500px"]}
                 //   padding={"5"}
                 borderRadius={"10"}
                 _hover={{
@@ -93,7 +93,7 @@ const Carasol1 = () => {
                     <Image
                       src={template.src}
                       alt={template.alt}
-                      height={"700px"}
+                      height={["400px", "500px", "500px", "500px", "600px"]}
                       minW={[
                         "200px",
                         "280px",
