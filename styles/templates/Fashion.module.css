@@ -434,13 +434,13 @@
   align-items: flex-start;
 }
 .sideMenuBox {
-  width: 20px;
-  margin-left: -27px;
+  width: 80px;
+
   margin-right: 4px;
   margin-top: 10px;
 }
 .width {
-  min-width: 25px !important;
-  margin-left: 3px;
+  min-width: 2px !important;
+  margin-left: -3px;
   margin-top: 10px;
 }

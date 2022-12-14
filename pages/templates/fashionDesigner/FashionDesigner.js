@@ -68,10 +68,11 @@ export default function FashionDesigner() {
               bgColor="#E6D5C2"
               h="100%"
               mt="5%"
-              ml="12%"
+              ml="20%"
               minW="950px"
               maxW="950px"
               mr={["12%", "12%", "10%", "10%", ,]}
+              mb="5%"
             >
               <Box
                 w="60%"
@@ -81,23 +82,7 @@ export default function FashionDesigner() {
                 minW={["350px", "400px", "400px", "450px", "500px"]}
                 bgColor="#E6D5C2"
               >
-                {/* <Row>
-                <FdText
-                  value={resumeData?.profile?.firstName}
-                  placeholder="OLIVIA"
-                  customclass={styles.fullName}
-                  path={"profile.firstName"}
-                  fontSize="3rem"
-                />
-                &nbsp;
-                <FdText
-                  value={resumeData?.profile?.lastName}
-                  placeholder="WILSON"
-                  customclass={styles.fullName}
-                  path={"profile.lastName"}
-                  fontSize="3rem"
-                />
-              </Row> */}
+                
                 <Row style={{ overflow: 'hidden' }} >
                   <Name
                     FName={true}
@@ -110,15 +95,7 @@ export default function FashionDesigner() {
 
                 </Row>
                 <Box bgColor="#1B4245" w="43%" h="5px" mt="2%"></Box>
-                {/* <FdText
-                value={resumeData?.objective?.title}
-                placeholder="Fashion Designer"
-                path={"profile.objective.heading"}
-                fontSize="1.7rem"
-                color="#1b4245"
-                marginTop="2%"
-                textAlign="left"
-              /> */}
+              
                 <Profession
                   professionStyle={styles.profileSubTitle}
                 />
@@ -126,19 +103,7 @@ export default function FashionDesigner() {
                   <Icon as={FaInfo} w={10} h={10} />
                   <p className={styles.heading}>About Me</p>
                 </Flex>
-                {/* <FdText
-                value={resumeData?.objective?.body}
-                placeholder="
-              Let me introduce myself, I am a fashion designer
-              who has 7 years of experience in this job. I am
-              very experienced in various fashion styles for all
-              seasons and I have made various models for
-              men and women for a world famous brand.
-              "
-                customclass={styles.aboutMe}
-                color="#1b4245"
-                path={"objective.body"}
-              /> */}
+               
                 <About
                   aboutStyle={styles.description}
                   aboutPlaceholder="  Let me introduce myself, I am a fashion designer
@@ -215,11 +180,7 @@ export default function FashionDesigner() {
                       </>
                     )}
                   </div>
-                  {/* <Flex alignItems="center" mt="5%">
-                  <Icon as={FaInfo} w={10} h={10} color="#1b425" />
-
-                  <p className={styles.heading}>Interest</p>
-                </Flex> */}
+                
                   {resumeData?.hobbies?.visible && (
                     <>
                       <div className={styles.sideMenu}>
@@ -234,7 +195,7 @@ export default function FashionDesigner() {
                           )}
                         </div>
                         <div>
-
+<Box ml="-4%">
                           <Heading
                             title={'Interest'}
 
@@ -242,7 +203,7 @@ export default function FashionDesigner() {
                             icon={(props) => (
                               <FaInfo
                                 {...props}
-                                size={30}
+                                size={32}
                                 color={'black'}
                               />
                             )}
@@ -254,6 +215,7 @@ export default function FashionDesigner() {
                               setShow({ ...show, interest: true })
                             }
                           />
+                          </Box>
                           {/* Interest Component  */}
                           <Box ml="4%">
                             <Interest
@@ -406,7 +368,7 @@ export default function FashionDesigner() {
                             />
                           </div>
                         </HStack>
-                        <Box mt="2%" mb="3%" mr="15%" ml="5%">
+                        <Box mt="2%" mb="3%" mr="15%" ml="7%">
                           <Language
                             langStyle={styles.skillText}
                           />

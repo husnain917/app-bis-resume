@@ -62,19 +62,20 @@ export default function GraphicDesigner3() {
   return (
     <div style={{ overflow: 'auto' }}>
 
-    <div className={styles.main}>
-    <TempLayout work={true} education={true} skills={true}  >
+    
+    <TempLayout work={true} education={true} skills={true} languages={true} references={true} >
         <ChangeTempBtn />
      
       <Box
         w="100%"
         mt="5%"
         mb="3%"
-        overflow="auto"
-        h="auto"
+    
+        
+        
         ml={["", , , "8%", "15%", "23%"]}
       >
-        <Box w="100%" display="flex" flexDir="row" maxW="930px" minW="930px">
+        <Box w="100%" display="flex" flexDir="row" maxW="930px" minW="930px" pt="5%">
           <Box w="30%" h="auto" display="flex" flexDir="column">
             <Box bgColor="#56C8EA" pb="30px">
             <ImageSelector
@@ -118,7 +119,7 @@ export default function GraphicDesigner3() {
                 </Box>
                 <Box bgColor="white" h="3px" w="80%"></Box>
               </div>
-              <Box ml="8%">
+              <Box ml="10%">
                 <Contact
                   phone={true}
                   email={true}
@@ -474,6 +475,6 @@ export default function GraphicDesigner3() {
       </Box>
       </TempLayout>
     </div>
-    </div>
+
   );
 }
