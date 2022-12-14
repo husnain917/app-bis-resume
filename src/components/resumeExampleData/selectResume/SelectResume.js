@@ -57,7 +57,7 @@ const SelectResume = () => {
         <>
           <Box
             position={"relative"}
-            padding={["40px 44px", "40px 44px", "40px 44px", "80px 100px"]}
+            padding={["40px 44px", "40px 44px", "80px 100px", "80px 100px"]}
             backgroundColor={["#282b8f"]}
             overflow={["hidden"]}
           >
