@@ -26,6 +26,8 @@ const Carasol1 = () => {
         initialSlide={1}
         centeredSlides={true}
         loop
+        slideLabelMessage={"USE THIS TEMPLATE"}
+        focusableElements={"LABEL"}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}

@@ -31,22 +31,43 @@ const SelectResume = () => {
   const swiperRef = useRef();
   return (
     <>
-      <Box
+      {/* <Box
         position={"relative"}
         padding={[
-          "80px 44px",
-          "80px 44px",
-          "80px 44px",
-          "120px 44px 144px",
+          "40px 44px",
+          "40px 44px",
+          "40px 44px",
+          "40px 44px",
+          "120px 40px 144px",
           "120px 44px 144px",
         ]}
         backgroundColor={["#282b8f"]}
         overflow={["hidden"]}
-      >
-        {showCarasol ? (
+      > */}
+      {showCarasol ? (
+        <Box
+          position={"relative"}
+          padding={["40px 44px", "40px 44px", "40px 44px", "40px 44px"]}
+          backgroundColor={["#282b8f"]}
+          overflow={["hidden"]}
+        >
           <Carasol1 />
-        ) : (
-          <>
+        </Box>
+      ) : (
+        <>
+          <Box
+            position={"relative"}
+            padding={[
+              "40px 44px",
+              "40px 44px",
+              "40px 44px",
+              "40px 44px",
+              "120px 40px 144px",
+              "120px 44px 144px",
+            ]}
+            backgroundColor={["#282b8f"]}
+            overflow={["hidden"]}
+          >
             <Box
               position={"relative"}
               maxW={["100%", "100%", "100%", "1120px", "1120px"]}
@@ -157,9 +178,9 @@ const SelectResume = () => {
                 <Carasol />
               </Box>
             </Box>
-          </>
-        )}
-      </Box>
+          </Box>
+        </>
+      )}
     </>
   );
 };
