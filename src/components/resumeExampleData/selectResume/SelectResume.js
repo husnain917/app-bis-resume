@@ -57,14 +57,7 @@ const SelectResume = () => {
         <>
           <Box
             position={"relative"}
-            padding={[
-              "40px 44px",
-              "40px 44px",
-              "40px 44px",
-              "40px 44px",
-              "120px 40px 144px",
-              "120px 44px 144px",
-            ]}
+            padding={["40px 44px", "40px 44px", "40px 44px", "40px 44px"]}
             backgroundColor={["#282b8f"]}
             overflow={["hidden"]}
           >
@@ -151,7 +144,7 @@ const SelectResume = () => {
               </Box>
             </Box>
             <Box
-              marginTop={["10px", "10px", "10px", "-57px", "-80px", "-80px"]}
+              marginTop={["10px", "10px", "10px", "-30px", "-40px", "-40px"]}
               transition={"opacity 0.1s ease-in 0s"}
               opacity={["1"]}
               pointerEvents={["auto"]}
