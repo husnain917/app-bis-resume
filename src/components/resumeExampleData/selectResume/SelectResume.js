@@ -158,7 +158,7 @@ const SelectResume = () => {
               className={"resume-templates__slider-wrapper"}
               left={["44%", "44%", "44%", "48%", "44%"]}
             >
-              <Box
+              {/* <Box
                 onClick={() => setShowCarasol(!showCarasol)}
                 _hover={{
                   cursor: "pointer",
@@ -166,7 +166,7 @@ const SelectResume = () => {
                 display={["none", "none", "none", "block", "block"]}
               >
                 <ArrowLeftIcon />
-              </Box>
+              </Box> */}
               <Box
                 className={"resume-templates__slider-container"}
                 width={"1406px"}

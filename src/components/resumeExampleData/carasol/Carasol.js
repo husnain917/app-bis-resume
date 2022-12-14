@@ -15,10 +15,26 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
+import { ArrowLeftIcon } from "@chakra-ui/icons";
 const Carasol = () => {
   const swiperRef = useRef();
   return (
-    <Box marginLeft="30px">
+    <Box
+      marginLeft="30px"
+      display={"flex"}
+      alignItems={"center"}
+      justifyContent={"space-between"}
+    >
+      <Box
+        _hover={{
+          cursor: "pointer",
+        }}
+        display={["none", "none", "none", "block", "block"]}
+        marginRight={"3%"}
+        onClick={() => swiperRef.current.slidePrev()}
+      >
+        <ArrowLeftIcon />
+      </Box>
       <Swiper
         // id="selectResume"
         spaceBetween={15}
