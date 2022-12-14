@@ -4,13 +4,13 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBmUk4q8JuZMECgy38io6Td5ItIh3wsA6A",
-  authDomain: "app-bis-resume.firebaseapp.com",
-  projectId: "app-bis-resume",
-  storageBucket: "app-bis-resume.appspot.com",
-  messagingSenderId: "568110847159",
-  appId: "1:568110847159:web:1a6371140dafcf5ea36932",
-  measurementId: "G-QZVT1L5LXS",
+  apiKey: "AIzaSyA-rlc0IIqKp2RWPA_K36JoEbQbXk5p1S8",
+  authDomain: "bisresume.firebaseapp.com",
+  projectId: "bisresume",
+  storageBucket: "bisresume.appspot.com",
+  messagingSenderId: "699077904738",
+  appId: "1:699077904738:web:a852bd493fbe7fe690043b",
+  measurementId: "G-8SYDF2094P"
 };
 
 // Initialize Firebase
