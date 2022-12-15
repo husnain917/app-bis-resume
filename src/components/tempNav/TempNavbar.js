@@ -134,10 +134,11 @@ export default function TempNavbar({
         <Button
           bgColor="transparent"
           color="white"
+          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
           _hover={{
             backgroundColor: 'transparent',
 
-            color: '#1C6672',
+            color: '#313C4E',
             transition: '0.4s',
           }}
         >
