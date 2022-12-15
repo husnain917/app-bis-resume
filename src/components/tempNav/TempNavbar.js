@@ -18,6 +18,7 @@ import {
   MoonIcon,
   EditIcon,
   SettingsIcon,
+  HamburgerIcon,
   DownloadIcon,
 } from '@chakra-ui/icons';
 import {
@@ -70,7 +71,7 @@ export default function TempNavbar({
         />
       </Link>
       <Box
-        w="500px"
+        w="600px"
         display="flex"
         bgColor="#006772"
         borderRadius={'100px'}
