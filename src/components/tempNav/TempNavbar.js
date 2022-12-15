@@ -5,7 +5,7 @@ import {
   MoonIcon,
   EditIcon,
   SettingsIcon,
-  HamburgerIcon,
+  DownloadIcon,
 } from '@chakra-ui/icons';
 import LayoutModal from './LayoutModal';
 
@@ -94,6 +94,19 @@ export default function TempNavbar({
         >
           <SettingsIcon mr="5px" />
           Setting
+        </Button>
+        <Button
+          bgColor="transparent"
+          color="white"
+          _hover={{
+            backgroundColor: 'transparent',
+
+            color: '#1C6672',
+            transition: '0.4s',
+          }}
+        >
+          <DownloadIcon mr="5px" />
+          Download
         </Button>
       </Box>
       {/* <Box w="20%" h="40px" bgColor="#313C4E" borderRadius="100px" mt="5px">
