@@ -8,23 +8,90 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
+  Spinner,
   Text,
   useBreakpointValue,
   useDisclosure,
+  useToast,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Rating from '../rating/Rating';
-
+import { getAuth, onAuthStateChanged } from '@firebase/auth';
+import { collection, doc, getDoc, setDoc } from '@firebase/firestore';
+import { db } from '../../../config/firebase';
 const Feedback = () => {
+  const [rating, setRating] = useState(0);
+  const [disable, setDisable] = useState(false);
+  const [id, setId] = useState('');
+  const toast = useToast();
+  const feedbackRef = collection(db, 'feedback');
+  var auth = getAuth();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const onRatingHandler = (value) => {
-    console.log('Rating Value:', value);
+    setRating(value);
   };
+
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    setDisable(true);
+    if (id) {
+      const docRef = setDoc(doc(feedbackRef, id), {
+        rating: rating,
+        by: id,
+      })
+        .then((res) => {
+          onClose();
+          setDisable(false);
+          toast({
+            title: 'Success',
+            description: 'Thank You For your Feedback',
+            status: 'success',
+            duration: 2000,
+            isClosable: true,
+            position: 'top-right',
+          });
+        })
+        .catch((e) => {
+          onClose();
+          toast({
+            title: 'Error',
+            description: 'Something Went Wrong please Try Again later',
+            status: 'error',
+            duration: 2000,
+            isClosable: true,
+            position: 'top-right',
+          });
+        });
+    }
+  };
+  const feedBackHandler = async (uid) => {
+    console.log('id:', id);
+    const docRef = doc(db, 'feedback', uid);
+    const getDocData = await getDoc(docRef);
+    if (!getDocData.data()) {
+      setTimeout(() => {
+        onOpen();
+      }, 5000);
+    } else {
+      clearTimeout();
+    }
+  };
+  useEffect(() => {
+    //  CheckUser;
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setId(user.uid);
+        feedBackHandler(user.uid);
+      } else {
+        console.log('user is not found');
+      }
+    });
+  }, []);
   return (
     <div>
-      <Button onClick={onOpen} mt="75px" ml="100px">
+      {/* <Button onClick={onOpen} mt="75px" ml="100px">
         Feedback
-      </Button>
+      </Button> */}
 
       <Modal
         closeOnOverlayClick={false}
@@ -75,7 +142,13 @@ const Feedback = () => {
           </ModalBody>
 
           <ModalFooter display={'flex'} justifyContent="center">
-            <button className="feedbackBtn">Rate</button>
+            <button
+              className="feedbackBtn"
+              onClick={onSubmitHandler}
+              disabled={disable}
+            >
+              {disable ? <Spinner color="#fff" size={'sm'} /> : 'Rate'}
+            </button>
             <button onClick={onClose} className="feedbackBtn2">
               Cancel
             </button>

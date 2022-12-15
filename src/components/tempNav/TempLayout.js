@@ -1,4 +1,5 @@
 import React from 'react';
+import Feedback from '../feedbackPopUp/Feedback';
 import TempNavbar from './TempNavbar';
 export default function TempLayout({
   children,
@@ -25,7 +26,7 @@ export default function TempLayout({
         interest={interest}
         certificate={certificate}
       />
-
+      <Feedback />
       <main>{children}</main>
     </div>
   );
