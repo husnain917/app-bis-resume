@@ -37,6 +37,7 @@ import {
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import Feedback from '../../src/components/feedbackPopUp/Feedback';
+import SaveTempData from '../../src/components/saveTempBtn/SaveTempData';
 const HybridTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
@@ -58,7 +59,7 @@ const HybridTemplate = () => {
           interest={true}
         >
           <ChangeTempBtn />
-          <Feedback />
+          <SaveTempData />
           <Flex
             justifyContent={{ base: 'none', lg: 'center' }}
             flexDir={'column'}
