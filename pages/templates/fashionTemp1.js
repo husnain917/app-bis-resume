@@ -26,7 +26,8 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import useShow from '../../src/components/tempSectionSide/useShow';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import WithPrivate from '../../src/components/protectedRoute/WithPrivate';
+import { privateRoutes } from '../../src/components/protectedRoute/PrivateRoutes';
+
 const FashionTemp1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
@@ -372,4 +373,4 @@ const FashionTemp1 = () => {
     </div>
   );
 };
-export default WithPrivate(FashionTemp1);
+export default privateRoutes(FashionTemp1);
