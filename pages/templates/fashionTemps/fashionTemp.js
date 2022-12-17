@@ -25,7 +25,7 @@ import { FaSignLanguage, FaRegUser } from "react-icons/fa";
 import ChangeTempBtn from '../../../src/components/changeTempbtn/ChangeTempBtn';
 
 import useStoreData from "../../../src/components/useStoreData";
-import ChangeTempBtn from '../../../src/components/changeTempbtn/ChangeTempBtn';
+
 
 export default function Fashion_Temp() {
   // redux Data

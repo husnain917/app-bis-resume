@@ -47,7 +47,8 @@
     "sass": "^1.54.9",
     "slick-carousel": "^1.8.1",
     "swiper": "^8.4.5",
-    "uniqid": "^5.4.0"
+    "uniqid": "^5.4.0",
+    "youtube-player": "^5.5.2"
   },
   "devDependencies": {
     "eslint": "8.23.1",
