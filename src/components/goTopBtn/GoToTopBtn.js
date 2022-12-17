@@ -3,6 +3,7 @@ import Classes from './custom.module.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { FaArrowUp, FaMinus } from 'react-icons/fa';
+import { Box } from '@chakra-ui/layout';
 const GoToTopBtn = () => {
   const [visible, setVisible] = useState(false);
   const onClickHandler = () => {
@@ -27,12 +28,12 @@ const GoToTopBtn = () => {
   return (
     <>
       {visible && (
-        <div className={Classes.container}>
+        <Box className={Classes.container}>
           <div className={Classes.btn} onClick={onClickHandler}>
-            <FaMinus color="#006772" size={'28px'} />
-            <FaArrowUp color="#006772" className={Classes.icon} size={'28px'} />
+            <FaMinus color="#002d6b" size={'20px'} />
+            <FaArrowUp color="#002d6b" className={Classes.icon} size={'20px'} />
           </div>
-        </div>
+        </Box>
       )}
     </>
   );

@@ -49,7 +49,6 @@ const AboutUs = () => {
     window.addEventListener("scroll", listenToScroll);
   }, []);
   const swiperRef = useRef();
-  console.log("Swiper>>>>>>>>>>>>", swiperRef);
   useEffect(() => {
     AOS.init();
   });

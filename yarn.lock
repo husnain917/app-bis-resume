@@ -7834,6 +7834,13 @@
   dependencies:
     "clsx" "^1.1.1"
 
+"react-youtube@^10.1.0":
+  "integrity" "sha512-ZfGtcVpk0SSZtWCSTYOQKhfx5/1cfyEW1JN/mugGNfAxT3rmVJeMbGpA9+e78yG21ls5nc/5uZJETE3cm3knBg=="
+  "resolved" "https://registry.npmjs.org/react-youtube/-/react-youtube-10.1.0.tgz"
+  "version" "10.1.0"
+  dependencies:
+    "clsx" "^1.1.1"
+
 "react@^16.1.0":
   "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
