@@ -32,8 +32,6 @@ import { useState } from 'react';
 import { MobileNavItem } from '../navbar/Navbar';
 import { NAV_ITEMS } from '../constant/navbarLinks/NavbarLinks';
 import Link from 'next/link';
-import jsPDF from "jspdf";
-import CustomHook from "./CustomHook";
 export default function TempNavbar({
   work,
   education,
@@ -44,23 +42,11 @@ export default function TempNavbar({
   organization,
   interest,
   certificate,
+  downloadPDF,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const [showNav, setShowNav] = useState(false);
-
-  // generate pdf
-  const { pdfRef } = CustomHook();
-  const downloadPDF = () => {
-    const content = pdfRef.current;
-
-    const doc = new jsPDF();
-    doc.html(content, {
-      callback: function (doc) {
-        doc.save('sample.pdf');
-      }
-    });
-  };
   return (
     <Box
       display={'flex'}
