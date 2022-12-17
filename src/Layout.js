@@ -14,13 +14,13 @@ export default function Layout({ children }) {
     } else {
       setShowNav(true);
     }
-  }, []);
+  });
 
   return (
     <>
       {show && <Navbar />}
       <main>{children}</main>
-      <Footer />
+      {show && <Footer />}
     </>
   );
 }
