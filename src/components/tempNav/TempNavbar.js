@@ -18,6 +18,7 @@ import {
   MoonIcon,
   EditIcon,
   SettingsIcon,
+  HamburgerIcon,
   DownloadIcon,
   HamburgerIcon,
 } from '@chakra-ui/icons';
@@ -42,6 +43,7 @@ export default function TempNavbar({
   organization,
   interest,
   certificate,
+  downloadPDF,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -71,7 +73,7 @@ export default function TempNavbar({
         />
       </Link>
       <Box
-        w="500px"
+        w="600px"
         display="flex"
         bgColor="#006772"
         borderRadius={'100px'}
@@ -134,12 +136,14 @@ export default function TempNavbar({
         <Button
           bgColor="transparent"
           color="white"
+          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
           _hover={{
             backgroundColor: 'transparent',
 
-            color: '#1C6672',
+            color: '#313C4E',
             transition: '0.4s',
           }}
+          onClick={downloadPDF}
         >
           <DownloadIcon mr="5px" />
           Download
