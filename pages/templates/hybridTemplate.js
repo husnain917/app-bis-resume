@@ -37,7 +37,6 @@ import {
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
-import CustomPDF from "../../src/components/tempNav/CustomPDF";
 const HybridTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
@@ -60,10 +59,7 @@ const HybridTemplate = () => {
           downloadPDF={downloadPDFHandler}
         >
           <ChangeTempBtn />
-          <CustomPDF
-            height='328'
-            width='255'
-          />
+
           <Flex
             justifyContent={{ base: 'none', lg: 'center' }}
             flexDir={'column'}

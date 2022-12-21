@@ -409,9 +409,3 @@ export const visibleAchievementSection = (data) => {
     payload: data,
   };
 }
-export const pdfTempHandler = (data) => {
-  return {
-    type: actionTypes.TEMP_PDF,
-    payload: data,
-  };
-};
