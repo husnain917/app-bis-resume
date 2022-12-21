@@ -61,8 +61,8 @@ const HybridTemplate = () => {
         >
           <ChangeTempBtn />
           <CustomPDF
-            height='630'
-            width='500'
+            height='348'
+            width='275'
           />
           <Flex
             justifyContent={{ base: 'none', lg: 'center' }}
