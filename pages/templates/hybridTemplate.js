@@ -72,7 +72,7 @@ const HybridTemplate = () => {
               <Box
                 minW={910}
                 maxW={910}
-                pt={10}
+                pt={14}
                 pb={2}
                 px={2}
                 bg={'white'}
