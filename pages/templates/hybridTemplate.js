@@ -36,11 +36,13 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
+import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+import CustomPDF from "../../src/components/tempNav/CustomPDF";
 const HybridTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
   const [show, setShow] = useShow();
-
+  const { downloadPDFHandler, pdfRef } = PDFGenerater();
   return (
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     //Template Layout for Template Navbar
@@ -55,9 +57,13 @@ const HybridTemplate = () => {
           projects={true}
           certificate={true}
           interest={true}
+          downloadPDF={downloadPDFHandler}
         >
           <ChangeTempBtn />
-
+          <CustomPDF
+            height='630'
+            width='500'
+          />
           <Flex
             justifyContent={{ base: 'none', lg: 'center' }}
             flexDir={'column'}
@@ -76,6 +82,7 @@ const HybridTemplate = () => {
               borderRadius={6}
               borderWidth="1px"
               borderColor={'#00000023'}
+              ref={pdfRef}
             >
               <HStack>
                 {/* Image Section  */}

@@ -14,6 +14,10 @@ const initialState = {
   getScanResultStatus: 'loading',
   getResumeBuilderChoice: 'form',
   builderResumeData: {},
+  templateSize: {
+    tempHeight: '',
+    tempWidth: '',
+  }
 };
 
 export default function resumeEditor(state = initialState, action) {
@@ -389,6 +393,14 @@ export default function resumeEditor(state = initialState, action) {
           ...state.resumeData,
           achievements: newAchieve,
         },
+      };
+    case actionTypes.TEMP_PDF:
+      return {
+        ...state,
+        templateSize: {
+          tempHeight:action.payload.height,
+          tempWidth:action.payload.width,
+        }
       };
     default:
       return { ...state };
