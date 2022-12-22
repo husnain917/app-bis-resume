@@ -19,6 +19,7 @@ import {
   EditIcon,
   SettingsIcon,
   DownloadIcon,
+  HamburgerIcon
 } from '@chakra-ui/icons';
 import {
   FaFacebookF,
