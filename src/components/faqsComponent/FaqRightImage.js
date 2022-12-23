@@ -3,7 +3,7 @@ import { Grid, GridItem, Box, Image, Text } from "@chakra-ui/react";
 
 const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
   return (
-    <Box w={["100%", "94%", "94%", "960px", "1220px", "1500px"]}>
+    <Box w={["100%", "100%", "100%", "960px", "1220px", "1500px"]}>
       <Grid
         marginTop="1.2rem"
         templateAreas={[`"image textArea ."`]}
@@ -15,28 +15,35 @@ const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
           "1fr 2fr 1fr",
           "1fr 2fr 1fr",
         ]}
-        color="blackAlpha.700"
-        // margin="3.2rem auto"
         display={["flex", "flex", "grid", "grid", "grid", "grid", "grid"]}
         flexDirection={["column-reverse"]}
         marginInlineStart="40px"
         marginInlineEnd="40px"
+        style={{
+          letterSpacing: "0.8px",
+        }}
       >
         <GridItem pl="2" area={"textArea"} position="relative">
-          <Text fontSize={["2.75em"]} fontWeight="600">
+          <Text
+            fontSize={["1.9em"]}
+            fontWeight="600"
+            style={{
+              letterSpacing: "0px",
+            }}
+          >
             {heading}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.5em"]} my={4}>
+          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
             {" "}
             {text1}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.5em"]} my={4}>
+          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
             {text2}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.5em"]} my={4}>
+          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
             {text3}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.5em"]} my={4}>
+          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
             {text4}
           </Text>
         </GridItem>
@@ -45,8 +52,8 @@ const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1000"
-          marginInlineStart="40px"
-          marginInlineEnd="40px"
+          // marginInlineStart="40px"
+          // marginInlineEnd="40px"
           area={"image"}
         >
           <Image objectFit="cover" src={image} alt="Loading" />
