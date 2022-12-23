@@ -9,11 +9,16 @@ export default function HintSection() {
   const size = useWindowSizing();
   const width = size.width;
   return (
-    <div style={{ marginTop: "5%", marginBottom: "5%" }}>
+    <Box
+      margin={"6.4rem auto"}
+      // position={"relative"}
+      width={width > 610 ? ["1000px", "94%", "94%", "1000px", "1220px"] : "98%"}
+    >
       {/* <Box position="absolute">
-      <SideBar />
+        <SideBar />
       </Box> */}
-      <Box ml={["18%", "5%", "0%", "0&", "0%", "0%"]}>
+
+      <Box>
         <Text
           fontSize={["1.5rem", "2.5rem", "3rem", "3rem", "3rem", "4.5rem"]}
           color="#313B47"
@@ -24,7 +29,7 @@ export default function HintSection() {
         >
           Build Your Resume Fast and Easy.
         </Text>
-        <div className={styles.hrLine}>
+        <Box className={styles.hrLine}>
           <FaMinus
             style={{
               color: "#1dbfaf",
@@ -39,7 +44,7 @@ export default function HintSection() {
               marginTop: "0%",
             }}
           />
-        </div>
+        </Box>
         <Text
           color="#313B47"
           fontSize={["1.2rem", "1.5rem", "1.8", "1.7rem", "1.5rem", "2.5rem"]}
@@ -49,43 +54,43 @@ export default function HintSection() {
           pr={["14%"]}
           mt="3%"
         >
-          ` Novoresume is lightning fast. There is no software to download. No
+          BisResume is lightning fast. There is no software to download. No
           multi-part sign-up form. No long-winded tutorials. Just a
-          straightforward process.`
+          straightforward process.
         </Text>
         <Hint
           number="1"
           message="Pick a Template"
-          description="`Dont sabotage your job search before it has even begun. Choose from our ATS-friendly, hand-crafted resume templates`"
-          imgSrc="/one.png"
+          description="Dont sabotage your job search before it has even begun. Choose from our ATS-friendly, hand-crafted resume templates"
+          imgSrc={"./svg-export/svgexport-4.svg"}
           isRight={true}
           paddingBottom="30px"
         />
         <Hint
           number="2"
           message="Customize Your Layout"
-          description="`Make the resume template truly your own. Customize the layout based on your experience level.`"
-          imgSrc="/two.png"
+          description="Make the resume template truly your own. Customize the layout based on your experience level."
+          imgSrc={"./svg-export/svgexport-5.svg"}
           isRight={false}
           paddingBottom="20px"
         />
         <Hint
           number="3"
           message="Fill in the Blanks"
-          description="`Fill in your resume information, let our AI content analyzer do its job, and see your resume changes dynamically in real time.`"
-          imgSrc="/three.png"
+          description="Fill in your resume information, let our AI content analyzer do its job, and see your resume changes dynamically in real time."
+          imgSrc={"./svg-export/svgexport-6.svg"}
           isRight={true}
           paddingBottom="20px"
         />
         <Hint
           number="4"
           message="Hit Download!'"
-          description="`And yes, its free! We dont hit you with a paywall once you have completed your resume in the Basic Account. If you use any of our premium features, the software will let you know about it`."
-          imgSrc="/four.jpg"
+          description="And yes, its free! We dont hit you with a paywall once you have completed your resume in the Basic Account. If you use any of our premium features, the software will let you know about it."
+          imgSrc={"./svg-export/svgexport-7.svg"}
           isRight={false}
           paddingBottom="5px"
         />
       </Box>
-    </div>
+    </Box>
   );
 }
