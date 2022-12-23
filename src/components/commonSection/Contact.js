@@ -9,7 +9,7 @@ import React from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { HiPhone } from "react-icons/hi";
 import { MdEmail, MdLocationOn } from "react-icons/md";
-import { GiSpiderWeb } from "react-icons/Gi";
+import { TbWorld } from "react-icons/tb";
 import { useSelector } from "react-redux";
 import Text from "./Text";
 
@@ -139,7 +139,7 @@ const Contact = (props) => {
             <Heading text={"Website"} />
             <CircleDesign
               icon={(props) => (
-                <GiSpiderWeb
+                <TbWorld
                   {...props}
                   size={iconSize ? iconSize : "16px"}
                   color={iconColor ? iconColor : "#000"}
