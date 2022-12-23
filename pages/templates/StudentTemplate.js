@@ -26,14 +26,16 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import TempLayout from '../../src/components/tempNav/TempLayout';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
+import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 const StudentTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
   const [show, setShow] = useShow();
+  const { downloadPDFHandler, pdfRef } = PDFGenerater();
   return (
     //  ~~~~~~~~~~~~~~ Student Resume Template ~~~~~~~~~~~~~~  //
     <div style={{ overflow: 'auto' }}>
-      <TempLayout education={true} skills={true} work={true} languages={true}>
+      <TempLayout education={true} skills={true} work={true} languages={true} downloadPDF={downloadPDFHandler}>
         <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
@@ -51,6 +53,7 @@ const StudentTemplate = () => {
             bg="white"
             borderWidth="1px"
             borderColor={'#00000023'}
+            ref={pdfRef}
           >
             <Box>
               <Box bg={'#EBC9BB'} h={'230px'}>

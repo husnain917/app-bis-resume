@@ -408,4 +408,4 @@ export const visibleAchievementSection = (data) => {
     type: actionTypes.VISIBLE_ACHIEVEMENT_SECTION,
     payload: data,
   };
-};
+}

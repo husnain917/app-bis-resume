@@ -12,6 +12,7 @@ export default function TempLayout({
   organization,
   interest,
   certificate,
+  downloadPDF,
 }) {
   return (
     <div>
@@ -25,6 +26,7 @@ export default function TempLayout({
         organization={organization}
         interest={interest}
         certificate={certificate}
+        downloadPDF={downloadPDF}
       />
       <Feedback />
       <main>{children}</main>
