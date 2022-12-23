@@ -10,9 +10,9 @@ export default function HintSection() {
   const width = size.width;
   return (
     <div style={{ marginTop: "5%", marginBottom: "5%" }}>
-      <Box position="absolute">
+      {/* <Box position="absolute">
       <SideBar />
-      </Box>
+      </Box> */}
       <Box ml={["18%", "5%", "0%", "0&", "0%", "0%"]}>
         <Text
           fontSize={["1.5rem", "2.5rem", "3rem", "3rem", "3rem", "4.5rem"]}
