@@ -377,6 +377,10 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 .cursor {
   cursor: pointer !important;
 }
+.cursor img {
+  height:320px;
+  border: 1px solid black;
+}
 
 .slick-prev {
   left: -20px !important;
@@ -1949,4 +1953,44 @@ video {
   height: 35px;
   font-weight: 600;
   font-size: 16px;
+}
+.afterlink{
+  position: relative;
+}
+.afterlink::after{
+  content:"";
+  position: absolute;
+  background: #00C8AA;
+  width: 0%;
+  height: 2px;
+  display: block;
+  margin: auto;
+  transition: 1s;
+  left:0
+}
+.afterlink:hover::after{
+  width: 100%;
+  text-decoration: none;
+  box-shadow:5px solid black;
+  text-shadow: 5px solid black;
+}
+.afterHeading{
+  position: relative;
+}
+.afterHeading::after{
+  content:"";
+  position: absolute;
+  background: #00C8AA;
+  width: 30%;
+  height: 2px;
+  display: block;
+  margin: auto;
+  transition: 1s;
+  right:0
+}
+.afterHeading:hover::after{
+  width: 100%;
+  text-decoration: none;
+  box-shadow:5px solid black;
+  text-shadow: 5px solid black;
 }
