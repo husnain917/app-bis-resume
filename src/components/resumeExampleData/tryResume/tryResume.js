@@ -29,21 +29,9 @@ const TryResume = () => {
             height={["320px"]}
             // className={"builder-cta__visual"}
           >
-            <Image
-              src="./sampleTemplate.AVIF"
-              className="image1"
-              alt="not availabale"
-            />
-            <Image
-              src="./sampleTemplate.AVIF"
-              className="image2"
-              alt="not availabale"
-            />
-            <Image
-              src="./sampleTemplate.AVIF"
-              className="image3"
-              alt="not availabale"
-            />
+            <Image src="./about.jpg" className="image1" alt="not availabale" />
+            <Image src="./about1.png" className="image2" alt="not availabale" />
+            <Image src="./about2.png" className="image3" alt="not availabale" />
           </Box>
           <Box
             textAlign={"left"}
