@@ -45,7 +45,7 @@ export default function Digital_Marketing_Temp() {
           >
             <Box
               mx={'20px'}
-              mt="100px"
+              mt="50px"
             >
               <Box
                 display="flex"
