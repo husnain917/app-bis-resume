@@ -1,6 +1,6 @@
 import { toast } from 'react-toastify';
 
-export const ToastSuccess = (data) => toast.success(data.CharAt(0).toUpperCase() + data.slice(1), {
+export const ToastSuccess = (data) => toast.success(data, {
     position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
