@@ -23,7 +23,7 @@ const ResumeExamples = () => {
       <Box bg="lightcyan" height={"auto"} width={"100wv"}>
         <WritingGuides />
       </Box>
-      <Box paddingTop={"80px"} padding={"80px 44px"}>
+      <Box paddingTop={"80px"} padding={"80px 44px 20px 44px"}>
         <Box maxWidth={"1120px"} display={"flex"} margin={"0 auto"}>
           <Box width={"100%"} flexGrow={"1"}>
             {/* <SearchBar /> */}
