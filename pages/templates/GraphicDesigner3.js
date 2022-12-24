@@ -68,8 +68,7 @@ export default function GraphicDesigner3() {
      
       <Box
         w="100%"
-        mt="5%"
-        mb="3%"
+
     
         
         

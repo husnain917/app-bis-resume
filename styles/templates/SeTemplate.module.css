@@ -154,12 +154,6 @@ text-transform: uppercase;
   font-weight: bold;
 }
 
-.description {
-  font-size: "1.3rem" !important;
-  font-weight: 500;
-  min-width: 350px !important;
-  max-width: 350px !important;
-}
 
 .Educationdescription {
   font-size: 15px;
@@ -178,37 +172,16 @@ text-transform: uppercase;
   font-weight: bold;
   margin: 0 !important;
   padding: 0 !important;
-  min-width: 350px !important;
-  max-width: 350px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
 }
 
-.skillText {
-  font-size: 16px;
-
-  color: white !important;
-  min-width: 260px;
-  max-width: 260px;
 
 
-}
 
-.line {
-  width: 200px !important;
-  height: 10px;
-  border-radius: 4px;
-  margin-top: 15px !important;
-}
 
-.percent {
-  margin-top: 5px !important;
-}
 
-.projectTitleText {
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
 
-}
 
 .mt {
   margin-top: 3%;
@@ -216,65 +189,24 @@ text-transform: uppercase;
 
 }
 
-.profileText {
-  color: white;
-  font-size: 25px;
-  font-weight: 400;
-  margin-top: 5px !important;
-  padding: 0 !important;
-  width: 380px;
-  max-width: 280px !important;
-  min-width: 280px !important;
-}
 
-.name {
-  font-size: 30px;
-  font-weight: bold;
-  color: black;
 
-}
 
-.profession {
-  color: black;
-  font-size: 18px;
 
-  padding: 0px !important;
-  margin-bottom: 20px;
-}
 
-.postion {
-  font-size: 18px;
-  font-weight: bold;
-}
+
 
 .description {
   font-size: 22px;
   font-weight: 500;
-  min-width: 380px;
-  max-width: 380px;
-  margin-top: 10px;
+  min-width: 320px;
+  max-width: 320px;
+  margin-top: 5px;
 }
 
-.Educationdescription {
-  font-size: 15px;
-  font-weight: 500;
-  min-width: 380px;
-  max-width: 380px;
-}
 
-.date {
-  font-size: 18px;
-  font-weight: bold;
-}
 
-.company {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0 !important;
-  padding: 0 !important;
-  min-width: 220px;
-  max-width: 220px;
-}
+
 
 .skillText {
   font-size: 16px;
@@ -316,11 +248,7 @@ text-transform: uppercase;
   padding: 0 !important;
 }
 
-.date {
-  font-size: 15px;
-  font-weight: 500;
-  color: black;
-}
+
 
 .referenceName {
   font-size: 20px;

@@ -556,12 +556,15 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 }
 .blog-post__content-main-wrapper p {
   margin-bottom: 16px;
+  font-family: tt commons, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, sans-serif;
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-size: 23px;
+  font-size: 16px;
+  font-weight: 400;
 }
 .blog-post__content .compare-resumes__view {
   position: relative;
@@ -615,12 +618,6 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   padding: 0;
   text-align: left;
   padding: 10px;
-}
-.post-banner-cta__title {
-  font-size: 26px;
-  line-height: 28px;
-  font-weight: 600;
-  margin-bottom: 4px;
 }
 /* ASIDE CSS */
 .blog-post--with-single-aside .blog-post__content .blog-post__content-aside {
@@ -738,7 +735,7 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   border-radius: 0 0 6px 6px;
   background-color: #1e2532;
   color: white;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   -webkit-transition: background-color 0.15s;
   transition: background-color 0.15s;
@@ -880,12 +877,12 @@ button {
     0 16px 36px rgb(186 200 227 / 50%);
 }
 .blog-post__content .compare-resumes__mark {
-  width: 76px;
-  height: 76px;
+  width: 46px;
+  height: 46px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -44px 0 0 -44px;
+  /* margin: -44px 0 0 -44px; */
   color: whitesmoke;
   background-color: #eff2f9;
   border-radius: 50%;
@@ -1170,7 +1167,7 @@ user agent stylesheet div {
   padding: 0 20px;
 }
 .post-banner-cta__title {
-  font-size: 26px;
+  font-size: 23px;
   line-height: 28px;
   font-weight: 600;
   margin-bottom: 4px;
@@ -1213,7 +1210,7 @@ user agent stylesheet div {
 }
 
 .post-banner-cta__caption {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
 }
 @media only screen and (min-width: 768px) {
@@ -1308,8 +1305,9 @@ user agent stylesheet div {
   margin-bottom: 16px;
   margin-top: 48px;
 }
-p {
+ p {
   display: block;
+  font-size: 12px;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;

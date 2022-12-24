@@ -103,59 +103,19 @@
   margin-bottom: 20px;
 }
 
-.postion {
-  font-size: 18px;
-  font-weight: bold;
-}
 
-.description {
-  font-size: "0.9rem" !important;
-  font-weight: 500;
-  min-width: 450px !important;
-  max-width: 450px !important;
-}
 
 .Educationdescription {
   font-size: 15px;
   font-weight: 500;
-  min-width: 350px !important;
-  max-width: 350px !important;
+  min-width: 250px !important;
+  max-width: 250px !important;
 }
 
-.date {
-  font-size: 22px !important;
-  font-weight: bold;
-}
-
-.company {
-  font-size: 22px !important;
-  font-weight: bold;
-  margin: 0 !important;
-  padding: 0 !important;
-  min-width: 350px !important;
-  max-width: 350px !important;
-}
-
-.skillText {
-  font-size: 16px;
-
-  color: red !important;
-  min-width: 260px;
-  max-width: 260px;
 
 
-}
 
-.line {
-  width: 200px !important;
-  height: 10px;
-  border-radius: 4px;
-  margin-top: 15px !important;
-}
 
-.percent {
-  margin-top: 5px !important;
-}
 
 .projectTitleText {
   font-size: 16px;
@@ -172,7 +132,7 @@
 
 .profileText {
   color: white !important;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 400;
   margin-top: 5px !important;
   padding: 0 !important;
@@ -181,20 +141,7 @@
   min-width: 180px !important;
 }
 
-.name {
-  font-size: 30px;
-  font-weight: bold;
-  color: black;
 
-}
-
-.profession {
-  color: black;
-  font-size: 18px;
-
-  padding: 0px !important;
-  margin-bottom: 20px;
-}
 
 .postion {
   font-size: 18px;
@@ -212,8 +159,8 @@
 .Educationdescription {
   font-size: 15px;
   font-weight: 500;
-  min-width: 380px;
-  max-width: 380px;
+  min-width: 200px;
+  max-width: 200px;
 }
 
 .date {
@@ -267,25 +214,7 @@
 
 }
 
-.mt {
-  margin-top: 4%;
-  margin-bottom: 2%;
 
-}
-
-.profileText {
-  color: black;
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 5px !important;
-  padding: 0 !important;
-}
-
-.date {
-  font-size: 15px;
-  font-weight: 500;
-  color: black;
-}
 
 .referenceName {
   font-size: 20px;

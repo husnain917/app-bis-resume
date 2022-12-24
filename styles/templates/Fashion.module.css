@@ -174,15 +174,6 @@
   font-weight: bold;
 }
 
-.description {
-  font-size: "0.9rem" !important;
-  font-weight: 500;
-  min-width: 400px !important;
-  max-width: 400px !important;
-  color: #1b4245;
-
-}
-
 .Educationdescription {
   font-size: 18px;
   font-weight: 500;
@@ -190,27 +181,6 @@
   max-width: 220px !important;
   color: white !important;
 
-}
-
-.date {
-  font-size: 22px !important;
-  font-weight: bold;
-}
-
-.company {
-  font-size: 20px !important;
-  font-weight: bold;
-
-  min-width: 220px !important;
-  max-width: 220px !important;
-}
-
-.skillText {
-  font-size: 16px;
-
-  color:white !important;
-  min-width: 260px;
-  max-width: 260px;
 }
 
 .skillText1 {
@@ -239,15 +209,9 @@
 
 }
 
-.mt {
-  margin-top: 3%;
-  margin-bottom: 2%;
-
-}
-
 .profileText {
   color: white !important;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 400;
   margin-top: 5px !important;
   padding: 0 !important;
@@ -255,22 +219,6 @@
   max-width: 220px !important;
   min-width: 220px !important;
 }
-
-.name {
-  font-size: 30px;
-  font-weight: bold;
-  color: black;
-
-}
-
-.profession {
-  color: black;
-  font-size: 18px;
-
-  padding: 0px !important;
-  margin-bottom: 20px;
-}
-
 .postion {
   font-size: 18px;
   font-weight: bold;
@@ -284,12 +232,6 @@
   margin-top: 10px;
 }
 
-.Educationdescription {
-  font-size: 15px;
-  font-weight: 500;
-  min-width: 300px;
-  max-width: 300px;
-}
 
 .date {
   font-size: 18px;
@@ -316,45 +258,11 @@
   min-width: 180px;
   max-width: 180px;
 }
-
-.line {
-  width: 200px !important;
-  height: 10px;
-  border-radius: 4px;
-  margin-top: 15px !important;
-}
-
-.percent {
-  margin-top: 5px !important;
-}
-
-.projectTitleText {
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-
-}
-
 .mt {
   margin-top: 4%;
   margin-bottom: 2%;
 
 }
-
-.profileText {
-  color: black;
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 5px !important;
-  padding: 0 !important;
-}
-
-.date {
-  font-size: 15px;
-  font-weight: 500;
-  color: black;
-}
-
 .referenceName {
   font-size: 20px;
   font-weight: 700;

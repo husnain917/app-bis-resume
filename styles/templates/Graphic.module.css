@@ -125,51 +125,28 @@
   font-weight: bold;
 }
 
-.description {
-  font-size: "0.9rem" !important;
-  font-weight: 500;
-  min-width: 350px !important;
-  max-width: 350px !important;
-}
+
 
 .Educationdescription {
   font-size: 18px;
   font-weight: 500;
-  min-width: 220px !important;
-  max-width: 220px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
   color: white !important;
 
 }
 
-.date {
-  font-size: 22px !important;
-  font-weight: bold;
-}
+
 
 .company {
   font-size: 20px !important;
   font-weight: bold;
   margin: 0 !important;
   padding: 0 !important;
-  min-width: 220px !important;
-  max-width: 220px !important;
-}
-
-.skillText {
-  font-size: 16px;
-
+  min-width: 200px !important;
+  max-width: 200px !important;
   color: white !important;
-  min-width: 260px;
-  max-width: 260px;
 
-
-}
-
-.line {
-  width: 200px !important;
-  height: 10px;
-  border-radius: 4px;
-  margin-top: 15px !important;
 }
 
 .percent {
@@ -199,27 +176,6 @@
   max-width: 220px !important;
   min-width: 220px !important;
 }
-
-.name {
-  font-size: 30px;
-  font-weight: bold;
-  color: black;
-
-}
-
-.profession {
-  color: black;
-  font-size: 18px;
-
-  padding: 0px !important;
-  margin-bottom: 20px;
-}
-
-.postion {
-  font-size: 18px;
-  font-weight: bold;
-}
-
 .description {
   font-size: 22px;
   font-weight: 500;
@@ -228,28 +184,10 @@
   margin-top: 10px;
 }
 
-.Educationdescription {
-  font-size: 15px;
-  font-weight: 500;
-  min-width: 300px;
-  max-width: 300px;
-}
 
 .date {
   font-size: 18px;
   font-weight: bold;
-  color: white !important;
-
-
-}
-
-.company {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0 !important;
-  padding: 0 !important;
-  min-width: 220px;
-  max-width: 220px;
   color: white !important;
 }
 
@@ -259,44 +197,6 @@
   color: white !important;
   min-width: 180px;
   max-width: 180px;
-}
-
-.line {
-  width: 200px !important;
-  height: 10px;
-  border-radius: 4px;
-  margin-top: 15px !important;
-}
-
-.percent {
-  margin-top: 5px !important;
-}
-
-.projectTitleText {
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-
-}
-
-.mt {
-  margin-top: 4%;
-  margin-bottom: 2%;
-
-}
-
-.profileText {
-  color: black;
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 5px !important;
-  padding: 0 !important;
-}
-
-.date {
-  font-size: 15px;
-  font-weight: 500;
-  color: black;
 }
 
 .referenceName {
@@ -366,4 +266,3 @@
 .lineColor {
   color: white !important;
 }
-

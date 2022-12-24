@@ -195,7 +195,7 @@ export default function FashionDesigner() {
                           )}
                         </div>
                         <div>
-<Box ml="-4%">
+<Box >
                           <Heading
                             title={'Interest'}
 
