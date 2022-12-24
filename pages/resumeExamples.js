@@ -26,7 +26,7 @@ const ResumeExamples = () => {
       <Box paddingTop={"80px"} padding={"80px 44px"}>
         <Box maxWidth={"1120px"} display={"flex"} margin={"0 auto"}>
           <Box width={"100%"} flexGrow={"1"}>
-            <SearchBar />
+            {/* <SearchBar /> */}
 
             {popularData.map((data, index) => {
               return <MostPopular data={data} key={index} />;
