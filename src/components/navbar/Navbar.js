@@ -168,6 +168,7 @@ export default function Navbar() {
                     textDecoration: "none",
                     backgroundColor: "red",
                     color: "white",
+                    transition: "0.5s",
                   }}
                 >
                   {items?.label === "Register" ? (
