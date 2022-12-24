@@ -20,7 +20,7 @@ export default function HintSection() {
 
       <Box>
         <Text
-          fontSize={["1.5rem", "2.5rem", "3rem", "3rem", "3rem", "4.5rem"]}
+          fontSize={["1.5rem", "2.5rem", "3rem", "2.9rem", "3rem", "4rem"]}
           color="#313B47"
           fontWeight="bold"
           textAlign="center"

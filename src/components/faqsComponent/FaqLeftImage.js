@@ -54,24 +54,35 @@ const FaqLeftImage = ({
             letterSpacing: "0.3px",
           }}
         >
-          <Text fontSize={["1.9em"]} fontWeight="600">
+          <Text fontSize={["1.9em"]} fontWeight="700">
             {heading}
           </Text>
           <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
             {" "}
             {text1}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
+          <Text
+            fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]}
+            my={4}
+            lineHeight={"2"}
+          >
             {text01}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
+          <Text
+            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            my={4}
+            lineHeight={"2"}
+          >
             {text2}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
+          <Text
+            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            my={4}
+          >
             {text3}
           </Text>
           {item1 ? (
-            <UnorderedList ml={4} fontSize={"0.85em"} fontWeight={500}>
+            <UnorderedList ml={4} fontSize={"0.9em"} fontWeight={500}>
               <ListItem mb={"5px"}>
                 <span
                   style={{
@@ -83,6 +94,7 @@ const FaqLeftImage = ({
                 <span
                   style={{
                     marginLeft: 3,
+                    fontWeight: "normal",
                   }}
                 >
                   {item1}
@@ -99,6 +111,7 @@ const FaqLeftImage = ({
                 <span
                   style={{
                     marginLeft: 3,
+                    fontWeight: "normal",
                   }}
                 >
                   {item2}
@@ -116,6 +129,7 @@ const FaqLeftImage = ({
                   style={{
                     marginLeft: 3,
                     maxWidth: "14ch",
+                    fontWeight: "normal",
                   }}
                 >
                   {item3}
@@ -132,6 +146,7 @@ const FaqLeftImage = ({
                 <span
                   style={{
                     marginLeft: 3,
+                    fontWeight: "normal",
                   }}
                 >
                   {item4}
@@ -148,6 +163,7 @@ const FaqLeftImage = ({
                 <span
                   style={{
                     marginLeft: 3,
+                    fontWeight: "normal",
                   }}
                 >
                   {item5}
@@ -165,6 +181,7 @@ const FaqLeftImage = ({
                   <span
                     style={{
                       marginLeft: 3,
+                      fontWeight: "normal",
                     }}
                   >
                     {item6}
@@ -179,12 +196,12 @@ const FaqLeftImage = ({
           )}
         </GridItem>
         <GridItem
-          pl="2"
+          // pl="2"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1000"
-          // marginInlineStart="20px"
-          // marginInlineEnd="20px"
+          marginInlineStart="10px"
+          marginInlineEnd="20px"
           area={"image"}
         >
           <Image objectFit="cover" src={image} alt="Dan Abramov" />

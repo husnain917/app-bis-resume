@@ -24,7 +24,13 @@ export default function Hint({
           display={"flex"}
           flexDir={
             width > 610
-              ? ["column", "row", "row", "row", isRight ? "row" : "row-reverse"]
+              ? [
+                  "column",
+                  "row",
+                  "row",
+                  isRight ? "row" : "row-reverse",
+                  isRight ? "row" : "row-reverse",
+                ]
               : "column"
           }
           justifyContent={[
@@ -121,7 +127,7 @@ export default function Hint({
             margin={[
               "0 0 0 0",
               "0 0 0 0",
-              "0 0 0 0",
+              isRight ? "0 0 0 1.6rem" : "0 1.6rem 0 0",
               isRight ? "0 0 0 1.6rem" : "0 1.6rem 0 0",
               isRight ? "0 0 0 1.6rem" : "0 1.6rem 0 0",
             ]}

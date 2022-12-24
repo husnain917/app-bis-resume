@@ -11,11 +11,12 @@ export default function CallToAction() {
         <Text className={"main-heading"} color={"white"}>
           Get hired faster with our resume builder!
         </Text>
-        <Box className="cursor">
+        <Box mt={"30px"}>
           <Link href="/templates">
             <CommonButton
-              className={styles.ctaHeroButton}
               title="Build Your Resume"
+              hoverCursor={"pointer"}
+              hoverBackgroundColor={"red"}
             />
           </Link>
         </Box>
