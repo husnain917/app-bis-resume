@@ -86,7 +86,7 @@ const FaqLeftImage = ({
               <ListItem mb={"5px"}>
                 <span
                   style={{
-                    fontWeight: "bold",
+                    fontWeight: "600",
                   }}
                 >
                   {item1h}{" "}
@@ -103,7 +103,7 @@ const FaqLeftImage = ({
               <ListItem mb={"5px"}>
                 <span
                   style={{
-                    fontWeight: "bold",
+                    fontWeight: "600",
                   }}
                 >
                   {item2h}{" "}
@@ -120,7 +120,7 @@ const FaqLeftImage = ({
               <ListItem mb={"5px"}>
                 <span
                   style={{
-                    fontWeight: "bold",
+                    fontWeight: "600",
                   }}
                 >
                   {item3h}{" "}
@@ -138,7 +138,7 @@ const FaqLeftImage = ({
               <ListItem mb={"5px"}>
                 <span
                   style={{
-                    fontWeight: "bold",
+                    fontWeight: "600",
                   }}
                 >
                   {item4h}
@@ -155,7 +155,7 @@ const FaqLeftImage = ({
               <ListItem mb={"5px"}>
                 <span
                   style={{
-                    fontWeight: "bold",
+                    fontWeight: "600",
                   }}
                 >
                   {item5h}
@@ -173,7 +173,7 @@ const FaqLeftImage = ({
                 <ListItem mb={"3px"}>
                   <span
                     style={{
-                      fontWeight: "bold",
+                      fontWeight: "600",
                     }}
                   >
                     {item6h}

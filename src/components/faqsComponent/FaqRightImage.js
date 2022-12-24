@@ -5,7 +5,7 @@ const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
   return (
     <Box w={["100%", "100%", "100%", "960px", "1220px", "1500px"]}>
       <Grid
-        marginTop="1.2rem"
+        marginTop="0.5rem"
         templateAreas={[`"image textArea ."`]}
         gridTemplateRows={"1,1fr"}
         gridTemplateColumns={[
