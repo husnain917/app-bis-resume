@@ -619,12 +619,6 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   text-align: left;
   padding: 10px;
 }
-.post-banner-cta__title {
-  font-size: 26px;
-  line-height: 28px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
 /* ASIDE CSS */
 .blog-post--with-single-aside .blog-post__content .blog-post__content-aside {
   width: 25%;
@@ -741,7 +735,7 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
   border-radius: 0 0 6px 6px;
   background-color: #1e2532;
   color: white;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   -webkit-transition: background-color 0.15s;
   transition: background-color 0.15s;
@@ -1173,7 +1167,7 @@ user agent stylesheet div {
   padding: 0 20px;
 }
 .post-banner-cta__title {
-  font-size: 26px;
+  font-size: 23px;
   line-height: 28px;
   font-weight: 600;
   margin-bottom: 4px;
@@ -1216,7 +1210,7 @@ user agent stylesheet div {
 }
 
 .post-banner-cta__caption {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 20px;
 }
 @media only screen and (min-width: 768px) {

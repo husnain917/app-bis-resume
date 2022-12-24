@@ -70,7 +70,7 @@ const CommonComponent = ({ data }) => {
         <Box display={["none", "none", "flex", "flex", "flex"]}>
           {" "}
           <Box h={12} w={"40em"}>
-            <Text>
+            <Text fontSize={["0.6rem", "0.8rem"]}>
               {data.description ||
                 "Our tailor-made samples and guides has all of the tools you needto easily craft a government CV in just minutes. Our samples have been field-tested and are expertly designed to set you up for success."}
             </Text>
