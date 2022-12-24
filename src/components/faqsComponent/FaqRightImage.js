@@ -3,7 +3,10 @@ import { Grid, GridItem, Box, Image, Text } from "@chakra-ui/react";
 
 const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
   return (
-    <Box w={["100%", "100%", "100%", "960px", "1220px", "1500px"]}>
+    <Box
+      w={["100%", "100%", "100%", "960px", "1220px", "1500px"]}
+      marginTop={"1.2rem"}
+    >
       <Grid
         marginTop="0.5rem"
         templateAreas={[`"image textArea ."`]}
@@ -52,8 +55,8 @@ const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1000"
-          // marginInlineStart="40px"
-          // marginInlineEnd="40px"
+          // marginInlineStart={["20px", "20px", "20px", "10px", "10px"]}
+          // marginInlineEnd="20px"
           area={"image"}
         >
           <Image objectFit="cover" src={image} alt="Loading" />

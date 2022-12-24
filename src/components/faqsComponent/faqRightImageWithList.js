@@ -39,8 +39,8 @@ const FaqRightImageWithList = ({
         ]}
         display={["flex", "flex", "grid", "grid", "grid", "grid", "grid"]}
         flexDirection={["column-reverse"]}
-        marginInlineStart="40px"
-        marginInlineEnd="40px"
+        marginInlineStart={["60px", "60px", "60px", "35px", "40px"]}
+        marginInlineEnd={["60px", "60px", "60px", "35px", "40px"]}
       >
         <GridItem pl="2" area={"textArea"} position="relative">
           <Text fontSize={["2em"]} fontWeight="700">

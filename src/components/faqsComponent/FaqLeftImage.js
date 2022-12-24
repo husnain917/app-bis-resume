@@ -30,7 +30,7 @@ const FaqLeftImage = ({
   image,
 }) => {
   return (
-    <Box w={["100%", "100%", "100%", "960px", "1220px", "1500px"]}>
+    <Box w={["100%", "100%", "100%", "1000px", "1220px", "1500px"]}>
       <Grid
         templateAreas={[`". textArea image"`]}
         gridTemplateRows={"1,1fr"}
@@ -41,8 +41,8 @@ const FaqLeftImage = ({
           "1fr 2fr 1fr",
           "1fr 2fr 1fr",
         ]}
-        marginInlineStart="40px"
-        marginInlineEnd="40px"
+        marginInlineStart={["60px", "60px", "60px", "60px", "40px"]}
+        marginInlineEnd={["60px", "60px", "60px", "60px", "40px"]}
         display={["flex", "flex", "grid", "grid", "grid", "grid", "grid"]}
         flexDirection={["column-reverse"]}
       >
@@ -196,11 +196,11 @@ const FaqLeftImage = ({
           )}
         </GridItem>
         <GridItem
-          // pl="2"
+          pl="2"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1000"
-          marginInlineStart="10px"
+          marginInlineStart={["20px", "20px", "20px", "10px", "10px"]}
           marginInlineEnd="20px"
           area={"image"}
         >
