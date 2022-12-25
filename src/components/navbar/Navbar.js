@@ -40,6 +40,8 @@ export default function Navbar() {
   });
   const breakpointfontSize = useBreakpointValue({ xl: "14px", lg: "12px" });
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [active, setIsActive] = useState(null);
+
   return (
     <Box>
       <Flex
@@ -182,7 +184,10 @@ export default function Navbar() {
                           textDecoration: "none",
                           color: "#fff",
                         }}
-                        onClick={() => setIsModalOpen(true)}
+                        onClick={() => {
+                          setIsModalOpen(true)
+                          setIsActive(0)
+                        }}
                       >
                         {items.label}
                       </Link>
@@ -198,7 +203,12 @@ export default function Navbar() {
                           textDecoration: "none",
                           color: "#fff",
                         }}
-                        onClick={() => setIsModalOpen(true)}
+                        onClick={() => {
+                          setIsActive(1)
+                          setIsModalOpen(true)
+                         
+                        }
+                        }
                       >
                         {items.label}
                       </Link>
@@ -207,6 +217,8 @@ export default function Navbar() {
                     <></>
                   )}
                   <AuthModal
+                    active={active}
+                    setIsActive={setIsActive}
                     isModalOpen={isModalOpen}
                     setIsModalOpen={setIsModalOpen}
                   />

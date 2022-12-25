@@ -144,7 +144,7 @@ const SelectResume = () => {
               </Box>
             </Box>
             <Box
-              marginTop={["10px", "10px", "10px", "-30px", "-40px", "-40px"]}
+              marginTop={["10px", "10px", "10px", "-10px", "-10px", "-10px"]}
               transition={"opacity 0.1s ease-in 0s"}
               opacity={["1"]}
               pointerEvents={["auto"]}
