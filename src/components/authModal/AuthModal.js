@@ -12,13 +12,16 @@ import {
   Checkbox,
   Stack,
   ModalBody,
+  InputGroup,
+  InputLeftElement,
+  InputRightElement,
 } from "@chakra-ui/react";
 import { FaGoogle } from "react-icons/fa";
 import styles from "../../../styles/Auth.module.css";
 import AuthButton from "./AuthButton";
 import CustomBtn from "./CustomBtn";
 import { data } from "./data";
-import { CloseIcon } from "@chakra-ui/icons";
+import { CloseIcon, ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useDispatch } from "react-redux";
 import { doGoogleLogin, doLogin, doSignUp, passwordReset } from "../../../store/actions/AuthAction";
 import { ToastContainer } from 'react-toastify';
@@ -31,11 +34,11 @@ const inCorrect = {
   textAlign: "left",
 };
 
-export default function AuthModal({ isModalOpen, setIsModalOpen, handle }) {
+export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active, setIsActive }) {
   const [fieldActive, setFieldActive] = useState(false)
   const [isRegister, setIsRegister] = useState(true);
-  const [active, setIsActive] = useState(0);
   const [fName, setFName] = useState('');
+
   const [lName, setLName] = useState('');
   const [email, setEmail] = useState('');
   const [terms, setTerms] = useState(false);
@@ -45,6 +48,8 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle }) {
   const [loadingsignup, setLoadingsignup] = useState(false)
   const [resetLoading, setResetLoading] = useState(false)
   const [err, setErr] = useState({ inputId: 0, inputField: '', fieldErr: '' })
+  const [show, setShow] = React.useState(true)
+  const handleClick = () => setShow(!show)
   const dispatch = useDispatch()
 
 
@@ -197,7 +202,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle }) {
                           <div key={index}>
                             <AuthButton
                               btn={btn}
-                              onChangeHandler={onChangeHandler}
+                              onChangeHandler={() => onChangeHandler(btn.id)}
                               bgColor={active === btn.id ? "#00C8AA" : "#E1E1E1"}
                               color={active === btn.id ? "white" : "black"}
                             />
@@ -235,7 +240,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle }) {
                     {err.fieldErr}
                   </p>
                 }
-                {isRegister ? (
+                {active === 0 ? (
                   <>
                     <Stack direction="row">
                       <div>
@@ -309,25 +314,39 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle }) {
                         {err.inputField}
                       </span>
                     }
-                    <Input
-                      variant="outline"
-                      focusBorderColor="#00C8AA"
-                      borderColor={err.inputId === 9 || err.inputId === 10 ? 'red' : '#E1E1E1'}
-                      placeholder="Password"
-                      bgColor="#E1E1E1"
-                      type={'password'}
-                      w="100%"
-                      mt="10px"
-                      h="50px"
-                      pt="10px"
-                      pb="10px"
-                      _hover={{
-                        color: "black",
-                        fontSize: "18px",
-                      }}
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
+                    <InputGroup>
+
+                      <Input
+                        variant="outline"
+                        focusBorderColor="#00C8AA"
+                        borderColor={err.inputId === 9 || err.inputId === 10 ? 'red' : '#E1E1E1'}
+                        placeholder="Password"
+                        bgColor="#E1E1E1"
+                        type={!show ? 'text' : 'password'}
+                        w="100%"
+                        mt="10px"
+                        h="50px"
+                        pt="10px"
+                        pb="10px"
+                        _hover={{
+                          color: "black",
+                          fontSize: "18px",
+                        }}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                      />
+                      <InputRightElement
+                        style={{ marginTop: 15, cursor: "pointer" }}
+                        children={
+                          show ?
+                            <ViewIcon color='gray' onClick={handleClick} />
+                            :
+                            <ViewOffIcon color='gray' onClick={handleClick} />
+
+                        }
+                      />
+                    </InputGroup>
+
                     {
                       (err.inputField !== '' && err.inputId === 9 || err.inputField !== '' && err.inputId === 10) &&
                       <span style={inCorrect}>
@@ -408,25 +427,37 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle }) {
                       {
                         fieldActive &&
                         <>
-                          <Input
-                            variant="outline"
-                            focusBorderColor="#00C8AA"
-                            borderColor={err.inputId === 3 || err.inputId === 4 ? 'red' : '#E1E1E1'}
-                            placeholder="Password"
-                            bgColor="#E1E1E1"
-                            type={'password'}
-                            w="100%"
-                            mt="10px"
-                            h="50px"
-                            pt="10px"
-                            pb="10px"
-                            _hover={{
-                              color: "black",
-                              fontSize: "18px",
-                            }}
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                          />
+                          <InputGroup>
+                            <Input
+                              variant="outline"
+                              focusBorderColor="#00C8AA"
+                              borderColor={err.inputId === 3 || err.inputId === 4 ? 'red' : '#E1E1E1'}
+                              placeholder="Password"
+                              bgColor="#E1E1E1"
+                              type={!show ? 'text' : 'password'}
+                              w="100%"
+                              mt="10px"
+                              h="50px"
+                              pt="10px"
+                              pb="10px"
+                              _hover={{
+                                color: "black",
+                                fontSize: "18px",
+                              }}
+                              value={password}
+                              onChange={(e) => setPassword(e.target.value)}
+                            />
+                            <InputRightElement
+                              style={{ marginTop: 15, cursor: "pointer" }}
+                              children={
+                                show ?
+                                  <ViewIcon color='gray' onClick={handleClick} />
+                                  :
+                                  <ViewOffIcon color='gray' onClick={handleClick} />
+
+                              }
+                            />
+                          </InputGroup>
                           {
                             (err.inputField !== '' && err.inputId === 3 || err.inputField !== '' && err.inputId === 4) &&
                             <span style={inCorrect}>
@@ -449,13 +480,22 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle }) {
                           </Text>
                         </>
                       }
-
+                      <Checkbox
+                        size="lg"
+                        mt="5%"
+                        colorScheme="MediumSpringGreen"
+                        iconColor="MediumSpringGreen"
+                        value={terms}
+                        onChange={(e) => setTerms(e.target.checked)}
+                      >
+                        Remember me
+                      </Checkbox>
                     </>
                   )}
               </Box>
               {/* Next Buttons */}
               <Box mt="5%">
-                {isRegister ? (
+                {active === 0 ? (
                   <>
                     <CustomBtn
                       title={loadingsignup ? "Loading..." : "Register Now"}
