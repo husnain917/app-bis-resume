@@ -132,13 +132,13 @@ export const data = [
       "Create the best Legal Resumes today using one of our free samples and templates and easy-to-use Builder. Stop wasting time trying to figure out the perfect format and structure, and let our builder do the work for you.",
     exampleData: [
       {
-        label: "Marketing Manager Template",
+        label: "Marketing Manager",
         src: "MarkManager2.png",
         alt: "random from unsplash",
         link: "/templates/marketingManager",
       },
       {
-        label: "Hybrid_Template_Design",
+        label: "Hybrid Template",
         src: "Hybrid_Template_Design.png",
         alt: "random from unsplash",
         link: "/templates/hybridTemplate",
@@ -150,19 +150,19 @@ export const data = [
         link: "/templates/SocialSpecialist",
       },
       {
-        label: "Digital Marketing Designer",
+        label: "Digital Marketing",
         src: "digitalMarketingTemp.PNG",
         alt: "random from unsplash",
         link: "/templates/digitalMarketingTemps/digitalMarketingTemp",
       },
       {
-        label: "SalesRepresentative",
+        label: "Sales Representative",
         src: "salesReprentative.png",
         alt: "random from unsplash",
         link: "/templates/SalesRepresentative",
       },
       {
-        label: "Executive Resume Template",
+        label: "Executive Resume",
         src: "ExecTemp.png",
         alt: "random from unsplash",
         link: "/templates/ExecutiveTemp",
@@ -174,13 +174,13 @@ export const data = [
         link: "/templates/marketingManager1",
       },
       {
-        label: "Digital Marketing 2",
+        label: "Digital Marketing",
         src: "DigitalMarketingTemp2.png",
         alt: "random from unsplash",
         link: "/templates/DigitalMarkTemp2",
       },
       {
-        label: "Chief_Exclusive_Office",
+        label: "Chief Exective",
         src: "Chief_Exclusive_Office.jpg",
         alt: "random from unsplash",
         link: "/templates/templateCEO",
@@ -200,7 +200,7 @@ export const data = [
         link: "/templates/softEngineer/SoftEngineer",
       },
       {
-        label: "TechTemp.png",
+        label: "Tech Temp",
         src: "TechTemp.png",
         alt: "random from unsplash",
         link: "/templates/TechTemplate",
@@ -232,13 +232,13 @@ export const data = [
         link: "/templates/TemplateBabySitter",
       },
       {
-        label: "Flight Attendant Template",
+        label: "Flight Attendant ",
         src: "FlightAttendantTemplate.png",
         alt: "random from unsplash",
         link: "/templates/FlightAttendant1",
       },
       {
-        label: "Resume Digital Market",
+        label: "Digital Marketer",
         src: "resumeMarket.png",
         alt: "random from unsplash",
         link: "/templates/templateMarket",

@@ -16,6 +16,7 @@ const FaqsSection = () => {
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
+      margin={"0 auto"}
     >
       <Box>
         <Text

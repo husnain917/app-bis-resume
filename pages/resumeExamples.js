@@ -16,7 +16,7 @@ import Carasol from "../src/components/resumeExampleData/carasol/Carasol";
 import Carasol1 from "../src/components/resumeExampleData/carasol/Carasol1";
 const ResumeExamples = () => {
   return (
-    <Box>
+    <Box fontFamily={"EuclidCircularB-Light"}>
       {/* <Carasol1 /> */}
       {/* <Carasol /> */}
       {/* <ChatButton /> */}

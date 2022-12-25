@@ -12,7 +12,7 @@ export default function HintSection() {
     <Box
       margin={"6.4rem auto"}
       // position={"relative"}
-      width={width > 610 ? ["1000px", "94%", "94%", "1000px", "1220px"] : "98%"}
+      width={width > 610 ? ["1000px", "94%", "94%", "90%", "88%"] : "98%"}
     >
       {/* <Box position="absolute">
         <SideBar />
@@ -20,7 +20,7 @@ export default function HintSection() {
 
       <Box>
         <Text
-          fontSize={["1.5rem", "2.5rem", "3rem", "2.9rem", "3rem", "4rem"]}
+          fontSize={["1.5rem", "2.5rem", "3rem", "2.9rem", "3rem", "3.5rem"]}
           color="#313B47"
           fontWeight="bold"
           textAlign="center"
@@ -47,7 +47,7 @@ export default function HintSection() {
         </Box>
         <Text
           color="#313B47"
-          fontSize={["1.2rem", "1.5rem", "1.8", "1.7rem", "1.5rem", "2.5rem"]}
+          fontSize={["1.2rem", "1.5rem", "1.8", "1.7rem", "1.5rem", "1.6rem"]}
           fontWeight={["400", "400"]}
           align="center"
           pl={["7%", "14%"]}

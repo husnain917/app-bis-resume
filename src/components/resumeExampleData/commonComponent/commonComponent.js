@@ -96,7 +96,7 @@ const CommonComponent = ({ data }) => {
                   <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
                     {template.label}
                   </Text>
-                  <Box mt={6}>
+                  <Box mt={6} border={"1px solid black"}>
                     <Link href={template.link || "/templates/templ"}>
                       <Image
                         src={template.src}
@@ -127,7 +127,7 @@ const CommonComponent = ({ data }) => {
                   <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
                     {template.label}
                   </Text>
-                  <Box mt={6}>
+                  <Box mt={6} border={"1px solid black"}>
                     <Link href={template.link || "/templates/templ"}>
                       <Image
                         src={template.src}
@@ -159,7 +159,10 @@ const CommonComponent = ({ data }) => {
                     {template.label}
                   </Text>
                   <Box mt={6}>
-                    <Link href={template.link || "/templates/templ"}>
+                    <Link
+                      border={"1px solid black"}
+                      href={template.link || "/templates/templ"}
+                    >
                       <Image
                         src={template.src}
                         alt={template.alt}
@@ -185,10 +188,10 @@ const CommonComponent = ({ data }) => {
                   }}
                   onClick={() => {}}
                 >
-                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"600"}>
                     {template.label}
                   </Text>
-                  <Box mt={6}>
+                  <Box mt={6} border={"1px solid black"}>
                     <Link href={template.link || "/templates/templ"}>
                       <Image
                         src={template.src}
