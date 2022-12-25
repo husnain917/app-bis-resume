@@ -182,10 +182,10 @@ const BlogPost = () => {
                   }}
                 ></Box>
                 <Box className="post-banner-cta__text">
-                  <Box className="post-banner-cta__title">
+                  <Box className="medium-heading">
                     Build your resume in 15 minutes
                   </Box>
-                  <Box className="post-banner-cta__caption">
+                  <Box className="small-text">
                     Use professional field-tested resume templates that follow
                     the exact ‘resume rules’ employers look for.
                   </Box>
