@@ -337,14 +337,15 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                       />
                       <InputRightElement
                         style={{ marginTop: 15, cursor: "pointer" }}
-                        children={
+                      >
+                        {
                           show ?
                             <ViewIcon color='gray' onClick={handleClick} />
                             :
                             <ViewOffIcon color='gray' onClick={handleClick} />
 
                         }
-                      />
+                      </InputRightElement>
                     </InputGroup>
 
                     {
@@ -449,139 +450,140 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                             />
                             <InputRightElement
                               style={{ marginTop: 15, cursor: "pointer" }}
-                              children={
+                            >
+                              {
                                 show ?
                                   <ViewIcon color='gray' onClick={handleClick} />
                                   :
                                   <ViewOffIcon color='gray' onClick={handleClick} />
 
                               }
-                            />
+                            </InputRightElement>
                           </InputGroup>
-                          {
-                            (err.inputField !== '' && err.inputId === 3 || err.inputField !== '' && err.inputId === 4) &&
-                            <span style={inCorrect}>
-                              {err.inputField}
-                            </span>
-                          }
-                          <Text
-                            onClick={() => setResetPass(true)}
-                            color="#2a69cb"
-                            fontSize={16}
-                            fontWeight={500}
-                            cursor='pointer'
-                            mt={2}
-                            _hover={{
-                              textDecoration: "underline"
-                            }}
-                          >
-                            Request password change
+                            {
+                              (err.inputField !== '' && err.inputId === 3 || err.inputField !== '' && err.inputId === 4) &&
+                              <span style={inCorrect}>
+                                {err.inputField}
+                              </span>
+                            }
+                            <Text
+                              onClick={() => setResetPass(true)}
+                              color="#2a69cb"
+                              fontSize={16}
+                              fontWeight={500}
+                              cursor='pointer'
+                              mt={2}
+                              _hover={{
+                                textDecoration: "underline"
+                              }}
+                            >
+                              Request password change
 
-                          </Text>
-                        </>
+                            </Text>
+                          </>
                       }
-                      <Checkbox
-                        size="lg"
-                        mt="5%"
-                        colorScheme="MediumSpringGreen"
-                        iconColor="MediumSpringGreen"
-                        value={terms}
-                        onChange={(e) => setTerms(e.target.checked)}
-                      >
-                        Remember me
-                      </Checkbox>
-                    </>
+                          <Checkbox
+                            size="lg"
+                            mt="5%"
+                            colorScheme="MediumSpringGreen"
+                            iconColor="MediumSpringGreen"
+                            value={terms}
+                            onChange={(e) => setTerms(e.target.checked)}
+                          >
+                            Remember me
+                          </Checkbox>
+                        </>
                   )}
-              </Box>
+                    </Box>
               {/* Next Buttons */}
-              <Box mt="5%">
-                {active === 0 ? (
-                  <>
-                    <CustomBtn
-                      title={loadingsignup ? "Loading..." : "Register Now"}
-                      bgColor="#00C8AA"
-                      color="white"
-                      hoverColor="#00e2c0"
-                      blue={true}
-                      onClickHandler={signUp}
-                    />
-                  </>
-                ) : resetPass ? (
-                  <CustomBtn
-                    title={resetLoading ? "Loading..." : "Request Password Change"}
-                    bgColor="#00C8AA"
-                    color="white"
-                    blue={true}
-                    mt="5%"
-                    onClickHandler={resetPassword}
-                  />
-                ) : (
-                  <>
-                    <Text align="center" fontSize="14px" mt="9%" p="5px">
-                      We will send you a one-time sign in link.
-                    </Text>
-                    {
-                      fieldActive &&
+                <Box mt="5%">
+                  {active === 0 ? (
+                    <>
                       <CustomBtn
-                        title={loading ? 'loading...' : "SignIn"}
+                        title={loadingsignup ? "Loading..." : "Register Now"}
                         bgColor="#00C8AA"
                         color="white"
+                        hoverColor="#00e2c0"
                         blue={true}
-                        mt="5%"
-                        onClickHandler={login}
+                        onClickHandler={signUp}
                       />
-                    }
+                    </>
+                  ) : resetPass ? (
                     <CustomBtn
-                      title="SignIn With Magic Link"
-                      bgColor={fieldActive ? "#E1E1E1" : "#00C8AA"}
+                      title={resetLoading ? "Loading..." : "Request Password Change"}
+                      bgColor="#00C8AA"
                       color="white"
                       blue={true}
                       mt="5%"
+                      onClickHandler={resetPassword}
                     />
-                    {
-                      !fieldActive &&
-                      <CustomBtn
-                        title="Switch to password"
-                        bgColor="#E1E1E1"
-                        color="grey"
-                        mt="5%"
-                        onClickHandler={() => setFieldActive(true)}
-                      />
-                    }
-                  </>
-                )}
-                {resetPass ? (
-                  <></>
-                )
-                  :
-                  (
+                  ) : (
                     <>
-                      <Text fontSize="16px" align="center" mt="5%">
-                        Or Sign In With:
+                      <Text align="center" fontSize="14px" mt="9%" p="5px">
+                        We will send you a one-time sign in link.
                       </Text>
-
-                      <Button
-                        leftIcon={<FaGoogle />}
-                        variant="solid"
-                        bgColor="#E1E1E1"
-                        color="grey"
-                        w="85%"
-                        ml="8%"
-                        borderRadius="100px"
-                        fontSize="16px"
-                        mt="3%"
-                        className={styles.modalBtn}
-                        onClick={() => loginWithGoogle()}
-                      >
-                        Google
-                      </Button>
+                      {
+                        fieldActive &&
+                        <CustomBtn
+                          title={loading ? 'loading...' : "SignIn"}
+                          bgColor="#00C8AA"
+                          color="white"
+                          blue={true}
+                          mt="5%"
+                          onClickHandler={login}
+                        />
+                      }
+                      <CustomBtn
+                        title="SignIn With Magic Link"
+                        bgColor={fieldActive ? "#E1E1E1" : "#00C8AA"}
+                        color="white"
+                        blue={true}
+                        mt="5%"
+                      />
+                      {
+                        !fieldActive &&
+                        <CustomBtn
+                          title="Switch to password"
+                          bgColor="#E1E1E1"
+                          color="grey"
+                          mt="5%"
+                          onClickHandler={() => setFieldActive(true)}
+                        />
+                      }
                     </>
                   )}
+                  {resetPass ? (
+                    <></>
+                  )
+                    :
+                    (
+                      <>
+                        <Text fontSize="16px" align="center" mt="5%">
+                          Or Sign In With:
+                        </Text>
+
+                        <Button
+                          leftIcon={<FaGoogle />}
+                          variant="solid"
+                          bgColor="#E1E1E1"
+                          color="grey"
+                          w="85%"
+                          ml="8%"
+                          borderRadius="100px"
+                          fontSize="16px"
+                          mt="3%"
+                          className={styles.modalBtn}
+                          onClick={() => loginWithGoogle()}
+                        >
+                          Google
+                        </Button>
+                      </>
+                    )}
 
 
+                </Box>
               </Box>
             </Box>
-          </Box>
         </ModalContent>
       </Modal>
     </>
