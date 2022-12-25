@@ -46,8 +46,7 @@ const CommonComponent = ({ data }) => {
 
           <Box
             ml="10px"
-            fontSize="2.5em"
-            fontWeight={"400"}
+            className={"main-heading"}
             transition={"color .15s"}
             display={"flex"}
           >
@@ -70,7 +69,7 @@ const CommonComponent = ({ data }) => {
         <Box display={["none", "none", "flex", "flex", "flex"]}>
           {" "}
           <Box h={12} w={"40em"}>
-            <Text fontSize={["0.6rem", "0.8rem"]}>
+            <Text className="xsmall-text">
               {data.description ||
                 "Our tailor-made samples and guides has all of the tools you needto easily craft a government CV in just minutes. Our samples have been field-tested and are expertly designed to set you up for success."}
             </Text>
