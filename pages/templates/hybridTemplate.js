@@ -36,7 +36,9 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+import Feedback from '../../src/components/feedbackPopUp/Feedback';
+import SaveTempData from '../../src/components/saveTempBtn/SaveTempData';
+import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
 const HybridTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
@@ -59,16 +61,14 @@ const HybridTemplate = () => {
           downloadPDF={downloadPDFHandler}
         >
           <ChangeTempBtn />
+          <SaveTempData />
 
           <Flex
             justifyContent={{ base: 'none', lg: 'center' }}
             flexDir={'column'}
             alignItems={{ base: 'none', lg: 'center' }}
           >
-            <Box
-              mt="100px"
-              ml={{ base: 10, lg: 0 }}
-            >
+            <Box mt="100px" ml={{ base: 10, lg: 0 }}>
               <Box
                 minW={910}
                 maxW={910}
@@ -312,7 +312,9 @@ const HybridTemplate = () => {
                           {show.project && (
                             <SectionSideMenu
                               bg={'#313B47'}
-                              onHide={() => setShow({ ...show, project: false })}
+                              onHide={() =>
+                                setShow({ ...show, project: false })
+                              }
                               onDelete={PROJECT}
                             />
                           )}

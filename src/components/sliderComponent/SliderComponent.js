@@ -97,13 +97,13 @@ const SliderComponent = () => {
           w={["90vw", "90vw", "93vw", "76vw", "87%", "89%"]}
           marginLeft={["6%", "4%", "3%", "0.5%"]}
         >
-          {/* <Slider {...settings}>
+          <Slider {...settings}>
             {data.map((item, index) => (
               <div key={index}>
                 <RatingComponent rating={item.rating} />
               </div>
             ))}
-          </Slider> */}
+          </Slider>
           <Slider {...settings}>
             <div>
               <h3>1</h3>

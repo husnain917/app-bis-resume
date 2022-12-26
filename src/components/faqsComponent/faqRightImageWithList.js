@@ -28,7 +28,6 @@ const FaqRightImageWithList = ({
   return (
     <Box w={["100%", "94%", "94%", "960px", "1220px", "1500px"]}>
       <Grid
-        marginTop="1.2rem"
         templateAreas={[`"image textArea ."`]}
         gridTemplateRows={"1,1fr"}
         gridTemplateColumns={[
@@ -38,47 +37,57 @@ const FaqRightImageWithList = ({
           "1fr 2fr 1fr",
           "1fr 2fr 1fr",
         ]}
-        color="blackAlpha.700"
-        margin="3.2rem auto"
         display={["flex", "flex", "grid", "grid", "grid", "grid", "grid"]}
         flexDirection={["column-reverse"]}
-        marginInlineStart="40px"
-        marginInlineEnd="40px"
+        marginInlineStart={["60px", "60px", "60px", "35px", "40px"]}
+        marginInlineEnd={["60px", "60px", "60px", "35px", "40px"]}
       >
         <GridItem pl="2" area={"textArea"} position="relative">
-          <Text fontSize={["2.75em"]} className="font">
+          <Text fontSize={["2em"]} fontWeight="700">
             {heading}
           </Text>
-          <Text fontSize={["1.5em"]} fontWeight="400" my={4}>
+          <Text fontSize={["1em"]} my={4}>
             {" "}
             {text1}
           </Text>
-          <UnorderedList ml={8} fontSize={18}>
-            <ListItem ml="3">{item1}</ListItem>
-            <ListItem ml="3">{item2}</ListItem>
-            <ListItem ml="3">{item3}</ListItem>
-            <ListItem ml="3">{item4}</ListItem>
+          <UnorderedList ml={2} fontSize={"0.9em"}>
+            <ListItem ml="3" mb={0.5}>
+              {item1}
+            </ListItem>
+            <ListItem ml="3" mb={0.5}>
+              {item2}
+            </ListItem>
+            <ListItem ml="3" mb={0.5}>
+              {item3}
+            </ListItem>
+            <ListItem ml="3" mb={0.5}>
+              {item4}
+            </ListItem>
           </UnorderedList>
           <Text
-            fontSize={["1em", "1em", "1em", "1em", "1em", "1.5em"]}
+            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
             my={4}
             fontWeight="400"
           >
             {text2}
           </Text>
-          <UnorderedList ml={8} fontSize={18}>
-            <ListItem ml="3">{item5}</ListItem>
-            <ListItem ml="3">{item6}</ListItem>
+          <UnorderedList ml={2} fontSize={"0.9em"}>
+            <ListItem ml="3" mb={0.5}>
+              {item5}
+            </ListItem>
+            <ListItem ml="3" mb={0.5}>
+              {item6}
+            </ListItem>
             <ListItem ml="3">{item7}</ListItem>
           </UnorderedList>
         </GridItem>
         <GridItem
-          pl="2"
+          // pl="2"
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1000"
-          marginInlineStart="40px"
-          marginInlineEnd="40px"
+          // marginInlineStart="40px"
+          // marginInlineEnd="40px"
           area={"image"}
         >
           <Image objectFit="cover" src={image} alt="Loading" />

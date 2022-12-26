@@ -16,7 +16,27 @@ const FaqsSection = () => {
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
+      margin={"0 auto"}
     >
+      <Box>
+        <Text
+          fontSize={["2.9em"]}
+          textAlign={"center"}
+          fontWeight={"700"}
+          className="afterHeading"
+        >
+          {" "}
+          Resume Builder FAQ.
+        </Text>
+      </Box>
+      {/* <Box display={"flex"} alignItems={"center"} mb={"30px"}>
+        <Box
+          bg={"#00C8AA"}
+          height={"5px"}
+          width={"150px"}
+          borderRadius={"10px"}
+        ></Box>
+      </Box> */}
       <FaqRightImage
         heading={"Why should I use a resume builder?"}
         text1={
@@ -31,7 +51,7 @@ const FaqsSection = () => {
       />
       <FaqLeftImage
         heading={`            What is the best resume builder?      `}
-        text1={`  Over the past 7 years, we’ve been working hard to make Novorésumé the best resume builder out there.`}
+        text1={`  Over the past 7 years, we’ve been working hard to make BisResume the best resume builder out there.`}
         text2={`  And we’d say we succeeded! Here’s what sets us apart from the rest of the competition:`}
         item1h={`                Easy to Use        `}
         item1={`- Our builder is very easy to use, even if you're not too tech-friendly.`}
@@ -40,7 +60,7 @@ const FaqsSection = () => {
         item3h={`                It's 100% free`}
         item3={`- Some resume builders out there pretend to be free… and then they hit you with a paywall once you’re done writing your resume! We don’t do that. Our builder will instantly notify you if you’re using any of our premium features.`}
         item4h={`Cover Letter Builder`}
-        item4={`- If you’re using Novorésumé Premium, you gain access to our cover letter builder for free (including matching cover letter templates).`}
+        item4={`- If you’re using BisResume Premium, you gain access to our cover letter builder for free (including matching cover letter templates).`}
         item5h={`Tons of Customization and Design Options`}
         item5={`- Our builder offers a ton of customization. You can make changes to the layout, color schemes, and much more.`}
         item6={` - Our resume templates are built on top of some of the most popular applicant tracking systems out there. Meaning, your resume won't automatically get rejected by any ATS.`}
@@ -49,12 +69,12 @@ const FaqsSection = () => {
       />
       <FaqRightImage
         heading={"Is this a completely free resume builder?"}
-        text1={"Yes, Novorésumé is a 100% free resume builder.          "}
+        text1={"Yes, BisResume is a 100% free resume builder.          "}
         text2={
           " If you’re on a budget, you can use it to create your resume completely free of charge. And no, unlike some other resume builders out there, we don’t hit you with a paywall once you’ve completed your resume."
         }
         text3={
-          "`If you use any of our premium features, the software will let you know about it. It will then ask if you did it accidentally, or if you would like to upgrade to Novorésumé Premium. You're in control!          `"
+          "`If you use any of our premium features, the software will let you know about it. It will then ask if you did it accidentally, or if you would like to upgrade to BisResume Premium. You're in control!          `"
         }
         image={"/faq2@2x.png"}
       />
@@ -74,7 +94,7 @@ const FaqsSection = () => {
         heading={"What's the difference between a CV and a resume?        "}
         text1={`In the EU, the words "CV" and "resume" are used interchangeably`}
         text2={
-          " TIn the United States, however, a resume is a document you use to apply for jobs, while a CV is mainly used by academics."
+          " In the United States, however, a resume is a document you use to apply for jobs, while a CV is mainly used by academics."
         }
         text3={
           "`Want to learn more? Check out our article on the differences between CVs and resumes.`"
@@ -84,7 +104,7 @@ const FaqsSection = () => {
       <FaqLeftImage
         heading={`            How can I create my resume?
         `}
-        text01={`  Making a resume with Novorésumé is very straightforward.
+        text01={`  Making a resume with BisResume is very straightforward.
 
         `}
         text2={`  Just pick one of our professional resume templates.

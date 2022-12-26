@@ -33,18 +33,19 @@ import Underline from '../../src/components/digitalTemplate/Underline';
 import { MdCastForEducation } from 'react-icons/md';
 import { IoLanguageOutline } from 'react-icons/io5';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
+import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 export default function Designer_Template() {
     // redux Data
     let resumeData = useSelector((state) => state.editorReducer.resumeData);
     const [show, setShow] = useShow();
-
+    const { downloadPDFHandler, pdfRef } = PDFGenerater();
     return (
         <>
             <div
                 style={{ overflow: 'auto' }}
             >
-                <TempLayout work={true} education={true} skills={true} interest={true} languages={true}>
+                <TempLayout work={true} education={true} skills={true} interest={true} languages={true} downloadPDF={downloadPDFHandler}>
                     <ChangeTempBtn />
                     <Flex
                         justifyContent={{ base: 'none', md: 'center' }}
@@ -54,368 +55,372 @@ export default function Designer_Template() {
                         pt="70px"
                     >
                         <Box
-                            w="100%"
-                            minW="850px"
-                            maxW="850px"
-                            mb={'20px'}
-                            mx={'20px'}
-                            mt="100px"
-                            borderWidth="1px"
-                            borderColor={'#00000023'}
+                            mt="50px"
                         >
-                            {/* profile container */}
                             <Box
-                                backgroundColor={'#253439'}
-                                padding={'30px'}
-                                width={'100%'}
+                                w="100%"
+                                minW="850px"
+                                maxW="850px"
+                                mb={'20px'}
+                                ml={'70px'}
+                                borderWidth="1px"
+                                borderColor={'#00000023'}
+                                ref={pdfRef}
                             >
+                                {/* profile container */}
                                 <Box
-                                    display={'flex'}
-                                    justifyContent={'space-between'}
-                                    alignItems={'center'}
+                                    backgroundColor={'#253439'}
+                                    padding={'30px'}
                                     width={'100%'}
                                 >
                                     <Box
-                                        width={'50%'}
+                                        display={'flex'}
+                                        justifyContent={'space-between'}
+                                        alignItems={'center'}
+                                        width={'100%'}
                                     >
-                                        <Name
-                                            FName={true}
-                                            SName={true}
-                                            direction="column"
-                                            FNameStyle={styles.nameStyle}
-                                            SNameStyle={styles.nameStyle}
+                                        <Box
+                                            width={'50%'}
+                                        >
+                                            <Name
+                                                FName={true}
+                                                SName={true}
+                                                direction="column"
+                                                FNameStyle={styles.nameStyle}
+                                                SNameStyle={styles.nameStyle}
+                                            />
+                                        </Box>
+                                        <Underline
+                                            height='0.1em'
+                                            width='50%'
+                                            bgColor='#fff'
                                         />
                                     </Box>
-                                    <Underline
-                                        height='0.1em'
-                                        width='50%'
-                                        bgColor='#fff'
+                                    <Profession
+                                        professionStyle={styles.profileSubTitle}
                                     />
                                 </Box>
-                                <Profession
-                                    professionStyle={styles.profileSubTitle}
-                                />
-                            </Box>
 
-                            {/* avatar container */}
-                            <Box
-                                backgroundColor={'#423E3A'}
-                                display={'flex'}
-                                width={'100%'}
-                                marginTop={'2px'}
-                            >
+                                {/* avatar container */}
                                 <Box
-                                    width={'30%'}
-                                    padding={'10px 0px 10px 20px'}
-                                >
-                                    <ImageSelector
-                                        minWidth="220px"
-                                        maxWidth="220px"
-                                        maxHeight="220px"
-                                        minHeight="220px"
-                                    />
-                                </Box>
-                                <Box
-                                    width={'70%'}
+                                    backgroundColor={'#423E3A'}
                                     display={'flex'}
-                                    justifyContent={'center'}
-                                    alignItems={'center'}
+                                    width={'100%'}
+                                    marginTop={'2px'}
                                 >
-                                    <Contact
-                                        phone={true}
-                                        email={true}
-                                        linkedinURL={true}
-                                        website={true}
-                                        circleIcon={true}
-                                        circleBg="#fff"
-                                        circleSize="28px"
-                                        iconColor="#423E3A"
-                                        margin={'5px 0px 0px 0px'}
-                                        style={styles.profileText}
-                                    />
-                                </Box>
-                            </Box>
-                            <Box
-                                width={'100%'}
-                                display={'flex'}
-                                justifyContent={'space-between'}
-                                marginTop={'10px'}
-                            >
-                                {/* left contaiiner */}
-                                <Box
-                                    width={'50%'}
-                                    backgroundColor={'#CEB99E'}
-                                    padding={'20px 50px 0px 50px'}
-                                    borderRadius={'15px 15px'}
-                                >
-                                    {/* _____________ About me _____________ */}
-                                    <Heading
-                                        title={'ABOUT ME'}
-                                        color="#253439"
-                                        fontSize={'20px'}
-                                        fontWeight={700}
-                                        circleSize="48px"
-                                        circleBg="#253439"
-                                        circleIconHeading={true}
-                                        icon={(props) => (
-                                            <FaUserAlt
-                                                {...props}
-                                                size={22}
-                                                color={'#fff'}
-                                            />
-                                        )}
-                                    />
-                                    <About
-                                        minW="100%"
-                                        maxW="100%"
-                                        aboutStyle={Classes.aboutText}
-                                        textColor="#000000"
-                                        fontSize="15px"
-                                        fontWeight={600}
-                                        margin={'5px 10px 30px 10px'}
-                                    />
-                                    {/* _____________ Skill _____________ */}
                                     <Box
-                                        margin={'0px 0px 0px 7px'}
+                                        width={'30%'}
+                                        padding={'10px 0px 10px 20px'}
                                     >
-                                        {resumeData?.skills?.visible && (
-                                            <div className={Classes.sideMenu}>
-                                                <div className={Classes.sideMenuBox}>
-                                                    {show.skills && (
-                                                        <SectionSideMenu
-                                                            onHide={() => setShow({ ...show, skills: false })}
-                                                            bg="#253439"
-                                                            iconColor={'#fff'}
-                                                            onDelete={SKILL}
-                                                        />
-                                                    )}
-                                                </div>
-                                                <div>
-                                                    <Heading
-                                                        title={'SKILLS'}
-                                                        onSideSectionShow={() =>
-                                                            setShow({ ...show, skills: true })
-                                                        }
-                                                        color="#253439"
-                                                        fontSize={'20px'}
-                                                        fontWeight={700}
-                                                        circleSize="48px"
-                                                        circleBg="#253439"
-                                                        circleIconHeading={true}
-                                                        icon={(props) => (
-                                                            <FaSignLanguage
-                                                                {...props}
-                                                                size={22}
-                                                                color={'#fff'}
-                                                            />
-                                                        )}
-                                                    />
-                                                    <Skill
-                                                        skillStyle={styles.skillText}
-                                                        progressBar={true}
-                                                        strokeWidth="2"
-                                                        lineStyle={styles.line}
-                                                        strokeColor="#000000"
-                                                        trailColor="#fff"
-                                                        percentageStyle={styles.percent}
-                                                        parentContainerStyle={styles.rightContainerWork}
-                                                    />
-                                                </div>
-                                            </div>
-                                        )}
+                                        <ImageSelector
+                                            minWidth="220px"
+                                            maxWidth="220px"
+                                            maxHeight="220px"
+                                            minHeight="220px"
+                                        />
                                     </Box>
-                                    {/* _____________ Interst _____________ */}
                                     <Box
-                                        margin={'0px 0px 0px 7px'}
+                                        width={'70%'}
+                                        display={'flex'}
+                                        justifyContent={'center'}
+                                        alignItems={'center'}
                                     >
-                                        {resumeData?.hobbies?.visible && (
-                                            <div className={Classes.sideMenu}>
-                                                <div className={Classes.sideMenuBox}>
-                                                    {show.interest && (
-                                                        <SectionSideMenu
-                                                            bg="#253439"
-                                                            iconColor={'#fff'}
-                                                            onHide={() => setShow({ ...show, interest: false })}
-                                                            onDelete={INTEREST}
-                                                        />
-                                                    )}
-                                                </div>
-                                                <div>
-                                                    <Heading
-                                                        title="INTEREST"
-                                                        color="#253439"
-                                                        fontSize={'20px'}
-                                                        fontWeight={700}
-                                                        circleSize="48px"
-                                                        circleBg="#253439"
-                                                        circleIconHeading={true}
-                                                        icon={(props) => (
-                                                            <FaBookOpen
-                                                                {...props}
-                                                                size={22}
-                                                                color={'#fff'}
-                                                            />
-                                                        )}
-                                                        onSideSectionShow={() =>
-                                                            setShow({ ...show, interest: true })
-                                                        }
-                                                    />
-                                                    <Interest
-                                                        interestStyle={styles.skillText}
-                                                        parentContainerStyle={styles.rightContainerWork}
-                                                    />
-                                                </div>
-                                            </div>
-                                        )}
-                                    </Box>
-                                    {/* _____________ Languages _____________ */}
-                                    <Box
-                                        margin={'0px 0px 0px 7px'}
-                                    >
-                                        {resumeData?.languages?.visible && (
-                                            <div className={Classes.sideMenu}>
-                                                <div className={Classes.sideMenuBox}>
-                                                    {show.languages && (
-                                                        <SectionSideMenu
-                                                            bg="#253439"
-                                                            iconColor={'#fff'}
-                                                            onHide={() => setShow({ ...show, languages: false })}
-                                                            onDelete={LANGUAGES}
-                                                        />
-                                                    )}
-                                                </div>
-                                                <div>
-                                                    <Heading
-                                                        title="LANGUAGES"
-                                                        color="#253439"
-                                                        fontSize={'20px'}
-                                                        fontWeight={700}
-                                                        circleSize="48px"
-                                                        circleBg="#253439"
-                                                        circleIconHeading={true}
-                                                        icon={(props) => (
-                                                            <IoLanguageOutline
-                                                                {...props}
-                                                                size={22}
-                                                                color={'#fff'}
-                                                            />
-                                                        )}
-                                                        onSideSectionShow={() =>
-                                                            setShow({ ...show, languages: true })
-                                                        }
-                                                    />
-                                                    <Language
-                                                        langStyle={styles.skillText}
-                                                        langContainerStyle={styles.rightContainerWork}
-                                                    />
-                                                </div>
-                                            </div>
-                                        )}
+                                        <Contact
+                                            phone={true}
+                                            email={true}
+                                            linkedinURL={true}
+                                            website={true}
+                                            circleIcon={true}
+                                            circleBg="#fff"
+                                            circleSize="28px"
+                                            iconColor="#423E3A"
+                                            margin={'5px 0px 0px 0px'}
+                                            style={styles.profileText}
+                                        />
                                     </Box>
                                 </Box>
-                                {/* right container */}
                                 <Box
-                                    width={'45%'}
-                                    padding={'20px 15px 0px 15px'}
+                                    width={'100%'}
+                                    display={'flex'}
+                                    justifyContent={'space-between'}
+                                    marginTop={'10px'}
                                 >
-                                    {/* _____________ Work _____________ */}
-                                    <Box>
-                                        {resumeData?.work?.visible && (
-                                            <div className={Classes.sideMenu}>
-                                                <div className={Classes.sideMenuBox}>
-                                                    {show.work && (
-                                                        <SectionSideMenu
-                                                            onHide={() => setShow({ ...show, work: false })}
-                                                            bg="#253439"
-                                                            iconColor={'#fff'}
-                                                            onDelete={WORK}
-                                                        />
-                                                    )}
-                                                </div>
-                                                <div>
-                                                    <Heading
-                                                        title="WORK EXPERIENCE"
-                                                        color="#253439"
-                                                        fontSize={'20px'}
-                                                        fontWeight={700}
-                                                        circleSize="48px"
-                                                        circleBg="#253439"
-                                                        circleIconHeading={true}
-                                                        icon={(props) => (
-                                                            <MdCastForEducation
-                                                                {...props}
-                                                                size={22}
-                                                                color={'#fff'}
+                                    {/* left contaiiner */}
+                                    <Box
+                                        width={'50%'}
+                                        backgroundColor={'#CEB99E'}
+                                        padding={'20px 50px 0px 50px'}
+                                        borderRadius={'15px 15px'}
+                                    >
+                                        {/* _____________ About me _____________ */}
+                                        <Heading
+                                            title={'ABOUT ME'}
+                                            color="#253439"
+                                            fontSize={'20px'}
+                                            fontWeight={700}
+                                            circleSize="48px"
+                                            circleBg="#253439"
+                                            circleIconHeading={true}
+                                            icon={(props) => (
+                                                <FaUserAlt
+                                                    {...props}
+                                                    size={22}
+                                                    color={'#fff'}
+                                                />
+                                            )}
+                                        />
+                                        <About
+                                            minW="100%"
+                                            maxW="100%"
+                                            aboutStyle={Classes.aboutText}
+                                            textColor="#000000"
+                                            fontSize="15px"
+                                            fontWeight={600}
+                                            margin={'5px 10px 30px 10px'}
+                                        />
+                                        {/* _____________ Skill _____________ */}
+                                        <Box
+                                            margin={'0px 0px 0px 7px'}
+                                        >
+                                            {resumeData?.skills?.visible && (
+                                                <div className={Classes.sideMenu}>
+                                                    <div className={Classes.sideMenuBox}>
+                                                        {show.skills && (
+                                                            <SectionSideMenu
+                                                                onHide={() => setShow({ ...show, skills: false })}
+                                                                bg="#253439"
+                                                                iconColor={'#fff'}
+                                                                onDelete={SKILL}
                                                             />
                                                         )}
-                                                        onSideSectionShow={() => setShow({ ...show, work: true })}
-                                                    />
-                                                    <WorkExperience
-                                                        company={true}
-                                                        position={true}
-                                                        date={true}
-                                                        summary={true}
-                                                        companyStyle={Classes.company}
-                                                        positionStyle={Classes.programText}
-                                                        dateStyle={Classes.date}
-                                                        summaryStyle={Classes.description}
-                                                        parentContainerStyle={styles.rightContainerExp}
-                                                        textColor="#000000"
-                                                    />
+                                                    </div>
+                                                    <div>
+                                                        <Heading
+                                                            title={'SKILLS'}
+                                                            onSideSectionShow={() =>
+                                                                setShow({ ...show, skills: true })
+                                                            }
+                                                            color="#253439"
+                                                            fontSize={'20px'}
+                                                            fontWeight={700}
+                                                            circleSize="48px"
+                                                            circleBg="#253439"
+                                                            circleIconHeading={true}
+                                                            icon={(props) => (
+                                                                <FaSignLanguage
+                                                                    {...props}
+                                                                    size={22}
+                                                                    color={'#fff'}
+                                                                />
+                                                            )}
+                                                        />
+                                                        <Skill
+                                                            skillStyle={styles.skillText}
+                                                            progressBar={true}
+                                                            strokeWidth="2"
+                                                            lineStyle={styles.line}
+                                                            strokeColor="#000000"
+                                                            trailColor="#fff"
+                                                            percentageStyle={styles.percent}
+                                                            parentContainerStyle={styles.rightContainerWork}
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        )}
+                                            )}
+                                        </Box>
+                                        {/* _____________ Interst _____________ */}
+                                        <Box
+                                            margin={'0px 0px 0px 7px'}
+                                        >
+                                            {resumeData?.hobbies?.visible && (
+                                                <div className={Classes.sideMenu}>
+                                                    <div className={Classes.sideMenuBox}>
+                                                        {show.interest && (
+                                                            <SectionSideMenu
+                                                                bg="#253439"
+                                                                iconColor={'#fff'}
+                                                                onHide={() => setShow({ ...show, interest: false })}
+                                                                onDelete={INTEREST}
+                                                            />
+                                                        )}
+                                                    </div>
+                                                    <div>
+                                                        <Heading
+                                                            title="INTEREST"
+                                                            color="#253439"
+                                                            fontSize={'20px'}
+                                                            fontWeight={700}
+                                                            circleSize="48px"
+                                                            circleBg="#253439"
+                                                            circleIconHeading={true}
+                                                            icon={(props) => (
+                                                                <FaBookOpen
+                                                                    {...props}
+                                                                    size={22}
+                                                                    color={'#fff'}
+                                                                />
+                                                            )}
+                                                            onSideSectionShow={() =>
+                                                                setShow({ ...show, interest: true })
+                                                            }
+                                                        />
+                                                        <Interest
+                                                            interestStyle={styles.skillText}
+                                                            parentContainerStyle={styles.rightContainerWork}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </Box>
+                                        {/* _____________ Languages _____________ */}
+                                        <Box
+                                            margin={'0px 0px 0px 7px'}
+                                        >
+                                            {resumeData?.languages?.visible && (
+                                                <div className={Classes.sideMenu}>
+                                                    <div className={Classes.sideMenuBox}>
+                                                        {show.languages && (
+                                                            <SectionSideMenu
+                                                                bg="#253439"
+                                                                iconColor={'#fff'}
+                                                                onHide={() => setShow({ ...show, languages: false })}
+                                                                onDelete={LANGUAGES}
+                                                            />
+                                                        )}
+                                                    </div>
+                                                    <div>
+                                                        <Heading
+                                                            title="LANGUAGES"
+                                                            color="#253439"
+                                                            fontSize={'20px'}
+                                                            fontWeight={700}
+                                                            circleSize="48px"
+                                                            circleBg="#253439"
+                                                            circleIconHeading={true}
+                                                            icon={(props) => (
+                                                                <IoLanguageOutline
+                                                                    {...props}
+                                                                    size={22}
+                                                                    color={'#fff'}
+                                                                />
+                                                            )}
+                                                            onSideSectionShow={() =>
+                                                                setShow({ ...show, languages: true })
+                                                            }
+                                                        />
+                                                        <Language
+                                                            langStyle={styles.skillText}
+                                                            langContainerStyle={styles.rightContainerWork}
+                                                        />
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </Box>
                                     </Box>
-                                    {/* _____________ Education _____________ */}
-                                    <Box>
-                                        {resumeData?.education?.visible && (
-                                            <div className={Classes.sideMenu}>
-                                                <div className={Classes.sideMenuBox}>
-                                                    {show.education && (
-                                                        <SectionSideMenu
-                                                            onHide={() => setShow({ ...show, education: false })}
-                                                            bg="#253439"
-                                                            iconColor={'#fff'}
-                                                            onDelete={EDUCATION}
-                                                        />
-                                                    )}
-                                                </div>
-                                                <div>
-                                                    <Heading
-                                                        title="EDUCATION"
-                                                        color="#253439"
-                                                        fontSize={'20px'}
-                                                        fontWeight={700}
-                                                        circleSize="48px"
-                                                        circleBg="#253439"
-                                                        circleIconHeading={true}
-                                                        icon={(props) => (
-                                                            <MdCastForEducation
-                                                                {...props}
-                                                                size={22}
-                                                                color={'#fff'}
+                                    {/* right container */}
+                                    <Box
+                                        width={'45%'}
+                                        padding={'20px 15px 0px 15px'}
+                                    >
+                                        {/* _____________ Work _____________ */}
+                                        <Box>
+                                            {resumeData?.work?.visible && (
+                                                <div className={Classes.sideMenu}>
+                                                    <div className={Classes.sideMenuBox}>
+                                                        {show.work && (
+                                                            <SectionSideMenu
+                                                                onHide={() => setShow({ ...show, work: false })}
+                                                                bg="#253439"
+                                                                iconColor={'#fff'}
+                                                                onDelete={WORK}
                                                             />
                                                         )}
-                                                        onSideSectionShow={() =>
-                                                            setShow({ ...show, education: true })
-                                                        }
-                                                    />
-                                                    <Education
-                                                        degree={true}
-                                                        institution={true}
-                                                        date={true}
-                                                        summary={true}
-                                                        parentContainerStyle={styles.rightContainerExp}
-                                                        institutionStyle={Classes.company}
-                                                        degreeStyle={Classes.programText}
-                                                        dateStyle={Classes.date}
-                                                        summaryStyle={Classes.description}
-                                                        degree_placeholder="Study Program"
-                                                        textColor="#000000"
-                                                    />
+                                                    </div>
+                                                    <div>
+                                                        <Heading
+                                                            title="WORK EXPERIENCE"
+                                                            color="#253439"
+                                                            fontSize={'20px'}
+                                                            fontWeight={700}
+                                                            circleSize="48px"
+                                                            circleBg="#253439"
+                                                            circleIconHeading={true}
+                                                            icon={(props) => (
+                                                                <MdCastForEducation
+                                                                    {...props}
+                                                                    size={22}
+                                                                    color={'#fff'}
+                                                                />
+                                                            )}
+                                                            onSideSectionShow={() => setShow({ ...show, work: true })}
+                                                        />
+                                                        <WorkExperience
+                                                            company={true}
+                                                            position={true}
+                                                            date={true}
+                                                            summary={true}
+                                                            companyStyle={Classes.company}
+                                                            positionStyle={Classes.programText}
+                                                            dateStyle={Classes.date}
+                                                            summaryStyle={Classes.description}
+                                                            parentContainerStyle={styles.rightContainerExp}
+                                                            textColor="#000000"
+                                                        />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        )}
+                                            )}
+                                        </Box>
+                                        {/* _____________ Education _____________ */}
+                                        <Box>
+                                            {resumeData?.education?.visible && (
+                                                <div className={Classes.sideMenu}>
+                                                    <div className={Classes.sideMenuBox}>
+                                                        {show.education && (
+                                                            <SectionSideMenu
+                                                                onHide={() => setShow({ ...show, education: false })}
+                                                                bg="#253439"
+                                                                iconColor={'#fff'}
+                                                                onDelete={EDUCATION}
+                                                            />
+                                                        )}
+                                                    </div>
+                                                    <div>
+                                                        <Heading
+                                                            title="EDUCATION"
+                                                            color="#253439"
+                                                            fontSize={'20px'}
+                                                            fontWeight={700}
+                                                            circleSize="48px"
+                                                            circleBg="#253439"
+                                                            circleIconHeading={true}
+                                                            icon={(props) => (
+                                                                <MdCastForEducation
+                                                                    {...props}
+                                                                    size={22}
+                                                                    color={'#fff'}
+                                                                />
+                                                            )}
+                                                            onSideSectionShow={() =>
+                                                                setShow({ ...show, education: true })
+                                                            }
+                                                        />
+                                                        <Education
+                                                            degree={true}
+                                                            institution={true}
+                                                            date={true}
+                                                            summary={true}
+                                                            parentContainerStyle={styles.rightContainerExp}
+                                                            institutionStyle={Classes.company}
+                                                            degreeStyle={Classes.programText}
+                                                            dateStyle={Classes.date}
+                                                            summaryStyle={Classes.description}
+                                                            degree_placeholder="Study Program"
+                                                            textColor="#000000"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </Box>
                                     </Box>
                                 </Box>
                             </Box>

@@ -34,7 +34,7 @@ export default function Home() {
       </Head>
 
       <CallToAction />
-      <SliderComponent />
+      {/* <SliderComponent /> */}
 
       <HintSection />
       {isVisible && (
