@@ -2,18 +2,19 @@ import React from "react";
 import styles from "../../styles/Index.module.css";
 import { Image ,Box} from '@chakra-ui/react'
 import Link from "next/link";
+import CommonButton from "./commonButton/CommonButton";
 
 
 export default function CallToAction() {
   return (
     <div className={styles.ctaContainer}>
       <div className={styles.ctaLeftSec} >
-        <h1 className={styles.ctaHeading}>
+        <h1 className={'main-heading'}>
           Get hired faster with our resume builder!
         </h1>
         <Box className="cursor">
           <Link href="/templates">
-            <button className={styles.ctaHeroButton}>Build Your Resume</button>
+            <CommonButton className={styles.ctaHeroButton} title="Build Your Resume"/>
           </Link>
         </Box>
         <p className={styles.ctaText}>

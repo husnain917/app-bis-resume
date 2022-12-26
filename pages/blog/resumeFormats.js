@@ -212,7 +212,7 @@ export default function Resume_Formats() {
       </Container>
       {/* content container end */}
 
-  
+
     </>
   )
 }

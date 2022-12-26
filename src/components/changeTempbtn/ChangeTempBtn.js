@@ -7,9 +7,10 @@ const ChangeTempBtn = () => {
   return (
     <Link href={'/templates'}>
       <Box
-        position={'fixed'}
-        top="100px"
-        left={{ base: '15px', sm: '50px' }}
+        position={{ base: 'relative', lg: 'fixed' }}
+        top={{ base: '50px', lg: '100px' }}
+        mb={{ base: '20px', lg: '0px' }}
+        left={'50px'}
         zIndex="99999"
       >
         <Tooltip title="Change Template" arrow distance={20}>

@@ -17,8 +17,8 @@ export default function AuthButton({
         bgColor={bgColor}
         borderRadius="10px"
         _hover={{ bg: "#00C8AA", color: " white", borderRadius: "10px" }}
-        _focus={{ bg: "#00C8AA", color: " white", borderRadius: "10px" }}
-        onClick={() => onChangeHandler(btn.id)}
+        // _focus={{ bg: "#00C8AA", color: " white", borderRadius: "10px" }}
+        onClick={onChangeHandler}
       >
         {btn.btnName}
       </Button>

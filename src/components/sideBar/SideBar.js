@@ -1,4 +1,4 @@
-import { useStatStyles } from '@chakra-ui/react';
+import { useStatStyles, Box } from '@chakra-ui/react';
 import { React, useState } from 'react'
 import {
     FaFacebookF,
@@ -27,41 +27,62 @@ export default function SideBar() {
     }
 
     return (
-        <div> <nav className={styles.nav}>
-
-            {
-                show ?
-                    <ul className={styles.ul}>
-                        <li className={styles.li}><a className={styles.a}><i><RiFileUserLine /></i><span className={styles.BtnOpen}>BUILD RESUME</span></a></li>
-                        <li><a className={styles.a}><i><RiFileEditFill /></i><span className={styles.BtnOpen}>COVER LETTER Build</span></a></li>
-                        <li className={styles.li}><a  ><i className={styles.pin}><FaFacebookF /></i></a></li>
-                        <li className={styles.li}><a  ><i className={styles.pin}><FaLinkedinIn /></i></a></li>
 
 
-                        <li className={styles.li}><a  ><i className={styles.pin}><FaTwitter /></i></a></li>
-                        <li className={styles.li}><a  ><i className={styles.pin}><MdEmail /></i></a></li>
-                        <li className={styles.li}><a ><i className={styles.pin}><TiSocialPinterest /></i></a></li>
-                        <div onClick={(e) => hoddenSideBar(e)}> <li className={styles.btnAction}><a ><i ><FaArrowLeft /></i></a></li></div>
+        <Box
+            maxW={["0%", "0%", "0%", "10%"]}
+            // padding={'70px 0px 0px 0px'}
+            display={["none", "none", "none", "block"]}
+            marginBottom="40%"
+        >
+            <Box
+                width={'5rem'}
 
-                    </ul>
-
-                    :
-                    <ul >
-
-                        <div onClick={(e) => showSideBar(e)}> <li className={styles.btnAction}><a ><i ><FaArrowRight /></i></a></li></div>
-
-
-                    </ul>
-
-
-            }
-
-        </nav>
+                position={"sticky"}
+                top="15%"
+                left="0%"
+                margin={'25px 0px'}
+            >
 
 
+                <nav className={styles.nav}>
+
+                    {
+                        show ?
+                            <ul className={styles.ul}>
+                                <li className={styles.li}><a className={styles.a}><i><RiFileUserLine /></i><span className={styles.BtnOpen}>BUILD RESUME</span></a></li>
+                                <li><a className={styles.a}><i><RiFileEditFill /></i><span className={styles.BtnOpen}>COVER LETTER Build</span></a></li>
+                                <li className={styles.li}><a  ><i className={styles.pin}><FaFacebookF /></i></a></li>
+                                <li className={styles.li}><a  ><i className={styles.pin}><FaLinkedinIn /></i></a></li>
 
 
-        </div>
+                                <li className={styles.li}><a  ><i className={styles.pin}><FaTwitter /></i></a></li>
+                                <li className={styles.li}><a  ><i className={styles.pin}><MdEmail /></i></a></li>
+                                <li className={styles.li}><a ><i className={styles.pin}><TiSocialPinterest /></i></a></li>
+                                <div onClick={(e) => hoddenSideBar(e)}> <li className={styles.btnAction}><a ><i ><FaArrowLeft /></i></a></li></div>
+
+                            </ul>
+
+                            :
+                            <ul >
+
+                                <div onClick={(e) => showSideBar(e)}> <li className={styles.btnAction}><a ><i ><FaArrowRight /></i></a></li></div>
+
+
+                            </ul>
+
+
+                    }
+
+                </nav>
+            </Box>
+        </Box>
+
+
+
+
+
+
 
     )
 }

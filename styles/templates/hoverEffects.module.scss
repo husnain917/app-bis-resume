@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+html, body {
+  margin: 0;
+  background-color: #f2f2f2;
+  height: 100%;
+  font-family: 'Open Sans', system-ui;
+}
+p {
+  text-align: center;
+  font-weight: 700;
+}
+.img {
+  span {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    &:first-child, &:nth-child(2) {
+      top: 0;
+    }
+    &:first-child, &:nth-child(3) {
+      left: 0;
+    }
+    &:nth-child(2), &:nth-child(4) {
+      right: 0;
+    }
+    &:nth-child(3), &:nth-child(4) {
+      bottom: 0;
+    }
+  }
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  width: 75vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  > a {
+    position: relative;
+    transform-style: preserve-3d;
+    &:hover {
+      cursor: pointer;
+      .title:after {
+        background-position: 0% 100%;
+      }
+    }
+    .img {
+      width: 100%;
+      position: relative;
+      > span {
+        z-index: 2;
+        & ~ img {
+          z-index: 1;
+          transition: 0.2s;
+          width: 100%;
+        }
+        &:first-child:hover ~ img {
+          transform: perspective(600px) rotateX(10deg) rotateY(-10deg);
+        }
+        &:nth-child(2):hover ~ img {
+          transform: perspective(600px) rotateX(10deg) rotateY(10deg);
+        }
+        &:nth-child(3):hover ~ img {
+          transform: perspective(600px) rotateX(-10deg) rotateY(-10deg);
+        }
+        &:nth-child(4):hover ~ img {
+          transform: perspective(600px) rotateX(-10deg) rotateY(10deg);
+        }
+      }
+    }
+    .title {
+      font-weight: 400;
+      font-size: 1.1rem;
+      position: relative;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -2.5px;
+        left: 0;
+        background-image: linear-gradient(to right, #005AB7 50%, transparent 50%);
+        background-size: 200% 100%;
+        background-position: 99%;
+        transition: 0.2s;
+      }
+    }
+    .description {
+      font-size: 0.8rem;
+      margin-top: 0.3rem;
+      display: block;
+    }
+  }
+}

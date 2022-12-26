@@ -26,6 +26,8 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../src/components/imageSelector';
 import Underline from "../../src/components/graphicDesignerTemp/Underline";
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
+import { FaChevronRight } from 'react-icons/fa';
 
 export default function Graphic_Design_Temp() {
   // redux Data
@@ -34,371 +36,366 @@ export default function Graphic_Design_Temp() {
 
   return (
     <>
-      <TempLayout work={true} education={true} skills={true} interest={true}>
-        <Link href={'/templates'}>
-          <div style={{ position: 'fixed', top: '30px', right: '30px' }}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={style.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
-        <Flex
-          justifyContent={{ base: 'none', md: 'center' }}
-          overflow="auto"
-          flexDir={'column'}
-          alignItems={{ sm: 'none', md: 'center' }}
-          bg={{ md: 'none', lg: '#fff' }}
-          className={`${Classes.main}`}
-        >
-          <Box
-            display="flex"
-            flexDir="row"
-            w="100%"
-            minW="850px"
-            maxW="850px"
-            mb={'20px'}
-            mx={'20px'}
-            mt="100px"
+      <div
+        style={{ overflow: 'auto' }}
+      >
+        <TempLayout work={true} education={true} skills={true} interest={true}>
+          <ChangeTempBtn />
+          <Flex
+            justifyContent={{ base: 'none', md: 'center' }}
+            flexDir={'column'}
+            alignItems={{ sm: 'none', md: 'center' }}
+            bg={'#fff'}
+            pt="70px"
           >
-            {/* =============== First Section ============== */}
             <Box
+              display="flex"
+              flexDir="row"
               w="100%"
-              bgColor="#F4F5F7"
-              borderLeftRadius={6}
-              py={2}
-              px={8}
-              position={'relative'}
+              minW="850px"
+              maxW="850px"
+              mb={'20px'}
+              mx={'20px'}
+              mt="100px"
             >
-              {/* _____________ Profile _____________ */}
+              {/* =============== First Section ============== */}
               <Box
-                display={'flex'}
-                flexDirection={'column'}
-                alignItems={'center'}
+                w="100%"
+                bgColor="#F4F5F7"
+                borderLeftRadius={6}
+                py={2}
+                px={12}
+                position={'relative'}
               >
-                <Name
-                  FName={true}
-                  SName={true}
-                  direction="row"
-                  FNameStyle={styles.nameStyle}
-                  SNameStyle={styles.nameStyle}
-                />
-                <Profession
-                  professionStyle={styles.profileSubTitle}
-                />
-              </Box>
-              {/* _____________ Image _____________ */}
-              <Box
-                border={'3px solid #3D3D3D'}
-                display={'flex'}
-                justifyContent={'space-between'}
-                width={'100%'}
-                margin={'50px 0px 30px 0px'}
-              >
-                {/* left container */}
+                {/* _____________ Profile _____________ */}
                 <Box
                   display={'flex'}
-                  justifyContent={'flex-end'}
-                  margin={'25px 0px'}
-                  width={'34%'}
+                  flexDirection={'column'}
+                  alignItems={'center'}
                 >
-                  <Contact
-                    phone={true}
-                    email={true}
-                    circleIcon={true}
-                    circleBg="#947F57"
-                    circleSize="35px"
-                    iconColor="#fff"
-                    margin={'12px 0px 0px 0px'}
-                    parentStyle={styles.contactFont}
+                  <Name
+                    FName={true}
+                    SName={true}
+                    direction="row"
+                    FNameStyle={styles.nameStyle}
+                    SNameStyle={styles.nameStyle}
+                  />
+                  <Profession
+                    professionStyle={styles.profileSubTitle}
                   />
                 </Box>
-                {/* center container */}
+                {/* _____________ Image _____________ */}
                 <Box
-                  width={'26%'}
+                  border={'3px solid #3D3D3D'}
+                  display={'flex'}
+                  justifyContent={'space-between'}
+                  width={'100%'}
+                  margin={'50px 0px 30px 0px'}
                 >
-                  {/* avatar */}
+                  {/* left container */}
                   <Box
-                    position={'absolute'}
-                    top={'19%'}
+                    display={'flex'}
+                    justifyContent={'flex-end'}
+                    margin={'25px 0px'}
+                    width={'34%'}
                   >
-                    <ImageSelector
-                      minWidth="200px"
-                      maxWidth="200px"
-                      maxHeight="200px"
-                      minHeight="200px"
+                    <Contact
+                      phone={true}
+                      email={true}
+                      circleIcon={true}
+                      circleBg="#947F57"
+                      circleSize="35px"
+                      iconColor="#fff"
+                      margin={'12px 0px 0px 0px'}
+                      parentStyle={styles.contactFont}
+                    />
+                  </Box>
+                  {/* center container */}
+                  <Box
+                    width={'26%'}
+                  >
+                    {/* avatar */}
+                    <Box
+                      position={'absolute'}
+                      top={'19%'}
+                    >
+                      <ImageSelector
+                        minWidth="200px"
+                        maxWidth="200px"
+                        maxHeight="200px"
+                        minHeight="200px"
+                      />
+                    </Box>
+                  </Box>
+                  {/* right container */}
+                  <Box
+                    display={'flex'}
+                    justifyContent={'flex-start'}
+                    margin={'25px 0px'}
+                    width={'34%'}
+                  >
+                    <Contact
+                      linkedinURL={true}
+                      website={true}
+                      circleIcon={true}
+                      circleBg="#947F57"
+                      circleSize="35px"
+                      iconColor="#fff"
+                      margin={'12px 0px 0px 0px'}
+                      parentStyle={styles.contactFont}
                     />
                   </Box>
                 </Box>
-                {/* right container */}
+                {/* _____________ About me _____________ */}
                 <Box
-                  display={'flex'}
-                  justifyContent={'flex-start'}
-                  margin={'25px 0px'}
-                  width={'34%'}
+                  paddingTop={'20px'}
                 >
-                  <Contact
-                    linkedinURL={true}
-                    website={true}
-                    circleIcon={true}
-                    circleBg="#947F57"
-                    circleSize="35px"
-                    iconColor="#fff"
-                    margin={'12px 0px 0px 0px'}
-                    parentStyle={styles.contactFont}
+                  <Underline
+                    width='100%'
+                    bgColor='#947F57'
                   />
-                </Box>
-              </Box>
-              {/* _____________ About me _____________ */}
-              <Box
-                paddingTop={'20px'}
-              >
-                <Underline
-                  width='100%'
-                  bgColor='#947F57'
-                />
-                <Box
-                  display={'flex'}
-                  justifyContent={'center'}
-                >
-                  <Heading
-                    title={'PROFILE'}
-                    color="#947F57"
-                    padding={'0px 0px 0px 86px'}
+                  <Box
+                    display={'flex'}
+                    justifyContent={'center'}
+                  >
+                    <Heading
+                      title={'PROFILE'}
+                      color="#947F57"
+                      padding={'0px 0px 0px 86px'}
+                    />
+                  </Box>
+                  <Underline
+                    width='100%'
+                    bgColor='#947F57'
                   />
+                  <Box
+                    display={'flex'}
+                    justifyContent={'center'}
+                  >
+                    <About
+                      minW="40%"
+                      maxW="40%"
+                      aboutStyle={Classes.aboutText}
+                      textColor="#947F57"
+                      fontSize="16px"
+                      fontWeight={600}
+                    />
+                  </Box>
                 </Box>
-                <Underline
-                  width='100%'
-                  bgColor='#947F57'
-                />
+                {/* _____________ main container _____________ */}
                 <Box
+                  marginTop={'30px'}
+                  width={'100%'}
                   display={'flex'}
-                  justifyContent={'center'}
                 >
-                  <About
-                    minW="40%"
-                    maxW="40%"
-                    aboutStyle={Classes.aboutText}
-                    textColor="#947F57"
-                    fontSize="16px"
-                    fontWeight={600}
-                  />
-                </Box>
-              </Box>
-              {/* _____________ main container _____________ */}
-              <Box
-                marginTop={'30px'}
-                width={'100%'}
-                display={'flex'}
-              >
-                {/* left container */}
-                <Box
-                  width={'40%'}
-                  borderRight={'2px solid #947F57'}
-                  padding={'0px 40px 0px 0px'}
-                >
-                  {/* expertise section */}
-                  {resumeData?.hobbies?.visible && (
-                    <>
-                      <Box>
-                        <Underline
-                          width='100%'
-                          bgColor='#947F57'
-                        />
-                        <Box
-                          display={'flex'}
-                        >
-                          <Heading
-                            title="INTEREST"
-                            color="#947F57"
-                            fontSize={'20px'}
-                            fontWeight={600}
-                            onSideSectionShow={() =>
-                              setShow({ ...show, interest: true })
-                            }
-                          />
-                          {show.interest && (
-                            <SectionSideMenu
-                              bg="#947F57"
-                              iconColor={'#fff'}
-                              onHide={() => setShow({ ...show, interest: false })}
-                              onDelete={INTEREST}
+                  {/* left container */}
+                  <Box
+                    width={'40%'}
+                    borderRight={'2px solid #947F57'}
+                    padding={'0px 40px 0px 5px'}
+                  >
+                    {/* expertise section */}
+                    <Box
+                      margin={'5px 0px 0px 0px'}
+                    >
+                      {resumeData?.hobbies?.visible && (
+                        <div className={Classes.sideMenu}>
+                          <div className={Classes.sideMenuBox}>
+                            {show.interest && (
+                              <SectionSideMenu
+                                bg="#947F57"
+                                iconColor={'#fff'}
+                                onHide={() => setShow({ ...show, interest: false })}
+                                onDelete={INTEREST}
+                              />
+                            )}
+                          </div>
+                          <div>
+                            <Underline
+                              width='100%'
+                              bgColor='#947F57'
                             />
-                          )}
-                        </Box>
-                        <Underline
-                          width='100%'
-                          bgColor='#947F57'
-                        />
-                      </Box>
-                      {/* Interest Component  */}
-                      <Interest
-                        interestStyle={styles.contactFont}
-                        parentContainerStyle={styles.parentDiv}
-                      />
-                    </>
-                  )}
-                  {/* skill */}
-                  {resumeData?.skills?.visible && (
-                    <>
-                      <Box>
-                        <Underline
-                          width='100%'
-                          bgColor='#947F57'
-                        />
-                        <Box
-                          display={'flex'}
-                        >
-                          <Heading
-                            title={'RELEVANT SKILLS'}
-                            color="#947F57"
-                            fontSize={'20px'}
-                            fontWeight={600}
-                            onSideSectionShow={() =>
-                              setShow({ ...show, skills: true })
-                            }
-                          />
-                          {show.skills && (
-                            <SectionSideMenu
-                              onHide={() => setShow({ ...show, skills: false })}
-                              bg="#947F57"
-                              iconColor={'#fff'}
-                              onDelete={SKILL}
+                            <Heading
+                              title="INTEREST"
+                              color="#947F57"
+                              fontSize={'20px'}
+                              fontWeight={600}
+                              onSideSectionShow={() =>
+                                setShow({ ...show, interest: true })
+                              }
                             />
-                          )}
-                        </Box>
-                        <Underline
-                          width='100%'
-                          bgColor='#947F57'
-                        />
-                      </Box>
-                      {/* skill component */}
-                      <Skill
-                        skillStyle={styles.contactFont}
-                        progressBar={true}
-                        strokeWidth="2"
-                        lineStyle={styles.line}
-                        strokeColor="#947F57"
-                        trailColor="#fff"
-                        percentageStyle={styles.percent}
-                        parentContainerStyle={styles.parentDiv}
-                      />
-                    </>
-                  )}
-                </Box>
+                            <Underline
+                              width='100%'
+                              bgColor='#947F57'
+                            />
+                            <Interest
+                              interestStyle={styles.contactFont}
+                              parentContainerStyle={styles.parentDiv}
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </Box>
+                    {/* skill */}
+                    <Box
+                      margin={'5px 0px 0px 0px'}
+                    >
+                      {resumeData?.skills?.visible && (
+                        <div className={Classes.sideMenu}>
+                          <div className={Classes.sideMenuBox}>
+                            {show?.skills && (
+                              <SectionSideMenu
+                                onDelete={SKILL}
+                                onHide={() => setShow({ ...show, skills: false })}
+                                bg="#947F57"
+                                iconColor={'#fff'}
+                              />
+                            )}
+                          </div>
+                          <div>
+                            <Underline
+                              width='100%'
+                              bgColor='#947F57'
+                            />
+                            <Heading
+                              title={'SKILLS'}
+                              color="#947F57"
+                              fontSize={'20px'}
+                              fontWeight={600}
+                              onSideSectionShow={() =>
+                                setShow({ ...show, skills: true })
+                              }
+                            />
+                            <Underline
+                              width='100%'
+                              bgColor='#947F57'
+                            />
+                            <Skill
+                              skillStyle={styles.contactFont}
+                              parentContainerStyle={styles.parentDiv}
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </Box>
+                  </Box>
 
-                {/* right container */}
-                <Box
-                  width={'60%'}
-                  padding={'0px 0px 0px 40px'}
-                >
-                  {/* work experience */}
-                  {resumeData?.work?.visible && (
-                    <>
-                      <Box>
-                        <Underline
-                          width='100%'
-                          bgColor='#947F57'
-                        />
-                        <Box
-                          display={'flex'}
-                          justifyContent={'space-between'}
-                        >
-                          <Heading
-                            color={'#947F57'}
-                            title="WORK EXPERIENCE"
-                            fontSize={'20px'}
-                            fontWeight={600}
-                            onSideSectionShow={() => setShow({ ...show, work: true })}
-                          />
-                          {show.work && (
-                            <SectionSideMenu
-                              onHide={() => setShow({ ...show, work: false })}
-                              bg="#947F57"
-                              iconColor={'#fff'}
-                              onDelete={WORK}
+                  {/* right container */}
+                  <Box
+                    width={'60%'}
+                    padding={'0px 0px 0px 55px'}
+                  >
+                    {/* work experience */}
+                    <Box
+                      margin={'5px 0px 0px 0px'}
+                    >
+                      {resumeData?.work?.visible && (
+                        <div className={Classes.sideMenu}>
+                          <div className={Classes.sideMenuBox}>
+                            {show?.work && (
+                              <SectionSideMenu
+                                onHide={() => setShow({ ...show, work: false })}
+                                onDelete={WORK}
+                                bg="#947F57"
+                                iconColor={'#fff'}
+                              />
+                            )}
+                          </div>
+                          <div>
+                            <Underline
+                              width='100%'
+                              bgColor='#947F57'
                             />
-                          )}
-                        </Box>
-                        <Underline
-                          width='100%'
-                          bgColor='#947F57'
-                        />
-                      </Box>
-                      {/* _____________ Work Experience _____________ */}
-                      <WorkExperience
-                        company={true}
-                        position={true}
-                        date={true}
-                        summary={true}
-                        companyStyle={Classes.company}
-                        positionStyle={Classes.programText}
-                        dateStyle={Classes.date}
-                        summaryStyle={Classes.description}
-                        parentContainerStyle={styles.parentDiv}
-                        textColor="#947F57"
-                        direction='row'
-                      />
-                    </>
-                  )}
-                  {/* education */}
-                  {resumeData?.education?.visible && (
-                    <>
-                      <Box>
-                        <Underline
-                          width='100%'
-                          bgColor='#947F57'
-                        />
-                        <Box
-                          display={'flex'}
-                          justifyContent={'space-between'}
-                        >
-                          <Heading
-                            color={'#947F57'}
-                            title="EDUCATION"
-                            fontSize={'20px'}
-                            fontWeight={600}
-                            onSideSectionShow={() =>
-                              setShow({ ...show, education: true })
-                            }
-                          />
-                          {show.education && (
-                            <SectionSideMenu
-                              onHide={() => setShow({ ...show, education: false })}
-                              bg="#947F57"
-                              iconColor={'#fff'}
-                              onDelete={EDUCATION}
+                            <Heading
+                              color={'#947F57'}
+                              title="WORK EXPERIENCE"
+                              fontSize={'20px'}
+                              fontWeight={600}
+                              maxW={'fit-content'}
+                              onSideSectionShow={() => setShow({ ...show, work: true })}
                             />
-                          )}
-                        </Box>
-                        <Underline
-                          width='100%'
-                          bgColor='#947F57'
-                        />
-                      </Box>
-                      <Education
-                        degree={true}
-                        institution={true}
-                        date={true}
-                        summary={true}
-                        parentContainerStyle={styles.parentDiv}
-                        institutionStyle={Classes.company}
-                        degreeStyle={Classes.programText}
-                        dateStyle={Classes.date}
-                        summaryStyle={Classes.description}
-                        degree_placeholder="Study Program"
-                        textColor="#947F57"
-                        direction='row'
-                      />
-                    </>
-                  )}
+                            <Underline
+                              width='100%'
+                              bgColor='#947F57'
+                            />
+                            <WorkExperience
+                              company={true}
+                              position={true}
+                              date={true}
+                              summary={true}
+                              companyStyle={Classes.company}
+                              positionStyle={Classes.programText}
+                              dateStyle={Classes.date}
+                              summaryStyle={Classes.description}
+                              parentContainerStyle={styles.parentDiv}
+                              textColor="#947F57"
+                              direction='row'
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </Box>
+                    {/* education */}
+                    <Box
+                      margin={'5px 0px 0px 0px'}
+                    >
+                      {resumeData?.education?.visible && (
+                        <div className={Classes.sideMenu}>
+                          <div className={Classes.sideMenuBox}>
+                            {show?.education && (
+                              <SectionSideMenu
+                                onHide={() =>
+                                  setShow({ ...show, education: false })
+                                }
+                                onDelete={EDUCATION}
+                                bg="#947F57"
+                                iconColor={'#fff'}
+                              />
+                            )}
+                          </div>
+                          <div>
+                            <Underline
+                              width='100%'
+                              bgColor='#947F57'
+                            />
+                            <Heading
+                              color={'#947F57'}
+                              title="EDUCATION"
+                              fontSize={'20px'}
+                              fontWeight={600}
+                              onSideSectionShow={() =>
+                                setShow({ ...show, education: true })
+                              }
+                            />
+                            <Underline
+                              width='100%'
+                              bgColor='#947F57'
+                            />
+                            <Education
+                              degree={true}
+                              institution={true}
+                              date={true}
+                              summary={true}
+                              parentContainerStyle={styles.parentDiv}
+                              institutionStyle={Classes.company}
+                              degreeStyle={Classes.programText}
+                              dateStyle={Classes.date}
+                              summaryStyle={Classes.description}
+                              degree_placeholder="Study Program"
+                              textColor="#947F57"
+                              direction='row'
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </Box>
+                  </Box>
                 </Box>
               </Box>
             </Box>
-          </Box>
-        </Flex>
-      </TempLayout>
+          </Flex>
+        </TempLayout>
+      </div>
     </>
   )
 }

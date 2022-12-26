@@ -1,4 +1,5 @@
 import React from 'react';
+import Feedback from '../feedbackPopUp/Feedback';
 import TempNavbar from './TempNavbar';
 export default function TempLayout({
   children,
@@ -11,6 +12,7 @@ export default function TempLayout({
   organization,
   interest,
   certificate,
+  downloadPDF,
 }) {
   return (
     <div>
@@ -24,8 +26,9 @@ export default function TempLayout({
         organization={organization}
         interest={interest}
         certificate={certificate}
+        downloadPDF={downloadPDF}
       />
-
+      <Feedback />
       <main>{children}</main>
     </div>
   );
