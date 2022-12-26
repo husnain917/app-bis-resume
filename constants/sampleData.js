@@ -167,7 +167,7 @@ export const sampleData = {
       index: 2,
       items: [
         {
-          Name: '',
+          title: '',
         },
       ],
       visible: true,
