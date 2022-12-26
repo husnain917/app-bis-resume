@@ -12,6 +12,10 @@ import {
   DrawerBody,
   DrawerFooter,
   useDisclosure,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from '@chakra-ui/react';
 import React from 'react';
 import {
@@ -20,6 +24,7 @@ import {
   SettingsIcon,
   HamburgerIcon,
   DownloadIcon,
+  ChevronDownIcon,
 } from '@chakra-ui/icons';
 import {
   FaFacebookF,
@@ -132,21 +137,45 @@ export default function TempNavbar({
           <SettingsIcon mr="5px" />
           Setting
         </Button>
-        <Button
-          bgColor="transparent"
-          color="white"
-          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
-          _hover={{
-            backgroundColor: 'transparent',
-
-            color: '#313C4E',
-            transition: '0.4s',
-          }}
-          onClick={downloadPDF}
-        >
-          <DownloadIcon mr="5px" />
-          Download
-        </Button>
+        <Menu>
+          <MenuButton
+            as={Button}
+            leftIcon={<ChevronDownIcon />}
+            bgColor="transparent"
+            color="white"
+            fontSize={{ base: '12px', sm: '14px', md: '16px' }}
+            _hover={{
+              backgroundColor: 'transparent',
+              color: '#313C4E',
+              transition: '0.4s',
+            }}
+            _expanded={{ bg: 'transparent' }}
+            _focus={{ boxShadow: 'none' }}
+          >
+            Download
+          </MenuButton>
+          <MenuList
+            margin={'0px 0px 0px 20px'}
+          >
+            <MenuItem
+              color={'teal.700'}
+              display={'flex'}
+              justifyContent={'space-between'}
+              onClick={downloadPDF}
+            >
+              Download as a PDF
+              <DownloadIcon mr="5px" />
+            </MenuItem>
+            <MenuItem
+              color={'teal.700'}
+              display={'flex'}
+              justifyContent={'space-between'}
+            >
+              Download as a Word File
+              <DownloadIcon mr="5px" />
+            </MenuItem>
+          </MenuList>
+        </Menu>
       </Box>
 
       <Box position={'absolute'} right={{ base: '10px', lg: '25px' }}>
