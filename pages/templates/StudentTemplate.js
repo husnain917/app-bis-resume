@@ -44,251 +44,253 @@ const StudentTemplate = () => {
           pt="70px"
         >
           <Box
-            minW={830}
-            maxW={830}
-            borderRadius={6}
-            my={10}
-            ml={{ base: 20, lg: 0 }}
-            pt={'50px'}
-            bg="white"
-            borderWidth="1px"
-            borderColor={'#00000023'}
-            ref={pdfRef}
+            margin={'20px 20px 30px 20px'}
           >
-            <Box>
-              <Box bg={'#EBC9BB'} h={'230px'}>
-                <Box ml={'320px'} pt={'60px'}>
-                  {/* =============== Name Section =============== */}
-                  <Name
-                    FName={true}
-                    SName={true}
-                    FNameStyle={Classes.name}
-                    SNameStyle={Classes.name}
-                  />
-                  {/* =============== Profession Section =============== */}
-                  <Profession professionStyle={Classes.Profession} />
+            <Box
+              minW={830}
+              maxW={830}
+              borderRadius={6}
+              pt={'50px'}
+              bg="white"
+              borderWidth="1px"
+              borderColor={'#00000023'}
+              ref={pdfRef}
+            >
+              <Box>
+                <Box bg={'#EBC9BB'} h={'230px'}>
+                  <Box ml={'320px'} pt={'60px'}>
+                    {/* =============== Name Section =============== */}
+                    <Name
+                      FName={true}
+                      SName={true}
+                      FNameStyle={Classes.name}
+                      SNameStyle={Classes.name}
+                    />
+                    {/* =============== Profession Section =============== */}
+                    <Profession professionStyle={Classes.Profession} />
+                  </Box>
                 </Box>
-              </Box>
-              <Box display={'flex'} alignItems="stretch">
-                {/* __________________  First Section  __________________ */}
-                <Box
-                  minW="250px"
-                  maxW={'250px'}
-                  bg={'#6B9999'}
-                  mt="-280px"
-                  pb={12}
-                  px="24px"
-                  ml={'30px'}
-                >
-                  {/* =============== Profile Section =============== */}
-                  <ImageSelector
-                    minWidth={200}
-                    maxWidth={200}
-                    minHeight={200}
-                    maxHeight={200}
-                    marginTop={'40px'}
-                  />
-                  <Heading
-                    title={'PROFILE'}
-                    color="#fff"
-                    fontSize={'17px'}
-                    letterSpacing="1px"
-                    fontWeight="700"
-                    margin="40px 0px 0px 0px"
-                  />
-                  <About aboutStyle={Classes.about} minW="full" maxW="full" />
-                  <Heading
-                    title={'CONTACT ME'}
-                    color="#fff"
-                    fontSize={'17px'}
-                    letterSpacing="1px"
-                    fontWeight="700"
-                    margin="20px 0px 0px 0px"
-                  />
-                  <Contact
-                    phone={true}
-                    email={true}
-                    location={true}
-                    iconColor="#fff"
-                    iconSize="24px"
-                    style={Classes.profileText}
-                    margin={'5px 0px'}
-                    circleIcon={true}
-                  />
-                </Box>
-                {/* __________________  Second Section  __________________ */}
-                <Box
-                  mt="20px"
-                  mr={'30px'}
-                  minW="450px"
-                  maxW={'450px'}
-                  mb="30px"
-                >
-                  {/* =============== Education Section =============== */}
-                  {resumeData?.education?.visible && (
-                    <div className={Classes.sideMenu}>
-                      <div className={Classes.sideMenuBox}>
-                        {show?.education && (
-                          <SectionSideMenu
-                            onHide={() =>
-                              setShow({ ...show, education: false })
-                            }
-                            onDelete={EDUCATION}
-                            bg="#6B9999"
-                          />
-                        )}
-                      </div>
-                      <div>
-                        <Heading
-                          title={'EDUCATION'}
-                          fontSize="20px"
-                          margin="20px 0px 10px 0px"
-                          fontWeight={600}
-                          onSideSectionShow={() =>
-                            setShow({ ...show, education: true })
-                          }
-                          circleIconHeading={true}
-                          icon={(props) => (
-                            <FaChevronRight
-                              color="#6B9999"
-                              size={22}
-                              {...props}
+                <Box display={'flex'} alignItems="stretch">
+                  {/* __________________  First Section  __________________ */}
+                  <Box
+                    minW="250px"
+                    maxW={'250px'}
+                    bg={'#6B9999'}
+                    mt="-280px"
+                    pb={12}
+                    px="24px"
+                    ml={'30px'}
+                  >
+                    {/* =============== Profile Section =============== */}
+                    <ImageSelector
+                      minWidth={200}
+                      maxWidth={200}
+                      minHeight={200}
+                      maxHeight={200}
+                      marginTop={'40px'}
+                    />
+                    <Heading
+                      title={'PROFILE'}
+                      color="#fff"
+                      fontSize={'17px'}
+                      letterSpacing="1px"
+                      fontWeight="700"
+                      margin="40px 0px 0px 0px"
+                    />
+                    <About aboutStyle={Classes.about} minW="full" maxW="full" />
+                    <Heading
+                      title={'CONTACT ME'}
+                      color="#fff"
+                      fontSize={'17px'}
+                      letterSpacing="1px"
+                      fontWeight="700"
+                      margin="20px 0px 0px 0px"
+                    />
+                    <Contact
+                      phone={true}
+                      email={true}
+                      location={true}
+                      iconColor="#fff"
+                      iconSize="24px"
+                      style={Classes.profileText}
+                      margin={'5px 0px'}
+                      circleIcon={true}
+                    />
+                  </Box>
+                  {/* __________________  Second Section  __________________ */}
+                  <Box
+                    mt="20px"
+                    mr={'30px'}
+                    minW="450px"
+                    maxW={'450px'}
+                    mb="30px"
+                  >
+                    {/* =============== Education Section =============== */}
+                    {resumeData?.education?.visible && (
+                      <div className={Classes.sideMenu}>
+                        <div className={Classes.sideMenuBox}>
+                          {show?.education && (
+                            <SectionSideMenu
+                              onHide={() =>
+                                setShow({ ...show, education: false })
+                              }
+                              onDelete={EDUCATION}
+                              bg="#6B9999"
                             />
                           )}
-                        />
-                        <Education
-                          institution={true}
-                          date={true}
-                          summary={true}
-                          institutionStyle={Classes.institute}
-                          summaryStyle={Classes.summary}
-                          dateStyle={Classes.summary}
-                          margin="0px 0px 0px 25px"
-                        />
+                        </div>
+                        <div>
+                          <Heading
+                            title={'EDUCATION'}
+                            fontSize="20px"
+                            margin="20px 0px 10px 0px"
+                            fontWeight={600}
+                            onSideSectionShow={() =>
+                              setShow({ ...show, education: true })
+                            }
+                            circleIconHeading={true}
+                            icon={(props) => (
+                              <FaChevronRight
+                                color="#6B9999"
+                                size={22}
+                                {...props}
+                              />
+                            )}
+                          />
+                          <Education
+                            institution={true}
+                            date={true}
+                            summary={true}
+                            institutionStyle={Classes.institute}
+                            summaryStyle={Classes.summary}
+                            dateStyle={Classes.summary}
+                            margin="0px 0px 0px 25px"
+                          />
+                        </div>
                       </div>
-                    </div>
-                  )}
+                    )}
 
-                  {/* =============== Languages Section =============== */}
-                  {resumeData?.languages?.visible && (
-                    <div className={Classes.sideMenu}>
-                      <div className={Classes.sideMenuBox}>
-                        {show?.languages && (
-                          <SectionSideMenu
-                            onHide={() =>
-                              setShow({ ...show, languages: false })
+                    {/* =============== Languages Section =============== */}
+                    {resumeData?.languages?.visible && (
+                      <div className={Classes.sideMenu}>
+                        <div className={Classes.sideMenuBox}>
+                          {show?.languages && (
+                            <SectionSideMenu
+                              onHide={() =>
+                                setShow({ ...show, languages: false })
+                              }
+                              onDelete={LANGUAGES}
+                              bg="#6B9999"
+                            />
+                          )}
+                        </div>
+                        <div>
+                          <Heading
+                            title={'LANGUAGES'}
+                            fontSize="20px"
+                            fontWeight={600}
+                            onSideSectionShow={() =>
+                              setShow({ ...show, languages: true })
                             }
-                            onDelete={LANGUAGES}
-                            bg="#6B9999"
+                            margin="20px 0px 10px 0px"
+                            circleIconHeading={true}
+                            icon={(props) => (
+                              <FaChevronRight
+                                color="#6B9999"
+                                size={22}
+                                {...props}
+                              />
+                            )}
                           />
-                        )}
+                          <Language
+                            langStyle={Classes.summary}
+                            margin={'0px 0px 0px 25px'}
+                          />
+                        </div>
                       </div>
-                      <div>
-                        <Heading
-                          title={'LANGUAGES'}
-                          fontSize="20px"
-                          fontWeight={600}
-                          onSideSectionShow={() =>
-                            setShow({ ...show, languages: true })
-                          }
-                          margin="20px 0px 10px 0px"
-                          circleIconHeading={true}
-                          icon={(props) => (
-                            <FaChevronRight
-                              color="#6B9999"
-                              size={22}
-                              {...props}
+                    )}
+                    {/* =============== Skill Section =============== */}
+                    {resumeData?.skills?.visible && (
+                      <div className={Classes.sideMenu}>
+                        <div className={Classes.sideMenuBox}>
+                          {show?.skills && (
+                            <SectionSideMenu
+                              onDelete={SKILL}
+                              onHide={() => setShow({ ...show, skills: false })}
+                              bg="#6B9999"
                             />
                           )}
-                        />
-                        <Language
-                          langStyle={Classes.summary}
-                          margin={'0px 0px 0px 25px'}
-                        />
-                      </div>
-                    </div>
-                  )}
-                  {/* =============== Skill Section =============== */}
-                  {resumeData?.skills?.visible && (
-                    <div className={Classes.sideMenu}>
-                      <div className={Classes.sideMenuBox}>
-                        {show?.skills && (
-                          <SectionSideMenu
-                            onDelete={SKILL}
-                            onHide={() => setShow({ ...show, skills: false })}
-                            bg="#6B9999"
+                        </div>
+                        <div>
+                          <Heading
+                            title={'COMPUTER SKILLS'}
+                            fontSize="20px"
+                            fontWeight={600}
+                            margin="20px 0px 10px 0px"
+                            circleIconHeading={true}
+                            onSideSectionShow={() =>
+                              setShow({ ...show, skills: true })
+                            }
+                            icon={(props) => (
+                              <FaChevronRight
+                                color="#6B9999"
+                                size={22}
+                                {...props}
+                              />
+                            )}
                           />
-                        )}
+                          <Skill
+                            skillStyle={Classes.summary}
+                            margin={'0px 0px 0px 25px'}
+                          />
+                        </div>
                       </div>
-                      <div>
-                        <Heading
-                          title={'COMPUTER SKILLS'}
-                          fontSize="20px"
-                          fontWeight={600}
-                          margin="20px 0px 10px 0px"
-                          circleIconHeading={true}
-                          onSideSectionShow={() =>
-                            setShow({ ...show, skills: true })
-                          }
-                          icon={(props) => (
-                            <FaChevronRight
-                              color="#6B9999"
-                              size={22}
-                              {...props}
+                    )}
+                    {/* =============== Work Experience Section =============== */}
+                    {resumeData?.work?.visible && (
+                      <div className={Classes.sideMenu}>
+                        <div className={Classes.sideMenuBox}>
+                          {show?.work && (
+                            <SectionSideMenu
+                              onHide={() => setShow({ ...show, work: false })}
+                              onDelete={WORK}
+                              bg="#6B9999"
                             />
                           )}
-                        />
-                        <Skill
-                          skillStyle={Classes.summary}
-                          margin={'0px 0px 0px 25px'}
-                        />
-                      </div>
-                    </div>
-                  )}
-                  {/* =============== Work Experience Section =============== */}
-                  {resumeData?.work?.visible && (
-                    <div className={Classes.sideMenu}>
-                      <div className={Classes.sideMenuBox}>
-                        {show?.work && (
-                          <SectionSideMenu
-                            onHide={() => setShow({ ...show, work: false })}
-                            onDelete={WORK}
-                            bg="#6B9999"
+                        </div>
+                        <div>
+                          <Heading
+                            title={'VOLUNTEER EXPERIENCE'}
+                            fontSize="20px"
+                            fontWeight={600}
+                            margin="20px 0px 10px 0px"
+                            circleIconHeading={true}
+                            minW="300px"
+                            onSideSectionShow={() =>
+                              setShow({ ...show, work: true })
+                            }
+                            maxW={'fit-content'}
+                            icon={(props) => (
+                              <FaChevronRight
+                                color="#6B9999"
+                                size={22}
+                                {...props}
+                              />
+                            )}
                           />
-                        )}
+                          <WorkExperience
+                            company={true}
+                            date={true}
+                            summary={true}
+                            companyStyle={Classes.institute}
+                            dateStyle={Classes.summary}
+                            summaryStyle={Classes.summary}
+                            margin="0px 0px 0px 25px"
+                          />
+                        </div>
                       </div>
-                      <div>
-                        <Heading
-                          title={'VOLUNTEER EXPERIENCE'}
-                          fontSize="20px"
-                          fontWeight={600}
-                          margin="20px 0px 10px 0px"
-                          circleIconHeading={true}
-                          minW="300px"
-                          onSideSectionShow={() =>
-                            setShow({ ...show, work: true })
-                          }
-                          maxW={'fit-content'}
-                          icon={(props) => (
-                            <FaChevronRight
-                              color="#6B9999"
-                              size={22}
-                              {...props}
-                            />
-                          )}
-                        />
-                        <WorkExperience
-                          company={true}
-                          date={true}
-                          summary={true}
-                          companyStyle={Classes.institute}
-                          dateStyle={Classes.summary}
-                          summaryStyle={Classes.summary}
-                          margin="0px 0px 0px 25px"
-                        />
-                      </div>
-                    </div>
-                  )}
+                    )}
+                  </Box>
                 </Box>
               </Box>
             </Box>
