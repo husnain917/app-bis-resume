@@ -7,6 +7,8 @@ import CardSliderFunc from "../compProfessionalResume/compComponents/CardSlider"
 import { useWindowSizing } from "../../../customHooks/useWindowSizing";
 import AdvSlider from "./AdvSlider";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
+import CommonButton from "../commonButton/CommonButton";
 
 export default function Advantages() {
   const [isTabActive, setIsTabActive] = useState(0);
@@ -93,10 +95,9 @@ export default function Advantages() {
         <Box display="flex" alignItems="center" justifyContent="space-around">
           <Box className="cursor">
             <Link href="/templates">
-              <Button
-                colorScheme="#027C87"
-                bgColor="#027C87"
-                color="white"
+              <CommonButton
+                width={"250px"}
+                height={"40px"}
                 borderRadius="50px"
                 fontSize={[
                   "1rem",
@@ -106,17 +107,17 @@ export default function Advantages() {
                   "1.2rem",
                   "1.5rem",
                 ]}
-                fontWeight="bold"
                 textAlign="center"
+                color={"whitesmoke"}
                 mb="5%"
                 p={["0px", , "25px", "25px", "25px", "30px"]}
                 pl="40px"
                 pr="40px"
                 mt={["10%", "10%", "0%"]}
-                className={styles.benefitBtn}
-              >
-                Build my resume
-              </Button>
+                backgroundColor={"#2CACD5"}
+                title={"Build your resume"}
+                rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
+              />
             </Link>
           </Box>
         </Box>

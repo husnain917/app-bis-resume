@@ -26,7 +26,7 @@ const FaqRightImageWithList = ({
   image,
 }) => {
   return (
-    <Box w={["100%", "94%", "94%", "98%", "92%", "95%"]}>
+    <Box w={["100%", "100%", "100%", "1000px", "92%", "95%"]}>
       <Grid
         templateAreas={[`"image textArea ."`]}
         gridTemplateRows={"1,1fr"}

@@ -3,6 +3,7 @@ import { Button, Box } from "@chakra-ui/react";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import ImageBuild from "../../public/mainImageBuild.webp";
+import CommonButton from "./commonButton/CommonButton";
 import Link from "next/link";
 
 export default function BuildResume() {
@@ -15,9 +16,9 @@ export default function BuildResume() {
         <Box className={styles.ctaHr} mt={2} mb={3}></Box>
 
         <div>
-          <Box className="cursor">
+          <Box>
             <Link href="/templates">
-              <Button
+              {/* <Button
                 className={styles.ctaBtn}
                 bg="#2CACD5"
                 colorScheme="#2CACD5"
@@ -29,7 +30,16 @@ export default function BuildResume() {
                 mb={1}
               >
                 Build Your Resume
-              </Button>
+              </Button> */}
+              <CommonButton
+                title="Build Your Resume"
+                hoverCursor={"pointer"}
+                backgroundColor={"#2CACD5"}
+                color={"whitesmoke"}
+                rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
+                // hoverBackgroundColor={"red"}
+                // className={"hoverEffects"}
+              />
             </Link>
           </Box>
           <p>No credit card required</p>
