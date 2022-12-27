@@ -35,12 +35,13 @@ export default function HintSection() {
             textAlign="center"
             pl={["7%", "14%"]}
             pr={["14%"]}
-            className={"afterHeading"}
+            // className={"afterHeading"}
+            className={"sub-heading"}
           >
             Build Your Resume Fast and Easy.
           </Text>
         </Box>
-        {/* <Box className={styles.hrLine}>
+        <Box className={styles.hrLine}>
           <FaMinus
             style={{
               color: "#1dbfaf",
@@ -55,7 +56,7 @@ export default function HintSection() {
               marginTop: "0%",
             }}
           />
-        </Box> */}
+        </Box>
         <Text
           color="#313B47"
           fontSize={[
