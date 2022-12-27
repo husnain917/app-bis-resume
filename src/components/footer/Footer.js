@@ -7,40 +7,89 @@ import {
   FaTwitter,
   FaInstagram,
 } from "react-icons/fa";
+import CommonSocial from "../commonButton/CommonSocial";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <>
       <div className={styles.fcontainer2}>
-        <a href="https://web.facebook.com/login/?_rdc=1&_rdr">
-          <div className={styles.oiconDiv}>
-            <div className={styles.iconDiv1}>
-              <FaFacebookF className={styles.icon} />
-            </div>
-          </div>
-        </a>
-        <a href="https://www.linkedin.com/home">
-          <div className={styles.oiconDiv}>
-            <div className={styles.iconDiv2}>
-              <FaLinkedinIn className={styles.icon} />
-            </div>
-          </div>
-        </a>
-        <a href="https://twitter.com/login">
-          <div className={styles.oiconDiv}>
-            <div className={styles.iconDiv3}>
-              <FaTwitter className={styles.icon} />
-            </div>
-          </div>
-        </a>
-        <a href="https://www.instagram.com/accounts/login/">
-          <div className={styles.oiconDiv}>
-            <div className={styles.iconDiv4}>
-              <FaInstagram className={styles.icon} />
-            </div>
-          </div>
-        </a>
+        <Link href="https://web.facebook.com/login/?_rdc=1&_rdr">
+          <CommonSocial
+            hoverCursor={"pointer"}
+            backgroundColor={"blue"}
+            borderRadius={"50%"}
+            color={"whitesmoke"}
+            margin={"0"}
+            padding={"0"}
+            hoverBorder={"1px solid black"}
+            // className={"hoverEffects"}
+            icon={
+              <FaFacebookF
+                color={"white"}
+                fontWeight={"bold"}
+                fontSize={"1.3rem"}
+              />
+            }
+          />
+        </Link>
+        <Link href="https://www.linkedin.com/home">
+          <CommonSocial
+            hoverCursor={"pointer"}
+            backgroundColor={"blue"}
+            borderRadius={"50%"}
+            color={"whitesmoke"}
+            margin={"0px 10px 0px 10px"}
+            padding={"0"}
+            hoverBorder={"1px solid black"}
+            icon={
+              <FaLinkedinIn
+                color={"white"}
+                fontWeight={"bold"}
+                fontSize={"1.3rem"}
+              />
+            }
+          />
+        </Link>
+        <Link href="https://twitter.com/login">
+          <CommonSocial
+            hoverCursor={"pointer"}
+            backgroundColor={"blue"}
+            borderRadius={"50%"}
+            color={"whitesmoke"}
+            margin={"0px 10px 0px 0px"}
+            padding={"0"}
+            hoverBorder={"1px solid black"}
+            // className={"hoverEffects"}
+            icon={
+              <FaTwitter
+                color={"white"}
+                fontWeight={"bold"}
+                fontSize={"1.3rem"}
+              />
+            }
+          />
+        </Link>
+        <Link href="https://www.instagram.com/accounts/login/">
+          <CommonSocial
+            hoverCursor={"pointer"}
+            backgroundColor={"blue"}
+            borderRadius={"50%"}
+            color={"whitesmoke"}
+            margin={"0"}
+            padding={"0"}
+            hoverBorder={"1px solid black"}
+            // className={"hoverEffects"}
+            icon={
+              <FaInstagram
+                color={"white"}
+                fontWeight={"bold"}
+                fontSize={"1.3rem"}
+              />
+            }
+          />
+        </Link>
       </div>
       <div className={styles.fcontainer1}>
         <div className={styles.linkDiv}>
