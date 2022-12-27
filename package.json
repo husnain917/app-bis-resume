@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.9",
+    
     "@chakra-ui/react": "^2.3.2",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
@@ -52,7 +53,8 @@
     "sass": "^1.54.9",
     "slick-carousel": "^1.8.1",
     "swiper": "^8.4.5",
-    "uniqid": "^5.4.0"
+    "uniqid": "^5.4.0",
+    "youtube-player": "^5.5.2"
   },
   "devDependencies": {
     "eslint": "8.23.1",

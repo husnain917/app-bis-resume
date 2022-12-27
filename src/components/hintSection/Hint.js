@@ -222,6 +222,7 @@ export default function Hint({
               fontSize={["1rem", "1.4rem", "1.7rem", "1.3rem", "", "1.9rem"]}
               color=" #313B47"
               mt={[, , "0px", "10px"]}
+              mb="5%"
               fontWeight="500"
               textAlign="justify"
             >
