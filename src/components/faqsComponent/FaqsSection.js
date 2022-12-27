@@ -18,7 +18,7 @@ const FaqsSection = () => {
       flexDirection="column"
       margin={"0 auto"}
     >
-      <Box>
+      <Box mt={5}>
         <Text
           fontSize={["2.9em"]}
           textAlign={"center"}
@@ -74,7 +74,7 @@ const FaqsSection = () => {
           " If you’re on a budget, you can use it to create your resume completely free of charge. And no, unlike some other resume builders out there, we don’t hit you with a paywall once you’ve completed your resume."
         }
         text3={
-          "`If you use any of our premium features, the software will let you know about it. It will then ask if you did it accidentally, or if you would like to upgrade to BisResume Premium. You're in control!          `"
+          "If you use any of our premium features, the software will let you know about it. It will then ask if you did it accidentally, or if you would like to upgrade to BisResume Premium. You're in control!          "
         }
         image={"/faq2@2x.png"}
       />
@@ -97,7 +97,7 @@ const FaqsSection = () => {
           " In the United States, however, a resume is a document you use to apply for jobs, while a CV is mainly used by academics."
         }
         text3={
-          "`Want to learn more? Check out our article on the differences between CVs and resumes.`"
+          "Want to learn more? Check out our article on the differences between CVs and resumes."
         }
         image={"/faq4@2x.png"}
       />

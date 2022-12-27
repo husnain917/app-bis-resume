@@ -26,7 +26,7 @@ const FaqRightImageWithList = ({
   image,
 }) => {
   return (
-    <Box w={["100%", "94%", "94%", "960px", "1220px", "1500px"]}>
+    <Box w={["100%", "94%", "94%", "98%", "92%", "95%"]}>
       <Grid
         templateAreas={[`"image textArea ."`]}
         gridTemplateRows={"1,1fr"}
@@ -42,11 +42,16 @@ const FaqRightImageWithList = ({
         marginInlineStart={["60px", "60px", "60px", "35px", "40px"]}
         marginInlineEnd={["60px", "60px", "60px", "35px", "40px"]}
       >
-        <GridItem pl="2" area={"textArea"} position="relative">
-          <Text fontSize={["2em"]} fontWeight="700">
+        <GridItem
+          pl="2"
+          area={"textArea"}
+          position="relative"
+          className="small-text"
+        >
+          <Text fontSize={["2em"]} fontWeight="700" className="sub-heading">
             {heading}
           </Text>
-          <Text fontSize={["1em"]} my={4}>
+          <Text fontSize={["1.1em"]} my={4}>
             {" "}
             {text1}
           </Text>

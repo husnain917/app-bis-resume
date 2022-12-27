@@ -19,17 +19,28 @@ export default function HintSection() {
       </Box> */}
 
       <Box>
-        <Text
-          fontSize={["1.5rem", "2.5rem", "3rem", "2.9rem", "3rem", "3.5rem"]}
-          color="#313B47"
-          fontWeight="bold"
-          textAlign="center"
-          pl={["7%", "14%"]}
-          pr={["14%"]}
-        >
-          Build Your Resume Fast and Easy.
-        </Text>
-        <Box className={styles.hrLine}>
+        <Box>
+          <Text
+            fontSize={[
+              "1.5rem",
+              "2.5rem",
+              "2.7rem",
+              "2.6rem",
+              "2.8rem",
+              "3rem",
+              "3.5rem",
+            ]}
+            color="#313B47"
+            fontWeight="bold"
+            textAlign="center"
+            pl={["7%", "14%"]}
+            pr={["14%"]}
+            className={"afterHeading"}
+          >
+            Build Your Resume Fast and Easy.
+          </Text>
+        </Box>
+        {/* <Box className={styles.hrLine}>
           <FaMinus
             style={{
               color: "#1dbfaf",
@@ -44,15 +55,23 @@ export default function HintSection() {
               marginTop: "0%",
             }}
           />
-        </Box>
+        </Box> */}
         <Text
           color="#313B47"
-          fontSize={["1.2rem", "1.5rem", "1.8", "1.7rem", "1.5rem", "1.6rem"]}
+          fontSize={[
+            "1.2rem",
+            "1.5rem",
+            "1.8rem",
+            "1.7rem",
+            "1.5rem",
+            "1.6rem",
+          ]}
           fontWeight={["400", "400"]}
           align="center"
           pl={["7%", "14%"]}
           pr={["14%"]}
           mt="3%"
+          className="only-font-family"
         >
           BisResume is lightning fast. There is no software to download. No
           multi-part sign-up form. No long-winded tutorials. Just a

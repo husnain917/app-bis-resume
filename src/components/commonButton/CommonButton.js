@@ -28,10 +28,10 @@ export default function CommonButton(props) {
       className={`button-text ${className}`}
       width={width}
       height={height}
-      color={color || "white"}
+      color={color}
       padding={padding || "10px 17px 10px 17px"}
       border={border || "none"}
-      backgroundColor={backgroundColor || "#00C8AA"}
+      backgroundColor={backgroundColor}
       borderRadius={borderRadius}
       fontSize={fontSize}
       fontWeight={fontWeight}
@@ -46,6 +46,10 @@ export default function CommonButton(props) {
       disabled={disabled}
     >
       {loading ? loading : title || AddTitle}
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </Button>
   );
 }

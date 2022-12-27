@@ -16,7 +16,9 @@ export default function CallToAction() {
             <CommonButton
               title="Build Your Resume"
               hoverCursor={"pointer"}
-              hoverBackgroundColor={"red"}
+              backgrounColor={"#006772"}
+              // hoverBackgroundColor={"red"}
+              className={"hoverEffects"}
             />
           </Link>
         </Box>

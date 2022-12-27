@@ -30,7 +30,7 @@ const FaqLeftImage = ({
   image,
 }) => {
   return (
-    <Box w={["100%", "100%", "100%", "1000px", "1220px", "1500px"]}>
+    <Box w={["100%", "100%", "100%", "1000px", "92%", "95%"]}>
       <Grid
         templateAreas={[`". textArea image"`]}
         gridTemplateRows={"1,1fr"}
@@ -54,15 +54,15 @@ const FaqLeftImage = ({
             letterSpacing: "0.3px",
           }}
         >
-          <Text fontSize={["1.9em"]} fontWeight="700">
+          <Text fontSize={["1.9em"]} className="sub-heading">
             {heading}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
+          <Text fontSize={["1em", "1em", "1em", , "1.1em", "1.3em"]} my={4}>
             {" "}
             {text1}
           </Text>
           <Text
-            fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]}
+            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
             my={4}
             lineHeight={"2"}
           >
