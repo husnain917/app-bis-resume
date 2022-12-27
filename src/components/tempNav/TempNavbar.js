@@ -22,9 +22,9 @@ import {
   MoonIcon,
   EditIcon,
   SettingsIcon,
-  HamburgerIcon,
   DownloadIcon,
   ChevronDownIcon,
+  HamburgerIcon
 } from '@chakra-ui/icons';
 import {
   FaFacebookF,
