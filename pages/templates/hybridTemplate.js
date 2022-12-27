@@ -41,6 +41,10 @@ import SaveTempData from '../../src/components/saveTempBtn/SaveTempData';
 import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
 const HybridTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
+  // console.log(backgroundColor, color);
   // custom Hook For Template
   const [show, setShow] = useShow();
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
@@ -90,6 +94,7 @@ const HybridTemplate = () => {
                     minHeight={150}
                     maxHeight={150}
                     marginLeft="40px"
+                    borderColor={backgroundColor}
                   />
                   <Box>
                     <Name
@@ -105,13 +110,14 @@ const HybridTemplate = () => {
                 </HStack>
 
                 <HStack
-                  bg={'#313B47'}
+                  bg={backgroundColor}
                   width="full"
                   minH={'110px'}
                   borderTopRightRadius={6}
                   borderTopLeftRadius={6}
                   alignItems="flex-start"
                   mt={-10}
+                  transition={'0.5s background'}
                 >
                   <Box maxW={'200px'} minW={'200px'}></Box>
                   <Box maxW={'660px'} minW={'660px'} p={2}>

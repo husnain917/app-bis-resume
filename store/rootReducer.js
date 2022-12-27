@@ -5,7 +5,7 @@ import themeReducer from './reducers/themeReducer';
 
 const rootReducer = combineReducers({
   editorReducer,
-  // theme: themeReducer,
+  themeReducer,
 });
 
 // const rootReducer = (state, action) => {
