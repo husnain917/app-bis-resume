@@ -10,13 +10,13 @@ export default function BuildResume() {
   return (
     <>
       <div className={styles.ctsMain}>
-        <Box id="svg-section"></Box>
-        <h1 className={styles.ctaHeading}>Ready to Jump-Start Your Career</h1>
+        <Box id="svg-section" mt={10}></Box>
+        <h1 className={"sub-heading"}>Ready to Jump-Start Your Career</h1>
 
-        <Box className={styles.ctaHr} mt={2} mb={3}></Box>
+        <Box className={styles.ctaHr} mt={3} mb={4}></Box>
 
         <div>
-          <Box>
+          <Box mb={3}>
             <Link href="/templates">
               {/* <Button
                 className={styles.ctaBtn}
@@ -42,7 +42,7 @@ export default function BuildResume() {
               />
             </Link>
           </Box>
-          <p>No credit card required</p>
+          <p className="small-text">No credit card required</p>
         </div>
         <div></div>
       </div>
