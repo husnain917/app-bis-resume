@@ -82,7 +82,14 @@ const FaqLeftImage = ({
             {text3}
           </Text>
           {item1 ? (
-            <UnorderedList ml={4} fontSize={"0.9em"} fontWeight={500}>
+            <UnorderedList
+              ml={4}
+              fontSize={"1em"}
+              fontWeight={500}
+              style={{
+                letterSpacing: "0.1px",
+              }}
+            >
               <ListItem mb={"5px"}>
                 <span
                   style={{
