@@ -11,59 +11,40 @@ import {
 import { Box, Input } from "@chakra-ui/react";
 import styles from "../../../styles/templates/Graphic3.module.css";
 import { Line } from "rc-progress";
+import Skill from "../commonSection/Skill";
+import useShow from "../tempSectionSide/useShow";
+import SectionSideMenu from "../tempSectionSide/SectionSideMenu";
+import { Tooltip, Image, HStack } from "@chakra-ui/react";
+
+import {
+  EDUCATION,
+  LANGUAGES,
+  SKILL,
+  WORK,
+  INTEREST
+} from "../../components/tempSectionSide/SectionSideConstant";
+import useStoreData from "../../components/useStoreData";
+import Heading from "../commonSection/Heading";
+
+
+
+
 function Skills(props) {
-  const dispatch = useDispatch();
-  const path = "skills.items";
+  const {
+    resumeData,
+    theme,
+    updater
+  } = useStoreData();
+  const [show, setShow] = useShow();
+  console.log(resumeData);
 
-  const onOrderUpdate = (data) => {
-    const storeReorder = Util.mapOrder(props.data, data, "id");
 
-    dispatch(updateOrder(storeReorder, path));
-  };
+ 
+   
 
-  const _addNewItem = () => {
-    dispatch(addNewObj(props.data[0], path));
-  };
-
-  const _removeItem = (index) => {
-    let deletedPath = `${path}.${index}`;
-    dispatch(deleteObjInArray(deletedPath));
-  };
-  const { data } = props;
-  console.log({ data });
-  const [value, setValue] = useState([]);
-  const skillHandler = (e, index2) => {
-    if ((e.target.value > 0 && e.target.value > 100) || e.target.value <= 0) {
-      let newArr2 = value.map((item, index) => {
-        if (index === index2) {
-          return null;
-        } else {
-          return item;
-        }
-      });
-      setValue(newArr2);
-      return;
-    }
-    let newArr;
-    if (value.length <= 0) {
-      newArr = [e.target.value];
-    } else if (value.length === index2) {
-      newArr = [...value, e.target.value];
-      console.log(newArr);
-    } else {
-      newArr = value.map((item, index) => {
-        if (index === index2) {
-          return e.target.value;
-        } else {
-          return item;
-        }
-      });
-    }
-    setValue(newArr);
-  };
   return (
     <div className={styles.skillMainContainer}>
-      <Dnd
+      {/* <Dnd
         data={data}
         direction="horizontall"
         reorder={(e) => onOrderUpdate(e)}
@@ -113,7 +94,54 @@ function Skills(props) {
             </Box>
           </div>
         )}
-      />
+      /> */}
+       <div>
+                {resumeData?.skills?.visible && (
+                  <>
+                    <HStack alignItems={'flex-start'} mt={5}>
+                      <Box w="30px">
+                        {show.skills && (
+                          <SectionSideMenu
+                            onHide={() => setShow({ ...show, skills: false })}
+                            bg="#2A78AB"
+                            iconColor={'#E0EFFA'}
+                            onDelete={SKILL}
+                          />
+                        )}
+                      </Box>
+                      <div className={styles.contactHeadingTitle}>
+                        <Heading
+
+                          font-size={30}
+                          font-weight={900}
+                          color={"white"}
+
+                          title="SKILLS"
+                          line={true}
+                          lineBg={"black"}
+                          fontSize={30}
+                          fontWeight={900}
+
+                          onSideSectionShow={() =>
+                            setShow({ ...show, skills: true })
+                          }
+                        />
+                      </div>
+                    </HStack>
+                    <Box mr={"10%"} ml={"15%"} mt="5%">
+
+                      <Skill skillStyle={styles.skillText}
+                        parentContainerStyle={styles.mt}
+                        minW={"220px"}
+                        maxW={"220px"}
+
+
+                      />
+                    </Box>
+                  </>
+                )}
+              </div>
+
     </div>
   );
 }

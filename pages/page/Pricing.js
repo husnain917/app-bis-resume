@@ -6,7 +6,6 @@ import Image from 'next/image'
 import SliderComponent from "../../src/components/sliderComponent/SliderComponent"
 import { AiOutlineQuestionCircle, AiOutlineMail } from "react-icons/ai";
 import bottomprice from '../../public/bottomPrice.png';
-import Layout from "../../src/Layout";
 import Sidebar from "../../src/components/blog/Sidebar"
 
 export default function Pricing() {

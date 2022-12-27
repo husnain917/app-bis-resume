@@ -18,8 +18,8 @@ import {
   MoonIcon,
   EditIcon,
   SettingsIcon,
-  HamburgerIcon,
   DownloadIcon,
+  HamburgerIcon
 } from '@chakra-ui/icons';
 import {
   FaFacebookF,
