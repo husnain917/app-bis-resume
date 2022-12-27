@@ -1,9 +1,11 @@
-import editorReducer from './reducers/builderReducer'
+import editorReducer from './reducers/builderReducer';
 import { LOGOUT_USER } from '../constants/auth';
 import { combineReducers } from 'redux';
+import themeReducer from './reducers/themeReducer';
 
 const rootReducer = combineReducers({
   editorReducer,
+  // theme: themeReducer,
 });
 
 // const rootReducer = (state, action) => {
