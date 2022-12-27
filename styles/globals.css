@@ -1991,11 +1991,13 @@ video {
   position: absolute;
   background: #00C8AA;
   width: 30%;
-  height: 2px;
+  height: 6px;
   display: block;
   margin: auto;
   transition: 1s;
-  right:0
+  right:0;
+  border-radius:30px;
+  
 }
 .afterHeading:hover::after{
   width: 100%;
