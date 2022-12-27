@@ -52,7 +52,7 @@ const FaqRightImageWithList = ({
             {heading}
           </Text>
           <Text
-            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            fontSize={["1em", "1em", "1em", "1.1em", "1.1em", "1.3em"]}
             my={4}
           >
             {" "}
@@ -73,7 +73,7 @@ const FaqRightImageWithList = ({
             </ListItem>
           </UnorderedList>
           <Text
-            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            fontSize={["1em", "1em", "1em", "1.1em", "1.1em", "1.3em"]}
             my={4}
             fontWeight="400"
           >
