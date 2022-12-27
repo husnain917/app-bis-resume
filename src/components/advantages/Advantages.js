@@ -45,6 +45,7 @@ export default function Advantages() {
           mt="5%"
           pt="2%"
           p="10px"
+          className={"sub-heading"}
         >
           Advantages of Using My Perfect BisResume
         </Text>
