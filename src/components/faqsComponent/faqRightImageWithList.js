@@ -46,16 +46,19 @@ const FaqRightImageWithList = ({
           pl="2"
           area={"textArea"}
           position="relative"
-          className="small-text"
+          // className="small-text"
         >
           <Text fontSize={["2em"]} fontWeight="700" className="sub-heading">
             {heading}
           </Text>
-          <Text fontSize={["1.1em"]} my={4}>
+          <Text
+            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            my={4}
+          >
             {" "}
             {text1}
           </Text>
-          <UnorderedList ml={2} fontSize={"0.9em"}>
+          <UnorderedList ml={2} fontSize={"1em"}>
             <ListItem ml="3" mb={0.5}>
               {item1}
             </ListItem>
@@ -76,7 +79,7 @@ const FaqRightImageWithList = ({
           >
             {text2}
           </Text>
-          <UnorderedList ml={2} fontSize={"0.9em"}>
+          <UnorderedList ml={2} fontSize={"1em"}>
             <ListItem ml="3" mb={0.5}>
               {item5}
             </ListItem>
