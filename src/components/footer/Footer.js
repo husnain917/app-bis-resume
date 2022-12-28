@@ -18,7 +18,7 @@ export default function Footer() {
         <Link href="https://web.facebook.com/login/?_rdc=1&_rdr">
           <CommonSocial
             hoverCursor={"pointer"}
-            backgroundColor={"blue"}
+            backgroundColor={"white"}
             borderRadius={"50%"}
             color={"whitesmoke"}
             margin={"0"}
@@ -27,7 +27,7 @@ export default function Footer() {
             // className={"hoverEffects"}
             icon={
               <FaFacebookF
-                color={"white"}
+                color={"#897e7e"}
                 fontWeight={"bold"}
                 fontSize={"1.3rem"}
               />
@@ -37,7 +37,7 @@ export default function Footer() {
         <Link href="https://www.linkedin.com/home">
           <CommonSocial
             hoverCursor={"pointer"}
-            backgroundColor={"blue"}
+            backgroundColor={"white"}
             borderRadius={"50%"}
             color={"whitesmoke"}
             margin={"0px 10px 0px 10px"}
@@ -45,7 +45,7 @@ export default function Footer() {
             hoverBorder={"1px solid black"}
             icon={
               <FaLinkedinIn
-                color={"white"}
+                color={"#897e7e"}
                 fontWeight={"bold"}
                 fontSize={"1.3rem"}
               />
@@ -55,7 +55,7 @@ export default function Footer() {
         <Link href="https://twitter.com/login">
           <CommonSocial
             hoverCursor={"pointer"}
-            backgroundColor={"blue"}
+            backgroundColor={"white"}
             borderRadius={"50%"}
             color={"whitesmoke"}
             margin={"0px 10px 0px 0px"}
@@ -64,7 +64,7 @@ export default function Footer() {
             // className={"hoverEffects"}
             icon={
               <FaTwitter
-                color={"white"}
+                color={"#897e7e"}
                 fontWeight={"bold"}
                 fontSize={"1.3rem"}
               />
@@ -74,7 +74,7 @@ export default function Footer() {
         <Link href="https://www.instagram.com/accounts/login/">
           <CommonSocial
             hoverCursor={"pointer"}
-            backgroundColor={"blue"}
+            backgroundColor={"white"}
             borderRadius={"50%"}
             color={"whitesmoke"}
             margin={"0"}
@@ -83,7 +83,7 @@ export default function Footer() {
             // className={"hoverEffects"}
             icon={
               <FaInstagram
-                color={"white"}
+                color={"#897e7e"}
                 fontWeight={"bold"}
                 fontSize={"1.3rem"}
               />
@@ -139,9 +139,9 @@ export default function Footer() {
           <div>
             <Link href="#/">E-Book:How to get a job in 2022</Link>
           </div>
-          <div>
+          {/* <div>
             <Link href="#/">Media Kit</Link>
-          </div>
+          </div> */}
           <div>
             <Link href="/ContactUs">Help Center</Link>
           </div>
@@ -157,9 +157,9 @@ export default function Footer() {
           <div>
             <Link href="/Cookie">Cookie Policy</Link>
           </div>
-          <div>
+          {/* <div>
             <Link href="#/">Media Kit</Link>
-          </div>
+          </div> */}
           <div>
             <Link href="mailto:Contact@bisresume.com">
               Contact@bisresume.com
