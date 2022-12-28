@@ -36,12 +36,12 @@ export default function CommonButton({
     <Button
       className={`button-text ${className}`}
       width={width}
-      height={height}
+      height={height || "45px"}
       color={color}
       padding={padding || "10px 17px 10px 17px"}
       border={border || "none"}
       backgroundColor={backgroundColor}
-      borderRadius={borderRadius}
+      borderRadius={borderRadius || "50px"}
       fontSize={fontSize}
       fontWeight={fontWeight}
       rightIcon={rightIcon}
