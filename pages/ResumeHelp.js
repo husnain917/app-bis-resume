@@ -14,34 +14,398 @@ import ExpImage from "../public/ExpImage.png"
 import jobAd from "../public/jobAd.png"
 import EducationHelpImage from "../public/EducationHelpImage.png";
 import SkillImage from "../public/SkillImage.png"
-import ResumeHelp from "../public/ResumeHelp.png"
+import {ResumeHelpi} from "../public/ResumeHelp.png"
 import ProfileDescrip from "../public/ProfileDescrip.png"
+import SideBar from "../src/components/sideBar/SideBar";
 import Layout from "../src/Layout";
 
-export default function ResumeBuild() {
+export default function ResumeHelp() {
 
     return (
         <>
-    
-                <>
-                    <Box bgColor={"#f2f4f6"} h={["100%", "100%"]}  >
-                        <Container
-                            maxW={['100%', '100%', '100%', '70%', '70%']}
-                            bgColor="white"
-                            border="3px"
-                        >
-                            <Box p={["5%", "5%"]}>
-                                <Text fontSize={["35px", "50px", "50px"]} >How to Write a Resume in 2022 | Beginners Guide
-                                </Text>
+            <Navbar />
+            <>
+                <Box bgColor={"#f2f4f6"} h={["100%", "100%"]}  >
+                    <SideBar/>
+                    <Container
+                        maxW={['100%', '100%', '100%', '70%', '70%']}
+                        bgColor="white"
+                        border="3px"
+                    >
+                        <Box p={["5%", "5%"]}>
+                            <Text fontSize={["35px", "50px", "50px"]} >How to Write a Resume in 2022 | Beginners Guide
+                            </Text>
 
-                                <Text fontSize={["20px"]} >How to Write a Resume - Step by step
+                            <Text fontSize={["20px"]} >How to Write a Resume - Step by step
+                            </Text>
+                            <Text fontSize={["18px", "20px", "20px"]} mt={["2%", "3%", "3%"]}>
+                                For most job-seekers, a good resume is what stands between a dream job and Choice D. Get your resume right, and you’ll be getting replies from every other company you apply to.
+                            </Text>
+
+                            <Text fontSize={["18px", "20px", "20px"]} mt={["2%", "3%", "3%"]}>
+                                If your resume game is weak, though, you’ll end up sitting around for weeks, maybe even months, before you even get a single response.
+                            </Text>
+
+                            <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                So you’re probably wondering how you can write a resume that leads to HR managers inviting you to interviews daily.
+                            </Text>
+                            <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+
+                                In this guide, we’re going to teach you everything you need to know about how to make a resume:
+                            </Text>
+
+                            {/*  step  */}
+                            <Box mt={["3%", "3%", "3%"]}>
+                                <Text fontSize={["24px"]} >How to Write a Resume - Step by step </Text>
+                                <OrderedList ml={["4%", "5%", "5%"]}>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>Pick the Right Resume Format & Layout</ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>Mention Your Personal Details & Contact Information</ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>Use a Resume Summary or Objective</ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>List Your Work Experience & Achievements</ListItem>
+
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>Mention Your Top Soft & Hard Skills</ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>(Optional) Include Additional Resume Sections - Languages, Hobbies, etc.</ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>Tailor Your Information For the Job Ad</ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>Craft a Convincing Cover Letter</ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>Proofread Your Resume and Cover Letter</ListItem>
+
+                                </OrderedList>
+
+
+
+                            </Box>
+                            <Image
+
+                                src={ResumeHelpi}
+                                alt={'Image Not Found'}
+                            />
+
+
+
+                            <Box mt={["3%", "3%", "3%"]} >
+                                <Text fontSize={["24px"]} fontWeight={["bold"]} > How to Make a Resume (The Right Way!)</Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["2%", "3%", "3%"]}>
+                                    Before you even start working on your resume, you need to decide how you’re going to build it.
                                 </Text>
                                 <Text fontSize={["18px", "20px", "20px"]} mt={["2%", "3%", "3%"]}>
                                     For most job-seekers, a good resume is what stands between a dream job and Choice D. Get your resume right, and you’ll be getting replies from every other company you apply to.
                                 </Text>
 
                                 <Text fontSize={["18px", "20px", "20px"]} mt={["2%", "3%", "3%"]}>
-                                    If your resume game is weak, though, you’ll end up sitting around for weeks, maybe even months, before you even get a single response.
+                                    Instead of using a text editor, we recommend choosing a resume builder, such as Novorésumé. Our resume builder is fast, easy, and to put the icing on the cake, a Novorésumé looks much better and can fit more information than your average, cookie-cutter resume...
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["2%", "3%", "3%"]}>
+                                    To get the most out of this guide, you can head over to the resume builder and start building your resume on-the-go as you read this guide.
+                                </Text>
+                            </Box>
+
+                            <Box mt={["3%", "3%", "3%"]} >
+                                <Text fontSize={["24px"]} fontWeight={["bold"]} >How to Pick the Right Resume Format?</Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["2%", "3%", "3%"]}>
+                                    There are three types of resume formats: reverse chronological, functional or skills-based, and a combination of the two. The choice depends on the type of job you are applying for and your level of experience.
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["2%", "3%", "3%"]}>
+                                    The 3 resume formats are:</Text>
+                                <OrderedList ml={["4%", "5%", "5%"]}>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}><b>Reverse chronological resume format:-</b>
+                                        This is the most popular resume format and is ideal for people with plenty of work experience that is relevant to the position they’re interested in.
+                                    </ListItem>
+
+                                    <ListItem fontSize={["18px", "20px", "20px"]}><b>Functional/skills-based resume format:-</b>
+                                        If you lack relevant work experience because you are a student/recent graduate, or you are looking to make a career change, the skills-based format is a better choice.
+
+
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}><b>Combination resume format:-</b>
+                                        The combination resume is a great choice for job-seekers with a very diverse skill-set. It’s useful if you’re applying for a role that requires expertise in 3-4 different fields, and you want to show all that in your resume. Say, for example, you’re applying for a senior management role, and the requirements are expertise in Management, Sales, and Software Development.
+                                        <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+
+                                            In 90%+ cases, you’d want to stick to the reverse-chronological resume format. This is the most common one, and most HR managers are used to this. Hence, in this guide, we’re going to focus on this specific format.</Text>
+
+                                    </ListItem>
+
+
+
+                                </OrderedList>
+                            </Box>
+
+
+                            <Box mt={["3%", "3%", "3%"]} >
+                                <Text fontSize={["24px"]} fontWeight={["bold"]} >What is the Best Resume Layout?</Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                    The first thing a job recruiter notices about any resume is the layout.
+
+
+
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                    Does it look organized or cluttered? Is it too short or too long? Is it boring and easy to ignore, or does it scream out “Read me!”?
+
+
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                    Here are some of the best practices when it comes to your resume layout:
+
+
+                                </Text>
+
+                            </Box>
+
+
+
+                            <Box mt={["3%", "3%", "3%"]} >
+                                <Text fontSize={["24px"]} fontWeight={["bold"]} >Resume Layout Must-Haves</Text>
+
+
+                                <OrderedList ml={["4%", "5%", "5%"]}>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}><b>One page in length:-</b>
+
+                                        You should only go for 2 pages if you really, really believe that it’ll add significant value. HR managers in big firms get around 1,000+ resumes per month. They’re not going to spend their valuable time reading your life story!
+
+                                    </ListItem>
+
+                                    <ListItem fontSize={["18px", "20px", "20px"]}><b>Functional/skills-based resume format:-</b>
+                                        If you lack relevant work experience because you are a student/recent graduate, or you are looking to make a career change, the skills-based format is a better choice.
+
+
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}><b>Clear section headings:-</b>
+
+                                        Pick a heading (H2, for example) and use it for all the section headers.
+
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}><b> Ample white space:-</b>
+
+                                        especially around the margins.
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}><b> Easy-to-read font:-</b>
+
+                                        We’d recommend sticking to what stands out, but not too much. Do: Ubuntu, Roboto, Overpass, etc. Don’t (ever): Comic Sans
+                                    </ListItem>
+
+                                    <ListItem fontSize={["18px", "20px", "20px"]}><b>  Pick the right font size:-</b>
+
+                                        As a rule of thumb, go for 11 - 12 pt for normal text, and 14 - 16 pt for section titles.
+
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>
+
+                                        As a rule of thumb, save your resume as PDF. Word is a popular alternative, but it has a good chance of messing up your resume formatting.
+
+
+                                        One more thing you need to consider in terms of resume layout is whether you’re going for a traditional-looking free resume template or something a bit more modern:
+
+
+                                    </ListItem>
+                                    <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                        If you’re pursuing a career in a more traditional industry - legal, banking, finance, etc. - you might want to stick to the first.
+
+                                    </Text>
+                                </OrderedList>
+                            </Box>
+
+
+                            <Box mt={["3%", "3%", "3%"]} >
+                                <Text fontSize={["24px"]} fontWeight={["bold"]} >Resume Content - What to Mention on Your Resume</Text>
+
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                    Now that we’ve got the basics out of the way, let’s dive into the essentials of how to write a resume.
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                    The most popular sections for a resume are:
+                                </Text>
+                                <UnorderedList ml={["4%", "5%", "5%"]}>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>Contact Information
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]} >Professional Resume Summary or Objective
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]} >Work Experience (and Achievements)
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]} >Education
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]} >Skills
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]} >
+                                        Optional Sections - Languages, Publications, Hobbies, etc.
+                                    </ListItem>
+                                </UnorderedList>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                    Now that we’ve got the basics out of the way, let’s dive into the essentials of how to write a resume.
+                                </Text>
+                            </Box>
+
+                            <Box mt={["3%", "3%", "3%"]} >
+                                <Text fontSize={["24px"]} fontWeight={["bold"]} >Contact Information</Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                    The most critical section in your resume is the “contact information.” Even if you get everything else right, you’re not going to go far if the HR manager can’t get in touch with you because you misspelt your email.
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                    Make sure to double-check, and even triple-check your contact information section and make sure everything is correct and up-to-date.
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]} fontWeight={["bold"]}>
+                                    Contact Information to be Included in a Resume
+
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]} fontWeight={["bold"]}>
+                                    Must-have Information
+                                </Text>
+                                <UnorderedList ml={["4%", "5%", "5%"]}>
+                                    <ListItem fontSize={["18px", "20px", "20px"]} fontWeight={["bold"]}>First Name / Last Name.
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]} fontWeight={["bold"]} >Phone Number.
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]} fontWeight={["bold"]}>Email Address.
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]} ><b>Location:-</b>
+                                        are you located in the area, or will the company have to sponsor relocation?
+                                    </ListItem>
+
+                                </UnorderedList>
+                            </Box>
+
+                            <Box mt={["3%", "3%", "3%"]} >
+                                <Text fontSize={["24px"]} fontWeight={["bold"]} >Optional Information</Text>
+
+                                <UnorderedList ml={["4%", "5%", "5%"]}>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>
+                                        <b>  Title :-</b> Your professional title. It can be your position, word-for-word, or your desired job. Think “Digital Marketing Specialist” or “Junior Data Scientist.”
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>
+                                        <b>  LinkedIn URL:-</b>
+                                        If you have an up-to-date profile that can add value to your application, make sure to include the link.
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>
+                                        <b>  Social Media :-</b>
+                                        Do you have a published portfolio online? For developers, this would be your GitHub, for a designer Behance or Dribble and for a writer, it could be your personal blog.
+                                    </ListItem>
+
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>
+                                        <b> Website / Blog -</b>
+                                        Do you have a published portfolio online? For developers, this would be your GitHub, for a designer Behance or Dribble and for a writer, it could be your personal blog.
+                                    </ListItem>
+                                </UnorderedList>
+                            </Box>
+
+                            <Box mt={["3%", "3%", "3%"]} >
+                                <Text fontSize={["24px"]} fontWeight={["bold"]} >What NOT to Include in the Contact Info Section</Text>
+
+                                <UnorderedList ml={["4%", "5%", "5%"]}>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>
+                                        <b> Date of Birth</b> Your professional title. It can be your position, word-for-word, or your desired job. Think “Digital Marketing Specialist” or “Junior Data Scientist.”
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>
+                                        <b> Unprofessional Email Address - Do: name.lastname@gmail.com Don’t: player69@gmail.com</b>
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>
+                                        <b>  Headshot :-</b>
+
+                                        The HR manager doesn’t need to know what you look like in order to evaluate your application, so there’s no real need to include it.                                    </ListItem>
+                                </UnorderedList>
+
+                            </Box>
+
+                            <Box mt={["3%", "3%", "3%"]} >
+                                <Text fontSize={["24px"]} fontWeight={["bold"]} >Resume Summary or Objective</Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                    It’s not a secret for anyone that first impressions matter, whether they’re in your personal life, or your career.
+
+
+
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} >
+                                    If you leave a bad first impression, chances are, it’s there to stay. After all, it’s very hard to change someone’s opinion of you.
+
+
+
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} >
+                                    The same applies to your job search - the HR manager spends around 6 seconds scanning each resume. Yep, your carefully-worded, hand-crafted resume only gets 6 seconds of attention. Unless, of course, you manage to leave an amazing first impression.
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                    The way you accomplish this is through either a good resume summary or objective. Both are placed at the top of your resume, right around the contact information section:
+
+
+                                </Text>
+
+                            </Box>
+                            <Box mt={["2%", "2%", "2%"]} ml={["0%", '10%']}>
+                                <Image
+
+                                    src={ProfileDescrip}
+                                    alt={'Image Not Found'}
+                                />
+                            </Box>
+
+
+                            <Box mt={["3%", "3%", "3%"]} >
+                                <Text fontSize={["24px"]} fontWeight={["bold"]} >
+                                    What’s a Resume Summary & When to Use it
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                    A resume summary is a 2-3 sentence summary of your career. You should use a resume summary in basically any situation, unless you’re a recent university graduate or switching careers (in that case, you use a resume objective. More on that later!).
+                                </Text>
+                                <OrderedList ml={["4%", "5%", "5%"]}>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>
+
+                                        Your job and years of experience. E.g.: Customer support representative with 5+ years of experience in the IT industry.
+                                    </ListItem>
+
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>
+                                        1 or 2 top achievements (or core responsibilities). E.g.: Specialized in technical support, customer care, and user retention.
+                                    </ListItem>
+                                    <ListItem fontSize={["18px", "20px", "20px"]}>
+                                        Desired goal (generally, passion for working at a specific company). E.g.: Looking for new opportunities as a support lead for a SaaS company.
+                                    </ListItem>
+                                </OrderedList>
+
+                            </Box>
+
+
+                            <Box mt={["3%", "3%", "3%"]} >
+                                <Text fontSize={["24px"]} fontWeight={["bold"]} >
+                                    Formula to Create Your Resume Objective:
+
+                                </Text>
+
+                                <Text fontSize={["18px", "20px", "20px"]} >
+                                    (1) [SKILL/EDUCATION/CERTIFICATION RELEVANT TO THE JOB WITH JOB TITLE].
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} >
+                                    Looking to apply my (2) [years/months of EXPERIENCE RELEVANT TO THE JOB DESCRIPTION] at [COMPANY YOU ARE APPLYING TO]
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} >
+                                    to help (3) [TYPE OF RESPONSIBILITIES YOU WILL HELP OUT WITH SUCCESSFULLY].
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} fontWeight={["bold"]} >
+                                    Examples of Resume Objectives
+
+                                </Text>
+
+                                <OrderedList>
+                                    <ListItem fontSize={["18px", "20px", "20px"]} > So, here’s how that would look like if you’re a student:</ListItem>
+                                    <UnorderedList>
+                                        <ListItem fontSize={["18px", "20px", "20px"]} mt={["2%", "2%", "2%"]} >
+                                            “Hard-working recent graduate with a B.A. in Graphic Design from New York State University seeking new opportunities. 3+ years of practical experience working with Adobe Illustrator and Photoshop, creating illustrations & designing UX / UI. Looking to grow as a designer, as well as perfect my art, at the XYZ Design Studio.”
+                                        </ListItem>
+                                    </UnorderedList>
+
+                                    <ListItem fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]} >Or, on the other hand, if you’re going through a career change:</ListItem>
+                                    <UnorderedList>
+                                        <ListItem fontSize={["18px", "20px", "20px"]} mt={["2%", "2%", "2%"]} >
+                                            “IT project manager with 5+ years of experience in software development. Managed a team of developers to create products for several industries, such as FinTech and HR tech. Looking to leverage my experience in managing outsourced products as a Product Owner at XYZ.”
+                                        </ListItem>
+                                    </UnorderedList>
+                                </OrderedList>
+                            </Box>
+                            <Box mt={["3%", "3%", "3%"]} >
+                                <Text fontSize={["24px"]} fontWeight={["bold"]} >
+                                    Work Experience
+
+                                </Text>
+                                <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
+                                    This is where you really sell yourself, displaying your past accomplishments and responsibilities.
+
+
                                 </Text>
 
                                 <Text fontSize={["18px", "20px", "20px"]} mt={["1%", "2%", "2%"]}>
@@ -330,6 +694,7 @@ export default function ResumeBuild() {
                                         src={ProfileDescrip}
                                         alt={'Image Not Found'}
                                     />
+                                </Box>
                                 </Box>
 
 

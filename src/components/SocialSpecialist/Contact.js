@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import styles from "../../../styles/templates/Social.module.css";
 import { PhoneIcon, EmailIcon } from "@chakra-ui/icons";
 import Text from "./Text";
+
 export default function Contact() {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   return (

@@ -50,6 +50,7 @@ export default function Hint({
           >
             <Box
               display={["none", "none", "none", "flex", "flex"]}
+              className={"only-font-family"}
               fontSize={"7rem"}
               width="10rem"
               height="9rem"
@@ -91,6 +92,7 @@ export default function Hint({
                 display="flex"
                 fontWeight={["700", "700", "700", "600", "600"]}
                 fontSize={["1.8rem", "1.7rem", "1.8rem", "2rem", "2rem"]}
+                className="small-heading"
               >
                 <Text display={["flex", "flex", "flex", "none", "none"]}>
                   {number}{" "}
@@ -106,12 +108,13 @@ export default function Hint({
               </Text>
               <Text
                 id={"cardbodyText"}
+                className={"only-font-family"}
                 fontSize={
                   width > 610
-                    ? ["1.4rem", "1.4rem", "1.4rem", "1.5rem", "1.5rem"]
+                    ? ["1.2rem", "1.1rem", "1.2rem", "1.2rem", "1.2rem"]
                     : "1.3rem"
                 }
-                fontWeight={"500"}
+                fontWeight={"400"}
                 marginBottom={"1rem"}
                 display="flex"
                 flexDirection={"column"}
@@ -219,6 +222,7 @@ export default function Hint({
               fontSize={["1rem", "1.4rem", "1.7rem", "1.3rem", "", "1.9rem"]}
               color=" #313B47"
               mt={[, , "0px", "10px"]}
+              mb="5%"
               fontWeight="500"
               textAlign="justify"
             >

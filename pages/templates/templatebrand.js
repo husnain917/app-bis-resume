@@ -28,7 +28,7 @@ import Contact from '../../src/components/commonSection/Contact';
 import Skill from '../../src/components/commonSection/Skill';
 
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-
+import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 export default function Templatebrand() {
     const {
@@ -37,16 +37,21 @@ export default function Templatebrand() {
         updater
     } = useStoreData();
     const [show, setShow] = useShow();
-
+    // PDF Download Hook
+    const { downloadPDFHandler,pdfRef } = PDFGenerater();
     return (
         <div style={{ overflow: 'auto' }}>
-            <TempLayout work={true} education={true} skills={true} references={true} >
-            <ChangeTempBtn />
+            <TempLayout work={true} education={true} skills={true} references={true} downloadPDF={downloadPDFHandler}>
+                <ChangeTempBtn />
 
 
-              
+
                 <div className={styles.mainDiv} >
-                    <Box ml={["", , , "5%", "13%", "25%"]} >
+                    <Box
+                        display={'flex'}
+                        justifyContent={'center'}
+                        ref={pdfRef}
+                    >
 
                         <div className={`${styles.outerDiv}`}>
                             <div className={styles.innerMainDiv} >
@@ -64,8 +69,8 @@ export default function Templatebrand() {
                                     <div className={styles.innerDivEducation}>
 
                                         <div >
-                                           
-                                       
+
+
                                             <div>
 
                                                 {resumeData?.education?.visible && (
@@ -125,7 +130,7 @@ export default function Templatebrand() {
                                             </div>
 
                                         </div>
-                                       
+
                                         <div>
                                             {resumeData?.skills?.visible && (
                                                 <>
@@ -249,7 +254,7 @@ export default function Templatebrand() {
                                                             minW={'450'}
                                                             fontSize={"2.5em"}
 
-                                                        
+
                                                             textMargin={"30px 0px 10px 20px"}
 
                                                             color={"black"}
@@ -352,7 +357,7 @@ export default function Templatebrand() {
                 </div>
             </TempLayout>
         </div>
-        
+
 
     )
 }

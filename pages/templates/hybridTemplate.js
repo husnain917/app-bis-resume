@@ -36,9 +36,8 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import Feedback from '../../src/components/feedbackPopUp/Feedback';
-import SaveTempData from '../../src/components/saveTempBtn/SaveTempData';
 import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
+
 const HybridTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const { backgroundColor, color } = useSelector(
@@ -65,7 +64,6 @@ const HybridTemplate = () => {
           downloadPDF={downloadPDFHandler}
         >
           <ChangeTempBtn />
-          <SaveTempData />
 
           <Flex
             justifyContent={{ base: 'none', lg: 'center' }}

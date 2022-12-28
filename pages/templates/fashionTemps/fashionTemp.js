@@ -45,19 +45,12 @@ export default function Fashion_Temp() {
             pt="70px"
           >
             <Box
-              mt="50px"
+              m="50px 20px 30px 20px"
             >
               <Box
-                display="flex"
-                flexDir="row"
-                w="100%"
-                minW="850px"
-                maxW="850px"
-                mb={'20px'}
-                ml={'10px'}
+                display={'flex'}
                 ref={pdfRef}
               >
-                {/* =============== First Section ============== */}
                 <Box
                   w="40%"
                   pb="10%"

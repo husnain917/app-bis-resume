@@ -1,214 +1,417 @@
 import React from "react";
-import { Input, Image, Box, Tooltip } from "@chakra-ui/react";
+import { Input, Image, Box, Tooltip, HStack } from "@chakra-ui/react";
 import { sampleData } from "../../../constants/sampleData";
 import { PhoneIcon, AddIcon, WarningIcon, EmailIcon } from "@chakra-ui/icons";
 import HeadingText from "../../../src/components/softEngineer/HeadingText";
 import { useSelector } from "react-redux";
 import { Text } from "../../../src/components/template1";
 import { useWindowSize } from "@react-hook/window-size";
-import Education from "../../../src/components/softEngineer/Education";
-import Experience from "../../../src/components/softEngineer/Experience";
 import Languages from "../../../src/components/softEngineer/Languages";
 import styles from "../../../styles/templates/SeTemplate.module.css";
 import Link from "next/link";
+import Name from '../../../src/components/commonSection/Name';
+import Profession from '../../../src/components/commonSection/Profession';
+import About from '../../../src/components/commonSection/About';
+import Contact from '../../../src/components/commonSection/Contact';
+import useShow from '../../../src/components/tempSectionSide/useShow';
+import SectionSideMenu from '../../../src/components/tempSectionSide/SectionSideMenu';
+import {
+  EDUCATION,
+  LANGUAGES,
+  SKILL,
+  WORK,
+} from '../../../src/components/tempSectionSide/SectionSideConstant';
+import TempLayout from '../../../src/components/tempNav/TempLayout';
+import useStoreData from "../../../src/components/useStoreData";
+import Education from '../../../src/components/commonSection/Education';
+import Heading from '../../../src/components/commonSection/Heading';
+import Skill from "../../../src/components/commonSection/Skill";
+import WorkExperience from '../../../src/components/commonSection/WorkExperience';
+import ChangeTempBtn from '../../../src/components/changeTempbtn/ChangeTempBtn';
+import ImageSelector from '../../../src/components/imageSelector';
+import PDFGenerater from "../../../src/components/tempNav/PDFGenerater";
+
+
+
+
+
+
 export default function SoftEngineer() {
-  const [width] = useWindowSize();
-  let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  let updater = useSelector((state) => state.editorReducer.updater);
-  let color = useSelector((state) => state.editorReducer.color);
+  const {
+    resumeData,
+    theme,
+    updater
+  } = useStoreData();
+  const [show, setShow] = useShow();
+  // PDF Download Hook
+  const { downloadPDFHandler, pdfRef } = PDFGenerater();
   return (
     <>
-      <div className={styles.main}>
-        <Link href={"/templates"}>
-          <div className={styles.swapCont}>
-            <Tooltip title="Change Template" arrow distance={20}>
-              <div className={styles.swap}>
-                <img src="/icons/swap.png" />
-              </div>
-            </Tooltip>
-          </div>
-        </Link>
-        <Box w={[, , , , "71%"]} overflow="auto">
-          <Box
-            w="97%"
-            display="flex"
-            flexDir="row"
-            justifyContent="space-between"
-            bgColor="#FFFFF"
-            pr="7%"
-            pl="7%"
-            maxW="2150px"
-            minW="950px"
-            mt="6%"
-          >
-            {/* Left Section  */}
-            <Box w="50%" mt="10%">
-              <Text
-                value={resumeData?.profile?.firstName}
-                placeholder="RICHARD "
-                customclass={styles.fullName}
-                fontSize="3.2rem"
-                path={"profile.firstName"}
-                lineHeight="40px"
-              />
-              &nbsp;
-              <Text
-                value={resumeData?.profile?.lastName}
-                placeholder="SANCHEZ"
-                // customclas={`${"fullName"} ${styles.fname}`}
-                fontSize="3.2rem"
-                customclass={styles.fullName}
-                path={`"profile.lastName"`}
-                lineHeight="40px"
-              />
-              <Box mt="8%">
-                <Box bgColor="black" w="100%" h="2px"></Box>
-                <Text
-                  value={resumeData?.objective?.body.heading}
-                  placeholder="SOFTWARE ENGINEER"
-                  customclass={`${styles.summary_heading} ${styles.contentEditableContainer}`}
-                  path={"objective.heading"}
-                  editable={true}
-                />
-                <Box bgColor="black" w="100%" h="2px"></Box>
-              </Box>
-              <Text
-                value={resumeData?.objective?.body}
-                placeholder="
-              Problem solver and fast learner 
-              with strong communication 
-              skills. I am motivated to upgrade 
-              and expand my skill set through 
-              mentorship and challenging 
-              projects. I enjoy working 
-              collaboratively but can also run 
-              with projects independently. I am 
-              excited about the prospect of 
-              joining a Ingoude company.
-              "
-                customclass={`${styles.summary} ${styles.contentEditableContainer}`}
-                path={"objective.body"}
-              />
-              <HeadingText
-                heading="CONTACT US"
-                marginTop="10%"
-                width="75%"
-                textSize="1.5rem"
-              />
-              <Box
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  marginTop: "5%",
-                }}
-              >
-                <PhoneIcon
-                  w={8}
-                  h={8}
-                  bgColor="#B29E84"
-                  p="7px"
-                  color="white"
-                  borderRadius="5px"
-                />
+      <div style={{ overflow: 'auto' }}>
 
-                <Text
-                  value={resumeData?.contact?.phone}
-                  placeholder="+123-456-7890"
-                  customclass={`${styles.contact_feild} ${styles.contentEditableContainer}`}
-                  path={"contact.phone"}
-                />
-              </Box>
-              <Box
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                <EmailIcon
-                  w={8}
-                  h={8}
-                  bgColor="#B29E84"
-                  p="7px"
-                  color="white"
-                  borderRadius="5px"
-                />
+        <TempLayout work={true} education={true} skills={true} downloadPDF={downloadPDFHandler}>
+          <ChangeTempBtn />
 
-                <Text
-                  value={resumeData?.contact?.email}
-                  placeholder="hello@reallygreatsite.com 
-                www.reallygreatsite.com"
-                  customclass={`${styles.contact_feild} ${styles.contentEditableContainer}`}
-                  path={"contact.email"}
-                />
+
+
+
+
+          <Box pt="8%">
+
+            <Box
+              w={[, , , , "71%"]}
+              borderWidth="1px"
+              borderColor={'#00000023'}
+              ml="15%"
+            >
+              <Box
+                w="97%"
+                display="flex"
+                flexDir="row"
+                justifyContent="space-between"
+                bgColor="#FFFFF"
+                pr="7%"
+                pl="7%"
+                maxW="2150px"
+                minW="900px"
+                ref={pdfRef}
+
+
+              >
+                {/* Left Section  */}
+                <Box w="50%" mt="10%">
+
+
+                  <Name
+                    FName={true}
+                    SName={true}
+                    direction="column"
+                    FNameStyle={styles.name}
+                    SNameStyle={styles.name}
+
+                  />
+                  <Box>
+                    <Heading
+                      line={true}
+                      lineW="300px"
+                      lineH={1}
+                    />
+
+                    <Profession
+                      professionStyle={styles.profession}
+                      professionPlaceholder="PROFESSION"
+                    />
+                    <Heading
+                      line={true}
+                      lineW="300px"
+                      lineH={1}
+                    />
+
+
+                  </Box>
+
+
+
+                  <About
+
+                    aboutStyle={styles.description}
+                    aboutPlaceholder={"Short and engaging pitch about yourself"}
+
+                  />
+                  <Heading
+                    line={true}
+                    lineW="300px"
+                    lineH={1}
+                  />
+
+
+                  <Heading
+                    line={true}
+                    lineW="300px"
+                    lineH={1}
+                    font-size={22}
+                    color="black"
+                    title="CONTACT"
+                    fontWeight={900}
+
+
+
+
+
+                  />
+
+                  <Box
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      marginTop: "5%",
+                    }}
+                  >
+                    <PhoneIcon
+                      w={8}
+                      h={8}
+                      bgColor="#B29E84"
+
+                      p="7px"
+                      color="white"
+                      borderRadius="5px"
+                    />
+
+
+                    <Contact
+                      phone={true}
+                      phonePlaceholder={"+920000000"}
+                      margin={"0px 0px 0px 10px"}
+
+                      style={styles.profileText}
+                    />
+                  </Box>
+                  <Box
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      marginTop: '3%'
+                    }}
+                  >
+                    <EmailIcon
+                      w={8}
+                      h={8}
+                      bgColor="#B29E84"
+
+                      p="7px"
+                      color="white"
+                      borderRadius="5px"
+                    />
+
+
+                    <Contact
+                      email={true}
+                      emailPlaceholder={"hello@gmail.com"}
+                      margin={"0px 0px 0px 10px"}
+
+                      style={styles.profileText}
+                    />
+
+
+                  </Box>
+
+                  <div >
+
+                    {resumeData?.education?.visible && (
+                      <>
+                        <HStack alignItems={'flex-start'} mt={'20px'}>
+                          <Box w="12px" ml={'-20px'}>
+                            {show.education && (
+                              <SectionSideMenu
+                                onHide={() => setShow({ ...show, education: false })}
+                                bg="#2A78AB"
+                                iconColor={'#E0EFFA'}
+                                onDelete={EDUCATION}
+                              />
+                            )}
+                          </Box>
+                          <div className={styles.templateceoHeadingTitle}>
+                            <Heading
+                              line={true}
+                              lineW="300px"
+                              lineH={1}
+
+
+                            />
+                            <Heading
+
+
+                              font-size={30}
+                              font-weight={900}
+
+
+                              color="black"
+                              title="EDUCATION"
+                              line={true}
+                              lineW="300px"
+                              lineH={1}
+
+
+
+
+                              fontSize={23}
+                              fontWeight={900}
+                              onSideSectionShow={() => setShow({ ...show, education: true })}
+                            />
+                          </div>
+
+
+                        </HStack>
+                        <Box mr={"15%"}>
+                          <Education
+                            institution={true}
+                            date={true}
+                            summary={true}
+                            summaryStyle={styles.Educationdescription}
+                            dateStyle={styles.date}
+                            institutionStyle={styles.company}
+                            institution_placeholder={"College"}
+                            summary_placeholder={"Summary"}
+                            parentContainerStyle={styles.mt}
+
+                          />
+                        </Box>
+                      </>
+                    )}
+                  </div>
+                </Box>
+                {/* Right Section  */}
+                <Box w="50%">
+                  <ImageSelector
+                    minWidth={280}
+                    maxWidth={280}
+                    minHeight={280}
+                    maxHeight={280}
+                    marginTop={'40px'}
+                    marginLeft={"40px"}
+                  />
+                  <Box>
+
+                  </Box>
+                  <div>
+                    {resumeData?.skills?.visible && (
+                      <>
+                        <HStack alignItems={'flex-start'} mt={5}>
+                          <Box ml={'-15px'}>
+                            {show.skills && (
+                              <SectionSideMenu
+                                onHide={() => setShow({ ...show, skills: false })}
+                                bg="#2A78AB"
+                                iconColor={'#E0EFFA'}
+                                onDelete={SKILL}
+                              />
+                            )}
+                          </Box>
+                          <div className={styles.templateceoHeadingTitle}>
+                            <Heading
+                              line={true}
+                              lineW="300px"
+                              lineH={1}
+                            />
+
+
+                            <Heading
+
+                              title={'SKILLS'}
+                              color="black"
+
+
+
+                              fontSize={24}
+                              minW={"350px"}
+                              maxW={"350px"}
+                              line={true}
+                              lineW="300px"
+                              fontWeight={900}
+                              lineH={1}
+                              onSideSectionShow={() =>
+                                setShow({ ...show, skills: true })
+                              }
+                            />
+                          </div>
+
+                        </HStack>
+                        <Box mr={"30%"} mt="2%">
+                          <Skill skillStyle={styles.skillText}
+                            parentContainerStyle={styles.mt}
+                            minW={"220px"}
+                            maxW={"220px"}
+                            margin={"0px 20px 0px 0px"}
+
+
+                          />
+                        </Box>
+                      </>
+                    )}
+                  </div>
+
+                  <div>
+                    {resumeData?.work?.visible && (
+                      <>
+                        <HStack alignItems={'flex-start'} mt={'20px'}>
+                          <Box w="15px" ml={'-27px'}>
+                            {show.work && (
+                              <SectionSideMenu
+                                onHide={() => setShow({ ...show, work: false })}
+                                bg="#2A78AB"
+                                iconColor={'#E0EFFA'}
+                                onDelete={WORK}
+                              />
+                            )}
+                          </Box>
+                          <div className={styles.templateceoHeadingTitle}>
+                            <Heading
+                              line={true}
+                              lineW="300px"
+                              lineH={1}
+                            />
+                            <Heading
+                              minW={"350px"}
+                              maxW={"350px"}
+                              font-size={"1.4em"}
+                              font-weight={900}
+
+                              color="black"
+
+                              title="EXPERIENCE"
+
+
+                              fontSize={22}
+                              fontWeight={900}
+                              onSideSectionShow={() => setShow({ ...show, work: true })}
+                            />
+                            <Heading
+                              line={true}
+                              lineW="300px"
+                              lineH={1}
+                            />
+                          </div>
+                        </HStack>
+                        <Box mr={"22%"} mt="2%">
+
+                          <WorkExperience
+
+                            position={true}
+                            position_placeholder={"Position"}
+                            date={true}
+                            summary={true}
+                            startDate_placeholder={"Start Date"}
+                            endDate_placeholder={"End Date"}
+
+                            positionStyle={styles.positionSty}
+
+
+                            dateStyle={styles.date}
+                            summaryStyle={styles.description}
+                            summary_placeholder={"Summary"}
+                            parentContainerStyle={styles.mt}
+
+
+
+                          />
+                        </Box>
+                      </>
+                    )}
+                  </div>
+
+                </Box>
               </Box>
-              <HeadingText
-                heading="EDUCATIONS"
-                width="75%"
-                marginTop="8%"
-                textSize="1.5rem"
-              />
-              <Education
-                data={
-                  resumeData?.education?.items?.length
-                    ? [...resumeData?.education?.items]
-                    : [...sampleData?.data?.education?.items]
-                }
-                color={color}
-                updater={updater}
-              />
-            </Box>
-            {/* Right Section  */}
-            <Box w="50%">
-              <Image
-                src="/SeTemplate.jpg"
-                w="90%"
-                borderRadius="100%"
-                ml="18%"
-              />
               <Box>
-                <Box bgColor="black" w="70%" h="2px"></Box>
-                <Text
-                  value={resumeData?.languages?.body?.heading}
-                  placeholder="SKILLS"
-                  customclass={`${styles.summary_heading} ${styles.contentEditableContainer}`}
-                  path={"objective.heading"}
-                  editable={true}
-                />
-                <Box bgColor="black" w="70%" h="2px"></Box>
+                <Image src="/SeBottom.png" w="100%" />
               </Box>
-              <Languages
-                data={
-                  resumeData?.languages?.items?.length
-                    ? [...resumeData?.languages?.items]
-                    : [...sampleData?.data?.languages?.items]
-                }
-                color={color}
-                updater={updater}
-              />
-              <HeadingText
-                width="70%"
-                heading="EXPERIENCE"
-                marginTop="8%"
-                textSize="1.5rem"
-              />
-              <Experience
-                data={
-                  resumeData?.work?.items?.length
-                    ? [...resumeData?.work?.items]
-                    : [...sampleData?.data?.work?.items]
-                }
-                color={color}
-                updater={updater}
-              />
             </Box>
           </Box>
-          <Box>
-            <Image src="/SeBottom.png" w="100%" />
-          </Box>
-        </Box>
+
+        </TempLayout  >
       </div>
+
     </>
   );
 }
