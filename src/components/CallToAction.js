@@ -3,6 +3,7 @@ import styles from "../../styles/Index.module.css";
 import { Image, Box, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import CommonButton from "./commonButton/CommonButton";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function CallToAction() {
   return (
@@ -14,9 +15,21 @@ export default function CallToAction() {
         <Box mt={"30px"}>
           <Link href="/templates">
             <CommonButton
-              title="Build Your Resume"
+              title="Build My Resume"
               hoverCursor={"pointer"}
-              hoverBackgroundColor={"red"}
+              backgroundColor={"#2CACD5"}
+              color={"whitesmoke"}
+              rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
+              fontSize={[
+                "1rem",
+                "1rem",
+                "1.1rem",
+                "1.1rem",
+                "1.1rem",
+                "1.5rem",
+              ]}
+              // hoverBackgroundColor={"red"}
+              // className={"hoverEffects"}
             />
           </Link>
         </Box>

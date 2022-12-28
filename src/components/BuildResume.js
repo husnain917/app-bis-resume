@@ -3,21 +3,22 @@ import { Button, Box } from "@chakra-ui/react";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import ImageBuild from "../../public/mainImageBuild.webp";
+import CommonButton from "./commonButton/CommonButton";
 import Link from "next/link";
 
 export default function BuildResume() {
   return (
     <>
       <div className={styles.ctsMain}>
-        <Box id="svg-section"></Box>
-        <h1 className={styles.ctaHeading}>Ready to Jump-Start Your Career</h1>
+        <Box id="svg-section" mt={10}></Box>
+        <h1 className={"sub-heading"}>Ready to Jump-Start Your Career</h1>
 
-        <Box className={styles.ctaHr} mt={2} mb={3}></Box>
+        <Box className={styles.ctaHr} mt={3} mb={4}></Box>
 
         <div>
-          <Box className="cursor">
+          <Box mb={3}>
             <Link href="/templates">
-              <Button
+              {/* <Button
                 className={styles.ctaBtn}
                 bg="#2CACD5"
                 colorScheme="#2CACD5"
@@ -29,10 +30,27 @@ export default function BuildResume() {
                 mb={1}
               >
                 Build Your Resume
-              </Button>
+              </Button> */}
+              <CommonButton
+                fontSize={[
+                  "1rem",
+                  "1rem",
+                  "1.1rem",
+                  "1.1rem",
+                  "1.1rem",
+                  "1.5rem",
+                ]}
+                title="Build My Resume"
+                hoverCursor={"pointer"}
+                backgroundColor={"#2CACD5"}
+                color={"whitesmoke"}
+                rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
+                // hoverBackgroundColor={"red"}
+                // className={"hoverEffects"}
+              />
             </Link>
           </Box>
-          <p>No credit card required</p>
+          {/* <p className="xsmall-text">No credit card required</p> */}
         </div>
         <div></div>
       </div>
