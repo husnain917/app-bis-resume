@@ -44,7 +44,7 @@ import { TbCertificate } from 'react-icons/tb';
 import { FaHorseHead } from 'react-icons/fa';
 import WorkExperience from '../../src/components/commonSection/WorkExperience';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-
+import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 
 import {
@@ -68,18 +68,24 @@ export default function TemplateContentCreater() {
         updater
     } = useStoreData();
     const [show, setShow] = useShow();
-
+    // PDF Download Hook
+    const { downloadPDFHandler, pdfRef } = PDFGenerater();
     return (
         <div style={{ overflow: 'auto' }}>
 
             <TempLayout
                 education={true}
                 work={true}
+                downloadPDF={downloadPDFHandler}
             >
                 <ChangeTempBtn />
 
                 <div className={Classes.mainDiv} >
-                    <Box ml={["", , , "3%", "15%", "25%"]} >
+                    <Box
+                        display={'flex'}
+                        justifyContent={'center'}
+                        ref={pdfRef}
+                    >
 
                         <div className={Classes.innerMainDiv} >
 

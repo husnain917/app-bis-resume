@@ -42,7 +42,7 @@ import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import About from "../../src/components/commonSection/About";
 import WorkExperience from '../../src/components/commonSection/WorkExperience';
 import Reference from "../../src/components/commonSection/Reference";
-
+import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 
 
@@ -56,25 +56,21 @@ export default function GraphicDesigner3() {
     updater
   } = useStoreData();
   const [show, setShow] = useShow();
-  console.log(resumeData);
-
-  console.log(resumeData);
+  // PDF Download Hook
+  const { downloadPDFHandler,pdfRef } = PDFGenerater();
   return (
     <div style={{ overflow: 'auto' }}>
 
     
-    <TempLayout work={true} education={true} skills={true} languages={true} references={true} >
+    <TempLayout work={true} education={true} skills={true} languages={true} references={true} downloadPDF={downloadPDFHandler}>
         <ChangeTempBtn />
      
       <Box
-        w="100%"
-
-    
-        
-        
-        ml={["", , , "8%", "15%", "23%"]}
+        pt="5%"
+        display={'flex'}
+        justifyContent={'center'}
       >
-        <Box w="100%" display="flex" flexDir="row" maxW="930px" minW="930px" pt="5%">
+        <Box w="100%" display="flex" flexDir="row" maxW="930px" minW="930px" ref={pdfRef}>
           <Box w="30%" h="auto" display="flex" flexDir="column">
             <Box bgColor="#56C8EA" pb="30px">
             <ImageSelector

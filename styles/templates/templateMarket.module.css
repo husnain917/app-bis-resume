@@ -2,7 +2,7 @@
   background-color:white;
   width: 100%;
   min-height: 100vh;
-  padding-top: 5%;
+  padding-top: 8%;
   
   padding-left: 5%;
 
@@ -14,7 +14,7 @@
   display: flex;
   height: 100%;
   margin-bottom: 5%;
-  margin-top: 5%;
+  /* margin-top: 5%; */
   justify-content: center;
   border-width: 3px;
   border-color:#00000023;
