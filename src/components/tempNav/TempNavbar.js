@@ -12,6 +12,8 @@ import {
   DrawerBody,
   DrawerFooter,
   useDisclosure,
+  Popover,
+  PopoverTrigger,
   Menu,
   MenuButton,
   MenuList,
@@ -37,6 +39,7 @@ import { useState } from 'react';
 import { MobileNavItem } from '../navbar/Navbar';
 import { NAV_ITEMS } from '../constant/navbarLinks/NavbarLinks';
 import Link from 'next/link';
+import ThemeModal from '../themeModal/ThemeModal';
 export default function TempNavbar({
   work,
   education,
@@ -98,20 +101,25 @@ export default function TempNavbar({
           <EditIcon mr="5px" />
           Fonts
         </Button>
-        <Button
-          bgColor="transparent"
-          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
-          color="white"
-          _hover={{
-            backgroundColor: 'transparent',
+        <Popover>
+          <PopoverTrigger>
+            <Button
+              bgColor="transparent"
+              fontSize={{ base: '12px', sm: '14px', md: '16px' }}
+              color="white"
+              _hover={{
+                backgroundColor: 'transparent',
 
-            color: '#313C4E',
-            transition: '0.4s',
-          }}
-        >
-          <MoonIcon mr="5px" />
-          Theme
-        </Button>
+                color: '#313C4E',
+                transition: '0.4s',
+              }}
+            >
+              <MoonIcon mr="5px" />
+              Theme
+            </Button>
+          </PopoverTrigger>
+          <ThemeModal />
+        </Popover>
         <LayoutModal
           work={work}
           education={education}

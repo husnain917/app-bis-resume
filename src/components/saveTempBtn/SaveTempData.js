@@ -41,8 +41,7 @@ const SaveTempData = () => {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user?.uid) {
-        setUid(user?.uid);
-      }
+        setUid(user?.uid);      }
     });
   }, []);
   
