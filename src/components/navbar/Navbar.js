@@ -81,7 +81,7 @@ export default function Navbar() {
           {/* deskTop Nav */}
           <Flex
             display={{ base: "none", lg: "flex" }}
-            marginTop={useBreakpointValue({ xl: "20px", lg: "12px" })}
+            marginTop={useBreakpointValue({ xl: "11px", lg: "12px" })}
             marginLeft={useBreakpointValue({ xl: "2rem", lg: "1.2rem" })}
           >
             <DesktopNav />
@@ -282,7 +282,10 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
-  const breakpointfontSize = useBreakpointValue({ xl: "16px", lg: "18px" });
+  const breakpointfontSize = useBreakpointValue({
+    xl: "18px",
+    lg: "20px",
+  });
 
   return (
     <Stack
@@ -299,7 +302,7 @@ const DesktopNav = () => {
                   href={navItem?.href ?? "#"}
                   fontWeight={500}
                   color={linkColor}
-                  fontSize={breakpointfontSize}
+                  fontSize={["10px", "12px", "14px", "16px", "18px"]}
                   _hover={{
                     textDecoration: "none",
                     color: linkHoverColor,

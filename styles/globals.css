@@ -1964,6 +1964,7 @@ video {
 }
 .afterlink{
   position: relative;
+  font-family: EuclidCircularB-Bold;
 }
 .afterlink::after{
   content:"";
