@@ -32,7 +32,15 @@ export default function BuildResume() {
                 Build Your Resume
               </Button> */}
               <CommonButton
-                title="Build Your Resume"
+                fontSize={[
+                  "1rem",
+                  "1rem",
+                  "1.1rem",
+                  "1.1rem",
+                  "1.1rem",
+                  "1.5rem",
+                ]}
+                title="Build My Resume"
                 hoverCursor={"pointer"}
                 backgroundColor={"#2CACD5"}
                 color={"whitesmoke"}

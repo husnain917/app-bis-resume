@@ -103,9 +103,9 @@ export default function Advantages() {
                 fontSize={[
                   "1rem",
                   "1rem",
-                  "1.2rem",
-                  "1.2rem",
-                  "1.2rem",
+                  "1.1rem",
+                  "1.1rem",
+                  "1.1rem",
                   "1.5rem",
                 ]}
                 textAlign="center"
@@ -116,7 +116,7 @@ export default function Advantages() {
                 pr="40px"
                 mt={["10%", "10%", "0%"]}
                 backgroundColor={"#2CACD5"}
-                title={"Build your resume"}
+                title={"Build My Resume"}
                 rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
               />
             </Link>
