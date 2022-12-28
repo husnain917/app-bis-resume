@@ -26,7 +26,7 @@ const FaqRightImageWithList = ({
   image,
 }) => {
   return (
-    <Box w={["100%", "94%", "94%", "960px", "1220px", "1500px"]}>
+    <Box w={["100%", "100%", "100%", "1000px", "92%", "95%"]}>
       <Grid
         templateAreas={[`"image textArea ."`]}
         gridTemplateRows={"1,1fr"}
@@ -42,15 +42,23 @@ const FaqRightImageWithList = ({
         marginInlineStart={["60px", "60px", "60px", "35px", "40px"]}
         marginInlineEnd={["60px", "60px", "60px", "35px", "40px"]}
       >
-        <GridItem pl="2" area={"textArea"} position="relative">
-          <Text fontSize={["2em"]} fontWeight="700">
+        <GridItem
+          pl="2"
+          area={"textArea"}
+          position="relative"
+          // className="small-text"
+        >
+          <Text fontSize={["2em"]} fontWeight="700" className="sub-heading">
             {heading}
           </Text>
-          <Text fontSize={["1em"]} my={4}>
+          <Text
+            fontSize={["1em", "1em", "1em", "1.1em", "1.1em", "1.3em"]}
+            my={4}
+          >
             {" "}
             {text1}
           </Text>
-          <UnorderedList ml={2} fontSize={"0.9em"}>
+          <UnorderedList ml={2} fontSize={"1em"}>
             <ListItem ml="3" mb={0.5}>
               {item1}
             </ListItem>
@@ -65,13 +73,13 @@ const FaqRightImageWithList = ({
             </ListItem>
           </UnorderedList>
           <Text
-            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            fontSize={["1em", "1em", "1em", "1.1em", "1.1em", "1.3em"]}
             my={4}
             fontWeight="400"
           >
             {text2}
           </Text>
-          <UnorderedList ml={2} fontSize={"0.9em"}>
+          <UnorderedList ml={2} fontSize={"1em"}>
             <ListItem ml="3" mb={0.5}>
               {item5}
             </ListItem>

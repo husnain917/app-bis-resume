@@ -12,6 +12,7 @@ export default function CommonButton({
   leftIcon,
   backgroundColor,
   padding,
+  margin,
   border,
   hoverBackgroundColor,
   hoverColor,
@@ -23,6 +24,7 @@ export default function CommonButton({
   borderRadius,
   fontSize,
   fontWeight,
+  icon,
 }) {
   return (
     // bg="#2CACD5"
@@ -36,16 +38,17 @@ export default function CommonButton({
     <Button
       className={`button-text ${className}`}
       width={width}
-      height={height || "45px"}
+      height={height}
       color={color}
       padding={padding || "10px 17px 10px 17px"}
       border={border || "none"}
       backgroundColor={backgroundColor}
-      borderRadius={borderRadius || "50px"}
+      borderRadius={borderRadius}
       fontSize={fontSize}
       fontWeight={fontWeight}
       rightIcon={rightIcon}
       leftIcon={leftIcon}
+      margin={margin}
       _hover={{
         // border: { hoverBorder },
         // cursor: hoverCursor || "pointer",
@@ -59,7 +62,7 @@ export default function CommonButton({
       onClick={onClick}
       disabled={disabled}
     >
-      {loading ? loading : title || "AddTitle"}
+      {loading ? loading : icon}
       <span></span>
       <span></span>
       <span></span>
