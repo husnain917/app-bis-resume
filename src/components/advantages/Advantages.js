@@ -96,9 +96,10 @@ export default function Advantages() {
           <Box className="cursor">
             <Link href="/templates">
               <CommonButton
-                width={"250px"}
-                height={"40px"}
+                width={"300px"}
+                height={"45px"}
                 borderRadius="50px"
+                padding={"10px"}
                 fontSize={[
                   "1rem",
                   "1rem",
