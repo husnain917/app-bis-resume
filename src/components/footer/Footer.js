@@ -27,9 +27,9 @@ export default function Footer() {
             // className={"hoverEffects"}
             icon={
               <FaFacebookF
-                color={"#897e7e"}
+                color={"#463477"}
                 fontWeight={"bold"}
-                fontSize={"1.3rem"}
+                fontSize={"1.1rem"}
               />
             }
           />
@@ -40,14 +40,14 @@ export default function Footer() {
             backgroundColor={"white"}
             borderRadius={"50%"}
             color={"whitesmoke"}
-            margin={"0px 10px 0px 10px"}
+            margin={"0px 20px 0px 20px"}
             padding={"0"}
             hoverBorder={"1px solid black"}
             icon={
               <FaLinkedinIn
-                color={"#897e7e"}
+                color={"#463477"}
                 fontWeight={"bold"}
-                fontSize={"1.3rem"}
+                fontSize={"1.1rem"}
               />
             }
           />
@@ -58,15 +58,15 @@ export default function Footer() {
             backgroundColor={"white"}
             borderRadius={"50%"}
             color={"whitesmoke"}
-            margin={"0px 10px 0px 0px"}
+            margin={"0px 20px 0px 0px"}
             padding={"0"}
             hoverBorder={"1px solid black"}
             // className={"hoverEffects"}
             icon={
               <FaTwitter
-                color={"#897e7e"}
+                color={"#463477"}
                 fontWeight={"bold"}
-                fontSize={"1.3rem"}
+                fontSize={"1.1rem"}
               />
             }
           />
@@ -83,9 +83,9 @@ export default function Footer() {
             // className={"hoverEffects"}
             icon={
               <FaInstagram
-                color={"#897e7e"}
+                color={"#463477"}
                 fontWeight={"bold"}
-                fontSize={"1.3rem"}
+                fontSize={"1.1rem"}
               />
             }
           />
