@@ -18,7 +18,7 @@ export const data = [
     title: "Popular format downloads",
     advDesc:
       "Need your resume in PDF, word, or an image file? You are in control with multiple export and download options.",
-    imgSrc: "/tabthree.jpg",
+    imgSrc: "/illus5.png",
   },
   {
     advNum: "4",

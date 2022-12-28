@@ -42,7 +42,7 @@ export default function BuildResume() {
               />
             </Link>
           </Box>
-          <p className="small-text">No credit card required</p>
+          <p className="xsmall-text">No credit card required</p>
         </div>
         <div></div>
       </div>
