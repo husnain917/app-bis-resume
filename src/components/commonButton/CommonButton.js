@@ -18,23 +18,18 @@ export default function CommonButton({
   hoverCursor,
   hoverBorder,
   hoverTransition,
+  hoverBoxShadow,
   width,
   height,
   borderRadius,
   fontSize,
   fontWeight,
+  margin,
 }) {
   return (
-    // bg="#2CACD5"
-    // colorScheme="#2CACD5"
-    // borderRadius="20px"
-    // fontWeight="bold"
-    // color="white"
-    // rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
-    // mt={5}
-    // mb={1}
     <Button
       className={`button-text ${className}`}
+      margin={margin}
       width={width}
       height={height || "45px"}
       color={color}
@@ -47,14 +42,12 @@ export default function CommonButton({
       rightIcon={rightIcon}
       leftIcon={leftIcon}
       _hover={{
-        // border: { hoverBorder },
-        // cursor: hoverCursor || "pointer",
-        // color: hoverColor,
-        // backgroundColor: hoverBackgroundColor,
-        // transition: hoverTransition || "0.5s",
-        backgroundcolor: "#50bce0",
-        boxShadow: "-1px -2px 4px 5px #8fd1e7",
-        borderRadius: "8px",
+        border: { hoverBorder },
+        color: hoverColor,
+        transition: hoverTransition || "0.5s",
+        backgroundcolor: hoverBackgroundColor || "#50bce0",
+        boxShadow: hoverBoxShadow || "-1px -2px 4px 5px #8fd1e7",
+        borderRadius: borderRadius || "8px",
       }}
       onClick={onClick}
       disabled={disabled}
