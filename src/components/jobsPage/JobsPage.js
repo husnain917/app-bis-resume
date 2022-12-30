@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Image, Text } from "@chakra-ui/react";
 import CommonButton from "../commonButton/CommonButton";
+import SecondSection from "./secondSection/SecondSection";
 
 const JobsPage = () => {
   const handleButton = () => {
@@ -8,8 +9,8 @@ const JobsPage = () => {
   };
   return (
     <Box w={"100%"}>
-      <Box bg={"#FFD67B"} paddingY={"10px"}>
-        <Box display={"flex"} padding={"20px 10px 20px 10px"}>
+      <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
+        <Box bg={"#FFD67B"} display={"flex"} padding={"20px 10px 0px 10px"}>
           <Box w={"50%"}>
             <Box
               id="HeadingLeftSide"
@@ -17,7 +18,7 @@ const JobsPage = () => {
               flexDirection="column"
               // w={width > 610 ? ["100%", "49%", "49%", "49%", "49%"] : "100%"}
               alignItems={"flex-end"}
-              padding={"40px 30px 40px 60px"}
+              padding={"40px 30px 0px 60px"}
             >
               <Box
                 display={["flex", "flex"]}
@@ -53,7 +54,7 @@ const JobsPage = () => {
               display={"flex"}
               flexDirection="column"
               // w={width > 610 ? ["100%", "49%", "49%", "49%", "49%"] : "100%"}
-              padding={"30px"}
+              padding={"30px 30px 0px 30px"}
             >
               <Text
                 className={"sub-heading"}
@@ -92,7 +93,7 @@ const JobsPage = () => {
               </Text>
               <Text
                 className={"medium-text"}
-                mt={2}
+                marginTop={"4.5rem"}
                 color={"black"}
                 fontSize={"21px"}
                 display={"flex"}
@@ -109,7 +110,7 @@ const JobsPage = () => {
                 padding={"24px"}
                 borderRadius={"40px"}
                 title={"Buy Today"}
-                margin={"24px 0rem"}
+                margin={"24px 0px"}
                 fontSize={"18px"}
                 backgroundColor={"rgb(75,204,239)"}
               />
@@ -117,7 +118,7 @@ const JobsPage = () => {
                 height={"2px"}
                 backgroundColor={"black"}
                 mt={4}
-                width={"30%"}
+                width={"25%"}
               ></Box>
 
               <Text
@@ -130,18 +131,27 @@ const JobsPage = () => {
               </Text>
               <CommonButton
                 className={"medium-text"}
-                width={"17rem"}
+                width={"20rem"}
                 height={"5rem"}
                 title={"Download Sample"}
-                marginTop={"1rem"}
                 backgroundColor={"white"}
                 fontSize={"18px"}
-                margin={"24px 0rem"}
+                margin={"1.5rem 0rem 0rem 0rem"}
               />
             </Box>
           </Box>
         </Box>
+        <Box
+          marginTop={"-125px"}
+          height={"15.1rem"}
+          width={"auto"}
+          backgroundImage={
+            "https://images.squarespace-cdn.com/content/v1/622af6c5cff01d7236bfdcf8/0fc7177e-3370-426c-986f-29f9911bcf96/yellow-wave-gbg-bottom.png?format=2500w"
+          }
+          backgroundRepeat="no-repeat"
+        ></Box>
       </Box>
+      <SecondSection />
     </Box>
   );
 };

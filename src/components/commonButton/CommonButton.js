@@ -53,10 +53,6 @@ export default function CommonButton({
       disabled={disabled}
     >
       {loading ? loading : title || "AddTitle"}
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
     </Button>
   );
 }
