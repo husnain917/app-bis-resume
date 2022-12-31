@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Image, Text } from "@chakra-ui/react";
 import CommonButton from "../commonButton/CommonButton";
 import SecondSection from "./secondSection/SecondSection";
+import ThirdSection from "./thirdSection/ThirdSection";
 
 const JobsPage = () => {
   const handleButton = () => {
@@ -152,6 +153,7 @@ const JobsPage = () => {
         ></Box>
       </Box>
       <SecondSection />
+      <ThirdSection />
     </Box>
   );
 };

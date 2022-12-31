@@ -51,3 +51,69 @@ export const data = [
     ],
   },
 ];
+
+export const thirdContent = [
+  {
+    id: "Heading",
+    className: "sub-heading",
+    fontSize: "48px",
+    text: "We’re Here to Help!",
+    textAlign: "start",
+    margin: "20px 0px",
+  },
+  {
+    id: "content",
+    className: "small-text",
+    fontSize: "21px",
+    text: `At Novoresume, we wanted to create the ultimate job search resource - something that's useful for job seekers of all levels, from students to senior professionals.`,
+    textAlign: "start",
+    color: "rgb(49,59,71)",
+  },
+  {
+    id: "content",
+    fontSize: "21px",
+    className: "medium-text",
+    text: `With the Job Search Masterclass e-book, we cover the job search process from start to finish, arming you with the knowledge you need to take charge of your career. The e-book features:`,
+    textAlign: "start",
+    margin: "25px 0px",
+  },
+  {
+    listItems: [
+      {
+        imageUrl: "/book-chapters.png",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: `How to Create a Compelling Resume That Stands Out.`,
+        textAlign: "start",
+
+        doneIcon: "MdDone",
+        iconSize: "18px",
+        iconWeight: "bold",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: ` 5 Steps to a Convincing Cover Letter (That Gets Read).`,
+        textAlign: "start",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: `Acing the Job Interview - The Common Interview Questions (And How to Answer Them).`,
+        textAlign: "start",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: `Templates, Checklists, Practical Examples, and So Much More!`,
+        textAlign: "start",
+      },
+    ],
+  },
+];

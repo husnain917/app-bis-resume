@@ -13,6 +13,7 @@ const ContentText = ({
   backgroundColor,
   width,
   marginBox,
+  fontWeight,
 }) => {
   return (
     <Box
@@ -26,9 +27,10 @@ const ContentText = ({
         id={id || "text"}
         className={`${className ? className : "medium-text"}`}
         margin={margin}
-        color={color || "black"}
+        color={color}
         textAlign={textAlign || "center"}
         fontSize={fontSize}
+        fontWeight={fontWeight}
       >
         {text}
       </Text>

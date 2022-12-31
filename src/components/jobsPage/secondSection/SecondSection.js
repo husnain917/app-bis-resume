@@ -42,7 +42,7 @@ const SecondSection = () => {
       <Box w={"10%"} h={"1px"} bg={"black"}></Box>
       <Box display={"flex"} w={"100%"} justifyContent={"space-around"} mt={10}>
         <Box id={"image"} display={"flex"} w="45%">
-          <Box padding={"60px"}>
+          <Box padding={"50px"}>
             <Image src="/hunting-for-jobs.png" alt="" />
           </Box>
         </Box>
