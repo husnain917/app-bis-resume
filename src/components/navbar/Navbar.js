@@ -38,6 +38,11 @@ export default function Navbar() {
   const [active, setIsActive] = useState(null);
   const isUserLoggedIn = useSelector(state => state.AuthReducer.isUserLoggedIn)
   const uid = useSelector(state => state.AuthReducer.userID)
+  const breakpointWidth = useBreakpointValue({
+    xl: "120px",
+    lg: "80px",
+    md: "110px",
+  });
   return (
     <Box>
       <Flex
