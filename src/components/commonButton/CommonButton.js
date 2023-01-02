@@ -18,6 +18,9 @@ export default function CommonButton({
   hoverCursor,
   hoverBorder,
   hoverTransition,
+  focusBg,
+  focusColor,
+  margin,
   width,
   height,
   borderRadius,
@@ -25,14 +28,6 @@ export default function CommonButton({
   fontWeight,
 }) {
   return (
-    // bg="#2CACD5"
-    // colorScheme="#2CACD5"
-    // borderRadius="20px"
-    // fontWeight="bold"
-    // color="white"
-    // rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
-    // mt={5}
-    // mb={1}
     <Button
       className={`button-text ${className}`}
       width={width}
@@ -47,15 +42,14 @@ export default function CommonButton({
       rightIcon={rightIcon}
       leftIcon={leftIcon}
       _hover={{
-        // border: { hoverBorder },
-        // cursor: hoverCursor || "pointer",
-        // color: hoverColor,
-        // backgroundColor: hoverBackgroundColor,
-        // transition: hoverTransition || "0.5s",
         backgroundcolor: "#50bce0",
         boxShadow: "-1px -2px 4px 5px #8fd1e7",
         borderRadius: "8px",
+        bg: hoverBackgroundColor, 
+        color: hoverColor,
       }}
+      _focus={{ bg: focusBg, color: focusColor }}
+      margin={margin}
       onClick={onClick}
       disabled={disabled}
     >
