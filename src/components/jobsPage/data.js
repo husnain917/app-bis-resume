@@ -117,3 +117,185 @@ export const thirdContent = [
     ],
   },
 ];
+
+export const forthContent = [
+  {
+    id: "Heading",
+    className: "sub-heading",
+    fontSize: "48px",
+    text: "What's inside in your pocket?",
+    textAlign: "center",
+    margin: "20px 0px",
+  },
+  {
+    id: "Faqitem",
+    className: "medium-text",
+    fontSize: "48px",
+    text: "Chapter 1 - How to create a resume",
+    textAlign: "start",
+    margin: "20px 0px",
+
+    faqsContent: [
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+    ],
+  },
+  {
+    id: "Faqitem",
+    className: "sub-heading",
+    fontSize: "48px",
+    text: " Chapter 2 - Match your resume with a cover letter",
+    textAlign: "start",
+    margin: "20px 0px",
+    faqsContent: [
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+    ],
+  },
+  {
+    id: "Faqitem",
+    className: "sub-heading",
+    fontSize: "48px",
+    text: "Chapter 3 - How to ace your interview",
+    textAlign: "start",
+    margin: "20px 0px",
+    faqsContent: [
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+    ],
+  },
+  {
+    id: "Faqitem",
+    className: "sub-heading",
+    fontSize: "48px",
+    text: "Chapter 4 - Remote work",
+    textAlign: "start",
+    margin: "20px 0px",
+    faqsContent: [
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+    ],
+  },
+  {
+    id: "Faqitem",
+    className: "sub-heading",
+    fontSize: "48px",
+    text: "Bonus - How to hack your job search in 2022",
+    textAlign: "start",
+    margin: "20px 0px",
+    faqsContent: [
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+      {
+        text: "Heading",
+      },
+    ],
+  },
+];

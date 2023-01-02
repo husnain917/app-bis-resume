@@ -56,8 +56,8 @@ const SecondSection = () => {
         >
           <Text fontSize={"20px"}>
             Unless you have a Ph.D. in Human Resources or a few years of
-            experience as an HR manager, you've probably struggled with at least
-            some parts of the process.
+            experience as an HR manager, you&#39;ve probably struggled with at
+            least some parts of the process.
           </Text>
           <Text fontSize={"20px"} marginTop={"-6%"}>
             You might, for example, be unsure of how to create a resume that

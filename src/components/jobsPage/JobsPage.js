@@ -3,6 +3,7 @@ import { Box, Image, Text } from "@chakra-ui/react";
 import CommonButton from "../commonButton/CommonButton";
 import SecondSection from "./secondSection/SecondSection";
 import ThirdSection from "./thirdSection/ThirdSection";
+import ForthSection from "./forthSection/ForthSection";
 
 const JobsPage = () => {
   const handleButton = () => {
@@ -154,6 +155,7 @@ const JobsPage = () => {
       </Box>
       <SecondSection />
       <ThirdSection />
+      <ForthSection />
     </Box>
   );
 };
