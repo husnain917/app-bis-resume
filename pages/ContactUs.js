@@ -76,6 +76,7 @@ export default function ContactUs() {
             >
               {buttonData.map((button, index) => {
                 return (
+                  <Box key={index}>
                   <ContactButton
                     button={button}
                     index={index}
@@ -84,6 +85,7 @@ export default function ContactUs() {
                     onFocunHandler={onFocunHandler}
                   // onClick={button.link}
                   />
+                  </Box>
                 );
               })}
             </Box>
