@@ -2,7 +2,7 @@
 
 import { auth, db } from '../../config/firebase';
 import { collection, query, where, getDocs, doc, getDoc, addDoc, updateDoc, arrayUnion, orderBy } from "firebase/firestore";
-
+import { Magic } from 'magic-sdk'
 import { LOGIN, LOGOUT, SIGN_UP, CHECK_USER, ACTIVE_USER } from '../type/Type'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, getAdditionalUserInfo, sendPasswordResetEmail } from "firebase/auth";
 import { getAuth, sendEmailVerification } from "firebase/auth";
@@ -112,7 +112,7 @@ export const doSignUp = (data, setErr, setIsModalOpen, setLoadingsignup) => asyn
                 type: SIGN_UP,
                 payload: userData,
             })
-           
+
         }
     } catch (e) {
         const errorCode = e.code;
@@ -200,5 +200,36 @@ export const doCheckUser = (uid) => async (dispatch) => {
         });
     } catch (error) {
         console.log("error at Check user data", error);
+    }
+};
+
+export const loginMagicUser = (email, setUser, setLoading, setIsModalOpen) => async (dispatch) => {
+    let magic;
+    if (typeof window !== 'undefined') {
+        magic = new Magic(process.env.NEXT_PUBLIC_MAGIC_API_KEY);
+    }
+    try {
+        setLoading(true)
+        const didToken = await magic.auth.loginWithMagicLink({ email });
+        const user = await magic.user.getMetadata();
+
+        if (user) {
+            setUser(user);
+            storeToken(user?.publicAddress)
+            dispatch({
+                type: LOGIN,
+                payload: user?.publicAddress,
+            });
+            setIsModalOpen(false)
+            setErr({ fieldErr: '' })
+            ToastSuccess("Login Successfull")
+        }
+        return didToken;
+    }
+    catch (error) {
+        console.log(error);
+    }
+    finally {
+        setLoading(false)
     }
 };
