@@ -3,7 +3,7 @@
 
     width: 100%;
     height: 100vh;
-    padding-top: 5%;
+    padding-top: 8%;
     
     padding-left: 5%;
 }
@@ -15,7 +15,7 @@
     height: auto;
     background-color: #F8F2EA;
     margin-bottom: 5%;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     justify-content: center;
     border-width: 3px;
     border-color: burlywood;

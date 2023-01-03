@@ -23,7 +23,7 @@ import CustomBtn from "./CustomBtn";
 import { data } from "./data";
 import { CloseIcon, ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useDispatch } from "react-redux";
-import { doGoogleLogin, doLogin, doSignUp, passwordReset } from "../../../store/actions/AuthAction";
+import { doGoogleLogin, doLogin, doSignUp, loginMagicUser, passwordReset } from "../../../store/actions/AuthAction";
 import { ToastContainer } from 'react-toastify';
 import { ToastSuccess } from "../Toast";
 
@@ -51,8 +51,16 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
   const [show, setShow] = React.useState(true)
   const handleClick = () => setShow(!show)
   const dispatch = useDispatch()
+  const [user, setUser] = useState(null)
 
-
+  const magicLogin = async () => {
+    if (email !== '') {
+      dispatch(loginMagicUser(email, setUser, setLoading, setIsModalOpen))
+    }
+    else {
+      setErr({ inputField: 'This field is required', inputId: 7 })
+    }
+  }
 
   const validateEmail = (email) => {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-z  A-Z]{2,}))$/;
@@ -460,130 +468,131 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                               }
                             </InputRightElement>
                           </InputGroup>
-                            {
-                              (err.inputField !== '' && err.inputId === 3 || err.inputField !== '' && err.inputId === 4) &&
-                              <span style={inCorrect}>
-                                {err.inputField}
-                              </span>
-                            }
-                            <Text
-                              onClick={() => setResetPass(true)}
-                              color="#2a69cb"
-                              fontSize={16}
-                              fontWeight={500}
-                              cursor='pointer'
-                              mt={2}
-                              _hover={{
-                                textDecoration: "underline"
-                              }}
-                            >
-                              Request password change
-
-                            </Text>
-                          </>
-                      }
-                          <Checkbox
-                            size="lg"
-                            mt="5%"
-                            colorScheme="MediumSpringGreen"
-                            iconColor="MediumSpringGreen"
-                            value={terms}
-                            onChange={(e) => setTerms(e.target.checked)}
+                          {
+                            (err.inputField !== '' && err.inputId === 3 || err.inputField !== '' && err.inputId === 4) &&
+                            <span style={inCorrect}>
+                              {err.inputField}
+                            </span>
+                          }
+                          <Text
+                            onClick={() => setResetPass(true)}
+                            color="#2a69cb"
+                            fontSize={16}
+                            fontWeight={500}
+                            cursor='pointer'
+                            mt={2}
+                            _hover={{
+                              textDecoration: "underline"
+                            }}
                           >
-                            Remember me
-                          </Checkbox>
+                            Request password change
+
+                          </Text>
                         </>
-                  )}
-                    </Box>
-              {/* Next Buttons */}
-                <Box mt="5%">
-                  {active === 0 ? (
-                    <>
-                      <CustomBtn
-                        title={loadingsignup ? "Loading..." : "Register Now"}
-                        bgColor="#00C8AA"
-                        color="white"
-                        hoverColor="#00e2c0"
-                        blue={true}
-                        onClickHandler={signUp}
-                      />
+                      }
+                      <Checkbox
+                        size="lg"
+                        mt="5%"
+                        colorScheme="MediumSpringGreen"
+                        iconColor="MediumSpringGreen"
+                        value={terms}
+                        onChange={(e) => setTerms(e.target.checked)}
+                      >
+                        Remember me
+                      </Checkbox>
                     </>
-                  ) : resetPass ? (
+                  )}
+              </Box>
+              {/* Next Buttons */}
+              <Box mt="5%">
+                {active === 0 ? (
+                  <>
                     <CustomBtn
-                      title={resetLoading ? "Loading..." : "Request Password Change"}
+                      title={loadingsignup ? "Loading..." : "Register Now"}
                       bgColor="#00C8AA"
                       color="white"
+                      hoverColor="#00e2c0"
                       blue={true}
-                      mt="5%"
-                      onClickHandler={resetPassword}
+                      onClickHandler={signUp}
                     />
-                  ) : (
-                    <>
-                      <Text align="center" fontSize="14px" mt="9%" p="5px">
-                        We will send you a one-time sign in link.
-                      </Text>
-                      {
-                        fieldActive &&
-                        <CustomBtn
-                          title={loading ? 'loading...' : "SignIn"}
-                          bgColor="#00C8AA"
-                          color="white"
-                          blue={true}
-                          mt="5%"
-                          onClickHandler={login}
-                        />
-                      }
+                  </>
+                ) : resetPass ? (
+                  <CustomBtn
+                    title={resetLoading ? "Loading..." : "Request Password Change"}
+                    bgColor="#00C8AA"
+                    color="white"
+                    blue={true}
+                    mt="5%"
+                    onClickHandler={resetPassword}
+                  />
+                ) : (
+                  <>
+                    <Text align="center" fontSize="14px" mt="9%" p="5px">
+                      We will send you a one-time sign in link.
+                    </Text>
+                    {
+                      fieldActive &&
                       <CustomBtn
-                        title="SignIn With Magic Link"
-                        bgColor={fieldActive ? "#E1E1E1" : "#00C8AA"}
+                        title={loading ? 'loading...' : "SignIn"}
+                        bgColor="#00C8AA"
                         color="white"
                         blue={true}
                         mt="5%"
+                        onClickHandler={login}
                       />
-                      {
-                        !fieldActive &&
-                        <CustomBtn
-                          title="Switch to password"
-                          bgColor="#E1E1E1"
-                          color="grey"
-                          mt="5%"
-                          onClickHandler={() => setFieldActive(true)}
-                        />
-                      }
+                    }
+                    <CustomBtn
+                      title={loading ? "loading..." : "SignIn With Magic Link"}
+                      bgColor={fieldActive ? "#E1E1E1" : "#00C8AA"}
+                      color="white"
+                      blue={true}
+                      onClickHandler={magicLogin}
+                      mt="5%"
+                    />
+                    {
+                      !fieldActive &&
+                      <CustomBtn
+                        title="Switch to password"
+                        bgColor="#E1E1E1"
+                        color="grey"
+                        mt="5%"
+                        onClickHandler={() => setFieldActive(true)}
+                      />
+                    }
+                  </>
+                )}
+                {resetPass ? (
+                  <></>
+                )
+                  :
+                  (
+                    <>
+                      <Text fontSize="16px" align="center" mt="5%">
+                        Or Sign In With:
+                      </Text>
+
+                      <Button
+                        leftIcon={<FaGoogle />}
+                        variant="solid"
+                        bgColor="#E1E1E1"
+                        color="grey"
+                        w="85%"
+                        ml="8%"
+                        borderRadius="100px"
+                        fontSize="16px"
+                        mt="3%"
+                        className={styles.modalBtn}
+                        onClick={() => loginWithGoogle()}
+                      >
+                        Google
+                      </Button>
                     </>
                   )}
-                  {resetPass ? (
-                    <></>
-                  )
-                    :
-                    (
-                      <>
-                        <Text fontSize="16px" align="center" mt="5%">
-                          Or Sign In With:
-                        </Text>
-
-                        <Button
-                          leftIcon={<FaGoogle />}
-                          variant="solid"
-                          bgColor="#E1E1E1"
-                          color="grey"
-                          w="85%"
-                          ml="8%"
-                          borderRadius="100px"
-                          fontSize="16px"
-                          mt="3%"
-                          className={styles.modalBtn}
-                          onClick={() => loginWithGoogle()}
-                        >
-                          Google
-                        </Button>
-                      </>
-                    )}
 
 
-                </Box>
               </Box>
             </Box>
+          </Box>
         </ModalContent>
       </Modal>
     </>

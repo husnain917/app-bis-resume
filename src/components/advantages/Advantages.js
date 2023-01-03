@@ -7,6 +7,8 @@ import CardSliderFunc from "../compProfessionalResume/compComponents/CardSlider"
 import { useWindowSizing } from "../../../customHooks/useWindowSizing";
 import AdvSlider from "./AdvSlider";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
+import CommonButton from "../commonButton/CommonButton";
 
 export default function Advantages() {
   const [isTabActive, setIsTabActive] = useState(0);
@@ -26,7 +28,7 @@ export default function Advantages() {
 
   useEffect(() => {
     const progressBar = setInterval(() => {
-      setToastWidth((prev) => (prev + 25) % 100);
+      setToastWidth((prev) => (prev - 25) % 100);
     }, 2000);
 
     const interval = setInterval(() => {
@@ -45,6 +47,7 @@ export default function Advantages() {
           mt="5%"
           pt="2%"
           p="10px"
+          className={"sub-heading"}
         >
           Advantages of Using My Perfect BisResume
         </Text>
@@ -92,30 +95,30 @@ export default function Advantages() {
         <Box display="flex" alignItems="center" justifyContent="space-around">
           <Box className="cursor">
             <Link href="/templates">
-              <Button
-                colorScheme="#027C87"
-                bgColor="#027C87"
-                color="white"
+              <CommonButton
+                width={"270px"}
+                height={"45px"}
                 borderRadius="50px"
+                padding={"10px"}
                 fontSize={[
                   "1rem",
                   "1rem",
-                  "1.2rem",
-                  "1.2rem",
-                  "1.2rem",
+                  "1.1rem",
+                  "1.1rem",
+                  "1.1rem",
                   "1.5rem",
                 ]}
-                fontWeight="bold"
                 textAlign="center"
+                color={"whitesmoke"}
                 mb="5%"
                 p={["0px", , "25px", "25px", "25px", "30px"]}
                 pl="40px"
                 pr="40px"
                 mt={["10%", "10%", "0%"]}
-                className={styles.benefitBtn}
-              >
-                Build my resume
-              </Button>
+                backgroundColor={"#2CACD5"}
+                title={"Build My Resume"}
+                rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
+              />
             </Link>
           </Box>
         </Box>

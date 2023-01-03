@@ -39,6 +39,7 @@ import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 
 import Link from "next/link";
 import { Tooltip } from "react-tippy";
+import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 export default function TemplateMarket() {
     const {
@@ -47,18 +48,22 @@ export default function TemplateMarket() {
         updater
     } = useStoreData();
     const [show, setShow] = useShow();
-
+    // PDF Download Hook
+    const { downloadPDFHandler, pdfRef } = PDFGenerater();
     return (
         <div style={{ overflow: 'auto' }}>
 
             <div className={style.main}>
-                <TempLayout work={true} education={true} skills={true} certificate={true} languages={true}>
+                <TempLayout work={true} education={true} skills={true} certificate={true} languages={true} downloadPDF={downloadPDFHandler}>
                     <ChangeTempBtn />
 
 
-                    <div className={styles.mainDiv} >
-                        <Box ml={["", , , "5%", "13%", "25%"]} >
-
+                    <Box className={styles.mainDiv}>
+                        <Box
+                            display={'flex'}
+                            justifyContent={'center'}
+                            ref={pdfRef}
+                        >
                             <div className={styles.innerMainDiv} >
                                 <div className={styles.innerMainDiv1}>
                                     <Box height={300} display='flex' justifyContent='center' alignItems='center' >
@@ -440,7 +445,7 @@ export default function TemplateMarket() {
                                 </div>
                             </div>
                         </Box>
-                    </div>
+                    </Box>
                 </TempLayout >
             </div >
         </div>

@@ -4,7 +4,7 @@ import { Grid, GridItem, Box, Image, Text } from "@chakra-ui/react";
 const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
   return (
     <Box
-      w={["100%", "100%", "100%", "960px", "1220px", "1500px"]}
+      w={["100%", "100%", "100%", "1000px", "92%", "95%"]}
       marginTop={"1.2rem"}
     >
       <Grid
@@ -23,30 +23,42 @@ const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
         marginInlineStart="40px"
         marginInlineEnd="40px"
         style={{
-          letterSpacing: "0.8px",
+          letterSpacing: "0.3px",
         }}
       >
         <GridItem pl="2" area={"textArea"} position="relative">
           <Text
             fontSize={["1.9em"]}
-            fontWeight="700"
             style={{
               letterSpacing: "0px",
             }}
+            className="sub-heading"
           >
             {heading}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
+          <Text
+            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            my={4}
+          >
             {" "}
             {text1}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
+          <Text
+            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            my={4}
+          >
             {text2}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
+          <Text
+            fontSize={["1em", "1em", "1em", "1.1em", "1.1em", "1.3em"]}
+            my={4}
+          >
             {text3}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", "1em", "1em", "1.3em"]} my={4}>
+          <Text
+            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            my={4}
+          >
             {text4}
           </Text>
         </GridItem>

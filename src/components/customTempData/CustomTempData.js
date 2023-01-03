@@ -28,7 +28,7 @@ export const CUSTOM_TEMP_DATA = [
         width: '250px',
     },
     {
-        href: '/templates/FinancialExpert.js',
+        href: '/templates/FinancialExpert',
         src: 'financialAdvisor.png',
         alt: 'Template Not Found',
         height: '200px',
@@ -210,7 +210,7 @@ export const CUSTOM_TEMP_DATA = [
         width: '250px',
     },
     {
-        href: '/templates/templatebrand',
+        href: '/templates/softEngineer/SoftEngineer',
         src: 'softEngr.jpg',
         alt: 'Template Not Found',
         height: '200px',

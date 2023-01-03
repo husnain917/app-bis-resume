@@ -22,6 +22,7 @@ import {
 } from "@chakra-ui/icons";
 import logoIcon from "../../../public/bisResumeLogo.svg";
 import Image from "next/image";
+import CommonButton from "../commonButton/CommonButton";
 import {
   NAV_ITEMS,
   EnglishDropDown,
@@ -29,6 +30,8 @@ import {
 } from "../constant/navbarLinks/NavbarLinks";
 import { useState } from "react";
 import AuthModal from "../authModal/AuthModal";
+import { useSelector } from "react-redux";
+import ProfileComponent from "./ProfileComponent";
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const linkHoverColor = useColorModeValue("gray.800", "white");
@@ -41,7 +44,8 @@ export default function Navbar() {
   const breakpointfontSize = useBreakpointValue({ xl: "14px", lg: "12px" });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [active, setIsActive] = useState(null);
-
+  const isUserLoggedIn = useSelector(state => state.AuthReducer.isUserLoggedIn)
+  const uid = useSelector(state => state.AuthReducer.userID)
   return (
     <Box>
       <Flex
@@ -80,7 +84,7 @@ export default function Navbar() {
           {/* deskTop Nav */}
           <Flex
             display={{ base: "none", lg: "flex" }}
-            marginTop={useBreakpointValue({ xl: "20px", lg: "12px" })}
+            marginTop={useBreakpointValue({ xl: "11px", lg: "12px" })}
             marginLeft={useBreakpointValue({ xl: "2rem", lg: "1.2rem" })}
           >
             <DesktopNav />
@@ -142,90 +146,90 @@ export default function Navbar() {
           {/* English dropdown end */}
 
           {/* login buttons */}
-          {Login_Buttons?.map((items) => {
-            return (
-              <>
-                <Box
-                  display={{ base: "none", md: "inline-block" }}
-                  justify={{ base: "end" }}
-                  style={{
-                    border: "1px solid #e0e2e8",
-                    boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
-                    borderRadius: "0.2rem",
-                  }}
-                  cursor={"pointer"}
-                  width={breakpointWidth}
-                  bg={
-                    items?.label === "Register"
-                      ? "#006772"
-                      : items?.label === "Login"
-                      ? "#006772"
-                      : ""
-                  }
-                  textAlign={"center"}
-                  padding={"10px 5px"}
-                  textTransform={"uppercase"}
-                  ml="1.5rem"
-                  _hover={{
-                    textDecoration: "none",
-                    backgroundColor: "red",
-                    color: "white",
-                    transition: "0.5s",
-                  }}
-                >
-                  {items?.label === "Register" ? (
-                    <>
-                      <Link
-                        // href={items?.href ?? '#'}
-                        fontWeight={650}
-                        color={"#fdfffc"}
-                        fontSize={breakpointfontSize}
-                        _hover={{
-                          textDecoration: "none",
-                          color: "#fff",
-                        }}
-                        onClick={() => {
-                          setIsModalOpen(true)
-                          setIsActive(0)
-                        }}
-                      >
-                        {items.label}
-                      </Link>
-                    </>
-                  ) : items.label === "Login" ? (
-                    <>
-                      <Link
-                        // href={items?.href ?? '#'}
-                        fontWeight={650}
-                        color={"#fdfffc"}
-                        fontSize={breakpointfontSize}
-                        _hover={{
-                          textDecoration: "none",
-                          color: "#fff",
-                        }}
-                        onClick={() => {
-                          setIsActive(1)
-                          setIsModalOpen(true)
-                         
-                        }
-                        }
-                      >
-                        {items.label}
-                      </Link>
-                    </>
-                  ) : (
-                    <></>
-                  )}
-                  <AuthModal
-                    active={active}
-                    setIsActive={setIsActive}
-                    isModalOpen={isModalOpen}
-                    setIsModalOpen={setIsModalOpen}
-                  />
-                </Box>
-              </>
-            );
-          })}
+          {
+            !isUserLoggedIn ?
+              Login_Buttons?.map((items) => {
+                return (
+                  <>
+                    <Box
+                      display={{ base: "inline-block", md: "inline-block" }}
+                      justify={{ base: "end" }}
+                      style={{
+                        border: "1px solid #e0e2e8",
+                        boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
+                        borderRadius: "0.2rem",
+                      }}
+                      cursor={"pointer"}
+                      width={breakpointWidth}
+                      bg={
+                        items?.label === "Register"
+                          ? "#006772"
+                          : items?.label === "Login"
+                            ? "#006772"
+                            : ""
+                      }
+                      textAlign={"center"}
+                      padding={"10px 5px"}
+                      textTransform={"uppercase"}
+                      ml="1.5rem"
+                      _hover={{
+                        textDecoration: "none",
+                        backgroundColor: "red",
+                        color: "white",
+                      }}
+                    >
+                      {items?.label === "Register" ? (
+                        <>
+                          <Link
+                            // href={items?.href ?? '#'}
+                            fontWeight={650}
+                            color={"#fdfffc"}
+                            fontSize={breakpointfontSize}
+                            _hover={{
+                              textDecoration: "none",
+                              color: "#fff",
+                            }}
+                            onClick={() => {
+                              setIsModalOpen(true)
+                              setIsActive(0)
+                            }}
+                          >
+                            {items.label}
+                          </Link>
+                        </>
+                      ) : items.label === "Login" ? (
+                        <>
+                          <Link
+                            // href={items?.href ?? '#'}
+                            fontWeight={650}
+                            color={"#fdfffc"}
+                            fontSize={breakpointfontSize}
+                            _hover={{
+                              textDecoration: "none",
+                              color: "#fff",
+                            }}
+                            onClick={() => {
+                              setIsActive(1)
+                              setIsModalOpen(true)
+
+                            }
+                            }
+                          >
+                            {items.label}
+                          </Link>
+                        </>
+                      ) : (
+                        <></>
+                      )}
+                      <AuthModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} active={active} setIsActive={setIsActive} />
+                    </Box>
+                  </>
+                );
+              })
+              :
+              <ProfileComponent />
+          }
+
           {/* login button end */}
 
           {/* toggle button */}
@@ -263,7 +267,10 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
-  const breakpointfontSize = useBreakpointValue({ xl: "14px", lg: "13px" });
+  const breakpointfontSize = useBreakpointValue({
+    xl: "18px",
+    lg: "20px",
+  });
 
   return (
     <Stack
@@ -280,7 +287,7 @@ const DesktopNav = () => {
                   href={navItem?.href ?? "#"}
                   fontWeight={500}
                   color={linkColor}
-                  fontSize={breakpointfontSize}
+                  fontSize={["10px", "12px", "14px", "16px", "18px"]}
                   _hover={{
                     textDecoration: "none",
                     color: linkHoverColor,
@@ -295,7 +302,7 @@ const DesktopNav = () => {
                       <Icon color={"black.400"} w={5} h={5} as={navItem.icon} />
                     </>
                   ) : (
-                    <></>
+                    ""
                   )}
                 </Link>
               </PopoverTrigger>

@@ -29,7 +29,7 @@ import Skill from "../../src/components/commonSection/Skill"
 import Link from "next/link";
 import { Tooltip } from "react-tippy";
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-
+import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 export default function TemplateBabySitter() {
     const {
@@ -38,15 +38,20 @@ export default function TemplateBabySitter() {
         updater
     } = useStoreData();
     const [show, setShow] = useShow();
-
+    // PDF Download Hook
+    const { downloadPDFHandler, pdfRef } = PDFGenerater();
     return (
         <div style={{ overflow: 'auto' }}>
 
-            <TempLayout work={true} education={true} skills={true}>
-            <ChangeTempBtn />
-              
-                <div className={Classes.mainDiv} >
-                    <Box ml={["", , , "5%", "13%", "25%"]} >
+            <TempLayout work={true} education={true} skills={true} downloadPDF={downloadPDFHandler}>
+                <ChangeTempBtn />
+
+                <div className={Classes.mainDiv}>
+                    <Box
+                        display={'flex'}
+                        justifyContent={'center'}
+                        ref={pdfRef}
+                    >
 
                         <div className={Classes.innerMainDiv} >
                             <div className={Classes.innerMainDiv1}>
@@ -108,8 +113,8 @@ export default function TemplateBabySitter() {
 
                                 </Box>
 
-                             
-                                 
+
+
 
                                 <div >
 
@@ -162,7 +167,7 @@ export default function TemplateBabySitter() {
                                     )}
                                 </div>
 
-                               
+
 
                                 <Box mb="10%">
                                     {resumeData?.skills?.visible && (
@@ -192,7 +197,7 @@ export default function TemplateBabySitter() {
                                                 />
 
                                             </HStack>
-                                             <Skill
+                                            <Skill
                                                 progressBar={true}
                                                 strokeWiidth={5}
                                                 lineStyle={Classes.line}
@@ -205,7 +210,7 @@ export default function TemplateBabySitter() {
 
 
 
-                                            /> 
+                                            />
 
                                         </>
                                     )}
@@ -239,8 +244,8 @@ export default function TemplateBabySitter() {
 
                                 />
 
-                             
-                            
+
+
 
 
                                 <div>
@@ -263,7 +268,7 @@ export default function TemplateBabySitter() {
                                                     maxW={'480px'}
                                                     font-size={"1.7em"}
                                                     font-weight={900}
-                                                    
+
                                                     color={"black"}
                                                     title="WORK EXPERIENCE"
 

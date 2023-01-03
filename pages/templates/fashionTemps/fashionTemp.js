@@ -25,9 +25,6 @@ import { FaSignLanguage, FaRegUser } from "react-icons/fa";
 import ChangeTempBtn from '../../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from "../../../src/components/tempNav/PDFGenerater";
 
-import useStoreData from "../../../src/components/useStoreData";
-
-
 export default function Fashion_Temp() {
   // redux Data
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
@@ -48,56 +45,12 @@ export default function Fashion_Temp() {
             pt="70px"
           >
             <Box
-              mt="50px"
+              m="50px 20px 30px 20px"
             >
-              {/* _____________ Profile _____________ */}
-              <Name
-                FName={true}
-                SName={true}
-                direction="column"
-                FNameStyle={styles.nameStyle}
-                SNameStyle={styles.nameStyle}
-               />
-             <Profession
-                professionStyle={styles.profileSubTitle}
-              />
-
-                {/* _____________ Image _____________ */}
-                <ImageSelector
-                  minWidth="240px"
-                  maxWidth="240px"
-                  maxHeight="240px"
-                  minHeight="240px"
-                  marginTop="30px"
-                  marginBottom="30px"
-                />
-
-                {/* _____________ About me _____________ */}
-                <Heading
-                  title={'ABOUT ME'}
-                  color="#000000"
-                  circleSize="38px"
-                  circleBg="#000000"
-                  fontSize="20px"
-                  fontWeight={700}
-                  circleIconHeading={true}
-                  icon={(props) => (
-                    <FaRegUser
-                      {...props}
-                      size={18}
-                      color={'#FDC726'}
-                    />
-                  )}
-                />
-                <About
-                  minW="100%"
-                  maxW="100%"
-                  aboutStyle={Classes.aboutText}
-                  textColor="#000000"
-                  fontSize="14px"
-                  fontWeight={600}
-                />
-                {/* _____________ Skill _____________ */}
+              <Box
+                display={'flex'}
+                ref={pdfRef}
+              >
                 <Box
                   w="40%"
                   pb="10%"
@@ -356,7 +309,7 @@ export default function Fashion_Temp() {
                   </Box>
                 </Box>
               </Box>
-            
+            </Box>
           </Flex>
         </TempLayout>
       </div>

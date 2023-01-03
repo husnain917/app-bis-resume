@@ -12,6 +12,12 @@ import {
   DrawerBody,
   DrawerFooter,
   useDisclosure,
+  Popover,
+  PopoverTrigger,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from '@chakra-ui/react';
 import React from 'react';
 import {
@@ -19,6 +25,7 @@ import {
   EditIcon,
   SettingsIcon,
   DownloadIcon,
+  ChevronDownIcon,
   HamburgerIcon
 } from '@chakra-ui/icons';
 import {
@@ -32,6 +39,7 @@ import { useState } from 'react';
 import { MobileNavItem } from '../navbar/Navbar';
 import { NAV_ITEMS } from '../constant/navbarLinks/NavbarLinks';
 import Link from 'next/link';
+import ThemeModal from '../themeModal/ThemeModal';
 export default function TempNavbar({
   work,
   education,
@@ -93,20 +101,25 @@ export default function TempNavbar({
           <EditIcon mr="5px" />
           Fonts
         </Button>
-        <Button
-          bgColor="transparent"
-          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
-          color="white"
-          _hover={{
-            backgroundColor: 'transparent',
+        <Popover>
+          <PopoverTrigger>
+            <Button
+              bgColor="transparent"
+              fontSize={{ base: '12px', sm: '14px', md: '16px' }}
+              color="white"
+              _hover={{
+                backgroundColor: 'transparent',
 
-            color: '#313C4E',
-            transition: '0.4s',
-          }}
-        >
-          <MoonIcon mr="5px" />
-          Theme
-        </Button>
+                color: '#313C4E',
+                transition: '0.4s',
+              }}
+            >
+              <MoonIcon mr="5px" />
+              Theme
+            </Button>
+          </PopoverTrigger>
+          <ThemeModal />
+        </Popover>
         <LayoutModal
           work={work}
           education={education}
@@ -132,21 +145,45 @@ export default function TempNavbar({
           <SettingsIcon mr="5px" />
           Setting
         </Button>
-        <Button
-          bgColor="transparent"
-          color="white"
-          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
-          _hover={{
-            backgroundColor: 'transparent',
-
-            color: '#313C4E',
-            transition: '0.4s',
-          }}
-          onClick={downloadPDF}
-        >
-          <DownloadIcon mr="5px" />
-          Download
-        </Button>
+        <Menu>
+          <MenuButton
+            as={Button}
+            leftIcon={<ChevronDownIcon />}
+            bgColor="transparent"
+            color="white"
+            fontSize={{ base: '12px', sm: '14px', md: '16px' }}
+            _hover={{
+              backgroundColor: 'transparent',
+              color: '#313C4E',
+              transition: '0.4s',
+            }}
+            _expanded={{ bg: 'transparent' }}
+            _focus={{ boxShadow: 'none' }}
+          >
+            Download
+          </MenuButton>
+          <MenuList
+            margin={'0px 0px 0px 20px'}
+          >
+            <MenuItem
+              color={'teal.700'}
+              display={'flex'}
+              justifyContent={'space-between'}
+              onClick={downloadPDF}
+            >
+              Download as a PDF
+              <DownloadIcon mr="5px" />
+            </MenuItem>
+            <MenuItem
+              color={'teal.700'}
+              display={'flex'}
+              justifyContent={'space-between'}
+            >
+              Download as a Word File
+              <DownloadIcon mr="5px" />
+            </MenuItem>
+          </MenuList>
+        </Menu>
       </Box>
 
       <Box position={'absolute'} right={{ base: '10px', lg: '25px' }}>
