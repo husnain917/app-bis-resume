@@ -1,12 +1,10 @@
-import { Box, Text, Button } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import ContactButton from "../src/components/contactUs/ContactButton";
 import CustomInput from "../src/components/contactUs/CustomInput";
 import { buttonData } from "../src/components/contactUs/buttonData";
 import CancelSubscription from "../src/components/cancelSubscription";
-
-import Link from "next/link";
-import Layout from "../src/Layout";
+import CommonButton from "../src/components/commonButton/CommonButton";
 
 export default function ContactUs() {
   const [active, setActive] = useState("");
@@ -22,7 +20,7 @@ export default function ContactUs() {
   return (
     <>
       {/* main div  */}
-  
+
       <Box
         w="100%"
         h="auto"
@@ -33,15 +31,22 @@ export default function ContactUs() {
       >
         {/* inner main div  */}
         <Box w={["100%", "100%", "98%", "70%"]} h="auto" mt="5%">
-          <Text fontSize="3rem" fontWeight="750" color="#1B6672" pl="10%">
+          <Text
+            fontSize={["2.9em"]}
+            fontWeight="600"
+            color="#000000"
+            pl="9%"
+            fontFamily={`EuclidCircularB-Medium', sans-serif`}
+          >
             Contact Us
           </Text>
           <Text
             color="black"
-            fontWeight="450"
-            fontSize={["1rem", "1rem", "1rem", "1rem", "1.2rem", "1.2rem"]}
-            pl="10%"
+            fontWeight="400"
+            fontSize={["1rem", "1rem", "1rem", "1rem", "1.1rem", "1.1rem"]}
+            pl="9%"
             pr="10%"
+            fontFamily={`EuclidCircularB-Medium', sans-serif`}
           >
             Have comments, questions, or feedback to share? Our team would love
             to hear from you. Give us a call or submit a message below.
@@ -57,31 +62,32 @@ export default function ContactUs() {
             pl={["5%", , , "9%"]}
             pr={["5% ", , "5%"]}
           >
-            <Text fontSize="1.5rem" pt="5%">
+            <Text
+              pt="5%"
+              fontFamily={`EuclidCircularB-Medium', sans-serif`}
+              className='small-heading'
+            >
               Select a topic
             </Text>
-            <Box overflow="auto">
-              <Box
-                display="flex"
-                flexDir={"row"}
-                justifyContent="centers"
-                mt="2%"
-              >
-                {buttonData.map((button, index) => {
-                  return (
-                    <div key={index}>
-                      <ContactButton
-                        button={button}
-                        index={index}
-                        bgColor={active === index ? "#1B6672" : "none"}
-                        color={active === index ? "white" : "grey"}
-                        onFocunHandler={onFocunHandler}
-                        // onClick={button.link}
-                      />
-                    </div>
-                  );
-                })}
-              </Box>
+            <Box
+              display="flex"
+              flexWrap={'wrap'}
+              mt="2%"
+            >
+              {buttonData.map((button, index) => {
+                return (
+                  <Box key={index}>
+                  <ContactButton
+                    button={button}
+                    index={index}
+                    bgColor={active === index ? "#2CACD5" : "none"}
+                    color={active === index ? "white" : "grey"}
+                    onFocunHandler={onFocunHandler}
+                  // onClick={button.link}
+                  />
+                  </Box>
+                );
+              })}
             </Box>
 
             <Box
@@ -115,37 +121,41 @@ export default function ContactUs() {
               mt="5%"
               display="flex"
               flexDir={["column", "column", "row", "row"]}
-              alignItems="center"
+              alignItems={'center'}
               pr="5%"
             >
-              <Text
-                fontSize={["0.9rem", "1.2rem", "1rem", "1rem"]}
-                pr={["0px", "0px", "20px", "20px"]}
-                align={["center", "center", "left"]}
-                mt={["5%", , , "0px"]}
+              <Box
+                padding={'0px 10px 0px 0px'}
               >
-                This site is protected by reCAPTCHA and the Google Privacy
-                Policy and Terms of Service apply.
-              </Text>
-              <Button
-                p="25px"
-                borderRadius="5px"
-                fontSize="1rem"
-                color="white"
-                bgColor="#1B6672"
-                pl="35px"
-                pr="35px"
-                mt={["5%", "5%", "5%", "0%"]}
-                _hover={{ bg: "#1B6672", color: " white" }}
-              >
-                Send Message
-              </Button>
+                <Text
+                  fontSize={["1rem", "1rem", "1rem", "1rem",]}
+                  textAlign={["center", "center", "left", "left"]}
+                  fontFamily={`EuclidCircularB-Medium', sans-serif`}
+                >
+                  This site is protected by reCAPTCHA and the Google Privacy
+                  Policy and Terms of Service apply.
+                </Text>
+              </Box>
+
+              <Box>
+                <CommonButton
+                  height={"40px"}
+                  title={'Send Message'}
+                  hoverCursor={"pointer"}
+                  backgroundColor={'#2CACD5'}
+                  color={'white'}
+                  hoverColor={"white"}
+                  hoverBackgroundColor={"#2CACD5"}
+                  margin={["5%", "5%", "5%", "0%"]}
+                  padding="15px 20px 15px 20px"
+                />
+              </Box>
             </Box>
           </Box>
         </Box>
       </Box>
-  
-    
+
+
     </>
   );
 }
