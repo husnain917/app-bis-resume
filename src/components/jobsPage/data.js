@@ -472,3 +472,261 @@ export const seventhContent = [
     margin: "22px 0px",
   },
 ];
+
+export const eighthContent = [
+  {
+    id: "Heading",
+    className: "sub-heading",
+    fontSize: "44px",
+    text: "All Your Job Search Questions Answered!",
+    textAlign: "center",
+    margin: "20px 0px",
+    color: "black",
+  },
+  {
+    id: "Sub-Heading",
+    className: "medium-text",
+    fontSize: "24px",
+    text: "We wanted to make this e-book as comprehensive as possible, so we made sure to answer all the common questions job seekers have about resumes, cover letters, and so on. Some of the questions we answer are:",
+    textAlign: "center",
+    margin: "20px 0px",
+  },
+  {
+    Content: [
+      {
+        text: "How long should your resume be, and can it ever be longer than 2 pages?",
+        className: "sub-heading",
+        fontSize: "26px",
+        textAlign: "center",
+        whiteSpace: "no-wrap",
+        lineHeight: "34px",
+      },
+      {
+        text: "What's the best resume format for YOU?",
+        className: "sub-heading",
+        fontSize: "26px",
+        textAlign: "center",
+        whiteSpace: "no-wrap",
+        lineHeight: "34px",
+      },
+      {
+        text: "Should you go for a creative or traditional resume look?",
+        className: "sub-heading",
+        fontSize: "26px",
+        textAlign: "center",
+        whiteSpace: "no-wrap",
+        lineHeight: "34px",
+      },
+      {
+        text: "How can you list a promotion on your resume?",
+        className: "sub-heading",
+        fontSize: "26px",
+        textAlign: "center",
+        whiteSpace: "no-wrap",
+        lineHeight: "34px",
+      },
+      {
+        text: "How to craft a resume without any work experience?",
+        className: "sub-heading",
+        fontSize: "26px",
+        textAlign: "center",
+        whiteSpace: "no-wrap",
+        lineHeight: "34px",
+      },
+      {
+        text: "When (and if) should you list irrelevant work experience in your resume?",
+        className: "sub-heading",
+        fontSize: "26px",
+        textAlign: "center",
+        whiteSpace: "no-wrap",
+        lineHeight: "34px",
+      },
+    ],
+  },
+];
+export const ninthContent = [
+  {
+    id: "Heading",
+    className: "sub-heading",
+    fontSize: "44px",
+    text: "Your Visual Guide to Job Search",
+    textAlign: "center",
+    margin: "20px 0px",
+    color: "black",
+  },
+  {
+    id: "Sub-Heading",
+    className: "medium-text",
+    fontSize: "24px",
+    text: "When we say visual, we mean visual. The entire e-book was conceived to provide a reader-friendly experience from start to finish, using example boxes, checklists, visual resume examples, and more. Download the preview to see what we mean!",
+    textAlign: "center",
+    margin: "20px 0px",
+  },
+  {
+    Content: [
+      {
+        imageUrl: "/visual-guide-to-job-search.png",
+        buttonText: "Download Sample",
+      },
+    ],
+  },
+];
+
+export const tenthContent = [
+  {
+    id: "Heading",
+    className: "sub-heading",
+    fontSize: "44px",
+    text: "Job Search Hacks You've Never Even Heard Of",
+    textAlign: "start",
+    margin: "20px 0px",
+  },
+  {
+    id: "content",
+    className: "small-text",
+    fontSize: "21px",
+    text: `We cover some of the most creative job search hacks that no one in the industry has even talked about:`,
+    textAlign: "start",
+    color: "rgb(49,59,71)",
+  },
+  {
+    listItems: [
+      {
+        imageUrl: "/Job+Search+Hacks.png",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: `Learn if your job application got lost in the recruiter's inbox (and when to send a follow-up)`,
+        textAlign: "start",
+        lineHeight: "26px",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: ` Learn how long a hiring manager spent reading your resume (yes, it's possible)`,
+        textAlign: "start",
+        lineHeight: "26px",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: `Know when you get rejected for a job long before you receive a rejection email`,
+        textAlign: "start",
+        lineHeight: "26px",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: `Send a speculative application and get hired for a job that doesn't even exist`,
+        textAlign: "start",
+        lineHeight: "26px",
+      },
+    ],
+  },
+];
+
+export const lastContent = [
+  {
+    id: "Heading",
+    className: "sub-heading",
+    fontSize: "44px",
+    text: "All You Need to Know About Job Search For a Small, One-Time Fee",
+    textAlign: "start",
+    margin: "20px 0px",
+  },
+  {
+    listItems: [
+      {
+        imageUrl: "/book-chapters.png",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: `72 pages of content on resumes, interviews, cover letters, and more.`,
+        textAlign: "start",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: ` 5 Steps to a Convincing Cover Letter (That Gets Read).`,
+        textAlign: "start",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: `Fully visual guide with examples, illustrations, and more.`,
+        textAlign: "start",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: ` 5 job search hacks (that you never even heard of).`,
+        textAlign: "start",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: ` Guide to optimizing your resume for resume reading software.`,
+        textAlign: "start",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: ` 5 job search hacks (that you never even heard of).`,
+        textAlign: "start",
+        lineHeight: "26px",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: `How to use the STAR method to answer behavioral interview questions.`,
+        textAlign: "start",
+        lineHeight: "26px",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: `3 free cover letter templates.`,
+        textAlign: "start",
+        lineHeight: "26px",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: ` Guide on where to find remote jobs (and how to get hired).`,
+        textAlign: "start",
+        lineHeight: "26px",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: `Most common job interview questions (and sample answers).`,
+        textAlign: "start",
+        lineHeight: "26px",
+      },
+      {
+        id: "List",
+        fontSize: "20px",
+        className: "medium-text",
+        text: `“Before you go” checklist to perfect your resume.`,
+        textAlign: "start",
+        lineHeight: "26px",
+      },
+    ],
+  },
+];

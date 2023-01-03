@@ -15,6 +15,7 @@ const ContentText = ({
   marginBox,
   fontWeight,
   whiteSpace,
+  lineHeight,
 }) => {
   return (
     <Box
@@ -33,6 +34,7 @@ const ContentText = ({
         fontSize={fontSize}
         fontWeight={fontWeight}
         whiteSpace={whiteSpace}
+        lineHeight={lineHeight}
       >
         {text}
       </Text>

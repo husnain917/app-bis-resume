@@ -40,7 +40,7 @@ const SixthSection = () => {
                     <Text fontSize={"26px"} className={"small-text"}>
                       {item.text}
                     </Text>
-                    <Text textAlign={"end"} mt={"2%"} className={"Xsmall-text"}>
+                    <Text textAlign={"end"} mt={"2%"} className={"xsmall-text"}>
                       {item.author}
                     </Text>
                   </GridItem>
