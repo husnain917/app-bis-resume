@@ -18,7 +18,7 @@ const ThirdSection = () => {
   return (
     <Box>
       <Box display={"flex"}>
-        <Box w={"50%"} padding={"55px"}>
+        <Box w={"50%"} padding={"45px 77px"}>
           {thirdContent.map((item, index) => {
             return (
               <>
@@ -37,9 +37,9 @@ const ThirdSection = () => {
                 />
                 {item.id === "Heading" ? (
                   <Box
-                    height={"2px"}
+                    height={"1px"}
                     backgroundColor={"black"}
-                    width={"25%"}
+                    width={"20%"}
                     marginY={10}
                   ></Box>
                 ) : (
@@ -75,7 +75,7 @@ const ThirdSection = () => {
             );
           })}
         </Box>
-        <Box w="50%">
+        <Box w="50%" padding={"80px"}>
           {thirdContent.map((item, index) => {
             return (
               <>

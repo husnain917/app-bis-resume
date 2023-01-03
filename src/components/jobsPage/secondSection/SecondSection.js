@@ -5,7 +5,13 @@ import { Box, Text, Image } from "@chakra-ui/react";
 
 const SecondSection = () => {
   return (
-    <Box display={"flex"} alignItems={"center"} flexDirection={"column"}>
+    <Box
+      display={"flex"}
+      alignItems={"center"}
+      flexDirection={"column"}
+      bg={"#FAFAFA"}
+      padding={"50px"}
+    >
       {data?.map((text, index) => {
         return (
           <>
@@ -25,7 +31,7 @@ const SecondSection = () => {
       })}
       <Box
         borderRadius={"30px"}
-        bg={"green.100"}
+        bg={"white"}
         padding={"30px 50px 30px 50px"}
         maxW={"600px"}
         mb={6}
@@ -52,18 +58,24 @@ const SecondSection = () => {
           display={"flex"}
           flexDirection={"column"}
           justifyContent={"space-between"}
-          paddingY={"120px"}
+          padding={"120px 42px"}
         >
-          <Text fontSize={"20px"}>
-            Unless you have a Ph.D. in Human Resources or a few years of
-            experience as an HR manager, you&#39;ve probably struggled with at
-            least some parts of the process.
-          </Text>
-          <Text fontSize={"20px"} marginTop={"-6%"}>
-            You might, for example, be unsure of how to create a resume that
+          <ContentText
+            text={`Unless you have a Ph.D. in Human Resources or a few years of experience as an HR manager, you've probably struggled with at least some parts of the process.`}
+            className={"medium-text"}
+            fontSize={"21px"}
+            textAlign={"start"}
+            lineHeight={"30px"}
+          />
+          <ContentText
+            text={`You might, for example, be unsure of how to create a resume that
             stands out from the rest. Or you might have difficulties charming
-            the hiring manager during the interviewing process.
-          </Text>
+            the hiring manager during the interviewing process.`}
+            className={"medium-text"}
+            fontSize={"20px"}
+            textAlign={"start"}
+            lineHeight={"30px"}
+          />
           <Text fontSize={"24px"} className={"sub-heading"} mt={"4"}>
             Whichever the case...
           </Text>

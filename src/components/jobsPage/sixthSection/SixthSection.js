@@ -11,6 +11,7 @@ const SixthSection = () => {
       gap={6}
       width={"85%"}
       margin={"0 auto"}
+      padding={"80px 0px"}
     >
       {sixthContent?.map((item, index) => {
         return (

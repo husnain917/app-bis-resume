@@ -13,7 +13,7 @@ import { forthContent } from "../data";
 
 const ForthSection = () => {
   return (
-    <Box>
+    <Box mt={10}>
       {forthContent.map((item, index) => {
         console.log("FAQS CONTENT: ", item.faqsContent);
         return (

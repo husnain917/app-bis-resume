@@ -37,14 +37,14 @@ const JobsPage = () => {
     <Box w={"100%"}>
       <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
         <Box bg={"#FFD67B"} display={"flex"} padding={"20px 10px 0px 10px"}>
-          <Box w={"50%"}>
+          <Box w={"50%"} padding={"60px 0px 60px 40px"}>
             <Box
               id="HeadingLeftSide"
               display={"flex"}
               flexDirection="column"
               // w={width > 610 ? ["100%", "49%", "49%", "49%", "49%"] : "100%"}
               alignItems={"flex-end"}
-              padding={"40px 30px 0px 60px"}
+              padding={"0px 30px 0px 60px"}
             >
               <Box
                 display={["flex", "flex"]}
@@ -52,21 +52,34 @@ const JobsPage = () => {
                 lineHeight={"15rem"}
                 justifyContent="center"
                 alignItems={"center"}
+                m={"0px 10px 0px 0px"}
               >
                 <CommonButton
                   color={"white"}
+                  title={"SALE"}
+                  padding={"0px 10px 0px 10px"}
                   borderRadius={"none"}
                   hoverBoxShadow={"none"}
                   backgroundColor={"black"}
                 />
               </Box>
-              <Image
-                src={"./jobsPage/topimage1.png"}
-                height={"-webkit-fit-content"}
-              />
-              <Box display={"flex"} alignItems={"flex-start"}>
+              <Box mt={"-50px"}>
+                <Image
+                  src={"./jobsPage/topimage1.png"}
+                  height={"-webkit-fit-content"}
+                />
+              </Box>
+              <Box
+                display={"flex"}
+                alignItems={"flex-start"}
+                m={"-50px 180px 0px 0px"}
+              >
                 <CommonButton
                   color={"white"}
+                  title={"Quick View"}
+                  fontSize={"16px"}
+                  fontWeight={"400"}
+                  padding={"20px"}
                   borderRadius={"none"}
                   hoverBoxShadow={"none"}
                   backgroundColor={"black"}
@@ -74,28 +87,37 @@ const JobsPage = () => {
               </Box>
             </Box>
           </Box>
-          <Box w={"50%"}>
+          <Box w={"50%"} padding={"40px 30px"}>
             <Box
               id="HeadingRightSide"
               display={"flex"}
               flexDirection="column"
               // w={width > 610 ? ["100%", "49%", "49%", "49%", "49%"] : "100%"}
-              padding={"30px 30px 0px 30px"}
+              padding={"0px 30px 0px 30px"}
             >
               <Text
                 className={"sub-heading"}
-                fontSize={["2.8rem", "2.8rem", "2.8rem", "2.8rem", "3.2rem"]}
+                fontSize={["2.8rem", "2.8rem", "2.8rem", "52px", "52px"]}
                 color={"black"}
                 lineHeight={"70px"}
-                mt={20}
               >
                 {" "}
                 Job Search Masterclass
               </Text>
-              <Text className={"medium-text"} mt={1} fontSize={"21px"}>
+              <Text
+                className={"medium-heading"}
+                fontSize={"24px"}
+                color={"black"}
+                mt={"-2%"}
+              >
                 An E-book by Novoresume
               </Text>
-              <Text className={"medium-text"} mt={3} fontSize={"21px"}>
+              <Text
+                className={"medium-text"}
+                mt={"20px"}
+                fontSize={"20px"}
+                color={"black"}
+              >
                 The only book about the job search process that you’ll ever
                 need. Learn how to create an impeccable resume, match it with a
                 convincing cover letter, and ace the job interview.
@@ -119,7 +141,7 @@ const JobsPage = () => {
               </Text>
               <Text
                 className={"medium-text"}
-                marginTop={"4.5rem"}
+                marginTop={"2rem"}
                 color={"black"}
                 fontSize={"21px"}
                 display={"flex"}
@@ -137,7 +159,7 @@ const JobsPage = () => {
                 borderRadius={"40px"}
                 title={"Buy Today"}
                 margin={"24px 0px"}
-                fontSize={"18px"}
+                fontSize={"19px"}
                 backgroundColor={"rgb(75,204,239)"}
               />
               <Box
@@ -151,17 +173,17 @@ const JobsPage = () => {
                 className={"medium-text"}
                 mt={4}
                 color={"black"}
-                fontSize={"22px"}
+                fontSize={"20px"}
               >
                 Unsure? Check out our free sample!
               </Text>
               <CommonButton
                 className={"medium-text"}
-                width={"20rem"}
+                width={"18rem"}
                 height={"4.5rem"}
                 title={"Download Sample"}
                 backgroundColor={"white"}
-                fontSize={"18px"}
+                fontSize={"19px"}
                 margin={"1.5rem 0rem 0rem 0rem"}
               />
             </Box>
@@ -169,7 +191,7 @@ const JobsPage = () => {
         </Box>
         <Box
           // marginTop={"-125px"}
-          height={"auto"}
+          minHeight={"16vh"}
           width={"auto"}
         >
           <Image
@@ -185,8 +207,8 @@ const JobsPage = () => {
       <FifthSection />
       <SixthSection />
       <Box>
-        <Box display={"flex"}>
-          <Box w={"50%"} padding={"55px"}>
+        <Box display={"flex"} bg={"#FAFAFA"}>
+          <Box w={"50%"} padding={"120px 55px 0px 55px"}>
             {seventhContent.map((item, index) => {
               return (
                 <>
@@ -201,7 +223,7 @@ const JobsPage = () => {
               );
             })}
           </Box>
-          <Box w="50%" padding={"0px 45px"}>
+          <Box w="50%" padding={"50px 45px"}>
             {seventhContent.map((item, index) => {
               return (
                 <>
@@ -217,6 +239,7 @@ const JobsPage = () => {
                     marginBox={item.marginBox}
                     fontWeight={item.fontWeight}
                     color={item.color}
+                    lineHeight={item.lineHeight}
                   />
                   {item.id === "Heading" ? (
                     <Box
@@ -235,7 +258,7 @@ const JobsPage = () => {
                             className={item.className}
                             fontSize={item.fontSize}
                           >
-                            <ListItem display={"flex"} mt={3}>
+                            <ListItem display={"flex"} mb={3}>
                               <Box mr={2} color={"#00C8AA"} fontWeight={600}>
                                 ✔
                               </Box>
@@ -267,7 +290,7 @@ const JobsPage = () => {
           {eighthContent?.map((item, index) => {
             return (
               <>
-                <GridItem colSpan={3} w="70%" margin={"0 auto"}>
+                <GridItem colSpan={3} w="57%" margin={"0 auto"}>
                   <ContentText
                     id={item?.id}
                     text={item?.text}
@@ -277,6 +300,8 @@ const JobsPage = () => {
                     textAlign={item.textAlign}
                     backgroundColor={item?.backgroundColor}
                     width={item?.width}
+                    lineHeight={item?.lineHeight}
+                    color={item?.color}
                   />
                 </GridItem>
 
@@ -314,14 +339,6 @@ const JobsPage = () => {
           // w={width > 610 ? ["100%", "49%", "49%", "49%", "49%"] : "100%"}
           padding={"30px 30px 0px 30px"}
         >
-          <Text
-            className={"medium-text"}
-            mt={2}
-            color={"black"}
-            fontSize={"26px"}
-          >
-            Job Search Masterclass
-          </Text>
           <Text
             className={"small-text"}
             marginTop={"0.3rem"}
@@ -375,13 +392,15 @@ const JobsPage = () => {
       <Grid
         templateColumns="repeat(1, 1fr)"
         gap={6}
-        width={"85%"}
+        width={"100%"}
         margin={"0 auto"}
+        padding={"100px 0px"}
+        bg={"#FAFAFA"}
       >
         {ninthContent?.map((item, index) => {
           return (
             <>
-              <GridItem colSpan={3} w="70%" margin={"0 auto"}>
+              <GridItem colSpan={3} w="55%" margin={"0 auto"}>
                 <ContentText
                   id={item?.id}
                   text={item?.text}
@@ -396,7 +415,11 @@ const JobsPage = () => {
               {item?.Content?.map((item, index) => {
                 return (
                   <>
-                    <Flex flexDir={"column"} alignItems={"center"}>
+                    <Flex
+                      flexDir={"column"}
+                      alignItems={"center"}
+                      padding={"0px 100px"}
+                    >
                       <Image
                         src={item?.imageUrl}
                         alt={"Please wait..."}
@@ -421,7 +444,7 @@ const JobsPage = () => {
       </Grid>
       <Box>
         <Box display={"flex"}>
-          <Box w={"50%"} padding={"55px 70px"}>
+          <Box w={"50%"} padding={"55px 75px"}>
             {tenthContent.map((item, index) => {
               return (
                 <>
@@ -437,6 +460,7 @@ const JobsPage = () => {
                     marginBox={item.marginBox}
                     fontWeight={item.fontWeight}
                     color={item.color}
+                    lineHeight={item.lineHeight}
                   />
                   {item.id === "Heading" ? (
                     <Box
@@ -493,7 +517,19 @@ const JobsPage = () => {
                   {item?.listItems?.map((item, index) => {
                     return (
                       <>
-                        <Image src={item.imageUrl} />
+                        {item.id === "image" ? (
+                          <>
+                            <Box padding={"60px"}>
+                              <Image
+                                src={item.imageUrl}
+                                // height={"100px"}
+                                // width={"200px"}
+                              />
+                            </Box>
+                          </>
+                        ) : (
+                          ""
+                        )}
                       </>
                     );
                   })}
@@ -581,7 +617,7 @@ const JobsPage = () => {
             })}
           </Box>
           <Box w="50%">
-            {thirdContent.map((item, index) => {
+            {lastContent.map((item, index) => {
               return (
                 <>
                   {item?.listItems?.map((item, index) => {

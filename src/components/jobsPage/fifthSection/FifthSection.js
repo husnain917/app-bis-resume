@@ -6,11 +6,11 @@ import { fifthContent } from "../data";
 
 const FifthSection = () => {
   return (
-    <Box>
+    <Box padding={"100px 0px"} bg={"#FAFAFA"}>
       {fifthContent.map((item, index) => {
         return (
           <>
-            <Box>
+            <Box padding={"0px 380px"}>
               <ContentText
                 id={item?.id}
                 text={item?.text}
@@ -25,8 +25,9 @@ const FifthSection = () => {
             <Box
               display={"flex"}
               margin={"0 auto"}
-              justifyContent={"center"}
+              justifyContent={"space-evenly"}
               alignItems={"center"}
+              padding={"0px 60px"}
             >
               {item?.Content?.map((item, index) => {
                 return (

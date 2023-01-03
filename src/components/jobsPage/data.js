@@ -64,14 +64,14 @@ export const thirdContent = [
   {
     id: "content",
     className: "small-text",
-    fontSize: "21px",
+    fontSize: "20px",
     text: `At Novoresume, we wanted to create the ultimate job search resource - something that's useful for job seekers of all levels, from students to senior professionals.`,
     textAlign: "start",
     color: "rgb(49,59,71)",
   },
   {
     id: "content",
-    fontSize: "21px",
+    fontSize: "20px",
     className: "medium-text",
     text: `With the Job Search Masterclass e-book, we cover the job search process from start to finish, arming you with the knowledge you need to take charge of your career. The e-book features:`,
     textAlign: "start",
@@ -332,14 +332,14 @@ export const fifthContent = [
     id: "Heading",
     className: "sub-heading",
     fontSize: "44px",
-    text: "What's inside?",
+    text: "Job Search is Hard! ",
     textAlign: "center",
     margin: "20px 0px",
   },
   {
     id: "Sub-Heading",
-    className: "sub-heading",
-    fontSize: "32px",
+    className: "medium-text",
+    fontSize: "20px",
     text: "Whether you're a recent university graduate looking for your first job in your chosen field, or a senior professional looking to take the next step in their career, you're probably going to agree with us on this:",
     textAlign: "center",
     margin: "20px 0px",
@@ -413,11 +413,12 @@ export const seventhContent = [
     text: "Learn How to Create a Compelling Resume",
     textAlign: "start",
     margin: "20px 0px",
+    lineHeight: "60px",
   },
 
   {
     id: "content",
-    fontSize: "21px",
+    fontSize: "20px",
     className: "medium-text",
     text: `Simply creating a resume is not enough - you want a resume that stands out. In the e-book, we teach you how to do just that:`,
     textAlign: "start",
@@ -482,14 +483,16 @@ export const eighthContent = [
     textAlign: "center",
     margin: "20px 0px",
     color: "black",
+    lineHeight: "60px",
   },
   {
     id: "Sub-Heading",
     className: "medium-text",
-    fontSize: "24px",
+    fontSize: "20px",
     text: "We wanted to make this e-book as comprehensive as possible, so we made sure to answer all the common questions job seekers have about resumes, cover letters, and so on. Some of the questions we answer are:",
     textAlign: "center",
     margin: "20px 0px",
+    color: "black",
   },
   {
     Content: [
@@ -500,6 +503,7 @@ export const eighthContent = [
         textAlign: "center",
         whiteSpace: "no-wrap",
         lineHeight: "34px",
+        color: "black",
       },
       {
         text: "What's the best resume format for YOU?",
@@ -508,6 +512,7 @@ export const eighthContent = [
         textAlign: "center",
         whiteSpace: "no-wrap",
         lineHeight: "34px",
+        color: "black",
       },
       {
         text: "Should you go for a creative or traditional resume look?",
@@ -516,6 +521,7 @@ export const eighthContent = [
         textAlign: "center",
         whiteSpace: "no-wrap",
         lineHeight: "34px",
+        color: "black",
       },
       {
         text: "How can you list a promotion on your resume?",
@@ -524,6 +530,7 @@ export const eighthContent = [
         textAlign: "center",
         whiteSpace: "no-wrap",
         lineHeight: "34px",
+        color: "black",
       },
       {
         text: "How to craft a resume without any work experience?",
@@ -532,6 +539,7 @@ export const eighthContent = [
         textAlign: "center",
         whiteSpace: "no-wrap",
         lineHeight: "34px",
+        color: "black",
       },
       {
         text: "When (and if) should you list irrelevant work experience in your resume?",
@@ -540,6 +548,7 @@ export const eighthContent = [
         textAlign: "center",
         whiteSpace: "no-wrap",
         lineHeight: "34px",
+        color: "black",
       },
     ],
   },
@@ -551,16 +560,17 @@ export const ninthContent = [
     fontSize: "44px",
     text: "Your Visual Guide to Job Search",
     textAlign: "center",
-    margin: "20px 0px",
+    margin: "20px 0px 10px 0px",
     color: "black",
   },
   {
     id: "Sub-Heading",
     className: "medium-text",
-    fontSize: "24px",
+    fontSize: "20px",
     text: "When we say visual, we mean visual. The entire e-book was conceived to provide a reader-friendly experience from start to finish, using example boxes, checklists, visual resume examples, and more. Download the preview to see what we mean!",
     textAlign: "center",
-    margin: "20px 0px",
+    margin: "10px 0px 20px 0px",
+    color: "black",
   },
   {
     Content: [
@@ -580,11 +590,12 @@ export const tenthContent = [
     text: "Job Search Hacks You've Never Even Heard Of",
     textAlign: "start",
     margin: "20px 0px",
+    lineHeight: "60px",
   },
   {
     id: "content",
     className: "small-text",
-    fontSize: "21px",
+    fontSize: "20px",
     text: `We cover some of the most creative job search hacks that no one in the industry has even talked about:`,
     textAlign: "start",
     color: "rgb(49,59,71)",
@@ -592,6 +603,7 @@ export const tenthContent = [
   {
     listItems: [
       {
+        id: "image",
         imageUrl: "/Job+Search+Hacks.png",
       },
       {
