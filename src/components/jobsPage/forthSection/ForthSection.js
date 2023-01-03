@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Box,
+  Text,
   Accordion,
   AccordionItem,
   AccordionButton,
@@ -12,7 +13,7 @@ import { forthContent } from "../data";
 
 const ForthSection = () => {
   return (
-    <div>
+    <Box>
       {forthContent.map((item, index) => {
         console.log("FAQS CONTENT: ", item.faqsContent);
         return (
@@ -31,26 +32,51 @@ const ForthSection = () => {
                 />
               </Box>
             ) : (
-              <Accordion allowToggle>
+              <Accordion allowToggle width={"70%"} margin={"0 auto"}>
                 <AccordionItem>
                   <h2>
-                    <AccordionButton>
+                    <AccordionButton
+                      padding={"40px 0px"}
+                      _hover={{
+                        backgroundColor: "transparent",
+                      }}
+                    >
                       <Box
                         as="span"
                         flex="1"
                         textAlign="left"
                         className={item.className}
                       >
-                        {item.text}
+                        <ContentText
+                          id={item?.id}
+                          text={item?.text}
+                          className={item?.className}
+                          fontSize={item?.fontSize}
+                          margin={item?.margin}
+                          textAlign={item?.textAlign}
+                          backgroundColor={item?.backgroundColor}
+                          width={item?.width}
+                        />
                       </Box>
-                      <AccordionIcon />
+                      <AccordionIcon fontWeight={700} fontSize={"36px"} />
                     </AccordionButton>
                   </h2>
                   {item?.faqsContent?.map((faqContent, index) => {
                     return (
                       <>
-                        <AccordionPanel pb={4}>
-                          {faqContent.text}
+                        <AccordionPanel
+                          pb={4}
+                          display={"flex"}
+                          alignItems={"center"}
+                          margin={"0"}
+                          padding={"0.8px 0px"}
+                        >
+                          <Text mr={2} className="sub-heading" fontSize="20px">
+                            {faqContent.bullet}
+                          </Text>
+                          <Text fontSize={"22px"} className={"small-text"}>
+                            {faqContent.text}
+                          </Text>
                         </AccordionPanel>
                       </>
                     );
@@ -61,7 +87,7 @@ const ForthSection = () => {
           </>
         );
       })}
-    </div>
+    </Box>
   );
 };
 

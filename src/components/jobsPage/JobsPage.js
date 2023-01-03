@@ -1,9 +1,23 @@
 import React from "react";
-import { Box, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Image,
+  Text,
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
+} from "@chakra-ui/react";
 import CommonButton from "../commonButton/CommonButton";
 import SecondSection from "./secondSection/SecondSection";
 import ThirdSection from "./thirdSection/ThirdSection";
 import ForthSection from "./forthSection/ForthSection";
+import FifthSection from "./fifthSection/FifthSection";
+import SixthSection from "./sixthSection/SixthSection";
+import ContentText from "./components/ContentText";
+import { seventhContent } from "./data";
+import { MdDone } from "react-icons/md";
 
 const JobsPage = () => {
   const handleButton = () => {
@@ -134,7 +148,7 @@ const JobsPage = () => {
               <CommonButton
                 className={"medium-text"}
                 width={"20rem"}
-                height={"5rem"}
+                height={"4.5rem"}
                 title={"Download Sample"}
                 backgroundColor={"white"}
                 fontSize={"18px"}
@@ -156,6 +170,78 @@ const JobsPage = () => {
       <SecondSection />
       <ThirdSection />
       <ForthSection />
+      <FifthSection />
+      <SixthSection />
+      <Box>
+        <Box display={"flex"}>
+          <Box w={"50%"} padding={"55px"}>
+            {seventhContent.map((item, index) => {
+              return (
+                <>
+                  {item?.listItems?.map((item, index) => {
+                    return (
+                      <>
+                        <Image src={item.imageUrl} />
+                      </>
+                    );
+                  })}
+                </>
+              );
+            })}
+          </Box>
+          <Box w="50%" padding={"0px 45px"}>
+            {seventhContent.map((item, index) => {
+              return (
+                <>
+                  <ContentText
+                    id={item.id}
+                    text={item.text}
+                    className={item.className}
+                    fontSize={item.fontSize}
+                    margin={item.margin}
+                    textAlign={item.textAlign}
+                    backgroundColor={item.backgroundColor}
+                    width={item.width}
+                    marginBox={item.marginBox}
+                    fontWeight={item.fontWeight}
+                    color={item.color}
+                  />
+                  {item.id === "Heading" ? (
+                    <Box
+                      height={"2px"}
+                      backgroundColor={"black"}
+                      width={"25%"}
+                    ></Box>
+                  ) : (
+                    ""
+                  )}
+                  {item?.listItems?.map((item, index) => {
+                    return (
+                      <>
+                        {item.id === "List" ? (
+                          <List
+                            className={item.className}
+                            fontSize={item.fontSize}
+                          >
+                            <ListItem display={"flex"} mt={3}>
+                              <Box mr={2} color={"#00C8AA"} fontWeight={600}>
+                                ✔
+                              </Box>
+                              {item.text}
+                            </ListItem>
+                          </List>
+                        ) : (
+                          ""
+                        )}
+                      </>
+                    );
+                  })}
+                </>
+              );
+            })}
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 };

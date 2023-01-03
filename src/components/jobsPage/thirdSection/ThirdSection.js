@@ -54,7 +54,14 @@ const ThirdSection = () => {
                           fontSize={item.fontSize}
                         >
                           <ListItem display={"flex"}>
-                            <MdDone size={"2em"} color={"green"} />
+                            {/* <MdDone
+                              height={"12px"}
+                              width={"30px"}
+                              color={"#00C8AA"}
+                            /> */}
+                            <Box mr={2} color={"#00C8AA"} fontWeight={"bold"}>
+                              ✔
+                            </Box>
                             {item.text}
                           </ListItem>
                         </List>

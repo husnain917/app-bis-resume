@@ -14,6 +14,7 @@ const ContentText = ({
   width,
   marginBox,
   fontWeight,
+  whiteSpace,
 }) => {
   return (
     <Box
@@ -31,6 +32,7 @@ const ContentText = ({
         textAlign={textAlign || "center"}
         fontSize={fontSize}
         fontWeight={fontWeight}
+        whiteSpace={whiteSpace}
       >
         {text}
       </Text>
