@@ -44,7 +44,7 @@ const JobsPage = () => {
               flexDirection="column"
               // w={width > 610 ? ["100%", "49%", "49%", "49%", "49%"] : "100%"}
               alignItems={"flex-end"}
-              padding={"0px 30px 0px 60px"}
+              padding={"0px 20px 0px 60px"}
             >
               <Box
                 display={["flex", "flex"]}

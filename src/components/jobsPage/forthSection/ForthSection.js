@@ -13,7 +13,7 @@ import { forthContent } from "../data";
 
 const ForthSection = () => {
   return (
-    <Box mt={10}>
+    <Box padding={"40px 0px"}>
       {forthContent.map((item, index) => {
         console.log("FAQS CONTENT: ", item.faqsContent);
         return (
