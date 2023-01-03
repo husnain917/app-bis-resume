@@ -10,7 +10,7 @@ const SecondSection = () => {
       alignItems={"center"}
       flexDirection={"column"}
       bg={"#FAFAFA"}
-      padding={"50px"}
+      padding={["50px 50px 0px 50px"]}
     >
       {data?.map((text, index) => {
         return (
@@ -25,6 +25,7 @@ const SecondSection = () => {
               backgroundColor={text?.backgroundColor}
               width={text?.width}
               marginBox={text?.marginBox}
+              lineHeight={text?.lineHeight}
             />
           </>
         );
@@ -32,12 +33,19 @@ const SecondSection = () => {
       <Box
         borderRadius={"30px"}
         bg={"white"}
-        padding={"30px 50px 30px 50px"}
-        maxW={"600px"}
+        padding={[
+          "30px 50px 30px 50px",
+          "30px 50px 30px 50px",
+          "10px 30px 10px 30px",
+          "30px 50px 30px 50px",
+          "30px 50px 30px 50px",
+        ]}
+        maxW={["600px", "600px", "350px", "600px", "600px"]}
         mb={6}
         transition={"1s"}
+        mt={[6, 6, 6, 0, 0]}
       >
-        <Text fontSize={"27px"}>
+        <Text fontSize={["21px", "21px", "21px", "27px", "27px"]}>
           “Job hunting can be a very stressful experience”
         </Text>
         <Text textAlign={"end"} mt={"-2%"}>
@@ -46,9 +54,22 @@ const SecondSection = () => {
       </Box>
 
       <Box w={"10%"} h={"1px"} bg={"black"}></Box>
-      <Box display={"flex"} w={"100%"} justifyContent={"space-around"} mt={10}>
+      <Box
+        display={"flex"}
+        w={"100%"}
+        justifyContent={"space-around"}
+        mt={[0, 0, 0, 0, 10]}
+      >
         <Box id={"image"} display={"flex"} w="45%">
-          <Box padding={"50px"}>
+          <Box
+            padding={[
+              "80px 0px 0px 0px",
+              "80px 0px 0px 0px",
+              "130px 0px 0px 0px",
+              "80px 0px 0px 0px",
+              "50px",
+            ]}
+          >
             <Image src="/hunting-for-jobs.png" alt="" />
           </Box>
         </Box>
@@ -58,25 +79,36 @@ const SecondSection = () => {
           display={"flex"}
           flexDirection={"column"}
           justifyContent={"space-between"}
-          padding={"120px 42px"}
+          padding={[
+            "120px 17px",
+            "120px 17px",
+            "80px 17px",
+            "120px 17px",
+            "120px 42px",
+          ]}
         >
           <ContentText
             text={`Unless you have a Ph.D. in Human Resources or a few years of experience as an HR manager, you've probably struggled with at least some parts of the process.`}
             className={"medium-text"}
-            fontSize={"21px"}
+            fontSize={["20px", "20px", "16px", "20px", "20px"]}
             textAlign={"start"}
-            lineHeight={"30px"}
+            lineHeight={["30px", "30px", "25px", "30px", "30px"]}
           />
           <ContentText
             text={`You might, for example, be unsure of how to create a resume that
             stands out from the rest. Or you might have difficulties charming
             the hiring manager during the interviewing process.`}
             className={"medium-text"}
-            fontSize={"20px"}
+            fontSize={["20px", "20px", "16px", "20px", "20px"]}
             textAlign={"start"}
             lineHeight={"30px"}
+            margin={"20px 0px"}
           />
-          <Text fontSize={"24px"} className={"sub-heading"} mt={"4"}>
+          <Text
+            fontSize={"24px"}
+            className={"sub-heading"}
+            mt={[2, 2, 3, 4, 4]}
+          >
             Whichever the case...
           </Text>
         </Box>

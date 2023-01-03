@@ -2,7 +2,7 @@ export const data = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: "44px",
+    fontSize: ["44px", "44px", "32px", "44px", "44px"],
     text: "Job Search is Hard!",
     margin: "20px 0px",
   },
@@ -10,7 +10,9 @@ export const data = [
     id: "subHeading",
     className: "medium-text",
     text: "Whether you're a recent university graduate looking for your first job in your chosen field, or a senior professional looking to take the next step in your career, you're probably going to agree with us on this:",
-    margin: "30px 300px",
+    margin: ["0px 172px", "0px 172px", "0px 134px", "30px 172px", "30px 250px"],
+    fontSize: ["16px", "16px", "16px", "20px", "20px"],
+    lineHeight: ["30px", "30px", "26px", "36px", "36px"],
   },
   {
     id: "Quote",
@@ -56,7 +58,7 @@ export const thirdContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: "44px",
+    fontSize: ["44px", "44px", "36px", "44px", "44px"],
     text: "We’re Here to Help!",
     textAlign: "start",
     margin: "20px 0px",
@@ -122,7 +124,7 @@ export const forthContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: "44px",
+    fontSize: ["32px", "32px", "32px", "44px", "44px"],
     text: "What's inside?",
     textAlign: "center",
     margin: "20px 0px",
@@ -130,7 +132,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: "32px",
+    fontSize: ["28px", "28px", "22px", "32px", "32px"],
     text: "Chapter 1 - How to create a resume",
     textAlign: "start",
 
@@ -192,7 +194,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: "32px",
+    fontSize: ["28px", "28px", "22px", "32px", "32px"],
     text: " Chapter 2 - Match your resume with a cover letter",
     textAlign: "start",
     margin: "20px 0px",
@@ -226,7 +228,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: "32px",
+    fontSize: ["28px", "28px", "22px", "32px", "32px"],
     text: "Chapter 3 - How to ace your interview",
     textAlign: "start",
     margin: "20px 0px",
@@ -260,7 +262,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: "32px",
+    fontSize: ["28px", "28px", "22px", "32px", "32px"],
     text: "Chapter 4 - Remote work",
     textAlign: "start",
     margin: "20px 0px",
@@ -294,7 +296,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: "32px",
+    fontSize: ["28px", "28px", "22px", "32px", "32px"],
     text: "Bonus - How to hack your job search in 2022",
     textAlign: "start",
     margin: "20px 0px",
@@ -331,7 +333,7 @@ export const fifthContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: "44px",
+    fontSize: ["36px", "36px", "36px", "44px", "44px"],
     text: "Job Search is Hard! ",
     textAlign: "center",
     margin: "20px 0px",
@@ -339,10 +341,12 @@ export const fifthContent = [
   {
     id: "Sub-Heading",
     className: "medium-text",
-    fontSize: "20px",
+    fontSize: ["16px", "16px", "16px", "20px", "20px"],
     text: "Whether you're a recent university graduate looking for your first job in your chosen field, or a senior professional looking to take the next step in their career, you're probably going to agree with us on this:",
     textAlign: "center",
-    margin: "20px 0px",
+    // margin: ["0px 172px", "0px 172px", "0px 134px", "30px 172px", "30px 250px"],
+    margin: ["20px 0px", "20px 0px", "20px 50px", "20px 0px", "20px 0px"],
+    lineHeight: ["30px", "30px", "26px", "36px", "36px"],
   },
   {
     Content: [
@@ -350,7 +354,7 @@ export const fifthContent = [
         imageUrl: "/students.png",
         tag: "Students",
         className: "medium-heading",
-        fontSize: "36px",
+        fontSize: ["24px", "24px", "27px", "36px", "36px"],
         textAlign: "center",
         whiteSpace: "no-wrap",
       },
@@ -358,7 +362,7 @@ export const fifthContent = [
         imageUrl: "/students1.png",
         tag: "Mid-to-Senior Professionals",
         className: "medium-heading",
-        fontSize: "36px",
+        fontSize: ["24px", "24px", "27px", "36px", "36px"],
         textAlign: "center",
         whiteSpace: "no-wrap",
       },
@@ -366,7 +370,7 @@ export const fifthContent = [
         imageUrl: "/students3.png",
         tag: "Career Changers",
         className: "medium-heading",
-        fontSize: "36px",
+        fontSize: ["24px", "24px", "27px", "36px", "36px"],
         textAlign: "center",
         whiteSpace: "no-wrap",
       },
@@ -378,7 +382,7 @@ export const sixthContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: "44px",
+    fontSize: ["32px", "32px", "28px", "44px", "44px"],
     text: "Loved by Job-Seekers Worldwide",
     textAlign: "center",
     margin: "20px 0px",
@@ -409,20 +413,27 @@ export const seventhContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: "44px",
+    fontSize: ["32px", "32px", "28px", "44px", "44px"],
     text: "Learn How to Create a Compelling Resume",
     textAlign: "start",
     margin: "20px 0px",
-    lineHeight: "60px",
+    lineHeight: ["26px", "26px", "33px", "44px", "60px"],
   },
 
   {
     id: "content",
-    fontSize: "20px",
+    fontSize: ["16px", "16px", "16px", "20px", "20px"],
     className: "medium-text",
     text: `Simply creating a resume is not enough - you want a resume that stands out. In the e-book, we teach you how to do just that:`,
     textAlign: "start",
-    margin: "50px 0px",
+    margin: [
+      "30px 0px 10px 0px",
+      "30px 0px 10px 0px",
+      "30px 0px 10px 0px",
+      "50px 0px",
+      "50px 0px",
+    ],
+    lineHeight: ["26px", "26px", "24px", "44px", "60px"],
   },
   {
     listItems: [
@@ -432,10 +443,11 @@ export const seventhContent = [
 
       {
         id: "List",
-        fontSize: "20px",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
         className: "medium-text",
         text: `Pick the Best Resume Format (For Your Skill Level).`,
         textAlign: "start",
+        lineHeight: ["24px", "24px", "24px", "36px", "36px"],
 
         doneIcon: "MdDone",
         iconSize: "18px",
@@ -443,30 +455,33 @@ export const seventhContent = [
       },
       {
         id: "List",
-        fontSize: "20px",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
         className: "medium-text",
         text: ` Learn How HR Managers Evaluate Your Resume.`,
         textAlign: "start",
+        lineHeight: ["24px", "24px", "24px", "36px", "36px"],
       },
       {
         id: "List",
-        fontSize: "20px",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
         className: "medium-text",
         text: `Make Sure Your Resume Gets Attention With an Eye-Catching Resume Summary.`,
         textAlign: "start",
+        lineHeight: ["24px", "24px", "24px", "36px", "36px"],
       },
       {
         id: "List",
-        fontSize: "20px",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
         className: "medium-text",
         text: `Beat the Applicant Tracking Systems with Resume Tailoring.`,
         textAlign: "start",
+        lineHeight: ["24px", "24px", "24px", "36px", "36px"],
       },
     ],
   },
   {
     id: "footerText",
-    fontSize: "24px",
+    fontSize: ["18px", "18px", "18px", "24px", "24px"],
     className: "sub-heading",
     text: `And more …`,
     textAlign: "start",
@@ -478,12 +493,13 @@ export const eighthContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: "44px",
+
     text: "All Your Job Search Questions Answered!",
     textAlign: "center",
     margin: "20px 0px",
     color: "black",
-    lineHeight: "60px",
+    lineHeight: ["30px", "30px", "40px", "36px", "36px"],
+    fontSize: ["32px", "32px", "34px", "44px", "44px"],
   },
   {
     id: "Sub-Heading",
@@ -493,61 +509,68 @@ export const eighthContent = [
     textAlign: "center",
     margin: "20px 0px",
     color: "black",
+    lineHeight: ["24px", "24px", "24px", "36px", "36px"],
   },
   {
     Content: [
       {
         text: "How long should your resume be, and can it ever be longer than 2 pages?",
         className: "sub-heading",
-        fontSize: "26px",
+
         textAlign: "center",
         whiteSpace: "no-wrap",
-        lineHeight: "34px",
+        lineHeight: ["24px", "24px", "24px", "34px", "34px"],
+        fontSize: ["18px", "18px", "20px", "26px", "26px"],
         color: "black",
       },
       {
         text: "What's the best resume format for YOU?",
         className: "sub-heading",
-        fontSize: "26px",
+
         textAlign: "center",
         whiteSpace: "no-wrap",
-        lineHeight: "34px",
+        lineHeight: ["24px", "24px", "24px", "34px", "34px"],
+        fontSize: ["18px", "18px", "20px", "26px", "26px"],
         color: "black",
       },
       {
         text: "Should you go for a creative or traditional resume look?",
         className: "sub-heading",
-        fontSize: "26px",
+
         textAlign: "center",
         whiteSpace: "no-wrap",
-        lineHeight: "34px",
+        lineHeight: ["24px", "24px", "24px", "34px", "34px"],
+        fontSize: ["18px", "18px", "20px", "26px", "26px"],
         color: "black",
       },
       {
         text: "How can you list a promotion on your resume?",
         className: "sub-heading",
-        fontSize: "26px",
+
         textAlign: "center",
         whiteSpace: "no-wrap",
-        lineHeight: "34px",
+        lineHeight: ["24px", "24px", "24px", "34px", "34px"],
+        fontSize: ["18px", "18px", "20px", "26px", "26px"],
         color: "black",
       },
       {
         text: "How to craft a resume without any work experience?",
         className: "sub-heading",
-        fontSize: "26px",
+
         textAlign: "center",
         whiteSpace: "no-wrap",
-        lineHeight: "34px",
+        lineHeight: ["24px", "24px", "24px", "34px", "34px"],
+        fontSize: ["18px", "18px", "20px", "26px", "26px"],
         color: "black",
       },
       {
         text: "When (and if) should you list irrelevant work experience in your resume?",
         className: "sub-heading",
-        fontSize: "26px",
+
         textAlign: "center",
         whiteSpace: "no-wrap",
-        lineHeight: "34px",
+        lineHeight: ["24px", "24px", "24px", "34px", "34px"],
+        fontSize: ["18px", "18px", "20px", "26px", "26px"],
         color: "black",
       },
     ],
@@ -557,7 +580,7 @@ export const ninthContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: "44px",
+    fontSize: ["32px", "32px", "34px", "44px", "44px"],
     text: "Your Visual Guide to Job Search",
     textAlign: "center",
     margin: "20px 0px 10px 0px",
@@ -566,11 +589,12 @@ export const ninthContent = [
   {
     id: "Sub-Heading",
     className: "medium-text",
-    fontSize: "20px",
+    fontSize: ["16px", "16px", "16px", "20px", "20px"],
     text: "When we say visual, we mean visual. The entire e-book was conceived to provide a reader-friendly experience from start to finish, using example boxes, checklists, visual resume examples, and more. Download the preview to see what we mean!",
     textAlign: "center",
     margin: "10px 0px 20px 0px",
     color: "black",
+    lineHeight: ["24px", "24px", "24px", "36px", "36px"],
   },
   {
     Content: [
@@ -586,16 +610,18 @@ export const tenthContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: "44px",
+    fontSize: ["34px", "34px", "34px", "34px", "44px"],
     text: "Job Search Hacks You've Never Even Heard Of",
     textAlign: "start",
     margin: "20px 0px",
-    lineHeight: "60px",
+
+    lineHeight: ["30px", "30px", "40px", "36px", "36px"],
   },
   {
     id: "content",
     className: "small-text",
-    fontSize: "20px",
+    fontSize: ["16px", "16px", "16px", "20px", "20px"],
+    lineHeight: ["24px", "24px", "24px", "36px", "36px"],
     text: `We cover some of the most creative job search hacks that no one in the industry has even talked about:`,
     textAlign: "start",
     color: "rgb(49,59,71)",
@@ -608,35 +634,38 @@ export const tenthContent = [
       },
       {
         id: "List",
-        fontSize: "20px",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "26px"],
         className: "medium-text",
         text: `Learn if your job application got lost in the recruiter's inbox (and when to send a follow-up)`,
         textAlign: "start",
-        lineHeight: "26px",
       },
       {
         id: "List",
-        fontSize: "20px",
+
         className: "medium-text",
         text: ` Learn how long a hiring manager spent reading your resume (yes, it's possible)`,
         textAlign: "start",
-        lineHeight: "26px",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "26px"],
       },
       {
         id: "List",
-        fontSize: "20px",
+
         className: "medium-text",
         text: `Know when you get rejected for a job long before you receive a rejection email`,
         textAlign: "start",
-        lineHeight: "26px",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "26px"],
       },
       {
         id: "List",
-        fontSize: "20px",
+
         className: "medium-text",
         text: `Send a speculative application and get hired for a job that doesn't even exist`,
         textAlign: "start",
-        lineHeight: "26px",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "26px"],
       },
     ],
   },

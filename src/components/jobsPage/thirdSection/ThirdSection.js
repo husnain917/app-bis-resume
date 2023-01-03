@@ -18,7 +18,16 @@ const ThirdSection = () => {
   return (
     <Box>
       <Box display={"flex"}>
-        <Box w={"50%"} padding={"45px 77px"}>
+        <Box
+          w={["55%", "55%", "53%", "50%", "50%"]}
+          padding={[
+            "45px 45px",
+            "45px 45px",
+            "45px 0px 0px 20px",
+            "45px 45px",
+            "45px 70px",
+          ]}
+        >
           {thirdContent.map((item, index) => {
             return (
               <>
@@ -34,6 +43,7 @@ const ThirdSection = () => {
                   marginBox={item.marginBox}
                   fontWeight={item.fontWeight}
                   color={item.color}
+                  lineHeight={item.lineHeight}
                 />
                 {item.id === "Heading" ? (
                   <Box
@@ -75,7 +85,16 @@ const ThirdSection = () => {
             );
           })}
         </Box>
-        <Box w="50%" padding={"80px"}>
+        <Box
+          w={["55%", "55%", "47%", "50%", "50%"]}
+          padding={[
+            "260px 35px 0px 35px",
+            "260px 35px 0px 35px",
+            "260px 10px 0px 10px",
+            "260px 35px 0px 35px",
+            "80px",
+          ]}
+        >
           {thirdContent.map((item, index) => {
             return (
               <>

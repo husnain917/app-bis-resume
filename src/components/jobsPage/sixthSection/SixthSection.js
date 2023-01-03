@@ -16,7 +16,11 @@ const SixthSection = () => {
       {sixthContent?.map((item, index) => {
         return (
           <>
-            <GridItem colSpan={2} w="40%" margin={"0 auto"}>
+            <GridItem
+              colSpan={2}
+              w={["60%", "60%", "60%", "40%", "40%"]}
+              margin={"0 auto"}
+            >
               <ContentText
                 id={item?.id}
                 text={item?.text}
@@ -35,10 +39,19 @@ const SixthSection = () => {
                   <GridItem
                     w="100%"
                     bg="#FAFAFA"
-                    padding={"20px 52px "}
+                    padding={[
+                      "20px 52px ",
+                      "20px 52px ",
+                      "10px 20px ",
+                      "20px 52px ",
+                      "20px 52px ",
+                    ]}
                     borderRadius={"20px"}
                   >
-                    <Text fontSize={"26px"} className={"small-text"}>
+                    <Text
+                      fontSize={["18px", "18px", "18px", "26px", "26px"]}
+                      className={"small-text"}
+                    >
                       {item.text}
                     </Text>
                     <Text textAlign={"end"} mt={"2%"} className={"xsmall-text"}>
