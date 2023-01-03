@@ -40,8 +40,8 @@ const SixthSection = () => {
                     w="100%"
                     bg="#FAFAFA"
                     padding={[
-                      "20px 52px ",
-                      "20px 52px ",
+                      "10px 20px ",
+                      "10px 20px ",
                       "10px 20px ",
                       "20px 52px ",
                       "20px 52px ",

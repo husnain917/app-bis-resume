@@ -15,8 +15,8 @@ const FifthSection = () => {
           <>
             <Box
               padding={[
-                "0px 260px",
-                "0px 260px",
+                "0px 135px",
+                "0px 135px",
                 "0px 135px",
                 "0px 260px",
                 "0px 380px",
