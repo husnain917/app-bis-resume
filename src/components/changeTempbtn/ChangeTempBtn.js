@@ -11,7 +11,7 @@ const ChangeTempBtn = () => {
         top={{ base: '50px', lg: '100px' }}
         mb={{ base: '20px', lg: '0px' }}
         left={'50px'}
-        zIndex="99999"
+        zIndex="999"
       >
         <Tooltip title="Change Template" arrow distance={20}>
           <div className={style.swap} style={{ background: '#006772' }}>
