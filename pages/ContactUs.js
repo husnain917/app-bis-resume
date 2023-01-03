@@ -121,7 +121,7 @@ export default function ContactUs() {
               mt="5%"
               display="flex"
               flexDir={["column", "column", "row", "row"]}
-              alignItems={'center !important'}
+              alignItems={'center'}
               pr="5%"
             >
               <Box
@@ -130,7 +130,7 @@ export default function ContactUs() {
                 <Text
                   fontSize={["1rem", "1rem", "1rem", "1rem",]}
                   textAlign={["center", "center", "left", "left"]}
-                  fontFamily={`EuclidCircularB-Medium', sans-serif !important`}
+                  fontFamily={`EuclidCircularB-Medium', sans-serif`}
                 >
                   This site is protected by reCAPTCHA and the Google Privacy
                   Policy and Terms of Service apply.
