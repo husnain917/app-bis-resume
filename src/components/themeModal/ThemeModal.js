@@ -75,7 +75,7 @@ const ThemeModal = () => {
   return (
     <PopoverContent bg={'#006772'}>
       <PopoverArrow bg={'#006772'} />
-      <PopoverCloseButton />
+      <PopoverCloseButton color={'white'} />
       <PopoverHeader color={'white'}>Theme Changer</PopoverHeader>
       <PopoverBody>
         <div

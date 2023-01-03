@@ -9,6 +9,8 @@ function Text(props) {
   const { getResumeBuilderChoice } = useSelector(
     (state) => state.editorReducer
   );
+  const { font } = useSelector((state) => state.fontReducer.font);
+  console.log('fontFamily:', font);
   const [addBorder, setAddBorder] = React.useState(false);
 
   const _onBlur = (e) => {
@@ -33,6 +35,7 @@ function Text(props) {
           textAlign: props.textAlign,
           marginRight: props.marginRight,
           marginTop: props.marginTop,
+          fontFamily: font,
         }}
         // style={{
 

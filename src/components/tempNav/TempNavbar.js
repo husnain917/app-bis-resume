@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Box,
   Button,
@@ -19,14 +20,13 @@ import {
   MenuList,
   MenuItem,
 } from '@chakra-ui/react';
-import React from 'react';
 import {
   MoonIcon,
   EditIcon,
   SettingsIcon,
   DownloadIcon,
   ChevronDownIcon,
-  HamburgerIcon
+  HamburgerIcon,
 } from '@chakra-ui/icons';
 import {
   FaFacebookF,
@@ -40,6 +40,7 @@ import { MobileNavItem } from '../navbar/Navbar';
 import { NAV_ITEMS } from '../constant/navbarLinks/NavbarLinks';
 import Link from 'next/link';
 import ThemeModal from '../themeModal/ThemeModal';
+import FontPopover from '../fontPopover/FontPopover';
 export default function TempNavbar({
   work,
   education,
@@ -87,20 +88,26 @@ export default function TempNavbar({
         justifyContent="center"
         py={1}
       >
-        <Button
-          bgColor="transparent"
-          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
-          color="white"
-          _hover={{
-            backgroundColor: 'transparent',
+        <Popover>
+          <PopoverTrigger>
+            <Button
+              bgColor="transparent"
+              fontSize={{ base: '12px', sm: '14px', md: '16px' }}
+              color="white"
+              _hover={{
+                backgroundColor: 'transparent',
 
-            color: '#313C4E',
-            transition: '0.4s',
-          }}
-        >
-          <EditIcon mr="5px" />
-          Fonts
-        </Button>
+                color: '#313C4E',
+                transition: '0.4s',
+              }}
+            >
+              <EditIcon mr="5px" />
+              Fonts
+            </Button>
+          </PopoverTrigger>
+          <FontPopover />
+        </Popover>
+
         <Popover>
           <PopoverTrigger>
             <Button
@@ -162,9 +169,7 @@ export default function TempNavbar({
           >
             Download
           </MenuButton>
-          <MenuList
-            margin={'0px 0px 0px 20px'}
-          >
+          <MenuList margin={'0px 0px 0px 20px'}>
             <MenuItem
               color={'teal.700'}
               display={'flex'}
