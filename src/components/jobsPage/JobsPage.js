@@ -681,91 +681,245 @@ const JobsPage = () => {
         </Box>
       </Box>
       <Box>
-        <Box display={"flex"} bg={"#FED67B"}>
-          <Box w={"50%"} padding={"55px"}>
-            {lastContent.map((item, index) => {
-              return (
-                <>
-                  <ContentText
-                    id={item.id}
-                    text={item.text}
-                    className={item.className}
-                    fontSize={item.fontSize}
-                    margin={item.margin}
-                    textAlign={item.textAlign}
-                    backgroundColor={item.backgroundColor}
-                    width={item.width}
-                    marginBox={item.marginBox}
-                    fontWeight={item.fontWeight}
-                    color={item.color}
-                  />
-                  {item.id === "Heading" ? (
+        <Box display={"flex"} flexDirection={"column"} bg={"#FED67B"}>
+          {lastContent.map((item, index) => {
+            return (
+              <>
+                {item.id === "Heading" ? (
+                  <>
+                    <Box margin={"0 auto"} width={"50%"}>
+                      <ContentText
+                        id={item.id}
+                        text={item.text}
+                        className={item.className}
+                        fontSize={item.fontSize}
+                        margin={item.margin}
+                        textAlign={item.textAlign}
+                        backgroundColor={item.backgroundColor}
+                        width={item.width}
+                        marginBox={item.marginBox}
+                        fontWeight={item.fontWeight}
+                        color={item.color}
+                      />
+                    </Box>
                     <Box
                       height={"2px"}
                       backgroundColor={"black"}
                       width={"25%"}
-                      marginY={10}
+                      margin={"0 auto"}
+                      marginY={8}
                     ></Box>
-                  ) : (
-                    ""
-                  )}
-                  {item?.listItems?.map((item, index) => {
-                    return (
-                      <>
-                        {item.id === "List" ? (
-                          <List
-                            className={item.className}
-                            fontSize={item.fontSize}
-                          >
-                            <ListItem display={"flex"} mt={5}>
-                              {/* <MdDone
+                  </>
+                ) : (
+                  ""
+                )}
+              </>
+            );
+          })}
+          <Box display={"flex"}>
+            <Box w={"50%"}>
+              {lastContent.map((item, index) => {
+                return (
+                  <>
+                    {/* <ContentText
+                      id={item.id}
+                      text={item.text}
+                      className={item.className}
+                      fontSize={item.fontSize}
+                      margin={item.margin}
+                      textAlign={item.textAlign}
+                      backgroundColor={item.backgroundColor}
+                      width={item.width}
+                      marginBox={item.marginBox}
+                      fontWeight={item.fontWeight}
+                      color={item.color}
+                    />
+                    {item.id === "Heading" ? (
+                      <Box
+                        height={"2px"}
+                        backgroundColor={"black"}
+                        width={"25%"}
+                        marginY={10}
+                      ></Box>
+                    ) : (
+                      ""
+                    )} */}
+                    <Box
+                      padding={[
+                        "0px 30px 0px 30px",
+                        "0px 30px 0px 30px",
+                        "0px 30px 0px 30px",
+                        "30px 70px 0px 30px",
+                        "0px 100px 30px 90px",
+                      ]}
+                    >
+                      {item?.listItems?.map((item, index) => {
+                        return (
+                          <>
+                            <Box>
+                              {item.id === "List" ? (
+                                <List
+                                  className={item.className}
+                                  fontSize={item.fontSize}
+                                >
+                                  <ListItem display={"flex"} mt={5}>
+                                    {/* <MdDone
                               height={"12px"}
                               width={"30px"}
                               color={"#00C8AA"}
                             /> */}
-                              <Box mr={2} color={"#00C8AA"} fontWeight={"bold"}>
-                                ✔
+                                    <Box
+                                      mr={2}
+                                      color={"#00C8AA"}
+                                      fontWeight={"bold"}
+                                    >
+                                      ✔
+                                    </Box>
+                                    <ContentText
+                                      id={item.id}
+                                      text={item.text}
+                                      className={item.className}
+                                      fontSize={item.fontSize}
+                                      margin={item.margin}
+                                      textAlign={item.textAlign}
+                                      backgroundColor={item.backgroundColor}
+                                      width={item.width}
+                                      marginBox={item.marginBox}
+                                      fontWeight={item.fontWeight}
+                                      color={item.color}
+                                      lineHeight={item.lineHeight}
+                                    />
+                                  </ListItem>
+                                </List>
+                              ) : (
+                                ""
+                              )}
+                            </Box>
+                          </>
+                        );
+                      })}
+                    </Box>
+                  </>
+                );
+              })}
+            </Box>
+            <Box w="50%">
+              {lastContent.map((item, index) => {
+                return (
+                  <>
+                    {item?.listItems?.map((item, index) => {
+                      return (
+                        <>
+                          {item.id === "image" ? (
+                            <>
+                              <Box>
+                                <Box
+                                  id="HeadingRightSide"
+                                  display={"flex"}
+                                  flexDirection="column"
+                                  alignItems={"center"}
+                                  // w={width > 610 ? ["100%", "49%", "49%", "49%", "49%"] : "100%"}
+                                  padding={[
+                                    "0px 30px 0px 30px",
+                                    "0px 30px 0px 30px",
+                                    "0px 30px 0px 30px",
+                                    "30px 30px 0px 30px",
+                                    "30px 30px 0px 30px",
+                                  ]}
+                                >
+                                  <Text
+                                    className={"sub-heading"}
+                                    mt={[2, 2, 2, 6, 6]}
+                                    color={"black"}
+                                    fontSize={[
+                                      "18px",
+                                      "18px",
+                                      "18px",
+                                      "22px",
+                                      "22px",
+                                    ]}
+                                    fontWeight={800}
+                                  >
+                                    Digital Download: PDF
+                                  </Text>
+                                  <Text
+                                    className={"sub-heading"}
+                                    mt={[1, 1, 1, 1, 1, 2]}
+                                    color={"black"}
+                                    fontSize={[
+                                      "18px",
+                                      "18px",
+                                      "18px",
+                                      "22px",
+                                      "22px",
+                                    ]}
+                                  >
+                                    Prices are in USD.
+                                  </Text>
+                                  <Text
+                                    className={"medium-text"}
+                                    mt={2}
+                                    color={"black"}
+                                    fontSize={[
+                                      "21px",
+                                      "21px",
+                                      "21px",
+                                      "26px",
+                                      "26px",
+                                    ]}
+                                  >
+                                    Job Search Masterclass
+                                  </Text>
+                                  <Text
+                                    className={"small-text"}
+                                    marginTop={"0.3rem"}
+                                    fontSize={[
+                                      "16px",
+                                      "16px",
+                                      "16px",
+                                      "20px",
+                                      "20px",
+                                    ]}
+                                    display={"flex"}
+                                  >
+                                    $10.99
+                                    <Text
+                                      ml={2}
+                                      textDecoration={"line-through"}
+                                    >
+                                      {" "}
+                                      $15.00{" "}
+                                    </Text>
+                                  </Text>
+                                  <CommonButton
+                                    height={"3.5rem"}
+                                    width={"10rem"}
+                                    padding={"24px"}
+                                    borderRadius={"40px"}
+                                    title={"Buy Today"}
+                                    margin={"24px 0px"}
+                                    fontSize={"17px"}
+                                    backgroundColor={"rgb(75,204,239)"}
+                                  />
+                                </Box>
+                                <Box padding={"20px"}>
+                                  <Image
+                                    src={item.imageUrl}
+                                    alt={"Please wait"}
+                                  />
+                                </Box>
                               </Box>
-                              <ContentText
-                                id={item.id}
-                                text={item.text}
-                                className={item.className}
-                                fontSize={item.fontSize}
-                                margin={item.margin}
-                                textAlign={item.textAlign}
-                                backgroundColor={item.backgroundColor}
-                                width={item.width}
-                                marginBox={item.marginBox}
-                                fontWeight={item.fontWeight}
-                                color={item.color}
-                                lineHeight={item.lineHeight}
-                              />
-                            </ListItem>
-                          </List>
-                        ) : (
-                          ""
-                        )}
-                      </>
-                    );
-                  })}
-                </>
-              );
-            })}
-          </Box>
-          <Box w="50%">
-            {lastContent.map((item, index) => {
-              return (
-                <>
-                  {item?.listItems?.map((item, index) => {
-                    return (
-                      <>
-                        <Image src={item.imageUrl} />
-                      </>
-                    );
-                  })}
-                </>
-              );
-            })}
+                            </>
+                          ) : (
+                            ""
+                          )}
+                        </>
+                      );
+                    })}
+                  </>
+                );
+              })}
+            </Box>
           </Box>
         </Box>
       </Box>

@@ -471,11 +471,11 @@ export const seventhContent = [
       },
       {
         id: "List",
-        fontSize: ["16px", "16px", "16px", "20px", "20px"],
+        fontSize: ["1rem", "1rem", "1rem", "1.25rem", "1.25rem"],
         className: "medium-text",
         text: `Beat the Applicant Tracking Systems with Resume Tailoring.`,
         textAlign: "start",
-        lineHeight: ["24px", "24px", "24px", "36px", "36px"],
+        lineHeight: ["1.5rem", "1.5rem", "1.5rem", "2.25rem", "2.25rem"],
       },
     ],
   },
@@ -485,7 +485,7 @@ export const seventhContent = [
     className: "sub-heading",
     text: `And more …`,
     textAlign: "start",
-    margin: "42px 0px 0px 0px",
+    margin: "30px 0px 0px 0px",
   },
 ];
 
@@ -677,13 +677,14 @@ export const lastContent = [
     className: "sub-heading",
     fontSize: "44px",
     text: "All You Need to Know About Job Search For a Small, One-Time Fee",
-    textAlign: "start",
+    textAlign: "center",
     margin: "20px 0px",
   },
   {
     listItems: [
       {
-        imageUrl: "/book-chapters.png",
+        id: "image",
+        imageUrl: "./jobsPage/topimage1.png",
       },
       {
         id: "List",
