@@ -18,7 +18,7 @@ const SixthSection = () => {
           <>
             <GridItem
               colSpan={2}
-              w={["60%", "60%", "60%", "40%", "40%"]}
+              w={["80%", "80%", "60%", "40%", "40%"]}
               margin={"0 auto"}
             >
               <ContentText
@@ -37,6 +37,7 @@ const SixthSection = () => {
               return (
                 <>
                   <GridItem
+                    colSpan={[2, 2, 1, 1, 1]}
                     w="100%"
                     bg="#FAFAFA"
                     padding={[
@@ -48,14 +49,29 @@ const SixthSection = () => {
                     ]}
                     borderRadius={"20px"}
                   >
-                    <Text
-                      fontSize={["18px", "18px", "18px", "26px", "26px"]}
-                      className={"small-text"}
-                    >
-                      {item.text}
-                    </Text>
-                    <Text textAlign={"end"} mt={"2%"} className={"xsmall-text"}>
-                      {item.author}
+                    <ContentText
+                      id={item?.id}
+                      text={item?.text}
+                      className={item?.className}
+                      fontSize={item?.fontSize}
+                      margin={item?.margin}
+                      textAlign={item.textAlign}
+                      backgroundColor={item?.backgroundColor}
+                      width={item?.width}
+                      lineHeight={item?.lineHeight}
+                    />
+
+                    <Text id={item?.id} mt={"2%"} className={"xsmall-text"}>
+                      <ContentText
+                        id={item?.id}
+                        text={item?.author}
+                        className={item?.className}
+                        fontSize={item?.fontSize}
+                        margin={item?.margin}
+                        textAlign={item.authorTextAlign}
+                        backgroundColor={item?.backgroundColor}
+                        width={item?.width}
+                      />
                     </Text>
                   </GridItem>
                 </>

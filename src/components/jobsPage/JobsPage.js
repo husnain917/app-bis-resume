@@ -257,28 +257,29 @@ const JobsPage = () => {
       <Box>
         <Box
           display={"flex"}
+          flexDirection={["column", "column", "row", "row", "row"]}
           bg={"#FAFAFA"}
           padding={[
             // "170px 35px 0px 35px",
             // "170px 35px 0px 35px",
             // "170px 35px 0px 35px",
             // "170px 35px 0px 35px",
-            "2% 35px 0% 35px",
-            "2% 35px 0% 35px",
+            "2% 15px 0% 15px",
+            "2% 15px 0% 15px",
             "2% 35px 0% 35px",
             "2% 35px 0% 35px",
             "2% 35px 0% 35px",
           ]}
         >
           <Box
-            w={"50%"}
+            w={["100%", "100%", "50%", "50%", "50%"]}
             padding={[
               // "170px 35px 0px 35px",
               // "170px 35px 0px 35px",
               // "170px 35px 0px 35px",
               // "170px 35px 0px 35px",
-              "2% 35px 4% 35px",
-              "1% 35px 4% 35px",
+              "2% 25px 4% 25px",
+              "1% 25px 4% 25px",
               "8% 35px 4% 35px",
               "% 35px 4% 0px",
               "2% 35px 4% 35px",
@@ -299,7 +300,7 @@ const JobsPage = () => {
             })}
           </Box>
           <Box
-            w="50%"
+            w={["100%", "100%", "50%", "50%", "50%"]}
             padding={[
               "5px 20px",
               "5px 20px",
@@ -389,7 +390,7 @@ const JobsPage = () => {
               <>
                 <GridItem
                   colSpan={3}
-                  width={["59%", "59%", "59%", "59%", "57%"]}
+                  width={["100%", "100%", "59%", "59%", "57%"]}
                   margin={"0 auto"}
                 >
                   <ContentText
@@ -409,7 +410,7 @@ const JobsPage = () => {
                 {item?.Content?.map((item, index) => {
                   return (
                     <>
-                      <GridItem w="100%" mb={8}>
+                      <GridItem w="100%" mb={8} colSpan={[3, 3, 1, 1, 1]}>
                         <ContentText
                           id={item.id}
                           text={item.text}
@@ -436,7 +437,7 @@ const JobsPage = () => {
           <Box
             id="HeadingRightSide"
             display={"flex"}
-            flexDirection="column"
+            flexDirection={["column", "column", "row", "row", "row"]}
             alignItems={"center"}
             // w={width > 610 ? ["100%", "49%", "49%", "49%", "49%"] : "100%"}
             padding={[
@@ -452,6 +453,7 @@ const JobsPage = () => {
               marginTop={"0.3rem"}
               fontSize={["18px", "18px", "18px", "26px", "26px"]}
               display={"flex"}
+              flexDirection={["column", "column", "row", "row", "row"]}
             >
               $10.99
               <Text ml={2} textDecoration={"line-through"}>
@@ -511,7 +513,7 @@ const JobsPage = () => {
             <>
               <GridItem
                 colSpan={3}
-                w={["50%", "50%", "50%", "55%", "55%"]}
+                w={["85%", "85%", "50%", "55%", "55%"]}
                 margin={"0 auto"}
               >
                 <ContentText
@@ -533,12 +535,13 @@ const JobsPage = () => {
                       flexDir={"column"}
                       alignItems={"center"}
                       padding={[
-                        "0px 50px",
-                        "0px 50px",
+                        "0px 0px",
+                        "0px 0px",
                         "0px 50px",
                         "0px 100px",
                         "0px 100px",
                       ]}
+                      marginLeft={["50px", "50px", "0px", "0px", "0px"]}
                     >
                       <Image
                         src={item?.imageUrl}
@@ -569,12 +572,15 @@ const JobsPage = () => {
         })}
       </Grid>
       <Box>
-        <Box display={"flex"}>
+        <Box
+          display={"flex"}
+          flexDirection={["column", "column", "row", "row", "row"]}
+        >
           <Box
-            w={"50%"}
+            w={["100%", "100%", "50%", "50%", "50%"]}
             padding={[
-              "10px 75px",
-              "10px 75px",
+              "10px 15px",
+              "10px 15px",
               "10px 37px",
               "10px 55px",
               "10px 75px",
@@ -645,7 +651,7 @@ const JobsPage = () => {
               );
             })}
           </Box>
-          <Box w="50%">
+          <Box w={["100%", "100%", "50%", "50%", "50%"]}>
             {tenthContent.map((item, index) => {
               return (
                 <>
@@ -656,8 +662,8 @@ const JobsPage = () => {
                           <>
                             <Box
                               padding={[
-                                "100px 40px 0px 40px",
-                                "100px 40px 0px 40px",
+                                "20px 40px 10px 40px",
+                                "30px 40px 10px 40px",
                                 "100px 10px 0px 10px",
                                 "100px 40px 0px 40px",
                                 "100px 40px 0px 40px",
@@ -694,7 +700,10 @@ const JobsPage = () => {
               <>
                 {item.id === "Heading" ? (
                   <>
-                    <Box margin={"0 auto"} width={"50%"}>
+                    <Box
+                      margin={"0 auto"}
+                      width={["90%", "90%", "50%", "50%", "50%"]}
+                    >
                       <ContentText
                         id={item.id}
                         text={item.text}
@@ -707,6 +716,7 @@ const JobsPage = () => {
                         marginBox={item.marginBox}
                         fontWeight={item.fontWeight}
                         color={item.color}
+                        lineHeight={item.lineHeight}
                       />
                     </Box>
                     <Box
@@ -723,8 +733,11 @@ const JobsPage = () => {
               </>
             );
           })}
-          <Box display={"flex"}>
-            <Box w={"50%"}>
+          <Box
+            display={"flex"}
+            flexDirection={["column", "column", "row", "row", "row"]}
+          >
+            <Box w={["100%", "100%", "50%", "50%", "50%"]}>
               {lastContent.map((item, index) => {
                 return (
                   <>
@@ -810,7 +823,7 @@ const JobsPage = () => {
                 );
               })}
             </Box>
-            <Box w="50%">
+            <Box w={["100%", "100%", "50%", "50%", "50%"]}>
               {lastContent.map((item, index) => {
                 return (
                   <>

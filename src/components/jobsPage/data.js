@@ -17,9 +17,10 @@ export const data = [
   {
     id: "Quote",
     className: "medium-text",
-    fontSize: "27px",
+
     quote: `“Job hunting can be a very stressful experience”`,
     width: "34%",
+    fontSize: "27px",
     textAlign: "start",
     backgroundColor: "gray.100",
   },
@@ -130,7 +131,7 @@ export const forthContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: ["32px", "32px", "32px", "44px", "44px"],
+    fontSize: ["26px", "26px", "36px", "44px", "44px"],
     text: "What's inside?",
     textAlign: "center",
     margin: "20px 0px",
@@ -139,7 +140,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: ["20px", "20px", "22px", "32px", "32px"],
+    fontSize: ["19px", "19px", "22px", "32px", "32px"],
     text: "Chapter 1 - How to create a resume",
     textAlign: "start",
 
@@ -201,7 +202,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: ["20px", "20px", "22px", "32px", "32px"],
+    fontSize: ["19px", "19px", "22px", "32px", "32px"],
     text: " Chapter 2 - Match your resume with a cover letter",
     textAlign: "start",
     margin: "20px 0px",
@@ -235,7 +236,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: ["20px", "20px", "22px", "32px", "32px"],
+    fontSize: ["19px", "19px", "22px", "32px", "32px"],
     text: "Chapter 3 - How to ace your interview",
     textAlign: "start",
     margin: "20px 0px",
@@ -269,7 +270,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: ["20px", "20px", "22px", "32px", "32px"],
+    fontSize: ["19px", "19px", "22px", "32px", "32px"],
     text: "Chapter 4 - Remote work",
     textAlign: "start",
     margin: "20px 0px",
@@ -303,7 +304,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: ["20px", "20px", "22px", "32px", "32px"],
+    fontSize: ["19px", "19px", "22px", "32px", "32px"],
     text: "Bonus - How to hack your job search in 2022",
     textAlign: "start",
     margin: "20px 0px",
@@ -389,7 +390,7 @@ export const sixthContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: ["32px", "32px", "28px", "44px", "44px"],
+    fontSize: ["26px", "26px", "36px", "44px", "44px"],
     text: "Loved by Job-Seekers Worldwide",
     textAlign: "center",
     margin: "20px 0px",
@@ -400,18 +401,34 @@ export const sixthContent = [
       {
         text: "“As a not-so-fresh graduate (graduated almost 2 years ago) thank you for this!”",
         author: "— Reddit @Item_God_2",
+        fontSize: ["16px", "16px", "20px", "20px", "20px"],
+        textAlign: "start",
+        authorTextAlign: "end",
+        lineHeight: ["24px", "24px", "24px", "26px", "26px"],
       },
       {
         text: "“Thank you for taking the time to do that for others! A treasure in a world on fire. I’m sure you will help facilitate dreams.”        ",
         author: "— Reddit @Aburns38",
+        fontSize: ["16px", "16px", "20px", "20px", "20px"],
+        textAlign: "start",
+        authorTextAlign: "end",
+        lineHeight: ["24px", "24px", "24px", "26px", "26px"],
       },
       {
         text: "“As a former HR exec at a top-2 beverage company for 7 years, I must say I’m pretty impressed. And also somewhat bummed as I have an ebook in the works on the same topics. This is a lot of hard work and a lot of good advice. Kudos.”",
         author: "— Reddit @cputnam714",
+        fontSize: ["16px", "16px", "20px", "20px", "20px"],
+        textAlign: "start",
+        authorTextAlign: "end",
+        lineHeight: ["24px", "24px", "24px", "26px", "26px"],
       },
       {
         text: "“Great job.. I just went through your e book, loved it I think I might get some in finding pit a job during these times. I recently have quit my job and am searching for one.”",
         author: "— Reddit @arjunssat",
+        fontSize: ["16px", "16px", "20px", "27px", "27px"],
+        textAlign: "start",
+        authorTextAlign: "end",
+        lineHeight: ["24px", "24px", "24px", "26px", "26px"],
       },
     ],
   },
@@ -421,7 +438,7 @@ export const seventhContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: ["32px", "32px", "28px", "44px", "44px"],
+    fontSize: ["26px", "26px", "36px", "44px", "44px"],
     text: "Learn How to Create a Compelling Resume",
     textAlign: "start",
     margin: "20px 0px",
@@ -500,23 +517,23 @@ export const seventhContent = [
 export const eighthContent = [
   {
     id: "Heading",
-    className: "sub-heading",
+    className: ["sub-heading"],
 
     text: "All Your Job Search Questions Answered!",
     textAlign: "center",
     margin: "20px 0px",
     color: "black",
-    lineHeight: ["26px", "26px", "33px", "44px", "50px"],
+    lineHeight: ["33px", "33px", "33px", "44px", "50px"],
     fontSize: ["32px", "32px", "34px", "44px", "44px"],
   },
   {
     id: "Sub-Heading",
     className: "medium-text",
-    fontSize: "20px",
     text: "We wanted to make this e-book as comprehensive as possible, so we made sure to answer all the common questions job seekers have about resumes, cover letters, and so on. Some of the questions we answer are:",
     textAlign: "center",
     margin: "20px 0px",
     color: "black",
+    fontSize: ["16px", "16px", "20px", "26px", "26px"],
     lineHeight: ["24px", "24px", "24px", "36px", "36px"],
   },
   {
@@ -528,7 +545,7 @@ export const eighthContent = [
         textAlign: "center",
         whiteSpace: "no-wrap",
         lineHeight: ["24px", "24px", "24px", "34px", "34px"],
-        fontSize: ["18px", "18px", "20px", "26px", "26px"],
+        fontSize: ["16px", "16px", "20px", "26px", "26px"],
         color: "black",
       },
       {
@@ -538,7 +555,7 @@ export const eighthContent = [
         textAlign: "center",
         whiteSpace: "no-wrap",
         lineHeight: ["24px", "24px", "24px", "34px", "34px"],
-        fontSize: ["18px", "18px", "20px", "26px", "26px"],
+        fontSize: ["16px", "16px", "20px", "26px", "26px"],
         color: "black",
       },
       {
@@ -548,7 +565,7 @@ export const eighthContent = [
         textAlign: "center",
         whiteSpace: "no-wrap",
         lineHeight: ["24px", "24px", "24px", "34px", "34px"],
-        fontSize: ["18px", "18px", "20px", "26px", "26px"],
+        fontSize: ["16px", "16px", "20px", "26px", "26px"],
         color: "black",
       },
       {
@@ -618,12 +635,12 @@ export const tenthContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: ["34px", "34px", "34px", "34px", "44px"],
+    fontSize: ["33px", "33px", "34px", "34px", "44px"],
     text: "Job Search Hacks You've Never Even Heard Of",
     textAlign: "start",
     margin: "20px 0px",
 
-    lineHeight: ["26px", "26px", "33px", "44px", "50px"],
+    lineHeight: ["33px", "33px", "33px", "44px", "50px"],
   },
   {
     id: "content",
@@ -682,11 +699,13 @@ export const tenthContent = [
 export const lastContent = [
   {
     id: "Heading",
-    className: "sub-heading",
-    fontSize: "44px",
+    className: ["sub-heading"],
+    fontSize: ["31px", "31px", "34px", "34px", "44px"],
     text: "All You Need to Know About Job Search For a Small, One-Time Fee",
     textAlign: "center",
     margin: "20px 0px",
+    fontWeight: "600",
+    lineHeight: ["33px", "33px", "33px", "44px", "50px"],
   },
   {
     listItems: [

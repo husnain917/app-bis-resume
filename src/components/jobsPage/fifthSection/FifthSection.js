@@ -46,16 +46,32 @@ const FifthSection = () => {
                 "space-evenly",
               ]}
               alignItems={"center"}
-              padding={"0px 60px"}
+              padding={[
+                "10px 20px",
+                "10px 20px",
+                "10px 60px",
+                "0px 60px",
+                "0px 60px",
+              ]}
             >
               {item?.Content?.map((item, index) => {
                 return (
                   <>
                     <Box>
-                      <Image src={item.imageUrl} alt="not available" />
                       <Box
-                        maxW={"290px"}
-                        minH={["90px", "90px", "90px", "110px", "110px"]}
+                        display={"flex"}
+                        alignItems={"center"}
+                        justifyContent={"center"}
+                      >
+                        <Image
+                          src={item.imageUrl}
+                          alt="not available"
+                          height={["200px", "200px", "100%", "100%", "100%"]}
+                        />
+                      </Box>
+                      <Box
+                        maxW={["350px", "350px", "290px", "290px", "290px"]}
+                        minH={["50px", "50px", "90px", "110px", "110px"]}
                       >
                         <ContentText
                           id={item?.id}

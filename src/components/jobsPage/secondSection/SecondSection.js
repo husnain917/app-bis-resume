@@ -51,7 +51,7 @@ const SecondSection = () => {
         transition={"1s"}
         mt={[6, 6, 6, 0, 0]}
       >
-        <Text fontSize={["21px", "21px", "21px", "27px", "27px"]}>
+        <Text fontSize={["18px", "18px", "21px", "27px", "27px"]}>
           “Job hunting can be a very stressful experience”
         </Text>
         <Text textAlign={"end"} mt={"-2%"}>
@@ -91,8 +91,8 @@ const SecondSection = () => {
           flexDirection={"column"}
           justifyContent={"space-between"}
           padding={[
-            "40px 17px",
-            "40px 17px",
+            "40px 0px",
+            "40px 0px",
             "80px 17px",
             "120px 17px",
             "120px 42px",
@@ -101,7 +101,7 @@ const SecondSection = () => {
           <ContentText
             text={`Unless you have a Ph.D. in Human Resources or a few years of experience as an HR manager, you've probably struggled with at least some parts of the process.`}
             className={"medium-text"}
-            fontSize={["20px", "20px", "16px", "20px", "20px"]}
+            fontSize={["16px", "16px", "16px", "20px", "20px"]}
             textAlign={["center", "center", "start", "start", "start"]}
             lineHeight={["30px", "30px", "25px", "30px", "30px"]}
           />
@@ -110,7 +110,7 @@ const SecondSection = () => {
             stands out from the rest. Or you might have difficulties charming
             the hiring manager during the interviewing process.`}
             className={"medium-text"}
-            fontSize={["20px", "20px", "16px", "20px", "20px"]}
+            fontSize={["16px", "16px", "16px", "20px", "20px"]}
             textAlign={["center", "center", "start", "start", "start"]}
             lineHeight={"30px"}
             margin={"20px 0px"}

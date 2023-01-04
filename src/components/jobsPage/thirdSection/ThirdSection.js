@@ -112,8 +112,8 @@ const ThirdSection = () => {
           padding={[
             "0px 45px 0px 45px",
             "0px 45px 0px 45px",
-            "260px 10px 0px 10px",
-            "260px 35px 0px 35px",
+            "160px 10px 0px 10px",
+            "190px 35px 0px 35px",
             "80px",
           ]}
         >

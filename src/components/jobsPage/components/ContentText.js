@@ -27,7 +27,7 @@ const ContentText = ({
       {" "}
       <Text
         id={id || "text"}
-        className={`${className ? className : "medium-text"}`}
+        className={className}
         margin={margin}
         color={color}
         textAlign={textAlign || "center"}
