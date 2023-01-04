@@ -37,9 +37,9 @@ export default function Cookie() {
                                     <Text
                                         key={index}
                                         textAlign={'center'}
-                                        fontSize={['2em', '3em', '3em', '3em']}
                                         fontWeight={'bold'}
                                         color={'#313B47'}
+                                        className='main-heading'
                                     >
                                         {item?.title}
                                     </Text>
@@ -56,8 +56,7 @@ export default function Cookie() {
                                     <Text
                                         key={index}
                                         fontSize={'1rem'}
-                                        className={"only-font-family"}
-                                        lineHeight={'1.5'}
+                                        className='small-text'
                                         marginBottom={'1rem'}
                                     >
                                         {item?.text}
@@ -70,7 +69,8 @@ export default function Cookie() {
                             lineHeight={'1.5'}
                             marginBottom={'1rem'}
                             color={'#757575'}
-                            className={"only-font-family"}
+                            fontFamily={`'EuclidCircularB', sans-serif`}
+
                         >
                             {TERMS_DATA?.TermsOfUse?.description}
                         </Text>
@@ -81,10 +81,8 @@ export default function Cookie() {
                         margin={'40px 0px'}
                     >
                         <Text
-                            fontSize={['2em', '2.4em', '2.4em', '2.4em']}
-                            fontWeight={'bold'}
+                            className='medium-heading1'
                             color={'#313B47'}
-                            className="sub-heading"
                         >
                             {TERMS_DATA?.TableOfContents?.heading}
                         </Text>
@@ -97,13 +95,10 @@ export default function Cookie() {
                                 <ListItem>
                                     <Text
 
+                                        fontSize={'1em'}
 
-                                        fontSize={'1rem'}
-                                        lineHeight={'1.5'}
                                         color={'#2679C7'}
-                                        className={"only-font-family"}
-
-
+                                        className='small-text'
                                         cursor="pointer"
                                         smooth={true}
                                         onClick={() => scollToRef.current.scrollIntoView({ behavior: 'smooth' })}
@@ -115,10 +110,10 @@ export default function Cookie() {
 
                                 <ListItem>
                                     <Text
-                                        fontSize={'1rem'}
-                                        lineHeight={'1.5'}
+                                        fontSize={'1em'}
+
                                         color={'#2679C7'}
-                                        className={"only-font-family"}
+                                        className='small-text'
                                         cursor="pointer"
                                         smooth={true}
                                         onClick={() => scrollSecend.current.scrollIntoView({ behavior: 'smooth' })}
@@ -130,10 +125,10 @@ export default function Cookie() {
 
                                 <ListItem>
                                     <Text
-                                        fontSize={'1rem'}
-                                        className={"only-font-family"}
-                                        lineHeight={'1.5'}
+                                        fontSize={'1em'}
+
                                         color={'#2679C7'}
+                                        className='small-text'
                                         cursor="pointer"
                                         smooth={true}
                                         onClick={() => scrollThird.current.scrollIntoView({ behavior: 'smooth' })}
@@ -157,10 +152,8 @@ export default function Cookie() {
 
                     >
                         <Text
-                            fontSize={['2em', '2.4em', '2.4em', '2.4em']}
-                            fontWeight={'bold'}
+                            className='medium-heading1'
                             color={'#313B47'}
-                            className="sub-heading"
                         >
                             {TERMS_DATA?.TheNovoresumeContent?.heading}
                         </Text>
@@ -173,10 +166,8 @@ export default function Cookie() {
                                     <>
                                         <Text
                                             key={index}
-                                            fontSize={'1rem'}
-                                            lineHeight={'1.5'}
+                                            className='small-text'
                                             marginBottom={'1rem'}
-                                            className={"only-font-family"}
                                         >
                                             {item?.text}
                                         </Text>
@@ -192,10 +183,8 @@ export default function Cookie() {
 
                     >
                         <Text
-                            fontSize={['2em', '2.4em', '2.4em', '2.4em']}
-                            fontWeight={'bold'}
+                            className='medium-heading1'
                             color={'#313B47'}
-                            className="sub-heading"
                         >
                             {TERMS_DATA?.AcceptableUse?.heading}
                         </Text>
@@ -209,10 +198,6 @@ export default function Cookie() {
                                     <>
                                         <Text
                                             key={index}
-                                            fontSize={'1.2rem'}
-                                            lineHeight={'1.5'}
-                                            marginBottom={'1rem'}
-
                                             className={"small-text"}
                                             fontWeight={'bold'}
                                             color="black"
@@ -223,10 +208,8 @@ export default function Cookie() {
                                         </Text>
                                         <Text
                                             key={index}
-                                            fontSize={'1rem'}
-                                            lineHeight={'1.5'}
+                                            className='small-text'
                                             marginBottom={'1rem'}
-                                            className={"only-font-family"}
                                         >
 
                                             {item?.text}
@@ -240,9 +223,8 @@ export default function Cookie() {
                                     PREMIUM_ACCOUNT_DATA?.map((item) => (
                                         <>
                                             <ListItem
-                                                lineHeight={'1.5'}
-                                                fontSize={'1rem'}
-                                                className={"only-font-family"}
+                                                className='small-text'
+                                                fontSize={'1em'}
                                             >
                                                 {item?.label}
                                             </ListItem>
@@ -262,10 +244,8 @@ export default function Cookie() {
 
                     >
                         <Text
-                            fontSize={['2em', '2.4em', '2.4em', '2.4em']}
-                            fontWeight={'bold'}
+                            className='medium-heading1'
                             color={'#313B47'}
-                            className="sub-heading"
                         >
                             {TERMS_DATA?.WarrantyAndPremiumAccount?.heading}
                         </Text>
@@ -274,10 +254,8 @@ export default function Cookie() {
                             margin={'10px 0px 40px 0px'}
                         >
                             <Text
-                                fontSize={'1rem'}
-                                lineHeight={'1.5'}
+                                className='small-text'
                                 marginBottom={'1rem'}
-                                className={"only-font-family"}
                             >
                                 {TERMS_DATA?.WarrantyAndPremiumAccount?.description}
                             </Text>
@@ -288,21 +266,17 @@ export default function Cookie() {
                                 TERMS_DATA?.WarrantyAndPremiumAccount?.paragraphs?.map((item, index) => (
                                     <>
                                         <Text
-                                            fontSize={'1.2rem'}
-                                            lineHeight={'1.5'}
-                                            marginBottom={'1rem'}
-                                            fontWeight={"bold"}
-                                            className={"small-text"}
+                                          className={"small-text"}
+                                            fontWeight={'bold'}
                                             color="black"
+
                                             key={index}
                                         >
                                             {item?.head}
                                         </Text>
                                         <Text
-                                            fontSize={'1rem'}
-                                            lineHeight={'1.5'}
-                                            margin={'1rem 0rem'}
-                                            className={"only-font-family"}
+                                            className='small-text'
+                                            marginBottom={'1rem'}
 
 
                                             key={index}
@@ -317,9 +291,8 @@ export default function Cookie() {
                                     Marketing?.map((item) => (
                                         <>
                                             <ListItem
-                                                lineHeight={'1.5'}
-                                                fontSize={'1rem'}
-                                                className={"only-font-family"}
+                                                className='small-text'
+                                                fontSize={'1em'}
                                             >
                                                 {item?.label}
                                             </ListItem>
@@ -349,10 +322,8 @@ export default function Cookie() {
                         margin={'30px 0px'}
                     >
                         <Text
-                            fontSize={['2em', '2.4em', '2.4em', '2.4em']}
-                            fontWeight={'bold'}
+                            className='medium-heading1'
                             color={'#313B47'}
-                            className="sub-heading"
                         >
                             {TERMS_DATA?.ContactUs?.heading}
                         </Text>
@@ -363,10 +334,9 @@ export default function Cookie() {
                             marginBottom={'20px'}
                         >
                             <Text
-                                fontSize={'1rem'}
-                                lineHeight={'1.5'}
+                                className='small-text'
                                 marginBottom={'1rem'}
-                                className={"only-font-family"}
+
                             >
                                 {TERMS_DATA?.ContactUs?.subHeading}
                             </Text>
@@ -378,23 +348,25 @@ export default function Cookie() {
                                             item?.label === 'one' ?
                                                 <>
                                                     <ListItem
-                                                        lineHeight={'1.5'}
-                                                        fontSize={'1rem'}
-                                                        className={"only-font-family"}
+
+                                                        className='small-text'
+                                                        fontSize={'1em'}
+
                                                     >
                                                         <Text
-                                                            fontSize={'1rem'}
-                                                            lineHeight={'1.5'}
-                                                            marginBottom={'1rem'}
+
+                                                            className='small-text'
+
+
                                                         >
                                                             If you have any questions, please feel free to contact us at any time at
                                                             <Link
 
                                                                 color={'#2679C7'}
-                                                                lineHeight={'1.5'}
-                                                                fontSize={'1rem'}
+                                                                className='small-text'
+
+
                                                                 marginLeft={"2"}
-                                                                className={"only-font-family"}
                                                                 href="mailto:contact@bisresume.com"
                                                             >
                                                                 contact@bisresume.com
@@ -408,9 +380,8 @@ export default function Cookie() {
                                                 item?.label === 'second' ?
                                                     <>
                                                         <ListItem
-                                                            lineHeight={'1.5'}
-                                                            fontSize={'1rem'}
-                                                            className={"only-font-family"}
+                                                            className='small-text'
+
                                                         >
                                                             {item?.description}
 
@@ -420,9 +391,8 @@ export default function Cookie() {
                                                     item?.label === 'third' ?
                                                         <>
                                                             <ListItem
-                                                                lineHeight={'1.5'}
-                                                                fontSize={'1rem'}
-                                                                className={"only-font-family"}
+                                                                className='small-text'
+
                                                             >
                                                                 {item?.description}
 
@@ -432,10 +402,8 @@ export default function Cookie() {
                                                         item?.label === 'thirdLink' ?
                                                             <>
                                                                 <ListItem
-                                                                    lineHeight={'1.5'}
-                                                                    fontSize={'1rem'}
-                                                                    className={"only-font-family"}
-                                                                    marginBottom="20"
+                                                                    className='small-text'
+
                                                                 >
                                                                     {item?.description}
                                                                 </ListItem>

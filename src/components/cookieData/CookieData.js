@@ -76,7 +76,7 @@ export const TERMS_DATA = {
     TermsOfUse: {
         heading: [
             {
-                title: 'Bisrésumé ApS’s'
+                title: 'BisResume ApS’s'
             },
             {
                 title: 'Cookie Policy'
