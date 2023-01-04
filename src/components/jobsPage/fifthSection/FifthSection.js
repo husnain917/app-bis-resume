@@ -7,7 +7,7 @@ import { fifthContent } from "../data";
 const FifthSection = () => {
   return (
     <Box
-      padding={["50px 0px", "50px 0px", "50px 0px", "100px 0px", "100px 0px"]}
+      padding={["10px 0px", "10px 0px", "10px 0px", "10px 0px", "10px 0px"]}
       bg={"#FAFAFA"}
     >
       {fifthContent.map((item, index) => {

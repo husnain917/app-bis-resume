@@ -256,11 +256,11 @@ const JobsPage = () => {
             // "170px 35px 0px 35px",
             // "170px 35px 0px 35px",
             // "170px 35px 0px 35px",
-            "6% 35px 4% 35px",
-            "6% 35px 4% 35px",
-            "6% 35px 4% 35px",
-            "6% 35px 4% 35px",
-            "6% 35px 4% 35px",
+            "2% 35px 0% 35px",
+            "2% 35px 0% 35px",
+            "2% 35px 0% 35px",
+            "2% 35px 0% 35px",
+            "2% 35px 0% 35px",
           ]}
         >
           <Box
@@ -271,10 +271,10 @@ const JobsPage = () => {
               // "170px 35px 0px 35px",
               // "170px 35px 0px 35px",
               "2% 35px 4% 35px",
-              "10% 35px 4% 35px",
-              "10% 35px 4% 35px",
-              "25% 35px 4% 0px",
-              "6% 35px 4% 35px",
+              "1% 35px 4% 35px",
+              "8% 35px 4% 35px",
+              "14% 35px 4% 0px",
+              "2% 35px 4% 35px",
             ]}
           >
             {seventhContent.map((item, index) => {
@@ -294,11 +294,11 @@ const JobsPage = () => {
           <Box
             w="50%"
             padding={[
-              "45px 20px",
-              "45px 20px",
-              "45px 20px",
-              "45px 20px",
-              "50px 65px",
+              "5px 20px",
+              "5px 20px",
+              "5px 20px",
+              "5px 20px",
+              "0px 65px",
             ]}
           >
             {seventhContent.map((item, index) => {
@@ -436,8 +436,8 @@ const JobsPage = () => {
               "0px 30px 0px 30px",
               "0px 30px 0px 30px",
               "0px 30px 0px 30px",
-              "30px 30px 0px 30px",
-              "30px 30px 0px 30px",
+              "0px 30px 0px 30px",
+              "0px 30px 0px 30px",
             ]}
           >
             <Text
@@ -496,7 +496,7 @@ const JobsPage = () => {
         gap={[4, 4, 4, 6, 6]}
         width={"100%"}
         margin={"0 auto"}
-        padding={["50px 0px", "50px 0px", "50px 0px", "100px 0px", "100px 0px"]}
+        padding={["10px 0px", "10px 0px", "10px 0px", "10px 0px", "10px 0px"]}
         bg={"#FAFAFA"}
       >
         {ninthContent?.map((item, index) => {
@@ -566,11 +566,11 @@ const JobsPage = () => {
           <Box
             w={"50%"}
             padding={[
-              "25px 75px",
-              "25px 75px",
-              "25px 37px",
-              "55px 55px",
-              "55px 75px",
+              "10px 75px",
+              "10px 75px",
+              "10px 37px",
+              "10px 55px",
+              "10px 75px",
             ]}
           >
             {tenthContent.map((item, index) => {
@@ -649,11 +649,11 @@ const JobsPage = () => {
                           <>
                             <Box
                               padding={[
-                                "160px 40px 0px 40px",
-                                "160px 40px 0px 40px",
-                                "120px 10px 0px 10px",
-                                "160px 40px 0px 40px",
-                                "60px",
+                                "100px 40px 0px 40px",
+                                "100px 40px 0px 40px",
+                                "100px 10px 0px 10px",
+                                "100px 40px 0px 40px",
+                                "100px 40px 0px 40px",
                               ]}
                             >
                               <Image

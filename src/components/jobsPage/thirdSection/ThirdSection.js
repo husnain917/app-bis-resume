@@ -21,11 +21,11 @@ const ThirdSection = () => {
         <Box
           w={["55%", "55%", "53%", "50%", "50%"]}
           padding={[
-            "45px 45px",
-            "45px 45px",
-            "45px 0px 0px 20px",
-            "45px 45px",
-            "45px 70px",
+            "15px 45px",
+            "15px 45px",
+            "15px 0px 0px 20px",
+            "15px 45px",
+            "15px 70px",
           ]}
         >
           {thirdContent.map((item, index) => {
