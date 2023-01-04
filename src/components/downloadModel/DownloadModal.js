@@ -55,7 +55,7 @@ export default function DownloadModal({
                 <Box
                     position={'absolute'}
                     top={'27%'}
-                    left={'28%'}
+                    left={'29%'}
                     zIndex={'1400'}
                     transform={'rotate(-18deg)'}
                 >
@@ -64,12 +64,13 @@ export default function DownloadModal({
                         objectFit='contain'
                         src='/owly-head.png'
                         alt='Image Not Found'
+                        transition={'1.5s'}
                     />
                 </Box>
                 <Box
                     position={'absolute'}
                     top={'39%'}
-                    left={'32%'}
+                    left={'33%'}
                     zIndex={'1500'}
                 >
                     <Image
@@ -77,6 +78,7 @@ export default function DownloadModal({
                         objectFit='contain'
                         src='/owly-wing.png'
                         alt='Image Not Found'
+                        transition={'1.5s'}
                     />
                 </Box>
                 <ModalContent
