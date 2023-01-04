@@ -132,18 +132,18 @@ const JobsPage = () => {
             >
               <Text
                 className={"sub-heading"}
-                fontSize={["2rem", "2rem", "2rem", "3rem", "3.2rem"]}
+                fontSize={["2rem", "2rem", "2rem", "3rem", "3.3rem"]}
                 color={"black"}
-                lineHeight={["60px", "60px", "35px", "60px", "70px"]}
+                lineHeight={["60px", "60px", "35px", "60px", "65px"]}
               >
                 {" "}
                 Job Search Masterclass
               </Text>
               <Text
                 className={"medium-heading"}
-                fontSize={["18px", "18px", "18px", "24px", "24px"]}
+                fontSize={["18px", "18px", "18px", "23px", "23px"]}
                 color={"black"}
-                mt={["3%", "3%", "3%", "0%", "0%"]}
+                mt={["3%", "3%", "3%", "-2%", "-2%"]}
               >
                 An E-book by Novoresume
               </Text>
