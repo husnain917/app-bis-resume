@@ -96,7 +96,6 @@ export default function TempNavbar({
               color="white"
               _hover={{
                 backgroundColor: 'transparent',
-
                 color: '#313C4E',
                 transition: '0.4s',
               }}
