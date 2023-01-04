@@ -242,12 +242,12 @@ const JobsPage = () => {
           />
         </Box>
       </Box>
-      {/* <SecondSection />
+      <SecondSection />
       <ThirdSection />
       <ForthSection />
       <FifthSection />
-      <SixthSection /> */}
-      {/* <Box>
+      <SixthSection />
+      <Box>
         <Box display={"flex"} bg={"#FAFAFA"}>
           <Box
             w={"50%"}
@@ -348,8 +348,8 @@ const JobsPage = () => {
             })}
           </Box>
         </Box>
-      </Box> */}
-      {/* <Box id={"border-section"} bg={"#FFD67B"}>
+      </Box>
+      <Box id={"border-section"} bg={"#FFD67B"}>
         <Box>
           <Image src="yellow-wave.png" />
         </Box>
@@ -461,8 +461,8 @@ const JobsPage = () => {
             />
           </Box>
         </Box>
-      </Box> */}
-      {/* <Box
+      </Box>
+      <Box
         // marginTop={"-125px"}
         height={"auto"}
         width={"auto"}
@@ -472,8 +472,8 @@ const JobsPage = () => {
           alt={"please wait"}
           mt={-1}
         />
-      </Box> */}
-      {/* <Grid
+      </Box>
+      <Grid
         templateColumns="repeat(1, 1fr)"
         gap={[4, 4, 4, 6, 6]}
         width={"100%"}
@@ -542,8 +542,8 @@ const JobsPage = () => {
             </>
           );
         })}
-      </Grid> */}
-      {/* <Box>
+      </Grid>
+      <Box>
         <Box display={"flex"}>
           <Box
             w={"50%"}
@@ -656,12 +656,12 @@ const JobsPage = () => {
             })}
           </Box>
         </Box>
-      </Box> */}
-      {/* <Box id={"border-section"} bg={"#FFD67B"}>
+      </Box>
+      <Box id={"border-section"} bg={"#FFD67B"}>
         <Box>
           <Image src="yellow-wave-wbg-top.png" />
         </Box>
-      </Box> */}
+      </Box>
       <Box>
         <Box display={"flex"} bg={"#FED67B"}>
           <Box w={"50%"} padding={"55px"}>
