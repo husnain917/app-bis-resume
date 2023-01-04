@@ -823,8 +823,8 @@ const JobsPage = () => {
                                     "0px 30px 0px 30px",
                                     "0px 30px 0px 30px",
                                     "0px 30px 0px 30px",
-                                    "30px 30px 0px 30px",
-                                    "30px 30px 0px 30px",
+                                    "0px 30px 0px 30px",
+                                    "0px 30px 0px 30px",
                                   ]}
                                 >
                                   <Text
@@ -902,10 +902,11 @@ const JobsPage = () => {
                                     backgroundColor={"rgb(75,204,239)"}
                                   />
                                 </Box>
-                                <Box padding={"20px"}>
+                                <Box padding={"0px 30px 0px 30px "} mt={"-10%"}>
                                   <Image
                                     src={item.imageUrl}
                                     alt={"Please wait"}
+                                    top={0}
                                   />
                                 </Box>
                               </Box>

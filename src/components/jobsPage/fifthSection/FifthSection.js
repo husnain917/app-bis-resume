@@ -129,8 +129,8 @@ const FifthSection = () => {
           ></Box>
           <CommonButton
             className={"medium-text"}
-            width={"16rem"}
-            height={"3.5rem"}
+            width={["12rem", "12rem", "12rem", "14rem", "14rem"]}
+            height={["3.4rem", "3.8rem", "3.8rem", "3.8rem", "3.8rem"]}
             title={"Download Sample"}
             backgroundColor={"#E6E6E6"}
             fontSize={"17px"}
