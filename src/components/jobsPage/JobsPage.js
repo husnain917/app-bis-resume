@@ -127,7 +127,7 @@ const JobsPage = () => {
                 "0px 0px 0px 0px",
                 "0px 0px 0px 0px",
                 "0px 0px 0px 20px",
-                "0px 30px 0px 30px",
+                "0px 30px 0px 20px",
               ]}
             >
               <Text
@@ -143,7 +143,7 @@ const JobsPage = () => {
                 className={"medium-heading"}
                 fontSize={["18px", "18px", "18px", "24px", "24px"]}
                 color={"black"}
-                mt={"3%"}
+                mt={["3%", "3%", "3%", "0%", "0%"]}
               >
                 An E-book by Novoresume
               </Text>
@@ -152,7 +152,7 @@ const JobsPage = () => {
                 mt={"20px"}
                 fontSize={["16px", "16px", "16px", "20px", "20px"]}
                 color={"black"}
-                lineHeight={["22px", "22px", "22px", "36px", "36px"]}
+                lineHeight={["22px", "22px", "22px", "32px", "32px"]}
               >
                 The only book about the job search process that you’ll ever
                 need. Learn how to create an impeccable resume, match it with a
