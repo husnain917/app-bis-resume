@@ -437,7 +437,7 @@ const JobsPage = () => {
           <Box
             id="HeadingRightSide"
             display={"flex"}
-            flexDirection={["column", "column", "row", "row", "row"]}
+            flexDirection={["column"]}
             alignItems={"center"}
             // w={width > 610 ? ["100%", "49%", "49%", "49%", "49%"] : "100%"}
             padding={[
@@ -453,7 +453,7 @@ const JobsPage = () => {
               marginTop={"0.3rem"}
               fontSize={["18px", "18px", "18px", "26px", "26px"]}
               display={"flex"}
-              flexDirection={["column", "column", "row", "row", "row"]}
+              flexDirection={["row"]}
             >
               $10.99
               <Text ml={2} textDecoration={"line-through"}>
