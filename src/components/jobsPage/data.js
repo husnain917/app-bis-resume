@@ -430,10 +430,10 @@ export const seventhContent = [
       "30px 0px 10px 0px",
       "30px 0px 10px 0px",
       "30px 0px 10px 0px",
-      "50px 0px",
-      "50px 0px",
+      "50px 0px 30px 0px",
+      "50px 0px 30px 0px",
     ],
-    lineHeight: ["26px", "26px", "24px", "44px", "60px"],
+    lineHeight: ["22px", "22px", "22px", "31px", "31px"],
   },
   {
     listItems: [

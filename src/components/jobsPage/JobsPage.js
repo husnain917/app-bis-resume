@@ -189,8 +189,8 @@ const JobsPage = () => {
                 </Text>
               </Text>
               <CommonButton
-                height={["4rem", "5rem", "3.5rem", "5rem", "5.5rem"]}
-                width={["11rem", "11rem", "10rem", "11rem", "11rem"]}
+                height={["4rem", "5rem", "3.5rem", "3.5rem", "3.5rem"]}
+                width={["9rem", "9rem", "9rem", "10rem", "10rem"]}
                 padding={["20px", "20px", "20px", "24px", "24px"]}
                 borderRadius={"40px"}
                 title={"Buy Today"}
@@ -221,8 +221,8 @@ const JobsPage = () => {
               </Text>
               <CommonButton
                 className={"medium-text"}
-                width={["12rem", "12rem", "12rem", "14rem", "18rem"]}
-                height={["3.4rem", "3.8rem", "3.8rem", "3.8rem", "4.5rem"]}
+                width={["12rem", "12rem", "12rem", "14rem", "14rem"]}
+                height={["3.4rem", "3.8rem", "3.8rem", "3.8rem", "3.8rem"]}
                 title={"Download Sample"}
                 backgroundColor={"white"}
                 fontSize={["16px", "16px", "17px", "20px", "20px"]}
@@ -255,8 +255,8 @@ const JobsPage = () => {
               "170px 35px 0px 35px",
               "170px 35px 0px 35px",
               "170px 35px 0px 35px",
-              "220px 35px 0px 35px",
-              "80px",
+              "65px 35px 0px 35px",
+              "65px 35px 0px 35px",
             ]}
           >
             {seventhContent.map((item, index) => {
@@ -317,8 +317,8 @@ const JobsPage = () => {
                             className={item.className}
                             fontSize={item.fontSize}
                           >
-                            <ListItem display={"flex"} mb={3}>
-                              <Box mr={2} color={"#00C8AA"} fontWeight={600}>
+                            <ListItem display={"flex"} mb={2}>
+                              <Box mr={1} color={"#00C8AA"} fontWeight={600}>
                                 ✔
                               </Box>
                               <ContentText
