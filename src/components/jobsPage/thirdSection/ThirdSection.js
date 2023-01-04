@@ -69,7 +69,7 @@ const ThirdSection = () => {
                               width={"30px"}
                               color={"#00C8AA"}
                             /> */}
-                            <Box mr={2} color={"#00C8AA"} fontWeight={"bold"}>
+                            <Box mr={1} color={"#00C8AA"} fontWeight={"bold"}>
                               ✔
                             </Box>
                             {item.text}

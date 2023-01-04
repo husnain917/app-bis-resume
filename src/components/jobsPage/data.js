@@ -485,7 +485,7 @@ export const seventhContent = [
     className: "sub-heading",
     text: `And more …`,
     textAlign: "start",
-    margin: "22px 0px",
+    margin: "42px 0px 0px 0px",
   },
 ];
 

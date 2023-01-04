@@ -248,15 +248,33 @@ const JobsPage = () => {
       <FifthSection />
       <SixthSection />
       <Box>
-        <Box display={"flex"} bg={"#FAFAFA"}>
+        <Box
+          display={"flex"}
+          bg={"#FAFAFA"}
+          padding={[
+            // "170px 35px 0px 35px",
+            // "170px 35px 0px 35px",
+            // "170px 35px 0px 35px",
+            // "170px 35px 0px 35px",
+            "6% 35px 4% 35px",
+            "6% 35px 4% 35px",
+            "6% 35px 4% 35px",
+            "6% 35px 4% 35px",
+            "6% 35px 4% 35px",
+          ]}
+        >
           <Box
             w={"50%"}
             padding={[
-              "170px 35px 0px 35px",
-              "170px 35px 0px 35px",
-              "170px 35px 0px 35px",
-              "65px 35px 0px 35px",
-              "65px 35px 0px 35px",
+              // "170px 35px 0px 35px",
+              // "170px 35px 0px 35px",
+              // "170px 35px 0px 35px",
+              // "170px 35px 0px 35px",
+              "2% 35px 4% 35px",
+              "10% 35px 4% 35px",
+              "10% 35px 4% 35px",
+              "25% 35px 4% 0px",
+              "6% 35px 4% 35px",
             ]}
           >
             {seventhContent.map((item, index) => {
