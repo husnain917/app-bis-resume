@@ -19,6 +19,9 @@ export default function CommonButton({
   hoverBorder,
   hoverTransition,
   hoverBoxShadow,
+  focusBg,
+  focusColor,
+  margin,
   width,
   height,
   borderRadius,
@@ -47,8 +50,11 @@ export default function CommonButton({
         transition: hoverTransition || "0.5s",
         backgroundcolor: hoverBackgroundColor || "#50bce0",
         boxShadow: hoverBoxShadow || "-1px -2px 4px 5px #8fd1e7",
-        borderRadius: borderRadius || "8px",
+        borderRadius: hoverborderRadius || "8px",
+        bg: hoverBackgroundColor, 
       }}
+      _focus={{ bg: focusBg, color: focusColor }}
+      margin={margin}
       onClick={onClick}
       disabled={disabled}
     >
