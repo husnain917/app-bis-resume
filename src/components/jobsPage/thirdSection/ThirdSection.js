@@ -24,8 +24,8 @@ const ThirdSection = () => {
         <Box
           w={["100%", "100%", "53%", "50%", "50%"]}
           padding={[
-            "15px 45px",
-            "15px 45px",
+            "15px 30px",
+            "15px 30px",
             "15px 0px 0px 20px",
             "15px 45px",
             "15px 70px",
@@ -54,8 +54,8 @@ const ThirdSection = () => {
                     backgroundColor={"black"}
                     width={"20%"}
                     margin={[
-                      "0 auto",
-                      "0 auto",
+                      "20px 0px",
+                      "20px 0px",
                       "20px 0px",
                       "20px 0px",
                       "20px 0px",
@@ -108,10 +108,10 @@ const ThirdSection = () => {
           })}
         </Box>
         <Box
-          w={["55%", "55%", "47%", "50%", "50%"]}
+          w={["100%", "100%", "47%", "50%", "50%"]}
           padding={[
-            "260px 35px 0px 35px",
-            "260px 35px 0px 35px",
+            "0px 45px 0px 45px",
+            "0px 45px 0px 45px",
             "260px 10px 0px 10px",
             "260px 35px 0px 35px",
             "80px",

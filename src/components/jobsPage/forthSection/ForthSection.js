@@ -32,7 +32,11 @@ const ForthSection = () => {
                 />
               </Box>
             ) : (
-              <Accordion allowToggle width={"70%"} margin={"0 auto"}>
+              <Accordion
+                allowToggle
+                width={["85%", "85%", "70%", "70%", "70%"]}
+                margin={"0 auto"}
+              >
                 <AccordionItem>
                   <h2>
                     <AccordionButton
@@ -71,10 +75,16 @@ const ForthSection = () => {
                           margin={"0"}
                           padding={"0.8px 0px"}
                         >
-                          <Text mr={2} className="sub-heading" fontSize="20px">
+                          <Text mr={2} className="sub-heading" fontSize="16px">
                             {faqContent.bullet}
                           </Text>
-                          <Text fontSize={"22px"} className={"small-text"}>
+                          <Text
+                            fontSize={["13px", "13px", "22px", "22px", "22px"]}
+                            className={"small-text"}
+                            display={"flex"}
+                            alignItems={"center"}
+                            // justifyContent={"center"}
+                          >
                             {faqContent.text}
                           </Text>
                         </AccordionPanel>

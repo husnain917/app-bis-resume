@@ -58,7 +58,7 @@ export const thirdContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: ["44px", "44px", "36px", "44px", "44px"],
+    fontSize: ["26px", "26px", "36px", "44px", "44px"],
     text: "We’re Here to Help!",
     textAlign: ["start", "start", "start", "start", "start"],
     margin: "20px 0px",
@@ -66,20 +66,20 @@ export const thirdContent = [
   {
     id: "content",
     className: "small-text",
-    fontSize: "20px",
+    fontSize: ["16px", "16px", "16px", "20px", "20px"],
     text: `At Novoresume, we wanted to create the ultimate job search resource - something that's useful for job seekers of all levels, from students to senior professionals.`,
     textAlign: ["start", "start", "start", "start", "start"],
     color: "rgb(49,59,71)",
-    lineHeight: ["30px", "30px", "26px", "36px", "36px"],
+    lineHeight: ["24px", "24px", "26px", "36px", "36px"],
   },
   {
     id: "content",
-    fontSize: "20px",
+    fontSize: ["16px", "16px", "16px", "20px", "20px"],
     className: "medium-text",
     text: `With the Job Search Masterclass e-book, we cover the job search process from start to finish, arming you with the knowledge you need to take charge of your career. The e-book features:`,
     textAlign: ["start", "start", "start", "start", "start"],
     margin: "25px 0px",
-    lineHeight: ["30px", "30px", "26px", "36px", "36px"],
+    lineHeight: ["24px", "24px", "26px", "36px", "36px"],
   },
   {
     listItems: [
@@ -88,7 +88,7 @@ export const thirdContent = [
       },
       {
         id: "List",
-        fontSize: "20px",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
         className: "medium-text",
         text: `How to Create a Compelling Resume That Stands Out.`,
         textAlign: "start",
@@ -100,7 +100,7 @@ export const thirdContent = [
       },
       {
         id: "List",
-        fontSize: "20px",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
         className: "medium-text",
         text: ` 5 Steps to a Convincing Cover Letter (That Gets Read).`,
         textAlign: "start",
@@ -108,7 +108,7 @@ export const thirdContent = [
       },
       {
         id: "List",
-        fontSize: "20px",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
         className: "medium-text",
         text: `Acing the Job Interview - The Common Interview Questions (And How to Answer Them).`,
         textAlign: "start",
@@ -116,7 +116,7 @@ export const thirdContent = [
       },
       {
         id: "List",
-        fontSize: "20px",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
         className: "medium-text",
         text: `Templates, Checklists, Practical Examples, and So Much More!`,
         textAlign: "start",
@@ -139,7 +139,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: ["28px", "28px", "22px", "32px", "32px"],
+    fontSize: ["20px", "20px", "22px", "32px", "32px"],
     text: "Chapter 1 - How to create a resume",
     textAlign: "start",
 
@@ -201,7 +201,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: ["28px", "28px", "22px", "32px", "32px"],
+    fontSize: ["20px", "20px", "22px", "32px", "32px"],
     text: " Chapter 2 - Match your resume with a cover letter",
     textAlign: "start",
     margin: "20px 0px",
@@ -235,7 +235,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: ["28px", "28px", "22px", "32px", "32px"],
+    fontSize: ["20px", "20px", "22px", "32px", "32px"],
     text: "Chapter 3 - How to ace your interview",
     textAlign: "start",
     margin: "20px 0px",
@@ -269,7 +269,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: ["28px", "28px", "22px", "32px", "32px"],
+    fontSize: ["20px", "20px", "22px", "32px", "32px"],
     text: "Chapter 4 - Remote work",
     textAlign: "start",
     margin: "20px 0px",
@@ -303,7 +303,7 @@ export const forthContent = [
   {
     id: "Faqitem",
     className: "medium-heading",
-    fontSize: ["28px", "28px", "22px", "32px", "32px"],
+    fontSize: ["20px", "20px", "22px", "32px", "32px"],
     text: "Bonus - How to hack your job search in 2022",
     textAlign: "start",
     margin: "20px 0px",
@@ -340,7 +340,7 @@ export const fifthContent = [
   {
     id: "Heading",
     className: "sub-heading",
-    fontSize: ["36px", "36px", "36px", "44px", "44px"],
+    fontSize: ["26px", "26px", "36px", "44px", "44px"],
     text: "Job Search is Hard! ",
     textAlign: "center",
     margin: "20px 0px",
@@ -352,7 +352,7 @@ export const fifthContent = [
     text: "Whether you're a recent university graduate looking for your first job in your chosen field, or a senior professional looking to take the next step in their career, you're probably going to agree with us on this:",
     textAlign: "center",
     // margin: ["0px 172px", "0px 172px", "0px 134px", "30px 172px", "30px 250px"],
-    margin: ["20px 0px", "20px 0px", "20px 50px", "20px 0px", "20px 0px"],
+    margin: ["10px 0px", "10px 0px", "20px 50px", "20px 0px", "20px 0px"],
     lineHeight: ["26px", "26px", "26px", "36px", "36px"],
   },
   {
@@ -361,7 +361,7 @@ export const fifthContent = [
         imageUrl: "/students.png",
         tag: "Students",
         className: "medium-heading",
-        fontSize: ["24px", "24px", "27px", "36px", "36px"],
+        fontSize: ["28px", "28px", "27px", "36px", "36px"],
         textAlign: "center",
         whiteSpace: "no-wrap",
       },

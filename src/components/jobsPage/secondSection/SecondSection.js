@@ -118,6 +118,7 @@ const SecondSection = () => {
           <Text
             fontSize={"24px"}
             className={"sub-heading"}
+            textAlign={["center", "center", "start", "start", "start"]}
             mt={[2, 2, 3, 4, 4]}
           >
             Whichever the case...

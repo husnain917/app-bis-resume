@@ -15,8 +15,8 @@ const FifthSection = () => {
           <>
             <Box
               padding={[
-                "0px 135px",
-                "0px 135px",
+                "0px 35px",
+                "0px 35px",
                 "0px 135px",
                 "0px 260px",
                 "0px 380px",
@@ -35,11 +35,12 @@ const FifthSection = () => {
               />
             </Box>
             <Box
-              display={"flex"}
+              display={["flex"]}
+              flexDirection={["column", "column", "row", "row", "row"]}
               margin={"0 auto"}
               justifyContent={[
-                "space-evenly",
-                "space-evenly",
+                "space-between",
+                "space-between",
                 "space-between",
                 "space-evenly",
                 "space-evenly",
