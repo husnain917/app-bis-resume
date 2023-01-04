@@ -141,6 +141,7 @@ const JobsPage = () => {
                 className={"sub-heading"}
                 fontSize={["2rem", "2rem", "2rem", "3rem", "3.3rem"]}
                 color={"black"}
+                textAlign={["center", "start", "start", "start", "start"]}
                 lineHeight={["60px", "60px", "35px", "60px", "65px"]}
               >
                 {" "}
@@ -159,6 +160,7 @@ const JobsPage = () => {
                 mt={"20px"}
                 fontSize={["16px", "16px", "16px", "20px", "20px"]}
                 color={"black"}
+                textAlign={["center", "start", "start", "start", "start"]}
                 lineHeight={["22px", "22px", "22px", "31px", "31px"]}
               >
                 The only book about the job search process that you’ll ever
@@ -222,6 +224,7 @@ const JobsPage = () => {
                 className={"medium-text"}
                 mt={4}
                 color={"black"}
+                textAlign={["center", "start", "start", "start", "start"]}
                 fontSize={["16px", "16px", "17px", "20px", "20px"]}
               >
                 Unsure? Check out our free sample!

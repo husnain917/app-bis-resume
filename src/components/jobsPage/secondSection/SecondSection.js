@@ -91,8 +91,8 @@ const SecondSection = () => {
           flexDirection={"column"}
           justifyContent={"space-between"}
           padding={[
-            "40px 0px",
-            "40px 0px",
+            "40px 0px 10px 0px",
+            "40px 0px 10px 0px",
             "80px 17px",
             "120px 17px",
             "120px 42px",
