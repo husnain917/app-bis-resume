@@ -21,13 +21,13 @@ export default function CommonButton({
   hoverBoxShadow,
   focusBg,
   focusColor,
-  margin,
   width,
   height,
   borderRadius,
   fontSize,
   fontWeight,
   margin,
+  hoverborderRadius,
 }) {
   return (
     <Button
@@ -51,10 +51,9 @@ export default function CommonButton({
         backgroundcolor: hoverBackgroundColor || "#50bce0",
         boxShadow: hoverBoxShadow || "-1px -2px 4px 5px #8fd1e7",
         borderRadius: hoverborderRadius || "8px",
-        bg: hoverBackgroundColor, 
+        bg: hoverBackgroundColor,
       }}
       _focus={{ bg: focusBg, color: focusColor }}
-      margin={margin}
       onClick={onClick}
       disabled={disabled}
     >
