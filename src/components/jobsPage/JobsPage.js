@@ -152,7 +152,7 @@ const JobsPage = () => {
                 mt={"20px"}
                 fontSize={["16px", "16px", "16px", "20px", "20px"]}
                 color={"black"}
-                lineHeight={["22px", "22px", "22px", "32px", "32px"]}
+                lineHeight={["22px", "22px", "22px", "31px", "31px"]}
               >
                 The only book about the job search process that you’ll ever
                 need. Learn how to create an impeccable resume, match it with a
