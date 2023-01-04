@@ -8,7 +8,8 @@ import {
     Button,
     Text,
     Link,
-    Box
+    Box,
+    Image
 } from '@chakra-ui/react'
 import React from "react";
 import {
@@ -17,6 +18,7 @@ import {
 
 export default function DownloadModal({
     downloadPDF,
+    downloadDocx,
 }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     // Close Model Handler Function
@@ -47,9 +49,39 @@ export default function DownloadModal({
                 isOpen={isOpen}
                 onClose={onClose}
                 size={'md'}
+                isCentered={true}
             >
                 <ModalOverlay />
-                <ModalContent>
+                <Box
+                    position={'absolute'}
+                    top={'27%'}
+                    left={'27%'}
+                    zIndex={'1400'}
+                    transform={'rotate(-18deg)'}
+                >
+                    <Image
+                        boxSize='200px'
+                        objectFit='contain'
+                        src='/owly-head.png'
+                        alt='Image Not Found'
+                    />
+                </Box>
+                <Box
+                    position={'absolute'}
+                    top={'39%'}
+                    left={'31%'}
+                    zIndex={'1500'}
+                >
+                    <Image
+                        boxSize='90px'
+                        objectFit='contain'
+                        src='/owly-wing.png'
+                        alt='Image Not Found'
+                    />
+                </Box>
+                <ModalContent
+                    transition={'0.8s'}
+                >
                     <ModalBody
                         textAlign={'center'}
                         className={'noselectText'}
@@ -61,7 +93,7 @@ export default function DownloadModal({
                             fontWeight={'bold'}
                             fontFamily={`EuclidCircularB-Bold', sans-serif`}
                         >
-                            Are you download template?
+                            Are you downloading template?
                         </Text>
                         <Text
                             fontSize={'14px'}
@@ -115,6 +147,7 @@ export default function DownloadModal({
                                     boxShadow: '0px -1px 4px 4px #8fd1e7',
                                     borderRadius: '6px'
                                 }}
+                                onClick={downloadDocx}
                             >
                                 DOC
                             </Button>
