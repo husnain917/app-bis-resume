@@ -160,7 +160,7 @@ const JobsPage = () => {
               </Text>
               <Text
                 className={"sub-heading"}
-                mt={2}
+                mt={[2, 2, 2, 6, 6]}
                 color={"black"}
                 fontSize={["18px", "18px", "18px", "22px", "22px"]}
                 fontWeight={800}
