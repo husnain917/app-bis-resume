@@ -17,9 +17,12 @@ import ContentText from "../components/ContentText";
 const ThirdSection = () => {
   return (
     <Box>
-      <Box display={"flex"}>
+      <Box
+        display={"flex"}
+        flexDirection={["column", "column", "row", "row", "row"]}
+      >
         <Box
-          w={["55%", "55%", "53%", "50%", "50%"]}
+          w={["100%", "100%", "53%", "50%", "50%"]}
           padding={[
             "15px 45px",
             "15px 45px",
@@ -50,7 +53,13 @@ const ThirdSection = () => {
                     height={"1px"}
                     backgroundColor={"black"}
                     width={"20%"}
-                    marginY={10}
+                    margin={[
+                      "0 auto",
+                      "0 auto",
+                      "20px 0px",
+                      "20px 0px",
+                      "20px 0px",
+                    ]}
                   ></Box>
                 ) : (
                   ""
@@ -72,7 +81,20 @@ const ThirdSection = () => {
                             <Box mr={1} color={"#00C8AA"} fontWeight={"bold"}>
                               ✔
                             </Box>
-                            {item.text}
+                            <ContentText
+                              id={item.id}
+                              text={item.text}
+                              className={item.className}
+                              fontSize={item.fontSize}
+                              margin={item.margin}
+                              textAlign={item.textAlign}
+                              backgroundColor={item.backgroundColor}
+                              width={item.width}
+                              marginBox={item.marginBox}
+                              fontWeight={item.fontWeight}
+                              color={item.color}
+                              lineHeight={item.lineHeight}
+                            />
                           </ListItem>
                         </List>
                       ) : (

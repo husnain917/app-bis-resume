@@ -10,7 +10,13 @@ const SecondSection = () => {
       alignItems={"center"}
       flexDirection={"column"}
       bg={"#FAFAFA"}
-      padding={["10px 50px 0px 50px"]}
+      padding={[
+        "10px 32px 0px 32px",
+        "10px 32px 0px 32px",
+        "10px 50px 0px 50px",
+        "10px 50px 0px 50px",
+        "10px 50px 0px 50px",
+      ]}
     >
       {data?.map((text, index) => {
         return (
@@ -57,10 +63,15 @@ const SecondSection = () => {
       <Box
         display={"flex"}
         w={"100%"}
+        flexDirection={["column", "column", "row", "row", "row"]}
         justifyContent={"space-around"}
         mt={[0, 0, 0, 0, 1]}
       >
-        <Box id={"image"} display={"flex"} w="45%">
+        <Box
+          id={"image"}
+          display={"flex"}
+          w={["100%", "100%", "45%", "45%", "45%"]}
+        >
           <Box
             padding={[
               "80px 0px 0px 0px",
@@ -74,14 +85,14 @@ const SecondSection = () => {
           </Box>
         </Box>
         <Box
-          w="45%"
+          w={["100%", "100%", "45%", "45%", "45%"]}
           className={"medium-text"}
           display={"flex"}
           flexDirection={"column"}
           justifyContent={"space-between"}
           padding={[
-            "120px 17px",
-            "120px 17px",
+            "40px 17px",
+            "40px 17px",
             "80px 17px",
             "120px 17px",
             "120px 42px",
@@ -91,7 +102,7 @@ const SecondSection = () => {
             text={`Unless you have a Ph.D. in Human Resources or a few years of experience as an HR manager, you've probably struggled with at least some parts of the process.`}
             className={"medium-text"}
             fontSize={["20px", "20px", "16px", "20px", "20px"]}
-            textAlign={"start"}
+            textAlign={["center", "center", "start", "start", "start"]}
             lineHeight={["30px", "30px", "25px", "30px", "30px"]}
           />
           <ContentText
@@ -100,7 +111,7 @@ const SecondSection = () => {
             the hiring manager during the interviewing process.`}
             className={"medium-text"}
             fontSize={["20px", "20px", "16px", "20px", "20px"]}
-            textAlign={"start"}
+            textAlign={["center", "center", "start", "start", "start"]}
             lineHeight={"30px"}
             margin={"20px 0px"}
           />

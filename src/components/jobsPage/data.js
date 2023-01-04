@@ -10,7 +10,7 @@ export const data = [
     id: "subHeading",
     className: "medium-text",
     text: "Whether you're a recent university graduate looking for your first job in your chosen field, or a senior professional looking to take the next step in your career, you're probably going to agree with us on this:",
-    margin: ["0px 172px", "0px 172px", "0px 134px", "30px 172px", "30px 250px"],
+    margin: ["0px 0px", "0px 0px", "0px 134px", "30px 172px", "30px 250px"],
     fontSize: ["16px", "16px", "16px", "20px", "20px"],
     lineHeight: ["30px", "30px", "26px", "36px", "36px"],
   },
@@ -60,7 +60,7 @@ export const thirdContent = [
     className: "sub-heading",
     fontSize: ["44px", "44px", "36px", "44px", "44px"],
     text: "We’re Here to Help!",
-    textAlign: "start",
+    textAlign: ["start", "start", "start", "start", "start"],
     margin: "20px 0px",
   },
   {
@@ -68,16 +68,18 @@ export const thirdContent = [
     className: "small-text",
     fontSize: "20px",
     text: `At Novoresume, we wanted to create the ultimate job search resource - something that's useful for job seekers of all levels, from students to senior professionals.`,
-    textAlign: "start",
+    textAlign: ["start", "start", "start", "start", "start"],
     color: "rgb(49,59,71)",
+    lineHeight: ["30px", "30px", "26px", "36px", "36px"],
   },
   {
     id: "content",
     fontSize: "20px",
     className: "medium-text",
     text: `With the Job Search Masterclass e-book, we cover the job search process from start to finish, arming you with the knowledge you need to take charge of your career. The e-book features:`,
-    textAlign: "start",
+    textAlign: ["start", "start", "start", "start", "start"],
     margin: "25px 0px",
+    lineHeight: ["30px", "30px", "26px", "36px", "36px"],
   },
   {
     listItems: [
@@ -90,6 +92,7 @@ export const thirdContent = [
         className: "medium-text",
         text: `How to Create a Compelling Resume That Stands Out.`,
         textAlign: "start",
+        lineHeight: ["28px", "28px", "24px", "26px", "26px"],
 
         doneIcon: "MdDone",
         iconSize: "18px",
@@ -101,6 +104,7 @@ export const thirdContent = [
         className: "medium-text",
         text: ` 5 Steps to a Convincing Cover Letter (That Gets Read).`,
         textAlign: "start",
+        lineHeight: ["28px", "28px", "24px", "26px", "26px"],
       },
       {
         id: "List",
@@ -108,6 +112,7 @@ export const thirdContent = [
         className: "medium-text",
         text: `Acing the Job Interview - The Common Interview Questions (And How to Answer Them).`,
         textAlign: "start",
+        lineHeight: ["28px", "28px", "24px", "26px", "26px"],
       },
       {
         id: "List",
@@ -115,6 +120,7 @@ export const thirdContent = [
         className: "medium-text",
         text: `Templates, Checklists, Practical Examples, and So Much More!`,
         textAlign: "start",
+        lineHeight: ["28px", "28px", "24px", "26px", "26px"],
       },
     ],
   },
@@ -347,7 +353,7 @@ export const fifthContent = [
     textAlign: "center",
     // margin: ["0px 172px", "0px 172px", "0px 134px", "30px 172px", "30px 250px"],
     margin: ["20px 0px", "20px 0px", "20px 50px", "20px 0px", "20px 0px"],
-    lineHeight: ["30px", "30px", "26px", "36px", "36px"],
+    lineHeight: ["26px", "26px", "26px", "36px", "36px"],
   },
   {
     Content: [
@@ -691,7 +697,7 @@ export const lastContent = [
       {
         id: "List",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "30px", "30px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "30px"],
         className: "medium-text",
         text: `72 pages of content on resumes, interviews, cover letters, and more.`,
         textAlign: "start",
@@ -699,7 +705,7 @@ export const lastContent = [
       {
         id: "List",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "30px", "30px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "30px"],
         className: "medium-text",
         text: ` 5 Steps to a Convincing Cover Letter (That Gets Read).`,
         textAlign: "start",
@@ -707,7 +713,7 @@ export const lastContent = [
       {
         id: "List",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "30px", "30px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "30px"],
         className: "medium-text",
         text: `Fully visual guide with examples, illustrations, and more.`,
         textAlign: "start",
@@ -715,7 +721,7 @@ export const lastContent = [
       {
         id: "List",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "30px", "30px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "30px"],
         className: "medium-text",
         text: ` 5 job search hacks (that you never even heard of).`,
         textAlign: "start",
@@ -735,7 +741,7 @@ export const lastContent = [
         text: ` 5 job search hacks (that you never even heard of).`,
         textAlign: "start",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "30px", "30px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "30px"],
       },
       {
         id: "List",
@@ -744,7 +750,7 @@ export const lastContent = [
         text: `How to use the STAR method to answer behavioral interview questions.`,
         textAlign: "start",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "30px", "30px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "30px"],
       },
       {
         id: "List",
@@ -752,7 +758,7 @@ export const lastContent = [
         text: `3 free cover letter templates.`,
         textAlign: "start",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "30px", "30px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "30px"],
       },
       {
         id: "List",
@@ -761,7 +767,7 @@ export const lastContent = [
         text: ` Guide on where to find remote jobs (and how to get hired).`,
         textAlign: "start",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "30px", "30px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "30px"],
       },
       {
         id: "List",
@@ -769,7 +775,7 @@ export const lastContent = [
         text: `Most common job interview questions (and sample answers).`,
         textAlign: "start",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "30px", "30px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "30px"],
       },
       {
         id: "List",
@@ -778,7 +784,7 @@ export const lastContent = [
         text: `“Before you go” checklist to perfect your resume.`,
         textAlign: "start",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "30px", "30px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "30px"],
       },
     ],
   },

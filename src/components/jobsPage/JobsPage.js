@@ -121,6 +121,13 @@ const JobsPage = () => {
               id="HeadingRightSide"
               display={"flex"}
               flexDirection="column"
+              alignItems={[
+                "center",
+                "center",
+                "flex-start",
+                "flex-start",
+                "flex-start",
+              ]}
               // w={width > 610 ? ["100%", "49%", "49%", "49%", "49%"] : "100%"}
               padding={[
                 "0px 0px 0px 0px",
@@ -143,7 +150,7 @@ const JobsPage = () => {
                 className={"medium-heading"}
                 fontSize={["18px", "18px", "18px", "23px", "23px"]}
                 color={"black"}
-                mt={["3%", "3%", "3%", "-2%", "-2%"]}
+                mt={["1%", "1%", "3%", "-2%", "-2%"]}
               >
                 An E-book by Novoresume
               </Text>
@@ -169,7 +176,7 @@ const JobsPage = () => {
               </Text>
               <Text
                 className={"sub-heading"}
-                mt={[1, 1, 1, 1, 1, 2]}
+                mt={[-1, -1, 1, 1, 1, 2]}
                 color={"black"}
                 fontSize={["18px", "18px", "18px", "22px", "22px"]}
               >
@@ -177,7 +184,7 @@ const JobsPage = () => {
               </Text>
               <Text
                 className={"medium-text"}
-                marginTop={["1rem", "1rem", "1rem", "1rem", "2rem"]}
+                marginTop={["-0.2rem", "-0.2rem", "1rem", "1rem", "2rem"]}
                 color={"black"}
                 fontSize={["18px", "18px", "18px", "21px", "21px"]}
                 display={"flex"}
@@ -189,7 +196,7 @@ const JobsPage = () => {
                 </Text>
               </Text>
               <CommonButton
-                height={["4rem", "5rem", "3.5rem", "3.5rem", "3.5rem"]}
+                height={["3.5rem", "3.5rem", "3.5rem", "3.5rem", "3.5rem"]}
                 width={["9rem", "9rem", "9rem", "10rem", "10rem"]}
                 padding={["20px", "20px", "20px", "24px", "24px"]}
                 borderRadius={"40px"}
@@ -273,7 +280,7 @@ const JobsPage = () => {
               "2% 35px 4% 35px",
               "1% 35px 4% 35px",
               "8% 35px 4% 35px",
-              "14% 35px 4% 0px",
+              "% 35px 4% 0px",
               "2% 35px 4% 35px",
             ]}
           >
