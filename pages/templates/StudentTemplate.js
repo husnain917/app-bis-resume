@@ -26,16 +26,25 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import TempLayout from '../../src/components/tempNav/TempLayout';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
 const StudentTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   // custom Hook For Template
   const [show, setShow] = useShow();
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
   return (
     //  ~~~~~~~~~~~~~~ Student Resume Template ~~~~~~~~~~~~~~  //
     <div style={{ overflow: 'auto' }}>
-      <TempLayout education={true} skills={true} work={true} languages={true} downloadPDF={downloadPDFHandler}>
+      <TempLayout
+        education={true}
+        skills={true}
+        work={true}
+        languages={true}
+        downloadPDF={downloadPDFHandler}
+      >
         <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
@@ -43,9 +52,7 @@ const StudentTemplate = () => {
           alignItems={{ base: 'none', lg: 'center' }}
           pt="70px"
         >
-          <Box
-            margin={'20px 20px 30px 20px'}
-          >
+          <Box margin={'20px 20px 30px 20px'}>
             <Box
               minW={830}
               maxW={830}
@@ -57,7 +64,11 @@ const StudentTemplate = () => {
               ref={pdfRef}
             >
               <Box>
-                <Box bg={'#EBC9BB'} h={'230px'}>
+                <Box
+                  bg={backgroundColor ? backgroundColor : '#EBC9BB'}
+                  h={'230px'}
+                  transition={'0.5s background'}
+                >
                   <Box ml={'320px'} pt={'60px'}>
                     {/* =============== Name Section =============== */}
                     <Name
@@ -65,9 +76,13 @@ const StudentTemplate = () => {
                       SName={true}
                       FNameStyle={Classes.name}
                       SNameStyle={Classes.name}
+                      fontColor={color ? color : ''}
                     />
                     {/* =============== Profession Section =============== */}
-                    <Profession professionStyle={Classes.Profession} />
+                    <Profession
+                      professionStyle={Classes.Profession}
+                      fontColor={color ? color : ''}
+                    />
                   </Box>
                 </Box>
                 <Box display={'flex'} alignItems="stretch">
@@ -75,11 +90,12 @@ const StudentTemplate = () => {
                   <Box
                     minW="250px"
                     maxW={'250px'}
-                    bg={'#6B9999'}
+                    bg={color ? color : '#6B9999'}
                     mt="-280px"
                     pb={12}
                     px="24px"
                     ml={'30px'}
+                    transition={'0.5s background'}
                   >
                     {/* =============== Profile Section =============== */}
                     <ImageSelector
@@ -88,10 +104,11 @@ const StudentTemplate = () => {
                       minHeight={200}
                       maxHeight={200}
                       marginTop={'40px'}
+                      borderColor={backgroundColor ? backgroundColor : ''}
                     />
                     <Heading
                       title={'PROFILE'}
-                      color="#fff"
+                      color={backgroundColor ? backgroundColor : '#fff'}
                       fontSize={'17px'}
                       letterSpacing="1px"
                       fontWeight="700"
@@ -100,7 +117,7 @@ const StudentTemplate = () => {
                     <About aboutStyle={Classes.about} minW="full" maxW="full" />
                     <Heading
                       title={'CONTACT ME'}
-                      color="#fff"
+                      color={backgroundColor ? backgroundColor : '#fff'}
                       fontSize={'17px'}
                       letterSpacing="1px"
                       fontWeight="700"
@@ -110,7 +127,7 @@ const StudentTemplate = () => {
                       phone={true}
                       email={true}
                       location={true}
-                      iconColor="#fff"
+                      iconColor={backgroundColor ? backgroundColor : '#fff'}
                       iconSize="24px"
                       style={Classes.profileText}
                       margin={'5px 0px'}
@@ -135,7 +152,7 @@ const StudentTemplate = () => {
                                 setShow({ ...show, education: false })
                               }
                               onDelete={EDUCATION}
-                              bg="#6B9999"
+                              bg={color ? color : '#6B9999'}
                             />
                           )}
                         </div>
@@ -143,6 +160,7 @@ const StudentTemplate = () => {
                           <Heading
                             title={'EDUCATION'}
                             fontSize="20px"
+                            color={color ? color : ''}
                             margin="20px 0px 10px 0px"
                             fontWeight={600}
                             onSideSectionShow={() =>
@@ -151,7 +169,9 @@ const StudentTemplate = () => {
                             circleIconHeading={true}
                             icon={(props) => (
                               <FaChevronRight
-                                color="#6B9999"
+                                color={
+                                  backgroundColor ? backgroundColor : '#6B9999'
+                                }
                                 size={22}
                                 {...props}
                               />
@@ -180,7 +200,7 @@ const StudentTemplate = () => {
                                 setShow({ ...show, languages: false })
                               }
                               onDelete={LANGUAGES}
-                              bg="#6B9999"
+                              bg={color ? color : '#6B9999'}
                             />
                           )}
                         </div>
@@ -188,6 +208,7 @@ const StudentTemplate = () => {
                           <Heading
                             title={'LANGUAGES'}
                             fontSize="20px"
+                            color={color ? color : ''}
                             fontWeight={600}
                             onSideSectionShow={() =>
                               setShow({ ...show, languages: true })
@@ -196,7 +217,9 @@ const StudentTemplate = () => {
                             circleIconHeading={true}
                             icon={(props) => (
                               <FaChevronRight
-                                color="#6B9999"
+                                color={
+                                  backgroundColor ? backgroundColor : '#6B9999'
+                                }
                                 size={22}
                                 {...props}
                               />
@@ -217,7 +240,7 @@ const StudentTemplate = () => {
                             <SectionSideMenu
                               onDelete={SKILL}
                               onHide={() => setShow({ ...show, skills: false })}
-                              bg="#6B9999"
+                              bg={color ? color : '#6B9999'}
                             />
                           )}
                         </div>
@@ -226,6 +249,7 @@ const StudentTemplate = () => {
                             title={'COMPUTER SKILLS'}
                             fontSize="20px"
                             fontWeight={600}
+                            color={color ? color : ''}
                             margin="20px 0px 10px 0px"
                             circleIconHeading={true}
                             onSideSectionShow={() =>
@@ -233,7 +257,9 @@ const StudentTemplate = () => {
                             }
                             icon={(props) => (
                               <FaChevronRight
-                                color="#6B9999"
+                                color={
+                                  backgroundColor ? backgroundColor : '#6B9999'
+                                }
                                 size={22}
                                 {...props}
                               />
@@ -254,7 +280,7 @@ const StudentTemplate = () => {
                             <SectionSideMenu
                               onHide={() => setShow({ ...show, work: false })}
                               onDelete={WORK}
-                              bg="#6B9999"
+                              bg={color ? color : '#6B9999'}
                             />
                           )}
                         </div>
@@ -265,6 +291,7 @@ const StudentTemplate = () => {
                             fontWeight={600}
                             margin="20px 0px 10px 0px"
                             circleIconHeading={true}
+                            color={color ? color : ''}
                             minW="300px"
                             onSideSectionShow={() =>
                               setShow({ ...show, work: true })
@@ -272,7 +299,9 @@ const StudentTemplate = () => {
                             maxW={'fit-content'}
                             icon={(props) => (
                               <FaChevronRight
-                                color="#6B9999"
+                                color={
+                                  backgroundColor ? backgroundColor : '#6B9999'
+                                }
                                 size={22}
                                 {...props}
                               />
