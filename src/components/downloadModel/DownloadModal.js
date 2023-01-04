@@ -55,7 +55,7 @@ export default function DownloadModal({
                 <Box
                     position={'absolute'}
                     top={'27%'}
-                    left={'27%'}
+                    left={'28%'}
                     zIndex={'1400'}
                     transform={'rotate(-18deg)'}
                 >
@@ -69,7 +69,7 @@ export default function DownloadModal({
                 <Box
                     position={'absolute'}
                     top={'39%'}
-                    left={'31%'}
+                    left={'32%'}
                     zIndex={'1500'}
                 >
                     <Image
@@ -80,7 +80,7 @@ export default function DownloadModal({
                     />
                 </Box>
                 <ModalContent
-                    transition={'0.8s'}
+                    transition={'0.5s'}
                 >
                     <ModalBody
                         textAlign={'center'}
