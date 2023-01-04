@@ -481,14 +481,14 @@ export const seventhContent = [
       },
     ],
   },
-  {
-    id: "footerText",
-    fontSize: ["18px", "18px", "18px", "24px", "24px"],
-    className: "sub-heading",
-    text: `And more …`,
-    textAlign: "start",
-    margin: "30px 0px 0px 0px",
-  },
+  // {
+  //   id: "footerText",
+  //   fontSize: ["18px", "18px", "18px", "24px", "24px"],
+  //   className: "sub-heading",
+  //   text: `And more …`,
+  //   textAlign: "start",
+  //   margin: "30px 0px 0px 0px",
+  // },
 ];
 
 export const eighthContent = [
