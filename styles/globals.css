@@ -1374,6 +1374,15 @@ user agent stylesheet div {
 /* f3f1eb */
 
 /* Extra styling for responsivness */
+
+
+
+
+@media only screen and (max-width: 1199px) {
+  .blog-post__content {
+    padding: 0 32px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .blog-post {
     padding-bottom: 40px;
@@ -1391,17 +1400,10 @@ user agent stylesheet div {
     padding-top: 32px;
   }
 }
-
 @media only screen and (max-width: 767px) {
   .blog-post__content {
     max-width: 540px;
-    padding: 0 20px;
-  }
-}
-
-@media only screen and (max-width: 1199px) {
-  .blog-post__content {
-    padding: 0 32px;
+    padding: 0 15px;
   }
 }
 

@@ -12,7 +12,7 @@ const TryResume = () => {
       // mb={"2em"}
       posiition={"relative"}
     >
-      <Grid px={["22px", "22px", "32px", "44px", "44px"]} mx={"auto"}>
+      <Grid px={["0px", "0px", "32px", "44px", "44px"]} mx={"auto"}>
         <Box
           display={"flex"}
           flexDirection={["column", "column", "row", "row", "row"]}
@@ -20,7 +20,7 @@ const TryResume = () => {
         >
           <Box
             width={["100%", "100%", "45%", "57%", "57%"]}
-            maxWidth={["375px", "", "", "", "", ""]}
+            // maxWidth={["375px", "", "", "", "", ""]}
             marginBottom={["16px"]}
             position="relative"
             marginRight={["0", "0", "0", "16px", "32px"]}
@@ -46,32 +46,45 @@ const TryResume = () => {
             />
           </Box>
           <Box
-            textAlign={"left"}
             flexGrow={"1"}
             minWidth={"50%"}
-            display={"flex"}
-            flexDirection={"column"}
-            alignItems={[
-              "center",
-              "center",
-              "baseline",
-              "baseline",
-              "baseline",
-            ]}
-            justifyContent={"center"}
+            // display={"flex"}
+            // flexDirection={"column"}
+            // alignItems={[
+            //   "center",
+            //   "center",
+            //   "baseline",
+            //   "baseline",
+            //   "baseline",
+            // ]}
+            // justifyContent={"center"}
+            textAlign={["center", "center", "start", "start", "start"]}
           >
             <Text
               fontWeight={700}
-              fontSize={["2em", "2.8em", "2.5em", "3.8em", "3.8em"]}
-              lineHeight={"48px"}
+              fontSize={["2em", "2.4em", "2.5em", "3.8em", "3.8em"]}
+              lineHeight={["36px", "36px", "48px", "48px", "48px"]}
               marginBottom={["20px"]}
-              maxWidth={"10em"}
+              maxWidth={["auto", "auto", "10em", "10em", "10em"]}
+              className={"sub-heading"}
             >
               Try our Professional Resume builder now!
             </Text>
-            <Box marginBottom={"20px"}>
+            <Box
+              padding={[
+                "20px 10px",
+                "20px",
+                "20px 0px",
+                "20px 0px",
+                "20px 0px",
+              ]}
+            >
               {" "}
-              <Text fontWeight={"600"} fontSize={"16px"}>
+              <Text
+                className="small-text"
+                fontSize={["16px", "16px", "16px", "16px", "16px"]}
+                lineHeight={"24px"}
+              >
                 Save time with our easy 3-step resume builder. No more writer’s
                 block or formatting difficulties in Word. Rapidly make a perfect
                 resume employers love.
@@ -80,14 +93,17 @@ const TryResume = () => {
             <Box display={"flex"} alignItems={"center"}>
               <Button
                 flexShrink={0}
-                marginRight={"16px"}
+                marginRight={["12px", "12px", "16px", "16px", "16px"]}
                 className="button1"
                 bg="blue.400"
                 variant="solid"
+                fontSize={["14x", "14px", "16px", "16px", "16px"]}
               >
                 Create My Resume
               </Button>
-              <Button>Resume Examples</Button>
+              <Button fontSize={["14x", "14px", "16px", "16px", "16px"]}>
+                Resume Examples
+              </Button>
             </Box>
           </Box>
         </Box>

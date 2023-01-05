@@ -22,7 +22,11 @@ const ResumeExamples = () => {
       {/* <Carasol1 /> */}
       {/* <Carasol /> */}
       {/* <ChatButton /> */}
-      <Box bg="lightcyan" height={"auto"} width={"100wv"}>
+      <Box
+        bg="#EFF2F9"
+        height={"auto"}
+        width={["100wv", "100wv", "100wv", "100wv", "100wv"]}
+      >
         <WritingGuides />
       </Box>
       <Box

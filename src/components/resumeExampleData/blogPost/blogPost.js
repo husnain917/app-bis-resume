@@ -35,10 +35,21 @@ const BlogPost = () => {
       <Box className="blog-post__content">
         <Box className="blog-post__content-inner">
           <Box className="blog-post__content-main">
-            <Box className="blog-post__content-main-wrapper">
+            <Box
+              className="blog-post__content-main-wrapper"
+              textAlign={["center", "center", "start", "start", "start"]}
+            >
               <YouTube videoId="Who2Xax1GX8" opts={opts} />
-              <Text className={"medium-heading"}>Resume Samples</Text>
-              <Text className={"small-text"}>
+              <Text
+                className={"medium-heading"}
+                textAlign={["center", "center", "start", "start", "start"]}
+              >
+                Resume Samples
+              </Text>
+              <Text
+                margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
+                className={"small-text"}
+              >
                 A great resume is a key that opens doors to a better future.
                 Exceptional formatting is one way to stand out, but precise,
                 professional writing is equally important. That’s why we’ve
@@ -49,7 +60,7 @@ const BlogPost = () => {
                 resume creation, from the profile summary to the layout. And the
                 best part? Every single one is completely free.
               </Text>
-              <p className={"small-text"}>
+              <Text className={"small-text"}>
                 We understand that resume writing can feel daunting. That’s why
                 our resume and{" "}
                 <Link href="/" mr={2}>
@@ -68,34 +79,43 @@ const BlogPost = () => {
                 and the best file formats. What’s more, our resume samples
                 address common obstacles and choices you may face and help you
                 troubleshoot any issues.
-              </p>
-              <p className={"small-text"}>
+              </Text>
+              <Text
+                className={"small-text"}
+                margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
+              >
                 When you’re on the job hunt, competition can be fierce. That’s
                 why our samples are chock full of practical tips to equip you
                 with the specific tools needed to create a resume that catches a
                 hiring manager’s attention and lands you your dream job. So go
                 ahead and get started! Search our ever-expanding collection of
                 resume samples and templates to level up your career in no time.
-              </p>
+              </Text>
               <Text className={"medium-heading"} marginY={"3"}>
                 Examples to get you hired fast
               </Text>
-              <p className={"small-text"}>
+              <Text
+                className={"small-text"}
+                margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
+              >
                 Sometimes, a resume just won’t cut it. That’s why we’ve got you
                 covered when it comes to creating a flawless Curriculum Vitae
                 (CV). Our comprehensive CV examples are expertly designed to
                 simplify the process of creating a robust document that brings
                 your experience to life.
-              </p>
-              <p className="small-text">
+              </Text>
+              <Text className="small-text">
                 Whereas most American employers tend to request resumes,
                 international companies often deal with CVs. These documents
                 often contain multiple pages for a more thorough examination of
                 the candidate’s academic and professional history. In some
                 countries, a photo and information about the candidate’s family
                 and personal life are also commonplace.
-              </p>
-              <p className={"small-text"}>
+              </Text>
+              <Text
+                className={"small-text"}
+                margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
+              >
                 When writing a CV, it’s important to understand the position
                 you’re applying for and the qualifications an employer is
                 seeking. Our field-tested CV examples help you get hired faster
@@ -104,13 +124,13 @@ const BlogPost = () => {
                   <a>cover letter examples </a>
                 </Link>
                 a cut above the rest.
-              </p>
-              <p className={"small-text"}>
+              </Text>
+              <Text className={"small-text"}>
                 When it comes to making your resume, you’ve got options. That’s
                 great news because no candidate is alike. However, there are
                 some basic rules to help you pick the correct sample that best
                 suits the hiring manager’s needs.
-              </p>
+              </Text>
               <Box className={"compare-resumes js-wide-element"}>
                 <Box
                   className={

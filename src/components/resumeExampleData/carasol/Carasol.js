@@ -42,6 +42,7 @@ const Carasol = () => {
         initialSlide={1}
         centeredSlides={true}
         loop
+        dots={true}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -54,9 +55,9 @@ const Carasol = () => {
             spaceBetween: 2,
           },
           390: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             pagination: true,
-            spaceBetween: 1,
+            spaceBetween: 2,
           },
           786: {
             slidesPerView: 3,
