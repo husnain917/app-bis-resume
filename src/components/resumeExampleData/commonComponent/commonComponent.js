@@ -36,17 +36,22 @@ const CommonComponent = ({ data }) => {
         paddingBottom={"20px"}
         borderBottom={"1px solid whitesmoke"}
         justifyContent={"space-between"}
-        height={"100px"}
+        height={["auto", "auto", "100px", "100px", "100px"]}
         marginBottom={"inherit"}
       >
         <Box display={"flex"}>
           <Box>
-            <Image src={data.icon || "./diamond.png"} h="3.5em" />
+            <Image
+              src={data.icon || "./diamond.png"}
+              width={"40px"}
+              height={"40px"}
+            />
           </Box>
 
           <Box
             ml="10px"
             className={"main-heading"}
+            fontSize={["17px", "17px", "30px", "2.5em", "2.5em"]}
             transition={"color .15s"}
             display={"flex"}
           >

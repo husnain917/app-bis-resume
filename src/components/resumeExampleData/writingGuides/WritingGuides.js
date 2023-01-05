@@ -3,7 +3,7 @@ import { Box, Text, Button, Image } from "@chakra-ui/react";
 
 const WritingGuides = () => {
   return (
-    <Box padding={"0 44px"}>
+    <Box padding={["0 20px", "0 20px", "0 44px", "0 44px", "0 44px"]}>
       <Box
         paddingTop={["32px", "64px", "64px", "80px", "80px"]}
         maxWidth={"1120px"}
@@ -23,11 +23,20 @@ const WritingGuides = () => {
             marginBottom={"12px"}
             maxW="none"
             fontWeight={["700"]}
+            className={["sub-heading"]}
+            textAlign={["center", "center", "start", "start", "start"]}
           >
             350+ Professional <br></br> Resume Examples <br></br>(+Writing
             Guides)
           </Box>
-          <Box fontSize={"19px"} lineHeight={"24px"} marginBottom={"24px"}>
+          <Box
+            fontSize={["16px", "16px", "18px", "20px", "20px"]}
+            mt={4}
+            lineHeight={"24px"}
+            marginBottom={"24px"}
+            className={"small-text"}
+            textAlign={["center", "center", "start", "start", "start"]}
+          >
             Check out our free resume samples for inspiration. Use the expert
             guides and our resume builder to create a beautiful resume in
             minutes. We also provide a library of resume templates.

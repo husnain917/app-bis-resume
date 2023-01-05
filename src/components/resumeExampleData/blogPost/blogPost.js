@@ -38,7 +38,7 @@ const BlogPost = () => {
             <Box className="blog-post__content-main-wrapper">
               <YouTube videoId="Who2Xax1GX8" opts={opts} />
               <Text className={"medium-heading"}>Resume Samples</Text>
-              <p className={"small-text"}>
+              <Text className={"small-text"}>
                 A great resume is a key that opens doors to a better future.
                 Exceptional formatting is one way to stand out, but precise,
                 professional writing is equally important. That’s why we’ve
@@ -48,7 +48,7 @@ const BlogPost = () => {
                 practices of your field and walk you through every aspect of
                 resume creation, from the profile summary to the layout. And the
                 best part? Every single one is completely free.
-              </p>
+              </Text>
               <p className={"small-text"}>
                 We understand that resume writing can feel daunting. That’s why
                 our resume and{" "}
