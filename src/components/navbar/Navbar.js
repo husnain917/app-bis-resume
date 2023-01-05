@@ -23,10 +23,7 @@ import {
 import logoIcon from "../../../public/bisResumeLogo.svg";
 import Image from "next/image";
 import CommonButton from "../commonButton/CommonButton";
-import {
-  NAV_ITEMS,
-  Login_Buttons,
-} from "../constant/navbarLinks/NavbarLinks";
+import { NAV_ITEMS, Login_Buttons } from "../constant/navbarLinks/NavbarLinks";
 import { useState } from "react";
 import AuthModal from "../authModal/AuthModal";
 import { useSelector } from "react-redux";
@@ -36,8 +33,10 @@ export default function Navbar() {
   const breakpointfontSize = useBreakpointValue({ xl: "14px", lg: "12px" });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [active, setIsActive] = useState(null);
-  const isUserLoggedIn = useSelector(state => state.AuthReducer.isUserLoggedIn)
-  const uid = useSelector(state => state.AuthReducer.userID)
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer.isUserLoggedIn
+  );
+  const uid = useSelector((state) => state.AuthReducer.userID);
   const breakpointWidth = useBreakpointValue({
     xl: "120px",
     lg: "80px",
@@ -97,89 +96,92 @@ export default function Navbar() {
           marginTop={useBreakpointValue({ xl: "20px", lg: "12px", md: "15px" })}
         >
           {/* login buttons */}
-          {
-            !isUserLoggedIn ?
-              Login_Buttons?.map((items) => {
-                return (
-                  <>
-                    <Box
-                      display={{ base: "inline-block", md: "inline-block" }}
-                      justify={{ base: "end" }}
-                      style={{
-                        border: "1px solid #e0e2e8",
-                        boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
-                        borderRadius: "0.2rem",
-                      }}
-                      cursor={"pointer"}
-                      width={breakpointWidth}
-                      bg={
-                        items?.label === "Register"
-                          ? "#006772"
-                          : items?.label === "Login"
-                            ? "#006772"
-                            : ""
-                      }
-                      textAlign={"center"}
-                      padding={"10px 5px"}
-                      textTransform={"uppercase"}
-                      ml="1.5rem"
-                      _hover={{
-                        textDecoration: "none",
-                        backgroundColor: "red",
-                        color: "white",
-                      }}
-                    >
-                      {items?.label === "Register" ? (
-                        <>
-                          <Link
-                            // href={items?.href ?? '#'}
-                            fontWeight={650}
-                            color={"#fdfffc"}
-                            fontSize={breakpointfontSize}
-                            _hover={{
-                              textDecoration: "none",
-                              color: "#fff",
-                            }}
-                            onClick={() => {
-                              setIsModalOpen(true)
-                              setIsActive(0)
-                            }}
-                          >
-                            {items.label}
-                          </Link>
-                        </>
-                      ) : items.label === "Login" ? (
-                        <>
-                          <Link
-                            // href={items?.href ?? '#'}
-                            fontWeight={650}
-                            color={"#fdfffc"}
-                            fontSize={breakpointfontSize}
-                            _hover={{
-                              textDecoration: "none",
-                              color: "#fff",
-                            }}
-                            onClick={() => {
-                              setIsActive(1)
-                              setIsModalOpen(true)
+          {!isUserLoggedIn ? (
+            Login_Buttons?.map((items) => {
+              return (
+                <>
+                  <Box
+                    display={["none", "none", "block", "block", "block"]}
+                    justify={{ base: "end" }}
+                    style={{
+                      border: "1px solid #e0e2e8",
+                      boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
+                      borderRadius: "0.2rem",
+                    }}
+                    cursor={"pointer"}
+                    width={breakpointWidth}
+                    bg={
+                      items?.label === "Register"
+                        ? "#006772"
+                        : items?.label === "Login"
+                        ? "#006772"
+                        : ""
+                    }
+                    textAlign={"center"}
+                    padding={"10px 5px"}
+                    textTransform={"uppercase"}
+                    ml="1.5rem"
+                    _hover={{
+                      textDecoration: "none",
+                      backgroundColor: "red",
+                      color: "white",
+                    }}
+                  >
+                    {items?.label === "Register" ? (
+                      <>
+                        <Link
+                          // href={items?.href ?? '#'}
+                          fontWeight={650}
+                          color={"#fdfffc"}
+                          fontSize={breakpointfontSize}
+                          _hover={{
+                            textDecoration: "none",
+                            color: "#fff",
+                          }}
+                          onClick={() => {
+                            setIsModalOpen(true);
+                            setIsActive(0);
+                          }}
+                        >
+                          {items.label}
+                        </Link>
+                      </>
+                    ) : items.label === "Login" ? (
+                      <>
+                        <Link
+                          // href={items?.href ?? '#'}
 
-                            }
-                            }
-                          >
-                            {items.label}
-                          </Link>
-                        </>
-                      ) : (
-                        <></>
-                      )}
-                      <AuthModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} active={active} setIsActive={setIsActive} />
-                    </Box>
-                  </>
-                );
-              })
-              :
-              <ProfileComponent />
-          }
+                          fontWeight={650}
+                          color={"#fdfffc"}
+                          fontSize={breakpointfontSize}
+                          _hover={{
+                            textDecoration: "none",
+                            color: "#fff",
+                          }}
+                          onClick={() => {
+                            setIsActive(1);
+                            setIsModalOpen(true);
+                          }}
+                        >
+                          {items.label}
+                        </Link>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                    <AuthModal
+                      isModalOpen={isModalOpen}
+                      setIsModalOpen={setIsModalOpen}
+                      active={active}
+                      setIsActive={setIsActive}
+                    />
+                  </Box>
+                </>
+              );
+            })
+          ) : (
+            <ProfileComponent />
+          )}
 
           {/* login button end */}
 
@@ -242,8 +244,8 @@ const DesktopNav = () => {
                 >
                   {navItem?.label}
                   {navItem.label === "Resume" ||
-                    navItem.label === "CV" ||
-                    navItem.label === "Cover Letter" ? (
+                  navItem.label === "CV" ||
+                  navItem.label === "Cover Letter" ? (
                     <>
                       <Icon color={"black.400"} w={5} h={5} as={navItem.icon} />
                     </>
@@ -347,8 +349,8 @@ const MobileNav = () => {
                   items?.label === "Register"
                     ? "#006772"
                     : items?.label === "Login"
-                      ? "#006772"
-                      : ""
+                    ? "#006772"
+                    : ""
                 }
                 justifyContent={"center"}
                 padding={"10px 0px"}
