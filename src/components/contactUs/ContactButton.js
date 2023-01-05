@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button } from "@chakra-ui/react";
+import React from "react";
+import CommonButton from "../commonButton/CommonButton";
 
 export default function ContactButton({
   button,
@@ -9,21 +9,23 @@ export default function ContactButton({
   color
 }) {
   return (
-    <div>
-      <Button
-        pt="0px"
-        pb="0px"
+    <>
+
+      <CommonButton
+        height={"35px"}
+        title={button.title}
+        hoverCursor={"pointer"}
+        backgroundColor={bgColor}
         color={color}
-        size={["sm", , "xs", "xs", "sm"]}
-        ml="10px"
-        borderRadius="5px"
-        bgColor={bgColor}
-        _hover={{ bg: "grey.500", color: " #1B6672" }}
-        _focus={{ bg: "#1B6672",  color: " white" }}
+        hoverColor={"white"}
+        hoverBackgroundColor={"#2CACD5"}
+        focusBg={"#2CACD5"}
+        focusColor={'white'}
+        margin={'8px'}
+        padding="10px 20px 10px 20px"
+        fontSize={'14px'}
         onClick={() => onFocunHandler(index)}
-      >
-        {button.title}
-      </Button>
-    </div>
+      />
+    </>
   );
 }
