@@ -1,6 +1,6 @@
 import React from 'react';
 import TempLayout from '../../src/components/tempNav/TempLayout';
-import { Box, Flex, HStack } from '@chakra-ui/react';
+import { background, Box, Flex, HStack } from '@chakra-ui/react';
 import { MdCastForEducation } from 'react-icons/md';
 import { BsFillLayersFill } from 'react-icons/bs';
 import { GiSkills, GiOrganigram } from 'react-icons/gi';
@@ -37,9 +37,12 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
 const SkillBaseTemp = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   // custom Hook For Template
   const [show, setShow] = useShow();
   // PDF Download Hook
@@ -63,9 +66,7 @@ const SkillBaseTemp = () => {
           flexDir={'column'}
           alignItems={{ sm: 'none', lg: 'center' }}
         >
-          <Box
-            margin={'100px 20px 50px 20px'}
-          >
+          <Box margin={'100px 20px 50px 20px'}>
             <Box
               minW={910}
               maxW={910}
@@ -78,9 +79,10 @@ const SkillBaseTemp = () => {
                 <Box
                   minW={302}
                   maxW={302}
-                  bg="#313c4e"
+                  bg={backgroundColor ? backgroundColor : '#313c4e'}
                   py={4}
                   pr={2}
+                  transition={'0.5s background'}
                   borderLeftRadius={6}
                 >
                   {/* Image Section  */}
@@ -91,6 +93,7 @@ const SkillBaseTemp = () => {
                       minHeight={150}
                       maxHeight={150}
                       marginTop="30px"
+                      borderColor={color ? color : ''}
                     />
                   </Box>
                   {/* skill Section  */}
@@ -99,8 +102,10 @@ const SkillBaseTemp = () => {
                       <div className={Classes.width}>
                         {show.skills && (
                           <SectionSideMenu
-                            bg={'#fff'}
-                            iconColor="#313B47"
+                            bg={color ? color : '#fff'}
+                            iconColor={
+                              backgroundColor ? backgroundColor : '#313B47'
+                            }
                             onHide={() => setShow({ ...show, skills: false })}
                             onDelete={SKILL}
                           />
@@ -111,14 +116,20 @@ const SkillBaseTemp = () => {
                         <Heading
                           title="SKILLS"
                           circleSize="38px"
-                          circleBg="#fff"
+                          circleBg={color ? color : '#fff'}
                           circleIconHeading={true}
                           icon={(props) => (
-                            <GiSkills {...props} size={18} color={'#313B47'} />
+                            <GiSkills
+                              {...props}
+                              size={18}
+                              color={
+                                backgroundColor ? backgroundColor : '#313B47'
+                              }
+                            />
                           )}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color="#fff"
+                          color={color ? color : '#fff'}
                           minW={250}
                           maxW={250}
                           margin={'10px 0px'}
@@ -139,9 +150,13 @@ const SkillBaseTemp = () => {
                         {/* Section Side Menu */}
                         {show.languages && (
                           <SectionSideMenu
-                            bg={'#fff'}
-                            iconColor="#313B47"
-                            onHide={() => setShow({ ...show, languages: false })}
+                            bg={color ? color : '#fff'}
+                            iconColor={
+                              backgroundColor ? backgroundColor : '#313B47'
+                            }
+                            onHide={() =>
+                              setShow({ ...show, languages: false })
+                            }
                             onDelete={LANGUAGES}
                           />
                         )}
@@ -151,18 +166,20 @@ const SkillBaseTemp = () => {
                         <Heading
                           title="LANGUAGES"
                           circleSize="38px"
-                          circleBg="#fff"
+                          circleBg={color ? color : '#fff'}
                           circleIconHeading={true}
                           icon={(props) => (
                             <IoLanguageOutline
                               {...props}
                               size={18}
-                              color={'#313B47'}
+                              color={
+                                backgroundColor ? backgroundColor : '#313B47'
+                              }
                             />
                           )}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color="#fff"
+                          color={color ? color : '#fff'}
                           minW={250}
                           maxW={250}
                           margin={'15px 0px'}
@@ -183,10 +200,14 @@ const SkillBaseTemp = () => {
                           {/* Section Side Menu */}
                           {show.interest && (
                             <SectionSideMenu
-                              iconColor={'#313B47'}
-                              onHide={() => setShow({ ...show, interest: false })}
+                              iconColor={
+                                backgroundColor ? backgroundColor : '#313B47'
+                              }
+                              onHide={() =>
+                                setShow({ ...show, interest: false })
+                              }
                               onDelete={INTEREST}
-                              bg="#fff"
+                              bg={color ? color : '#fff'}
                             />
                           )}
                         </div>
@@ -195,18 +216,20 @@ const SkillBaseTemp = () => {
                           <Heading
                             title="INTEREST"
                             circleSize="38px"
-                            circleBg="#fff"
+                            circleBg={color ? color : '#fff'}
                             circleIconHeading={true}
                             icon={(props) => (
                               <FaHorseHead
                                 {...props}
                                 size={18}
-                                color={'#313B47'}
+                                color={
+                                  backgroundColor ? backgroundColor : '#313B47'
+                                }
                               />
                             )}
                             fontSize="23px"
                             fontWeight={'bold'}
-                            color="#fff"
+                            color={color ? color : '#fff'}
                             minW={250}
                             maxW={250}
                             margin={'15px 0px'}
@@ -218,7 +241,7 @@ const SkillBaseTemp = () => {
                           <Interest
                             dndDirection="horizontal"
                             interestStyle={Classes.baseText}
-                            borderColor="#fff"
+                            borderColor={'#fff'}
                           />
                         </div>
                       </div>
@@ -232,18 +255,23 @@ const SkillBaseTemp = () => {
                     direction="row"
                     FNameStyle={Classes.hybridName}
                     SNameStyle={Classes.hybridName}
+                    fontColor={backgroundColor ? backgroundColor : ''}
                   />
                   {/* Profession Section  */}
-                  <Profession professionStyle={Classes.baseTempProfession} />
+                  <Profession
+                    professionStyle={Classes.baseTempProfession}
+                    fontColor={color ? color : ''}
+                  />
                   {/* About Section */}
                   <About minW="full" aboutStyle={Classes.description} />
 
                   <Box
-                    bg={'#313B47'}
+                    bg={backgroundColor ? backgroundColor : '#313B47'}
                     borderRadius={8}
                     w={'full'}
                     my={6}
                     padding="2"
+                    trasnsition="0.5s background"
                     display="flex"
                     justifyContent="center"
                   >
@@ -253,7 +281,7 @@ const SkillBaseTemp = () => {
                       phone={true}
                       email={true}
                       circleIcon={true}
-                      iconColor="#fff"
+                      iconColor={color ? color : '#fff'}
                       iconSize={'20px'}
                       style={Classes.profileText}
                       margin={'0px 4px 0px 4px'}
@@ -269,9 +297,12 @@ const SkillBaseTemp = () => {
                         {/* Section Side Menu */}
                         {show.education && (
                           <SectionSideMenu
-                            bg={'#313B47'}
-                            onHide={() => setShow({ ...show, education: false })}
+                            bg={backgroundColor ? backgroundColor : '#313B47'}
+                            onHide={() =>
+                              setShow({ ...show, education: false })
+                            }
                             onDelete={EDUCATION}
+                            iconColor={color ? color : ''}
                           />
                         )}
                       </div>
@@ -280,18 +311,20 @@ const SkillBaseTemp = () => {
                         <Heading
                           title="EDUCATION"
                           circleSize="38px"
-                          circleBg="#313B47"
+                          circleBg={
+                            backgroundColor ? backgroundColor : '#313B47'
+                          }
                           circleIconHeading={true}
                           icon={(props) => (
                             <MdCastForEducation
                               {...props}
                               size={18}
-                              color={'white'}
+                              color={color ? color : 'white'}
                             />
                           )}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color="#313B47"
+                          color={backgroundColor ? backgroundColor : '#313B47'}
                           margin={'0px 0px 10px 0px'}
                           onSideSectionShow={() =>
                             setShow({ ...show, education: true })
@@ -319,9 +352,10 @@ const SkillBaseTemp = () => {
                         {/* Section Side Menu */}
                         {show.work && (
                           <SectionSideMenu
-                            bg={'#313B47'}
+                            bg={backgroundColor ? backgroundColor : '#313B47'}
                             onHide={() => setShow({ ...show, work: false })}
                             onDelete={WORK}
+                            iconColor={color ? color : ''}
                           />
                         )}
                       </div>
@@ -330,18 +364,20 @@ const SkillBaseTemp = () => {
                         <Heading
                           title="WORK EXPERIENCE"
                           circleSize="38px"
-                          circleBg="#313B47"
+                          circleBg={
+                            backgroundColor ? backgroundColor : '#313B47'
+                          }
                           circleIconHeading={true}
                           icon={(props) => (
                             <BsFillLayersFill
                               {...props}
                               size={18}
-                              color={'white'}
+                              color={color ? color : 'white'}
                             />
                           )}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color="#313B47"
+                          color={backgroundColor ? backgroundColor : '#313B47'}
                           minW={'full'}
                           maxW="full"
                           margin={'10px 0px'}
@@ -374,9 +410,10 @@ const SkillBaseTemp = () => {
                         {/* Section Side Menu */}
                         {show.project && (
                           <SectionSideMenu
-                            bg={'#313B47'}
+                            bg={backgroundColor ? backgroundColor : '#313B47'}
                             onHide={() => setShow({ ...show, project: false })}
                             onDelete={PROJECT}
+                            iconColor={color ? color : ''}
                           />
                         )}
                       </div>
@@ -385,14 +422,20 @@ const SkillBaseTemp = () => {
                         <Heading
                           title="PERSONAL PROJECTS"
                           circleSize="38px"
-                          circleBg="#313B47"
+                          circleBg={
+                            backgroundColor ? backgroundColor : '#313B47'
+                          }
                           circleIconHeading={true}
                           icon={(props) => (
-                            <GoProject {...props} size={18} color={'white'} />
+                            <GoProject
+                              {...props}
+                              size={18}
+                              color={color ? color : 'white'}
+                            />
                           )}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color="#313B47"
+                          color={backgroundColor ? backgroundColor : '#313B47'}
                           minW={'full'}
                           maxW={'full'}
                           margin={'15px 0px'}
@@ -422,11 +465,12 @@ const SkillBaseTemp = () => {
                         {/* Section Side Menu */}
                         {show.organization && (
                           <SectionSideMenu
-                            bg={'#313B47'}
+                            bg={backgroundColor ? backgroundColor : '#313B47'}
                             onHide={() =>
                               setShow({ ...show, organization: false })
                             }
                             onDelete={ORGANIZATION}
+                            iconColor={color ? color : ''}
                           />
                         )}
                       </div>
@@ -435,14 +479,20 @@ const SkillBaseTemp = () => {
                         <Heading
                           title="ORGANIZATION"
                           circleSize="38px"
-                          circleBg="#313B47"
+                          circleBg={
+                            backgroundColor ? backgroundColor : '#313B47'
+                          }
                           circleIconHeading={true}
                           icon={(props) => (
-                            <GiOrganigram {...props} size={18} color={'white'} />
+                            <GiOrganigram
+                              {...props}
+                              size={18}
+                              color={color ? color : 'white'}
+                            />
                           )}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color="#313B47"
+                          color={backgroundColor ? backgroundColor : '#313B47'}
                           minW={250}
                           maxW={250}
                           margin={'15px 0px'}
@@ -470,11 +520,12 @@ const SkillBaseTemp = () => {
                         {/* Section Side Menu */}
                         {show.certificates && (
                           <SectionSideMenu
-                            bg={'#313B47'}
+                            bg={backgroundColor ? backgroundColor : '#313B47'}
                             onHide={() =>
                               setShow({ ...show, certificates: false })
                             }
                             onDelete={CERTIFICATE}
+                            iconColor={color ? color : ''}
                           />
                         )}
                       </div>
@@ -483,14 +534,20 @@ const SkillBaseTemp = () => {
                         <Heading
                           title="CERTIFICATES"
                           circleSize="38px"
-                          circleBg="#313B47"
+                          circleBg={
+                            backgroundColor ? backgroundColor : '#313B47'
+                          }
                           circleIconHeading={true}
                           icon={(props) => (
-                            <TbCertificate {...props} size={18} color={'white'} />
+                            <TbCertificate
+                              {...props}
+                              size={18}
+                              color={color ? color : 'white'}
+                            />
                           )}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color="#313B47"
+                          color={backgroundColor ? backgroundColor : '#313B47'}
                           minW={250}
                           maxW={250}
                           margin={'15px 0px'}

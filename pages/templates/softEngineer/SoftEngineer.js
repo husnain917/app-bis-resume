@@ -1,14 +1,14 @@
-import React from "react";
-import { Input, Image, Box, Tooltip, HStack } from "@chakra-ui/react";
-import { sampleData } from "../../../constants/sampleData";
-import { PhoneIcon, AddIcon, WarningIcon, EmailIcon } from "@chakra-ui/icons";
-import HeadingText from "../../../src/components/softEngineer/HeadingText";
-import { useSelector } from "react-redux";
-import { Text } from "../../../src/components/template1";
-import { useWindowSize } from "@react-hook/window-size";
-import Languages from "../../../src/components/softEngineer/Languages";
-import styles from "../../../styles/templates/SeTemplate.module.css";
-import Link from "next/link";
+import React from 'react';
+import { Input, Image, Box, Tooltip, HStack } from '@chakra-ui/react';
+import { sampleData } from '../../../constants/sampleData';
+import { PhoneIcon, AddIcon, WarningIcon, EmailIcon } from '@chakra-ui/icons';
+import HeadingText from '../../../src/components/softEngineer/HeadingText';
+import { useSelector } from 'react-redux';
+import { Text } from '../../../src/components/template1';
+import { useWindowSize } from '@react-hook/window-size';
+import Languages from '../../../src/components/softEngineer/Languages';
+import styles from '../../../styles/templates/SeTemplate.module.css';
+import Link from 'next/link';
 import Name from '../../../src/components/commonSection/Name';
 import Profession from '../../../src/components/commonSection/Profession';
 import About from '../../../src/components/commonSection/About';
@@ -22,44 +22,37 @@ import {
   WORK,
 } from '../../../src/components/tempSectionSide/SectionSideConstant';
 import TempLayout from '../../../src/components/tempNav/TempLayout';
-import useStoreData from "../../../src/components/useStoreData";
+import useStoreData from '../../../src/components/useStoreData';
 import Education from '../../../src/components/commonSection/Education';
 import Heading from '../../../src/components/commonSection/Heading';
-import Skill from "../../../src/components/commonSection/Skill";
+import Skill from '../../../src/components/commonSection/Skill';
 import WorkExperience from '../../../src/components/commonSection/WorkExperience';
 import ChangeTempBtn from '../../../src/components/changeTempbtn/ChangeTempBtn';
 import ImageSelector from '../../../src/components/imageSelector';
-import PDFGenerater from "../../../src/components/tempNav/PDFGenerater";
-
-
-
-
-
+import PDFGenerater from '../../../src/components/tempNav/PDFGenerater';
 
 export default function SoftEngineer() {
-  const {
-    resumeData,
-    theme,
-    updater
-  } = useStoreData();
+  const { resumeData, theme, updater } = useStoreData();
   const [show, setShow] = useShow();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
   return (
     <>
       <div style={{ overflow: 'auto' }}>
-
-        <TempLayout work={true} education={true} skills={true} downloadPDF={downloadPDFHandler}>
+        <TempLayout
+          work={true}
+          education={true}
+          skills={true}
+          downloadPDF={downloadPDFHandler}
+        >
           <ChangeTempBtn />
 
-
-
-
-
           <Box pt="8%">
-
             <Box
-              w={[, , , , "71%"]}
+              w={[, , , , '71%']}
               borderWidth="1px"
               borderColor={'#00000023'}
               ml="15%"
@@ -75,137 +68,120 @@ export default function SoftEngineer() {
                 maxW="2150px"
                 minW="900px"
                 ref={pdfRef}
-
-
               >
                 {/* Left Section  */}
                 <Box w="50%" mt="10%">
-
-
                   <Name
                     FName={true}
                     SName={true}
                     direction="column"
                     FNameStyle={styles.name}
                     SNameStyle={styles.name}
-
+                    fontColor={color ? color : ''}
                   />
                   <Box>
                     <Heading
                       line={true}
                       lineW="300px"
                       lineH={1}
+                      lineBg={backgroundColor ? backgroundColor : ''}
                     />
 
                     <Profession
                       professionStyle={styles.profession}
                       professionPlaceholder="PROFESSION"
+                      fontColor={color ? color : ''}
                     />
                     <Heading
                       line={true}
                       lineW="300px"
                       lineH={1}
+                      lineBg={backgroundColor ? backgroundColor : ''}
                     />
-
-
                   </Box>
 
-
-
                   <About
-
                     aboutStyle={styles.description}
-                    aboutPlaceholder={"Short and engaging pitch about yourself"}
-
+                    aboutPlaceholder={'Short and engaging pitch about yourself'}
                   />
                   <Heading
                     line={true}
                     lineW="300px"
                     lineH={1}
+                    lineBg={backgroundColor ? backgroundColor : ''}
                   />
-
 
                   <Heading
                     line={true}
                     lineW="300px"
                     lineH={1}
                     font-size={22}
-                    color="black"
+                    color={backgroundColor ? backgroundColor : 'black'}
                     title="CONTACT"
                     fontWeight={900}
-
-
-
-
-
+                    lineBg={backgroundColor ? backgroundColor : ''}
+                    textMargin={'0px 0px 10px 0px'}
                   />
 
                   <Box
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                      marginTop: "5%",
+                      display: 'flex',
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      marginTop: '5%',
                     }}
                   >
                     <PhoneIcon
                       w={8}
                       h={8}
-                      bgColor="#B29E84"
-
+                      bgColor={color ? color : '#B29E84'}
                       p="7px"
                       color="white"
                       borderRadius="5px"
                     />
 
-
                     <Contact
                       phone={true}
-                      phonePlaceholder={"+920000000"}
-                      margin={"0px 0px 0px 10px"}
-
+                      phonePlaceholder={'+920000000'}
+                      margin={'0px 0px 0px 10px'}
                       style={styles.profileText}
                     />
                   </Box>
                   <Box
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                      marginTop: '3%'
+                      display: 'flex',
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      marginTop: '3%',
                     }}
                   >
                     <EmailIcon
                       w={8}
                       h={8}
-                      bgColor="#B29E84"
-
+                      bgColor={color ? color : '#B29E84'}
                       p="7px"
                       color="white"
                       borderRadius="5px"
                     />
 
-
                     <Contact
                       email={true}
-                      emailPlaceholder={"hello@gmail.com"}
-                      margin={"0px 0px 0px 10px"}
-
+                      emailPlaceholder={'hello@gmail.com'}
+                      margin={'0px 0px 0px 10px'}
                       style={styles.profileText}
                     />
-
-
                   </Box>
 
-                  <div >
-
+                  <div>
                     {resumeData?.education?.visible && (
                       <>
                         <HStack alignItems={'flex-start'} mt={'20px'}>
                           <Box w="12px" ml={'-20px'}>
                             {show.education && (
                               <SectionSideMenu
-                                onHide={() => setShow({ ...show, education: false })}
+                                onHide={() =>
+                                  setShow({ ...show, education: false })
+                                }
                                 bg="#2A78AB"
                                 iconColor={'#E0EFFA'}
                                 onDelete={EDUCATION}
@@ -217,34 +193,29 @@ export default function SoftEngineer() {
                               line={true}
                               lineW="300px"
                               lineH={1}
-
-
+                              lineBg={backgroundColor ? backgroundColor : ''}
                             />
                             <Heading
-
-
                               font-size={30}
                               font-weight={900}
-
-
-                              color="black"
+                              color={
+                                backgroundColor ? backgroundColor : 'black'
+                              }
                               title="EDUCATION"
                               line={true}
                               lineW="300px"
+                              textMargin={'0px 0px 10px 0px'}
                               lineH={1}
-
-
-
-
+                              lineBg={backgroundColor ? backgroundColor : ''}
                               fontSize={23}
                               fontWeight={900}
-                              onSideSectionShow={() => setShow({ ...show, education: true })}
+                              onSideSectionShow={() =>
+                                setShow({ ...show, education: true })
+                              }
                             />
                           </div>
-
-
                         </HStack>
-                        <Box mr={"15%"}>
+                        <Box mr={'15%'}>
                           <Education
                             institution={true}
                             date={true}
@@ -252,10 +223,9 @@ export default function SoftEngineer() {
                             summaryStyle={styles.Educationdescription}
                             dateStyle={styles.date}
                             institutionStyle={styles.company}
-                            institution_placeholder={"College"}
-                            summary_placeholder={"Summary"}
+                            institution_placeholder={'College'}
+                            summary_placeholder={'Summary'}
                             parentContainerStyle={styles.mt}
-
                           />
                         </Box>
                       </>
@@ -270,11 +240,10 @@ export default function SoftEngineer() {
                     minHeight={280}
                     maxHeight={280}
                     marginTop={'40px'}
-                    marginLeft={"40px"}
+                    marginLeft={'40px'}
+                    borderColor={color ? color : ''}
                   />
-                  <Box>
-
-                  </Box>
+                  <Box></Box>
                   <div>
                     {resumeData?.skills?.visible && (
                       <>
@@ -282,7 +251,9 @@ export default function SoftEngineer() {
                           <Box ml={'-15px'}>
                             {show.skills && (
                               <SectionSideMenu
-                                onHide={() => setShow({ ...show, skills: false })}
+                                onHide={() =>
+                                  setShow({ ...show, skills: false })
+                                }
                                 bg="#2A78AB"
                                 iconColor={'#E0EFFA'}
                                 onDelete={SKILL}
@@ -294,21 +265,21 @@ export default function SoftEngineer() {
                               line={true}
                               lineW="300px"
                               lineH={1}
+                              lineBg={backgroundColor ? backgroundColor : ''}
                             />
 
-
                             <Heading
-
                               title={'SKILLS'}
-                              color="black"
-
-
-
+                              color={
+                                backgroundColor ? backgroundColor : 'black'
+                              }
                               fontSize={24}
-                              minW={"350px"}
-                              maxW={"350px"}
+                              minW={'350px'}
+                              maxW={'350px'}
                               line={true}
                               lineW="300px"
+                              textMargin={'0px 0px 10px 0px'}
+                              lineBg={backgroundColor ? backgroundColor : ''}
                               fontWeight={900}
                               lineH={1}
                               onSideSectionShow={() =>
@@ -316,16 +287,14 @@ export default function SoftEngineer() {
                               }
                             />
                           </div>
-
                         </HStack>
-                        <Box mr={"30%"} mt="2%">
-                          <Skill skillStyle={styles.skillText}
+                        <Box mr={'30%'} mt="2%">
+                          <Skill
+                            skillStyle={styles.skillText}
                             parentContainerStyle={styles.mt}
-                            minW={"220px"}
-                            maxW={"220px"}
-                            margin={"0px 20px 0px 0px"}
-
-
+                            minW={'220px'}
+                            maxW={'220px'}
+                            margin={'0px 20px 0px 0px'}
                           />
                         </Box>
                       </>
@@ -351,56 +320,49 @@ export default function SoftEngineer() {
                               line={true}
                               lineW="300px"
                               lineH={1}
+                              lineBg={backgroundColor ? backgroundColor : ''}
                             />
                             <Heading
-                              minW={"350px"}
-                              maxW={"350px"}
-                              font-size={"1.4em"}
+                              minW={'350px'}
+                              maxW={'350px'}
+                              font-size={'1.4em'}
                               font-weight={900}
-
-                              color="black"
-
+                              color={
+                                backgroundColor ? backgroundColor : 'black'
+                              }
                               title="EXPERIENCE"
-
-
                               fontSize={22}
                               fontWeight={900}
-                              onSideSectionShow={() => setShow({ ...show, work: true })}
+                              onSideSectionShow={() =>
+                                setShow({ ...show, work: true })
+                              }
                             />
                             <Heading
                               line={true}
                               lineW="300px"
                               lineH={1}
+                              lineBg={backgroundColor ? backgroundColor : ''}
                             />
                           </div>
                         </HStack>
-                        <Box mr={"22%"} mt="2%">
-
+                        <Box mr={'22%'} mt="2%">
                           <WorkExperience
-
                             position={true}
-                            position_placeholder={"Position"}
+                            position_placeholder={'Position'}
                             date={true}
                             summary={true}
-                            startDate_placeholder={"Start Date"}
-                            endDate_placeholder={"End Date"}
-
+                            startDate_placeholder={'Start Date'}
+                            endDate_placeholder={'End Date'}
                             positionStyle={styles.positionSty}
-
-
                             dateStyle={styles.date}
                             summaryStyle={styles.description}
-                            summary_placeholder={"Summary"}
+                            summary_placeholder={'Summary'}
                             parentContainerStyle={styles.mt}
-
-
-
                           />
                         </Box>
                       </>
                     )}
                   </div>
-
                 </Box>
               </Box>
               <Box>
@@ -408,10 +370,8 @@ export default function SoftEngineer() {
               </Box>
             </Box>
           </Box>
-
-        </TempLayout  >
+        </TempLayout>
       </div>
-
     </>
   );
 }
