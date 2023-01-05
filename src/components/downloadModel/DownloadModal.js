@@ -53,9 +53,10 @@ export default function DownloadModal({
             >
                 <ModalOverlay />
                 <Box
+                    display={['none','none','none','block']}
                     position={'absolute'}
-                    top={'27%'}
-                    left={'29%'}
+                    top={['0%','0%','0%','26%']}
+                    left={['0%','0%','0%','28%']}
                     zIndex={'1400'}
                     transform={'rotate(-18deg)'}
                 >
@@ -68,9 +69,10 @@ export default function DownloadModal({
                     />
                 </Box>
                 <Box
+                    display={['none','none','none','block']}
                     position={'absolute'}
-                    top={'39%'}
-                    left={'33%'}
+                    top={['0%','0%','0%','38%']}
+                    left={['0%','0%','0%','32%']}
                     zIndex={'1500'}
                 >
                     <Image
