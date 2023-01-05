@@ -19,7 +19,6 @@ import { useSwiper } from 'swiper/react';
 import 'swiper/css';
 
 const ThemeModal = () => {
-  const swiper = useSwiper();
   const swiperRef = useRef();
   const dispatch = useDispatch();
   const themeHandler = (theme) => {
@@ -109,7 +108,11 @@ const ThemeModal = () => {
               }}
             >
               {themeData.slice(15, 30).map((item, index) => (
-                <div key={index} style={{ flexBasis: '20%' }}>
+                <div
+                  key={index}
+                  style={{ flexBasis: '20%' }}
+                  className="themeActive"
+                >
                   <div
                     style={item.style}
                     onClick={() => themeHandler(item.theme)}
