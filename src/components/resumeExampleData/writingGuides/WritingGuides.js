@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text, Button, Image } from "@chakra-ui/react";
-
+import CommonButton from "../../commonButton/CommonButton";
 const WritingGuides = () => {
   return (
     <Box padding={["0 20px", "0 20px", "0 44px", "0 44px", "0 44px"]}>
@@ -46,7 +46,7 @@ const WritingGuides = () => {
             guides and our resume builder to create a beautiful resume in
             minutes. We also provide a library of resume templates.
           </Box>
-          <Box
+          {/* <Box
             bg="whitesmoke"
             height={"40px"}
             width={"150px"}
@@ -61,7 +61,15 @@ const WritingGuides = () => {
             borderRadius={"10px"}
           >
             Check my Resume
-          </Box>
+          </Box> */}
+          <CommonButton
+            backgroundColor="whitesmoke"
+            borderRadius={"none"}
+            color={"lightcoral"}
+            height={"40px"}
+            width={"150px"}
+            title={"Check My Resume"}
+          />
         </Box>
         <Box
           position={"relative"}
