@@ -15,7 +15,7 @@ import React from "react";
 import {
     DownloadIcon,
 } from '@chakra-ui/icons';
-
+import styles from "./downloadModel.module.css";
 export default function DownloadModal({
     downloadPDF,
     downloadDocx,
@@ -34,7 +34,6 @@ export default function DownloadModal({
                 color="white"
                 _hover={{
                     backgroundColor: 'transparent',
-
                     color: '#313C4E',
                     transition: '0.4s',
                 }}
@@ -54,11 +53,7 @@ export default function DownloadModal({
                 <ModalOverlay />
                 <Box
                     display={['none','none','none','block']}
-                    position={'absolute'}
-                    top={['0%','0%','0%','26%']}
-                    left={['0%','0%','0%','28%']}
-                    zIndex={'1400'}
-                    transform={'rotate(-18deg)'}
+                    className={styles.avator}
                 >
                     <Image
                         boxSize='200px'
@@ -70,10 +65,7 @@ export default function DownloadModal({
                 </Box>
                 <Box
                     display={['none','none','none','block']}
-                    position={'absolute'}
-                    top={['0%','0%','0%','38%']}
-                    left={['0%','0%','0%','32%']}
-                    zIndex={'1500'}
+                    className={styles.wing}
                 >
                     <Image
                         boxSize='90px'
