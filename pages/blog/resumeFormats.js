@@ -14,14 +14,14 @@ import styles from "../../styles/resumeFormats.module.css";
 import FormatsTables from "../../src/components/blog/FormatsTables";
 import Footer from "../../src/components/footer/Footer";
 import Layout from "../../src/Layout";
-
+import CommonButton from "../../src/components/commonButton/CommonButton";
 export default function Resume_Formats() {
   // state
   const [over, setOver] = useState(false)
 
   return (
     <>
-  
+
       <ResumeFormats />
       {/* content container */}
       <Container
@@ -43,9 +43,9 @@ export default function Resume_Formats() {
               <>
                 <Text
                   key={index}
-                  fontSize={"17px"}
-                  lineHeight={8}
-                  marginBottom={"20px"}
+                  fontSize={"16px"}
+                  fontFamily={`'EuclidCircularB-Medium', sans-serif`}
+                  lineHeight={9}
                 >
                   {item.text}
                 </Text>
@@ -53,14 +53,11 @@ export default function Resume_Formats() {
             ))
           }
           <Text
-            fontSize={"17px"}
+            fontSize={"16px"}
             lineHeight={8}
+            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
           >
-            <span
-              style={{
-                fontWeight: "bold"
-              }}
-            >Want to save time and have your resume ready in 5 minutes? </span>
+            <span>Want to save time and have your resume ready in 5 minutes? </span>
             <span>Try our resume builder. Its fast and easy to use. Plus, you ll get ready-made content to add with one click.</span>
             <Link
               color={"#3983fa"}
@@ -78,31 +75,28 @@ export default function Resume_Formats() {
           >
             <Link
               href="/templates"
-              height={["45px", "55px", "55px", "55px"]}
-              backgroundColor={"#006772"}
-              width={["100%", "100%", "50%", "45%", "45%"]}
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"center"}
-              color={"#fff"}
-              fontSize={["13px", "18px", "18px", "18px", "18px"]}
-              borderRadius={"30px 30px"}
-              textDecoration={"none"}
+              textDecoration={'none'}
               _hover={{
-                textDecoration: "none",
-                color: "#fff",
-                backgroundColor: 'red',
-                transition: '0.5s'
+                textDecoration: 'none'
               }}
             >
-              CREATE YOUR RESUME NOW
+              <CommonButton
+                title={'CREATE YOUR RESUME NOW'}
+                fontSize={["13px", "16px", "16px", "16px", "16px"]}
+                hoverCursor={"pointer"}
+                backgroundColor={'#2CACD5'}
+                color={'white'}
+                hoverColor={"white"}
+                hoverBackgroundColor={"#2CACD5"}
+                padding={'25px 30px'}
+              />
             </Link>
           </Box>
 
           {/* resume templates container */}
           <Container
             maxW={"100%"}
-            padding={"40px 0px 20px 0px"}
+            padding={"60px 0px 20px 0px"}
           >
             <Box
               position={"relative"}
@@ -127,24 +121,21 @@ export default function Resume_Formats() {
                     >
                       <Link
                         href="/templates"
-                        height={["45px", "55px", "55px", "55px"]}
-                        width={["100%", "100%", "90%", "90%", "70%"]}
-                        backgroundColor={"#006772"}
-                        display={"flex"}
-                        alignItems={"center"}
-                        justifyContent={"center"}
-                        color={"#fff"}
-                        fontSize={["13px", "18px", "18px", "18px", "18px"]}
-                        borderRadius={"30px 30px"}
-                        textDecoration={"none"}
+                        textDecoration={'none'}
                         _hover={{
-                          textDecoration: "none",
-                          color: "#fff",
-                          backgroundColor: 'red',
-                          transition: '0.5s'
+                          textDecoration: 'none'
                         }}
                       >
-                        USE THIS RESUME TEMPLATE
+                        <CommonButton
+                          title={'USE THIS RESUME TEMPLATE'}
+                          fontSize={["13px", "16px", "16px", "16px", "16px"]}
+                          hoverCursor={"pointer"}
+                          backgroundColor={'#2CACD5'}
+                          color={'white'}
+                          hoverColor={"white"}
+                          hoverBackgroundColor={"#2CACD5"}
+                          padding={'25px 30px'}
+                        />
                       </Link>
                     </Box>
                   </>
@@ -171,7 +162,8 @@ export default function Resume_Formats() {
               <Text
                 padding={"20px 10px"}
                 textAlign={"center"}
-                fontSize={"16px"}
+                fontSize={'16px'}
+                fontFamily={`'EuclidCircularB-Medium', sans-serif`}
               >
                 An example of a well-formatted resume made in our builder—
                 <Link color={"#3983fa"}>See more resume examples here.</Link>
@@ -183,7 +175,8 @@ export default function Resume_Formats() {
             >
               <Text
                 fontSize={"16px"}
-                fontWeight={"bold"}
+                fontWeight={'bold'}
+                fontFamily={`'EuclidCircularB-Medium', sans-serif`}
               >
                 One of our users, Nikos, had this to say:
               </Text>
@@ -197,6 +190,7 @@ export default function Resume_Formats() {
                 padding={"20px 10px"}
                 textAlign={"center"}
                 fontSize={"16px"}
+                fontFamily={`'EuclidCircularB-Medium', sans-serif`}
               >
                 [I used] a nice template I found on Zety. My resume is now one page long, not three. With the same stuff.
               </Text>
