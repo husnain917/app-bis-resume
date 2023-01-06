@@ -22,8 +22,9 @@ export default function ResumeTable() {
                 padding={"20px 0px 30px 0px"}
             >
                 <Text
-                    fontSize={"18px"}
+                    fontSize={"24px"}
                     fontWeight={"bold"}
+                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                 >
                     TABLE OF CONTENTS
                 </Text>
@@ -35,6 +36,7 @@ export default function ResumeTable() {
                     fontSize={"16px"}
                     fontWeight={"medium"}
                     lineHeight={8}
+                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                 >
                     <ListItem>
                         <Link
