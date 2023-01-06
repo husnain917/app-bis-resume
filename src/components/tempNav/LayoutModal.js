@@ -59,25 +59,36 @@ export default function LayoutModal({
         Section
       </Button>
 
-      <Modal isOpen={isOpen} onClose={onClose} size={'md'}>
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        size={{ base: 'xs', md: 'sm', lg: 'md' }}
+      >
         <ModalOverlay />
-        <ModalContent bgColor="#313C4E">
+        <ModalContent bgColor="#425061">
           <ModalCloseButton color="white" />
-          <ModalBody bgColor="#313C4E">
-            <Box w="100%" display="flex" flexWrap="wrap" mt="5%">
+          <ModalBody bgColor="#425061" mt="10%">
+            <Box
+              w="100%"
+              display={'flex'}
+              // flexDir={{ base: 'column', md: 'row' }}
+              flexWrap="wrap"
+            >
               {education ? (
                 resumeData?.education?.visible ? (
                   <>
                     <Btn
                       title="Education"
-                      bgColor="tomato"
+                      bgColor="#006772"
+                      className="sectionModalBtn2"
                       onClick={() => dispatch(visibleEduSection(false))}
                     />
                   </>
                 ) : (
                   <Btn
                     title="Education"
-                    bgColor="green"
+                    bgColor="gray"
+                    className="sectionModalBtn"
                     onClick={() => dispatch(visibleEduSection(true))}
                   />
                 )
@@ -88,15 +99,17 @@ export default function LayoutModal({
                 resumeData?.projects?.visible ? (
                   <>
                     <Btn
-                      bgColor="tomato"
+                      bgColor="#006772"
                       title="Project"
+                      className="sectionModalBtn2"
                       onClick={() => dispatch(visibleProjectSection(false))}
                     />
                   </>
                 ) : (
                   <Btn
                     title="Project"
-                    bgColor="green"
+                    className="sectionModalBtn"
+                    bgColor="gray"
                     onClick={() => dispatch(visibleProjectSection(true))}
                   />
                 )
@@ -108,13 +121,15 @@ export default function LayoutModal({
                   <>
                     <Btn
                       title="Experience"
-                      bgColor="tomato"
+                      bgColor="#006772"
+                      className="sectionModalBtn2"
                       onClick={() => dispatch(visibleWorkSection(false))}
                     />
                   </>
                 ) : (
                   <Btn
-                    bgColor="green"
+                    bgColor="gray"
+                    className="sectionModalBtn"
                     title="Experience"
                     onClick={() => dispatch(visibleWorkSection(true))}
                   />
@@ -128,14 +143,16 @@ export default function LayoutModal({
                   <>
                     <Btn
                       title="Language"
-                      bgColor="tomato"
+                      className="sectionModalBtn2"
+                      bgColor="#006772"
                       onClick={() => dispatch(visibleLangSection(false))}
                     />
                   </>
                 ) : (
                   <Btn
                     title="Language"
-                    bgColor="green"
+                    bgColor="gray"
+                    className="sectionModalBtn"
                     onClick={() => dispatch(visibleLangSection(true))}
                   />
                 )
@@ -147,7 +164,8 @@ export default function LayoutModal({
                   <>
                     <Btn
                       title="Organization"
-                      bgColor="tomato"
+                      bgColor="#006772"
+                      className="sectionModalBtn2"
                       onClick={() =>
                         dispatch(visibleOrganizationSection(false))
                       }
@@ -156,7 +174,8 @@ export default function LayoutModal({
                 ) : (
                   <Btn
                     title="Organization"
-                    bgColor="green"
+                    className="sectionModalBtn"
+                    bgColor="gray"
                     onClick={() => dispatch(visibleOrganizationSection(true))}
                   />
                 )
@@ -167,14 +186,14 @@ export default function LayoutModal({
                 <>
                   <Btn
                     title="About"
-                    bgColor="tomato"
+                    bgColor="#006772"
                     onClick={() => dispatch(visibleAchievementSection(false))}
                   />
                 </>
               ) : (
                 <Btn
                   title="About"
-                  bgColor="green"
+                  bgColor="gray"
                   onClick={() => dispatch(visibleAchievementSection(true))}
                 />
               )} */}
@@ -183,14 +202,16 @@ export default function LayoutModal({
                   <>
                     <Btn
                       title="Skills"
-                      bgColor="tomato"
+                      className="sectionModalBtn2"
+                      bgColor="#006772"
                       onClick={() => dispatch(visibleSkillSection(false))}
                     />
                   </>
                 ) : (
                   <Btn
                     title="Skills"
-                    bgColor="green"
+                    bgColor="gray"
+                    className="sectionModalBtn"
                     onClick={() => dispatch(visibleSkillSection(true))}
                   />
                 )
@@ -202,14 +223,16 @@ export default function LayoutModal({
                   <>
                     <Btn
                       title="Interest"
-                      bgColor="tomato"
+                      bgColor="#006772"
+                      className="sectionModalBtn2"
                       onClick={() => dispatch(visibleHobbiesSection(false))}
                     />
                   </>
                 ) : (
                   <Btn
                     title="Interest"
-                    bgColor="green"
+                    className="sectionModalBtn"
+                    bgColor="gray"
                     onClick={() => dispatch(visibleHobbiesSection(true))}
                   />
                 )
@@ -220,7 +243,8 @@ export default function LayoutModal({
                 resumeData?.certifications?.visible ? (
                   <>
                     <Btn
-                      bgColor="tomato"
+                      bgColor="#006772"
+                      className="sectionModalBtn2"
                       title="Certificates"
                       onClick={() =>
                         dispatch(visibleCertificatesSection(false))
@@ -230,7 +254,8 @@ export default function LayoutModal({
                 ) : (
                   <Btn
                     title="Certificates"
-                    bgColor="green"
+                    className="sectionModalBtn"
+                    bgColor="gray"
                     onClick={() => dispatch(visibleCertificatesSection(true))}
                   />
                 )
@@ -241,15 +266,17 @@ export default function LayoutModal({
                 resumeData?.references?.visible ? (
                   <>
                     <Btn
-                      bgColor="tomato"
+                      bgColor="#006772"
                       title="Reference"
+                      className="sectionModalBtn2"
                       onClick={() => dispatch(visibleReferenceSection(false))}
                     />
                   </>
                 ) : (
                   <Btn
                     title="Reference"
-                    bgColor="green"
+                    bgColor="gray"
+                    className="sectionModalBtn"
                     onClick={() => dispatch(visibleReferenceSection(true))}
                   />
                 )
