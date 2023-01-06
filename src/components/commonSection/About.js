@@ -8,7 +8,7 @@ const About = (props) => {
   const {
     aboutPlaceholder,
     aboutStyle,
-    textColor,
+    fontColor,
     fontSize,
     fontWeight,
     textAlign,
@@ -31,7 +31,7 @@ const About = (props) => {
         customClass={` ${aboutStyle}`}
         value={resumeData?.objective?.body}
         path="objective.body"
-        color={textColor}
+        color={fontColor ? fontColor : ''}
         fontSize={fontSize}
         fontWeight={fontWeight}
         textAlign={textAlign}

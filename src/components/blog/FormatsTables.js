@@ -24,7 +24,7 @@ import {
 import ResumeHeading from "./ResumeHeading";
 import ResumeTable from "./ResumeTable";
 import styles from "../../../styles/resumeFormats.module.css";
-
+import CommonButton from "../commonButton/CommonButton";
 export default function FormatsTables() {
     // state
     const [over, setOver] = useState(false)
@@ -46,6 +46,7 @@ export default function FormatsTables() {
                         textAlign={"center"}
                         fontSize={"30px"}
                         fontWeight={"medium"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         paddingBottom={"25px"}
                     >
                         Resume Formatting
@@ -58,6 +59,7 @@ export default function FormatsTables() {
                                     key={index}
                                     fontSize={"16px"}
                                     paddingBottom={"25px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     {item?.text}
                                 </Text>
@@ -68,6 +70,7 @@ export default function FormatsTables() {
                         fontSize={"16px"}
                         paddingBottom={"25px"}
                         fontWeight={"medium"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         {RESUME_FORMATS?.secTitle}
                     </Text>
@@ -76,6 +79,7 @@ export default function FormatsTables() {
                         fontSize={"26px"}
                         fontWeight={"medium"}
                         paddingBottom={"25px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         {RESUME_FORMATS?.thirdTitle}
                     </Text>
@@ -85,6 +89,7 @@ export default function FormatsTables() {
                         fontSize={"16px"}
                         padding={"0px 30px"}
                         lineHeight={8}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         <ListItem>
                             <strong>Set</strong>&nbsp;
@@ -165,6 +170,7 @@ export default function FormatsTables() {
                     <Text
                         fontSize={"16px"}
                         padding={"30px 0px 15px 0px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         {RESUME_FORMATS?.fileFormat?.title}
                     </Text>
@@ -177,8 +183,9 @@ export default function FormatsTables() {
                                 <>
                                     <ListItem
                                         key={index}
-                                        fontSize={"15px"}
+                                        fontSize={"16px"}
                                         lineHeight={8}
+                                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                     >
                                         {item.text}
                                     </ListItem>
@@ -190,6 +197,8 @@ export default function FormatsTables() {
                     <Text
                         fontSize={"16px"}
                         padding={"30px 0px 15px 0px"}
+                        lineHeight={8}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         {RESUME_FORMATS?.idealFormat}
                         <Link
@@ -202,6 +211,8 @@ export default function FormatsTables() {
                     <Text
                         fontSize={"16px"}
                         padding={"10px 0px 20px 0px"}
+                        lineHeight={8}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         {RESUME_FORMATS?.enoughTheory}
                     </Text>
@@ -230,6 +241,7 @@ export default function FormatsTables() {
                     <Text
                         textAlign={"center"}
                         fontSize={"30px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         fontWeight={"medium"}
                         paddingBottom={"20px"}
                     >
@@ -243,9 +255,10 @@ export default function FormatsTables() {
                                 <>
                                     <Text
                                         key={index}
-                                        fontSize={"15px"}
+                                        fontSize={"16px"}
                                         lineHeight={8}
                                         marginBottom={"20px"}
+                                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                     >
                                         {item.text}
                                     </Text>
@@ -265,6 +278,7 @@ export default function FormatsTables() {
                                             fontSize={"24px"}
                                             fontWeight={"medium"}
                                             padding={"0px 0px 20px 0px"}
+                                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                         >
                                             {index + 1}.&nbsp;{item?.title}
                                         </Text>
@@ -292,24 +306,22 @@ export default function FormatsTables() {
                                                         >
                                                             <Link
                                                                 href={"/templates"}
-                                                                height={["45px", "55px", "55px", "55px"]}
-                                                                width={["100%", "100%", "90%", "90%", "70%"]}
-                                                                backgroundColor={"#006772"}
-                                                                display={"flex"}
-                                                                alignItems={"center"}
-                                                                justifyContent={"center"}
-                                                                color={"#fff"}
-                                                                fontSize={["13px", "18px", "18px", "18px", "18px"]}
-                                                                borderRadius={"30px 30px"}
                                                                 textDecoration={"none"}
                                                                 _hover={{
                                                                     textDecoration: "none",
-                                                                    color: "#fff",
-                                                                    backgroundColor: 'red',
-                                                                    transition: '0.5s'
                                                                 }}
                                                             >
-                                                                CREATE MY RESUME NOW
+
+                                                                <CommonButton
+                                                                    title={'CREATE MY RESUME NOW'}
+                                                                    fontSize={["13px", "16px", "16px", "16px", "16px"]}
+                                                                    hoverCursor={"pointer"}
+                                                                    backgroundColor={'#2CACD5'}
+                                                                    color={'white'}
+                                                                    hoverColor={"white"}
+                                                                    hoverBackgroundColor={"#2CACD5"}
+                                                                    padding={'25px 30px'}
+                                                                />
                                                             </Link>
                                                         </Box>
                                                     </>
@@ -319,9 +331,10 @@ export default function FormatsTables() {
                                         </Box>
                                         <Box>
                                             <Text
-                                                fontSize={"15px"}
+                                                fontSize={"16px"}
                                                 lineHeight={8}
                                                 padding={"30px 0px"}
+                                                fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                             >
                                                 {item?.description}
                                             </Text>
@@ -351,14 +364,16 @@ export default function FormatsTables() {
                         fontSize={"30px"}
                         fontWeight={"medium"}
                         paddingBottom={"25px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         The Three Main Resume Formats
                     </Text>
                     {/* description */}
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         lineHeight={8}
                         marginBottom={"30px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         There are three main resume formats
                         <strong>—reverse-chronological, functional,</strong>
@@ -372,7 +387,7 @@ export default function FormatsTables() {
                     </Text>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         lineHeight={8}
                         marginBottom={"30px"}
                         fontWeight={"bold"}
@@ -381,9 +396,10 @@ export default function FormatsTables() {
                     </Text>
 
                     <UnorderedList
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         lineHeight={8}
                         marginBottom={"30px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         {
                             RESUME_EXAMPLES?.commonResFormats?.map((item, index) => (
@@ -401,34 +417,38 @@ export default function FormatsTables() {
                     </UnorderedList>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         lineHeight={8}
                         marginBottom={"30px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         The main difference between them is the chief focus.
                     </Text>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         lineHeight={8}
                         marginBottom={"30px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         What does it mean for you?
                     </Text>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         lineHeight={8}
                         marginBottom={"30px"}
                         fontWeight={"bold"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         That you have to know the correct order of sections on each of the standard resume formats.
                     </Text>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         lineHeight={8}
                         marginBottom={"30px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         Have a look:
                     </Text>
@@ -437,6 +457,7 @@ export default function FormatsTables() {
                         fontSize={"26px"}
                         fontWeight={"medium"}
                         marginBottom={"30px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         3 Resume Format Examples
                     </Text>
@@ -474,22 +495,25 @@ export default function FormatsTables() {
                             padding={"20px 10px"}
                             textAlign={"center"}
                             fontSize={"16px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             The Three Standard Resume Formats: Resume Structure
                         </Text>
                     </Box>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         marginBottom={"30px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         As you can see:
                     </Text>
 
                     <UnorderedList
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         lineHeight={8}
                         marginBottom={"30px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         {
                             RESUME_EXAMPLES?.bestFormats?.map((item, index) => (
@@ -515,16 +539,18 @@ export default function FormatsTables() {
                     </Box>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         marginBottom={"30px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         That depends on your career path so far.
                     </Text>
 
                     <UnorderedList
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         lineHeight={8}
                         marginBottom={"30px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         {
                             RESUME_EXAMPLES?.careerFormats?.map((item, index) => (
@@ -547,21 +573,24 @@ export default function FormatsTables() {
                             fontSize={"26px"}
                             fontWeight={"medium"}
                             padding={"0px 0px 30px 0px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             1.&nbsp;Reverse-Chronological
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             For starters, here s a sample reverse-chronological resume format created in our builder.
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Reverse-Chronological Resume Example
                         </Text>
@@ -577,9 +606,10 @@ export default function FormatsTables() {
                         </Box>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
                             lineHeight={8}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             <strong>Want to save time and have your reverse-chronological resume ready in 5 minutes?</strong>
                             &nbsp;
@@ -600,66 +630,68 @@ export default function FormatsTables() {
                         >
                             <Link
                                 href={"/templates"}
-                                height={["45px", "55px", "55px", "55px"]}
-                                backgroundColor={"#006772"}
-                                width={["100%", "100%", "50%", "45%", "45%"]}
-                                display={"flex"}
-                                alignItems={"center"}
-                                justifyContent={"center"}
-                                color={"#fff"}
-                                fontSize={["13px", "18px", "18px", "18px", "18px"]}
-                                borderRadius={"30px 30px"}
                                 textDecoration={"none"}
                                 _hover={{
                                     textDecoration: "none",
-                                    color: "#fff",
-                                    backgroundColor: 'red',
-                                    transition: '0.5s'
                                 }}
                             >
-                                CREATE YOUR RESUME NOW
+                                <CommonButton
+                                    title={'CREATE YOUR RESUME NOW'}
+                                    fontSize={["13px", "16px", "16px", "16px", "16px"]}
+                                    hoverCursor={"pointer"}
+                                    backgroundColor={'#2CACD5'}
+                                    color={'white'}
+                                    hoverColor={"white"}
+                                    hoverBackgroundColor={"#2CACD5"}
+                                    padding={'25px 30px'}
+                                />
                             </Link>
                         </Box>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
                             lineHeight={8}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             The reverse chronological resume format is useful to virtually all job seekers. That s why this is the most popular US resume format.
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
                             lineHeight={8}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Recruiters are familiar with it so it makes their job easier: helps them spot all relevant information in a flash. It s also a really simple resume format to use.
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
                             lineHeight={8}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Here s how to structure a resume in reverse-chronological order.
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"20px"}
                             lineHeight={8}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Reverse-Chronological Resume Order of Sections
                         </Text>
 
                         <OrderedList
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"30px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             {
                                 RESUME_EXAMPLES?.resumeOrderSection?.map((item, index) => (
@@ -679,9 +711,10 @@ export default function FormatsTables() {
                         </OrderedList>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
                             lineHeight={8}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             The reverse chronological resume format puts emphasis on your work history because that s what s most relevant for hiring managers. Its considered the&nbsp;
                             <Link
@@ -692,9 +725,10 @@ export default function FormatsTables() {
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
                             lineHeight={8}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Its key part is the work experience section. Here s how to write it:
                         </Text>
@@ -704,14 +738,16 @@ export default function FormatsTables() {
                             marginBottom={"20px"}
                             lineHeight={8}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Reverse-Chronological Resume: Work Experience
                         </Text>
 
                         <OrderedList
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"30px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             {
                                 RESUME_EXAMPLES?.reverseResume?.map((item, index) => (
@@ -727,9 +763,10 @@ export default function FormatsTables() {
                         </OrderedList>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"20px"}
                             lineHeight={8}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Like Frank, the candidate from our example did:
                         </Text>
@@ -738,6 +775,7 @@ export default function FormatsTables() {
                             fontSize={"16px"}
                             marginBottom={"30px"}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Chronological Resume Format Pros and Cons
                         </Text>
@@ -759,28 +797,32 @@ export default function FormatsTables() {
                                         fontSize={"16px"}
                                         fontWeight={"medium"}
                                         padding={"20px"}
+                                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                     >
                                         PROS
                                     </Text>
                                 </Box>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     Recruiters are familiar with it. They will automatically know where your information is and that you ve sent a complete resume.
                                 </Text>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     It s guaranteed to go through an Applicant Tracking Software (ATS) resume test.
                                 </Text>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     The reverse chronological resume format highlights the peak of your career.
                                 </Text>
@@ -797,28 +839,32 @@ export default function FormatsTables() {
                                         fontSize={"16px"}
                                         fontWeight={"medium"}
                                         padding={"20px"}
+                                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                     >
                                         CONS
                                     </Text>
                                 </Box>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     It will require tweaking. You will need to make some extra effort to catch the recruiter s eye.
                                 </Text>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     If you have large gaps in your work history, the recruiters will notice them immediately.
                                 </Text>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     It s not an ideal format of a resume for career changers.
                                 </Text>
@@ -826,9 +872,10 @@ export default function FormatsTables() {
                         </Box>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"30px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             <strong>Pro Tip:</strong> You should also know the difference between a &nbsp;
                             <Link color={"#3983fa"} href={"/templates"}>CV vs a resume</Link>, depending on what part of the
@@ -836,9 +883,10 @@ export default function FormatsTables() {
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"30px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             For more information on how to make the most of the standard reverse-chronological format of a resume, go here: &nbsp;
                             <br />
@@ -857,13 +905,15 @@ export default function FormatsTables() {
                             fontSize={"26px"}
                             fontWeight={"medium"}
                             padding={"0px 0px 30px 0px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             2.&nbsp;Skills-Based / Functional
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"20px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Here s a functional resume example created in our resume builder.
                         </Text>
@@ -872,6 +922,7 @@ export default function FormatsTables() {
                             fontSize={"18px"}
                             fontWeight={"medium"}
                             marginBottom={"20px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Functional Resume Example
                         </Text>
@@ -887,9 +938,10 @@ export default function FormatsTables() {
                         </Box>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
                             lineHeight={8}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             <strong>Want to save time and have your skills-based (functional) resume ready in 5 minutes?</strong>
                             &nbsp;
@@ -910,48 +962,48 @@ export default function FormatsTables() {
                         >
                             <Link
                                 href="/templates"
-                                height={["45px", "55px", "55px", "55px"]}
-                                backgroundColor={"#006772"}
-                                width={["100%", "100%", "50%", "45%", "45%"]}
-                                display={"flex"}
-                                alignItems={"center"}
-                                justifyContent={"center"}
-                                color={"#fff"}
-                                fontSize={["13px", "18px", "18px", "18px", "18px"]}
-                                borderRadius={"30px 30px"}
                                 textDecoration={"none"}
                                 _hover={{
                                     textDecoration: "none",
-                                    color: "#fff",
-                                    backgroundColor: 'red',
-                                    transition: '0.5s'
                                 }}
                             >
-                                CREATE YOUR RESUME NOW
+                                <CommonButton
+                                    title={'CREATE YOUR RESUME NOW'}
+                                    fontSize={["13px", "16px", "16px", "16px", "16px"]}
+                                    hoverCursor={"pointer"}
+                                    backgroundColor={'#2CACD5'}
+                                    color={'white'}
+                                    hoverColor={"white"}
+                                    hoverBackgroundColor={"#2CACD5"}
+                                    padding={'25px 30px'}
+                                />
                             </Link>
                         </Box>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"20px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             A functional resume format focuses on your skills and abilities. That s why its also called the skills-based resume format.
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"20px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             It lets you emphasize what you re good at and takes the pressure off of your work experience.
                         </Text>
 
                         <Text
-                            fontSize={"18px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"20px"}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Here s how to structure a functional resume:
                         </Text>
@@ -961,15 +1013,17 @@ export default function FormatsTables() {
                             lineHeight={8}
                             marginBottom={"20px"}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             {RESUME_EXAMPLES?.skillResumeFormats?.istContent?.title}
                         </Text>
 
                         <OrderedList
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"20px"}
                             padding={"0px 20px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             {
                                 RESUME_EXAMPLES?.skillResumeFormats?.istContent?.data?.map((item, index) => (
@@ -985,9 +1039,10 @@ export default function FormatsTables() {
                         </OrderedList>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"20px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             {RESUME_EXAMPLES?.skillResumeFormats?.istContent?.description}
                         </Text>
@@ -997,15 +1052,17 @@ export default function FormatsTables() {
                             lineHeight={8}
                             marginBottom={"20px"}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             {RESUME_EXAMPLES?.skillResumeFormats?.secContent?.title}
                         </Text>
 
                         <OrderedList
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"20px"}
                             padding={"0px 20px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             {
                                 RESUME_EXAMPLES?.skillResumeFormats?.secContent?.data?.map((item, index) => (
@@ -1021,16 +1078,18 @@ export default function FormatsTables() {
                         </OrderedList>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"20px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             {RESUME_EXAMPLES?.skillResumeFormats?.secContent?.description}
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             To recap, then:
                         </Text>
@@ -1039,6 +1098,7 @@ export default function FormatsTables() {
                             fontSize={"18px"}
                             marginBottom={"30px"}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Pros and Cons of a Functional Resume Format
                         </Text>
@@ -1060,28 +1120,32 @@ export default function FormatsTables() {
                                         fontSize={"16px"}
                                         fontWeight={"medium"}
                                         padding={"20px"}
+                                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                     >
                                         PROS
                                     </Text>
                                 </Box>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     It takes the focus off of your work history and places it on your skills. If you ve gained your skills through various freelance projects, not full-time employment, this format will let you emphasize those skills.
                                 </Text>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     It s a good <Link color={"#3983fa"}>creative resume</Link> format for non-traditional industries.
                                 </Text>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     It can be used by military transitioners whose detailed job descriptions might be too difficult to understand for non-military recruiters.
                                 </Text>
@@ -1098,28 +1162,32 @@ export default function FormatsTables() {
                                         fontSize={"16px"}
                                         fontWeight={"medium"}
                                         padding={"20px"}
+                                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                     >
                                         CONS
                                     </Text>
                                 </Box>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     Most recruiters hate the functional resume format because it s not easy to scan in quickly.
                                 </Text>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     It s an instant red flag—suggesting that you re trying to hide something.
                                 </Text>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     It s very likely to fail the ATS resume scan.
                                 </Text>
@@ -1127,12 +1195,12 @@ export default function FormatsTables() {
                         </Box>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
                             lineHeight={8}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             For more information on the only strategy to make the functional resume work for you, see: &nbsp;
-                            <br />
                             <Link
                                 color={"#3983fa"}
                             >
@@ -1152,13 +1220,15 @@ export default function FormatsTables() {
                             fontSize={"26px"}
                             fontWeight={"medium"}
                             padding={"0px 0px 30px 0px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             3.&nbsp;Hybrid / Combination
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"20px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Here s a combination resume example created in our resume builder.
                         </Text>
@@ -1167,6 +1237,7 @@ export default function FormatsTables() {
                             fontSize={"18px"}
                             fontWeight={"medium"}
                             marginBottom={"20px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Hybrid / Combination Resume Example
                         </Text>
@@ -1182,9 +1253,10 @@ export default function FormatsTables() {
                         </Box>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
                             lineHeight={8}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             <strong>Want to save time and have your hybrid / combination resume ready in 5 minutes?</strong>
                             &nbsp;
@@ -1205,31 +1277,29 @@ export default function FormatsTables() {
                         >
                             <Link
                                 href={"/templates"}
-                                height={["45px", "55px", "55px", "55px"]}
-                                backgroundColor={"#006772"}
-                                width={["100%", "100%", "50%", "45%", "45%"]}
-                                display={"flex"}
-                                alignItems={"center"}
-                                justifyContent={"center"}
-                                color={"#fff"}
-                                fontSize={["13px", "18px", "18px", "18px", "18px"]}
-                                borderRadius={"30px 30px"}
                                 textDecoration={"none"}
                                 _hover={{
                                     textDecoration: "none",
-                                    color: "#fff",
-                                    backgroundColor: 'red',
-                                    transition: '0.5s'
                                 }}
                             >
-                                CREATE YOUR RESUME NOW
+                                <CommonButton
+                                    title={'CREATE YOUR RESUME NOW'}
+                                    fontSize={["13px", "16px", "16px", "16px", "16px"]}
+                                    hoverCursor={"pointer"}
+                                    backgroundColor={'#2CACD5'}
+                                    color={'white'}
+                                    hoverColor={"white"}
+                                    hoverBackgroundColor={"#2CACD5"}
+                                    padding={'25px 30px'}
+                                />
                             </Link>
                         </Box>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
                             lineHeight={8}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             The combination resume format combines the &nbsp;
                             <Link
@@ -1244,6 +1314,7 @@ export default function FormatsTables() {
                             fontSize={"18px"}
                             marginBottom={"20px"}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Here s how to structure a hybrid resume:
                         </Text>
@@ -1252,15 +1323,17 @@ export default function FormatsTables() {
                             fontSize={"18px"}
                             marginBottom={"30px"}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Hybrid (Combination) Resume Order of Sections
                         </Text>
 
                         <OrderedList
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"30px"}
                             padding={"0px 15px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             {
                                 RESUME_EXAMPLES?.hybridFormats?.map((item, index) => (
@@ -1276,34 +1349,38 @@ export default function FormatsTables() {
                         </OrderedList>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"30px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             The focal point is your skills summary. This section comes at the top of a hybrid resume, just below your contact information.
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"30px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             The skills summary lists skills relevant to the job and validates them by providing examples of past achievements and professional experience in bullet points.
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"30px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             This is how to write it:
                         </Text>
 
                         <UnorderedList
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"30px"}
                             padding={"0px 15px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             {
                                 RESUME_EXAMPLES?.hybridFormatsSection?.map((item, index) => (
@@ -1319,26 +1396,29 @@ export default function FormatsTables() {
                         </UnorderedList>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"20px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Remember our candidate, Christian?
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"30px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             In his skills summary, he needs to prove that he is:
                         </Text>
 
                         <OrderedList
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             marginBottom={"30px"}
                             padding={"0px 15px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             {
                                 RESUME_EXAMPLES?.hybridFormatsSkill?.map((item, index) => (
@@ -1354,8 +1434,9 @@ export default function FormatsTables() {
                         </OrderedList>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             In a nutshell:
                         </Text>
@@ -1364,6 +1445,7 @@ export default function FormatsTables() {
                             fontSize={"18px"}
                             marginBottom={"40px"}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Pros and Cons of a Combination Resume Format
                         </Text>
@@ -1385,21 +1467,24 @@ export default function FormatsTables() {
                                         fontSize={"16px"}
                                         fontWeight={"medium"}
                                         padding={"20px"}
+                                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                     >
                                         PROS
                                     </Text>
                                 </Box>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     Showcases your most important skills and validates them with examples related to your work experience.
                                 </Text>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     A good  format for people with <Link color={"#3983fa"}>gaps in their resume</Link> who, nonetheless, have many years of relevant work experience.
                                 </Text>
@@ -1416,21 +1501,24 @@ export default function FormatsTables() {
                                         fontSize={"16px"}
                                         fontWeight={"medium"}
                                         padding={"20px"}
+                                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                     >
                                         CONS
                                     </Text>
                                 </Box>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     Its suitable for very few candidates: only people with a lot of work experience targeting a very specific position.
                                 </Text>
                                 <Text
-                                    fontSize={"15px"}
+                                    fontSize={"16px"}
                                     lineHeight={8}
                                     padding={"20px"}
+                                    fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
                                     Its the most difficult resume format to create properly.
                                 </Text>
@@ -1439,9 +1527,10 @@ export default function FormatsTables() {
 
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             marginBottom={"30px"}
                             lineHeight={8}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             As you can see, this is the hardest resume format to make. Learn all you need to know about it here: &nbsp;
                             <br />
@@ -1464,26 +1553,30 @@ export default function FormatsTables() {
                             fontSize={"26px"}
                             fontWeight={"medium"}
                             padding={"0px 0px 30px 0px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             4.&nbsp;Recap: How to Pick the Best Resume Format for You
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                             marginBottom={"25px"}
                         >
                             So—
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                             marginBottom={"25px"}
                         >
                             What format should your resume be in?
                         </Text>
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                             marginBottom={"25px"}
                         >
                             Here s a recap of what you ve learned so far:
@@ -1493,13 +1586,17 @@ export default function FormatsTables() {
                             fontSize={"18px"}
                             marginBottom={"30px"}
                             fontWeight={"medium"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             Chronological vs Functional vs Combination Resume
                         </Text>
 
                         {/* table */}
                         <TableContainer>
-                            <Table size="lg">
+                            <Table
+                                size="lg"
+                                fontFamily={`'EuclidCircularB-Medium', sans-serif`}
+                            >
                                 <Thead
                                     backgroundColor={"#fafafa"}
                                 >
@@ -1539,7 +1636,7 @@ export default function FormatsTables() {
                                                                         index === 0 ?
                                                                             "16px"
                                                                             :
-                                                                            "15px"
+                                                                            "14px"
                                                                     }
                                                                 >
                                                                     {item?.text}
@@ -1557,9 +1654,10 @@ export default function FormatsTables() {
 
 
                         <Text
-                            fontSize={"15px"}
+                            fontSize={"16px"}
                             lineHeight={8}
                             margin={"30px 0px 40px 0px"}
+                            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
                             When making a resume in our builder, drag & drop bullet points, skills, and auto-fill the boring stuff. Spell check? Check. Start building a &nbsp;
                             <Link
@@ -1604,24 +1702,21 @@ export default function FormatsTables() {
                                 >
                                     <Link
                                         href="/templates"
-                                        height={["45px", "55px", "55px", "55px"]}
-                                        width={["100%", "100%", "90%", "90%", "70%"]}
-                                        backgroundColor={"#006772"}
-                                        display={"flex"}
-                                        alignItems={"center"}
-                                        justifyContent={"center"}
-                                        color={"#fff"}
-                                        fontSize={["13px", "18px", "18px", "18px", "18px"]}
-                                        borderRadius={"30px 30px"}
                                         textDecoration={"none"}
                                         _hover={{
                                             textDecoration: "none",
-                                            color: "#fff",
-                                            backgroundColor: 'red',
-                                            transition: '0.5s'
                                         }}
                                     >
-                                        CREATE MY RESUME NOW
+                                        <CommonButton
+                                            title={'CREATE MY RESUME NOW'}
+                                            fontSize={["13px", "16px", "16px", "16px", "16px"]}
+                                            hoverCursor={"pointer"}
+                                            backgroundColor={'#2CACD5'}
+                                            color={'white'}
+                                            hoverColor={"white"}
+                                            hoverBackgroundColor={"#2CACD5"}
+                                            padding={'25px 30px'}
+                                        />
                                     </Link>
                                 </Box>
                             </>
@@ -1647,6 +1742,7 @@ export default function FormatsTables() {
                         padding={"20px 10px"}
                         textAlign={"center"}
                         fontSize={"16px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         When you re done,&nbsp;
                         <Link
@@ -1678,22 +1774,25 @@ export default function FormatsTables() {
                         fontSize={"30px"}
                         fontWeight={"medium"}
                         paddingBottom={"25px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         Make Sure Your Resume Format Beats <br />
                         the ATS Resume Test
                     </Text>
                     {/* description */}
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         marginBottom={"20px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         A disturbing thought:
                     </Text>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         marginBottom={"20px"}
                         lineHeight={8}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         According to &nbsp;
                         <Link
@@ -1705,29 +1804,33 @@ export default function FormatsTables() {
                     </Text>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         marginBottom={"25px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         Why s that?
                     </Text>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         marginBottom={"25px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         Because as many as 7 out of 10 large companies use the ATS resume checker (short for “Applicant Tracking Software”).
                     </Text>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         marginBottom={"25px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         So—
                     </Text>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         marginBottom={"25px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         Make sure your
                         <Link
@@ -1741,15 +1844,17 @@ export default function FormatsTables() {
                         fontSize={"24px"}
                         fontWeight={"medium"}
                         marginBottom={"30px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         {PASS_SCAN_FORMATS?.title}
                     </Text>
 
                     <UnorderedList
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         lineHeight={8}
                         marginBottom={"30px"}
                         padding={"0px 15px"}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         {
                             PASS_SCAN_FORMATS?.data.map((item, index) => (
@@ -1765,9 +1870,10 @@ export default function FormatsTables() {
                     </UnorderedList>
 
                     <Text
-                        fontSize={"15px"}
+                        fontSize={"16px"}
                         marginBottom={"30px"}
                         lineHeight={8}
+                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
                         {PASS_SCAN_FORMATS?.description} &nbsp;
                         <Link
