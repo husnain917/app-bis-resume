@@ -15,6 +15,7 @@ const Name = (props) => {
     SNamePlaceholder,
     parentContainerStyle,
     margin,
+    fontColor,
   } = props;
   return (
     <Stack
@@ -28,6 +29,7 @@ const Name = (props) => {
           placeholder={FNamePlaceholder ? FNamePlaceholder : 'First Name'}
           customClass={`${FNameStyle}`}
           path={'profile.firstName'}
+          color={fontColor ? fontColor : ''}
         />
       )}
       {SName && (
@@ -36,6 +38,7 @@ const Name = (props) => {
           placeholder={SNamePlaceholder ? SNamePlaceholder : 'Last Name'}
           customClass={`${SNameStyle}`}
           path={'profile.lastName'}
+          color={fontColor ? fontColor : ''}
         />
       )}
     </Stack>

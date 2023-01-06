@@ -3,8 +3,7 @@ import {
   AiOutlineWhatsApp,
   AiOutlineComment,
 } from 'react-icons/ai';
-import { FiFacebook } from 'react-icons/fi';
-import { SlSocialLinkedin, SlSocialTwitter } from 'react-icons/sl';
+import { SlSocialLinkedin, SlSocialTwitter, SlSocialFacebook } from 'react-icons/sl';
 
 export const RESUME_NOW = [
   {
@@ -514,7 +513,7 @@ export const SIDEBAR_DATA = [
     text: 'likes',
   },
   {
-    icon: <FiFacebook />,
+    icon: <SlSocialFacebook />,
     href: '#',
   },
   {

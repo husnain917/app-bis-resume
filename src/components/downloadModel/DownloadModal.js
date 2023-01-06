@@ -8,15 +8,17 @@ import {
     Button,
     Text,
     Link,
-    Box
+    Box,
+    Image
 } from '@chakra-ui/react'
 import React from "react";
 import {
     DownloadIcon,
 } from '@chakra-ui/icons';
-
+import styles from "./downloadModel.module.css";
 export default function DownloadModal({
     downloadPDF,
+    downloadDocx,
 }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     // Close Model Handler Function
@@ -32,7 +34,6 @@ export default function DownloadModal({
                 color="white"
                 _hover={{
                     backgroundColor: 'transparent',
-
                     color: '#313C4E',
                     transition: '0.4s',
                 }}
@@ -47,9 +48,36 @@ export default function DownloadModal({
                 isOpen={isOpen}
                 onClose={onClose}
                 size={'md'}
+                isCentered={true}
             >
                 <ModalOverlay />
-                <ModalContent>
+                <Box
+                    display={['none','none','none','block']}
+                    className={styles.avator}
+                >
+                    <Image
+                        boxSize='200px'
+                        objectFit='contain'
+                        src='/owly-head.png'
+                        alt='Image Not Found'
+                        transition={'1.5s'}
+                    />
+                </Box>
+                <Box
+                    display={['none','none','none','block']}
+                    className={styles.wing}
+                >
+                    <Image
+                        boxSize='90px'
+                        objectFit='contain'
+                        src='/owly-wing.png'
+                        alt='Image Not Found'
+                        transition={'1.5s'}
+                    />
+                </Box>
+                <ModalContent
+                    transition={'0.5s'}
+                >
                     <ModalBody
                         textAlign={'center'}
                         className={'noselectText'}
@@ -61,7 +89,7 @@ export default function DownloadModal({
                             fontWeight={'bold'}
                             fontFamily={`EuclidCircularB-Bold', sans-serif`}
                         >
-                            Are you download template?
+                            Are you downloading template?
                         </Text>
                         <Text
                             fontSize={'14px'}
@@ -115,6 +143,7 @@ export default function DownloadModal({
                                     boxShadow: '0px -1px 4px 4px #8fd1e7',
                                     borderRadius: '6px'
                                 }}
+                                onClick={downloadDocx}
                             >
                                 DOC
                             </Button>
