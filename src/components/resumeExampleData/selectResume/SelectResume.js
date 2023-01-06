@@ -14,6 +14,7 @@ import Link from "next/link";
 import { useWindowSizing } from "../../../../customHooks/useWindowSizing";
 import Carasol from "../carasol/Carasol";
 import Carasol1 from "../carasol/Carasol1";
+import CommonButton from "../../commonButton/CommonButton";
 import {
   ArrowLeftIcon,
   ArrowBackIcon,
@@ -112,9 +113,21 @@ const SelectResume = () => {
                     marginBottom={"60px"}
                     display={["none", "none", "none", "block", "block"]}
                   >
-                    <a className="button" href="/app/create-resume">
+                    {/* <a className="button" href="/app/create-resume">
                       Select Template
-                    </a>
+                    </a> */}
+                    <Box mx={2}>
+                      <CommonButton
+                        backgroundColor={"#2CACD5"}
+                        color={"whitesmoke"}
+                        fontSize={["14x", "14px", "16px", "16px", "16px"]}
+                        height={"40px"}
+                        width={"150px"}
+                        padding={"20px"}
+                        borderRadius={"5px"}
+                        title={"Select Template"}
+                      />
+                    </Box>
                   </Box>
                 </Box>
                 <Box className="resume-templates__trustpilot">

@@ -3,6 +3,7 @@ import { Box, Text, Button, Image, SimpleGrid } from "@chakra-ui/react";
 import { Badge } from "@chakra-ui/react";
 import Link from "next/link";
 import { useWindowSizing } from "../../../../customHooks/useWindowSizing";
+import CommonButton from "../../commonButton/CommonButton";
 
 import {
   PhoneIcon,
@@ -103,7 +104,10 @@ const CommonComponent = ({ data }) => {
                   }}
                   onClick={() => {}}
                 >
-                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                  <Text
+                    fontSize={["1.1em", "1.3em"]}
+                    className={"medium-heading"}
+                  >
                     {template.label}
                   </Text>
                   <Box mt={6} border={"1px solid black"}>
@@ -134,7 +138,10 @@ const CommonComponent = ({ data }) => {
                   }}
                   onClick={() => {}}
                 >
-                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                  <Text
+                    fontSize={["1.1em", "1.3em"]}
+                    className={"medium-heading"}
+                  >
                     {template.label}
                   </Text>
                   <Box mt={6} border={"1px solid black"}>
@@ -165,7 +172,11 @@ const CommonComponent = ({ data }) => {
                   }}
                   onClick={() => {}}
                 >
-                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                  <Text
+                    fontSize={["1.1em", "1.3em"]}
+                    fontWeight={"500"}
+                    className={"medium-heading"}
+                  >
                     {template.label}
                   </Text>
                   <Box mt={6}>
@@ -198,7 +209,10 @@ const CommonComponent = ({ data }) => {
                   }}
                   onClick={() => {}}
                 >
-                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"600"}>
+                  <Text
+                    fontSize={["1.1em", "1.3em"]}
+                    className={"medium-heading"}
+                  >
                     {template.label}
                   </Text>
                   <Box mt={6} border={"1px solid black"}>
@@ -215,9 +229,21 @@ const CommonComponent = ({ data }) => {
               );
             })}
       </SimpleGrid>
-      <Button type="button" onClick={() => setExpanded(!expanded)} mt={"8"}>
+      {/* <Button type="button" onClick={() => setExpanded(!expanded)} mt={"8"}>
         {expanded ? "Show Less" : "Show More"}
-      </Button>
+      </Button> */}
+      <Box m={4}>
+        <CommonButton
+          backgroundColor={"#2CACD5"}
+          color={"whitesmoke"}
+          borderRadius={"none"}
+          height={"40px"}
+          width={"150px"}
+          title={expanded ? "Show Less" : "Show More"}
+          onClick={() => setExpanded(!expanded)}
+          mt={"8"}
+        />
+      </Box>
     </Box>
   );
 };

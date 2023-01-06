@@ -62,14 +62,16 @@ const WritingGuides = () => {
           >
             Check my Resume
           </Box> */}
-          <CommonButton
-            backgroundColor="whitesmoke"
-            borderRadius={"none"}
-            color={"lightcoral"}
-            height={"40px"}
-            width={"150px"}
-            title={"Check My Resume"}
-          />
+          <Box textAlign={["center", "center", "center", "start", "start"]}>
+            <CommonButton
+              backgroundColor={"#2CACD5"}
+              color={"whitesmoke"}
+              borderRadius={"none"}
+              height={"40px"}
+              width={"150px"}
+              title={"Check My Resume"}
+            />
+          </Box>
         </Box>
         <Box
           position={"relative"}

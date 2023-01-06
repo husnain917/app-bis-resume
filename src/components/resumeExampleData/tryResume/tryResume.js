@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Text, Button, Image } from "@chakra-ui/react";
 import { Grid } from "@chakra-ui/react";
+import CommonButton from "../../commonButton/CommonButton";
 
 const TryResume = () => {
   return (
@@ -91,7 +92,7 @@ const TryResume = () => {
               </Text>{" "}
             </Box>
             <Box display={"flex"} alignItems={"center"}>
-              <Button
+              {/* <Button
                 flexShrink={0}
                 marginRight={["12px", "12px", "16px", "16px", "16px"]}
                 className="button1"
@@ -100,7 +101,19 @@ const TryResume = () => {
                 fontSize={["14x", "14px", "16px", "16px", "16px"]}
               >
                 Create My Resume
-              </Button>
+              </Button> */}
+              <Box mx={2}>
+                <CommonButton
+                  backgroundColor={"#2CACD5"}
+                  color={"whitesmoke"}
+                  fontSize={["14x", "14px", "16px", "16px", "16px"]}
+                  height={"40px"}
+                  width={"150px"}
+                  padding={"20px"}
+                  borderRadius={"5px"}
+                  title={"Create My Resume"}
+                />
+              </Box>
               <Button fontSize={["14x", "14px", "16px", "16px", "16px"]}>
                 Resume Examples
               </Button>
