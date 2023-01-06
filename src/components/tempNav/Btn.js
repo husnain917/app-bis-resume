@@ -10,8 +10,8 @@ export default function Btn({ title, onClick, bgColor, className }) {
         bgColor={bgColor}
         color="white"
         fontSize={{ base: '10px', md: '16px' }}
-        height={{ base: '30px', md: '70px' }}
-        w={{ base: '120px', md: '150px ', lg: '180px' }}
+        height={{ base: '30px', md: '50px' }}
+        w={{ base: '120px', md: '150px ', lg: '120px' }}
         // width={'50%'}
         className={className}
         opacity="1"
