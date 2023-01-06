@@ -79,6 +79,7 @@ export default function TempNavbar({
         />
       </Link>
       <Box
+        mt={'0.6%'}
         w="600px"
         display="flex"
         bgColor="#006772"
@@ -152,7 +153,8 @@ export default function TempNavbar({
         <DownloadModal downloadPDF={downloadPDF} />
       </Box>
 
-      <Box position={'absolute'} right={{ base: '10px', lg: '25px' }}>
+      <Box position={'absolute'}
+        mt={'1.5%'} right={{ base: '10px', lg: '25px' }}>
         <Icon
           as={HamburgerIcon}
           onClick={onOpen}
