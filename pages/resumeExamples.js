@@ -14,46 +14,54 @@ import SelectResume from "../src/components/resumeExampleData/selectResume/Selec
 import ChatButton from "../src/components/resumeExampleData/chatButton/chatButton";
 import Carasol from "../src/components/resumeExampleData/carasol/Carasol";
 import Carasol1 from "../src/components/resumeExampleData/carasol/Carasol1";
+import SideBar from "../src/components/sideBar/SideBar";
+import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
 const ResumeExamples = () => {
   return (
-    <Box
-    // fontFamily={"EuclidCircularB-Light"}
-    >
-      {/* <Carasol1 /> */}
-      {/* <Carasol /> */}
-      {/* <ChatButton /> */}
+    <Box>
+      <SideBar />
       <Box
-        bg="#EFF2F9"
-        height={"auto"}
-        width={["100wv", "100wv", "100wv", "100wv", "100wv"]}
+      // fontFamily={"EuclidCircularB-Light"}
       >
-        <WritingGuides />
-      </Box>
-      <Box
-        padding={[
-          "80px 20px 20px 20px",
-          "80px 20px 20px 20px",
-          "80px 44px 20px 44px",
-          "80px 44px 20px 44px",
-          "80px 44px 20px 44px",
-        ]}
-      >
-        <Box maxWidth={"1120px"} display={"flex"} margin={"0 auto"}>
-          <Box width={"100%"} flexGrow={"1"}>
-            {/* <SearchBar /> */}
+        {/* <Carasol1 /> */}
+        {/* <Carasol /> */}
+        {/* <ChatButton /> */}
+        {/* <SideBarSection /> */}
+        {/* <SideBar /> */}
 
-            {popularData.map((data, index) => {
-              return <MostPopular data={data} key={index} />;
-            })}
-            {data.map((data, index) => {
-              return <CommonComponent data={data} key={index} />;
-            })}
+        <Box
+          bg="#EFF2F9"
+          height={"auto"}
+          width={["100wv", "100wv", "100wv", "100wv", "100wv"]}
+        >
+          <WritingGuides />
+        </Box>
+        <Box
+          padding={[
+            "80px 20px 20px 20px",
+            "80px 20px 20px 20px",
+            "80px 44px 20px 44px",
+            "80px 44px 20px 44px",
+            "80px 44px 20px 44px",
+          ]}
+        >
+          <Box maxWidth={"1120px"} display={"flex"} margin={"0 auto"}>
+            <Box width={"100%"} flexGrow={"1"}>
+              {/* <SearchBar /> */}
+
+              {popularData.map((data, index) => {
+                return <MostPopular data={data} key={index} />;
+              })}
+              {data.map((data, index) => {
+                return <CommonComponent data={data} key={index} />;
+              })}
+            </Box>
           </Box>
         </Box>
+        <TryResume />
+        <BlogPost />
+        <SelectResume />
       </Box>
-      <TryResume />
-      <BlogPost />
-      <SelectResume />
     </Box>
   );
 };

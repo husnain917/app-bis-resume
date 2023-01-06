@@ -54,6 +54,7 @@ const AboutUs = () => {
   });
   return (
     <Box classNam="sitecontainer1">
+      {/* <SideBar /> */}
       <Box className="masterWrapper">
         <Box>
           <Box>
@@ -74,6 +75,8 @@ const AboutUs = () => {
                 </Fade>
               )}
             </Box>
+            {/* <SideBar /> */}
+
             <Box
               padding={"50px 0px 50px 0px"}
               className={"mainWrapper"}
@@ -140,8 +143,8 @@ const AboutUs = () => {
           </Box>
         </Box>
         <Box className={"section1"} padding={"50px 0px 50px 0px"}>
-          <Box maxW={"750px"} className={"container1"}>
-            <Box maxW={"750px"} margin={"0 auto"} fontSize={"1.1rem"}>
+          <Box maxW={"850px"} className={"container1"}>
+            <Box maxW={"850px"} margin={"0 auto"} fontSize={"1.1rem"}>
               <Text my={6}>
                 Since 2013, MyPerfectResume has helped more than 15 million
                 people worldwide create stronger resumes, navigate their job
