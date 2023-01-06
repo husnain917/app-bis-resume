@@ -2305,6 +2305,6 @@ video {
   transition: 0.5s opacity;
 }
 .sectionModalBtn2:hover::before {
-  background-color: #922a21ef;
+  background-color: #2cacd5;
   opacity: 1;
 }
