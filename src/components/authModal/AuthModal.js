@@ -153,7 +153,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
   return (
     <>
       <ToastContainer />
-      <Modal isOpen={isModalOpen} size={"ful"}>
+      <Modal isCentered isOpen={isModalOpen} size={'full'}>
         <ModalOverlay />
         <ModalContent
           w={["100%", "100%", "100%", "70%", "60%"]}
@@ -166,15 +166,29 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
             display="flex"
             h={["70%", "85%", "100%", "100%", "100%"]}
           >
-            <Box w={[0, 0, 0, "50%"]} h="100%">
-              {isRegister ? (
-                <Image src="/signup.png" w="100%" h="100%" />
+            <Box w={[0, 0, 0, "50%"]} h="100%" >
+              {!isRegister ? (
+                <Image src="/signup.png" w="100%" h="100%" borderRadius={10} />
               ) : (
-                <Image src="/signin.png" w="100%" h="100%" />
+                <Image src="/signin.png" w="100%" h="100%" borderRadius={10} />
               )}
             </Box>
 
             <Box w={["100%", "100%", "100%", "50%"]} h="auto">
+              <CloseIcon
+                w={8}
+                h={8}
+                color="white"
+                position={"absolute"}
+                right={4}
+                top={2}
+                bgColor="#E1E1E1"
+                p="5px"
+                ml="7%"
+                borderRadius="100px"
+                onClick={() => { setIsModalOpen(false); setFieldActive(false); setErr({ inputField: '', inputId: 0 }), setResetPass(false) }}
+                className={styles.modalBtn}
+              />
               <Box
                 display="flex"
                 justifyContent={resetPass ? "space-between" : "center"}
@@ -220,18 +234,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                     </Box>
                 }
 
-                <CloseIcon
-                  w={8}
-                  h={8}
-                  color="white"
-                  bgColor="#E1E1E1"
-                  p="5px"
-                  ml="7%"
-                  borderRadius="100px"
-                  _hover={{ color: " white", borderRadius: "5px" }}
-                  onClick={() => { setIsModalOpen(false); setFieldActive(false); setErr({ inputField: '', inputId: 0 }), setResetPass(false) }}
-                  className={styles.modalBtn}
-                />
+
               </Box>
 
               <Box ml="7%" mr="7%" mt={err.fieldErr !== '' ? "3%" : "6%"}>
@@ -560,31 +563,31 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                   <></>
                 )
                   :
-                  active===0?
-                  (
-                    <>
-                      <Text fontSize="16px" align="center" mt="5%">
-                        Or Sign In With:
-                      </Text>
+                  active === 0 ?
+                    (
+                      <>
+                        <Text fontSize="16px" align="center" mt="3%">
+                          Or Sign In With:
+                        </Text>
 
-                      <Button
-                        leftIcon={<FaGoogle />}
-                        variant="solid"
-                        bgColor="#E1E1E1"
-                        color="grey"
-                        w="85%"
-                        ml="8%"
-                        borderRadius="100px"
-                        fontSize="16px"
-                        mt="3%"
-                        className={styles.modalBtn}
-                        onClick={() => loginWithGoogle()}
-                      >
-                        Google
-                      </Button>
-                    </>
-                  ):
-                  ''}
+                        <Button
+                          leftIcon={<FaGoogle />}
+                          variant="solid"
+                          bgColor="#E1E1E1"
+                          color="grey"
+                          w="85%"
+                          ml="8%"
+                          borderRadius="100px"
+                          fontSize="16px"
+                          mt="3%"
+                          className={styles.modalBtn}
+                          onClick={() => loginWithGoogle()}
+                        >
+                          Google
+                        </Button>
+                      </>
+                    ) :
+                    ''}
 
 
               </Box>
