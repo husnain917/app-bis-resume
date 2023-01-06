@@ -21,27 +21,31 @@ import {
 import { useSelector } from 'react-redux';
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
 const FashionTemp5 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  let font = useSelector((state) => state.fontReducer.font);
+  console.log('Font:', font);
   const [show, setShow] = useShow();
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
   return (
     <div style={{ overflow: 'auto' }}>
       {/* <Navbar /> */}
-      <TempLayout work={true} education={true} languages={true} skills={true} downloadPDF={downloadPDFHandler}>
+      <TempLayout
+        work={true}
+        education={true}
+        languages={true}
+        skills={true}
+        downloadPDF={downloadPDFHandler}
+      >
         <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
           flexDir={'column'}
           alignItems={{ base: 'none', lg: 'center' }}
         >
-          <Box
-            mt="100px"
-            mb={10}
-            mx={20}
-          >
+          <Box mt="100px" mb={10} mx={20}>
             <HStack
               minW={830}
               maxW={830}
@@ -188,7 +192,11 @@ const FashionTemp5 = () => {
                   fontWeight={800}
                   fontSize={'25px'}
                 />
-                <About minW={'full'} maxW="full" aboutStyle={Classes.aboutText} />
+                <About
+                  minW={'full'}
+                  maxW="full"
+                  aboutStyle={Classes.aboutText}
+                />
                 {resumeData?.work?.visible && (
                   <div className={Classes.sideMenu}>
                     <div
@@ -216,7 +224,9 @@ const FashionTemp5 = () => {
                         lineH="3px"
                         fontWeight={800}
                         fontSize={'25px'}
-                        onSideSectionShow={() => setShow({ ...show, work: true })}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, work: true })
+                        }
                       />
                       <WorkExperience
                         position={true}
