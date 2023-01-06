@@ -29,9 +29,12 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import TempLayout from '../../src/components/tempNav/TempLayout';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
 const CollegeTemp = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   // custom Hook For Template
   const [show, setShow] = useShow();
   // PDF Download Hook
@@ -57,9 +60,7 @@ const CollegeTemp = () => {
           alignItems={{ sm: 'none', lg: 'center' }}
           pt="70px"
         >
-          <Box
-            margin={'40px 20px 30px 20px'}
-          >
+          <Box margin={'40px 20px 30px 20px'}>
             <Box
               minW={910}
               pt={12}
@@ -81,9 +82,13 @@ const CollegeTemp = () => {
                       direction="row"
                       FNameStyle={Classes.techName}
                       SNameStyle={Classes.techName}
+                      fontColor={backgroundColor ? backgroundColor : ''}
                     />
                     <Box pb={10} justifyContent={'center'} ml={1}>
-                      <Profession professionStyle={Classes.ProfessionHybrid} />
+                      <Profession
+                        professionStyle={Classes.ProfessionHybrid}
+                        fontColor={color ? color : ''}
+                      />
                       <About
                         minW="full"
                         maxW="full"
@@ -97,6 +102,7 @@ const CollegeTemp = () => {
                     minHeight={150}
                     maxHeight={150}
                     marginLeft="40px"
+                    borderColor={backgroundColor ? backgroundColor : ''}
                   />
                 </HStack>
                 <Box
@@ -110,11 +116,13 @@ const CollegeTemp = () => {
                     email={true}
                     phone={true}
                     circleIcon={true}
-                    iconColor="#313c4e"
+                    iconColor={backgroundColor ? backgroundColor : '#313c4e'}
                     circleSize="30px"
                     circleBorderW="1px"
                     margin="10px"
-                    circleBorderColor="#313c4e"
+                    circleBorderColor={
+                      backgroundColor ? backgroundColor : '#313c4e'
+                    }
                     direction="row-reverse"
                   />
                 </Box>
@@ -132,7 +140,7 @@ const CollegeTemp = () => {
                           {/* Section Side Menu */}
                           {show.education && (
                             <SectionSideMenu
-                              bg={'#313B47'}
+                              bg={backgroundColor ? backgroundColor : '#313B47'}
                               onHide={() =>
                                 setShow({ ...show, education: false })
                               }
@@ -144,13 +152,19 @@ const CollegeTemp = () => {
                           {/* Heading For Education Section  */}
                           <Heading
                             title="EDUCATION"
-                            borderTop="2px solid #313c4e"
-                            borderBottom={'2px solid #313c4e'}
+                            borderTop={`2px solid ${
+                              backgroundColor ? backgroundColor : '#313c4e'
+                            }`}
+                            borderBottom={`2px solid ${
+                              backgroundColor ? backgroundColor : '#313c4e'
+                            }`}
                             fontSize="23px"
                             fontWeight={'bold'}
                             minW="fit-content"
                             maxW={'fit-content'}
-                            color="#313B47"
+                            color={
+                              backgroundColor ? backgroundColor : '#313B47'
+                            }
                             margin={'0px 0px 10px 0px'}
                             onSideSectionShow={() =>
                               setShow({ ...show, education: true })
@@ -178,7 +192,7 @@ const CollegeTemp = () => {
                           {/* Section Side Menu */}
                           {show.work && (
                             <SectionSideMenu
-                              bg={'#313B47'}
+                              bg={backgroundColor ? backgroundColor : '#313B47'}
                               onHide={() => setShow({ ...show, work: false })}
                               onDelete={WORK}
                             />
@@ -188,11 +202,17 @@ const CollegeTemp = () => {
                           {/* Work Experience Heading  */}
                           <Heading
                             title="WORK EXPERIENCE"
-                            borderTop="2px solid #313c4e"
-                            borderBottom={'2px solid #313c4e'}
+                            borderTop={`2px solid ${
+                              backgroundColor ? backgroundColor : '#313c4e'
+                            }`}
+                            borderBottom={`2px solid ${
+                              backgroundColor ? backgroundColor : '#313c4e'
+                            }`}
                             fontSize="23px"
                             fontWeight={'bold'}
-                            color="#313B47"
+                            color={
+                              backgroundColor ? backgroundColor : '#313B47'
+                            }
                             minW="fit-content"
                             maxW={'fit-content'}
                             margin={'10px 0px'}
@@ -234,7 +254,7 @@ const CollegeTemp = () => {
                       <div className={Classes.width}>
                         {show.skills && (
                           <SectionSideMenu
-                            bg={'#313B47'}
+                            bg={backgroundColor ? backgroundColor : '#313B47'}
                             onHide={() => setShow({ ...show, skills: false })}
                             onDelete={SKILL}
                           />
@@ -244,11 +264,15 @@ const CollegeTemp = () => {
                         {/* skill Heading */}
                         <Heading
                           title="SKILLS"
-                          borderTop="2px solid #313c4e"
-                          borderBottom={'2px solid #313c4e'}
+                          borderTop={`2px solid ${
+                            backgroundColor ? backgroundColor : '#313c4e'
+                          }`}
+                          borderBottom={`2px solid ${
+                            backgroundColor ? backgroundColor : '#313c4e'
+                          }`}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color="#313B47"
+                          color={backgroundColor ? backgroundColor : '#313B47'}
                           minW={'full'}
                           maxW={'full'}
                           margin={'10px 0px'}
@@ -268,7 +292,7 @@ const CollegeTemp = () => {
                         {/* Section Side Menu */}
                         {show.project && (
                           <SectionSideMenu
-                            bg={'#313B47'}
+                            bg={backgroundColor ? backgroundColor : '#313B47'}
                             onHide={() => setShow({ ...show, project: false })}
                             onDelete={PROJECT}
                           />
@@ -278,11 +302,15 @@ const CollegeTemp = () => {
                         {/* project Section Heading */}
                         <Heading
                           title="PERSONAL PROJECTS"
-                          borderTop="2px solid #313c4e"
-                          borderBottom={'2px solid #313c4e'}
+                          borderTop={`2px solid ${
+                            backgroundColor ? backgroundColor : '#313c4e'
+                          }`}
+                          borderBottom={`2px solid ${
+                            backgroundColor ? backgroundColor : '#313c4e'
+                          }`}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color="#313B47"
+                          color={backgroundColor ? backgroundColor : '#313B47'}
                           minW={'full'}
                           maxW={'full'}
                           margin={'15px 0px'}
@@ -312,7 +340,7 @@ const CollegeTemp = () => {
                         {/* Section Side Menu */}
                         {show.organization && (
                           <SectionSideMenu
-                            bg={'#313B47'}
+                            bg={backgroundColor ? backgroundColor : '#313B47'}
                             onHide={() =>
                               setShow({ ...show, organization: false })
                             }
@@ -324,11 +352,15 @@ const CollegeTemp = () => {
                         {/* Organization Heading */}
                         <Heading
                           title="ORGANIZATION"
-                          borderTop="2px solid #313c4e"
-                          borderBottom={'2px solid #313c4e'}
+                          borderTop={`2px solid ${
+                            backgroundColor ? backgroundColor : '#313c4e'
+                          }`}
+                          borderBottom={`2px solid ${
+                            backgroundColor ? backgroundColor : '#313c4e'
+                          }`}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color="#313B47"
+                          color={backgroundColor ? backgroundColor : '#313B47'}
                           minW={'full'}
                           maxW={'full'}
                           margin={'15px 0px'}
@@ -356,7 +388,7 @@ const CollegeTemp = () => {
                         {/* Section Side Menu */}
                         {show.certificates && (
                           <SectionSideMenu
-                            bg={'#313B47'}
+                            bg={backgroundColor ? backgroundColor : '#313B47'}
                             onHide={() =>
                               setShow({ ...show, certificates: false })
                             }
@@ -368,11 +400,15 @@ const CollegeTemp = () => {
                         {/* Certificate Heading */}
                         <Heading
                           title="CERTIFICATES"
-                          borderTop="2px solid #313c4e"
-                          borderBottom={'2px solid #313c4e'}
+                          borderTop={`2px solid ${
+                            backgroundColor ? backgroundColor : '#313c4e'
+                          }`}
+                          borderBottom={`2px solid ${
+                            backgroundColor ? backgroundColor : '#313c4e'
+                          }`}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color="#313B47"
+                          color={backgroundColor ? backgroundColor : '#313B47'}
                           minW={'full'}
                           maxW={'full'}
                           margin={'15px 0px'}
@@ -399,8 +435,10 @@ const CollegeTemp = () => {
                         {/* Section Side Menu */}
                         {show.languages && (
                           <SectionSideMenu
-                            bg={'#313B47'}
-                            onHide={() => setShow({ ...show, languages: false })}
+                            bg={backgroundColor ? backgroundColor : '#313B47'}
+                            onHide={() =>
+                              setShow({ ...show, languages: false })
+                            }
                             onDelete={LANGUAGES}
                           />
                         )}
@@ -409,12 +447,16 @@ const CollegeTemp = () => {
                         {/* languages Heading */}
                         <Heading
                           title="LANGUAGES"
-                          borderTop="2px solid #313c4e"
-                          borderBottom={'2px solid #313c4e'}
+                          borderTop={`2px solid ${
+                            backgroundColor ? backgroundColor : '#313c4e'
+                          }`}
+                          borderBottom={`2px solid ${
+                            backgroundColor ? backgroundColor : '#313c4e'
+                          }`}
                           minW="full"
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color="#313B47"
+                          color={backgroundColor ? backgroundColor : '#313B47'}
                           margin={'15px 0px'}
                           onSideSectionShow={() =>
                             setShow({ ...show, languages: true })
@@ -433,8 +475,10 @@ const CollegeTemp = () => {
                           {/* Section Side Menu */}
                           {show.interest && (
                             <SectionSideMenu
-                              bg={'#313B47'}
-                              onHide={() => setShow({ ...show, interest: false })}
+                              bg={backgroundColor ? backgroundColor : '#313B47'}
+                              onHide={() =>
+                                setShow({ ...show, interest: false })
+                              }
                               onDelete={INTEREST}
                             />
                           )}
@@ -445,9 +489,15 @@ const CollegeTemp = () => {
                             title="INTEREST"
                             fontSize="23px"
                             fontWeight={'bold'}
-                            borderTop="2px solid #313c4e"
-                            borderBottom={'2px solid #313c4e'}
-                            color="#313B47"
+                            borderTop={`2px solid ${
+                              backgroundColor ? backgroundColor : '#313c4e'
+                            }`}
+                            borderBottom={`2px solid ${
+                              backgroundColor ? backgroundColor : '#313c4e'
+                            }`}
+                            color={
+                              backgroundColor ? backgroundColor : '#313B47'
+                            }
                             minW={'full'}
                             margin={'15px 0px'}
                             onSideSectionShow={() =>
