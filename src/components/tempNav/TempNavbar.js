@@ -85,6 +85,7 @@ export default function TempNavbar({
         borderRadius={'100px'}
         justifyContent="center"
         py={1}
+        ml={{ base: '120px', md: '0px' }}
       >
         <Popover>
           <PopoverTrigger>
