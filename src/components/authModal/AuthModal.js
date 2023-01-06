@@ -58,7 +58,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
       dispatch(loginMagicUser(email, setUser, setLoading, setIsModalOpen))
     }
     else {
-      setErr({ inputField: 'This field is required', inputId: 7 })
+      setErr({ inputField: 'This field is required', inputId: 2 })
     }
   }
 
@@ -262,7 +262,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                           pb="10px"
                           _hover={{
                             color: "black",
-                            fontSize: "18px",
                           }}
                           value={fName}
                           onChange={(e) => setFName(e.target.value)}
@@ -285,7 +284,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                           pb="10px"
                           _hover={{
                             color: "black",
-                            fontSize: "18px",
                           }}
                           value={lName}
                           onChange={(e) => setLName(e.target.value)}
@@ -311,7 +309,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                       mt="3%"
                       _hover={{
                         color: "black",
-                        fontSize: "18px",
                       }}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -338,7 +335,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                         pb="10px"
                         _hover={{
                           color: "black",
-                          fontSize: "18px",
                         }}
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -364,7 +360,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                     }
                     <Checkbox
                       size="lg"
-                      mt="10%"
+                      mt="5%"
                       colorScheme="MediumSpringGreen"
                       iconColor="MediumSpringGreen"
                       value={terms}
@@ -394,7 +390,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                       pb="10px"
                       _hover={{
                         color: "black",
-                        fontSize: "18px",
                       }}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -565,6 +560,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                   <></>
                 )
                   :
+                  active===0?
                   (
                     <>
                       <Text fontSize="16px" align="center" mt="5%">
@@ -587,7 +583,8 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                         Google
                       </Button>
                     </>
-                  )}
+                  ):
+                  ''}
 
 
               </Box>
