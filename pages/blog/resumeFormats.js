@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import Navbar from "../../src/components/navbar/Navbar";
 import ResumeFormats from "../../src/components/blog/ResumeFormats";
 import {
   Box,
@@ -9,12 +8,11 @@ import {
   Image
 } from "@chakra-ui/react";
 import { RESUME_NOW } from "../../src/components/blog/CustomData";
-import Sidebar from "../../src/components/blog/Sidebar";
 import styles from "../../styles/resumeFormats.module.css";
 import FormatsTables from "../../src/components/blog/FormatsTables";
-import Footer from "../../src/components/footer/Footer";
-import Layout from "../../src/Layout";
 import CommonButton from "../../src/components/commonButton/CommonButton";
+import SideBarSection from '../../src/components/aboutUs/SideBarSection/SideBarSection';
+
 export default function Resume_Formats() {
   // state
   const [over, setOver] = useState(false)
@@ -28,15 +26,21 @@ export default function Resume_Formats() {
         maxW={["100%", "100%", "80%", "80%"]}
         display={"flex"}
         justifyContent={"space-between"}
+        paddingBottom={'10px'}
       >
         <Box
-          maxW={["0%", "0%", "0%", "10%"]}
+          w={["0%", "0%", "0%", "10%"]}
+          display={["none", "none", "none", "block"]}
         >
-          <Sidebar />
+          <Box
+            className={styles.sideBarContainer}
+          >
+            <SideBarSection />
+          </Box>
         </Box>
         <Box
           padding={"20px 0px 40px 0px"}
-          maxW={["100%", "100%", "100%", "88%"]}
+          w={["100%", "100%", "100%", "88%"]}
         >
           {
             RESUME_NOW.map((item, index) => (
