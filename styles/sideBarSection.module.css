@@ -1,9 +1,9 @@
 .nav {
-    position: fixed;
+    /* position: fixed; */
     width: 70px;
     transition: all 0.9s linear;
     /* margin-left: 10px; */
-    position: absolute;
+    /* position: absolute; */
     margin-top: 60px;
 }
 
@@ -111,10 +111,14 @@
     overflow-y: hidden;
 
 }
-
-
-
 .ul li:hover a span {
     padding-left: 25%;
     display: block;
+}
+.sideBarContainer{
+    position: sticky;
+    top:5%;
+    left:0%;
+    display: block;
+    
 }

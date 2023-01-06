@@ -9,6 +9,9 @@ import bottomprice from '../../public/bottomPrice.png';
 import Sidebar from "../../src/components/blog/Sidebar"
 import FaqsSection from "../../src/components/faqsComponent/FaqsSection";
 import Link from "next/link";
+import SideBar from "../../src/components/sideBar/SideBar";
+import style from "../../styles/sideBarSection.module.css"
+import SideBarSection from "../../src/components/aboutUs/SideBarSection/SideBarSection";
 
 
 export default function Pricing() {
@@ -18,11 +21,28 @@ export default function Pricing() {
             <Box
                 maxW={["100%", "100%", "100%", "100%"]}
                 display={"flex"}
+                justifyContent={"space-between"}
             >
+
+                <Box
+                    maxW={["0%", "0%", "0%", "5%"]}
+                    padding={'60px 0px 0px 0px'}
+                    ml={"7%"}
+                    display={["none", "none", "none", "block"]}
+                >
+                    <Box
+                        className={style.sideBarContainer}
+                    >
+                        <SideBar />
+                    </Box>
+                </Box>
+
+
                 <Box
                     maxW={["100%", "100%", "100%", "100%"]}
                 >
                     <div style={{ marginTop: "5%", }}>
+
                         <Box
                             w={["100%", "100%", "80%",]}
 

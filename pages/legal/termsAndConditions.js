@@ -17,6 +17,7 @@ import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import TableOfContent from '../../src/components/legal/TableOfContent';
 import SideBarSection from '../../src/components/aboutUs/SideBarSection/SideBarSection';
 import Fade from "react-reveal/Fade";
+import SideBar from '../../src/components/sideBar/SideBar';
 
 export default function Terms_And_Conditions() {
     // sidebar state
@@ -60,7 +61,7 @@ export default function Terms_And_Conditions() {
                         {isVisible && (
                             <Fade>
                                 {" "}
-                                <SideBarSection />{" "}
+                                <SideBar/>{" "}
                             </Fade>
                         )}
                     </Box>
