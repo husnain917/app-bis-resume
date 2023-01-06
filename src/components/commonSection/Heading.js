@@ -70,6 +70,7 @@ export default function Heading({
             bg={circleBg ? circleBg : 'none'}
             borderWidth={circleBorderW ? circleBorderW : '0px'}
             borderColor={circleBorderColor ? circleBorderColor : 'none'}
+            transition={'0.5s background'}
           >
             {React.createElement(icon)}
           </Circle>
@@ -89,6 +90,7 @@ export default function Heading({
           p={textPadding ? textPadding : ''}
           letterSpacing={letterSpacing ? letterSpacing : ''}
           fontFamily={font}
+          transition="1s color"
         >
           {title}
         </Text>
@@ -99,6 +101,7 @@ export default function Heading({
             bg={lineBg ? lineBg : '#000'}
             alignSelf={lineAlign ? lineAlign : 'flex-start'}
             className={`${lineStyle ? lineStyle : ''}`}
+            transition="1s background"
           ></Box>
         )}
       </div>

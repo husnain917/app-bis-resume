@@ -5,8 +5,13 @@ import Text from './Text';
 
 const Profession = (props) => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  const { professionPlaceholder, professionStyle, containerStyle, margin } =
-    props;
+  const {
+    professionPlaceholder,
+    professionStyle,
+    containerStyle,
+    margin,
+    fontColor,
+  } = props;
   return (
     <Box
       className={`${containerStyle ? containerStyle : ''}`}
@@ -19,6 +24,7 @@ const Profession = (props) => {
         customClass={`${professionStyle}`}
         path={'profile.profession'}
         value={resumeData?.profile?.profession}
+        color={fontColor ? fontColor : ''}
       />
     </Box>
   );

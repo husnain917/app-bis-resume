@@ -35,6 +35,7 @@ function Text(props) {
           marginRight: props.marginRight,
           marginTop: props.marginTop,
           fontFamily: font,
+          transition: '1s color',
         }}
         // style={{
 

@@ -25,7 +25,6 @@ import Image from "next/image";
 import CommonButton from "../commonButton/CommonButton";
 import {
   NAV_ITEMS,
-  EnglishDropDown,
   Login_Buttons,
 } from "../constant/navbarLinks/NavbarLinks";
 import { useState } from "react";
@@ -34,18 +33,16 @@ import { useSelector } from "react-redux";
 import ProfileComponent from "./ProfileComponent";
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
-  const linkHoverColor = useColorModeValue("gray.800", "white");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
-  const breakpointWidth = useBreakpointValue({
-    xl: "120px",
-    lg: "80px",
-    md: "110px",
-  });
   const breakpointfontSize = useBreakpointValue({ xl: "14px", lg: "12px" });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [active, setIsActive] = useState(null);
   const isUserLoggedIn = useSelector(state => state.AuthReducer.isUserLoggedIn)
   const uid = useSelector(state => state.AuthReducer.userID)
+  const breakpointWidth = useBreakpointValue({
+    xl: "120px",
+    lg: "80px",
+    md: "110px",
+  });
   return (
     <Box>
       <Flex
@@ -99,52 +96,6 @@ export default function Navbar() {
           spacing={5}
           marginTop={useBreakpointValue({ xl: "20px", lg: "12px", md: "15px" })}
         >
-          {/* English dropdown start */}
-          {/* {EnglishDropDown?.map((navItem) => (
-                      <Box key={navItem?.label}
-                          display={{ base: 'none', lg: 'inline-flex' }}
-                      >
-                          <Popover trigger={'hover'} placement={'bottom-start'}>
-                              <PopoverTrigger>
-                                  <Link
-                                      padding={'8px 0px'}
-                                      minW={'110'}
-                                      href={navItem?.href ?? '#'}
-                                      fontSize={'14px'}
-                                      fontWeight={500}
-                                      display={'inline-block'}
-                                      color={linkColor}
-                                      border={'1px'}
-                                      borderColor={'#CCC'}
-                                      textAlign={'center'}
-                                      _hover={{
-                                          textDecoration: 'none',
-                                          color: linkHoverColor,
-                                      }}>
-                                      {navItem?.label}
-                                      <Icon color={'black.400'} w={5} h={5} as={navItem.icon} />
-                                  </Link>
-                              </PopoverTrigger>
-                              {navItem.children && (
-                                  <PopoverContent
-                                      border={0}
-                                      boxShadow={'xl'}
-                                      bg={popoverContentBgColor}
-                                      p={4}
-                                      rounded={'xl'}
-                                      minW={'xs'}>
-                                      <Stack>
-                                          {navItem.children.map((child) => (
-                                              <DesktopSubNav key={child.label} {...child} />
-                                          ))}
-                                      </Stack>
-                                  </PopoverContent>
-                              )}
-                          </Popover>
-                      </Box>
-                  ))} */}
-          {/* English dropdown end */}
-
           {/* login buttons */}
           {
             !isUserLoggedIn ?
@@ -267,11 +218,6 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
-  const breakpointfontSize = useBreakpointValue({
-    xl: "18px",
-    lg: "20px",
-  });
-
   return (
     <Stack
       direction={"row"}
@@ -296,8 +242,8 @@ const DesktopNav = () => {
                 >
                   {navItem?.label}
                   {navItem.label === "Resume" ||
-                  navItem.label === "CV" ||
-                  navItem.label === "Cover Letter" ? (
+                    navItem.label === "CV" ||
+                    navItem.label === "Cover Letter" ? (
                     <>
                       <Icon color={"black.400"} w={5} h={5} as={navItem.icon} />
                     </>
@@ -371,9 +317,6 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
 };
 
 const MobileNav = () => {
-  const linkColor = useColorModeValue("gray.600", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -385,11 +328,6 @@ const MobileNav = () => {
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
-
-      {/* english dropdown */}
-      {/* {EnglishDropDown.map((navItem) => (
-              <MobileNavItem key={navItem.label} {...navItem} />
-          ))} */}
 
       {/* login buttons */}
       <Box display={"flex"} justifyContent={"space-evenly"}>
@@ -409,8 +347,8 @@ const MobileNav = () => {
                   items?.label === "Register"
                     ? "#006772"
                     : items?.label === "Login"
-                    ? "#006772"
-                    : ""
+                      ? "#006772"
+                      : ""
                 }
                 justifyContent={"center"}
                 padding={"10px 0px"}

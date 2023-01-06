@@ -15,10 +15,6 @@ import {
   useDisclosure,
   Popover,
   PopoverTrigger,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
 } from '@chakra-ui/react';
 import {
   MoonIcon,
@@ -39,6 +35,8 @@ import { useState } from 'react';
 import { MobileNavItem } from '../navbar/Navbar';
 import { NAV_ITEMS } from '../constant/navbarLinks/NavbarLinks';
 import Link from 'next/link';
+import DownloadModal from '../downloadModel/DownloadModal';
+
 import ThemeModal from '../themeModal/ThemeModal';
 import FontPopover from '../fontPopover/FontPopover';
 export default function TempNavbar({
@@ -151,43 +149,7 @@ export default function TempNavbar({
           <SettingsIcon mr="5px" />
           Setting
         </Button>
-        <Menu>
-          <MenuButton
-            as={Button}
-            leftIcon={<ChevronDownIcon />}
-            bgColor="transparent"
-            color="white"
-            fontSize={{ base: '12px', sm: '14px', md: '16px' }}
-            _hover={{
-              backgroundColor: 'transparent',
-              color: '#313C4E',
-              transition: '0.4s',
-            }}
-            _expanded={{ bg: 'transparent' }}
-            _focus={{ boxShadow: 'none' }}
-          >
-            Download
-          </MenuButton>
-          <MenuList margin={'0px 0px 0px 20px'}>
-            <MenuItem
-              color={'teal.700'}
-              display={'flex'}
-              justifyContent={'space-between'}
-              onClick={downloadPDF}
-            >
-              Download as a PDF
-              <DownloadIcon mr="5px" />
-            </MenuItem>
-            <MenuItem
-              color={'teal.700'}
-              display={'flex'}
-              justifyContent={'space-between'}
-            >
-              Download as a Word File
-              <DownloadIcon mr="5px" />
-            </MenuItem>
-          </MenuList>
-        </Menu>
+        <DownloadModal downloadPDF={downloadPDF} />
       </Box>
 
       <Box position={'absolute'} right={{ base: '10px', lg: '25px' }}>

@@ -14,7 +14,7 @@ export default function TableOfContent() {
                                 key={index}
                             >
                                 <Link
-                                    className={styles.links}
+                                    className={`${styles.links} ${`small-text`}`}
                                     to={item.href}
                                     smooth={true}
                                     duration={800}
