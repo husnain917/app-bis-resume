@@ -32,8 +32,8 @@ import GoTopButton from "./goToTopButton/GoTopButton";
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {
-    let heightToHidden = 20;
-    let againHide = 4800;
+    let heightToHidden = 500;
+    let againHide = 4900;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -68,12 +68,7 @@ const AboutUs = () => {
               marginLeft={"10px"}
               display={["none", "none", "block", "block", "block"]}
             >
-              {isVisible && (
-                <Fade>
-                  {" "}
-                  <SideBarSection />{" "}
-                </Fade>
-              )}
+              {isVisible && <SideBarSection />}
             </Box>
             {/* <SideBar /> */}
 

@@ -19,7 +19,7 @@ const TryResume = () => {
           alignItems={["center", "center", "", "", ""]}
         >
           <Box
-            width={["100%", "100%", "45%", "57%", "57%"]}
+            width={["100%", "100%", "45%", "57%", "49%"]}
             // maxWidth={["375px", "", "", "", "", ""]}
             marginBottom={["16px"]}
             position="relative"
