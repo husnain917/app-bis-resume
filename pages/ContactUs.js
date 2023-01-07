@@ -5,6 +5,8 @@ import CustomInput from "../src/components/contactUs/CustomInput";
 import { buttonData } from "../src/components/contactUs/buttonData";
 import CancelSubscription from "../src/components/cancelSubscription";
 import CommonButton from "../src/components/commonButton/CommonButton";
+import SideBarSection from '../src/components/aboutUs/SideBarSection/SideBarSection';
+import styles from "../styles/resumeFormats.module.css";
 
 export default function ContactUs() {
   const [active, setActive] = useState("");
@@ -17,6 +19,7 @@ export default function ContactUs() {
       setCancel(2);
     }
   };
+
   return (
     <>
       {/* main div  */}
@@ -29,6 +32,17 @@ export default function ContactUs() {
         justifyContent="center"
         pb="150px"
       >
+        <Box
+          w={["0%", "0%", "0%", "10%"]}
+          display={["none", "none", "none", "block"]}
+        >
+          <Box
+            padding={'50px 0px 0px 0px'}
+            className={styles.sideBarContainer}
+          >
+            <SideBarSection />
+          </Box>
+        </Box>
         {/* inner main div  */}
         <Box w={["100%", "100%", "98%", "70%"]} h="auto" mt="5%">
           <Text
@@ -77,14 +91,14 @@ export default function ContactUs() {
               {buttonData.map((button, index) => {
                 return (
                   <Box key={index}>
-                  <ContactButton
-                    button={button}
-                    index={index}
-                    bgColor={active === index ? "#2CACD5" : "none"}
-                    color={active === index ? "white" : "grey"}
-                    onFocunHandler={onFocunHandler}
-                  // onClick={button.link}
-                  />
+                    <ContactButton
+                      button={button}
+                      index={index}
+                      bgColor={active === index ? "#2CACD5" : "none"}
+                      color={active === index ? "white" : "grey"}
+                      onFocunHandler={onFocunHandler}
+                    // onClick={button.link}
+                    />
                   </Box>
                 );
               })}
