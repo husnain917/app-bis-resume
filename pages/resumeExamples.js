@@ -16,14 +16,28 @@ import Carasol from "../src/components/resumeExampleData/carasol/Carasol";
 import Carasol1 from "../src/components/resumeExampleData/carasol/Carasol1";
 const ResumeExamples = () => {
   return (
-    <Box fontFamily={"EuclidCircularB-Light"}>
+    <Box
+    // fontFamily={"EuclidCircularB-Light"}
+    >
       {/* <Carasol1 /> */}
       {/* <Carasol /> */}
       {/* <ChatButton /> */}
-      <Box bg="lightcyan" height={"auto"} width={"100wv"}>
+      <Box
+        bg="#EFF2F9"
+        height={"auto"}
+        width={["100wv", "100wv", "100wv", "100wv", "100wv"]}
+      >
         <WritingGuides />
       </Box>
-      <Box paddingTop={"80px"} padding={"80px 44px 20px 44px"}>
+      <Box
+        padding={[
+          "80px 20px 20px 20px",
+          "80px 20px 20px 20px",
+          "80px 44px 20px 44px",
+          "80px 44px 20px 44px",
+          "80px 44px 20px 44px",
+        ]}
+      >
         <Box maxWidth={"1120px"} display={"flex"} margin={"0 auto"}>
           <Box width={"100%"} flexGrow={"1"}>
             {/* <SearchBar /> */}
