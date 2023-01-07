@@ -24,7 +24,7 @@ import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import { FaChevronRight } from 'react-icons/fa';
 import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
 
-export default function graphicDesigner() {
+export default function Graphic_Designer() {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const { backgroundColor, color } = useSelector(
     (store) => store.themeReducer.theme

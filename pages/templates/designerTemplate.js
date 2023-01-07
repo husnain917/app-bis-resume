@@ -174,7 +174,7 @@ export default function Designer_Template() {
                                             maxW="100%"
                                             aboutStyle={Classes.aboutText}
                                             fontColor="#000000"
-                                            fontSize="15px"
+                                            fontSize="16px"
                                             fontWeight={600}
                                             margin={'5px 10px 30px 10px'}
                                         />

@@ -64,11 +64,12 @@ export default function Digital_Marketing_Temp() {
                   w="40%"
                   pb="10%"
                   minW={'340px'}
-                  bgColor={backgroundColor}
+                  bgColor={backgroundColor ? backgroundColor : '#3A4D6C'}
                   borderLeftRadius={6}
                   pr={3}
                   pl={12}
                   py={8}
+                  transition={'0.5s'}
                 >
                   {/* _____________ Profile _____________ */}
                   <ImageSelector
