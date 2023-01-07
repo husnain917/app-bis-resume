@@ -31,6 +31,9 @@ import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 const FinancialExpert = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   // custom Hook For Template
   const [show, setShow] = useShow();
   // PDF Download Hook
@@ -61,16 +64,17 @@ const FinancialExpert = () => {
                 ref={pdfRef}
               >
                 <Box display="flex" flexDirection="row">
-                  <Box w="40%" backgroundColor={"#8d4b55"}></Box>
+                  <Box w="40%" backgroundColor={backgroundColor}></Box>
                   <Box
                     w="60%"
                     minH="18em"
                     display="flex"
                     justifyContent="center"
                     flexDirection="column"
-                    backgroundColor={"#8d4b55"}
+                    backgroundColor={backgroundColor}
                   >
                     <Name
+                      color={color}
                       FName={true}
                       SName={true}
                       FNameStyle={"fullName1"}
@@ -89,7 +93,7 @@ const FinancialExpert = () => {
                         margin={"35px 0px 0px 0px"}
                         line={true}
                         lineH="0.30em"
-                        lineBg="#8d4b55"
+                        lineBg={backgroundColor}
                         fontSize={"1.8em"}
                         lineStyle={Class.lineStyle}
                       />
@@ -133,7 +137,7 @@ const FinancialExpert = () => {
                               }
                               line={true}
                               lineH="0.30em"
-                              lineBg="#8d4b55"
+                              lineBg={backgroundColor}
                               fontSize={"1.8em"}
                               lineStyle={Class.lineStyle}
                             />
@@ -143,7 +147,7 @@ const FinancialExpert = () => {
                             rating={true}
                             strokeWidth="2"
                             // lineStyle={styles.line}
-                            strokeColor="#1890ff"
+                            strokeColor={backgroundColor}
                             trailColor="#fff"
                           // percentageStyle={styles.percent}
                           // parentContainerStyle={Classes.ml}
@@ -181,7 +185,7 @@ const FinancialExpert = () => {
                               fontWeight={"bold"}
                               line={true}
                               lineH="0.30em"
-                              lineBg="#8d4b55"
+                              lineBg={backgroundColor}
                               lineStyle={Class.lineStyle}
                               margin={"0px 0px 10px 0px"}
                               onSideSectionShow={() =>
@@ -212,7 +216,7 @@ const FinancialExpert = () => {
                       margin={"20px 0px 0px 0px"}
                       line={true}
                       lineH="0.30em"
-                      lineBg="#8d4b55"
+                      lineBg={backgroundColor}
                       fontSize={"1.8em"}
                       lineStyle={Class.lineStyle}
                     />
