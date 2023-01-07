@@ -39,7 +39,7 @@
   text-align: center;
 }
 
-.unselectedDragItems .dragBox:hover > .dragBoxIcon {
+.unselectedDragItems .dragBox:hover>.dragBoxIcon {
   transition-delay: 0.2s;
   /* display: block; */
   opacity: 1;
@@ -135,12 +135,12 @@
   justify-content: center;
   cursor: pointer;
 
-  transition: all 0.2s;
+  transition: all .2s;
 }
 
 .swap:hover {
   transform: scale(1.1);
-  transition: all 0.2s;
+  transition: all .2s;
 }
 
 .swap img {
@@ -154,7 +154,8 @@
   color: black;
   max-width: 400px;
   min-width: 400px;
-  color: black;
+  color: black !important;
+
 }
 
 .profession {
@@ -179,12 +180,13 @@
   min-width: 220px !important;
   max-width: 220px !important;
   color: white !important;
+
 }
 
 .skillText1 {
   font-size: 16px;
 
-  color: black !important;
+  color:black !important;
   min-width: 260px;
   max-width: 260px;
 }
@@ -204,10 +206,11 @@
   font-size: 16px;
   font-weight: 500;
   color: white;
+
 }
 
 .profileText {
-  color: white;
+  color: white !important;
   font-size: 18px;
   font-weight: 400;
   margin-top: 5px !important;
@@ -229,10 +232,13 @@
   margin-top: 10px;
 }
 
+
 .date {
   font-size: 18px;
   font-weight: bold;
   color: white !important;
+
+
 }
 
 .company {
@@ -255,10 +261,12 @@
 .mt {
   margin-top: 4%;
   margin-bottom: 2%;
+
 }
 .referenceName {
   font-size: 20px;
   font-weight: 700;
+
 }
 
 .sideMenu {
@@ -268,6 +276,7 @@
 
 .sideMenuBox {
   width: 20px;
+
 }
 
 .proContcat {
@@ -325,7 +334,8 @@
 .profileSubTitle {
   font-size: 1.7rem !important;
 
-  color: #1b4245;
+  color: #1b4245 !important;
+
 }
 .sideMenu {
   display: flex;
