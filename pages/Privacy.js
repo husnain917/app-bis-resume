@@ -8,7 +8,7 @@ const Privacy = () => {
   return (
     <div>
       {/* <SideBar /> */}
-      <Box
+      {/* <Box
         borderRadius={["60px"]}
         width={["60px"]}
         position={["fixed"]}
@@ -18,7 +18,7 @@ const Privacy = () => {
         display={["none", "none", "block", "block", "block"]}
       >
         <SideBarSection />
-      </Box>
+      </Box> */}
       <PrivacyPage />
     </div>
   );
