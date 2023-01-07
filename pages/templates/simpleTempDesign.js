@@ -28,22 +28,21 @@ import {
   SKILL,
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
-import styles from '../../styles/simpleTempDesign.module.css';
+import styles from "../../styles/simpleTempDesign.module.css";
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
+import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 export default function Simple_Temp_Design() {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  const { backgroundColor, color } = useSelector(
-    (store) => store.themeReducer.theme
-  );
   // custom Hook For Template
   const [show, setShow] = useShow();
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
   return (
     <>
-      <div style={{ overflow: 'auto' }}>
+      <div
+        style={{ overflow: 'auto' }}
+      >
         <TempLayout
           education={true}
           skills={true}
@@ -64,7 +63,10 @@ export default function Simple_Temp_Design() {
               flexDir={'column'}
               alignItems={{ sm: 'none', md: 'center' }}
             >
-              <Box mt="50px" mx={'20px'}>
+              <Box
+                mt="50px"
+                mx={'20px'}
+              >
                 <Box
                   minW={910}
                   pb={2}
@@ -77,29 +79,33 @@ export default function Simple_Temp_Design() {
                   ref={pdfRef}
                 >
                   {/* header section */}
-                  <Box display={'flex'} width={'100%'} padding={'30px 20px'}>
-                    <Box width={'18%'}>
+                  <Box
+                    display={'flex'}
+                    width={'100%'}
+                    padding={'30px 20px'}
+                  >
+                    <Box
+                      width={'18%'}
+                    >
                       <ImageSelector
                         minWidth="150px"
                         maxWidth="150px"
                         maxHeight="150px"
                         minHeight="150px"
-                        borderColor={backgroundColor ? backgroundColor : ''}
                       />
                     </Box>
-                    <Box width={'82%'} padding={'0px 20px 20px 40px'}>
+                    <Box
+                      width={'82%'}
+                      padding={'0px 20px 20px 40px'}
+                    >
                       <Name
                         FName={true}
                         SName={true}
                         direction="row"
-                        FNameStyle={Classes.hybridName}
-                        SNameStyle={Classes.hybridName}
-                        fontColor={backgroundColor ? backgroundColor : ''}
+                        FNameStyle={styles.hybridName}
+                        SNameStyle={styles.hybridName}
                       />
-                      <Profession
-                        professionStyle={styles.ProfessionHybrid}
-                        fontColor={color ? color : ''}
-                      />
+                      <Profession professionStyle={styles.ProfessionHybrid} />
                       <About
                         minW="100%"
                         maxW="100%"
@@ -126,7 +132,7 @@ export default function Simple_Temp_Design() {
                       email={true}
                       location={true}
                       circleIcon={true}
-                      iconColor={backgroundColor ? backgroundColor : '#000000'}
+                      iconColor="#000000"
                       iconSize={'20px'}
                       style={styles.profileText}
                       margin={'0px 4px 0px 4px'}
@@ -142,11 +148,7 @@ export default function Simple_Temp_Design() {
                               <div className={Classes.sideMenuBox}>
                                 {show.education && (
                                   <SectionSideMenu
-                                    bg={
-                                      backgroundColor
-                                        ? backgroundColor
-                                        : '#313B47'
-                                    }
+                                    bg={'#313B47'}
                                     onHide={() =>
                                       setShow({ ...show, education: false })
                                     }
@@ -159,11 +161,7 @@ export default function Simple_Temp_Design() {
                                   title="EDUCATION"
                                   fontSize="23px"
                                   fontWeight={'bold'}
-                                  color={
-                                    backgroundColor
-                                      ? backgroundColor
-                                      : '#313B47'
-                                  }
+                                  color="#313B47"
                                   onSideSectionShow={() =>
                                     setShow({ ...show, education: true })
                                   }
@@ -190,14 +188,8 @@ export default function Simple_Temp_Design() {
                               <div className={Classes.sideMenuBox}>
                                 {show.work && (
                                   <SectionSideMenu
-                                    bg={
-                                      backgroundColor
-                                        ? backgroundColor
-                                        : '#313B47'
-                                    }
-                                    onHide={() =>
-                                      setShow({ ...show, work: false })
-                                    }
+                                    bg={'#313B47'}
+                                    onHide={() => setShow({ ...show, work: false })}
                                     onDelete={WORK}
                                   />
                                 )}
@@ -207,11 +199,7 @@ export default function Simple_Temp_Design() {
                                   title="WORK EXPERIENCE"
                                   fontSize="23px"
                                   fontWeight={'bold'}
-                                  color={
-                                    backgroundColor
-                                      ? backgroundColor
-                                      : '#313B47'
-                                  }
+                                  color="#313B47"
                                   minW={'full'}
                                   maxW="full"
                                   onSideSectionShow={() =>
@@ -246,14 +234,8 @@ export default function Simple_Temp_Design() {
                             <div className={Classes.sideMenuBox}>
                               {show.skills && (
                                 <SectionSideMenu
-                                  bg={
-                                    backgroundColor
-                                      ? backgroundColor
-                                      : '#313B47'
-                                  }
-                                  onHide={() =>
-                                    setShow({ ...show, skills: false })
-                                  }
+                                  bg={'#313B47'}
+                                  onHide={() => setShow({ ...show, skills: false })}
                                   onDelete={SKILL}
                                 />
                               )}
@@ -263,9 +245,7 @@ export default function Simple_Temp_Design() {
                                 title="SKILLS"
                                 fontSize="23px"
                                 fontWeight={'bold'}
-                                color={
-                                  backgroundColor ? backgroundColor : '#313B47'
-                                }
+                                color="#313B47"
                                 minW={250}
                                 maxW={250}
                                 onSideSectionShow={() =>
@@ -284,14 +264,8 @@ export default function Simple_Temp_Design() {
                             <div className={Classes.sideMenuBox}>
                               {show.project && (
                                 <SectionSideMenu
-                                  bg={
-                                    backgroundColor
-                                      ? backgroundColor
-                                      : '#313B47'
-                                  }
-                                  onHide={() =>
-                                    setShow({ ...show, project: false })
-                                  }
+                                  bg={'#313B47'}
+                                  onHide={() => setShow({ ...show, project: false })}
                                   onDelete={PROJECT}
                                 />
                               )}
@@ -301,9 +275,7 @@ export default function Simple_Temp_Design() {
                                 title="PROJECTS"
                                 fontSize="23px"
                                 fontWeight={'bold'}
-                                color={
-                                  backgroundColor ? backgroundColor : '#313B47'
-                                }
+                                color="#313B47"
                                 minW={250}
                                 maxW={250}
                                 onSideSectionShow={() =>
@@ -332,11 +304,7 @@ export default function Simple_Temp_Design() {
                             <div className={Classes.sideMenuBox}>
                               {show.organization && (
                                 <SectionSideMenu
-                                  bg={
-                                    backgroundColor
-                                      ? backgroundColor
-                                      : '#313B47'
-                                  }
+                                  bg={'#313B47'}
                                   onHide={() =>
                                     setShow({ ...show, organization: false })
                                   }
@@ -349,9 +317,7 @@ export default function Simple_Temp_Design() {
                                 title="ORGANIZATION"
                                 fontSize="23px"
                                 fontWeight={'bold'}
-                                color={
-                                  backgroundColor ? backgroundColor : '#313B47'
-                                }
+                                color="#313B47"
                                 minW={250}
                                 maxW={250}
                                 onSideSectionShow={() =>
@@ -378,11 +344,7 @@ export default function Simple_Temp_Design() {
                             <div className={Classes.sideMenuBox}>
                               {show.certificates && (
                                 <SectionSideMenu
-                                  bg={
-                                    backgroundColor
-                                      ? backgroundColor
-                                      : '#313B47'
-                                  }
+                                  bg={'#313B47'}
                                   onHide={() =>
                                     setShow({ ...show, certificates: false })
                                   }
@@ -395,9 +357,7 @@ export default function Simple_Temp_Design() {
                                 title="CERTIFICATES"
                                 fontSize="23px"
                                 fontWeight={'bold'}
-                                color={
-                                  backgroundColor ? backgroundColor : '#313B47'
-                                }
+                                color="#313B47"
                                 minW={250}
                                 maxW={250}
                                 onSideSectionShow={() =>
@@ -423,14 +383,8 @@ export default function Simple_Temp_Design() {
                             <div className={Classes.sideMenuBox}>
                               {show.languages && (
                                 <SectionSideMenu
-                                  bg={
-                                    backgroundColor
-                                      ? backgroundColor
-                                      : '#313B47'
-                                  }
-                                  onHide={() =>
-                                    setShow({ ...show, languages: false })
-                                  }
+                                  bg={'#313B47'}
+                                  onHide={() => setShow({ ...show, languages: false })}
                                   onDelete={LANGUAGES}
                                 />
                               )}
@@ -440,9 +394,7 @@ export default function Simple_Temp_Design() {
                                 title="LANGUAGES"
                                 fontSize="23px"
                                 fontWeight={'bold'}
-                                color={
-                                  backgroundColor ? backgroundColor : '#313B47'
-                                }
+                                color="#313B47"
                                 minW={250}
                                 maxW={250}
                                 onSideSectionShow={() =>
@@ -464,14 +416,8 @@ export default function Simple_Temp_Design() {
                             <div className={Classes.sideMenuBox}>
                               {show.interest && (
                                 <SectionSideMenu
-                                  bg={
-                                    backgroundColor
-                                      ? backgroundColor
-                                      : '#313B47'
-                                  }
-                                  onHide={() =>
-                                    setShow({ ...show, interest: false })
-                                  }
+                                  bg={'#313B47'}
+                                  onHide={() => setShow({ ...show, interest: false })}
                                   onDelete={INTEREST}
                                 />
                               )}
@@ -481,9 +427,7 @@ export default function Simple_Temp_Design() {
                                 title="INTEREST"
                                 fontSize="23px"
                                 fontWeight={'bold'}
-                                color={
-                                  backgroundColor ? backgroundColor : '#313B47'
-                                }
+                                color="#313B47"
                                 minW={250}
                                 maxW={250}
                                 onSideSectionShow={() =>
@@ -507,5 +451,5 @@ export default function Simple_Temp_Design() {
         </TempLayout>
       </div>
     </>
-  );
+  )
 }

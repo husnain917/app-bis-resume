@@ -39,6 +39,7 @@ const Profile = () => {
   };
   return (
     <>
+      <Navbar />
       {/* ~~~~~~~~~~~~~~ User Profile Page ~~~~~~~~~~~~~~ */}
       <VStack>
         {/* =============== User Name =============== */}
@@ -46,7 +47,6 @@ const Profile = () => {
           color={'#313B47'}
           fontSize={{ base: '20px', md: '30px' }}
           fontWeight={700}
-          fontFamily="EuclidCircularB"
         >
           Abubakar Ansari
         </Text>
@@ -65,13 +65,7 @@ const Profile = () => {
             h="full"
             borderLeftRadius={'5px'}
           >
-            <Text
-              position={'absolute'}
-              top="50%"
-              ml={'5px'}
-              mt="-11px"
-              fontFamily="EuclidCircularB"
-            >
+            <Text position={'absolute'} top="50%" ml={'5px'} mt="-11px">
               Upload Photo
             </Text>
 
@@ -120,7 +114,6 @@ const Profile = () => {
                   textAlign="right"
                   fontSize={{ base: '12px', md: '14px' }}
                   m={'3px 3px'}
-                  fontFamily="EuclidCircularB"
                 >
                   Account Type
                 </Text>
@@ -130,7 +123,6 @@ const Profile = () => {
                   fontWeight={'700'}
                   textAlign="right"
                   m={'3px 3px'}
-                  fontFamily="EuclidCircularB"
                 >
                   Basic
                 </Text>
@@ -142,7 +134,6 @@ const Profile = () => {
                   textAlign="left"
                   fontSize={{ base: '12px', md: '14px' }}
                   m={'3px 3px'}
-                  fontFamily="EuclidCircularB"
                 >
                   Valid until
                 </Text>
@@ -151,7 +142,6 @@ const Profile = () => {
                   fontSize={{ base: '10px', md: '12px' }}
                   fontWeight={'700'}
                   textAlign="left"
-                  fontFamily="EuclidCircularB"
                   m={'3px 3px'}
                 >
                   Unlimited
@@ -178,19 +168,10 @@ const Profile = () => {
                 alignItems="center"
               >
                 <Box>
-                  <Text
-                    color={'#fff'}
-                    fontWeight="700"
-                    fontSize={[16, 21]}
-                    fontFamily="EuclidCircularB"
-                  >
+                  <Text color={'#fff'} fontWeight="700" fontSize={[16, 21]}>
                     Skyrocket your Career!
                   </Text>
-                  <Text
-                    color={'#fff'}
-                    fontSize={[11, 15]}
-                    fontFamily="EuclidCircularB"
-                  >
+                  <Text color={'#fff'} fontSize={[11, 15]}>
                     11 extra features at your disposal.
                   </Text>
                 </Box>
@@ -203,7 +184,6 @@ const Profile = () => {
                   h={'40px'}
                   color={'#fff'}
                   fontSize={{ sm: '14px', md: '16px' }}
-                  fontFamily="EuclidCircularB"
                   className={`${Style.btn}`}
                   _hover={{ bg: '#00C8AA' }}
                 >
@@ -230,13 +210,11 @@ const Profile = () => {
                       fontWeight="700"
                       color="#fff"
                       letterSpacing={'0.5px'}
-                      fontFamily="EuclidCircularB"
                     >
                       Account
                     </Text>
                     <Text
                       fontSize={{ base: 14, md: 15 }}
-                      fontFamily="EuclidCircularB"
                       fontWeight="600"
                       color={'#00c8aa'}
                       _hover={{
@@ -248,42 +226,21 @@ const Profile = () => {
                   </HStack>
                   <Stack direction={{ base: 'column', md: 'row' }} mt={2}>
                     <Box w={'50%'}>
-                      <Text color={'#9B9B9B'} fontFamily="EuclidCircularB">
-                        Given Name
-                      </Text>
-                      <Text
-                        color="#fff"
-                        fontSize={14}
-                        fontFamily="EuclidCircularB"
-                        fontWeight="500"
-                      >
+                      <Text color={'#9B9B9B'}>Given Name</Text>
+                      <Text color="#fff" fontSize={14} fontWeight="500">
                         Name
                       </Text>
                     </Box>
                     <Box w={{ base: '100%', md: '50%' }}>
-                      <Text color={'#9B9B9B'} fontFamily="EuclidCircularB">
-                        Family Name
-                      </Text>
-                      <Text
-                        color="#fff"
-                        fontSize={14}
-                        fontFamily="EuclidCircularB"
-                        fontWeight="500"
-                      >
+                      <Text color={'#9B9B9B'}>Family Name</Text>
+                      <Text color="#fff" fontSize={14} fontWeight="500">
                         Name
                       </Text>
                     </Box>
                   </Stack>
                   <Box mt={2}>
-                    <Text color={'#9B9B9B'} fontFamily="EuclidCircularB">
-                      Birthday
-                    </Text>
-                    <Text
-                      color="#fff"
-                      fontSize={14}
-                      fontWeight="500"
-                      fontFamily="EuclidCircularB"
-                    >
+                    <Text color={'#9B9B9B'}>Birthday</Text>
+                    <Text color="#fff" fontSize={14} fontWeight="500">
                       Not Given
                     </Text>
                   </Box>
@@ -303,7 +260,6 @@ const Profile = () => {
                       fontWeight="700"
                       color="#fff"
                       letterSpacing={'0.5px'}
-                      fontFamily="EuclidCircularB"
                     >
                       Security
                     </Text>
@@ -312,7 +268,6 @@ const Profile = () => {
                   <Text
                     fontSize={15}
                     fontWeight="500"
-                    fontFamily="EuclidCircularB"
                     color={'#00c8aa'}
                     _hover={{
                       textDecoration: 'underline',
@@ -340,7 +295,6 @@ const Profile = () => {
                       fontWeight="700"
                       color="#fff"
                       letterSpacing={'0.5px'}
-                      fontFamily="EuclidCircularB"
                     >
                       Email
                     </Text>
@@ -351,22 +305,14 @@ const Profile = () => {
                       _hover={{
                         textDecoration: 'underline',
                       }}
-                      fontFamily="EuclidCircularB"
                     >
                       Change
                     </Text>
                   </HStack>
 
                   <Box mt={2}>
-                    <Text color={'#9B9B9B'} fontFamily="EuclidCircularB">
-                      Account Email
-                    </Text>
-                    <Text
-                      color="#fff"
-                      fontSize={14}
-                      fontWeight="500"
-                      fontFamily="EuclidCircularB"
-                    >
+                    <Text color={'#9B9B9B'}>Account Email</Text>
+                    <Text color="#fff" fontSize={14} fontWeight="500">
                       Email Here
                     </Text>
                   </Box>
@@ -387,21 +333,14 @@ const Profile = () => {
                       fontWeight="700"
                       color="#fff"
                       letterSpacing={'0.5px'}
-                      fontFamily="EuclidCircularB"
                     >
                       Preferences
                     </Text>
                   </HStack>
-                  <Text color={'#9B9B9B'} fontFamily="EuclidCircularB">
-                    Notifications
-                  </Text>
+                  <Text color={'#9B9B9B'}>Notifications</Text>
                   <HStack mt={2}>
                     <Checkbox value="naruto" color="white" />
-                    <Text
-                      color={'#fff'}
-                      fontSize={14}
-                      fontFamily="EuclidCircularB"
-                    >
+                    <Text color={'#fff'} fontSize={14}>
                       I want to receive valuable Career tips and special offers
                       on Email.
                     </Text>
@@ -418,18 +357,12 @@ const Profile = () => {
                 fontSize={{ base: 16, md: 20 }}
                 fontWeight="700"
                 color="#fff"
-                fontFamily="EuclidCircularB"
                 letterSpacing={'0.5px'}
               >
                 Personal Data
               </Text>
             </HStack>
-            <Text
-              color="#fff"
-              fontSize={{ base: 11, md: 14 }}
-              fontWeight="400"
-              fontFamily="EuclidCircularB"
-            >
+            <Text color="#fff" fontSize={{ base: 11, md: 14 }} fontWeight="400">
               <span className={`${Style.spn}`}>Here</span> you can get a
               detailed view of your personal data.
             </Text>
@@ -442,7 +375,6 @@ const Profile = () => {
                 color="#fff"
                 letterSpacing={'0.5px'}
                 _hover={{ color: '#00c8aa' }}
-                fontFamily="EuclidCircularB"
               >
                 Want to leave us ?
               </Text>
@@ -450,6 +382,7 @@ const Profile = () => {
           </Box>
         </Box>
       </Box>
+      <Footer />
     </>
   );
 };

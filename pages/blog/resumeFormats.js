@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Navbar from "../../src/components/navbar/Navbar";
 import ResumeFormats from "../../src/components/blog/ResumeFormats";
 import {
   Box,
@@ -8,10 +9,11 @@ import {
   Image
 } from "@chakra-ui/react";
 import { RESUME_NOW } from "../../src/components/blog/CustomData";
+import Sidebar from "../../src/components/blog/Sidebar";
 import styles from "../../styles/resumeFormats.module.css";
 import FormatsTables from "../../src/components/blog/FormatsTables";
-import CommonButton from "../../src/components/commonButton/CommonButton";
-import SideBarSection from '../../src/components/aboutUs/SideBarSection/SideBarSection';
+import Footer from "../../src/components/footer/Footer";
+import Layout from "../../src/Layout";
 
 export default function Resume_Formats() {
   // state
@@ -19,37 +21,31 @@ export default function Resume_Formats() {
 
   return (
     <>
-
+  
       <ResumeFormats />
       {/* content container */}
       <Container
         maxW={["100%", "100%", "80%", "80%"]}
         display={"flex"}
         justifyContent={"space-between"}
-        paddingBottom={'10px'}
       >
         <Box
-          w={["0%", "0%", "0%", "10%"]}
-          display={["none", "none", "none", "block"]}
+          maxW={["0%", "0%", "0%", "10%"]}
         >
-          <Box
-            className={styles.sideBarContainer}
-          >
-            <SideBarSection />
-          </Box>
+          <Sidebar />
         </Box>
         <Box
           padding={"20px 0px 40px 0px"}
-          w={["100%", "100%", "100%", "88%"]}
+          maxW={["100%", "100%", "100%", "88%"]}
         >
           {
             RESUME_NOW.map((item, index) => (
               <>
                 <Text
                   key={index}
-                  fontSize={"16px"}
-                  fontFamily={`'EuclidCircularB-Medium', sans-serif`}
-                  lineHeight={9}
+                  fontSize={"17px"}
+                  lineHeight={8}
+                  marginBottom={"20px"}
                 >
                   {item.text}
                 </Text>
@@ -57,11 +53,14 @@ export default function Resume_Formats() {
             ))
           }
           <Text
-            fontSize={"16px"}
+            fontSize={"17px"}
             lineHeight={8}
-            fontFamily={`'EuclidCircularB-Medium', sans-serif`}
           >
-            <span>Want to save time and have your resume ready in 5 minutes? </span>
+            <span
+              style={{
+                fontWeight: "bold"
+              }}
+            >Want to save time and have your resume ready in 5 minutes? </span>
             <span>Try our resume builder. Its fast and easy to use. Plus, you ll get ready-made content to add with one click.</span>
             <Link
               color={"#3983fa"}
@@ -79,28 +78,31 @@ export default function Resume_Formats() {
           >
             <Link
               href="/templates"
-              textDecoration={'none'}
+              height={["45px", "55px", "55px", "55px"]}
+              backgroundColor={"#006772"}
+              width={["100%", "100%", "50%", "45%", "45%"]}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+              color={"#fff"}
+              fontSize={["13px", "18px", "18px", "18px", "18px"]}
+              borderRadius={"30px 30px"}
+              textDecoration={"none"}
               _hover={{
-                textDecoration: 'none'
+                textDecoration: "none",
+                color: "#fff",
+                backgroundColor: 'red',
+                transition: '0.5s'
               }}
             >
-              <CommonButton
-                title={'CREATE YOUR RESUME NOW'}
-                fontSize={["13px", "16px", "16px", "16px", "16px"]}
-                hoverCursor={"pointer"}
-                backgroundColor={'#2CACD5'}
-                color={'white'}
-                hoverColor={"white"}
-                hoverBackgroundColor={"#2CACD5"}
-                padding={'25px 30px'}
-              />
+              CREATE YOUR RESUME NOW
             </Link>
           </Box>
 
           {/* resume templates container */}
           <Container
             maxW={"100%"}
-            padding={"60px 0px 20px 0px"}
+            padding={"40px 0px 20px 0px"}
           >
             <Box
               position={"relative"}
@@ -125,21 +127,24 @@ export default function Resume_Formats() {
                     >
                       <Link
                         href="/templates"
-                        textDecoration={'none'}
+                        height={["45px", "55px", "55px", "55px"]}
+                        width={["100%", "100%", "90%", "90%", "70%"]}
+                        backgroundColor={"#006772"}
+                        display={"flex"}
+                        alignItems={"center"}
+                        justifyContent={"center"}
+                        color={"#fff"}
+                        fontSize={["13px", "18px", "18px", "18px", "18px"]}
+                        borderRadius={"30px 30px"}
+                        textDecoration={"none"}
                         _hover={{
-                          textDecoration: 'none'
+                          textDecoration: "none",
+                          color: "#fff",
+                          backgroundColor: 'red',
+                          transition: '0.5s'
                         }}
                       >
-                        <CommonButton
-                          title={'USE THIS RESUME TEMPLATE'}
-                          fontSize={["13px", "16px", "16px", "16px", "16px"]}
-                          hoverCursor={"pointer"}
-                          backgroundColor={'#2CACD5'}
-                          color={'white'}
-                          hoverColor={"white"}
-                          hoverBackgroundColor={"#2CACD5"}
-                          padding={'25px 30px'}
-                        />
+                        USE THIS RESUME TEMPLATE
                       </Link>
                     </Box>
                   </>
@@ -166,8 +171,7 @@ export default function Resume_Formats() {
               <Text
                 padding={"20px 10px"}
                 textAlign={"center"}
-                fontSize={'16px'}
-                fontFamily={`'EuclidCircularB-Medium', sans-serif`}
+                fontSize={"16px"}
               >
                 An example of a well-formatted resume made in our builder—
                 <Link color={"#3983fa"}>See more resume examples here.</Link>
@@ -179,8 +183,7 @@ export default function Resume_Formats() {
             >
               <Text
                 fontSize={"16px"}
-                fontWeight={'bold'}
-                fontFamily={`'EuclidCircularB-Medium', sans-serif`}
+                fontWeight={"bold"}
               >
                 One of our users, Nikos, had this to say:
               </Text>
@@ -194,7 +197,6 @@ export default function Resume_Formats() {
                 padding={"20px 10px"}
                 textAlign={"center"}
                 fontSize={"16px"}
-                fontFamily={`'EuclidCircularB-Medium', sans-serif`}
               >
                 [I used] a nice template I found on Zety. My resume is now one page long, not three. With the same stuff.
               </Text>
