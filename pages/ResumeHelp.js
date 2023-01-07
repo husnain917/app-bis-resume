@@ -1,5 +1,4 @@
 
-
 import { Text, Box } from "@chakra-ui/react";
 import React from "react";
 import Image from 'next/image'
@@ -468,7 +467,7 @@ export default function ResumeHelp() {
                                     </Box>
                                     <Image
 
-                                        src={ResumeHelp}
+                                        src={ResumeHel}
                                         alt={'Image Not Found'}
                                     />
 

@@ -27,7 +27,7 @@ export default function Pricing() {
                 <Box
                     maxW={["0%", "0%", "0%", "5%"]}
                     padding={'60px 0px 0px 0px'}
-                    ml={"7%"}
+                    ml={"6%"}
                     display={["none", "none", "none", "block"]}
                 >
                     <Box

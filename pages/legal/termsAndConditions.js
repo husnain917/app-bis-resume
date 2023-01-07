@@ -6,7 +6,7 @@ import {
     Text,
     UnorderedList,
 } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import {
     PREMIUM_ACCOUNT_DATA,
     PREMIUM_ACCOUNT_DATA_LINKS,
@@ -17,30 +17,8 @@ import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import TableOfContent from '../../src/components/legal/TableOfContent';
 import SideBarSection from '../../src/components/aboutUs/SideBarSection/SideBarSection';
 import Fade from "react-reveal/Fade";
-import SideBar from '../../src/components/sideBar/SideBar';
 
 export default function Terms_And_Conditions() {
-    // sidebar state
-    const [isVisible, setIsVisible] = useState(false);
-    const listenToScroll = () => {
-        let heightToHidden = 20;
-        let againHide = 4310;
-        const winScroll =
-            document.body.scrollTop || document.documentElement.scrollTop;
-
-        if (winScroll < heightToHidden || winScroll > againHide) {
-            setIsVisible(false);
-        } else if (winScroll > heightToHidden) {
-            setIsVisible(true);
-        } else {
-            setIsVisible(false);
-        }
-    };
-    useEffect(() => {
-        window.addEventListener("scroll", listenToScroll);
-    }, []);
-
-
     return (
         <>
 
@@ -48,20 +26,20 @@ export default function Terms_And_Conditions() {
                 maxW={["100%", "100%", "80%", "80%"]}
                 display={"flex"}
                 justifyContent={"space-between"}
+                paddingBottom={'10px'}
             >
                 <Box
                     maxW={["0%", "0%", "0%", "10%"]}
-                    // padding={'70px 0px 0px 0px'}
                     display={["none", "none", "none", "block"]}
+                    paddingTop={'8rem'}
                 >
                     <Box
-                        position={["fixed"]}
-                        zIndex={"1049"}
+                        className={styles.sideBarContainer}
                     >
                         {isVisible && (
                             <Fade>
                                 {" "}
-                                <SideBar/>{" "}
+                                <SideBarSection />{" "}
                             </Fade>
                         )}
                     </Box>
