@@ -14,7 +14,7 @@ import ExpImage from "../public/ExpImage.png"
 import jobAd from "../public/jobAd.png"
 import EducationHelpImage from "../public/EducationHelpImage.png";
 import SkillImage from "../public/SkillImage.png"
-import ResumeHelpi from "../public/ResumeHelp.png"
+import ResumeHelpi from "../public/ResumeHel.png"
 import ProfileDescrip from "../public/ProfileDescrip.png"
 import SideBar from "../src/components/sideBar/SideBar";
 
@@ -74,7 +74,6 @@ export default function ResumeHelp() {
 
                             </Box>
                             <Image
-
                                 src={ResumeHelpi}
                                 alt={'Image Not Found'}
                             />
