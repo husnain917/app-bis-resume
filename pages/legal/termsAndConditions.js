@@ -16,7 +16,7 @@ import {
 import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import TableOfContent from '../../src/components/legal/TableOfContent';
 import SideBarSection from '../../src/components/aboutUs/SideBarSection/SideBarSection';
-import styles from "../../styles/resumeFormats.module.css";
+import Fade from "react-reveal/Fade";
 
 export default function Terms_And_Conditions() {
     return (
@@ -36,7 +36,12 @@ export default function Terms_And_Conditions() {
                     <Box
                         className={styles.sideBarContainer}
                     >
-                        <SideBarSection />
+                        {isVisible && (
+                            <Fade>
+                                {" "}
+                                <SideBarSection />{" "}
+                            </Fade>
+                        )}
                     </Box>
                 </Box>
                 <Box
