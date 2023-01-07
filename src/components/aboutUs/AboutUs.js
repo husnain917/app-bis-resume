@@ -22,6 +22,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
+import styles from "../../../styles/sideBarSection.module.css";
 
 import RatingComponent from "../ratingComponent/RatingComponent";
 import Slider from "./slider/Slider";
@@ -53,23 +54,41 @@ const AboutUs = () => {
     AOS.init();
   });
   return (
-    <Box classNam="sitecontainer1">
+    <Box className="sitecontainer1">
       {/* <SideBar /> */}
       <Box className="masterWrapper">
+        <Box
+          borderRadius={["60px"]}
+          width={["60px"]}
+          position={["fixed"]}
+          zIndex={"1049"}
+          transform={["scale(1)"]}
+          marginLeft={"10px"}
+          display={["none", "none", "block", "block", "block"]}
+        >
+          {<SideBarSection />}
+        </Box>
         <Box>
           <Box>
             {/* <GoTopButton /> */}
-            <Box
-              borderRadius={["60px"]}
-              width={["60px"]}
-              position={["fixed"]}
-              zIndex={"1049"}
-              transform={["scale(1)"]}
-              marginLeft={"10px"}
-              display={["none", "none", "block", "block", "block"]}
+            {/* <Box
+              maxW={["0%", "0%", "0%", "5%"]}
+              // padding={'70px 0px 0px 0px'}
+              padding={"40px 0px 0px 0px"}
+              display={["none", "none", "none", "block"]}
             >
-              {isVisible && <SideBarSection />}
-            </Box>
+              <Box className={styles.sideBarContainer}>
+                <SideBar />
+              </Box>
+            </Box> */}
+            {/* <Box
+              w={["0%", "0%", "0%", "10%"]}
+              display={["none", "none", "none", "block"]}
+            >
+              <Box className={styles.sideBarContainer}>
+                <SideBarSection />
+              </Box>
+            </Box> */}
             {/* <SideBar /> */}
 
             <Box

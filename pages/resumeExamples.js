@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Button } from "@chakra-ui/react";
+import { Box, Text, Button, Container } from "@chakra-ui/react";
 import SearchBar from "../src/components/resumeExampleData/searchBar/SearchBar";
 import MostPopular from "../src/components/resumeExampleData/mostPopular/MostPopular";
 import CommonComponent from "../src/components/resumeExampleData/commonComponent/commonComponent";
@@ -16,6 +16,7 @@ import Carasol from "../src/components/resumeExampleData/carasol/Carasol";
 import Carasol1 from "../src/components/resumeExampleData/carasol/Carasol1";
 import SideBar from "../src/components/sideBar/SideBar";
 import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
+import styles from "../styles/sideBarSection.module.css";
 const ResumeExamples = () => {
   return (
     <>
@@ -38,17 +39,7 @@ const ResumeExamples = () => {
             <WritingGuides />
           </Box>
           <Box>
-            <Box
-              borderRadius={["60px"]}
-              width={["60px"]}
-              position={["fixed"]}
-              zIndex={"1049"}
-              transform={["scale(1)"]}
-              marginLeft={"10px"}
-              display={["none", "none", "block", "block", "block"]}
-            >
-              <SideBarSection />
-            </Box>
+            1
             <Box
               padding={[
                 "80px 20px 20px 20px",

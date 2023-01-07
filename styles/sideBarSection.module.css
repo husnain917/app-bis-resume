@@ -95,7 +95,7 @@
     position: absolute;
     top: 17px;
     left: 20px;
-    font-size: 27px;
+    font-size: 20px;
 }
 
 .ul li a span {
@@ -119,6 +119,6 @@
     position: sticky;
     top:5%;
     left:0%;
-    display: block;
+    /* display: block; */
     
 }
