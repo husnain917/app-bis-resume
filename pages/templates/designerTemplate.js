@@ -173,7 +173,7 @@ export default function Designer_Template() {
                                             minW="100%"
                                             maxW="100%"
                                             aboutStyle={Classes.aboutText}
-                                            textColor="#000000"
+                                            fontColor="#000000"
                                             fontSize="15px"
                                             fontWeight={600}
                                             margin={'5px 10px 30px 10px'}

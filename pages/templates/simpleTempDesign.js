@@ -103,7 +103,7 @@ export default function Simple_Temp_Design() {
                       <About
                         minW="100%"
                         maxW="100%"
-                        textColor="#000000"
+                        fontColor="#000000"
                         fontSize="16px"
                         fontWeight={600}
                       />

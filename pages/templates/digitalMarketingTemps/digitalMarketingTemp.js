@@ -103,7 +103,7 @@ export default function Digital_Marketing_Temp() {
                     minW="100%"
                     maxW="100%"
                     aboutStyle={Classes.aboutText}
-                    textColor="#fff"
+                    fontColor="#fff"
                   />
 
                   {/* _____________ Skill _____________ */}

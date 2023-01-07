@@ -1,297 +1,326 @@
-import { Box, Flex, HStack, Text, Image } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
-import { Tooltip } from 'react-tippy';
-import Link from "next/link";
-import { connect } from 'react-redux';
-import { onBlurField } from '../../store/actions/builderAction';
-import { BsFillPersonFill, BsLayersFill } from 'react-icons/bs';
-import { IoLanguageSharp } from 'react-icons/io5';
-import { MdCastForEducation, MdEmail } from 'react-icons/md';
-import Experience from '../../src/components/graphicDesigner/Experience';
-import Reference from '../../src/components/graphicDesigner/Reference';
-import Personal from '../../src/components/graphicDesigner/Personal';
-import Profile from '../../src/components/graphicDesigner/Profile';
-import About from '../../src/components/graphicDesigner/About';
-import Languages from '../../src/components/graphicDesigner/Languages';
-import PersonalInfo from '../../src/components/graphicDesigner/PersonalInfo';
-import Education from '../../src/components/graphicDesigner/Education';
-import styles from "../../src/components/graphicDesigner/graphicDesigner.module.css";
+import Name from '../../src/components/commonSection/Name';
+import Classes from '../../styles/templates/flightAttendant.module.css';
+import Profession from '../../src/components/commonSection/Profession';
+import Contact from '../../src/components/commonSection/Contact';
+import Heading from '../../src/components/commonSection/Heading';
+import Skill from '../../src/components/commonSection/Skill';
+import WorkExperience from '../../src/components/commonSection/WorkExperience';
+import Education from '../../src/components/commonSection/Education';
+import TempLayout from '../../src/components/tempNav/TempLayout';
+import { useSelector } from 'react-redux';
+import useShow from '../../src/components/tempSectionSide/useShow';
+import SectionSideMenu from '../../src/components/tempSectionSide/SectionSideMenu';
+import About from '../../src/components/commonSection/About';
+import {
+  EDUCATION,
+  SKILL,
+  WORK,
+} from '../../src/components/tempSectionSide/SectionSideConstant';
+import ImageSelector from '../../src/components/imageSelector';
+import styles from '../../styles/graphicDesignerAhsan.module.css';
+import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
+import { FaChevronRight } from 'react-icons/fa';
+import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
 
-const graphicDesigner = (props) => {
-  const { resumeData } = props;
-  console.log('resumeData:', resumeData);
-  return (
-    <>
-      <Link href={"/templates"}>
-        <div className={styles.swapCont}>
-          <Tooltip title="Change Template" arrow distance={20}>
-            <div className={styles.swap}>
-              <img src="/icons/swap.png" />
-            </div>
-          </Tooltip>
-        </div>
-      </Link>
-      <Flex
-        justifyContent={{ base: 'none', md: 'center' }}
-        bg={{ md: 'none', lg: 'blackAlpha.100' }}
-      >
-        <HStack
-          minW={830}
-          maxW={830}
-          h={'full'}
-          alignItems="flex-start"
-          borderRadius={6}
-          bg={'#fff'}
-          my={10}
-          py={8}
-          px={10}
-          display={'flex'}
-          justifyContent={'space-between'}
-        >
-          <Box maxW={'50%'} minW={'50%'}>
-            <Box minH={250} maxW={250} minW={250} border={'5px solid black'} ml={10}>
-              <Image
-                boxSize="267px"
-                src="/profileDigi.png"
-                alt="Profile"
-                position={'relative'}
-                top={'25px'}
-                right={'45px'}
-              />
-            </Box>
-
-            <Box
-              minW={250}
-              maxW={250}
-              bg={'#1C4532'}
-              h={35}
-              margin={'90px 0px 0px 0px'}
-            >
-              <Box
-                minW={250}
-                maxW={250}
-                bg={'#1C4532'}
-                h={'40px'}
-                mt={'40px'}
-                pl={2}
-                position={'relative'}
-                bottom={'20px'}
-                right={'15px'}
-                boxShadow={'dark-lg'}
-              >
-                <Text
-                color={'white'}
-                fontSize={20}
-                fontWeight="600"
-                pb={0.7}
-                pl={2}
-                letterSpacing={3}
-                pt={1}
-                textAlign={'center'}
-              >
-                PROFILE
-              </Text>
-              </Box>
-            </Box>
-            &nbsp;
-            <About />
-
-            <Box
-              minW={250}
-              maxW={250}
-              bg={'#1C4532'}
-              h={35}
-            >
-              <Box
-                minW={250}
-                maxW={250}
-                bg={'#1C4532'}
-                h={'40px'}
-                mt={'40px'}
-                pl={2}
-                position={'relative'}
-                bottom={'20px'}
-                right={'15px'}
-                boxShadow={'dark-lg'}
-              >
-                <Text
-                color={'white'}
-                fontSize={20}
-                fontWeight="600"
-                pb={0.7}
-                pl={2}
-                letterSpacing={3}
-                pt={1}
-                textAlign={'center'}
-              >
-                EXPERIENCE
-              </Text>
-              </Box>
-            </Box>
-            &nbsp;
-            <Box
-              minW={310}
-              maxW={310}
-            >
-              <Experience
-                data={
-                  resumeData?.work?.items.length
-                    ? [...resumeData?.work?.items]
-                    : [...sampleData?.data?.work?.items]
-                }
-              />
-            </Box>
-          </Box>
-          <Box maxW={'49%'} minW={'49%'}>
-            <Profile />
-            <PersonalInfo />
-            <Box
-              minW={250}
-              maxW={250}
-              bg={'#1C4532'}
-              h={35}
-              margin={'85px 0px 0px 0px'}
-            >
-              <Box
-                minW={250}
-                maxW={250}
-                bg={'#1C4532'}
-                h={'40px'}
-                mt={'40px'}
-                pl={2}
-                position={'relative'}
-                bottom={'20px'}
-                right={'15px'}
-                boxShadow={'dark-lg'}
-              >
-                <Text
-                  color={'white'}
-                  fontSize={20}
-                  fontWeight="600"
-                  pb={0.7}
-                  pl={2}
-                  letterSpacing={3}
-                  pt={1}
-                  textAlign={'center'}
-                >
-                  EDUCATION
-                </Text>
-              </Box>
-            </Box>
-            &nbsp;
-            <Box
-              minW={330}
-              maxW={330}
-            >
-              <Education
-                data={
-                  resumeData?.education?.items.length
-                    ? [...resumeData?.education?.items]
-                    : [...sampleData?.data?.education?.items]
-                }
-              />
-            </Box>
-
-            <Box
-              minW={250}
-              maxW={250}
-              bg={'#1C4532'}
-              h={35}
-            >
-              <Box
-                minW={250}
-                maxW={250}
-                bg={'#1C4532'}
-                h={'40px'}
-                mt={'40px'}
-                pl={2}
-                position={'relative'}
-                bottom={'20px'}
-                right={'15px'}
-                boxShadow={'dark-lg'}
-              >
-                <Text
-                color={'white'}
-                fontSize={20}
-                fontWeight="600"
-                pb={0.7}
-                pl={2}
-                letterSpacing={3}
-                pt={1}
-                textAlign={'center'}
-              >
-                SKILLSET
-              </Text>
-              </Box>
-            </Box>
-            &nbsp;
-            <Box
-              minW={330}
-              maxW={330}
-            >
-              <Personal
-                data={
-                  resumeData?.skills?.items?.length
-                    ? [...resumeData?.skills?.items]
-                    : [...sampleData?.data?.skills?.items]
-                }
-              />
-            </Box>
-            <Box
-              minW={250}
-              maxW={250}
-              bg={'#1C4532'}
-              h={35}
-            >
-              <Box
-                minW={250}
-                maxW={250}
-                bg={'#1C4532'}
-                h={'40px'}
-                mt={'40px'}
-                pl={2}
-                position={'relative'}
-                bottom={'20px'}
-                right={'15px'}
-                boxShadow={'dark-lg'}
-              >
-                <Text
-                color={'white'}
-                fontSize={20}
-                fontWeight="600"
-                pb={0.7}
-                pl={2}
-                letterSpacing={3}
-                pt={1}
-                textAlign={'center'}
-              >
-                LANGUAGES
-              </Text>
-              </Box>
-            </Box>
-            &nbsp;
-            <Box
-              minW={330}
-              maxW={330}
-            >
-              <Languages
-                data={
-                  resumeData?.languages?.items
-                    ? [...resumeData?.languages?.items]
-                    : [...sampleData?.data?.languages?.items]
-                }
-              />
-            </Box>
-          </Box>
-        </HStack>
-      </Flex>
-    </>
+export default function graphicDesigner() {
+  let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
   );
-};
-const mapStateToProps = (store) => ({
-  theme: store.editorReducer.theme,
-  resumeData: store.editorReducer.resumeData,
-  updater: store.editorReducer.updater,
-});
+  // custom Hook For Template
+  const [show, setShow] = useShow();
+  const { downloadPDFHandler, pdfRef } = PDFGenerater();
+  return (
+    <div style={{ overflow: 'auto' }}>
+      <TempLayout
+        work={true}
+        education={true}
+        skills={true}
+        downloadPDF={downloadPDFHandler}
+      >
+        <ChangeTempBtn />
+        <Flex
+          justifyContent={{ base: 'none', md: 'center' }}
+          flexDir={'column'}
+          alignItems={{ sm: 'none', md: 'center' }}
+          bg={'#fff'}
+          pt="70px"
+        >
+          <Box mx={'20px'} mt="50px">
+            <Box
+              display="flex"
+              flexDir="row"
+              w="100%"
+              minW="850px"
+              maxW="850px"
+              mb={'20px'}
+              ref={pdfRef}
+            >
+              {/* =============== First Section ============== */}
+              <Box
+                w="40%"
+                pb="10%"
+                minW={'340px'}
+                bgColor={backgroundColor ? backgroundColor : '#f8f9fa'}
+                borderLeftRadius={6}
+                pr={3}
+                pl={12}
+                py={8}
+                transition="0.5s background"
+              >
+                {/* _____________ Profile _____________ */}
+                <ImageSelector
+                  minWidth="240px"
+                  maxWidth="240px"
+                  maxHeight="240px"
+                  minHeight="240px"
+                  marginTop="30px"
+                  borderColor={color ? color : ''}
+                />
+                <Heading
+                  title={'CONTACT PERSON'}
+                  color={color ? color : '#000000'}
+                  margin={'20px 0px 0px 0px'}
+                  line={true}
+                  lineW="100%"
+                  lineH="0.15em"
+                  lineBg={color ? color : '#000000'}
+                  fontWeight={700}
+                />
+                <Contact
+                  phone={true}
+                  email={true}
+                  linkedinURL={true}
+                  website={true}
+                  circleIcon={true}
+                  circleBg="#000000"
+                  circleSize="25px"
+                  iconColor={color ? color : '#f8f9fa'}
+                  margin={'10px 0px 0px 0px'}
+                  parentStyle={styles.contactFont}
+                />
 
-export default connect(mapStateToProps, { onBlurField })(graphicDesigner);
+                {/* _____________ About me _____________ */}
+                <Heading
+                  title={'ABOUT ME'}
+                  color={color ? color : '#000000'}
+                  margin={'20px 0px 0px 0px'}
+                  line={true}
+                  lineW="100%"
+                  lineH="0.13em"
+                  lineBg={color ? color : '#000000'}
+                  fontWeight={700}
+                />
+                <About
+                  minW="100%"
+                  maxW="100%"
+                  aboutStyle={Classes.aboutText}
+                  fontColor="#000000"
+                  fontWeight={'600'}
+                />
+
+                {/* _____________ Skill _____________ */}
+                <Box margin={'20px 0px 10px 0px'}>
+                  {resumeData?.skills?.visible && (
+                    <div className={Classes.sideMenu}>
+                      <div className={Classes.sideMenuBox}>
+                        {show?.skills && (
+                          <SectionSideMenu
+                            onDelete={SKILL}
+                            onHide={() => setShow({ ...show, skills: false })}
+                            bg="#000000"
+                            iconColor={'#f8f9fa'}
+                          />
+                        )}
+                      </div>
+                      <div>
+                        <Heading
+                          title={'SKILLS'}
+                          fontSize="20px"
+                          fontWeight={700}
+                          color={color ? color : '#000000'}
+                          line={true}
+                          lineW="100%"
+                          lineH="0.15em"
+                          lineBg={color ? color : '#000000'}
+                          circleIconHeading={true}
+                          onSideSectionShow={() =>
+                            setShow({ ...show, skills: true })
+                          }
+                          icon={(props) => (
+                            <FaChevronRight
+                              color={color ? color : '#000000'}
+                              size={22}
+                              {...props}
+                            />
+                          )}
+                        />
+                        <Skill
+                          skillStyle={styles.contactFont}
+                          progressBar={true}
+                          strokeWidth="2"
+                          lineStyle={styles.line}
+                          strokeColor={color ? color : '#2A78AB'}
+                          trailColor="#fff"
+                          percentageStyle={styles.percent}
+                          parentContainerStyle={Classes.ml}
+                          margin="0px 0px 0px 30px"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </Box>
+              </Box>
+              {/* =============== Second Section ============== */}
+              <Box
+                w="60%"
+                bg={color ? color : '#f8f9fa'}
+                h="auto"
+                minW="510px"
+                borderRightRadius={6}
+                paddingBottom={'40px'}
+                transition="0.5s background"
+              >
+                <Name
+                  FName={true}
+                  SName={true}
+                  direction="column"
+                  FNameStyle={styles.nameStyle}
+                  SNameStyle={styles.nameStyle}
+                  margin={'15% 0% 0% 10%'}
+                  fontColor={backgroundColor ? backgroundColor : '#000000'}
+                />
+                <Profession
+                  professionStyle={styles.profileSubTitle}
+                  margin={'2% 0% 10% 10%'}
+                  fontColor={backgroundColor ? backgroundColor : '#000000'}
+                />
+                {/* Work */}
+                <Box
+                  padding={'0px 0px 0px 53px'}
+                  margin={'20px 0px 10px 0px'}
+                >
+                  {resumeData?.work?.visible && (
+                    <div className={Classes.sideMenu}>
+                      <div className={Classes.sideMenuBox}>
+                        {show?.work && (
+                          <SectionSideMenu
+                            onHide={() => setShow({ ...show, work: false })}
+                            onDelete={WORK}
+                            bg="#000000"
+                            iconColor={'#f8f9fa'}
+                          />
+                        )}
+                      </div>
+                      <div>
+                        <Heading
+                          color={backgroundColor ? backgroundColor : '#000000'}
+                          title="WORK EXPERIENCE"
+                          line={true}
+                          lineW="100%"
+                          lineH="0.15em"
+                          lineBg={backgroundColor ? backgroundColor : '#000000'}
+                          fontSize={'22px'}
+                          fontWeight={700}
+                          circleIconHeading={true}
+                          minW="300px"
+                          onSideSectionShow={() =>
+                            setShow({ ...show, work: true })
+                          }
+                          maxW={'fit-content'}
+                          icon={(props) => (
+                            <FaChevronRight
+                              color={
+                                backgroundColor ? backgroundColor : '#000000'
+                              }
+                              size={22}
+                              {...props}
+                            />
+                          )}
+                        />
+                        <WorkExperience
+                          company={true}
+                          position={true}
+                          date={true}
+                          summary={true}
+                          companyStyle={Classes.company}
+                          positionStyle={Classes.programText}
+                          dateStyle={Classes.date}
+                          summaryStyle={Classes.description}
+                          parentContainerStyle={styles.rightContainerWork}
+                          textColor="#000000"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </Box>
+                {/* _____________ Education _____________ */}
+                <Box
+                  padding={'0px 0px 0px 53px'}
+                  margin={'20px 0px 10px 0px'}
+                >
+                  {resumeData?.education?.visible && (
+                    <div className={Classes.sideMenu}>
+                      <div className={Classes.sideMenuBox}>
+                        {show?.education && (
+                          <SectionSideMenu
+                            onHide={() =>
+                              setShow({ ...show, education: false })
+                            }
+                            onDelete={EDUCATION}
+                            bg="#000000"
+                            iconColor={'#f8f9fa'}
+                          />
+                        )}
+                      </div>
+                      <div>
+                        <Heading
+                          title={'EDUCATION'}
+                          color={backgroundColor ? backgroundColor : '#000000'}
+                          line={true}
+                          lineW="100%"
+                          lineH="0.15em"
+                          lineBg={backgroundColor ? backgroundColor : '#000000'}
+                          fontSize={'22px'}
+                          fontWeight={700}
+                          onSideSectionShow={() =>
+                            setShow({ ...show, education: true })
+                          }
+                          circleIconHeading={true}
+                          icon={(props) => (
+                            <FaChevronRight
+                              color={
+                                backgroundColor ? backgroundColor : '#000000'
+                              }
+                              size={22}
+                              {...props}
+                            />
+                          )}
+                        />
+                        <Education
+                          degree={true}
+                          institution={true}
+                          date={true}
+                          summary={true}
+                          parentContainerStyle={styles.rightContainerWork}
+                          institutionStyle={Classes.company}
+                          degreeStyle={Classes.programText}
+                          dateStyle={Classes.date}
+                          summaryStyle={Classes.description}
+                          degree_placeholder="Study Program"
+                          textColor="#000000"
+                        />
+                      </div>
+                    </div>
+                  )}
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        </Flex>
+      </TempLayout>
+    </div>
+  )
+}
