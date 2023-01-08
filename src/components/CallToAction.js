@@ -15,6 +15,7 @@ export default function CallToAction() {
         <Box mt={"30px"}>
           <Link href="/templates">
             <CommonButton
+              className={'buttonClass'}
               title="Build My Resume"
               hoverCursor={"pointer"}
               backgroundColor={"#2CACD5"}
@@ -28,8 +29,8 @@ export default function CallToAction() {
                 "1.1rem",
                 "1.5rem",
               ]}
-              // hoverBackgroundColor={"red"}
-              // className={"hoverEffects"}
+            // hoverBackgroundColor={"red"}
+            // className={"hoverEffects"}
             />
           </Link>
         </Box>

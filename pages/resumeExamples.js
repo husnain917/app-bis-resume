@@ -22,14 +22,13 @@ const ResumeExamples = () => {
     <>
       <Box>
         {/* <SideBar /> */}
+        <SideBar />
         <Box
         // fontFamily={"EuclidCircularB-Light"}
         >
           {/* <Carasol1 /> */}
           {/* <Carasol /> */}
           {/* <ChatButton /> */}
-
-          {/* <SideBar /> */}
 
           <Box
             bg="#EFF2F9"
@@ -64,10 +63,10 @@ const ResumeExamples = () => {
             </Box>
             <TryResume />
             <BlogPost />
+            <SelectResume />
           </Box>
         </Box>
       </Box>
-      <SelectResume />
     </>
   );
 };

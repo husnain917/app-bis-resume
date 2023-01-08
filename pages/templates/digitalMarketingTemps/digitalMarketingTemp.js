@@ -29,6 +29,9 @@ export default function Digital_Marketing_Temp() {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   return (
     <>
       <div
@@ -61,7 +64,7 @@ export default function Digital_Marketing_Temp() {
                   w="40%"
                   pb="10%"
                   minW={'340px'}
-                  bgColor="#3A4D6C"
+                  bgColor={backgroundColor}
                   borderLeftRadius={6}
                   pr={3}
                   pl={12}
