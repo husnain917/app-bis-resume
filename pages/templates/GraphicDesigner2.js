@@ -41,6 +41,9 @@ export default function GraphicDesigner2() {
     updater
   } = useStoreData();
   const [show, setShow] = useShow();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
   return (
@@ -66,7 +69,7 @@ export default function GraphicDesigner2() {
               minW="950px"
 
             >
-              <Box w="30%" h="auto" bgColor="#161619" pb="150px">
+              <Box w="30%" h="auto" bgColor={backgroundColor || `#161619`} pb="150px">
 
                 <ImageSelector
                   minWidth={200}

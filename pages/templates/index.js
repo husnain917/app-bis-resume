@@ -16,13 +16,20 @@ function Templates() {
           CUSTOM_TEMP_DATA?.map((items, index) => (
             <>
               <Box className="cursor" key={index}>
-                <Link href={items?.href}>
-                  <img
-                    src={items?.src}
-                    alt={items?.alt}
-                    height={items?.height}
-                    width={items?.width}
-                  />
+                <Link href={items?.href} style={{ cursor: "default" }}>
+                  <div class="templatecontainer">
+                    <img
+                      className='templateimage'
+                      src={items?.src}
+                      alt={items?.alt}
+                      height={items?.height}
+                      width={items?.width}
+                    />
+                    <div class="templatemiddle">
+                      <div class="templatetext">Create my Resume</div>
+                    </div>
+                  </div>
+
                 </Link>
               </Box>
             </>

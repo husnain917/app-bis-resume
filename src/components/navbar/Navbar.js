@@ -110,6 +110,20 @@ export default function Navbar() {
                         boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
                         borderRadius: "0.2rem",
                       }}
+                      onClick={items.label==='Register'?
+                      () => {
+                        setIsActive(0)
+                        setIsModalOpen(true)
+
+                      }:
+                    items.label==='Login'?
+                    () => {
+                      setIsActive(1)
+                      setIsModalOpen(true)
+
+                    }
+                  :
+                ''}
                       cursor={"pointer"}
                       width={breakpointWidth}
                       bg={

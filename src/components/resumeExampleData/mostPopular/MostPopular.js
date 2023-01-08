@@ -47,7 +47,7 @@ const MostPopular = ({ data }) => {
           </Box>
           <Box
             ml="10px"
-            fontSize="2.5em"
+            fontSize={["26px", "26px", "30px", "2.5em", "2.5em"]}
             fontWeight={"400"}
             transition={"color .15s"}
           >
