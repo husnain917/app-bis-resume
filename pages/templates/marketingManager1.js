@@ -24,6 +24,9 @@ const MarketingManager1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
   const [show, setShow] = useShow();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   // PDF download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
   const MainHeading = ({
@@ -83,7 +86,7 @@ const MarketingManager1 = () => {
               minW={830}
               maxW={830}
               borderRadius={6}
-              bg={'#01012a'}
+              bg={backgroundColor}
               pr={'30px'}
               borderWidth="1px"
               borderColor={'black'}

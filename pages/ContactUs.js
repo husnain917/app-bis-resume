@@ -1,10 +1,12 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Button } from "@chakra-ui/react";
 import React, { useState } from "react";
 import ContactButton from "../src/components/contactUs/ContactButton";
 import CustomInput from "../src/components/contactUs/CustomInput";
 import { buttonData } from "../src/components/contactUs/buttonData";
 import CancelSubscription from "../src/components/cancelSubscription";
-import CommonButton from "../src/components/commonButton/CommonButton";
+
+import Link from "next/link";
+import Layout from "../src/Layout";
 
 export default function ContactUs() {
   const [active, setActive] = useState("");
@@ -20,7 +22,7 @@ export default function ContactUs() {
   return (
     <>
       {/* main div  */}
-
+  
       <Box
         w="100%"
         h="auto"
@@ -63,6 +65,7 @@ export default function ContactUs() {
             pl={["5%", , , "9%"]}
             pr={["5% ", , "5%"]}
           >
+
             <Text pt="5%" className="small-heading">
               Select a topic
             </Text>
@@ -82,6 +85,7 @@ export default function ContactUs() {
                   </Box>
                 );
               })}
+
             </Box>
 
             <Box
@@ -125,6 +129,7 @@ export default function ContactUs() {
               mt="5%"
               display="flex"
               flexDir={["column", "column", "row", "row"]}
+
               alignItems={"center"}
               pr="5%"
             >
@@ -152,6 +157,7 @@ export default function ContactUs() {
                   padding="15px 20px 15px 20px"
                 />
               </Box>
+
             </Box>
           </Box>
         </Box>
