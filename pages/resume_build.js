@@ -25,8 +25,6 @@ export default function ResumeBuild() {
     return (
         <>
             <div >
-
-
                 <Box w={["100%", "100%", "100%"]} mt={["2%", "2%", "2%"]} display="flex" flexDirection={["column", "column", "row"]} justifyContent="space-around"    >
                     <Box
                         w={["100%", "40%", "40%"]} mt={["2%", "2%", "2%"]} >
@@ -132,10 +130,8 @@ export default function ResumeBuild() {
                         display={["none", "none", "none", "block"]}
 
                         maxW={["0%", "0%", "0%", "10%"]}
-                        marginRight="10%"
-                        ml="5%"
-
-
+                        marginRight="14%"
+                        ml="6%"
                     >
                         <Box
                             className={styles.sideBarContainer}
@@ -144,10 +140,7 @@ export default function ResumeBuild() {
                         </Box>
                     </Box>
                     <Box
-                        maxW={["100%", "100%", "100%", "60%", "60%"]}
-
-
-                    >
+                        maxW={["100%", "100%", "100%", "60%", "60%"]}>
                         <Box marginTop="10%">
                             <Text className={"only-font-family"}
                                 fontSize={"16px"} >With BisResumes free resume builder, applying for your dream job is easy and fast. Choose from hundreds of free, designer-made templates and customize them within a few clicks.
@@ -170,11 +163,6 @@ export default function ResumeBuild() {
                                 fontSize={"16px"} mt={["5%", "3%", "3%"]}>With BisResumes free resume builder, applying for your dream job is easy and fast. Choose from hundreds of free, designer-made templates and customize them within a few clicks.
                             </Text>
                         </Box>
-
-
-
-
-
                         <Box w={["100%", "100%", "100%"]} p={["0%", "0%", "0%", "5%"]} mt={["2%", "2%", "2%"]} display="flex" backgroundColor="#f8f9f9" flexDirection={["column", "column", "row"]} justifyContent="space-around"    >
                             <Box
                                 w={["100%", "100%", "100%"]} mt={["2%", "2%", "2%"]} ml={["3%", "0%", "0%"]} >
@@ -184,7 +172,7 @@ export default function ResumeBuild() {
                                 </Text>
                                 <Box marginTop="5%">
                                     <Box display="flex" flexDirection="row"><Text marginRight={["12px", "5px", "5px"]}   > <TbCircle2 size={30} color="red" style={{ marginTop: 3 }} />
-                                    </Text><Text className={"medium-heading"}  color="black" >Find the right template</Text></Box>
+                                    </Text><Text className={"medium-heading"} color="black" >Find the right template</Text></Box>
                                     <Text className={"only-font-family"} fontSize={["14px", "16px"]} marginTop="2%" marginLeft={["11%", "5%", "5%"]} mr={["2%", "2%", "0%"]} >
                                         Choose from hundreds of professionally-designed resume templates. Take your pick from styles like modern or simple layouts or industries like acting, graphic design or more corporate layouts.
                                     </Text>

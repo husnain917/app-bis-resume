@@ -8,7 +8,7 @@ export const NAV_ITEMS = [
       {
         label: "Resume Builder",
         subLabel: "Use our builder to create a resume in 5 minutes.",
-        href: "/ResumeBuild",
+        href: "/resume_build",
       },
       {
         label: "Resume Templates",
@@ -18,7 +18,7 @@ export const NAV_ITEMS = [
       {
         label: "Resume Examples",
         subLabel: "See perfect resume examples that get you jobs.",
-        href: "#",
+        href: "/resume_examples",
       },
       {
         label: "Resume Format",
@@ -28,12 +28,12 @@ export const NAV_ITEMS = [
       {
         label: "How to Write a Resume",
         subLabel: "Learn how to write a resume that lands you jobs.",
-        href: "/ResumeBuild",
+        href: "/write_resume",
       },
       {
         label: "Resume Help",
         subLabel: "Use our expert guides to improve your resume writing.",
-        href: "/ResumeHelp",
+        href: "#",
       },
     ],
   },
