@@ -3,10 +3,12 @@ import { LOGOUT_USER } from '../constants/auth';
 import { combineReducers } from 'redux';
 import themeReducer from './reducers/themeReducer';
 import AuthReducer from './reducers/AuthReducer';
+import { feedBackReducer } from './reducers/feedBackReducer';
 const rootReducer = combineReducers({
   editorReducer,
   themeReducer,
-  AuthReducer
+  AuthReducer,
+  feedBackReducer,
 });
 
 // const rootReducer = (state, action) => {
