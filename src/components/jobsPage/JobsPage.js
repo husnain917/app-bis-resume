@@ -18,6 +18,8 @@ import ForthSection from "./forthSection/ForthSection";
 import FifthSection from "./fifthSection/FifthSection";
 import SixthSection from "./sixthSection/SixthSection";
 import ContentText from "./components/ContentText";
+import Sidebar from "../blog/Sidebar";
+import styles from "../../../styles/resumeFormats.module.css";
 import {
   thirdContent,
   seventhContent,
@@ -36,6 +38,9 @@ const JobsPage = () => {
   return (
     <Box w={"100%"}>
       <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
+        {/* <Box maxW={["0%", "0%", "0%", "10%"]}>
+          <Sidebar />
+        </Box> */}
         <Box
           bg={"#FFD67B"}
           display={"flex"}
