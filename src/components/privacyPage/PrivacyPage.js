@@ -43,8 +43,8 @@ const PrivacyPage = () => {
             display={["none", "none", "none", "block"]}
           >
             <Box className={styles.sideBarContainer}>
-              {/* <SideBar /> */}
-              <SideBarSection />
+              <SideBar />
+              {/* <SideBarSection /> */}
             </Box>
           </Box>
           {/* <Box

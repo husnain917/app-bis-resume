@@ -4,12 +4,26 @@ import AboutUs from "../src/components/aboutUs/AboutUs";
 // import Footer from "../src/components/footer/Footer";
 // import Navbar from "../src/components/navbar/Navbar";
 import SideBar from "../src/components/sideBar/SideBar";
+import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
+import styles from "../styles/sideBarSection.module.css";
 
 const About = () => {
   return (
     <>
       <Box>
         {/* <SideBar /> */}
+        <Box
+          maxW={["0%", "0%", "0%", "5%"]}
+          // padding={'70px 0px 0px 0px'}
+          padding={"40px 0px 0px 0px"}
+          position={"fixed"}
+          display={["none", "none", "none", "block"]}
+        >
+          <Box className={styles.sideBarContainer}>
+            {/* <SideBar /> */}
+            <SideBarSection />
+          </Box>
+        </Box>
         <AboutUs />
       </Box>
     </>

@@ -17,12 +17,26 @@ import Carasol1 from "../src/components/resumeExampleData/carasol/Carasol1";
 import SideBar from "../src/components/sideBar/SideBar";
 import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
 import styles from "../styles/sideBarSection.module.css";
+import Sidebar from "../src/components/blog/Sidebar";
 const ResumeExamples = () => {
   return (
     <>
-      <Box>
+      <Box position={"relative"}>
         {/* <SideBar /> */}
-        <SideBar />
+        <Box
+          maxW={["0%", "0%", "0%", "5%"]}
+          // padding={'70px 0px 0px 0px'}
+          padding={"40px 0px 0px 0px"}
+          position={"fixed"}
+          display={["none", "none", "none", "block"]}
+        >
+          <Box
+          // className={styles.sideBarContainer}
+          >
+            {/* <SideBar /> */}
+            <SideBarSection />
+          </Box>
+        </Box>
         <Box
         // fontFamily={"EuclidCircularB-Light"}
         >
