@@ -134,7 +134,7 @@ export default function Footer() {
             <Link href="/page/Pricing">Pricing</Link>
           </div>
           <div>
-            <Link href="/About">About Us</Link>
+            <Link href="/about">About Us</Link>
           </div>
           <div>
             <Link href="#/">E-Book:How to get a job in 2022</Link>

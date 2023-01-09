@@ -96,60 +96,85 @@ export default function Navbar() {
           marginTop={useBreakpointValue({ xl: "20px", lg: "12px", md: "15px" })}
         >
           {/* login buttons */}
-          {!isUserLoggedIn ? (
-            Login_Buttons?.map((items) => {
-              return (
-                <>
-                  <Box
-                    display={["none", "none", "block", "block", "block"]}
-                    justify={{ base: "end" }}
-                    style={{
-                      border: "1px solid #e0e2e8",
-                      boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
-                      borderRadius: "0.2rem",
-                    }}
-                    cursor={"pointer"}
-                    width={breakpointWidth}
-                    bg={
-                      items?.label === "Register"
-                        ? "#006772"
-                        : items?.label === "Login"
-                        ? "#006772"
-                        : ""
+          {
+            !isUserLoggedIn ?
+              Login_Buttons?.map((items) => {
+                return (
+                  <>
+                    <Box
+                      display={{ base: "inline-block", md: "inline-block" }}
+                      justify={{ base: "end" }}
+                      style={{
+                        border: "1px solid #e0e2e8",
+                        boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
+                        borderRadius: "0.2rem",
+                      }}
+                      onClick={items.label==='Register'?
+                      () => {
+                        setIsActive(0)
+                        setIsModalOpen(true)
+
+                      }:
+                    items.label==='Login'?
+                    () => {
+                      setIsActive(1)
+                      setIsModalOpen(true)
+
                     }
-                    textAlign={"center"}
-                    padding={"10px 5px"}
-                    textTransform={"uppercase"}
-                    ml="1.5rem"
-                    _hover={{
-                      textDecoration: "none",
-                      backgroundColor: "red",
-                      color: "white",
-                    }}
-                  >
-                    {items?.label === "Register" ? (
-                      <>
-                        <Link
-                          // href={items?.href ?? '#'}
-                          fontWeight={650}
-                          color={"#fdfffc"}
-                          fontSize={breakpointfontSize}
-                          _hover={{
-                            textDecoration: "none",
-                            color: "#fff",
-                          }}
-                          onClick={() => {
-                            setIsModalOpen(true);
-                            setIsActive(0);
-                          }}
-                        >
-                          {items.label}
-                        </Link>
-                      </>
-                    ) : items.label === "Login" ? (
-                      <>
-                        <Link
-                          // href={items?.href ?? '#'}
+                  :
+                ''}
+                      cursor={"pointer"}
+                      width={breakpointWidth}
+                      bg={
+                        items?.label === "Register"
+                          ? "#006772"
+                          : items?.label === "Login"
+                            ? "#006772"
+                            : ""
+                      }
+                      textAlign={"center"}
+                      padding={"10px 5px"}
+                      textTransform={"uppercase"}
+                      ml="1.5rem"
+                      _hover={{
+                        textDecoration: "none",
+                        backgroundColor: "red",
+                        color: "white",
+                      }}
+                    >
+                      {items?.label === "Register" ? (
+                        <>
+                          <Link
+                            // href={items?.href ?? '#'}
+                            fontWeight={650}
+                            color={"#fdfffc"}
+                            fontSize={breakpointfontSize}
+                            _hover={{
+                              textDecoration: "none",
+                              color: "#fff",
+                            }}
+                            onClick={() => {
+                              setIsModalOpen(true)
+                              setIsActive(0)
+                            }}
+                          >
+                            {items.label}
+                          </Link>
+                        </>
+                      ) : items.label === "Login" ? (
+                        <>
+                          <Link
+                            // href={items?.href ?? '#'}
+                            fontWeight={650}
+                            color={"#fdfffc"}
+                            fontSize={breakpointfontSize}
+                            _hover={{
+                              textDecoration: "none",
+                              color: "#fff",
+                            }}
+                            onClick={() => {
+                              setIsActive(1)
+                              setIsModalOpen(true)
 
                           fontWeight={650}
                           color={"#fdfffc"}

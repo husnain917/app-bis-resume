@@ -64,18 +64,20 @@ const ImageSelector = ({
                 background={'white'}
                 ref={uploadedImage}
                 alt=""
-                borderRadius={borderRadius || '50%'}
-                borderWidth={borderWidth || '4'}
-                borderColor={borderColor || 'rgba(255,255,255,0)'}
+                borderRadius={borderRadius || 'full'}
                 minHeight={minHeight || '15.7em'}
                 maxHeight={maxHeight || '15.7em'}
                 minWidth={minWidth || '15.7em'}
                 maxWidth={maxWidth || '15.7em'}
+                transition={'0.5s borderColor'}
                 style={{
                   // objectFit: "cover",
                   objectPosition: 'center',
                   // objectFit: "contain",
-                  border: '1px solid #34495e',
+                  border: ` ${borderWidth ? borderWidth : '4px'} solid ${
+                    borderColor ? borderColor : 'black'
+                  }`,
+                  transition: '1s border',
                 }}
               />
             </Box>

@@ -26,6 +26,9 @@ import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 const FashionDesigner2 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   // custom Hook For Template
   const [show, setShow] = useShow();
   // PDF Download Hook
@@ -61,7 +64,7 @@ const FashionDesigner2 = () => {
                   display="flex"
                   justifyContent="center"
                   flexDirection="column"
-                  backgroundColor="#077BBD"
+                  backgroundColor={backgroundColor}
                 ></Box>
                 <HStack
                   display={"flex"}
@@ -104,7 +107,7 @@ const FashionDesigner2 = () => {
                         line={true}
                         lineW="45%"
                         lineH="0.30em"
-                        lineBg="#077BBD"
+                        lineBg={backgroundColor}
                         fontSize={"1.8em"}
                         lineStyle={Class.lineStyle}
                       />
@@ -124,7 +127,7 @@ const FashionDesigner2 = () => {
                         line={true}
                         lineW="45%"
                         lineH="0.30em"
-                        lineBg="#077BBD"
+                        lineBg={backgroundColor}
                         fontSize={"1.8em"}
                         lineStyle={Class.lineStyle}
                       />
@@ -169,7 +172,7 @@ const FashionDesigner2 = () => {
                               line={true}
                               lineW="45%"
                               lineH="0.30em"
-                              lineBg="#077BBD"
+                              lineBg={backgroundColor}
                               fontSize={"1.8em"}
                               lineStyle={Class.lineStyle}
                             />
@@ -219,6 +222,7 @@ const FashionDesigner2 = () => {
                             fontSize="23px"
                             fontWeight={"bold"}
                             color="#313B47"
+                            lineBg={backgroundColor}
                             margin={"0px 0px 10px 0px"}
                             onSideSectionShow={() =>
                               setShow({ ...show, education: true })
@@ -269,6 +273,7 @@ const FashionDesigner2 = () => {
                             color="#313B47"
                             minW={"full"}
                             maxW="full"
+                            lineBg={backgroundColor}
                             margin={"10px 0px"}
                             onSideSectionShow={() =>
                               setShow({ ...show, work: true })

@@ -111,7 +111,7 @@ export default function Harumi_Graphic_Temp() {
                                         minW="100%"
                                         maxW="100%"
                                         aboutStyle={Classes.aboutText}
-                                        textColor="#fff"
+                                        fontColor="#fff"
                                     />
 
                                     {/* _____________ Skill _____________ */}

@@ -42,6 +42,7 @@ export default function sideBar() {
                                     </Box>
                                     <Box
                                         fontSize={'12px'}
+                                        fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                     >
                                         <Text>
                                             {item?.like}
@@ -105,6 +106,7 @@ export default function sideBar() {
                                             </Box>
                                             <Box
                                                 fontSize={'12px'}
+                                                fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                             >
                                                 <Text>
                                                     {item?.text}
