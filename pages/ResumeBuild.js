@@ -253,8 +253,6 @@ export default function ResumeBuild() {
                             </Box>
 
                         </Box>
-
-
                         <>
                             <Container
                                 maxW={['100%', '100%', '100%', '100%', '100%']}
