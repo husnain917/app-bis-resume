@@ -3,8 +3,9 @@
     width: 70px;
     transition: all 0.9s linear;
 
-    /* position: absolute; */
+    position: absolute;
     margin-top: 20px;
+    margin-left: 30px;
     
 }
 
@@ -112,7 +113,6 @@
     z-index: 1;
     width: 190px;
     overflow-y: hidden;
-    overflow-x: hidden;
     
 
 

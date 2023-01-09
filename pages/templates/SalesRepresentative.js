@@ -30,7 +30,9 @@ import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 const SalesRepresentative = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  // custom Hook For Template
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );  // custom Hook For Template
   const [show, setShow] = useShow();
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
@@ -60,7 +62,7 @@ const SalesRepresentative = () => {
                 ref={pdfRef}
               >
                 <Box display="flex" flexDirection="row" background={"whitesmoke"}>
-                  <Box w="20%" minH="25em" backgroundColor="#DBCABA"></Box>
+                  <Box w="20%" minH="25em" backgroundColor={backgroundColor}></Box>
                 </Box>
                 <HStack
                   display="flex"
@@ -100,7 +102,7 @@ const SalesRepresentative = () => {
                           line={true}
                           lineW="45%"
                           lineH="0.30em"
-                          lineBg="#077BBD"
+                          lineBg={backgroundColor}
                           fontSize={"1.8em"}
                           lineStyle={Class.lineStyle}
                         />
@@ -145,7 +147,7 @@ const SalesRepresentative = () => {
                                 line={true}
                                 lineW="45%"
                                 lineH="0.30em"
-                                lineBg="#077BBD"
+                                lineBg={backgroundColor}
                                 fontSize={"1.8em"}
                                 lineStyle={Class.lineStyle}
                               />
@@ -173,7 +175,7 @@ const SalesRepresentative = () => {
                                 margin={"10px 0px 0px 0px"}
                                 iconHeading={true}
                                 icon={(props) => (
-                                  <MdEmail {...props} size={20} color={"blue"} />
+                                  <MdEmail {...props} size={20} color={backgroundColor} />
                                 )}
                                 color={"black"}
                                 fontSize={20}

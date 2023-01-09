@@ -26,6 +26,9 @@ const DigitalMarkTemp2 = () => {
   const [show, setShow] = useShow();
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   return (
     <div style={{ overflow: 'auto' }}>
       <TempLayout skills={true} education={true} work={true} downloadPDF={downloadPDFHandler}>
@@ -50,7 +53,7 @@ const DigitalMarkTemp2 = () => {
               ref={pdfRef}
             >
               <Box
-                bg={'#AED6F1'}
+                bg={backgroundColor}
                 h={'60px'}
                 borderBottomRightRadius={25}
                 minW={410}
@@ -68,7 +71,7 @@ const DigitalMarkTemp2 = () => {
                   />
                   <Box
                     minH={10}
-                    bg={'#AED6F1'}
+                    bg={backgroundColor}
                     maxW={310}
                     minW={310}
                     borderRightRadius={8}
@@ -83,7 +86,7 @@ const DigitalMarkTemp2 = () => {
                   <Heading
                     title={'CONTACT'}
                     textMargin="10px 0px 10px 20px"
-                    headBg={'#AED6F1'}
+                    headBg={backgroundColor}
                     borderRadius="0px 8px 8px 0px"
                     fontSize={'23px'}
                     height="40px"
@@ -109,7 +112,7 @@ const DigitalMarkTemp2 = () => {
                         <Heading
                           title={'SKILLS'}
                           textMargin="10px 0px 10px 20px"
-                          headBg={'#AED6F1'}
+                          headBg={'backgroundColor'}
                           borderRadius="0px 8px 8px 0px"
                           fontSize={'23px'}
                           height="40px"
@@ -158,7 +161,7 @@ const DigitalMarkTemp2 = () => {
                     marginLeft="50px"
                   />
                   <Box
-                    bg={'#AED6F1'}
+                    bg={backgroundColor}
                     minW={372}
                     maxW={372}
                     ml={'30px'}

@@ -1,5 +1,3 @@
-
-
 import { Text, Box } from "@chakra-ui/react";
 import React from "react";
 import Image from 'next/image'
