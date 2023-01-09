@@ -37,6 +37,7 @@ import Skill from "../../src/components/commonSection/Skill";
 import Language from "../../src/components/commonSection/Language";
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+import { useSelector } from 'react-redux'
 
 
 
@@ -49,16 +50,19 @@ export default function TemplateCEO() {
     const [show, setShow] = useShow();
     // PDF Download Hook
     const { downloadPDFHandler, pdfRef } = PDFGenerater();
+    const { backgroundColor, color } = useSelector(
+        (store) => store.themeReducer.theme
+    );
     return (
         <div style={{ overflow: 'auto' }}>
 
-            <TempLayout work={true} education={true} skills={true} languages={true}  downloadPDF={downloadPDFHandler}>
+            <TempLayout work={true} education={true} skills={true} languages={true} downloadPDF={downloadPDFHandler}>
                 <ChangeTempBtn />
                 <div className={styles.mainDiv} ref={pdfRef}>
                     <Box ml={["", , , "3%", "10%", "20%"]}>
 
                         <div className={styles.innerMainDiv}>
-                            <div className={styles.innerMainDiv1}>
+                            <Box className={styles.innerMainDiv1} bg={backgroundColor}>
                                 <Box height={300} display='flex' justifyContent='center' alignItems='center' >
                                     <Box style={{ border: "7px solid white" }} borderRadius="100%" >
                                         <ImageSelector
@@ -75,7 +79,7 @@ export default function TemplateCEO() {
                                         <div className={styles.contactHeadingTitle}>
                                             <Heading
                                                 title={'CONTACT'}
-                                                color="#fff"
+                                                color={color}
 
                                             />
                                         </div>
@@ -84,6 +88,7 @@ export default function TemplateCEO() {
 
 
                                     <Contact
+                                        color={color}
                                         phone={true}
                                         email={true}
                                         linkedinURL={true}
@@ -106,7 +111,7 @@ export default function TemplateCEO() {
                                                     {show.skills && (
                                                         <SectionSideMenu
                                                             onHide={() => setShow({ ...show, skills: false })}
-                                                            bg="#2A78AB"
+                                                            bg={color}
                                                             iconColor={'#E0EFFA'}
                                                             onDelete={SKILL}
                                                         />
@@ -115,7 +120,7 @@ export default function TemplateCEO() {
                                                 <div className={styles.contactHeadingTitle}>
                                                     <Heading
                                                         title={'SKILLS'}
-                                                        color="#fff"
+                                                        color={color}
                                                         onSideSectionShow={() =>
                                                             setShow({ ...show, skills: true })
                                                         }
@@ -125,6 +130,7 @@ export default function TemplateCEO() {
                                             <Skill skillStyle={styles.skillText}
                                                 parentContainerStyle={styles.mt}
                                                 minW={"220px"}
+                                                color={color}
                                                 maxW={"220px"}
 
 
@@ -151,7 +157,7 @@ export default function TemplateCEO() {
                                                 <div className={styles.contactHeadingTitle}>
                                                     <Heading
                                                         title={'LANGUAGES'}
-                                                        color="#fff"
+                                                        color={color}
                                                         onSideSectionShow={() =>
                                                             setShow({ ...show, languages: true })
                                                         }
@@ -160,6 +166,7 @@ export default function TemplateCEO() {
                                             </HStack>
                                             <Box mt="2%" mb="3%">
                                                 <Language
+                                                    color={color}
                                                     langStyle={styles.skillText}
                                                 />
                                             </Box>
@@ -171,7 +178,7 @@ export default function TemplateCEO() {
 
 
 
-                            </div>
+                            </Box>
 
                             <div className={styles.innerMainDiv2} >
                                 <Profile cId='ceo' />

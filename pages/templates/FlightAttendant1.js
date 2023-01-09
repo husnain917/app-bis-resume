@@ -28,6 +28,9 @@ import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 const FlightAttendant1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
   return (
@@ -61,7 +64,7 @@ const FlightAttendant1 = () => {
                 w="40%"
                 pb="10%"
                 minW={'340px'}
-                bgColor="#2A78AB"
+                bgColor={backgroundColor}
                 // borderLeftRadius={6}
                 pr={3}
                 pl={12}
@@ -94,7 +97,7 @@ const FlightAttendant1 = () => {
                   circleIcon={true}
                   circleBg="#fff"
                   circleSize="25px"
-                  iconColor="#2A78AB"
+                  iconColor={backgroundColor}
                   margin={'10px 0px 0px 0px'}
                   style={Classes.profileText}
                 />
@@ -178,7 +181,7 @@ const FlightAttendant1 = () => {
                           icon={(props) => (
                             <IoMdJet
                               {...props}
-                              color="#2A78AB"
+                              color={backgroundColor}
                               size={32}
                               className={Classes.mr}
                             />
@@ -230,7 +233,7 @@ const FlightAttendant1 = () => {
                           icon={(props) => (
                             <BsFillLayersFill
                               {...props}
-                              color="#2A78AB"
+                              color={backgroundColor}
                               size={32}
                               className={Classes.mr}
                             />
@@ -288,7 +291,7 @@ const FlightAttendant1 = () => {
                           icon={(props) => (
                             <FaAward
                               {...props}
-                              color="#2A78AB"
+                              color={backgroundColor}
                               size={32}
                               className={Classes.mr}
                             />
