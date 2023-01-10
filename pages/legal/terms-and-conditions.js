@@ -42,7 +42,7 @@ export default function Terms_And_Conditions() {
 
     return (
         <>
-    
+
             <Container
                 maxW={["100%", "100%", "80%", "80%"]}
                 display={"flex"}
@@ -57,7 +57,6 @@ export default function Terms_And_Conditions() {
                         position={["fixed"]}
                         zIndex={"1049"}
                     >
-                        <SideBarSection />
                     </Box>
                 </Box>
                 <Box
@@ -628,9 +627,9 @@ export default function Terms_And_Conditions() {
                     </Box>
                 </Box>
             </Container>
-    
+
         </>
-    
+
 
     )
 }

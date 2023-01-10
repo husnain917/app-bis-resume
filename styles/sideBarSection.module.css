@@ -118,3 +118,11 @@
     padding-left: 25%;
     display: block;
 }
+
+.sideBarContainer{
+    position: sticky;
+    top:5%;
+    left:0%;
+    display: block;
+
+}
