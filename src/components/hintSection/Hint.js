@@ -12,7 +12,7 @@ export default function Hint({
   const width = size.width;
   return (
     <>
-      <Box margin={"6rem 0"}>
+      <Box margin={["2rem 0", "2rem 0", "4rem 0", "6rem 0", "6rem 0"]}>
         <Box
           id={"cardContent"}
           bg={["#F5F5F5", "#F5F5F5", "#F5F5F5", "transparent", "transparent"]}
@@ -91,7 +91,7 @@ export default function Hint({
                 marginBottom={["0.6rem", "0.6rem", "0.6rem", "1rem", "1rem"]}
                 display="flex"
                 fontWeight={["700", "700", "700", "600", "600"]}
-                fontSize={["1.8rem", "1.7rem", "1.8rem", "2rem", "2rem"]}
+                fontSize={["1.4rem", "1.4rem", "1.8rem", "2rem", "2rem"]}
                 className="small-heading"
               >
                 <Text display={["flex", "flex", "flex", "none", "none"]}>
@@ -108,17 +108,18 @@ export default function Hint({
               </Text>
               <Text
                 id={"cardbodyText"}
-                className={"only-font-family"}
+                className={"small-text"}
                 fontSize={
                   width > 610
                     ? ["1.2rem", "1.1rem", "1.2rem", "1.2rem", "1.2rem"]
-                    : "1.3rem"
+                    : "1rem"
                 }
                 fontWeight={"400"}
                 marginBottom={"1rem"}
                 display="flex"
                 flexDirection={"column"}
                 justifyContent={"center"}
+                lineHeight={["26px", "26px", "30px", "30px", "30px"]}
               >
                 {description}
               </Text>

@@ -276,7 +276,7 @@ export default function Aaron_Graphic_Temp() {
                                                     minW="100%"
                                                     maxW="100%"
                                                     aboutStyle={Classes.aboutText}
-                                                    textColor="#fff"
+                                                    fontColor="#fff"
                                                     fontSize="16px"
                                                     fontWeight={600}
                                                 />

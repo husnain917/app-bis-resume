@@ -23,7 +23,6 @@ export default function ContactUs() {
   return (
     <>
       {/* main div  */}
-      <SideBar />
       <Box
         w="100%"
         h="auto"

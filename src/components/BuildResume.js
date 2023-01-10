@@ -1,5 +1,5 @@
 import styles from "../../styles/build.module.css";
-import { Button, Box } from "@chakra-ui/react";
+import { Button, Box, Text } from "@chakra-ui/react";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import ImageBuild from "../../public/mainImageBuild.webp";
@@ -11,7 +11,13 @@ export default function BuildResume() {
     <>
       <div className={styles.ctsMain}>
         <Box id="svg-section" mt={10}></Box>
-        <h1 className={"sub-heading"}>Ready to Jump-Start Your Career</h1>
+        <Text
+          className={"sub-heading"}
+          fontSize={["24px", "24px", "30px", "36px", "36px"]}
+          lineHeight={["26px", "26px", "36px", "48px", "48px"]}
+        >
+          Ready to Jump-Start Your Career
+        </Text>
 
         <Box className={styles.ctaHr} mt={3} mb={4}></Box>
 
