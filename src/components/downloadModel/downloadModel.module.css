@@ -1,0 +1,46 @@
+.avator {
+    position: absolute;
+    top: 25%;
+    left: 27%;
+    z-index: 1400;
+    transform: rotate(-18deg);
+}
+
+.wing {
+    position: absolute;
+    top: 36%;
+    left: 32%;
+    z-index: 1500;
+}
+
+@media screen and (max-width: 1440px) {
+    .avator {
+        position: absolute;
+        top: 25%;
+        left: 26%;
+        z-index: 1400;
+        transform: rotate(-18deg);
+    }
+    .wing {
+        position: absolute;
+        top: 37%;
+        left: 31%;
+        z-index: 1500;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .avator {
+        position: absolute;
+        top: 25%;
+        left: 17%;
+        z-index: 1400;
+        transform: rotate(-18deg);
+    }
+    .wing {
+        position: absolute;
+        top: 36%;
+        left: 24%;
+        z-index: 1500;
+    }
+}

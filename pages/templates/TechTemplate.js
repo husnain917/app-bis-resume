@@ -36,12 +36,9 @@ import {
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
+import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 const TechTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  const { backgroundColor, color } = useSelector(
-    (store) => store.themeReducer.theme
-  );
   // custom Hook For Template
   const [show, setShow] = useShow();
   // PDf Download Hook
@@ -67,7 +64,9 @@ const TechTemplate = () => {
           alignItems={{ base: 'none', lg: 'center' }}
           pt="70px"
         >
-          <Box margin={'20px 20px 30px 20px'}>
+          <Box
+            margin={'20px 20px 30px 20px'}
+          >
             <Box
               minW={910}
               py={2}
@@ -93,7 +92,6 @@ const TechTemplate = () => {
                     minHeight={150}
                     maxHeight={150}
                     marginLeft="40px"
-                    borderColor={color ? color : ''}
                   />
                   <Box ml={10}>
                     <Name
@@ -102,13 +100,9 @@ const TechTemplate = () => {
                       direction="row"
                       FNameStyle={Classes.techName}
                       SNameStyle={Classes.techName}
-                      fontColor={backgroundColor ? backgroundColor : ''}
                     />
                     <Box pb={10} justifyContent={'center'} ml={1}>
-                      <Profession
-                        professionStyle={Classes.ProfessionHybrid}
-                        fontColor={color ? color : ''}
-                      />
+                      <Profession professionStyle={Classes.ProfessionHybrid} />
                       <About
                         minW="full"
                         maxW="full"
@@ -129,11 +123,11 @@ const TechTemplate = () => {
                     email={true}
                     phone={true}
                     circleIcon={true}
-                    iconColor={color ? color : '#319795'}
+                    iconColor="#319795"
                     circleSize="30px"
                     circleBorderW="1px"
                     margin="10px"
-                    circleBorderColor={color ? color : '#319795'}
+                    circleBorderColor="#319795"
                     style={Classes.techContact}
                   />
                 </Box>
@@ -164,9 +158,7 @@ const TechTemplate = () => {
                           <Heading
                             title="EDUCATION"
                             circleSize="38px"
-                            circleBg={
-                              backgroundColor ? backgroundColor : '#313B47'
-                            }
+                            circleBg="#313B47"
                             circleIconHeading={true}
                             icon={(props) => (
                               <MdCastForEducation
@@ -177,9 +169,7 @@ const TechTemplate = () => {
                             )}
                             fontSize="23px"
                             fontWeight={'bold'}
-                            color={
-                              backgroundColor ? backgroundColor : '#313B47'
-                            }
+                            color="#313B47"
                             margin={'0px 0px 10px 0px'}
                             onSideSectionShow={() =>
                               setShow({ ...show, education: true })
@@ -218,9 +208,7 @@ const TechTemplate = () => {
                           <Heading
                             title="WORK EXPERIENCE"
                             circleSize="38px"
-                            circleBg={
-                              backgroundColor ? backgroundColor : '#313B47'
-                            }
+                            circleBg="#313B47"
                             circleIconHeading={true}
                             icon={(props) => (
                               <BsFillLayersFill
@@ -231,9 +219,7 @@ const TechTemplate = () => {
                             )}
                             fontSize="23px"
                             fontWeight={'bold'}
-                            color={
-                              backgroundColor ? backgroundColor : '#313B47'
-                            }
+                            color="#313B47"
                             minW={'full'}
                             maxW="full"
                             margin={'10px 0px'}
@@ -286,16 +272,14 @@ const TechTemplate = () => {
                         <Heading
                           title="SKILLS"
                           circleSize="38px"
-                          circleBg={
-                            backgroundColor ? backgroundColor : '#313B47'
-                          }
+                          circleBg="#313B47"
                           circleIconHeading={true}
                           icon={(props) => (
                             <GiSkills {...props} size={18} color={'white'} />
                           )}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color={backgroundColor ? backgroundColor : '#313B47'}
+                          color="#313B47"
                           minW={250}
                           maxW={250}
                           margin={'10px 0px'}
@@ -326,16 +310,14 @@ const TechTemplate = () => {
                         <Heading
                           title="PERSONAL PROJECTS"
                           circleSize="38px"
-                          circleBg={
-                            backgroundColor ? backgroundColor : '#313B47'
-                          }
+                          circleBg="#313B47"
                           circleIconHeading={true}
                           icon={(props) => (
                             <GoProject {...props} size={18} color={'white'} />
                           )}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color={backgroundColor ? backgroundColor : '#313B47'}
+                          color="#313B47"
                           minW={250}
                           maxW={250}
                           margin={'15px 0px'}
@@ -378,20 +360,14 @@ const TechTemplate = () => {
                         <Heading
                           title="ORGANIZATION"
                           circleSize="38px"
-                          circleBg={
-                            backgroundColor ? backgroundColor : '#313B47'
-                          }
+                          circleBg="#313B47"
                           circleIconHeading={true}
                           icon={(props) => (
-                            <GiOrganigram
-                              {...props}
-                              size={18}
-                              color={'white'}
-                            />
+                            <GiOrganigram {...props} size={18} color={'white'} />
                           )}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color={backgroundColor ? backgroundColor : '#313B47'}
+                          color="#313B47"
                           minW={250}
                           maxW={250}
                           margin={'15px 0px'}
@@ -432,20 +408,14 @@ const TechTemplate = () => {
                         <Heading
                           title="CERTIFICATES"
                           circleSize="38px"
-                          circleBg={
-                            backgroundColor ? backgroundColor : '#313B47'
-                          }
+                          circleBg="#313B47"
                           circleIconHeading={true}
                           icon={(props) => (
-                            <TbCertificate
-                              {...props}
-                              size={18}
-                              color={'white'}
-                            />
+                            <TbCertificate {...props} size={18} color={'white'} />
                           )}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color={backgroundColor ? backgroundColor : '#313B47'}
+                          color="#313B47"
                           minW={250}
                           maxW={250}
                           margin={'15px 0px'}
@@ -473,9 +443,7 @@ const TechTemplate = () => {
                         {show.languages && (
                           <SectionSideMenu
                             bg={'#313B47'}
-                            onHide={() =>
-                              setShow({ ...show, languages: false })
-                            }
+                            onHide={() => setShow({ ...show, languages: false })}
                             onDelete={LANGUAGES}
                           />
                         )}
@@ -485,9 +453,7 @@ const TechTemplate = () => {
                         <Heading
                           title="LANGUAGES"
                           circleSize="38px"
-                          circleBg={
-                            backgroundColor ? backgroundColor : '#313B47'
-                          }
+                          circleBg="#313B47"
                           circleIconHeading={true}
                           icon={(props) => (
                             <IoLanguageOutline
@@ -498,7 +464,7 @@ const TechTemplate = () => {
                           )}
                           fontSize="23px"
                           fontWeight={'bold'}
-                          color={backgroundColor ? backgroundColor : '#313B47'}
+                          color="#313B47"
                           minW={250}
                           maxW={250}
                           margin={'15px 0px'}
@@ -520,9 +486,7 @@ const TechTemplate = () => {
                           {show.interest && (
                             <SectionSideMenu
                               bg={'#313B47'}
-                              onHide={() =>
-                                setShow({ ...show, interest: false })
-                              }
+                              onHide={() => setShow({ ...show, interest: false })}
                               onDelete={INTEREST}
                             />
                           )}
@@ -532,22 +496,14 @@ const TechTemplate = () => {
                           <Heading
                             title="INTEREST"
                             circleSize="38px"
-                            circleBg={
-                              backgroundColor ? backgroundColor : '#313B47'
-                            }
+                            circleBg="#313B47"
                             circleIconHeading={true}
                             icon={(props) => (
-                              <FaHorseHead
-                                {...props}
-                                size={18}
-                                color={'white'}
-                              />
+                              <FaHorseHead {...props} size={18} color={'white'} />
                             )}
                             fontSize="23px"
                             fontWeight={'bold'}
-                            color={
-                              backgroundColor ? backgroundColor : '#313B47'
-                            }
+                            color="#313B47"
                             minW={250}
                             maxW={250}
                             margin={'15px 0px'}

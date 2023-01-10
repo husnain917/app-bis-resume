@@ -20,8 +20,11 @@ import {
   MoonIcon,
   EditIcon,
   SettingsIcon,
+<<<<<<< HEAD
   DownloadIcon,
   ChevronDownIcon,
+=======
+>>>>>>> d691b35c7b568d12d51f6d3310d4b0dd060052a0
   HamburgerIcon,
 } from '@chakra-ui/icons';
 import {
@@ -85,6 +88,7 @@ export default function TempNavbar({
         borderRadius={'100px'}
         justifyContent="center"
         py={1}
+        ml={{ base: '120px', md: '0px' }}
       >
         <Popover>
           <PopoverTrigger>

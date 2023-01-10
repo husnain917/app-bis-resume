@@ -41,8 +41,8 @@ const FaqLeftImage = ({
           "1fr 2fr 1fr",
           "1fr 2fr 1fr",
         ]}
-        marginInlineStart={["60px", "60px", "60px", "60px", "40px"]}
-        marginInlineEnd={["60px", "60px", "60px", "60px", "40px"]}
+        marginInlineStart={["20px", "30px", "60px", "60px", "40px"]}
+        marginInlineEnd={["20px", "30px", "60px", "60px", "40px"]}
         display={["flex", "flex", "grid", "grid", "grid", "grid", "grid"]}
         flexDirection={["column-reverse"]}
       >
@@ -54,145 +54,158 @@ const FaqLeftImage = ({
             letterSpacing: "0.3px",
           }}
         >
-          <Text fontSize={["1.9em"]} className="sub-heading">
+          <Text
+            className="sub-heading"
+            fontSize={["1.4em", "1.4em", "1.9em", "1.9em", "1.9em"]}
+            lineHeight={["26px", "30px", "30px", "30px", "30px"]}
+          >
             {heading}
           </Text>
-          <Text fontSize={["1em", "1em", "1em", , "1.1em", "1.3em"]} my={4}>
-            {" "}
-            {text1}
-          </Text>
           <Text
-            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            fontSize={["1em", "1em", "1em", , "1.1em", "1.3em"]}
             my={4}
-            lineHeight={"2"}
+            lineHeight={["30px", "24px", "30px", "30px", "30px"]}
+            className={"small-text"}
           >
+            {" "}
             {text01}
           </Text>
           <Text
             fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
             my={4}
-            lineHeight={"2"}
+            lineHeight={["23px", "24px", "30px", "30px", "30px"]}
+            className={"small-text"}
+          >
+            {text1}
+          </Text>
+          <Text
+            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            my={4}
+            lineHeight={["23px", "24px", "30px", "30px", "30px"]}
+            className={"small-text"}
           >
             {text2}
           </Text>
           <Text
             fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
             my={4}
+            lineHeight={["23px", "24px", "30px", "30px", "30px"]}
+            className={"small-text"}
           >
             {text3}
           </Text>
           {item1 ? (
             <UnorderedList
               ml={4}
-              fontSize={"1em"}
-              fontWeight={500}
+              fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
+              lineHeight={["20px", "20px", "24px", "24px", "24px"]}
+              className={"small-text"}
               style={{
                 letterSpacing: "0.1px",
               }}
             >
               <ListItem mb={"5px"}>
-                <span
-                  style={{
-                    fontWeight: "600",
-                  }}
+                <Text
+                  as="span"
+                  fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
+                  className="sub-heading"
+                  lineHeight={"0px"}
                 >
-                  {item1h}{" "}
-                </span>
-                <span
-                  style={{
-                    marginLeft: 3,
-                    fontWeight: "normal",
-                  }}
+                  {item1h}
+                </Text>
+                <Text
+                  as="span"
+                  ml={1}
+                  fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
                 >
                   {item1}
-                </span>
+                </Text>
               </ListItem>
               <ListItem mb={"5px"}>
-                <span
-                  style={{
-                    fontWeight: "600",
-                  }}
+                <Text
+                  as="span"
+                  fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
+                  className="sub-heading"
+                  lineHeight={"0px"}
                 >
-                  {item2h}{" "}
-                </span>
-                <span
-                  style={{
-                    marginLeft: 3,
-                    fontWeight: "normal",
-                  }}
+                  {item2h}
+                </Text>
+                <Text
+                  as="span"
+                  ml={1}
+                  fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
                 >
                   {item2}
-                </span>
+                </Text>
               </ListItem>
               <ListItem mb={"5px"}>
-                <span
-                  style={{
-                    fontWeight: "600",
-                  }}
+                <Text
+                  as="span"
+                  fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
+                  className="sub-heading"
+                  lineHeight={"0px"}
                 >
-                  {item3h}{" "}
-                </span>
-                <span
-                  style={{
-                    marginLeft: 3,
-                    maxWidth: "14ch",
-                    fontWeight: "normal",
-                  }}
+                  {item3h}
+                </Text>
+                <Text
+                  as="span"
+                  ml={1}
+                  fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
                 >
                   {item3}
-                </span>
+                </Text>
               </ListItem>
               <ListItem mb={"5px"}>
-                <span
-                  style={{
-                    fontWeight: "600",
-                  }}
+                <Text
+                  as="span"
+                  fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
+                  className="sub-heading"
+                  lineHeight={"0px"}
                 >
                   {item4h}
-                </span>
-                <span
-                  style={{
-                    marginLeft: 3,
-                    fontWeight: "normal",
-                  }}
+                </Text>
+                <Text
+                  as="span"
+                  ml={1}
+                  fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
                 >
                   {item4}
-                </span>
+                </Text>
               </ListItem>
               <ListItem mb={"5px"}>
-                <span
-                  style={{
-                    fontWeight: "600",
-                  }}
+                <Text
+                  as="span"
+                  fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
+                  className="sub-heading"
+                  lineHeight={"0px"}
                 >
                   {item5h}
-                </span>
-                <span
-                  style={{
-                    marginLeft: 3,
-                    fontWeight: "normal",
-                  }}
+                </Text>
+                <Text
+                  as="span"
+                  ml={1}
+                  fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
                 >
                   {item5}
-                </span>
+                </Text>
               </ListItem>
               {item6 ? (
                 <ListItem mb={"3px"}>
-                  <span
-                    style={{
-                      fontWeight: "600",
-                    }}
+                  <Text
+                    as="span"
+                    fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
+                    className="sub-heading"
+                    lineHeight={"0px"}
                   >
                     {item6h}
-                  </span>
-                  <span
-                    style={{
-                      marginLeft: 3,
-                      fontWeight: "normal",
-                    }}
+                  </Text>
+                  <Text
+                    as="span"
+                    ml={1}
+                    fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
                   >
                     {item6}
-                  </span>
+                  </Text>
                 </ListItem>
               ) : (
                 ""

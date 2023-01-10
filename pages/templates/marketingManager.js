@@ -1,4 +1,4 @@
-import { background, Box, Flex, HStack, Image } from '@chakra-ui/react';
+import { Box, Flex, HStack, Image } from '@chakra-ui/react';
 import React from 'react';
 import Contact from '../../src/components/commonSection/Contact';
 import Heading from '../../src/components/commonSection/Heading';
@@ -24,12 +24,9 @@ import About from '../../src/components/commonSection/About';
 import WorkExperience from '../../src/components/commonSection/WorkExperience';
 import TempLayout from '../../src/components/tempNav/TempLayout';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
+import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 const MarketingManager = (props) => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  const { backgroundColor, color } = useSelector(
-    (store) => store.themeReducer.theme
-  );
   const [show, setShow] = useShow();
   // PDf Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
@@ -50,7 +47,9 @@ const MarketingManager = (props) => {
           flexDir={'column'}
           alignItems={{ base: 'none', lg: 'center' }}
         >
-          <Box margin={'100px 20px 30px 20px'}>
+          <Box
+            margin={'100px 20px 30px 20px'}
+          >
             <HStack
               minW={830}
               maxW={830}
@@ -64,10 +63,9 @@ const MarketingManager = (props) => {
               <Box
                 minW={280}
                 maxW={280}
-                bg={backgroundColor ? backgroundColor : '#2E4053'}
+                bg={'#2E4053'}
                 borderLeftRadius={6}
                 py={5}
-                transition="0.5s background"
               >
                 <Box display={'flex'} justifyContent="center">
                   <ImageSelector
@@ -75,8 +73,6 @@ const MarketingManager = (props) => {
                     maxWidth="160px"
                     minHeight={'160px'}
                     maxHeight="160px"
-                    borderColor={color ? color : 'black'}
-                    borderWidth={color ? '5px' : '0px'}
                   />
                 </Box>
                 <Heading
@@ -110,7 +106,7 @@ const MarketingManager = (props) => {
                           onHide={() => setShow({ ...show, education: false })}
                           onDelete={EDUCATION}
                           bg="#fff"
-                          iconColor={color ? color : '#2E4053'}
+                          iconColor={'#2E4053'}
                         />
                       )}
                     </div>
@@ -151,7 +147,7 @@ const MarketingManager = (props) => {
                           onHide={() => setShow({ ...show, skills: false })}
                           onDelete={SKILL}
                           bg="#fff"
-                          iconColor={color ? color : '#2E4053'}
+                          iconColor={'#2E4053'}
                         />
                       )}
                     </div>
@@ -224,19 +220,16 @@ const MarketingManager = (props) => {
                   SNameStyle={Classes.lastName}
                   direction="row"
                   margin="60px 0px 0px 30px"
-                  fontColor={color ? color : ''}
                 />
                 <Profession
                   professionStyle={Classes.ProfessionFashion}
                   margin="15px 30px"
-                  fontColor={color ? color : ''}
                 />
                 <About
                   aboutStyle={Classes.aboutText}
                   minW="full"
                   maxW="full"
                   margin="0px 30px"
-                  fontColor={color ? color : ''}
                 />
                 {/* ============== Work Experience Section ============== */}
                 {resumeData?.work?.visible && (
@@ -246,7 +239,7 @@ const MarketingManager = (props) => {
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, work: false })}
                           onDelete={WORK}
-                          bg={color ? color : '#2e4053'}
+                          bg="#2e4053"
                         />
                       )}
                     </div>
@@ -254,16 +247,14 @@ const MarketingManager = (props) => {
                       <Heading
                         title={'Experience'}
                         fontWeight="700"
-                        color={color ? color : '#2e4053'}
+                        color={'#2e4053'}
                         fontSize="24px"
                         line={true}
                         lineH="4px"
-                        lineBg={color ? color : '#2e4053'}
+                        lineBg={'#2e4053'}
                         lineW="470px"
                         margin={'15px 0px '}
-                        onSideSectionShow={() =>
-                          setShow({ ...show, work: true })
-                        }
+                        onSideSectionShow={() => setShow({ ...show, work: true })}
                       />
                       <WorkExperience
                         position={true}
@@ -289,7 +280,7 @@ const MarketingManager = (props) => {
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, reference: false })}
                           onDelete={REFERENCE}
-                          bg={color ? color : '#2e4053'}
+                          bg="#2e4053"
                         />
                       )}
                     </div>
@@ -297,11 +288,11 @@ const MarketingManager = (props) => {
                       <Heading
                         title={'Reference'}
                         fontWeight="700"
-                        color={color ? color : '#2e4053'}
+                        color={'#2e4053'}
                         fontSize="24px"
                         line={true}
                         lineH="4px"
-                        lineBg={color ? color : '#2e4053'}
+                        lineBg={'#2e4053'}
                         lineW="470px"
                         margin={'15px 0px '}
                         onSideSectionShow={() =>
