@@ -29,6 +29,9 @@ export default function Digital_Marketing_Temp() {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   return (
     <>
       <div
@@ -61,11 +64,12 @@ export default function Digital_Marketing_Temp() {
                   w="40%"
                   pb="10%"
                   minW={'340px'}
-                  bgColor="#3A4D6C"
+                  bgColor={backgroundColor ? backgroundColor : '#3A4D6C'}
                   borderLeftRadius={6}
                   pr={3}
                   pl={12}
                   py={8}
+                  transition={'0.5s'}
                 >
                   {/* _____________ Profile _____________ */}
                   <ImageSelector
@@ -103,7 +107,7 @@ export default function Digital_Marketing_Temp() {
                     minW="100%"
                     maxW="100%"
                     aboutStyle={Classes.aboutText}
-                    textColor="#fff"
+                    fontColor="#fff"
                   />
 
                   {/* _____________ Skill _____________ */}

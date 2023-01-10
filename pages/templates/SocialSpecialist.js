@@ -36,6 +36,9 @@ export default function SocialSpecialist() {
     theme,
     updater
   } = useStoreData();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   const [show, setShow] = useShow();
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
@@ -76,6 +79,7 @@ export default function SocialSpecialist() {
 
 
                   <Name
+                  color={backgroundColor}
                     FName={true}
                     SName={true}
                     direction="column"

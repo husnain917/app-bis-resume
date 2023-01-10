@@ -32,6 +32,7 @@ export default function ResumeFormats() {
                     textDecoration: "underline"
                   }
                 }
+                fontFamily={`'EuclidCircularB', sans-serif`}
               >
                 Blog
               </Link>
@@ -59,6 +60,7 @@ export default function ResumeFormats() {
                     textDecoration: "underline"
                   }
                 }
+                fontFamily={`'EuclidCircularB', sans-serif`}
               >
                 Resume Help
               </Link>
@@ -77,14 +79,17 @@ export default function ResumeFormats() {
                 color={"#fff"}
                 fontSize={["1.2em", "1.2em", "1.2em", "1.2em",]}
                 lineHeight={10}
+                fontFamily={`'EuclidCircularB', sans-serif`}
               >
                 The 3 Best Resume Formats to...
               </Text>
             </Box>
           </Box>
-          <Text className={styles.ctaHeading}>
+          <Text 
+          className={styles.ctaHeading}
+          fontFamily={`'EuclidCircularB', sans-serif`}
+          >
             The 3 Best Resume Formats to
-            <br />
             Use in 2022 (Examples)
           </Text>
 
@@ -106,18 +111,21 @@ export default function ResumeFormats() {
               <Text
                 color={"#fff"}
                 fontSize={"16px"}
+                fontFamily={`'EuclidCircularB', sans-serif`}
               >
                 Michael Tomaszewski, CPRW
               </Text>
               <Text
                 fontSize={"15px"}
                 color={"#CCC"}
+                fontFamily={`'EuclidCircularB', sans-serif`}
               >
                 Career Expert
               </Text>
               <Text
                 fontSize={"15px"}
                 color={"#63B3ED"}
+                fontFamily={`'EuclidCircularB', sans-serif`}
               >
                 Updated 09/08/2022
               </Text>

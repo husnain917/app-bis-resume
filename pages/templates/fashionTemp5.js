@@ -29,6 +29,9 @@ const FashionTemp5 = () => {
   const [show, setShow] = useShow();
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+);
   return (
     <div style={{ overflow: 'auto' }}>
       {/* <Navbar /> */}
@@ -58,7 +61,7 @@ const FashionTemp5 = () => {
               <Box
                 minW={280}
                 maxW={280}
-                bg={'#011A34'}
+                bg={backgroundColor}
                 borderLeftRadius={6}
                 pl={'30px'}
                 py={5}
@@ -73,7 +76,7 @@ const FashionTemp5 = () => {
 
                 <Heading
                   title={'CONTACT'}
-                  color="#fff"
+                  color={color}
                   line={true}
                   minW={'full'}
                   lineW={'230px'}
@@ -87,6 +90,7 @@ const FashionTemp5 = () => {
                   phone={true}
                   email={true}
                   location={true}
+                  color={color}
                   heading={true}
                   headingStyle={Classes.contactText}
                   style={Classes.profileText}
@@ -100,7 +104,7 @@ const FashionTemp5 = () => {
                       {show.skills && (
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, skills: false })}
-                          bg="#fff"
+                          bg={backgroundColor}
                           iconColor={'#011A34'}
                           onDelete={SKILL}
                         />
@@ -109,7 +113,7 @@ const FashionTemp5 = () => {
                     <div>
                       <Heading
                         title={'SKILLS'}
-                        color="#fff"
+                        color={color}
                         line={true}
                         minW={'full'}
                         lineW={'230px'}
@@ -123,6 +127,7 @@ const FashionTemp5 = () => {
                         }
                       />
                       <Skill
+                      color={color}
                         skillStyle={Classes.skillText}
                         parentContainerStyle={Classes.ml}
                       />
@@ -144,7 +149,7 @@ const FashionTemp5 = () => {
                     <div>
                       <Heading
                         title={'LANGUAGES'}
-                        color="#fff"
+                        color={color}
                         line={true}
                         minW={'full'}
                         lineW={'230px'}
@@ -158,6 +163,7 @@ const FashionTemp5 = () => {
                         }
                       />
                       <Language
+                      color={color}
                         langStyle={Classes.skillText}
                         langContainerStyle={Classes.ml}
                       />

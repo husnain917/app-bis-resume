@@ -32,11 +32,12 @@ export default function Home() {
         <title>Bis Resume App</title>
         <meta name="description" content="Create resume with ease!" />
       </Head>
-
       <CallToAction />
       {/* <SliderComponent /> */}
 
       <HintSection />
+
+
       {isVisible && (
         <Fade center>
           <Advantages />
@@ -45,6 +46,7 @@ export default function Home() {
       <CompProfessionalResume />
       <FaqsSection />
       <BuildResume />
+
     </>
   );
 }

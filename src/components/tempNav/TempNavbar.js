@@ -20,8 +20,6 @@ import {
   MoonIcon,
   EditIcon,
   SettingsIcon,
-  DownloadIcon,
-  ChevronDownIcon,
   HamburgerIcon,
 } from '@chakra-ui/icons';
 import {

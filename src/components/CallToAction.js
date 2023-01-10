@@ -9,33 +9,49 @@ export default function CallToAction() {
   return (
     <div className={styles.ctaContainer}>
       <div className={styles.ctaLeftSec}>
-        <Text className={"main-heading"} color={"white"}>
+        <Text
+          className={"main-heading"}
+          color={"white"}
+          fontSize={["1.9rem", "1.9rem", "2.2rem", "2.7rem", "2.7rem"]}
+          lineHeight={["30px", "30px", "36px", "50px", "50px"]}
+          textAlign={["center", "center", "center", "start", "start"]}
+        >
           Get hired faster with our resume builder!
         </Text>
-        <Box mt={"30px"}>
+        <Box
+          mt={"30px"}
+          display={["flex", "flex", "flex", "block", "block"]}
+          alignItems={"center"}
+          justifyContent={"center"}
+        >
           <Link href="/templates">
             <CommonButton
+              className={'buttonClass'}
               title="Build My Resume"
               hoverCursor={"pointer"}
               backgroundColor={"#2CACD5"}
               color={"whitesmoke"}
               rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
               fontSize={[
-                "1rem",
-                "1rem",
+                "0.9rem",
+                "0.9rem",
                 "1.1rem",
                 "1.1rem",
                 "1.1rem",
                 "1.5rem",
               ]}
-              // hoverBackgroundColor={"red"}
-              // className={"hoverEffects"}
+            // hoverBackgroundColor={"red"}
+            // className={"hoverEffects"}
             />
           </Link>
         </Box>
-        <p className={styles.ctaText}>
+        <Box
+          className={styles.ctaText}
+          fontSize={["1rem", "1rem", "1.1rem", "1.1rem", "1.1rem", "1.5rem"]}
+          marginTop={["8%", "8%", "5%", "10%", "10%"]}
+        >
           Some of Our Customers have been hired by:
-        </p>
+        </Box>
         <div className={styles.heroIconImgs}>
           <Image src="/amazon.png" w="25%" h="auto" mt="5px" />
           <Image src="/qatar.png" w="25%" h="auto" />

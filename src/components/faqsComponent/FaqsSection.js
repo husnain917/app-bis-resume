@@ -20,7 +20,7 @@ const FaqsSection = () => {
     >
       <Box mt={5}>
         <Text
-          fontSize={["2.9em"]}
+          fontSize={["2.2em", "2.2em", "2.6em", "2.9em", "2.9em"]}
           textAlign={"center"}
           fontWeight={"700"}
           className="afterHeading"
