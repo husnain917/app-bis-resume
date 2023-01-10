@@ -62,7 +62,7 @@ export default function ProfileComponent() {
                 pt="5px"
                 pb="5px"
               >
-                Profile Page
+                My Profile
               </Text>
             </Link>
           </MenuItem>
