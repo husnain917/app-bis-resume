@@ -34,12 +34,12 @@ const FontPopover = () => {
     );
   };
   return (
-    <PopoverContent bg={'#006772'} width="230px">
-      <PopoverArrow bg={'#006772'} />
-      <PopoverCloseButton color="white" />
+    <PopoverContent bg={'#fff'} width="230px">
+      <PopoverArrow bg={'#fff'} />
+      <PopoverCloseButton color={'#006772'} />
       <PopoverHeader
-        color="white"
-        fontSize={{ base: '12px', sm: '14px', md: '16px' }}
+        color={'#006772'}
+        fontSize={{ base: '12px', sm: '14px', md: '17px' }}
         fontWeight="600"
       >
         Font Changer
@@ -48,11 +48,12 @@ const FontPopover = () => {
         {data.map((item, index) => (
           <Text
             key={index}
-            color="white"
+            color={'#006772'}
             cursor={'pointer'}
             textTransform="capitalize"
             onClick={() => onClickHandler(item.title)}
             marginTop="10px"
+            fontWeight={500}
           >
             {item.title}
           </Text>
