@@ -5,6 +5,7 @@ import SecondSection from "./secondSection/SecondSection";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { data } from "./secondSection/data";
+import CommonButton from "../commonButton/CommonButton";
 import {
   List,
   ListItem,
@@ -98,7 +99,7 @@ const AboutUs = () => {
                     display={"flex"}
                     justifyContent={"center"}
                     flexDirection={"column"}
-                    marginLeft={["0px", "0px", "15px", "0px", "0px"]}
+                    marginLeft={["0px", "0px", "15px", "30px", "0px"]}
                   >
                     <Text
                       fontSize={[
@@ -109,7 +110,14 @@ const AboutUs = () => {
                         "4.8rem",
                       ]}
                       lineHeight={"7rem"}
-                      textAlign={"centers"}
+                      textAlign={[
+                        "center",
+                        "center",
+                        "start",
+                        "start",
+                        "start",
+                      ]}
+                      className={"sub-heading"}
                     >
                       About Us
                     </Text>
@@ -122,6 +130,9 @@ const AboutUs = () => {
                         "initial",
                         "initial",
                       ]}
+                      fontSize={["16px", "16px", "20px", "20px", "20px"]}
+                      lineHeight={"26px"}
+                      className={"small-heading"}
                     >
                       We give you the tools, expert advice and knowledge to help
                       you build your career and be successful
@@ -142,12 +153,31 @@ const AboutUs = () => {
         <Box className={"section1"} padding={"50px 0px 50px 0px"}>
           <Box maxW={"750px"} className={"container1"}>
             <Box maxW={"750px"} margin={"0 auto"} fontSize={"1.1rem"}>
-              <Text my={6}>
+              <Text
+                my={6}
+                textAlign={[
+                  "center",
+                  "center",
+                  "initial",
+                  "initial",
+                  "initial",
+                ]}
+                className={"small-text"}
+              >
                 Since 2013, MyPerfectResume has helped more than 15 million
                 people worldwide create stronger resumes, navigate their job
                 search, and achieve career fulfillment.
               </Text>
-              <Text>
+              <Text
+                textAlign={[
+                  "center",
+                  "center",
+                  "initial",
+                  "initial",
+                  "initial",
+                ]}
+                className={"small-text"}
+              >
                 Our team of experts is dedicated to helping you every step of
                 the way, from using our tools to create a showstopping resume
                 and cover letter to providing professional interview tips and
@@ -189,9 +219,7 @@ const AboutUs = () => {
         </Box>
         <Box
           className={"section3"}
-          style={{
-            padding: "30px 0",
-          }}
+          padding={["10px 0px", "10px 0px", "30px 0px", "30px 0px", "30px 0px"]}
         >
           <Box maxWidth={"960px"} className="container1">
             <UnorderedList
@@ -237,10 +265,10 @@ const AboutUs = () => {
                 textAlign={"center"}
                 maxW={"960px"}
                 margin={"0 auto"}
-                fontSize={["2.6rem", "2.6rem", "2.6rem", "3.4rem", "3.4rem"]}
+                fontSize={["2rem", "2rem", "2.6rem", "3.4rem", "3.4rem"]}
                 fontFamily={"heading"}
                 lineHeight={"1.1"}
-                fontWeight={600}
+                className={"medium-heading1"}
               >
                 Building better lives, one resume and cover letter at a time
               </Text>
@@ -318,8 +346,8 @@ const AboutUs = () => {
             <Box>
               <Text
                 textAlign={"center"}
-                fontSize={"3rem"}
-                fontFamily={"heading"}
+                fontSize={["2rem", "2rem", "2.6rem", "3rem", "3rem"]}
+                className={"medium-heading"}
               >
                 Awards and recognitions
               </Text>
@@ -363,27 +391,39 @@ const AboutUs = () => {
               <Text
                 textAlign={"center"}
                 fontSize={"2rem"}
-                minW={["360px", "360px", "360px", "330px", "330px"]}
+                minW={["300px", "300px", "360px", "330px", "330px"]}
                 margin={"0"}
                 fontWeight={"bold"}
+                className={"small-heading"}
               >
                 Get in Touch
               </Text>
-              <Box className="cta-wrap">
-                <Button
-                  className="btn btn-primary"
-                  href="https://www.bold.com/bold-jobs/"
-                  target="_blank"
-                  rel="noopener"
-                  backgroundColor="#02818c"
-                  color={"white"}
-                  _hover={{
-                    backgroundColor: "#02818c",
-                  }}
-                >
-                  JOIN OUR TEAM
-                </Button>
-                <Button
+              <Box
+                className="cta-wrap sub-heading"
+                display={["flex", "flex", "block", "block", "block"]}
+                alignItems={"center"}
+                justifyContent={"center"}
+              >
+                <CommonButton
+                  borderRadius={"10px"}
+                  title={"Join Our Team"}
+                  color={"whitesmoke"}
+                  backgroundColor={"#02818c"}
+                  height={"43px"}
+                  width={"120px"}
+                  margin={"10px 10px"}
+                  className={"small-heading"}
+                />
+                <CommonButton
+                  borderRadius={"10px"}
+                  title={"Contact Us"}
+                  color={"whitesmoke"}
+                  className={"small-heading"}
+                  backgroundColor={"#02818c"}
+                  height={"43px"}
+                  width={"120px"}
+                />
+                {/* <Button
                   className="btn btn-primary"
                   margin={"0 17px"}
                   backgroundColor="#02818c"
@@ -394,7 +434,7 @@ const AboutUs = () => {
                   }}
                 >
                   CONTACT US
-                </Button>
+                </Button> */}
               </Box>
             </Box>
           </Box>
@@ -406,6 +446,7 @@ const AboutUs = () => {
             margin: "30px 0 0",
             textAlign: "center",
           }}
+          className={"xsmall-text"}
         >
           Advertisement
         </Box>
@@ -418,7 +459,11 @@ const AboutUs = () => {
           fontSize={"0.5rem"}
           textAlign={"center"}
         >
-          <Box margin={"0 0 20px"}>
+          <Box
+            margin={"0 0 20px"}
+            textAlign={["center", "center", "initial", "initial", "initial"]}
+            className={"small-text"}
+          >
             *The names and logos of the companies referred to above are all
             trademarks of their respective holders. Unless specifically stated
             otherwise, such references are not intended to imply any affiliation
