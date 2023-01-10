@@ -20,11 +20,14 @@ import ChatButton from "../src/components/resumeExampleData/chatButton/chatButto
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {
-    let heightToHidden = 2550;
+    let heightToHidden = 20;
+    let againHide = 7700;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (winScroll > heightToHidden) {
+    if (winScroll < heightToHidden || winScroll > againHide) {
+      setIsVisible(false);
+    } else if (winScroll > heightToHidden) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -41,6 +44,22 @@ export default function Home() {
         <meta name="description" content="Create resume with ease!" />
         <link rel="icon" href="/Bisicon.png"></link>
       </Head>
+      <Box
+        borderRadius={["60px"]}
+        width={["60px"]}
+        position={["fixed"]}
+        zIndex={"1049"}
+        transform={["scale(1)"]}
+        marginLeft={"10px"}
+        display={["none", "none", "block", "block", "block"]}
+      >
+        {isVisible && (
+          <Fade>
+            {" "}
+            <SideBarSection />{" "}
+          </Fade>
+        )}
+      </Box>
       <CallToAction />
       {/* <SliderComponent /> */}
 

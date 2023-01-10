@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Text, Button } from "@chakra-ui/react";
 import SearchBar from "../src/components/resumeExampleData/searchBar/SearchBar";
 import MostPopular from "../src/components/resumeExampleData/mostPopular/MostPopular";
@@ -22,7 +22,7 @@ const ResumeExamples = () => {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {
     let heightToHidden = 20;
-    let againHide = 4800;
+    let againHide = 7650;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -34,12 +34,15 @@ const ResumeExamples = () => {
       setIsVisible(false);
     }
   };
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+  }, []);
   return (
     <Box fontFamily={"EuclidCircularB-Light"}>
       <Box
         borderRadius={["60px"]}
         width={["60px"]}
-        position="fixed"
+        position={["fixed"]}
         zIndex={"1049"}
         transform={["scale(1)"]}
         marginLeft={"10px"}
@@ -62,6 +65,7 @@ const ResumeExamples = () => {
       <Box bg="lightcyan" height={"auto"} width={"100wv"}>
         <WritingGuides />
       </Box>
+
       <Box paddingTop={"80px"} padding={"80px 44px 20px 44px"}>
         <Box maxWidth={"1120px"} display={"flex"} margin={"0 auto"}>
           <Box width={"100%"} flexGrow={"1"}>
