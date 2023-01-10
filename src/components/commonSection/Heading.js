@@ -1,5 +1,7 @@
 import React from 'react';
 import { Box, Circle, HStack, Text } from '@chakra-ui/react';
+import { useSelector } from 'react-redux';
+
 export default function Heading({
   title,
   headBg,
@@ -39,6 +41,7 @@ export default function Heading({
   alignItems,
   justifyContent,
 }) {
+  const { font } = useSelector((state) => state.fontReducer.font);
   return (
     <HStack
       minW={minW ? minW : 250}
@@ -86,6 +89,7 @@ export default function Heading({
           m={textMargin ? textMargin : ''}
           p={textPadding ? textPadding : ''}
           letterSpacing={letterSpacing ? letterSpacing : ''}
+          fontFamily={font}
           transition="1s color"
         >
           {title}

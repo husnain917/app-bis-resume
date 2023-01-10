@@ -10,7 +10,13 @@ export default function HintSection() {
   const width = size.width;
   return (
     <Box
-      margin={"6.4rem auto"}
+      margin={[
+        "2rem auto",
+        "2rem auto",
+        "6.4rem auto",
+        "6.4rem auto",
+        "6.4rem auto",
+      ]}
       // position={"relative"}
       width={width > 610 ? ["1000px", "94%", "94%", "90%", "88%"] : "98%"}
     >
@@ -37,11 +43,14 @@ export default function HintSection() {
             pr={["14%"]}
             // className={"afterHeading"}
             className={"sub-heading"}
+            // margin={"0 auto"}
+            lineHeight={["30px", "30px", "40px", "40px", "40px"]}
           >
             Build Your Resume Fast and Easy.
           </Text>
         </Box>
-        <Box className={styles.hrLine}>
+
+        <Box className={styles.hrLine} mt={"2%"}>
           <FaMinus
             style={{
               color: "#1dbfaf",
@@ -59,17 +68,10 @@ export default function HintSection() {
         </Box>
         <Text
           color="#313B47"
-          fontSize={[
-            "1.2rem",
-            "1.5rem",
-            "1.8rem",
-            "1.7rem",
-            "1.5rem",
-            "1.6rem",
-          ]}
+          fontSize={["1rem", "1rem", "1.8rem", "1.7rem", "1.5rem", "1.6rem"]}
           fontWeight={["400", "400"]}
-          align="center"
-          pl={["7%", "14%"]}
+          textAlign="center"
+          pl={["6%", "6%", "14%", "14%", "14%"]}
           pr={["14%"]}
           mt="3%"
           className="only-font-family"

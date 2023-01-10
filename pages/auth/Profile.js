@@ -39,7 +39,6 @@ const Profile = () => {
   };
   return (
     <>
-      <Navbar />
       {/* ~~~~~~~~~~~~~~ User Profile Page ~~~~~~~~~~~~~~ */}
       <VStack>
         {/* =============== User Name =============== */}
@@ -382,7 +381,6 @@ const Profile = () => {
           </Box>
         </Box>
       </Box>
-      <Footer />
     </>
   );
 };
