@@ -1,0 +1,33 @@
+.flexContainer {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sideBarTempContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 670px;
+  margin: 100px 100px 10px 100px;
+  justify-content: center;
+  background-color: gray;
+}
+
+@media (max-width: 1400px) {
+  .smalScreeenModal {
+    display: none;
+  }
+}
+@media (max-width: 1400px) {
+  .sideBarTempContainer {
+    display: none;
+  }
+  .flexContainer {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .sideBarTempSmallContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: gray;
+  }
+}
