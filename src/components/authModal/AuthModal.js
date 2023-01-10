@@ -58,7 +58,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
       dispatch(loginMagicUser(email, setUser, setLoading, setIsModalOpen))
     }
     else {
-      setErr({ inputField: 'This field is required', inputId: 7 })
+      setErr({ inputField: 'This field is required', inputId: 2 })
     }
   }
 
@@ -126,11 +126,11 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
     }
   }
   const loginWithGoogle = () => {
-    if (!terms) {
-      setErr({ inputField: 'Accept the terms and policies before use', inputId: 11 })
-    } else {
-      dispatch(doGoogleLogin(terms, setLoading, setErr, setIsModalOpen))
-    }
+    // if (!terms) {
+    //   setErr({ inputField: 'Accept the terms and policies before use', inputId: 11 })
+    // } else {
+    dispatch(doGoogleLogin(terms, setLoading, setErr, setIsModalOpen))
+    // }
   }
 
   const resetPassword = () => {
@@ -466,16 +466,18 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                           </Text>
                         </>
                       }
-                      <Checkbox
-                        size="lg"
-                        mt="5%"
-                        colorScheme="MediumSpringGreen"
-                        iconColor="MediumSpringGreen"
-                        value={terms}
-                        onChange={(e) => setTerms(e.target.checked)}
-                      >
-                        Remember me
-                      </Checkbox>
+                      <Box>
+                        <Checkbox
+                          size="lg"
+                          mt="5%"
+                          colorScheme="MediumSpringGreen"
+                          iconColor="MediumSpringGreen"
+                          value={terms}
+                          onChange={(e) => setTerms(e.target.checked)}
+                        >
+                          Remember me
+                        </Checkbox>
+                      </Box>
                     </>
                   )}
               </Box>
@@ -505,7 +507,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                   />
                 ) : (
                   <>
-                    <Text align="center" fontSize="14px" mt="9%" p="5px">
+                    <Text align="center" fontSize="14px" mt="4%" p="5px">
                       We will send you a one-time sign in link.
                     </Text>
                     {
@@ -542,32 +544,35 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                     }
                   </>
                 )}
-                {active===1 ? (
-                  <></>
-                )
-                  :
-                  (
-                    <>
-                      <Text fontSize="16px" align="center" mt="3%">
-                        Or Sign In With:
-                      </Text>
-
-                      <Button
-                        leftIcon={<FaGoogle />}
-                        color="grey"
-                        w="85%"
-                        ml="8%"
-                        className='buttonClass'
-                        borderRadius="100px"
-                        fontSize="16px"
-                        mt="3%"
-                        // className={styles.modalBtn}
-                        onClick={() => loginWithGoogle()}
-                      >
-                        Google
-                      </Button>
-                    </>
-                  )}
+                {isRegister ? (
+                  <>
+                    <Text fontSize="16px" align="center" mt="3%">
+                      Or Sign Up With:
+                    </Text>
+                  </>
+                ) : (
+                  <>
+                    <Text fontSize="16px" align="center" mt="3%">
+                      Or Sign In With:
+                    </Text>
+                  </>
+                )}
+                <Button
+                  leftIcon={<FaGoogle />}
+                  variant="solid"
+                  bgColor="#E1E1E1"
+                  color="grey"
+                  w="85%"
+                  ml="8%"
+                  borderRadius="100px"
+                  fontSize="16px"
+                  mt="3%"
+                  className='buttonClass'
+                  // className={styles.modalBtn}
+                  onClick={() => loginWithGoogle()}
+                >
+                  Google
+                </Button>
 
 
               </Box>
