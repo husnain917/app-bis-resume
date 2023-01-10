@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, Text, Button, Container } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Box, Text, Button } from "@chakra-ui/react";
 import SearchBar from "../src/components/resumeExampleData/searchBar/SearchBar";
 import MostPopular from "../src/components/resumeExampleData/mostPopular/MostPopular";
 import CommonComponent from "../src/components/resumeExampleData/commonComponent/commonComponent";
@@ -14,74 +14,72 @@ import SelectResume from "../src/components/resumeExampleData/selectResume/Selec
 import ChatButton from "../src/components/resumeExampleData/chatButton/chatButton";
 import Carasol from "../src/components/resumeExampleData/carasol/Carasol";
 import Carasol1 from "../src/components/resumeExampleData/carasol/Carasol1";
-import SideBar from "../src/components/sideBar/SideBar";
-import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
-import styles from "../styles/sideBarSection.module.css";
 import Sidebar from "../src/components/blog/Sidebar";
+import styles from "../styles/resumeFormats.module.css";
+import Fade from "react-reveal/Fade";
+import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
 const ResumeExamples = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const listenToScroll = () => {
+    let heightToHidden = 20;
+    let againHide = 4800;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (winScroll < heightToHidden || winScroll > againHide) {
+      setIsVisible(false);
+    } else if (winScroll > heightToHidden) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
   return (
-    <>
-      <Box position={"relative"}>
-        {/* <SideBar /> */}
-        <Box
-          maxW={["0%", "0%", "0%", "5%"]}
-          // padding={'70px 0px 0px 0px'}
-          padding={"40px 0px 0px 0px"}
-          position={"fixed"}
-          display={["none", "none", "none", "block"]}
-        >
-          <Box
-          // className={styles.sideBarContainer}
-          >
-            {/* <SideBar /> */}
-            <SideBarSection />
-          </Box>
-        </Box>
-        <Box
-        // fontFamily={"EuclidCircularB-Light"}
-        >
-          {/* <Carasol1 /> */}
-          {/* <Carasol /> */}
-          {/* <ChatButton /> */}
+    <Box fontFamily={"EuclidCircularB-Light"}>
+      <Box
+        borderRadius={["60px"]}
+        width={["60px"]}
+        position="fixed"
+        zIndex={"1049"}
+        transform={["scale(1)"]}
+        marginLeft={"10px"}
+        display={["none", "none", "block", "block", "block"]}
+      >
+        {isVisible && (
+          <Fade>
+            {" "}
+            <SideBarSection />{" "}
+          </Fade>
+        )}
+      </Box>
 
-          <Box
-            bg="#EFF2F9"
-            height={"auto"}
-            width={["100wv", "100wv", "100wv", "100wv", "100wv"]}
-          >
-            <WritingGuides />
-          </Box>
-          <Box>
-            1
-            <Box
-              padding={[
-                "80px 20px 20px 20px",
-                "80px 20px 20px 20px",
-                "80px 44px 20px 44px",
-                "80px 44px 20px 44px",
-                "80px 44px 20px 44px",
-              ]}
-            >
-              <Box maxWidth={"1120px"} display={"flex"} margin={"0 auto"}>
-                <Box width={"100%"} flexGrow={"1"}>
-                  {/* <SearchBar /> */}
+      {/* <Box maxW={["0%", "0%", "0%", "10%"]}>
+        <Sidebar />
+      </Box> */}
+      {/* <Carasol1 /> */}
+      {/* <Carasol /> */}
+      {/* <ChatButton /> */}
+      <Box bg="lightcyan" height={"auto"} width={"100wv"}>
+        <WritingGuides />
+      </Box>
+      <Box paddingTop={"80px"} padding={"80px 44px 20px 44px"}>
+        <Box maxWidth={"1120px"} display={"flex"} margin={"0 auto"}>
+          <Box width={"100%"} flexGrow={"1"}>
+            {/* <SearchBar /> */}
 
-                  {popularData.map((data, index) => {
-                    return <MostPopular data={data} key={index} />;
-                  })}
-                  {data.map((data, index) => {
-                    return <CommonComponent data={data} key={index} />;
-                  })}
-                </Box>
-              </Box>
-            </Box>
-            <TryResume />
-            <BlogPost />
-            <SelectResume />
+            {popularData.map((data, index) => {
+              return <MostPopular data={data} key={index} />;
+            })}
+            {data.map((data, index) => {
+              return <CommonComponent data={data} key={index} />;
+            })}
           </Box>
         </Box>
       </Box>
-    </>
+      <TryResume />
+      <BlogPost />
+      <SelectResume />
+    </Box>
   );
 };
 

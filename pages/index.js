@@ -51,7 +51,7 @@ export default function Home() {
           display={["none", "none", "none", "block"]}
         >
           <Box>
-            <SideBar />
+            {/* <SideBar /> */}
             {/* <SideBarSection /> */}
           </Box>
         </Box>

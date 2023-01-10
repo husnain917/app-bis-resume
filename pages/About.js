@@ -12,7 +12,7 @@ const About = () => {
     <>
       <Box>
         {/* <SideBar /> */}
-        <Box
+        {/* <Box
           maxW={["0%", "0%", "0%", "5%"]}
           // padding={'70px 0px 0px 0px'}
           padding={"40px 0px 0px 0px"}
@@ -20,10 +20,11 @@ const About = () => {
           display={["none", "none", "none", "block"]}
         >
           <Box className={styles.sideBarContainer}>
-            {/* <SideBar /> */}
+            <SideBar />
             <SideBarSection />
           </Box>
-        </Box>
+        </Box> */}
+
         <AboutUs />
       </Box>
     </>
