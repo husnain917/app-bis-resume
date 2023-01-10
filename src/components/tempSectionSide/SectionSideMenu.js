@@ -79,6 +79,7 @@ const SectionSideMenu = ({ onDelete, onHide, bg, iconColor }) => {
         flexDirection={'column'}
         justifyContent={'space-evenly'}
         alignItems="center"
+        transition={'0.5s background'}
       >
         <Tooltip title="Back" arrow distance={20}>
           <MdRemoveCircleOutline

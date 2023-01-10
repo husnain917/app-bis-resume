@@ -22,7 +22,11 @@ const FashionTemp4 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
   // PDF Download Hook
+
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   return (
     <div style={{ overflow: 'auto' }}>
       <TempLayout work={true} education={true} downloadPDF={downloadPDFHandler}>
@@ -43,7 +47,7 @@ const FashionTemp4 = () => {
               maxW={830}
               h={'full'}
               borderRadius={6}
-              bg={'#F9E4D6'}
+              bg={backgroundColor}
               pl={'90px'}
               pr={'70px'}
               pt={8}
@@ -61,6 +65,7 @@ const FashionTemp4 = () => {
                 <Name
                   FName={true}
                   SName={true}
+                  color={color}
                   FNameStyle={Classes.fashionName}
                   SNameStyle={Classes.fashionName}
                   parentContainerStyle={Classes.ml}
@@ -71,10 +76,10 @@ const FashionTemp4 = () => {
                   title={'ABOUT ME'}
                   line={true}
                   lineW={'100px'}
-                  lineBg="#643c28"
+                  lineBg={color}
                   letterSpacing={3}
                   fontSize={23}
-                  color="#643c28"
+                  color={color}
                   fontWeight={'600'}
                   lineAlign="flex-end"
                   minW={'fit-content'}
@@ -83,6 +88,7 @@ const FashionTemp4 = () => {
                 />
                 <About
                   minW="420px"
+                  color={color}
                   maxW="420px"
                   aboutStyle={Classes.aboutText}
                   margin={'40px'}
@@ -103,10 +109,10 @@ const FashionTemp4 = () => {
                     title={'EDUCATION'}
                     line={true}
                     lineW={'100px'}
-                    lineBg="#643c28"
+                    lineBg={color}
                     letterSpacing={3}
                     fontSize={23}
-                    color="#643c28"
+                    color={color}
                     fontWeight={'600'}
                     lineAlign="flex-end"
                     minW={'fit-content'}
@@ -118,6 +124,7 @@ const FashionTemp4 = () => {
                   />
 
                   <Education
+                    textColor={color}
                     degree={true}
                     institution={true}
                     date={true}
@@ -147,10 +154,10 @@ const FashionTemp4 = () => {
                     title={'EXPERIENCE'}
                     line={true}
                     lineW={'100px'}
-                    lineBg="#643c28"
+                    lineBg={color}
                     letterSpacing={3}
                     fontSize={23}
-                    color="#643c28"
+                    color={color}
                     fontWeight={'600'}
                     lineAlign="flex-end"
                     minW={'fit-content'}
@@ -159,6 +166,7 @@ const FashionTemp4 = () => {
                   />
                   <WorkExperience
                     position={true}
+                    textColor={color}
                     company={true}
                     date={true}
                     summary={true}
@@ -176,10 +184,10 @@ const FashionTemp4 = () => {
                   title={'CONTACT'}
                   line={true}
                   lineW={'100px'}
-                  lineBg="#643c28"
+                  lineBg={color}
                   letterSpacing={3}
                   fontSize={23}
-                  color="#643c28"
+                  color={color}
                   fontWeight={'600'}
                   lineAlign="flex-end"
                   minW={'fit-content'}
@@ -187,12 +195,13 @@ const FashionTemp4 = () => {
                   margin={'0px 40px 0px 60px '}
                 />
                 <Contact
+                  color={color}
                   location={true}
                   email={true}
                   website={true}
                   phone={true}
                   iconSize={'16px'}
-                  iconColor="#643c28"
+                  iconColor={color}
                   circleIcon={true}
                   style={Classes.contact}
                 />

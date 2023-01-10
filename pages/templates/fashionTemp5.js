@@ -21,27 +21,34 @@ import {
 import { useSelector } from 'react-redux';
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
 const FashionTemp5 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  let font = useSelector((state) => state.fontReducer.font);
+  console.log('Font:', font);
   const [show, setShow] = useShow();
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+);
   return (
     <div style={{ overflow: 'auto' }}>
       {/* <Navbar /> */}
-      <TempLayout work={true} education={true} languages={true} skills={true} downloadPDF={downloadPDFHandler}>
+      <TempLayout
+        work={true}
+        education={true}
+        languages={true}
+        skills={true}
+        downloadPDF={downloadPDFHandler}
+      >
         <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
           flexDir={'column'}
           alignItems={{ base: 'none', lg: 'center' }}
         >
-          <Box
-            mt="100px"
-            mb={10}
-            mx={20}
-          >
+          <Box mt="100px" mb={10} mx={20}>
             <HStack
               minW={830}
               maxW={830}
@@ -54,7 +61,7 @@ const FashionTemp5 = () => {
               <Box
                 minW={280}
                 maxW={280}
-                bg={'#011A34'}
+                bg={backgroundColor}
                 borderLeftRadius={6}
                 pl={'30px'}
                 py={5}
@@ -69,7 +76,7 @@ const FashionTemp5 = () => {
 
                 <Heading
                   title={'CONTACT'}
-                  color="#fff"
+                  color={color}
                   line={true}
                   minW={'full'}
                   lineW={'230px'}
@@ -83,6 +90,7 @@ const FashionTemp5 = () => {
                   phone={true}
                   email={true}
                   location={true}
+                  color={color}
                   heading={true}
                   headingStyle={Classes.contactText}
                   style={Classes.profileText}
@@ -96,7 +104,7 @@ const FashionTemp5 = () => {
                       {show.skills && (
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, skills: false })}
-                          bg="#fff"
+                          bg={backgroundColor}
                           iconColor={'#011A34'}
                           onDelete={SKILL}
                         />
@@ -105,7 +113,7 @@ const FashionTemp5 = () => {
                     <div>
                       <Heading
                         title={'SKILLS'}
-                        color="#fff"
+                        color={color}
                         line={true}
                         minW={'full'}
                         lineW={'230px'}
@@ -119,6 +127,7 @@ const FashionTemp5 = () => {
                         }
                       />
                       <Skill
+                      color={color}
                         skillStyle={Classes.skillText}
                         parentContainerStyle={Classes.ml}
                       />
@@ -140,7 +149,7 @@ const FashionTemp5 = () => {
                     <div>
                       <Heading
                         title={'LANGUAGES'}
-                        color="#fff"
+                        color={color}
                         line={true}
                         minW={'full'}
                         lineW={'230px'}
@@ -154,6 +163,7 @@ const FashionTemp5 = () => {
                         }
                       />
                       <Language
+                      color={color}
                         langStyle={Classes.skillText}
                         langContainerStyle={Classes.ml}
                       />
@@ -188,7 +198,11 @@ const FashionTemp5 = () => {
                   fontWeight={800}
                   fontSize={'25px'}
                 />
-                <About minW={'full'} maxW="full" aboutStyle={Classes.aboutText} />
+                <About
+                  minW={'full'}
+                  maxW="full"
+                  aboutStyle={Classes.aboutText}
+                />
                 {resumeData?.work?.visible && (
                   <div className={Classes.sideMenu}>
                     <div
@@ -216,7 +230,9 @@ const FashionTemp5 = () => {
                         lineH="3px"
                         fontWeight={800}
                         fontSize={'25px'}
-                        onSideSectionShow={() => setShow({ ...show, work: true })}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, work: true })
+                        }
                       />
                       <WorkExperience
                         position={true}

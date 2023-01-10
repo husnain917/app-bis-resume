@@ -104,7 +104,7 @@ export default function Fashion_Temp() {
                     minW="100%"
                     maxW="100%"
                     aboutStyle={Classes.aboutText}
-                    textColor="#000000"
+                    fontColor="#000000"
                     fontSize="14px"
                     fontWeight={600}
                   />

@@ -33,7 +33,6 @@ export default function SideBar() {
             maxW={["0%", "0%", "0%", "10%"]}
             // padding={'70px 0px 0px 0px'}
             display={["none", "none", "none", "block"]}
-            marginBottom="40%"
         >
             <Box
                 width={'5rem'}
@@ -41,7 +40,7 @@ export default function SideBar() {
                 position={"sticky"}
                 top="15%"
                 left="0%"
-                margin={'25px 0px'}
+    
             >
 
 
