@@ -6,7 +6,7 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   PREMIUM_ACCOUNT_DATA,
   PREMIUM_ACCOUNT_DATA_LINKS,
@@ -14,35 +14,45 @@ import {
   TERMS_DATA,
 } from "../../src/components/legal/CustomData";
 import Underline from "../../src/components/aaronGraphicTemp/Underline";
-// import TableOfContent from "../../src/components/legal/TableOfContent";
-// import SideBarSection from "../../src/components/aboutUs/SideBarSection/SideBarSection";
-// import Fade from "react-reveal/Fade";
-// import styles from "../../styles/sideBarSection.module.css";
-// =======
 import TableOfContent from "../../src/components/legal/TableOfContent";
 import SideBarSection from "../../src/components/aboutUs/SideBarSection/SideBarSection";
 import styles from "../../styles/resumeFormats.module.css";
 
 export default function Terms_And_Conditions() {
+  // sidebar state
+  const [isVisible, setIsVisible] = useState(false);
+  const listenToScroll = () => {
+    let heightToHidden = 20;
+    let againHide = 4310;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (winScroll < heightToHidden || winScroll > againHide) {
+      setIsVisible(false);
+    } else if (winScroll > heightToHidden) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+  }, []);
+
   return (
     <>
       <Container
         maxW={["100%", "100%", "80%", "80%"]}
         display={"flex"}
         justifyContent={"space-between"}
-        paddingBottom={"10px"}
       >
-        {/* <Box
+        <Box
           maxW={["0%", "0%", "0%", "10%"]}
+          // padding={'70px 0px 0px 0px'}
           display={["none", "none", "none", "block"]}
-          paddingTop={"8rem"}
         >
-          <Box
-          // className={styles.sideBarContainer}
-          >
-            {isVisible && <SideBarSection />}
-          </Box>
-        </Box> */}
+          <Box position={["fixed"]} zIndex={"1049"}></Box>
+        </Box>
         <Box maxW={["100%", "100%", "100%", "88%"]}>
           {/* main title */}
           <Box padding={"40px 0px"}>
@@ -51,9 +61,9 @@ export default function Terms_And_Conditions() {
                 <Text
                   key={index}
                   textAlign={"center"}
+                  fontSize={["2em", "3em", "3em", "3em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
-                  className="main-heading"
                 >
                   {item?.title}
                 </Text>
@@ -65,7 +75,12 @@ export default function Terms_And_Conditions() {
           <Box>
             {TERMS_DATA?.TermsOfUse?.data?.map((item, index) => (
               <>
-                <Text key={index} className="small-text" marginBottom={"1rem"}>
+                <Text
+                  key={index}
+                  fontSize={"1rem"}
+                  lineHeight={"1.5"}
+                  marginBottom={"1rem"}
+                >
                   {item?.text}
                 </Text>
               </>
@@ -75,7 +90,6 @@ export default function Terms_And_Conditions() {
               lineHeight={"1.5"}
               marginBottom={"1rem"}
               color={"#757575"}
-              fontFamily={`'EuclidCircularB', sans-serif`}
             >
               {TERMS_DATA?.TermsOfUse?.description}
             </Text>
@@ -83,7 +97,11 @@ export default function Terms_And_Conditions() {
 
           {/* Table of Contents */}
           <Box margin={"40px 0px"}>
-            <Text className="medium-heading1" color={"#313B47"}>
+            <Text
+              fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
+              fontWeight={"bold"}
+              color={"#313B47"}
+            >
               {TERMS_DATA?.TableOfContents?.heading}
             </Text>
 
@@ -95,7 +113,11 @@ export default function Terms_And_Conditions() {
 
           {/* 1. The Novorésumé Content */}
           <Box margin={"40px 0px"} id={"a1"}>
-            <Text className="medium-heading1" color={"#313B47"}>
+            <Text
+              fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
+              fontWeight={"bold"}
+              color={"#313B47"}
+            >
               {TERMS_DATA?.TheNovoresumeContent?.heading}
             </Text>
 
@@ -105,7 +127,8 @@ export default function Terms_And_Conditions() {
                 <>
                   <Text
                     key={index}
-                    className="small-text"
+                    fontSize={"1rem"}
+                    lineHeight={"1.5"}
                     marginBottom={"1rem"}
                   >
                     {item?.text}
@@ -117,7 +140,11 @@ export default function Terms_And_Conditions() {
 
           {/* 2. Acceptable Use */}
           <Box margin={"40px 0px"} id={"a2"}>
-            <Text className="medium-heading1" color={"#313B47"}>
+            <Text
+              fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
+              fontWeight={"bold"}
+              color={"#313B47"}
+            >
               {TERMS_DATA?.AcceptableUse?.heading}
             </Text>
 
@@ -127,7 +154,8 @@ export default function Terms_And_Conditions() {
                 <>
                   <Text
                     key={index}
-                    className="small-text"
+                    fontSize={"1rem"}
+                    lineHeight={"1.5"}
                     marginBottom={"1rem"}
                   >
                     {item?.text}
@@ -139,13 +167,17 @@ export default function Terms_And_Conditions() {
 
           {/* 3. Security */}
           <Box margin={"40px 0px"} id={"a3"}>
-            <Text className="medium-heading1" color={"#313B47"}>
+            <Text
+              fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
+              fontWeight={"bold"}
+              color={"#313B47"}
+            >
               {TERMS_DATA?.Security?.heading}
             </Text>
 
             {/* description */}
             <Box margin={"10px 0px 40px 0px"}>
-              <Text className="small-text" marginBottom={"1rem"}>
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.Security?.data}
               </Text>
             </Box>
@@ -153,7 +185,11 @@ export default function Terms_And_Conditions() {
 
           {/* 4. Links To Other Software/Websites/Services */}
           <Box margin={"40px 0px"} id={"a4"}>
-            <Text className="medium-heading1" color={"#313B47"}>
+            <Text
+              fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
+              fontWeight={"bold"}
+              color={"#313B47"}
+            >
               {TERMS_DATA?.LinksToOtherSoftware?.heading}
             </Text>
 
@@ -163,7 +199,8 @@ export default function Terms_And_Conditions() {
                 <>
                   <Text
                     key={index}
-                    className="small-text"
+                    fontSize={"1rem"}
+                    lineHeight={"1.5"}
                     marginBottom={"1rem"}
                   >
                     {item?.text}
@@ -175,20 +212,24 @@ export default function Terms_And_Conditions() {
 
           {/* 5. Warranty and Premium Account */}
           <Box margin={"40px 0px"} id={"a5"}>
-            <Text className="medium-heading1" color={"#313B47"}>
+            <Text
+              fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
+              fontWeight={"bold"}
+              color={"#313B47"}
+            >
               {TERMS_DATA?.WarrantyAndPremiumAccount?.heading}
             </Text>
 
             {/* description */}
             <Box margin={"10px 0px 40px 0px"}>
-              <Text className="small-text" marginBottom={"1rem"}>
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.WarrantyAndPremiumAccount?.description}
               </Text>
 
               <UnorderedList>
                 {PREMIUM_ACCOUNT_DATA?.map((item) => (
                   <>
-                    <ListItem className="small-text" fontSize={"1em"}>
+                    <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
                       {item?.label}
                     </ListItem>
                   </>
@@ -199,7 +240,8 @@ export default function Terms_And_Conditions() {
                 (item, index) => (
                   <>
                     <Text
-                      className="small-text"
+                      fontSize={"1rem"}
+                      lineHeight={"1.5"}
                       margin={"1rem 0rem"}
                       key={index}
                     >
@@ -209,16 +251,21 @@ export default function Terms_And_Conditions() {
                 )
               )}
 
-              <Text className="small-text" marginBottom={"1rem"}>
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 If you would like to cancel your purchase, we advise that you do
                 so by sending us an email at <br />
-                <Link href={"#"} color={"#2679C7"} className="small-text">
+                <Link
+                  href={"#"}
+                  color={"#2679C7"}
+                  lineHeight={"1.5"}
+                  fontSize={"1rem"}
+                >
                   contact@bisResume.com
                 </Link>
                 , informing us that you would like to cancel your purchase.
                 Please include the below form:
               </Text>
-              <Text className="small-text" marginBottom={"1rem"}>
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.WarrantyAndPremiumAccount?.startLinkHeading}
               </Text>
 
@@ -226,7 +273,8 @@ export default function Terms_And_Conditions() {
                 {PREMIUM_ACCOUNT_DATA_LINKS.map((item) => (
                   <>
                     <Text
-                      className="small-text"
+                      fontSize={"1rem"}
+                      lineHeight={"1.5"}
                       marginBottom={"1rem"}
                       display={"inline-block"}
                     >
@@ -238,7 +286,6 @@ export default function Terms_And_Conditions() {
                       lineHeight={"1.5"}
                       fontWeight={"bold"}
                       display={"inline-block"}
-                      fontFamily={`EuclidCircularB', sans-serif`}
                     >
                       {item?.link}
                     </Text>
@@ -247,12 +294,16 @@ export default function Terms_And_Conditions() {
                 ))}
               </Box>
 
-              <Text className="small-text" marginBottom={"1rem"}>
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.WarrantyAndPremiumAccount?.ReasonForCanceling}
               </Text>
 
               <Box margin={"50px 0px 0px 0px"}>
-                <Text className="small-text" marginBottom={"1rem"}>
+                <Text
+                  fontSize={"1rem"}
+                  lineHeight={"1.5"}
+                  marginBottom={"1rem"}
+                >
                   After purchasing a premium account, the receipt will be sent
                   to the email address provided when you set up your account,
                   within 48 hours of making the purchase. If you have not
@@ -264,17 +315,31 @@ export default function Terms_And_Conditions() {
                   sometimes technical problems may occur from our side, and in
                   this case, you can request your receipt by sending us an email
                   at &nbsp;
-                  <Link href={"#"} color={"#2679C7"} className="small-text">
+                  <Link
+                    href={"#"}
+                    color={"#2679C7"}
+                    lineHeight={"1.5"}
+                    fontSize={"1rem"}
+                  >
                     contact@bisResume.com
                   </Link>
                   .
                 </Text>
-                <Text className="small-text" marginBottom={"1rem"}>
+                <Text
+                  fontSize={"1rem"}
+                  lineHeight={"1.5"}
+                  marginBottom={"1rem"}
+                >
                   In the unfortunate event of the software, apps, applications
                   or servers crashing or having technical problems during your
                   purchase which will result in your premium account not being
                   activated, please email us at &nbsp;
-                  <Link href={"#"} color={"#2679C7"} className="small-text">
+                  <Link
+                    href={"#"}
+                    color={"#2679C7"}
+                    lineHeight={"1.5"}
+                    fontSize={"1rem"}
+                  >
                     contact@bisResume.com
                   </Link>
                   , and the problem will be investigated. This will result in
@@ -287,7 +352,8 @@ export default function Terms_And_Conditions() {
                     <>
                       <Text
                         key={index}
-                        className="small-text"
+                        fontSize={"1rem"}
+                        lineHeight={"1.5"}
                         marginBottom={"1rem"}
                       >
                         {item?.text}
@@ -301,13 +367,17 @@ export default function Terms_And_Conditions() {
 
           {/* 6. Governing Law */}
           <Box margin={"40px 0px"} id={"a6"}>
-            <Text className="medium-heading1" color={"#313B47"}>
+            <Text
+              fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
+              fontWeight={"bold"}
+              color={"#313B47"}
+            >
               {TERMS_DATA?.GoverningLaw?.heading}
             </Text>
 
             {/* description */}
             <Box margin={"10px 0px 40px 0px"}>
-              <Text className="small-text" marginBottom={"1rem"}>
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.GoverningLaw?.data}
               </Text>
             </Box>
@@ -315,13 +385,17 @@ export default function Terms_And_Conditions() {
 
           {/* 7. Changes */}
           <Box margin={"40px 0px"} id={"a7"}>
-            <Text className="medium-heading1" color={"#313B47"}>
+            <Text
+              fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
+              fontWeight={"bold"}
+              color={"#313B47"}
+            >
               {TERMS_DATA?.Changes?.heading}
             </Text>
 
             {/* description */}
             <Box margin={"10px 0px 40px 0px"}>
-              <Text className="small-text" marginBottom={"1rem"}>
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.Changes?.data}
               </Text>
             </Box>
@@ -329,13 +403,17 @@ export default function Terms_And_Conditions() {
 
           {/* 8. Breaches of these terms of use */}
           <Box margin={"40px 0px"} id={"a8"}>
-            <Text className="medium-heading1" color={"#313B47"}>
+            <Text
+              fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
+              fontWeight={"bold"}
+              color={"#313B47"}
+            >
               {TERMS_DATA?.BreachesOfTheseTermsOfUse?.heading}
             </Text>
 
             {/* description */}
             <Box margin={"10px 0px 40px 0px"}>
-              <Text className="small-text" marginBottom={"1rem"}>
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.BreachesOfTheseTermsOfUse?.data}
               </Text>
             </Box>
@@ -343,7 +421,11 @@ export default function Terms_And_Conditions() {
 
           {/* 9. Termination */}
           <Box margin={"40px 0px"} id={"a9"}>
-            <Text className="medium-heading1" color={"#313B47"}>
+            <Text
+              fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
+              fontWeight={"bold"}
+              color={"#313B47"}
+            >
               {TERMS_DATA?.Termination?.heading}
             </Text>
 
@@ -353,7 +435,8 @@ export default function Terms_And_Conditions() {
                 <>
                   <Text
                     key={index}
-                    className="small-text"
+                    fontSize={"1rem"}
+                    lineHeight={"1.5"}
                     marginBottom={"1rem"}
                   >
                     {item?.text}
@@ -368,13 +451,17 @@ export default function Terms_And_Conditions() {
 
           {/* Contact Us */}
           <Box margin={"30px 0px"}>
-            <Text className="medium-heading1" color={"#313B47"}>
+            <Text
+              fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
+              fontWeight={"bold"}
+              color={"#313B47"}
+            >
               {TERMS_DATA?.ContactUs?.heading}
             </Text>
 
             {/* description */}
             <Box margin={"10px 0px 40px 0px"}>
-              <Text className="small-text" marginBottom={"1rem"}>
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.ContactUs?.subHeading}
               </Text>
 
@@ -383,18 +470,19 @@ export default function Terms_And_Conditions() {
                   {CONTACT_US_DATA?.map((item) =>
                     item?.label === "istLink" ? (
                       <>
-                        <ListItem className="small-text">
+                        <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
                           {item?.description}
                         </ListItem>
                       </>
                     ) : item?.label === "secondLink" ? (
                       <>
-                        <ListItem className="small-text">
+                        <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
                           {item?.description}
                           <Link
                             href={"#"}
                             color={"#2679C7"}
-                            className="small-text"
+                            lineHeight={"1.5"}
+                            fontSize={"1rem"}
                           >
                             {item?.mail}
                           </Link>
@@ -402,7 +490,7 @@ export default function Terms_And_Conditions() {
                       </>
                     ) : item?.label === "thirdLink" ? (
                       <>
-                        <ListItem className="small-text">
+                        <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
                           {item?.description}
                         </ListItem>
                       </>

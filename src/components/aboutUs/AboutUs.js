@@ -59,7 +59,7 @@ const AboutUs = () => {
         <Box>
           <Box>
             {/* <GoTopButton /> */}
-            <Box
+            {/* <Box
               borderRadius={["60px"]}
               width={["60px"]}
               position={["fixed"]}
@@ -74,7 +74,7 @@ const AboutUs = () => {
                   <SideBarSection />{" "}
                 </Fade>
               )}
-            </Box>
+            </Box> */}
             <Box
               padding={"50px 0px 50px 0px"}
               className={"mainWrapper"}
