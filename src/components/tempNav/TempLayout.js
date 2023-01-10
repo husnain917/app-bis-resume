@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Feedback from '../feedbackPopUp/Feedback';
 import TempNavbar from './TempNavbar';
 export default function TempLayout({
@@ -14,6 +15,7 @@ export default function TempLayout({
   certificate,
   downloadPDF,
 }) {
+  const feedBackGet = useSelector((state) => state?.feedBackReducer?.feedBack);
   return (
     <div>
       <TempNavbar
@@ -28,7 +30,7 @@ export default function TempLayout({
         certificate={certificate}
         downloadPDF={downloadPDF}
       />
-      <Feedback />
+      {feedBackGet && <Feedback />}
       <main>{children}</main>
     </div>
   );
