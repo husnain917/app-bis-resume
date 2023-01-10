@@ -132,10 +132,10 @@ export default function Footer() {
         <div className={styles.linkDiv}>
           <p className={styles.footerP}>Other</p>
           <div>
-            <Link href="/page/pricing">Pricing</Link>
+            <Link href="/page/pricing-resume">Pricing</Link>
           </div>
           <div>
-            <Link href="/about">About Us</Link>
+            <Link href="/about-us">About Us</Link>
           </div>
           <div>
             <Link href="#/">E-Book:How to get a job in 2022</Link>
@@ -144,7 +144,7 @@ export default function Footer() {
             <Link href="#/">Media Kit</Link>
           </div> */}
           <div>
-            <Link href="/contactUs">Help Center</Link>
+            <Link href="/contact-us">Help Center</Link>
           </div>
         </div>
         <div className={styles.linkDiv}>
