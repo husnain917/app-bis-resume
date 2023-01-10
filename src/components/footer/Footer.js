@@ -153,10 +153,10 @@ export default function Footer() {
             <Link href="/legal/terms-and-conditions">Terms of Use</Link>
           </div>
           <div>
-            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
           </div>
           <div>
-            <Link href="/cookie">Cookie Policy</Link>
+            <Link href="/cookie-policy">Cookie Policy</Link>
           </div>
           {/* <div>
             <Link href="#/">Media Kit</Link>
