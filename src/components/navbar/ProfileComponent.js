@@ -54,7 +54,7 @@ export default function ProfileComponent() {
         </MenuButton>
         <MenuList p={0} minW="0" w={'140px'}>
           <MenuItem minH="30px" closeOnSelect={true}>
-            <Link href="/auth/profile">
+            <Link href="/auth/myProfile">
               <Text
                 fontSize="16px"
                 fontWeight={'bold'}
