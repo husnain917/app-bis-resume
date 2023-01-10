@@ -53,6 +53,7 @@ export default function Cookie() {
                             padding={'40px 0px'}
                         >
                             {
+                                
                                 TERMS_DATA?.TermsOfUse?.heading?.map((item, index) => (
                                     <>
                                         <Text

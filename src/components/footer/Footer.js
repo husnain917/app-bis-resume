@@ -113,7 +113,7 @@ export default function Footer() {
             <Link href="#/">Career Blog</Link>
           </div>
           <div>
-            <Link href="/resume-build">How to Write a Resume</Link>
+            <Link href="/write-resume">How to Write a Resume</Link>
             
           </div>
           {/* <div>
@@ -150,7 +150,7 @@ export default function Footer() {
         <div className={styles.linkDiv}>
           <p className={styles.footerP}>Legal/Contact</p>
           <div>
-            <Link href="/legal/termsAndConditions">Terms of Use</Link>
+            <Link href="/legal/terms-and-conditions">Terms of Use</Link>
           </div>
           <div>
             <Link href="/privacy">Privacy Policy</Link>

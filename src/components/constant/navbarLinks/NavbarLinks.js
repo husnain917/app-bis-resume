@@ -23,7 +23,7 @@ export const NAV_ITEMS = [
       {
         label: "Resume Format",
         subLabel: "Choose the right resume format for your needs.",
-        href: "/blog/resumeFormats",
+        href: "/blog/resume-formats",
       },
       {
         label: "How to Write a Resume",
