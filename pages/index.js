@@ -20,7 +20,7 @@ import ChatButton from "../src/components/resumeExampleData/chatButton/chatButto
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {
-    let heightToHidden = 20;
+    let heightToHidden = 0.5;
     let againHide = 7700;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;

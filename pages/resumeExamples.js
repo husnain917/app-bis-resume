@@ -21,7 +21,7 @@ import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSect
 const ResumeExamples = () => {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {
-    let heightToHidden = 20;
+    let heightToHidden = 0.5;
     let againHide = 7650;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;

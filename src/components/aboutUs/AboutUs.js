@@ -33,7 +33,7 @@ import GoTopButton from "./goToTopButton/GoTopButton";
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {
-    let heightToHidden = 20;
+    let heightToHidden = 0.5;
     let againHide = 5050;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
