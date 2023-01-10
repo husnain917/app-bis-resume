@@ -58,7 +58,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
       dispatch(loginMagicUser(email, setUser, setLoading, setIsModalOpen))
     }
     else {
-      setErr({ inputField: 'This field is required', inputId: 7 })
+      setErr({ inputField: 'This field is required', inputId: 2 })
     }
   }
 
@@ -129,7 +129,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
     // if (!terms) {
     //   setErr({ inputField: 'Accept the terms and policies before use', inputId: 11 })
     // } else {
-      dispatch(doGoogleLogin(terms, setLoading, setErr, setIsModalOpen))
+    dispatch(doGoogleLogin(terms, setLoading, setErr, setIsModalOpen))
     // }
   }
 
@@ -466,16 +466,18 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                           </Text>
                         </>
                       }
-                      <Checkbox
-                        size="lg"
-                        mt="5%"
-                        colorScheme="MediumSpringGreen"
-                        iconColor="MediumSpringGreen"
-                        value={terms}
-                        onChange={(e) => setTerms(e.target.checked)}
-                      >
-                        Remember me
-                      </Checkbox>
+                      <Box>
+                        <Checkbox
+                          size="lg"
+                          mt="5%"
+                          colorScheme="MediumSpringGreen"
+                          iconColor="MediumSpringGreen"
+                          value={terms}
+                          onChange={(e) => setTerms(e.target.checked)}
+                        >
+                          Remember me
+                        </Checkbox>
+                      </Box>
                     </>
                   )}
               </Box>
@@ -544,13 +546,13 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                 )}
                 {isRegister ? (
                   <>
-                    <Text fontSize="16px" align="center" mt="5%">
+                    <Text fontSize="16px" align="center" mt="3%">
                       Or Sign Up With:
                     </Text>
                   </>
                 ) : (
                   <>
-                    <Text fontSize="16px" align="center" mt="5%">
+                    <Text fontSize="16px" align="center" mt="3%">
                       Or Sign In With:
                     </Text>
                   </>
