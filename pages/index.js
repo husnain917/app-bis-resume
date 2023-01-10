@@ -36,39 +36,24 @@ export default function Home() {
 
   return (
     <>
-      <Box>
-        <Head>
-          <title>Bis Resume App</title>
-          <meta name="description" content="Create resume with ease!" />
-        </Head>
-        {/* <Box position={"absolute"}>
-          <SideBar />
-        </Box> */}
-        <Box
-          maxW={["0%", "0%", "0%", "5%"]}
-          // padding={'70px 0px 0px 0px'}
-          padding={"40px 0px 0px 0px"}
-          display={["none", "none", "none", "block"]}
-        >
-          <Box>
-            {/* <SideBar /> */}
-            {/* <SideBarSection /> */}
-          </Box>
-        </Box>
+      <Head>
+        <title>Bis Resume App</title>
+        <meta name="description" content="Create resume with ease!" />
+        <link rel="icon" href="/Bisicon.png"></link>
+      </Head>
+      <CallToAction />
+      {/* <SliderComponent /> */}
 
-        <CallToAction />
-        {/* <SliderComponent /> */}
+      <HintSection />
 
-        <HintSection />
-        {isVisible && (
-          <Fade center>
-            <Advantages />
-          </Fade>
-        )}
-        <CompProfessionalResume />
-        <FaqsSection />
-        <BuildResume />
-      </Box>
+      {isVisible && (
+        <Fade center>
+          <Advantages />
+        </Fade>
+      )}
+      <CompProfessionalResume />
+      <FaqsSection />
+      <BuildResume />
     </>
   );
 }
