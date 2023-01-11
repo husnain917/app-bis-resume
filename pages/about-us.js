@@ -11,20 +11,6 @@ const About = () => {
   return (
     <>
       <Box>
-        {/* <SideBar /> */}
-        {/* <Box
-          maxW={["0%", "0%", "0%", "5%"]}
-          // padding={'70px 0px 0px 0px'}
-          padding={"40px 0px 0px 0px"}
-          position={"fixed"}
-          display={["none", "none", "none", "block"]}
-        >
-          <Box className={styles.sideBarContainer}>
-            <SideBar />
-            <SideBarSection />
-          </Box>
-        </Box> */}
-
         <AboutUs />
       </Box>
     </>

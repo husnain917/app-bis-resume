@@ -8,15 +8,11 @@ import FaqsSection from "../src/components/faqsComponent/FaqsSection";
 import Advantages from "../src/components/advantages/Advantages";
 import { useState, useEffect } from "react";
 import Fade from "react-reveal/Fade";
-// import styles from "../styles/resumeFormats.module.css";
-// import styles from "../styles/sideBarSection.module.css";
-
 import SideBar from "../src/components/sideBar/SideBar";
 import SliderComponent from "../src/components/sliderComponent/SliderComponent";
 import BuildResume from "../src/components/BuildResume";
 import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
 import ChatButton from "../src/components/resumeExampleData/chatButton/chatButton";
-// import styles from "../../../styles/sideBarSection.module.css";
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {

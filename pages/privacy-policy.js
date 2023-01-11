@@ -7,18 +7,6 @@ import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSect
 const Privacy = () => {
   return (
     <div>
-      {/* <SideBar /> */}
-      {/* <Box
-        borderRadius={["60px"]}
-        width={["60px"]}
-        position={["fixed"]}
-        zIndex={"1049"}
-        transform={["scale(1)"]}
-        marginLeft={"10px"}
-        display={["none", "none", "block", "block", "block"]}
-      >
-        <SideBarSection />
-      </Box> */}
       <PrivacyPage />
     </div>
   );

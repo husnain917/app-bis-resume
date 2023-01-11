@@ -11,11 +11,6 @@ import {
 import TryResume from "../src/components/resumeExampleData/tryResume/tryResume";
 import BlogPost from "../src/components/resumeExampleData/blogPost/blogPost";
 import SelectResume from "../src/components/resumeExampleData/selectResume/SelectResume";
-import ChatButton from "../src/components/resumeExampleData/chatButton/chatButton";
-import Carasol from "../src/components/resumeExampleData/carasol/Carasol";
-import Carasol1 from "../src/components/resumeExampleData/carasol/Carasol1";
-import Sidebar from "../src/components/blog/Sidebar";
-import styles from "../styles/resumeFormats.module.css";
 import Fade from "react-reveal/Fade";
 import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
 const ResumeExamples = () => {
@@ -55,13 +50,6 @@ const ResumeExamples = () => {
           </Fade>
         )}
       </Box>
-
-      {/* <Box maxW={["0%", "0%", "0%", "10%"]}>
-        <Sidebar />
-      </Box> */}
-      {/* <Carasol1 /> */}
-      {/* <Carasol /> */}
-      {/* <ChatButton /> */}
       <Box bg="lightcyan" height={"auto"} width={"100wv"}>
         <WritingGuides />
       </Box>
