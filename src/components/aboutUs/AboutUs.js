@@ -46,6 +46,7 @@ const AboutUs = () => {
       setIsVisible(false);
     }
   };
+  
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
   }, []);
