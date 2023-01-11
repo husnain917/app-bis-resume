@@ -14,6 +14,7 @@ import Link from "next/link";
 import { useWindowSizing } from "../../../../customHooks/useWindowSizing";
 import Carasol from "../carasol/Carasol";
 import Carasol1 from "../carasol/Carasol1";
+import CommonButton from "../../commonButton/CommonButton";
 import {
   ArrowLeftIcon,
   ArrowBackIcon,
@@ -31,19 +32,6 @@ const SelectResume = () => {
   const swiperRef = useRef();
   return (
     <>
-      {/* <Box
-        position={"relative"}
-        padding={[
-          "40px 44px",
-          "40px 44px",
-          "40px 44px",
-          "40px 44px",
-          "120px 40px 144px",
-          "120px 44px 144px",
-        ]}
-        backgroundColor={["#282b8f"]}
-        overflow={["hidden"]}
-      > */}
       {showCarasol ? (
         <Box
           position={"relative"}
@@ -112,9 +100,18 @@ const SelectResume = () => {
                     marginBottom={"60px"}
                     display={["none", "none", "none", "block", "block"]}
                   >
-                    <a className="button" href="/app/create-resume">
-                      Select Template
-                    </a>
+                    <Box mx={2}>
+                      <CommonButton
+                        backgroundColor={"#2CACD5"}
+                        color={"whitesmoke"}
+                        fontSize={["14x", "14px", "16px", "16px", "16px"]}
+                        height={"40px"}
+                        width={"150px"}
+                        padding={"20px"}
+                        borderRadius={"5px"}
+                        title={"Select Template"}
+                      />
+                    </Box>
                   </Box>
                 </Box>
                 <Box className="resume-templates__trustpilot">
@@ -151,22 +148,12 @@ const SelectResume = () => {
               className={"resume-templates__slider-wrapper"}
               left={["44%", "44%", "44%", "48%", "44%"]}
             >
-              {/* <Box
-                onClick={() => setShowCarasol(!showCarasol)}
-                _hover={{
-                  cursor: "pointer",
-                }}
-                display={["none", "none", "none", "block", "block"]}
-              >
-                <ArrowLeftIcon />
-              </Box> */}
               <Box
                 className={"resume-templates__slider-container"}
                 width={"1406px"}
                 display={"flex"}
                 flexDirection={"column"}
                 justifyContent={"center"}
-                // alignItems={"center"}
               >
                 <Carasol />
               </Box>

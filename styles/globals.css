@@ -2211,32 +2211,6 @@ video {
 #selectResume .swiper-slide__content {
   height: 300px;
 }
-/* #selectResume .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: rgb(228, 217, 217);
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-#selectResume .swiper-pagination-bullet-active {
-  color: #fff;
-  background: #007aff;
-} */
-/* .mainWrapper:after {
-  content: " ";
-  width: 220px;
-  height: 220px;
-  position: absolute;
-  bottom: -219px;
-  box-shadow: 50px -30px 0 0 #f6f5f0;
-  right: 0;
-  z-index: 0;
-  border-radius: 0% 50% 0% 0%;
-} */
 .container1 {
   padding-right: 15px;
   padding-left: 15px;
