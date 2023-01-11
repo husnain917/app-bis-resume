@@ -121,8 +121,8 @@ export default function Digital_Marketing_Temp() {
                             <SectionSideMenu
                               onDelete={SKILL}
                               onHide={() => setShow({ ...show, skills: false })}
-                              bg="#F2DB7A"
-                              iconColor={'#3A4D6C'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
@@ -201,8 +201,8 @@ export default function Digital_Marketing_Temp() {
                             <SectionSideMenu
                               onHide={() => setShow({ ...show, work: false })}
                               onDelete={WORK}
-                              bg="#F2DB7A"
-                              iconColor={'#3A4D6C'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
@@ -256,8 +256,8 @@ export default function Digital_Marketing_Temp() {
                                 setShow({ ...show, education: false })
                               }
                               onDelete={EDUCATION}
-                              bg="#F2DB7A"
-                              iconColor={'#3A4D6C'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>

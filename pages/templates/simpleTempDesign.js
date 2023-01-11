@@ -148,7 +148,8 @@ export default function Simple_Temp_Design() {
                               <div className={Classes.sideMenuBox}>
                                 {show.education && (
                                   <SectionSideMenu
-                                    bg={'#313B47'}
+                                    bg="#006772"
+                                    iconColor={"#fff"}
                                     onHide={() =>
                                       setShow({ ...show, education: false })
                                     }
@@ -188,7 +189,8 @@ export default function Simple_Temp_Design() {
                               <div className={Classes.sideMenuBox}>
                                 {show.work && (
                                   <SectionSideMenu
-                                    bg={'#313B47'}
+                                    bg="#006772"
+                                    iconColor={"#fff"}
                                     onHide={() => setShow({ ...show, work: false })}
                                     onDelete={WORK}
                                   />
@@ -234,7 +236,8 @@ export default function Simple_Temp_Design() {
                             <div className={Classes.sideMenuBox}>
                               {show.skills && (
                                 <SectionSideMenu
-                                  bg={'#313B47'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                   onHide={() => setShow({ ...show, skills: false })}
                                   onDelete={SKILL}
                                 />
@@ -264,7 +267,8 @@ export default function Simple_Temp_Design() {
                             <div className={Classes.sideMenuBox}>
                               {show.project && (
                                 <SectionSideMenu
-                                  bg={'#313B47'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                   onHide={() => setShow({ ...show, project: false })}
                                   onDelete={PROJECT}
                                 />
@@ -304,7 +308,8 @@ export default function Simple_Temp_Design() {
                             <div className={Classes.sideMenuBox}>
                               {show.organization && (
                                 <SectionSideMenu
-                                  bg={'#313B47'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                   onHide={() =>
                                     setShow({ ...show, organization: false })
                                   }
@@ -344,7 +349,8 @@ export default function Simple_Temp_Design() {
                             <div className={Classes.sideMenuBox}>
                               {show.certificates && (
                                 <SectionSideMenu
-                                  bg={'#313B47'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                   onHide={() =>
                                     setShow({ ...show, certificates: false })
                                   }
@@ -383,7 +389,8 @@ export default function Simple_Temp_Design() {
                             <div className={Classes.sideMenuBox}>
                               {show.languages && (
                                 <SectionSideMenu
-                                  bg={'#313B47'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                   onHide={() => setShow({ ...show, languages: false })}
                                   onDelete={LANGUAGES}
                                 />
@@ -416,7 +423,8 @@ export default function Simple_Temp_Design() {
                             <div className={Classes.sideMenuBox}>
                               {show.interest && (
                                 <SectionSideMenu
-                                  bg={'#313B47'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                   onHide={() => setShow({ ...show, interest: false })}
                                   onDelete={INTEREST}
                                 />

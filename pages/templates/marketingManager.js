@@ -105,8 +105,8 @@ const MarketingManager = (props) => {
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, education: false })}
                           onDelete={EDUCATION}
-                          bg="#fff"
-                          iconColor={'#2E4053'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                         />
                       )}
                     </div>
@@ -146,8 +146,8 @@ const MarketingManager = (props) => {
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, skills: false })}
                           onDelete={SKILL}
-                          bg="#fff"
-                          iconColor={'#2E4053'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                         />
                       )}
                     </div>
@@ -181,8 +181,8 @@ const MarketingManager = (props) => {
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, languages: false })}
                           onDelete={LANGUAGES}
-                          bg="#fff"
-                          iconColor={'#2E4053'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                         />
                       )}
                     </div>
@@ -239,7 +239,8 @@ const MarketingManager = (props) => {
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, work: false })}
                           onDelete={WORK}
-                          bg="#2e4053"
+                          bg="#006772"
+                          iconColor={"#fff"}
                         />
                       )}
                     </div>
@@ -280,7 +281,8 @@ const MarketingManager = (props) => {
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, reference: false })}
                           onDelete={REFERENCE}
-                          bg="#2e4053"
+                          bg="#006772"
+                          iconColor={"#fff"}
                         />
                       )}
                     </div>

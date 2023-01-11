@@ -53,7 +53,7 @@ const DigitalMarkTemp2 = () => {
               ref={pdfRef}
             >
               <Box
-                bg={backgroundColor}
+                bg={backgroundColor ? backgroundColor : '#E0EFFA'}
                 h={'60px'}
                 borderBottomRightRadius={25}
                 minW={410}
@@ -71,7 +71,7 @@ const DigitalMarkTemp2 = () => {
                   />
                   <Box
                     minH={10}
-                    bg={backgroundColor}
+                    bg={backgroundColor ? backgroundColor : '#E0EFFA'}
                     maxW={310}
                     minW={310}
                     borderRightRadius={8}
@@ -80,19 +80,24 @@ const DigitalMarkTemp2 = () => {
                     pt={0.5}
                     mt={4}
                   >
-                    <Profession professionStyle={Classes.ProfessionDigital} />
+                    <Profession 
+                    professionStyle={Classes.ProfessionDigital} 
+                    fontColor={color ? color : '#000000'}
+                    />
                   </Box>
                   <About aboutStyle={Classes.about} minW="full" maxW="full" />
                   <Heading
                     title={'CONTACT'}
                     textMargin="10px 0px 10px 20px"
-                    headBg={backgroundColor}
+                    headBg={backgroundColor ? backgroundColor : '#E0EFFA'}
                     borderRadius="0px 8px 8px 0px"
                     fontSize={'23px'}
+                    letterSpacing="1px"
+                    fontWeight={700}
+                    color={color ? color : '#000000'}
                     height="40px"
                     minW={260}
                     maxW={260}
-                    letterSpacing="1px"
                     margin={'20px 0px 20px 0px'}
                   />
                   <Contact
@@ -112,14 +117,16 @@ const DigitalMarkTemp2 = () => {
                         <Heading
                           title={'SKILLS'}
                           textMargin="10px 0px 10px 20px"
-                          headBg={'backgroundColor'}
+                          headBg={backgroundColor ? backgroundColor : '#E0EFFA'}
                           borderRadius="0px 8px 8px 0px"
                           fontSize={'23px'}
+                          letterSpacing="1px"
+                          fontWeight={700}
                           height="40px"
                           minW={260}
                           maxW={260}
-                          letterSpacing="1px"
-                          margin={'20px 0px 20px 0px'}
+                          margin={'20px 0px 30px 0px'}
+                          color={color ? color : '#000000'}
                           onSideSectionShow={() =>
                             setShow({ ...show, skills: true })
                           }
@@ -143,8 +150,8 @@ const DigitalMarkTemp2 = () => {
                         {show.skills && (
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, skills: false })}
-                            bg="#AED6F1"
-                            iconColor={'#000'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onDelete={SKILL}
                           />
                         )}
@@ -161,7 +168,7 @@ const DigitalMarkTemp2 = () => {
                     marginLeft="50px"
                   />
                   <Box
-                    bg={backgroundColor}
+                    bg={backgroundColor ? backgroundColor : '#E0EFFA'}
                     minW={372}
                     maxW={372}
                     ml={'30px'}
@@ -177,8 +184,8 @@ const DigitalMarkTemp2 = () => {
                               onHide={() =>
                                 setShow({ ...show, education: false })
                               }
-                              bg="#000"
-                              iconColor={'#AED6F1'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                               onDelete={EDUCATION}
                             />
                           )}
@@ -189,6 +196,7 @@ const DigitalMarkTemp2 = () => {
                             fontSize={'23px'}
                             letterSpacing="1px"
                             fontWeight={700}
+                            color={color ? color : '#000000'}
                             onSideSectionShow={() =>
                               setShow({ ...show, education: true })
                             }
@@ -211,8 +219,8 @@ const DigitalMarkTemp2 = () => {
                           {show.work && (
                             <SectionSideMenu
                               onHide={() => setShow({ ...show, work: false })}
-                              bg="#000"
-                              iconColor={'#AED6F1'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                               onDelete={WORK}
                             />
                           )}
@@ -223,6 +231,7 @@ const DigitalMarkTemp2 = () => {
                             fontSize={'23px'}
                             letterSpacing="1px"
                             fontWeight={700}
+                            color={color ? color : '#000000'}
                             onSideSectionShow={() =>
                               setShow({ ...show, work: true })
                             }

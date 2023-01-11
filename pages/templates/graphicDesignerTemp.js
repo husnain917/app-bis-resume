@@ -203,8 +203,8 @@ export default function Graphic_Design_Temp() {
                             <div className={Classes.sideMenuBox}>
                               {show.interest && (
                                 <SectionSideMenu
-                                  bg="#947F57"
-                                  iconColor={'#fff'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                   onHide={() => setShow({ ...show, interest: false })}
                                   onDelete={INTEREST}
                                 />
@@ -247,8 +247,8 @@ export default function Graphic_Design_Temp() {
                                 <SectionSideMenu
                                   onDelete={SKILL}
                                   onHide={() => setShow({ ...show, skills: false })}
-                                  bg="#947F57"
-                                  iconColor={'#fff'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                 />
                               )}
                             </div>
@@ -296,8 +296,8 @@ export default function Graphic_Design_Temp() {
                                 <SectionSideMenu
                                   onHide={() => setShow({ ...show, work: false })}
                                   onDelete={WORK}
-                                  bg="#947F57"
-                                  iconColor={'#fff'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                 />
                               )}
                             </div>
@@ -348,8 +348,8 @@ export default function Graphic_Design_Temp() {
                                     setShow({ ...show, education: false })
                                   }
                                   onDelete={EDUCATION}
-                                  bg="#947F57"
-                                  iconColor={'#fff'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                 />
                               )}
                             </div>

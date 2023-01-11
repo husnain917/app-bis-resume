@@ -110,6 +110,10 @@ export const NAV_ITEMS = [
   //     ],
   // },
   {
+    label: "Blogs",
+    href: "#",
+  },
+  {
     label: "Job Search",
     href: "#",
   },

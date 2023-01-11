@@ -109,7 +109,8 @@ const Template5 = () => {
                       <SectionSideMenu
                         onHide={() => setShow({ ...show, work: false })}
                         onDelete={WORK}
-                        bg="#000"
+                        bg="#006772"
+                        iconColor={"#fff"}
                       />
                     )}
                   </div>
@@ -145,7 +146,8 @@ const Template5 = () => {
                       <SectionSideMenu
                         onHide={() => setShow({ ...show, education: false })}
                         onDelete={EDUCATION}
-                        bg="#000"
+                        bg="#006772"
+                        iconColor={"#fff"}
                       />
                     )}
                   </div>
@@ -180,7 +182,8 @@ const Template5 = () => {
                   <div className={Classes.sideMenuBox}>
                     {show.skills && (
                       <SectionSideMenu
-                        bg={'#000'}
+                        bg="#006772"
+                        iconColor={"#fff"}
                         onHide={() => setShow({ ...show, skills: false })}
                         onDelete={SKILL}
                       />

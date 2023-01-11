@@ -130,8 +130,8 @@ export default function Graphic_Designer() {
                           <SectionSideMenu
                             onDelete={SKILL}
                             onHide={() => setShow({ ...show, skills: false })}
-                            bg="#000000"
-                            iconColor={'#f8f9fa'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                           />
                         )}
                       </div>
@@ -209,8 +209,8 @@ export default function Graphic_Designer() {
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, work: false })}
                             onDelete={WORK}
-                            bg="#000000"
-                            iconColor={'#f8f9fa'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                           />
                         )}
                       </div>
@@ -270,8 +270,8 @@ export default function Graphic_Designer() {
                               setShow({ ...show, education: false })
                             }
                             onDelete={EDUCATION}
-                            bg="#000000"
-                            iconColor={'#f8f9fa'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                           />
                         )}
                       </div>

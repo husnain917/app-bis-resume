@@ -103,7 +103,6 @@ export default function Aaron_Graphic_Temp() {
                                                 circleSize="25px"
                                                 iconColor="#000000"
                                                 parentStyle={styles.contactFont}
-                                                style={Classes.profileText}
                                             />
                                             <Contact
                                                 email={true}
@@ -112,7 +111,6 @@ export default function Aaron_Graphic_Temp() {
                                                 circleSize="25px"
                                                 iconColor="#000000"
                                                 parentStyle={styles.contactFont}
-                                                style={Classes.profileText}
                                             />
                                             <Contact
                                                 linkedinURL={true}
@@ -121,7 +119,6 @@ export default function Aaron_Graphic_Temp() {
                                                 circleSize="25px"
                                                 iconColor="#000000"
                                                 parentStyle={styles.contactFont}
-                                                style={Classes.profileText}
                                             />
                                             <Contact
                                                 website={true}
@@ -130,7 +127,6 @@ export default function Aaron_Graphic_Temp() {
                                                 circleSize="25px"
                                                 iconColor="#000000"
                                                 parentStyle={styles.contactFont}
-                                                style={Classes.profileText}
                                             />
                                         </Box>
                                         <Underline
@@ -166,8 +162,8 @@ export default function Aaron_Graphic_Temp() {
                                                                         setShow({ ...show, education: false })
                                                                     }
                                                                     onDelete={EDUCATION}
-                                                                    bg="#fff"
-                                                                    iconColor={'#000000'}
+                                                                    bg="#006772"
+                                                                    iconColor={"#fff"}
                                                                 />
                                                             )}
                                                         </div>
@@ -218,8 +214,8 @@ export default function Aaron_Graphic_Temp() {
                                                                 <SectionSideMenu
                                                                     onHide={() => setShow({ ...show, work: false })}
                                                                     onDelete={WORK}
-                                                                    bg="#fff"
-                                                                    iconColor={'#000000'}
+                                                                    bg="#006772"
+                                                                    iconColor={"#fff"}
                                                                 />
                                                             )}
                                                         </div>
@@ -297,8 +293,8 @@ export default function Aaron_Graphic_Temp() {
                                                                 <SectionSideMenu
                                                                     onDelete={SKILL}
                                                                     onHide={() => setShow({ ...show, skills: false })}
-                                                                    bg="#fff"
-                                                                    iconColor={'#000000'}
+                                                                    bg="#006772"
+                                                                    iconColor={"#fff"}
                                                                 />
                                                             )}
                                                         </div>
@@ -344,8 +340,8 @@ export default function Aaron_Graphic_Temp() {
                                                         <div className={Classes.sideMenuBox}>
                                                             {show.interest && (
                                                                 <SectionSideMenu
-                                                                    bg={'#fff'}
-                                                                    iconColor={'#000000'}
+                                                                    bg="#006772"
+                                                                    iconColor={"#fff"}
                                                                     onHide={() => setShow({ ...show, interest: false })}
                                                                     onDelete={INTEREST}
                                                                 />
@@ -366,8 +362,7 @@ export default function Aaron_Graphic_Temp() {
                                                                 }
                                                             />
                                                             <Interest
-                                                                interestStyle={Classes.skillText}
-                                                                parentContainerStyle={styles.parentDiv}
+                                                                parentContainerStyle={`${styles.parentDiv} ${styles.contactFont}`}
                                                             />
                                                         </div>
                                                     </div>
@@ -387,8 +382,8 @@ export default function Aaron_Graphic_Temp() {
                                                         <div className={Classes.sideMenuBox}>
                                                             {show.organization && (
                                                                 <SectionSideMenu
-                                                                    bg={'#fff'}
-                                                                    iconColor={'#000000'}
+                                                                    bg="#006772"
+                                                                    iconColor={"#fff"}
                                                                     onHide={() =>
                                                                         setShow({ ...show, organization: false })
                                                                     }
@@ -413,10 +408,8 @@ export default function Aaron_Graphic_Temp() {
                                                             <Organization
                                                                 organization={true}
                                                                 role={true}
-                                                                organizationStyle={Classes.skillText}
-                                                                roleStyle={Classes.skillText}
                                                                 rolePlaceholder="Role"
-                                                                parentContainerStyle={styles.parentDiv}
+                                                                parentContainerStyle={`${styles.parentDiv} ${styles.contactFont}`}
                                                             />
                                                         </div>
                                                     </div>
