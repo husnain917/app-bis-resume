@@ -34,8 +34,8 @@ export default function HelpCenter() {
 
 
                                 <Box width="60%" marginLeft="3%" mt="1%" mb="3%">
-                                    <Text fontSize="18px" color="#2A6672" fontWeight={"bold"} mt={2} >FAQs</Text>
-                                    <Text fontSize="16" color="black" mt={2} >Tutorials, FAQs and best practices with BisResume  </Text>
+                                    <Text fontSize="18px" color="#2A6672" className={"subTitle"} fontWeight="bold" mt={2} >FAQs</Text>
+                                    <Text fontSize="16" color="black" mt={2} className={"paragraph"} >Tutorials, FAQs and best practices with BisResume  </Text>
 
                                 </Box>
                             </Box>
@@ -54,8 +54,8 @@ export default function HelpCenter() {
                                     </Box>
                                 </Box>
                                 <Box width="60%" marginLeft="3%" mt="1%" mb="3%">
-                                    <Text fontSize="18px" color="#2A6672" fontWeight={"bold"} mt={2} >Resume Editor Help</Text>
-                                    <Text fontSize="16" color="black" mt={2} >Discover how you use the editor at its maximum capacity and use all the features!</Text>
+                                    <Text fontSize="18px" color="#2A6672" fontWeight={"bold"} mt={2} className={"subTitle"} >Resume Editor Help</Text>
+                                    <Text fontSize="16" color="black" mt={2} className={"paragraph"} >Discover how you use the editor at its maximum capacity and use all the features!</Text>
 
                                 </Box>
                             </Box>
