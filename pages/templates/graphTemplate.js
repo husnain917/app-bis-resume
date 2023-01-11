@@ -130,8 +130,8 @@ export default function Graph_Template() {
                                                     <SectionSideMenu
                                                         onDelete={SKILL}
                                                         onHide={() => setShow({ ...show, skills: false })}
-                                                        bg="#fff"
-                                                        iconColor={'#000000'}
+                                                        bg="#006772"
+                                                        iconColor={"#fff"}
                                                     />
                                                 )}
                                             </div>
@@ -209,8 +209,8 @@ export default function Graph_Template() {
                                                     <SectionSideMenu
                                                         onHide={() => setShow({ ...show, work: false })}
                                                         onDelete={WORK}
-                                                        bg="#fff"
-                                                        iconColor={'#000000'}
+                                                        bg="#006772"
+                                                        iconColor={"#fff"}
                                                     />
                                                 )}
                                             </div>
@@ -270,8 +270,8 @@ export default function Graph_Template() {
                                                             setShow({ ...show, education: false })
                                                         }
                                                         onDelete={EDUCATION}
-                                                        bg="#fff"
-                                                        iconColor={'#000000'}
+                                                        bg="#006772"
+                                                        iconColor={"#fff"}
                                                     />
                                                 )}
                                             </div>

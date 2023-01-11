@@ -81,6 +81,7 @@ export default function Fashion_Temp() {
                     minHeight="240px"
                     marginTop="30px"
                     marginBottom="30px"
+                    marginLeft={'10px'}
                   />
 
                   {/* _____________ About me _____________ */}
@@ -119,8 +120,8 @@ export default function Fashion_Temp() {
                             <SectionSideMenu
                               onDelete={SKILL}
                               onHide={() => setShow({ ...show, skills: false })}
-                              bg="#000000"
-                              iconColor={'#FDC726'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
@@ -195,7 +196,7 @@ export default function Fashion_Temp() {
                     iconColor="#000000"
                     margin={'5px 0px 0px 0px'}
                     parentStyle={styles.rightContainerWork}
-                    style={Classes.profileText}
+                    style={styles.profileText}
                   />
                   {/* _____________ Work _____________ */}
                   <Box
@@ -209,8 +210,8 @@ export default function Fashion_Temp() {
                             <SectionSideMenu
                               onHide={() => setShow({ ...show, work: false })}
                               onDelete={WORK}
-                              bg="#FDC726"
-                              iconColor={'#000000'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
@@ -265,8 +266,8 @@ export default function Fashion_Temp() {
                                 setShow({ ...show, education: false })
                               }
                               onDelete={EDUCATION}
-                              bg="#FDC726"
-                              iconColor={'#000000'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>

@@ -95,9 +95,9 @@ const FlightAttendant1 = () => {
                   linkedinURL={true}
                   website={true}
                   circleIcon={true}
-                  circleBg="#fff"
+                  circleBg={color ? color : '#000000'}
                   circleSize="25px"
-                  iconColor={backgroundColor}
+                  iconColor={backgroundColor ? backgroundColor : '#fff'}
                   margin={'10px 0px 0px 0px'}
                   style={Classes.profileText}
                 />
@@ -113,8 +113,8 @@ const FlightAttendant1 = () => {
                         {show.skills && (
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, skills: false })}
-                            bg="#E0EFFA"
-                            iconColor={'#2A78AB'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onDelete={SKILL}
                           />
                         )}
@@ -122,8 +122,10 @@ const FlightAttendant1 = () => {
                       <div>
                         <Heading
                           title={'RELEVANT SKILLS'}
-                          color="#fff"
+                          color={color ? color : '#000000'}
                           margin={'0px 0px 0px 0px'}
+                          fontSize={17}
+                          fontWeight={700}
                           onSideSectionShow={() =>
                             setShow({ ...show, skills: true })
                           }
@@ -146,8 +148,8 @@ const FlightAttendant1 = () => {
                         {show.work && (
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, work: false })}
-                            bg="#2A78AB"
-                            iconColor={'#E0EFFA'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onDelete={WORK}
                           />
                         )}
@@ -203,8 +205,8 @@ const FlightAttendant1 = () => {
                         {show.education && (
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, education: false })}
-                            bg="#2A78AB"
-                            iconColor={'#E0EFFA'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onDelete={EDUCATION}
                           />
                         )}
@@ -262,8 +264,8 @@ const FlightAttendant1 = () => {
                             onHide={() =>
                               setShow({ ...show, certificates: false })
                             }
-                            bg="#2A78AB"
-                            iconColor={'#E0EFFA'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onDelete={CERTIFICATE}
                           />
                         )}

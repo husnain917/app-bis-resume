@@ -94,7 +94,7 @@ export default function Harumi_Graphic_Temp() {
                                         circleSize="25px"
                                         iconColor="#3A4D6C"
                                         margin={'10px 0px 0px 0px'}
-                                        style={Classes.profileText}
+                                        style={styles.profileText}
                                     />
 
                                     {/* _____________ About me _____________ */}
@@ -125,8 +125,8 @@ export default function Harumi_Graphic_Temp() {
                                                         <SectionSideMenu
                                                             onDelete={SKILL}
                                                             onHide={() => setShow({ ...show, skills: false })}
-                                                            bg="#E0EFFA"
-                                                            iconColor={'#2A78AB'}
+                                                            bg="#006772"
+                                                            iconColor={"#fff"}
                                                         />
                                                     )}
                                                 </div>
@@ -153,7 +153,7 @@ export default function Harumi_Graphic_Temp() {
                                                         )}
                                                     />
                                                     <Skill
-                                                        skillStyle={Classes.skillText}
+                                                        skillStyle={styles.profileText}
                                                         progressBar={true}
                                                         strokeWidth="2"
                                                         lineStyle={styles.line}
@@ -201,8 +201,8 @@ export default function Harumi_Graphic_Temp() {
                                                         <SectionSideMenu
                                                             onHide={() => setShow({ ...show, work: false })}
                                                             onDelete={WORK}
-                                                            bg="#E0EFFA"
-                                                            iconColor={'#2A78AB'}
+                                                            bg="#006772"
+                                                            iconColor={"#fff"}
                                                         />
                                                     )}
                                                 </div>
@@ -260,8 +260,8 @@ export default function Harumi_Graphic_Temp() {
                                                                 setShow({ ...show, education: false })
                                                             }
                                                             onDelete={EDUCATION}
-                                                            bg="#E0EFFA"
-                                                            iconColor={'#2A78AB'}
+                                                            bg="#006772"
+                                                            iconColor={"#fff"}
                                                         />
                                                     )}
                                                 </div>

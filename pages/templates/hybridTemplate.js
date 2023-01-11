@@ -161,7 +161,8 @@ const HybridTemplate = () => {
                             {/* Section Side Menu */}
                             {show.education && (
                               <SectionSideMenu
-                                bg={'#313B47'}
+                                bg="#006772"
+                                iconColor={"#fff"}
                                 onHide={() =>
                                   setShow({ ...show, education: false })
                                 }
@@ -213,7 +214,8 @@ const HybridTemplate = () => {
                             {/* Section Side Menu */}
                             {show.work && (
                               <SectionSideMenu
-                                bg={'#313B47'}
+                                bg="#006772"
+                                iconColor={"#fff"}
                                 onHide={() => setShow({ ...show, work: false })}
                                 onDelete={WORK}
                               />
@@ -269,6 +271,7 @@ const HybridTemplate = () => {
                     bg="#D6D6D6"
                     py={4}
                     pr={2}
+                    pl={2}
                     borderRadius={6}
                   >
                     {/* skill Section  */}
@@ -277,7 +280,8 @@ const HybridTemplate = () => {
                         <div className={Classes.width}>
                           {show.skills && (
                             <SectionSideMenu
-                              bg={'#313B47'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                               onHide={() => setShow({ ...show, skills: false })}
                               onDelete={SKILL}
                             />
@@ -315,7 +319,8 @@ const HybridTemplate = () => {
                           {/* Section Side Menu */}
                           {show.project && (
                             <SectionSideMenu
-                              bg={'#313B47'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                               onHide={() =>
                                 setShow({ ...show, project: false })
                               }
@@ -365,7 +370,8 @@ const HybridTemplate = () => {
                           {/* Section Side Menu */}
                           {show.organization && (
                             <SectionSideMenu
-                              bg={'#313B47'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                               onHide={() =>
                                 setShow({ ...show, organization: false })
                               }
@@ -417,7 +423,8 @@ const HybridTemplate = () => {
                           {/* Section Side Menu */}
                           {show.certificates && (
                             <SectionSideMenu
-                              bg={'#313B47'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                               onHide={() =>
                                 setShow({ ...show, certificates: false })
                               }
@@ -468,7 +475,8 @@ const HybridTemplate = () => {
                           {/* Section Side Menu */}
                           {show.languages && (
                             <SectionSideMenu
-                              bg={'#313B47'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                               onHide={() =>
                                 setShow({ ...show, languages: false })
                               }
@@ -513,7 +521,8 @@ const HybridTemplate = () => {
                             {/* Section Side Menu */}
                             {show.interest && (
                               <SectionSideMenu
-                                bg={'#313B47'}
+                                bg="#006772"
+                                iconColor={"#fff"}
                                 onHide={() =>
                                   setShow({ ...show, interest: false })
                                 }

@@ -1,65 +1,25 @@
 import React from 'react'
 import { Box } from '@chakra-ui/react'
-import { Text } from '../../src/components/template1'
 import Classes from '../../styles/templates/templateContentCreater.module.css'
-import style from "../../styles/templates/template1.module.scss";
-import { sampleData } from "../../constants/sampleData";
-import EducationHistory from '../../src/components/templateContentCreater/EducationHistory'
+import Classe from '../../styles/templates/flightAttendant.module.css';
 import useStoreData from '../../src/components/templateMarket/useStoreData';
-import Link from "next/link";
-import { Tooltip } from "react-tippy";
-import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
-import { GiSpiderWeb } from "react-icons/gi";
-import { MdLocationOn } from "react-icons/md";
-import { Row } from "antd";
-import { Image, } from "@chakra-ui/react";
-import { HiPhone } from 'react-icons/hi';
-import { MdEmail } from 'react-icons/md';
-
-import ImageSection from '../../src/components/commonSection/ImageSection';
 import Name from '../../src/components/commonSection/Name';
 import Profession from '../../src/components/commonSection/Profession';
 import About from '../../src/components/commonSection/About';
 import Contact from '../../src/components/commonSection/Contact';
 import Heading from '../../src/components/commonSection/Heading';
 import Education from '../../src/components/commonSection/Education';
-import RowSkill from '../../src/components/commonSection/RowSkill';
-import Project from '../../src/components/commonSection/Project';
-import Organization from '../../src/components/commonSection/Organization';
-import Certificate from '../../src/components/commonSection/Certificate';
-import Language from '../../src/components/commonSection/Language';
-import Interest from '../../src/components/commonSection/Interest';
 import TempLayout from '../../src/components/tempNav/TempLayout';
-import { useSelector } from 'react-redux';
 import useShow from '../../src/components/tempSectionSide/useShow';
 import SectionSideMenu from '../../src/components/tempSectionSide/SectionSideMenu';
-import { HStack } from '@chakra-ui/react'
-import { Flex, } from '@chakra-ui/react';
-import { MdCastForEducation } from 'react-icons/md';
-import { BsFillLayersFill } from 'react-icons/bs';
-import { GiSkills, GiOrganigram } from 'react-icons/gi';
-import { IoLanguageOutline } from 'react-icons/io5';
-import { GoProject } from 'react-icons/go';
-import { TbCertificate } from 'react-icons/tb';
-import { FaHorseHead } from 'react-icons/fa';
 import WorkExperience from '../../src/components/commonSection/WorkExperience';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
-
-
 import {
-    CERTIFICATE,
     EDUCATION,
-    INTEREST,
-    LANGUAGES,
-    ORGANIZATION,
-    PROJECT,
-    SKILL,
     WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../src/components/imageSelector';
-
-
 
 export default function TemplateContentCreater() {
     const {
@@ -72,29 +32,23 @@ export default function TemplateContentCreater() {
     const { downloadPDFHandler, pdfRef } = PDFGenerater();
     return (
         <div style={{ overflow: 'auto' }}>
-
             <TempLayout
                 education={true}
                 work={true}
                 downloadPDF={downloadPDFHandler}
             >
                 <ChangeTempBtn />
-
-                <div className={Classes.mainDiv} >
+                <Box className={Classes.mainDiv}>
                     <Box
                         display={'flex'}
                         justifyContent={'center'}
                         ref={pdfRef}
                     >
-
-                        <div className={Classes.innerMainDiv} >
-
-
-
-                            <div className={Classes.innerMainDiv1}>
-                                <Box display="flex" flexDirection="row"  >
+                        <Box className={Classes.innerMainDiv} mb={'30px'}>
+                            <Box className={Classes.innerMainDiv1}>
+                                <Box display="flex" flexDirection="row">
                                     <Box w="50%" marginTop="30px" >
-                                        <Box style={{ overflow: 'hidden' }} >
+                                        <Box style={{ overflow: 'hidden' }}>
                                             <Name
                                                 FName={true}
                                                 SName={true}
@@ -102,35 +56,24 @@ export default function TemplateContentCreater() {
                                                 FNameStyle={Classes.name}
                                                 SNameStyle={Classes.name}
                                             />
-
                                         </Box>
-
                                         <Box bgColor="#E2CDC1" w="100%" h="5px" mt="2%" ml="10%"></Box>
-
                                         <Profession
-
                                             professionStyle={Classes.profession}
-
                                         />
-
                                     </Box>
                                     <Box w="50%" height={300} display='flex' justifyContent='center' alignItems='center' >
                                         <Box borderRadius="100%" >
                                             <ImageSelector
                                                 height={"200px"}
                                                 width={"200px"}
-
                                             />
                                         </Box>
                                     </Box>
-
-
-
                                 </Box>
-                                <div className={Classes.ProfileIcons}>
+                                <Box className={Classes.ProfileIcons}>
                                     <Box display="flex" flexDirection="row" justifyContent="space-around" padding="10px 0px">
                                         <Box display="flex" mt="1">
-
                                             <Contact
                                                 location={true}
                                                 locationPlaceholder={"City"}
@@ -140,115 +83,98 @@ export default function TemplateContentCreater() {
                                                 style={Classes.contact}
                                             />
                                         </Box>
-
                                         <Box display="flex" mt="1">
-
                                             <Contact
                                                 email={true}
-
                                                 iconSize={'30px'}
                                                 iconColor="black"
                                                 circleIcon={true}
                                                 style={Classes.contact}
                                             />
-
-
                                         </Box>
                                         <Box display="flex" mt="1">
-
                                             <Contact
                                                 phone={true}
-
                                                 iconSize={'30px'}
                                                 iconColor="black"
                                                 circleIcon={true}
                                                 style={Classes.contact}
                                             />
-
                                         </Box>
-
-
                                     </Box>
-
-                                </div>
-
-                                <div className={Classes.profileDiv}>
+                                </Box>
+                                <Box className={Classes.profileDiv}>
                                     <About
-
                                         aboutStyle={Classes.description}
                                         aboutPlaceholder={"Profile Summary"}
-
                                     />
-
-
-
-                                    {resumeData?.work?.visible && (
-                                        <>
-                                            <HStack alignItems={'flex-start'}>
-
-                                                {show.work && (
-                                                    <SectionSideMenu
-                                                        bg={'black'}
-                                                        onHide={() => setShow({ ...show, work: false })}
-                                                        onDelete={WORK}
-                                                    />
-                                                )}
-                                                <div className={Classes.workExp}>
-                                                    <div className={Classes.bgImage}>
-                                                        <Box marginLeft="35%">
-
-                                                            <Heading
-                                                                title="WORK EXPERIENCE"
-                                                                fontSize="23px"
-                                                                fontWeight={900}
-                                                                minW="700px"
-                                                                maxW="700px"
-                                                                onSideSectionShow={() =>
-                                                                    setShow({ ...show, work: true })
-                                                                }
-                                                            />
-                                                        </Box>
-
-                                                    </div>
-                                                </div>
-                                            </HStack>
-
-                                            <WorkExperience
-
-                                                position={true}
-                                                position_placeholder={"Position"}
-                                                date={true}
-                                                summary={true}
-                                                startDate_placeholder={"Start Date"}
-                                                endDate_placeholder={"End Date"}
-
-                                                postionStyle={Classes.pos}
-
-
-                                                dateStyle={Classes.date}
-                                                summaryStyle={Classes.description}
-                                                summary_placeholder={"Summary"}
-
-                                            />
-                                        </>
-                                    )}
-
-
-
-
-                                    <div>
-                                        {resumeData?.education?.visible && (
-                                            <>
-                                                <HStack alignItems={'flex-start'}>
-                                                    {show.education && (
+                                    <Box
+                                        margin={'30px 0px 10px 0px'}
+                                    >
+                                        {resumeData?.work?.visible && (
+                                            <div className={Classe.sideMenu}>
+                                                <div className={Classe.sideMenuBox}>
+                                                    {show?.work && (
                                                         <SectionSideMenu
-                                                            bg={'black'}
+                                                            onHide={() => setShow({ ...show, work: false })}
+                                                            onDelete={WORK}
+                                                            bg="#006772"
+                                                            iconColor={"#fff"}
+                                                        />
+                                                    )}
+                                                </div>
+                                                <div>
+                                                    <div className={Classes.workExp}>
+                                                        <div className={Classes.bgImage}>
+                                                            <Box marginLeft="35%">
+                                                                <Heading
+                                                                    title="WORK EXPERIENCE"
+                                                                    fontSize="23px"
+                                                                    fontWeight={900}
+                                                                    minW="700px"
+                                                                    maxW="700px"
+                                                                    onSideSectionShow={() =>
+                                                                        setShow({ ...show, work: true })
+                                                                    }
+                                                                />
+                                                            </Box>
+                                                        </div>
+                                                    </div>
+                                                    <WorkExperience
+                                                        company={true}
+                                                        position={true}
+                                                        date={true}
+                                                        summary={true}
+                                                        companyStyle={Classe.company}
+                                                        positionStyle={Classe.programText}
+                                                        dateStyle={Classe.date}
+                                                        summaryStyle={Classe.description}
+                                                        parentContainerStyle={Classes.rightContainerWork}
+                                                        textColor="#000000"
+                                                    />
+                                                </div>
+                                            </div>
+                                        )}
+                                    </Box>
+                                    {/* education */}
+                                    <Box
+                                        margin={'30px 0px 10px 0px'}
+                                    >
+                                        {resumeData?.education?.visible && (
+                                            <div className={Classe.sideMenu}>
+                                                <div className={Classe.sideMenuBox}>
+                                                    {show?.education && (
+                                                        <SectionSideMenu
                                                             onHide={() =>
                                                                 setShow({ ...show, education: false })
                                                             }
                                                             onDelete={EDUCATION}
+                                                            bg="#006772"
+                                                            iconColor={"#fff"}
                                                         />
                                                     )}
+                                                </div>
+                                                <div>
                                                     <div className={Classes.workExp}>
                                                         <div className={Classes.bgImage}>
                                                             <Box marginLeft="40%">
@@ -256,9 +182,6 @@ export default function TemplateContentCreater() {
                                                                     title="EDUCATION"
                                                                     fontSize="23px"
                                                                     fontWeight={900}
-
-
-
                                                                     margin={'0px 0px 10px 0px'}
                                                                     minW="700px"
                                                                     maxW="700px"
@@ -267,48 +190,32 @@ export default function TemplateContentCreater() {
                                                                     }
                                                                 />
                                                             </Box>
-
                                                         </div>
-
                                                     </div>
-
-                                                </HStack>
-                                                <Education
-                                                    institution={true}
-                                                    date={true}
-                                                    summary={true}
-                                                    summaryStyle={Classes.description}
-                                                    dateStyle={Classes.date}
-                                                    institutionStyle={Classes.company}
-                                                    institution_placeholder={"College"}
-                                                    summary_placeholder={"Summary"}
-                                                    startDate_placeholder={"Start Date"}
-                                                    endDate_placeholder={"End Date"}
-
-
-                                                />
-                                            </>
+                                                    <Education
+                                                        degree={true}
+                                                        institution={true}
+                                                        date={true}
+                                                        summary={true}
+                                                        parentContainerStyle={Classes.rightContainerWork}
+                                                        institutionStyle={Classe.company}
+                                                        degreeStyle={Classe.programText}
+                                                        dateStyle={Classe.date}
+                                                        summaryStyle={Classe.description}
+                                                        degree_placeholder="Study Program"
+                                                        textColor="#000000"
+                                                    />
+                                                </div>
+                                            </div>
                                         )}
-                                    </div>
-
-                                </div>
-
+                                    </Box>
+                                </Box>
                                 <Box bgColor="#E2CDC1" w="100%" h="5px" mt="2%" mb="5%"></Box>
-                            </div>
-                        </div>
+                            </Box>
+                        </Box>
                     </Box>
-                </div>
-
-
-
-            </TempLayout >
+                </Box>
+            </TempLayout>
         </div>
-
-
-
-
-
-
-
     )
 }
