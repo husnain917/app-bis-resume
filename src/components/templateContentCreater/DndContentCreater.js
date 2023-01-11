@@ -46,8 +46,7 @@ const getdragedStyle = (isDragging) => ({
     : "none",
   "-moz-box-shadow": isDragging ? "0px 0px 24px 0px rgba(0,0,0,0.16)" : "none",
   "box-shadow": isDragging ? "0px 0px 24px 0px rgba(0,0,0,0.16)" : "none",
-  background: "#FFFFFF"
-
+  background: "#FFFFFF",
 });
 
 const getListStyle = (isDraggingOver) => ({
@@ -61,9 +60,7 @@ const getListStyle = (isDraggingOver) => ({
     ? "inset 0px 0px 18px 0px rgba(0,0,0,0.08)"
     : "none",
   background: isDraggingOver ? "#FFFFFF" : "#FFFFFF",
-
 });
-
 
 const getListStyleHorizontal = (isDraggingOver) => ({
   "-webkit-box-shadow": isDraggingOver
@@ -174,6 +171,7 @@ class DndContentCreater extends Component {
                               <Image
                                 className={styles.icon}
                                 src="/icons/plus.png"
+                                alt="will show soon"
                               />
                             </Tooltip>
                           </div>
@@ -195,6 +193,7 @@ class DndContentCreater extends Component {
                                 <Image
                                   className={styles.icon2}
                                   src="/icons/equal.png"
+                                  alt="will show soon"
                                 />
                               </Tooltip>
                             </div>
@@ -212,6 +211,7 @@ class DndContentCreater extends Component {
                                 <Image
                                   className={styles.icon2}
                                   src="/icons/minus.png"
+                                  alt="will show soon"
                                 />
                               </Tooltip>
                             </div>

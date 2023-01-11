@@ -143,7 +143,7 @@ const AboutUs = () => {
                     textAlign={"center"}
                     position={"relative"}
                   >
-                    <Image src="/about-us.webp" />
+                    <Image src="/about-us.webp" alt="will show soon" />
                   </Box>
                 </Box>
               </Box>
@@ -236,20 +236,20 @@ const AboutUs = () => {
             >
               <ListItem>As seen in: </ListItem>
               <ListItem>
-                <Image src="/thegaurdian-blue.png" />
+                <Image src="/thegaurdian-blue.png" alt="will show soon" />
               </ListItem>
               <ListItem>
-                <Image src="/time-blue.png" />
+                <Image src="/time-blue.png" alt="will show soon" />
               </ListItem>
               <ListItem>
-                <Image src="/thenewyorktimes-blue.png" />
+                <Image src="/thenewyorktimes-blue.png" alt="will show soon" />
               </ListItem>
               <ListItem>
-                <Image src="/msn-blue.png" />
+                <Image src="/msn-blue.png" alt="will show soon" />
               </ListItem>
               <ListItem>
                 {" "}
-                <Image src="/forbes-blue.png" />
+                <Image src="/forbes-blue.png" alt="will show soon" />
               </ListItem>
             </UnorderedList>
           </Box>
@@ -365,16 +365,21 @@ const AboutUs = () => {
                 mt={"30px"}
               >
                 <ListItem>
-                  <Image src="/s1.png" />
+                  <Image src="/s1.png" alt="will show soon" />
                 </ListItem>
                 <ListItem>
-                  <Image src="/s2.png" width={"145"} height={"118"} />
+                  <Image
+                    src="/s2.png"
+                    width={"145"}
+                    height={"118"}
+                    alt="will show soon"
+                  />
                 </ListItem>
                 <ListItem>
-                  <Image src="/s3.png" />
+                  <Image src="/s3.png" alt="will show soon" />
                 </ListItem>
                 <ListItem>
-                  <Image src="/s4.png" />
+                  <Image src="/s4.png" alt="will show soon" />
                 </ListItem>
               </UnorderedList>
             </Box>
