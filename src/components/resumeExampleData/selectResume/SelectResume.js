@@ -100,9 +100,6 @@ const SelectResume = () => {
                     marginBottom={"60px"}
                     display={["none", "none", "none", "block", "block"]}
                   >
-                    {/* <a className="button" href="/app/create-resume">
-                      Select Template
-                    </a> */}
                     <Box mx={2}>
                       <CommonButton
                         backgroundColor={"#2CACD5"}
@@ -157,7 +154,6 @@ const SelectResume = () => {
                 display={"flex"}
                 flexDirection={"column"}
                 justifyContent={"center"}
-                // alignItems={"center"}
               >
                 <Carasol />
               </Box>
