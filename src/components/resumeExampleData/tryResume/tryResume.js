@@ -10,7 +10,6 @@ const TryResume = () => {
       overflow={"hidden"}
       bg={"#EFF2F9"}
       height={["50em", "50em", "40em", "40em", "40em"]}
-      // mb={"2em"}
       posiition={"relative"}
     >
       <Grid px={["0px", "0px", "32px", "44px", "44px"]} mx={"auto"}>
@@ -21,14 +20,12 @@ const TryResume = () => {
         >
           <Box
             width={["100%", "100%", "45%", "57%", "49%"]}
-            // maxWidth={["375px", "", "", "", "", ""]}
             marginBottom={["16px"]}
             position="relative"
             marginRight={["0", "0", "0", "16px", "32px"]}
             flexShrink={["0", "0", "", "", "0"]}
             minWidth={["50%", "", "", "0%", "0%"]}
             height={["320px"]}
-            // className={"builder-cta__visual"}
           >
             <Image
               src="./sampleTemplate.png"
@@ -49,16 +46,6 @@ const TryResume = () => {
           <Box
             flexGrow={"1"}
             minWidth={"50%"}
-            // display={"flex"}
-            // flexDirection={"column"}
-            // alignItems={[
-            //   "center",
-            //   "center",
-            //   "baseline",
-            //   "baseline",
-            //   "baseline",
-            // ]}
-            // justifyContent={"center"}
             textAlign={["center", "center", "start", "start", "start"]}
           >
             <Text
@@ -92,16 +79,6 @@ const TryResume = () => {
               </Text>{" "}
             </Box>
             <Box display={"flex"} alignItems={"center"}>
-              {/* <Button
-                flexShrink={0}
-                marginRight={["12px", "12px", "16px", "16px", "16px"]}
-                className="button1"
-                bg="blue.400"
-                variant="solid"
-                fontSize={["14x", "14px", "16px", "16px", "16px"]}
-              >
-                Create My Resume
-              </Button> */}
               <Box mx={2}>
                 <CommonButton
                   backgroundColor={"#2CACD5"}

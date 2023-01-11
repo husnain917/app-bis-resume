@@ -32,19 +32,6 @@ const SelectResume = () => {
   const swiperRef = useRef();
   return (
     <>
-      {/* <Box
-        position={"relative"}
-        padding={[
-          "40px 44px",
-          "40px 44px",
-          "40px 44px",
-          "40px 44px",
-          "120px 40px 144px",
-          "120px 44px 144px",
-        ]}
-        backgroundColor={["#282b8f"]}
-        overflow={["hidden"]}
-      > */}
       {showCarasol ? (
         <Box
           position={"relative"}
@@ -164,15 +151,6 @@ const SelectResume = () => {
               className={"resume-templates__slider-wrapper"}
               left={["44%", "44%", "44%", "48%", "44%"]}
             >
-              {/* <Box
-                onClick={() => setShowCarasol(!showCarasol)}
-                _hover={{
-                  cursor: "pointer",
-                }}
-                display={["none", "none", "none", "block", "block"]}
-              >
-                <ArrowLeftIcon />
-              </Box> */}
               <Box
                 className={"resume-templates__slider-container"}
                 width={"1406px"}
