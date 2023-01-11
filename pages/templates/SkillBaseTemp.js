@@ -95,8 +95,8 @@ const SkillBaseTemp = () => {
                     <div className={Classes.width}>
                       {show.skills && (
                         <SectionSideMenu
-                          bg={'#fff'}
-                          iconColor="#313B47"
+                          bg="#006772"
+                          iconColor={"#fff"}
                           onHide={() => setShow({ ...show, skills: false })}
                           onDelete={SKILL}
                         />
@@ -135,8 +135,8 @@ const SkillBaseTemp = () => {
                       {/* Section Side Menu */}
                       {show.languages && (
                         <SectionSideMenu
-                          bg={'#fff'}
-                          iconColor="#313B47"
+                          bg="#006772"
+                          iconColor={"#fff"}
                           onHide={() => setShow({ ...show, languages: false })}
                           onDelete={LANGUAGES}
                         />
@@ -179,10 +179,10 @@ const SkillBaseTemp = () => {
                         {/* Section Side Menu */}
                         {show.interest && (
                           <SectionSideMenu
-                            iconColor={'#313B47'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onHide={() => setShow({ ...show, interest: false })}
                             onDelete={INTEREST}
-                            bg="#fff"
                           />
                         )}
                       </div>
@@ -265,7 +265,8 @@ const SkillBaseTemp = () => {
                       {/* Section Side Menu */}
                       {show.education && (
                         <SectionSideMenu
-                          bg={'#313B47'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                           onHide={() => setShow({ ...show, education: false })}
                           onDelete={EDUCATION}
                         />
@@ -315,7 +316,8 @@ const SkillBaseTemp = () => {
                       {/* Section Side Menu */}
                       {show.work && (
                         <SectionSideMenu
-                          bg={'#313B47'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                           onHide={() => setShow({ ...show, work: false })}
                           onDelete={WORK}
                         />
@@ -370,7 +372,8 @@ const SkillBaseTemp = () => {
                       {/* Section Side Menu */}
                       {show.project && (
                         <SectionSideMenu
-                          bg={'#313B47'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                           onHide={() => setShow({ ...show, project: false })}
                           onDelete={PROJECT}
                         />
@@ -418,7 +421,8 @@ const SkillBaseTemp = () => {
                       {/* Section Side Menu */}
                       {show.organization && (
                         <SectionSideMenu
-                          bg={'#313B47'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                           onHide={() =>
                             setShow({ ...show, organization: false })
                           }
@@ -466,7 +470,8 @@ const SkillBaseTemp = () => {
                       {/* Section Side Menu */}
                       {show.certificates && (
                         <SectionSideMenu
-                          bg={'#313B47'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                           onHide={() =>
                             setShow({ ...show, certificates: false })
                           }

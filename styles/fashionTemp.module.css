@@ -10,6 +10,12 @@
   color: #000000 !important;
 }
 
+.profileText{
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
 .rightContainerWork {
   padding: 0px 0px 0px 50px !important;
   width: 90%;

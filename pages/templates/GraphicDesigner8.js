@@ -94,8 +94,8 @@ const GraphicDesigner8 = () => {
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, education: false })}
                           onDelete={EDUCATION}
-                          bg="#fff"
-                          iconColor={'#2A78AB'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                         />
                       )}
                     </div>
@@ -175,6 +175,8 @@ const GraphicDesigner8 = () => {
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, work: false })}
                           onDelete={WORK}
+                          bg="#006772"
+                          iconColor={"#fff"}
                         />
                       )}
                     </div>
@@ -211,6 +213,8 @@ const GraphicDesigner8 = () => {
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, skills: false })}
                           onDelete={SKILL}
+                          bg="#006772"
+                          iconColor={"#fff"}
                         />
                       )}
                     </div>

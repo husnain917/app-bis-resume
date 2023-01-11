@@ -12,6 +12,12 @@
     background-color: #0C1E37 !important;
 }
 
+.profileText{
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
 .rightContainerWork {
     padding: 0px 0px 0px 30px;
     width: 90%;
