@@ -33,7 +33,7 @@ export const NAV_ITEMS = [
       {
         label: "Resume Help",
         subLabel: "Use our expert guides to improve your resume writing.",
-        href: "#",
+        href: "/help/resume-help",
       },
     ],
   },
