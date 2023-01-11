@@ -2588,3 +2588,17 @@ video {
   background-color: #2cacd5;
   opacity: 1;
 }
+
+
+.mainContainer {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+
+@media only screen and (max-width: 991px) {
+  .mainContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
