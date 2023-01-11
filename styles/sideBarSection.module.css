@@ -3,7 +3,7 @@
     width: 70px;
     transition: all 0.9s linear;
     /* margin-left: 10px; */
-    position: absolute;
+    /* position: absolute; */
     margin-top: 60px;
 }
 
@@ -16,8 +16,8 @@
 .nav li a {
     color: #002d6b;
     display: block;
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 85%;
     line-height: 60px;
     padding-left: 25%;
     border-bottom: 1px solid rgba(0, 0, 0, .4);
@@ -95,7 +95,7 @@
     position: absolute;
     top: 17px;
     left: 20px;
-    font-size: 27px;
+    font-size: 20px;
 }
 
 .ul li a span {
@@ -112,8 +112,6 @@
 
 }
 
-
-
 .ul li:hover a span {
     padding-left: 25%;
     display: block;
@@ -124,5 +122,4 @@
     top:5%;
     left:0%;
     display: block;
-
 }

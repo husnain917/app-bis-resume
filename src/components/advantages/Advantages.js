@@ -74,6 +74,7 @@ export default function Advantages() {
                 src={data[isTabActive].imgSrc}
                 w="100%"
                 h={["90vh", "90vh", "auto", "auto", "auto"]}
+                alt="will show soon"
               />
             </Box>
             <Box w={["100%", "100%", "100%", "50%"]} mt="2.5%">

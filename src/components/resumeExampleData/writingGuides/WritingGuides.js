@@ -46,30 +46,16 @@ const WritingGuides = () => {
             guides and our resume builder to create a beautiful resume in
             minutes. We also provide a library of resume templates.
           </Box>
-          {/* <Box
-            bg="whitesmoke"
-            height={"40px"}
-            width={"150px"}
-            display={"flex"}
-            alignItems={"center"}
-            justifyContent={"center"}
-            fontWeight={"bold"}
-            color={"lightcoral"}
-            _hover={{
-              cursor: "pointer",
-            }}
-            borderRadius={"10px"}
-          >
-            Check my Resume
-          </Box> */}
-          <CommonButton
-            backgroundColor="whitesmoke"
-            borderRadius={"none"}
-            color={"lightcoral"}
-            height={"40px"}
-            width={"150px"}
-            title={"Check My Resume"}
-          />
+          <Box textAlign={["center", "center", "center", "start", "start"]}>
+            <CommonButton
+              backgroundColor={"#2CACD5"}
+              color={"whitesmoke"}
+              borderRadius={"none"}
+              height={"40px"}
+              width={"150px"}
+              title={"Check My Resume"}
+            />
+          </Box>
         </Box>
         <Box
           position={"relative"}

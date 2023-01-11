@@ -33,8 +33,8 @@ import GoTopButton from "./goToTopButton/GoTopButton";
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
   const listenToScroll = () => {
-    let heightToHidden = 20;
-    let againHide = 4800;
+    let heightToHidden = 0.5;
+    let againHide = 5050;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -58,8 +58,7 @@ const AboutUs = () => {
       <Box className="masterWrapper">
         <Box>
           <Box>
-            {/* <GoTopButton /> */}
-            {/* <Box
+            <Box
               borderRadius={["60px"]}
               width={["60px"]}
               position={["fixed"]}
@@ -74,7 +73,7 @@ const AboutUs = () => {
                   <SideBarSection />{" "}
                 </Fade>
               )}
-            </Box> */}
+            </Box>
             <Box
               padding={"50px 0px 50px 0px"}
               className={"mainWrapper"}
@@ -143,7 +142,7 @@ const AboutUs = () => {
                     textAlign={"center"}
                     position={"relative"}
                   >
-                    <Image src="/about-us.webp" />
+                    <Image src="/about-us.webp" alt="will show soon" />
                   </Box>
                 </Box>
               </Box>
@@ -236,20 +235,20 @@ const AboutUs = () => {
             >
               <ListItem>As seen in: </ListItem>
               <ListItem>
-                <Image src="/thegaurdian-blue.png" />
+                <Image src="/thegaurdian-blue.png" alt="will show soon" />
               </ListItem>
               <ListItem>
-                <Image src="/time-blue.png" />
+                <Image src="/time-blue.png" alt="will show soon" />
               </ListItem>
               <ListItem>
-                <Image src="/thenewyorktimes-blue.png" />
+                <Image src="/thenewyorktimes-blue.png" alt="will show soon" />
               </ListItem>
               <ListItem>
-                <Image src="/msn-blue.png" />
+                <Image src="/msn-blue.png" alt="will show soon" />
               </ListItem>
               <ListItem>
                 {" "}
-                <Image src="/forbes-blue.png" />
+                <Image src="/forbes-blue.png" alt="will show soon" />
               </ListItem>
             </UnorderedList>
           </Box>
@@ -365,16 +364,21 @@ const AboutUs = () => {
                 mt={"30px"}
               >
                 <ListItem>
-                  <Image src="/s1.png" />
+                  <Image src="/s1.png" alt="will show soon" />
                 </ListItem>
                 <ListItem>
-                  <Image src="/s2.png" width={"145"} height={"118"} />
+                  <Image
+                    src="/s2.png"
+                    width={"145"}
+                    height={"118"}
+                    alt="will show soon"
+                  />
                 </ListItem>
                 <ListItem>
-                  <Image src="/s3.png" />
+                  <Image src="/s3.png" alt="will show soon" />
                 </ListItem>
                 <ListItem>
-                  <Image src="/s4.png" />
+                  <Image src="/s4.png" alt="will show soon" />
                 </ListItem>
               </UnorderedList>
             </Box>
