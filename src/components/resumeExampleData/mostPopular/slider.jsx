@@ -6,7 +6,6 @@ import { Box, Text, Button, Image } from "@chakra-ui/react";
 
 // import required modules
 import { Pagination } from "swiper";
-// import "./styles.css";
 
 const imagesArr = [
   {
