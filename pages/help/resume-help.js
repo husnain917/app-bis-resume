@@ -27,7 +27,7 @@ export default function HelpCenter() {
                     >
                         <Box
                             maxW={["0%", "0%", "0%", "5%"]}
-                            // padding={'70px 0px 0px 0px'}
+                        
                             display={["none", "none", "none", "block"]}
                             mt="3%"
                             mb='3%'
