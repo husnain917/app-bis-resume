@@ -37,7 +37,7 @@ export default function HelpCenter() {
 
                         <Box
                             maxW={["100%", "100%", "100%", "100%"]}
-                            ml={["","","","","20%"]}
+                            ml={["","","","","18%"]}
 
                         >
                             <Link href="/help/Faq">
