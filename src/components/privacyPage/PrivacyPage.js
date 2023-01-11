@@ -18,17 +18,11 @@ import styles from "../../../styles/sideBarSection.module.css";
 import SideBar from "../sideBar/SideBar";
 import fonts from "./fonts";
 import SideBarSection from "../aboutUs/SideBarSection/SideBarSection";
-const theme = extendTheme({
-  fonts: {
-    heading: "Open Sans",
-    body: "'Euclid Circular B', sans-serif",
-  },
-});
 
 const PrivacyPage = () => {
   return (
     <>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider>
         {/* <Container  */}
 
         <Container
@@ -38,26 +32,13 @@ const PrivacyPage = () => {
         >
           <Box
             maxW={["0%", "0%", "0%", "5%"]}
-            // padding={'70px 0px 0px 0px'}
             padding={"40px 0px 0px 0px"}
             display={["none", "none", "none", "block"]}
           >
             <Box className={styles.sideBarContainer}>
               <SideBar />
-              {/* <SideBarSection /> */}
             </Box>
           </Box>
-          {/* <Box
-            borderRadius={["60px"]}
-            width={["60px"]}
-            position={["fixed"]}
-            zIndex={"1049"}
-            transform={["scale(1)"]}
-            marginLeft={"10px"}
-            display={["none", "none", "block", "block", "block"]}
-          >
-            <SideBarSection />
-          </Box> */}
 
           <Box maxW={["100%", "100%", "100%", "88%"]}>
             <Box>
