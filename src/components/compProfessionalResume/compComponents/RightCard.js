@@ -25,10 +25,10 @@ export default function RightCard({ cardData }) {
           px={2}
           pos={width >= 767 ? "absolute" : null}
           color="#002d6b"
-          fontSize={{ base: "1.4rem", md: "1.1rem", lg: "1.4rem" }}
+          fontSize={["1.4rem", "1.4rem", "1rem", "1.4rem", "1.4rem"]}
           // fontWeight="bold"
           // fontFamily="'Nunito',Helvetica,Arial,sans-serif"
-          className={"medium-heading1"}
+          className={"sub-heading"}
           textAlign={width >= 767 ? null : "center"}
           display={width >= 767 ? "inline-block" : "block"}
           mx={2}
@@ -40,10 +40,12 @@ export default function RightCard({ cardData }) {
       {cardData.text === "1" ? (
         <Text
           // fontSize="17px"
-          wordSpacing="1px"
+          // wordSpacing="1px"
           // fontFamily="'Nunito',Helvetica,Arial,sans-serif"
           // color="#002d6b"
           className={"small-text"}
+          fontSize={["0.5rem", "0.8rem", "1em", "1.1em", "1.1em"]}
+          lineHeight={["14px", "18px", "23px", "22px", "22px"]}
           mt={2}
         >
           Keep this simple, just your name, a professional email address, and
@@ -56,6 +58,8 @@ export default function RightCard({ cardData }) {
           // fontSize="17px"
           // fontFamily="'Nunito',Helvetica,Arial,sans-serif"
           // color="#002d6b"
+          fontSize={["0.5rem", "0.8rem", "1em", "1.1em", "1.1em"]}
+          lineHeight={["14px", "18px", "23px", "22px", "22px"]}
           className={"small-text"}
           mt={2}
         >
@@ -81,6 +85,8 @@ export default function RightCard({ cardData }) {
           // fontFamily="'Nunito',Helvetica,Arial,sans-serif"
           // color="#002d6b"
           className={"small-text"}
+          fontSize={["0.5rem", "0.8rem", "1em", "1.1em", "1.1em"]}
+          lineHeight={["22px", "22px", "23px", "26px", "26px"]}
           mt={2}
         >
           In reverse-chronological order (current or most recent job first),
@@ -107,6 +113,8 @@ export default function RightCard({ cardData }) {
           // fontFamily="'Nunito',Helvetica,Arial,sans-serif"
           // color="#002d6b"
           className={"small-text"}
+          fontSize={["0.5rem", "0.8rem", "1em", "1.1em", "1.1em"]}
+          lineHeight={["14px", "18px", "23px", "22px", "22px"]}
           mt={2}
         >
           To write the best{" "}
@@ -134,6 +142,8 @@ export default function RightCard({ cardData }) {
             // fontFamily="'Nunito',Helvetica,Arial,sans-serif"
             // color="#002d6b"
             className={"small-text"}
+            fontSize={["0.5rem", "0.8rem", "1em", "1.1em", "1.1em"]}
+            lineHeight={["14px", "18px", "23px", "22px", "22px"]}
             mt={2}
           >
             Present your most advanced education credentials (e.g., college

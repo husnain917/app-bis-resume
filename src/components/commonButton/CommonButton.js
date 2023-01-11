@@ -18,18 +18,21 @@ export default function CommonButton({
   hoverCursor,
   hoverBorder,
   hoverTransition,
+  hoverBoxShadow,
   focusBg,
   focusColor,
-  margin,
   width,
   height,
   borderRadius,
   fontSize,
   fontWeight,
+  margin,
+  hoverborderRadius,
 }) {
   return (
     <Button
       className={`button-text ${className}`}
+      margin={margin}
       width={width}
       height={height || "45px"}
       color={color}
@@ -42,22 +45,19 @@ export default function CommonButton({
       rightIcon={rightIcon}
       leftIcon={leftIcon}
       _hover={{
-        backgroundcolor: "#50bce0",
-        boxShadow: "-1px -2px 4px 5px #8fd1e7",
-        borderRadius: "8px",
-        bg: hoverBackgroundColor, 
+        border: { hoverBorder },
         color: hoverColor,
+        transition: hoverTransition || "0.5s",
+        backgroundcolor: hoverBackgroundColor || "#50bce0",
+        boxShadow: hoverBoxShadow || "-1px -2px 4px 5px #8fd1e7",
+        borderRadius: hoverborderRadius || "8px",
+        bg: hoverBackgroundColor,
       }}
       _focus={{ bg: focusBg, color: focusColor }}
-      margin={margin}
       onClick={onClick}
       disabled={disabled}
     >
       {loading ? loading : title || "AddTitle"}
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
     </Button>
   );
 }

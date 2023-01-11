@@ -1,6 +1,6 @@
 /* color collection */
 :root {
-  --font-color: #313b47;
+  --font-color: rgb(49,59,71);
 }
 
 /* new font styles with font sizes for all screens below*/
@@ -2544,4 +2544,47 @@ video {
 
 .hoverEffects span:nth-child(4) {
   --n: 4;
+}
+
+.sectionModalBtn:before {
+  content: '+';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 0.2s ease-in;
+  opacity: 0;
+  border-radius: 5px;
+  font-size: 25px;
+  transition: 0.5s opacity;
+}
+.sectionModalBtn:hover::before {
+  background-color: #06bca3;
+  opacity: 1;
+}
+.sectionModalBtn2:before {
+  content: '-';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 0.2s ease-in;
+  opacity: 0;
+  border-radius: 5px;
+  font-size: 25px;
+  transition: 0.5s opacity;
+}
+.sectionModalBtn2:hover::before {
+  background-color: #2cacd5;
+  opacity: 1;
 }

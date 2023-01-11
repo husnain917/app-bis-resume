@@ -113,7 +113,8 @@ export default function Footer() {
             <Link href="#/">Career Blog</Link>
           </div>
           <div>
-            <Link href="/ResumeBuild">How to Write a Resume</Link>
+            <Link href="/write-resume">How to Write a Resume</Link>
+            
           </div>
           {/* <div>
             <Link href="#/">How to Write a CV</Link>
@@ -122,7 +123,7 @@ export default function Footer() {
             <Link href="#/">How to Write a Cover Letters</Link>
           </div> */}
           <div>
-            <Link href="/blog/resumeFormats">Resume Examples</Link>
+            <Link href="/resume-examples">Resume Examples</Link>
           </div>
           {/* <div>
             <Link href="#/">Cover Letters Examples</Link>
@@ -131,10 +132,10 @@ export default function Footer() {
         <div className={styles.linkDiv}>
           <p className={styles.footerP}>Other</p>
           <div>
-            <Link href="/page/Pricing">Pricing</Link>
+            <Link href="/page/pricing-resume">Pricing</Link>
           </div>
           <div>
-            <Link href="/about">About Us</Link>
+            <Link href="/about-us">About Us</Link>
           </div>
           <div>
             <Link href="#/">E-Book:How to get a job in 2022</Link>
@@ -143,19 +144,19 @@ export default function Footer() {
             <Link href="#/">Media Kit</Link>
           </div> */}
           <div>
-            <Link href="/ContactUs">Help Center</Link>
+            <Link href="/contact-us">Help Center</Link>
           </div>
         </div>
         <div className={styles.linkDiv}>
           <p className={styles.footerP}>Legal/Contact</p>
           <div>
-            <Link href="/legal/termsAndConditions">Terms of Use</Link>
+            <Link href="/legal/terms-and-conditions">Terms of Use</Link>
           </div>
           <div>
-            <Link href="#/">Privacy Policy</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
           </div>
           <div>
-            <Link href="/Cookie">Cookie Policy</Link>
+            <Link href="/cookie-policy">Cookie Policy</Link>
           </div>
           {/* <div>
             <Link href="#/">Media Kit</Link>

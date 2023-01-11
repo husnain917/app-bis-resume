@@ -6,11 +6,11 @@ export default function ContactButton({
   index,
   onFocunHandler,
   bgColor,
-  color
+  color,
+  className,
 }) {
   return (
     <>
-
       <CommonButton
         height={"35px"}
         title={button.title}
@@ -20,10 +20,11 @@ export default function ContactButton({
         hoverColor={"white"}
         hoverBackgroundColor={"#2CACD5"}
         focusBg={"#2CACD5"}
-        focusColor={'white'}
-        margin={'8px'}
+        focusColor={"white"}
+        margin={"8px"}
         padding="10px 20px 10px 20px"
-        fontSize={'14px'}
+        fontSize={"14px"}
+        className={className}
         onClick={() => onFocunHandler(index)}
       />
     </>

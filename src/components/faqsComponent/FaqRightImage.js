@@ -20,18 +20,16 @@ const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
         ]}
         display={["flex", "flex", "grid", "grid", "grid", "grid", "grid"]}
         flexDirection={["column-reverse"]}
-        marginInlineStart="40px"
-        marginInlineEnd="40px"
+        marginInlineStart={["20px", "30px", "40px", "40px", "40px"]}
+        marginInlineEnd={["20px", "30px", "40px", "40px", "40px"]}
         style={{
           letterSpacing: "0.3px",
         }}
       >
         <GridItem pl="2" area={"textArea"} position="relative">
           <Text
-            fontSize={["1.9em"]}
-            style={{
-              letterSpacing: "0px",
-            }}
+            fontSize={["1.4em", "1.4em", "1.9em", "1.9em", "1.9em"]}
+            lineHeight={["26px", "30px", "30px", "30px", "30px"]}
             className="sub-heading"
           >
             {heading}
@@ -39,12 +37,16 @@ const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
           <Text
             fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
             my={4}
+            lineHeight={["23px", "24px", "30px", "30px", "30px"]}
+            className={"small-text"}
           >
             {" "}
             {text1}
           </Text>
           <Text
             fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            lineHeight={["23px", "24px", "30px", "30px", "30px"]}
+            className={"small-text"}
             my={4}
           >
             {text2}
@@ -52,12 +54,16 @@ const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
           <Text
             fontSize={["1em", "1em", "1em", "1.1em", "1.1em", "1.3em"]}
             my={4}
+            lineHeight={["23px", "24px", "30px", "30px", "30px"]}
+            className={"small-text"}
           >
             {text3}
           </Text>
           <Text
             fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
             my={4}
+            lineHeight={["23px", "24px", "30px", "30px", "30px"]}
+            className={"small-text"}
           >
             {text4}
           </Text>

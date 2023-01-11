@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Box,
   Button,
@@ -15,7 +16,6 @@ import {
   Popover,
   PopoverTrigger,
 } from '@chakra-ui/react';
-import React from 'react';
 import {
   MoonIcon,
   EditIcon,
@@ -36,6 +36,7 @@ import Link from 'next/link';
 import DownloadModal from '../downloadModel/DownloadModal';
 
 import ThemeModal from '../themeModal/ThemeModal';
+import FontPopover from '../fontPopover/FontPopover';
 export default function TempNavbar({
   work,
   education,
@@ -84,20 +85,25 @@ export default function TempNavbar({
         py={1}
         ml={{ base: '120px', md: '0px' }}
       >
-        <Button
-          bgColor="transparent"
-          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
-          color="white"
-          _hover={{
-            backgroundColor: 'transparent',
+        <Popover>
+          <PopoverTrigger>
+            <Button
+              bgColor="transparent"
+              fontSize={{ base: '12px', sm: '14px', md: '16px' }}
+              color="white"
+              _hover={{
+                backgroundColor: 'transparent',
+                color: '#313C4E',
+                transition: '0.4s',
+              }}
+            >
+              <EditIcon mr="5px" />
+              Fonts
+            </Button>
+          </PopoverTrigger>
+          <FontPopover />
+        </Popover>
 
-            color: '#313C4E',
-            transition: '0.4s',
-          }}
-        >
-          <EditIcon mr="5px" />
-          Fonts
-        </Button>
         <Popover>
           <PopoverTrigger>
             <Button
