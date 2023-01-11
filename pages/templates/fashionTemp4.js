@@ -101,7 +101,8 @@ const FashionTemp4 = () => {
                       <SectionSideMenu
                         onHide={() => setShow({ ...show, education: false })}
                         onDelete={EDUCATION}
-                        bg="#643c28"
+                        bg="#006772"
+                        iconColor={"#fff"}
                       />
                     )}
                   </Box>
@@ -146,7 +147,8 @@ const FashionTemp4 = () => {
                       <SectionSideMenu
                         onHide={() => setShow({ ...show, work: false })}
                         onDelete={WORK}
-                        bg="#643c28"
+                        bg="#006772"
+                        iconColor={"#fff"}
                       />
                     )}
                   </Box>

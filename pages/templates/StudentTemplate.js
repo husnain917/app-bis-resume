@@ -135,7 +135,8 @@ const StudentTemplate = () => {
                                 setShow({ ...show, education: false })
                               }
                               onDelete={EDUCATION}
-                              bg="#6B9999"
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
@@ -180,7 +181,8 @@ const StudentTemplate = () => {
                                 setShow({ ...show, languages: false })
                               }
                               onDelete={LANGUAGES}
-                              bg="#6B9999"
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
@@ -217,7 +219,8 @@ const StudentTemplate = () => {
                             <SectionSideMenu
                               onDelete={SKILL}
                               onHide={() => setShow({ ...show, skills: false })}
-                              bg="#6B9999"
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
@@ -254,7 +257,8 @@ const StudentTemplate = () => {
                             <SectionSideMenu
                               onHide={() => setShow({ ...show, work: false })}
                               onDelete={WORK}
-                              bg="#6B9999"
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>

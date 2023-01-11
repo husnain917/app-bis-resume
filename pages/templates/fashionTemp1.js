@@ -140,6 +140,8 @@ const FashionTemp1 = () => {
                             <SectionSideMenu
                               onHide={() => setShow({ ...show, skill: false })}
                               onDelete={SKILL}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           </>
                         )}
@@ -187,6 +189,8 @@ const FashionTemp1 = () => {
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, languages: false })}
                             onDelete={LANGUAGES}
+                            bg="#006772"
+                            iconColor={"#fff"}
                           />
                         )}
                       </div>
@@ -256,6 +260,8 @@ const FashionTemp1 = () => {
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, education: false })}
                             onDelete={EDUCATION}
+                            bg="#006772"
+                            iconColor={"#fff"}
                           />
                         )}
                       </div>
@@ -312,6 +318,8 @@ const FashionTemp1 = () => {
                                 setShow({ ...show, workExperience: false })
                               }
                               onDelete={WORK}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           </>
                         )}
@@ -364,6 +372,8 @@ const FashionTemp1 = () => {
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, references: false })}
                             onDelete={REFERENCE}
+                            bg="#006772"
+                            iconColor={"#fff"}
                           />
                         )}
                       </div>
