@@ -37,12 +37,14 @@ import {
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+
 const TechTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
   const [show, setShow] = useShow();
   // PDf Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
   return (
     //  ~~~~~~~~~~~~~~ Executive Resume Template ~~~~~~~~~~~~~~  //
     <div style={{ overflow: 'auto' }}>

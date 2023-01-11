@@ -1,8 +1,5 @@
 import { Box, Flex } from '@chakra-ui/react';
-import Link from 'next/link';
 import React from 'react';
-import { Tooltip } from 'react-tippy';
-import style from '../../styles/templates/template1.module.scss';
 import Classes from '../../styles/templates/student.module.scss';
 import ImageSelector from '../../src/components/imageSelector';
 import Heading from '../../src/components/commonSection/Heading';
@@ -27,11 +24,13 @@ import {
 import TempLayout from '../../src/components/tempNav/TempLayout';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+
 const StudentTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
   const [show, setShow] = useShow();
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
   return (
     //  ~~~~~~~~~~~~~~ Student Resume Template ~~~~~~~~~~~~~~  //
     <div style={{ overflow: 'auto' }}>

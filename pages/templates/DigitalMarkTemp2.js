@@ -1,4 +1,4 @@
-import { Box, Flex, HStack } from '@chakra-ui/react';
+import { Box, HStack } from '@chakra-ui/react';
 import Name from '../../src/components/commonSection/Name';
 import Classes from '../../styles/templates/digitalMarkTemp2.module.css';
 import Profession from '../../src/components/commonSection/Profession';
@@ -6,7 +6,6 @@ import About from '../../src/components/commonSection/About';
 import Heading from '../../src/components/commonSection/Heading';
 import Contact from '../../src/components/commonSection/Contact';
 import Skill from '../../src/components/commonSection/Skill';
-import ImageSection from '../../src/components/commonSection/ImageSection';
 import Education from '../../src/components/commonSection/Education';
 import WorkExperience from '../../src/components/commonSection/WorkExperience';
 import TempLayout from '../../src/components/tempNav/TempLayout';
@@ -21,6 +20,7 @@ import {
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+
 const DigitalMarkTemp2 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
@@ -29,6 +29,7 @@ const DigitalMarkTemp2 = () => {
   const { backgroundColor, color } = useSelector(
     (store) => store.themeReducer.theme
   );
+
   return (
     <div style={{ overflow: 'auto' }}>
       <TempLayout skills={true} education={true} work={true} downloadPDF={downloadPDFHandler}>
@@ -80,9 +81,9 @@ const DigitalMarkTemp2 = () => {
                     pt={0.5}
                     mt={4}
                   >
-                    <Profession 
-                    professionStyle={Classes.ProfessionDigital} 
-                    fontColor={color ? color : '#000000'}
+                    <Profession
+                      professionStyle={Classes.ProfessionDigital}
+                      fontColor={color ? color : '#000000'}
                     />
                   </Box>
                   <About aboutStyle={Classes.about} minW="full" maxW="full" />

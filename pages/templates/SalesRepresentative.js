@@ -33,6 +33,7 @@ const SalesRepresentative = () => {
   const [show, setShow] = useShow();
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
   return (
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     <Box style={{ overflow: "auto" }}>
@@ -43,7 +44,7 @@ const SalesRepresentative = () => {
 
           <Flex
             justifyContent={{ base: "none", lg: "center" }}
-            bg={"blackAlpha.100"}
+            bg={"#fff"}
             overflow="auto"
             flexDir={"column"}
             alignItems={{ sm: "none", md: "center" }}
@@ -59,7 +60,7 @@ const SalesRepresentative = () => {
                 ref={pdfRef}
               >
                 <Box display="flex" flexDirection="row" background={"whitesmoke"}>
-                  <Box w="20%" minH="25em" backgroundColor={backgroundColor}></Box>
+                  <Box w="20%" minH="25em" backgroundColor={backgroundColor ? backgroundColor : 'whitesmoke'}></Box>
                 </Box>
                 <HStack
                   display="flex"

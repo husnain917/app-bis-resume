@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@chakra-ui/react'
 import Classes from '../../styles/templates/templateContentCreater.module.css'
 import Classe from '../../styles/templates/flightAttendant.module.css';
-import useStoreData from '../../src/components/templateMarket/useStoreData';
+import { useSelector } from 'react-redux';
 import Name from '../../src/components/commonSection/Name';
 import Profession from '../../src/components/commonSection/Profession';
 import About from '../../src/components/commonSection/About';
@@ -22,14 +22,12 @@ import {
 import ImageSelector from '../../src/components/imageSelector';
 
 export default function TemplateContentCreater() {
-    const {
-        resumeData,
-        theme,
-        updater
-    } = useStoreData();
+    // redux data
+    let resumeData = useSelector((state) => state.editorReducer.resumeData);
     const [show, setShow] = useShow();
     // PDF Download Hook
     const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
     return (
         <div style={{ overflow: 'auto' }}>
             <TempLayout

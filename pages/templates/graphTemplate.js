@@ -32,6 +32,7 @@ export default function Graph_Template() {
     // custom Hook For Template
     const [show, setShow] = useShow();
     const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
     return (
         <div style={{ overflow: 'auto' }}>
             <TempLayout

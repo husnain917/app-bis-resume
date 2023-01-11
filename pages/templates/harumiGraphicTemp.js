@@ -29,6 +29,7 @@ export default function Harumi_Graphic_Temp() {
     let resumeData = useSelector((state) => state.editorReducer.resumeData);
     const [show, setShow] = useShow();
     const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
     return (
         <>
             <div
