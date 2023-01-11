@@ -21,6 +21,8 @@ export default function HelpCenter() {
                     <Container
                         maxW={['100%', '100%', '100%', '90%', '90%']}
                         display={"flex"}
+                        justifyContent={"row"}
+
 
                     >
                         <Box
@@ -29,6 +31,7 @@ export default function HelpCenter() {
                             display={["none", "none", "none", "block"]}
                             mt="3%"
                             mb='3%'
+                            mr="18%"
                         >
                             <Box>
                                 <SideBar />
@@ -36,9 +39,7 @@ export default function HelpCenter() {
                         </Box>
 
                         <Box
-                            maxW={["100%", "100%", "100%", "100%"]}
-                            ml={["","","","","18%"]}
-
+                            maxW={["100%", "100%", "100%", "95%"]}
                         >
                             <Link href="/help/Faq">
                                 <Box height="160px" width={["100%"]}
@@ -48,7 +49,7 @@ export default function HelpCenter() {
 
                                     <Box width="20%" bgColor="white" display={"flex"} flexDirection="row" justifyContent={"center"} >
                                         <Box mt="20%" >
-                                            <RiQuestionAnswerLine size={60} style={{padding:5}} color="#979FA9" />
+                                            <RiQuestionAnswerLine size={60} style={{ padding: 5 }} color="#979FA9" />
                                         </Box>
                                     </Box>
 
@@ -67,10 +68,10 @@ export default function HelpCenter() {
 
                                     bgColor="white"
                                     border="3px" mt="5%" display="flex" justifyContent="row" mb="10%" cursor="pointer">
-                                   
+
                                     <Box width="20%" bgColor="white" display={"flex"} flexDirection="row" justifyContent={"center"} >
                                         <Box mt="20%">
-                                            <TfiBook size={60} color="#979FA9" style={{padding:2}}  />
+                                            <TfiBook size={60} color="#979FA9" style={{ padding: 2 }} />
                                         </Box>
                                     </Box>
                                     <Box width="60%" marginLeft="3%" mt="1%" mb="3%">
