@@ -14,7 +14,7 @@ import useShow from '../../../src/components/tempSectionSide/useShow';
 import SectionSideMenu from '../../../src/components/tempSectionSide/SectionSideMenu';
 import About from '../../../src/components/commonSection/About';
 import ImageSelector from '../../../src/components/imageSelector';
-import styles from "../../../styles/templates/fashion.module.css";
+import styles from "../../../styles/templates/awaisFashion.module.css";
 import ChangeTempBtn from '../../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from '../../../src/components/tempNav/PDFGenerater';
 import {

@@ -19,7 +19,7 @@ import {
   WORK,
 } from '../../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../../src/components/imageSelector';
-import styles from "../../../styles/templates/seTemplate.module.css";
+import styles from "../../../styles/templates/softTemplate.module.css";
 import ChangeTempBtn from '../../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from '../../../src/components/tempNav/PDFGenerater';
 import Underline from "../../../src/components/graphicDesignerTemp/Underline";
