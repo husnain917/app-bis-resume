@@ -16,7 +16,12 @@ export default function MobileAdv({ advNum, title, advDesc, imgSrc }) {
       mt="2%"
     >
       <Box w={["100%", "100%", "100%"]}>
-        <Image src={imgSrc} w="100%" h={["50vh", "65vh"]} />
+        <Image
+          src={imgSrc}
+          w="100%"
+          h={["50vh", "65vh"]}
+          alt="will show soon"
+        />
       </Box>
       <Box
         display="flex"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Text, Button } from "@chakra-ui/react";
 import SearchBar from "../src/components/resumeExampleData/searchBar/SearchBar";
 import MostPopular from "../src/components/resumeExampleData/mostPopular/MostPopular";
@@ -11,18 +11,49 @@ import {
 import TryResume from "../src/components/resumeExampleData/tryResume/tryResume";
 import BlogPost from "../src/components/resumeExampleData/blogPost/blogPost";
 import SelectResume from "../src/components/resumeExampleData/selectResume/SelectResume";
-import ChatButton from "../src/components/resumeExampleData/chatButton/chatButton";
-import Carasol from "../src/components/resumeExampleData/carasol/Carasol";
-import Carasol1 from "../src/components/resumeExampleData/carasol/Carasol1";
+import Fade from "react-reveal/Fade";
+import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
 const ResumeExamples = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const listenToScroll = () => {
+    let heightToHidden = 0.5;
+    let againHide = 7650;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (winScroll < heightToHidden || winScroll > againHide) {
+      setIsVisible(false);
+    } else if (winScroll > heightToHidden) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+  }, []);
   return (
     <Box fontFamily={"EuclidCircularB-Light"}>
-      {/* <Carasol1 /> */}
-      {/* <Carasol /> */}
-      {/* <ChatButton /> */}
+      <Box
+        borderRadius={["60px"]}
+        width={["60px"]}
+        position={["fixed"]}
+        zIndex={"1049"}
+        transform={["scale(1)"]}
+        marginLeft={"10px"}
+        display={["none", "none", "block", "block", "block"]}
+      >
+        {isVisible && (
+          <Fade>
+            {" "}
+            <SideBarSection />{" "}
+          </Fade>
+        )}
+      </Box>
       <Box bg="lightcyan" height={"auto"} width={"100wv"}>
         <WritingGuides />
       </Box>
+
       <Box paddingTop={"80px"} padding={"80px 44px 20px 44px"}>
         <Box maxWidth={"1120px"} display={"flex"} margin={"0 auto"}>
           <Box width={"100%"} flexGrow={"1"}>

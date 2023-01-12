@@ -13,20 +13,20 @@ import {
   useBreakpointValue,
   useDisclosure,
   useToast,
-} from '@chakra-ui/react';
-import React, { useEffect, useState } from 'react';
-import Rating from '../rating/Rating';
-import { getAuth, onAuthStateChanged } from '@firebase/auth';
-import { collection, doc, getDoc, setDoc } from '@firebase/firestore';
-import { db } from '../../../config/firebase';
-import { useDispatch } from 'react-redux';
-import { feedbackAction } from '../../../store/actions/feedbackAction';
+} from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import Rating from "../rating/Rating";
+import { getAuth, onAuthStateChanged } from "@firebase/auth";
+import { collection, doc, getDoc, setDoc } from "@firebase/firestore";
+import { db } from "../../../config/firebase";
+import { useDispatch } from "react-redux";
+import { feedbackAction } from "../../../store/actions/feedbackAction";
 const Feedback = () => {
   const [rating, setRating] = useState(0);
   const [disable, setDisable] = useState(false);
-  const [id, setId] = useState('');
+  const [id, setId] = useState("");
   const toast = useToast();
-  const feedbackRef = collection(db, 'feedback');
+  const feedbackRef = collection(db, "feedback");
   var auth = getAuth();
   const dispatch = useDispatch();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -46,29 +46,29 @@ const Feedback = () => {
           onClose();
           setDisable(false);
           toast({
-            title: 'Success',
-            description: 'Thank You For your Feedback',
-            status: 'success',
+            title: "Success",
+            description: "Thank You For your Feedback",
+            status: "success",
             duration: 2000,
             isClosable: true,
-            position: 'top-right',
+            position: "top-right",
           });
         })
         .catch((e) => {
           onClose();
           toast({
-            title: 'Error',
-            description: 'Something Went Wrong please Try Again later ',
-            status: 'error',
+            title: "Error",
+            description: "Something Went Wrong please Try Again later ",
+            status: "error",
             duration: 2000,
             isClosable: true,
-            position: 'top-right',
+            position: "top-right",
           });
         });
     }
   };
   const feedBackHandler = async (uid) => {
-    const docRef = doc(db, 'feedback', uid);
+    const docRef = doc(db, "feedback", uid);
     const getDocData = await getDoc(docRef);
     if (!getDocData.data()) {
       onOpen();
@@ -96,29 +96,29 @@ const Feedback = () => {
             onClose();
             dispatch(feedbackAction(false));
           }}
-          size={{ base: 'sm', md: 'xl' }}
+          size={{ base: "sm", md: "xl" }}
         >
           <ModalOverlay />
-          <ModalContent borderRadius={'20px'}>
-            <ModalHeader display={'flex'} justifyContent="center">
+          <ModalContent borderRadius={"20px"}>
+            <ModalHeader display={"flex"} justifyContent="center">
               <Image
                 src="/feedback4.png"
                 alt="FeedBack Image"
-                mt={'-70px'}
-                width={{ base: '150px', md: '250px' }}
-                height={{ base: '150px', md: '250px' }}
-                borderRadius={'full'}
+                mt={"-70px"}
+                width={{ base: "150px", md: "250px" }}
+                height={{ base: "150px", md: "250px" }}
+                borderRadius={"full"}
               />
             </ModalHeader>
             <ModalCloseButton />
             <ModalBody
-              display={'flex'}
+              display={"flex"}
               justifyContent="center"
-              flexDirection={'column'}
+              flexDirection={"column"}
               alignItems="center"
             >
               <Text
-                fontSize={{ base: '20px', md: '25px' }}
+                fontSize={{ base: "20px", md: "25px" }}
                 color="blackAlpha.800"
                 fontWeight={700}
                 textAlign="center"
@@ -126,27 +126,27 @@ const Feedback = () => {
                 Your Opinion matters to us!
               </Text>
               <Text
-                fontSize={{ base: '13px', md: '15px' }}
+                fontSize={{ base: "13px", md: "15px" }}
                 color="blackAlpha.800"
-                textAlign={'center'}
+                textAlign={"center"}
                 fontWeight={500}
               >
                 Give us a quick review and help us improve?
               </Text>
               <Rating
-                activeColor={'#006772'}
+                activeColor={"#006772"}
                 size={useBreakpointValue({ lg: 50, md: 40, sm: 30 })}
                 ratingChanged={onRatingHandler}
               />
             </ModalBody>
 
-            <ModalFooter display={'flex'} justifyContent="center">
+            <ModalFooter display={"flex"} justifyContent="center">
               <button
                 className="feedbackBtn"
                 onClick={onSubmitHandler}
                 disabled={disable}
               >
-                {disable ? <Spinner color="#fff" size={'sm'} /> : 'Rate'}
+                {disable ? <Spinner color="#fff" size={"sm"} /> : "Rate"}
               </button>
               <button onClick={onClose} className="feedbackBtn2">
                 Cancel

@@ -1,11 +1,6 @@
 import React from "react";
 import styles from "../../../styles/resumeFormats.module.css";
-import {
-  Box,
-  Image,
-  Link,
-  Text,
-} from "@chakra-ui/react"
+import { Box, Image, Link, Text } from "@chakra-ui/react";
 import { FaGreaterThan } from "react-icons/fa";
 
 export default function ResumeFormats() {
@@ -14,24 +9,17 @@ export default function ResumeFormats() {
       <Box className={styles.ctaContainer}>
         <Box className={styles.ctaLeftSec}>
           {/* links */}
-          <Box
-            className={styles.blogLinksDiv}
-          >
+          <Box className={styles.blogLinksDiv}>
             {/* blogs */}
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-            >
+            <Box display={"flex"} alignItems={"center"}>
               <Link
                 href="#"
                 color={"#fff"}
-                fontSize={["1.2em", "1.2em", "1.2em", "1.2em",]}
-                _hover={
-                  {
-                    color: "#63B3ED",
-                    textDecoration: "underline"
-                  }
-                }
+                fontSize={["1.2em", "1.2em", "1.2em", "1.2em"]}
+                _hover={{
+                  color: "#63B3ED",
+                  textDecoration: "underline",
+                }}
                 fontFamily={`'EuclidCircularB', sans-serif`}
               >
                 Blog
@@ -46,20 +34,15 @@ export default function ResumeFormats() {
             </Box>
 
             {/* Resume Help */}
-            <Box
-              display={"flex"}
-              alignItems={"center"}
-            >
+            <Box display={"flex"} alignItems={"center"}>
               <Link
                 href="#"
                 color={"#fff"}
-                fontSize={["1.2em", "1.2em", "1.2em", "1.2em",]}
-                _hover={
-                  {
-                    color: "#63B3ED",
-                    textDecoration: "underline"
-                  }
-                }
+                fontSize={["1.2em", "1.2em", "1.2em", "1.2em"]}
+                _hover={{
+                  color: "#63B3ED",
+                  textDecoration: "underline",
+                }}
                 fontFamily={`'EuclidCircularB', sans-serif`}
               >
                 Resume Help
@@ -77,7 +60,7 @@ export default function ResumeFormats() {
             <Box>
               <Text
                 color={"#fff"}
-                fontSize={["1.2em", "1.2em", "1.2em", "1.2em",]}
+                fontSize={["1.2em", "1.2em", "1.2em", "1.2em"]}
                 lineHeight={10}
                 fontFamily={`'EuclidCircularB', sans-serif`}
               >
@@ -85,18 +68,15 @@ export default function ResumeFormats() {
               </Text>
             </Box>
           </Box>
-          <Text 
-          className={styles.ctaHeading}
-          fontFamily={`'EuclidCircularB', sans-serif`}
+          <Text
+            className={styles.ctaHeading}
+            fontFamily={`'EuclidCircularB', sans-serif`}
           >
-            The 3 Best Resume Formats to
-            Use in 2022 (Examples)
+            The 3 Best Resume Formats to Use in 2022 (Examples)
           </Text>
 
           {/* about */}
-          <Box
-            className={styles.avatarDiv}
-          >
+          <Box className={styles.avatarDiv}>
             <Box>
               <Image
                 src="/formatAvatar.png"
@@ -105,9 +85,7 @@ export default function ResumeFormats() {
                 borderRadius={"100% 100%"}
               />
             </Box>
-            <Box
-              margin={"0px 0px 0px 20px"}
-            >
+            <Box margin={"0px 0px 0px 20px"}>
               <Text
                 color={"#fff"}
                 fontSize={"16px"}
@@ -133,7 +111,7 @@ export default function ResumeFormats() {
           </Box>
         </Box>
         <Box className={styles.ctaRightSec}>
-          <Image src="/hero.png" w="100%" h="98%" />
+          <Image src="/hero.png" w="100%" h="98%" alt="will show soon" />
         </Box>
       </Box>
     </>
