@@ -33,7 +33,6 @@ const Profile = () => {
       setPreview('');
     }
   };
-
   const removeSelectedImage = () => {
     setPreview('');
   };
