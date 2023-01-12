@@ -1,28 +1,34 @@
 import React, { useState, useRef } from "react";
 import style from "../../../../styles/blog/blogsDetail.module.css";
-import Image from "next/image";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-import ReactMarkdown from "react-markdown";
 import SearchIcon from "../../../../public/searchIcon.webp";
 
 import { Grid, GridItem } from "@chakra-ui/react";
-export default function BlogsDetail({ mdData, allBlogs }) {
-  const keysData = mdData?.frontmatter;
-  const markdown = mdData?.markdown;
-  const [scrollY, setScrollY] = useState(0);
+import Image from "next/image";
+export default function BlogsDetail({ blogDetail, allBlogs }) {
+  const {
+    author,
+    category,
+    description,
+    body,
+    featuredImage,
+    publishDate,
+    slug,
+    title,
+  } = blogDetail.fields;
   const [searchKey, setSearchKey] = useState("");
 
-  const getBlogData = allBlogs;
-  var searchBlog = getBlogData?.filter(function (item) {
+  var searchBlog = allBlogs?.filter(function (item) {
     return (
-      item?.description?.toLowerCase()?.includes(searchKey.toLowerCase()) ||
-      item?.title?.toLowerCase()?.includes(searchKey.toLowerCase())
+      item?.fields.description
+        ?.toLowerCase()
+        ?.includes(searchKey.toLowerCase()) ||
+      item?.fields.title?.toLowerCase()?.includes(searchKey.toLowerCase())
     );
   });
   const filterData = searchBlog?.filter(
-    (item) =>
-      item.category === mdData.frontmatter.category &&
-      item.title !== mdData.frontmatter.title
+    (item) => item.category === category && item.slug !== slug
   );
 
   return (
@@ -31,16 +37,19 @@ export default function BlogsDetail({ mdData, allBlogs }) {
         <Grid gap={4} templateColumns="repeat(4, 1fr)">
           <GridItem colSpan={3}>
             <div className={style.blogData}>
-              <h1 className={style.blogTitle}>{keysData?.title}</h1>
+              <h1 className={style.blogTitle}>{title}</h1>
               <br />
               <br />
               <img
-                src={keysData?.thumbnail}
+                src={"https:" + featuredImage.fields.file.url}
                 style={{
                   marginBottom: "50px",
                 }}
               />
-              <ReactMarkdown>{markdown}</ReactMarkdown>
+              {/* <ReactMarkdown>{markdown}</ReactMarkdown> */}
+              <div className={style.bodyContent}>
+              {documentToReactComponents(body)}
+              </div>
             </div>
           </GridItem>
           <GridItem colSpan={1}>

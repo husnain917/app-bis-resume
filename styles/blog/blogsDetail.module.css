@@ -20,8 +20,9 @@
   font-weight: 900;
 }
 
-.blogData h1, .blogData h2, .blogData h3, .blogData h4, .blogData h5, .blogData h6, .blogData span {
-  font-family: bt-bold;
+.bodyContent h1, .bodyContent h2, .bodyContent h3, .bodyContent h4, .bodyContent h5, .bodyContent h6, .bodyContent span {
+  font-family: bt-bold !important;
+  font-size: 32px !important;
 }
 
 .blogData a {
@@ -61,24 +62,6 @@
   padding-right: 40px;
 }
 
-.blogBody {
-  padding-top: 20px;
-  border-left: 1px solid rgba(230, 230, 230, 1);
-  border-Right: 1px solid rgba(230, 230, 230, 1);
-}
-
-.blogCard {
-  width: 100%;
-  height: 56px;
-  background-color: rgb(242 242 242);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-}
-
-.blogCardText {
-  margin-left: 20px;
-}
 
 .blogData {
   padding-left: 80px;
