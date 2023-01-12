@@ -6,8 +6,9 @@ const client = createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 });
 function Blogs({ allBlogs, blogDetail }) {
-  console.log("blogDetail", blogDetail,allBlogs);
-
+  if (!blogDetail) {
+    return <div>Loading</div>;
+  }
   return (
     <div>
       <BlogsDetail allBlogs={allBlogs} blogDetail={blogDetail} />
@@ -42,6 +43,6 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: false, // This shows a 404 page if the page is not found
+    fallback: true, // This shows a 404 page if the page is not found
   };
 }
