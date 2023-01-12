@@ -45,7 +45,7 @@ export default function CommonButton({
       rightIcon={rightIcon}
       leftIcon={leftIcon}
       _hover={{
-        border: { hoverBorder },
+        border: hoverBorder,
         color: hoverColor,
         transition: hoverTransition || "0.5s",
         backgroundcolor: hoverBackgroundColor || "#50bce0",

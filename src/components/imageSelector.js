@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Image } from '@chakra-ui/react';
+import React, { useState, useEffect } from "react";
+import { Box, Image } from "@chakra-ui/react";
 
 const ImageSelector = ({
   height,
@@ -16,7 +16,7 @@ const ImageSelector = ({
   minWidth,
 }) => {
   useEffect(() => {
-    console.log('Height', height, 'Width', width);
+    console.log("Height", height, "Width", width);
   }, [height, width]);
 
   const [isImage, setIsImage] = useState();
@@ -26,7 +26,7 @@ const ImageSelector = ({
   const handleImageUpload = (e) => {
     const [file] = e.target.files;
     if (file) {
-      console.log('FileWidth: ' + file.width);
+      console.log("FileWidth: " + file.width);
       setIsImage(1);
       const reader = new FileReader();
       const { current } = uploadedImage;
@@ -41,12 +41,12 @@ const ImageSelector = ({
   return (
     <Box>
       <Box
-        marginTop={marginTop || ''}
-        marginLeft={marginLeft || ''}
-        marginBottom={marginBottom || ''}
+        marginTop={marginTop || ""}
+        marginLeft={marginLeft || ""}
+        marginBottom={marginBottom || ""}
       >
         <Box>
-          <Box className="pic_container" marginTop={marginTop || ''}>
+          <Box className="pic_container" marginTop={marginTop || ""}>
             <Box className="p-image">
               <input
                 type="file"
@@ -61,23 +61,23 @@ const ImageSelector = ({
             <Box onClick={() => imageUploader.current.click()}>
               <Image
                 src="/uploadpic1.png"
-                background={'white'}
+                background={"white"}
                 ref={uploadedImage}
-                alt=""
-                borderRadius={borderRadius || 'full'}
-                minHeight={minHeight || '15.7em'}
-                maxHeight={maxHeight || '15.7em'}
-                minWidth={minWidth || '15.7em'}
-                maxWidth={maxWidth || '15.7em'}
-                transition={'0.5s borderColor'}
+                alt="will load soon"
+                borderRadius={borderRadius || "full"}
+                minHeight={minHeight || "15.7em"}
+                maxHeight={maxHeight || "15.7em"}
+                minWidth={minWidth || "15.7em"}
+                maxWidth={maxWidth || "15.7em"}
+                transition={"0.5s borderColor"}
                 style={{
                   // objectFit: "cover",
-                  objectPosition: 'center',
+                  objectPosition: "center",
                   // objectFit: "contain",
-                  border: ` ${borderWidth ? borderWidth : '4px'} solid ${
-                    borderColor ? borderColor : 'black'
+                  border: ` ${borderWidth ? borderWidth : "4px"} solid ${
+                    borderColor ? borderColor : "black"
                   }`,
-                  transition: '1s border',
+                  transition: "1s border",
                 }}
               />
             </Box>

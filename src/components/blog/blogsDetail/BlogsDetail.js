@@ -34,11 +34,12 @@ export default function BlogsDetail({ mdData, allBlogs }) {
               <h1 className={style.blogTitle}>{keysData?.title}</h1>
               <br />
               <br />
-              <img
+              <Image
                 src={keysData?.thumbnail}
                 style={{
                   marginBottom: "50px",
                 }}
+                alt="will load soon"
               />
               <ReactMarkdown>{markdown}</ReactMarkdown>
             </div>
@@ -79,7 +80,7 @@ export default function BlogsDetail({ mdData, allBlogs }) {
                               onClick={() => alert("working")}
                               className={style.sideImage}
                             >
-                              <img
+                              <Image
                                 className={style.postsImage}
                                 src={item?.thumbnail}
                                 alt="Image1"

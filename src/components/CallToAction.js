@@ -26,7 +26,7 @@ export default function CallToAction() {
         >
           <Link href="/templates">
             <CommonButton
-              className={'buttonClass'}
+              className={"buttonClass"}
               title="Build My Resume"
               hoverCursor={"pointer"}
               backgroundColor={"#2CACD5"}
@@ -40,8 +40,6 @@ export default function CallToAction() {
                 "1.1rem",
                 "1.5rem",
               ]}
-            // hoverBackgroundColor={"red"}
-            // className={"hoverEffects"}
             />
           </Link>
         </Box>
@@ -53,13 +51,19 @@ export default function CallToAction() {
           Some of Our Customers have been hired by:
         </Box>
         <div className={styles.heroIconImgs}>
-          <Image src="/amazon.png" w="25%" h="auto" mt="5px" />
-          <Image src="/qatar.png" w="25%" h="auto" />
-          <Image src="/netflix.png" w="25%" h="auto" />
+          <Image
+            src="/amazon.png"
+            w="25%"
+            h="auto"
+            mt="5px"
+            alt="Will load Soon"
+          />
+          <Image src="/qatar.png" w="25%" h="auto" alt="will load soon" />
+          <Image src="/netflix.png" w="25%" h="auto" alt="will load soon" />
         </div>
       </div>
       <div className={styles.ctaRightSec}>
-        <Image src="/hero.png" w="100%" h="98%" />
+        <Image src="/hero.png" w="100%" h="98%" alt="will load soon" />
       </div>
     </div>
   );

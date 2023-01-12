@@ -62,26 +62,8 @@ export default function Navbar() {
             <Image
               src="/Dark_Blue.svg"
               alt="Image Not Found"
-              // height={useBreakpointValue({
-              //   xl: "90px",
-              //   lg: "60px",
-              //   md: "70px",
-              //   sm: "70px",
-              // })}
-              // width={useBreakpointValue({
-              //   xl: "230px",
-              //   lg: "170px",
-              //   md: "200px",
-              //   sm: "180px",
-              // })}
-              fill
-              // sizes="(max-width: 768px) 90px,
-              // (max-width: 1200px) 60px,
-              // 33px"
               height={"70px"}
               width={"230px"}
-              // layout="fill"
-              // layout="fill"
             />
           </Link>
 
@@ -105,12 +87,13 @@ export default function Navbar() {
         >
           {/* login buttons */}
           {!isUserLoggedIn ? (
-            Login_Buttons?.map((items) => {
+            Login_Buttons?.map((items, index) => {
               return (
                 <>
                   <Box
                     display={{ base: "inline-block", md: "inline-block" }}
                     justify={{ base: "end" }}
+                    key={index}
                     style={{
                       border: "1px solid #e0e2e8",
                       boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
@@ -152,6 +135,7 @@ export default function Navbar() {
                       <>
                         <Link
                           // href={items?.href ?? '#'}
+                          key={index}
                           fontWeight={650}
                           color={"#fdfffc"}
                           fontSize={breakpointfontSize}
@@ -171,6 +155,7 @@ export default function Navbar() {
                       <>
                         <Link
                           // href={items?.href ?? '#'}
+                          key={index}
                           fontWeight={650}
                           color={"#fdfffc"}
                           fontSize={breakpointfontSize}
@@ -246,14 +231,15 @@ const DesktopNav = () => {
       alignItems={"center"}
       spacing={useBreakpointValue({ xl: 5, lg: 3 })}
     >
-      {NAV_ITEMS?.map((navItem) => {
+      {NAV_ITEMS?.map((navItem, index) => {
         return (
-          <Box key={navItem?.label}>
+          <Box key={index}>
             <Popover trigger={"hover"} placement={"bottom-start"}>
               <PopoverTrigger position={"absolute"}>
                 <Link
                   href={navItem?.href ?? "#"}
                   fontWeight={500}
+                  key={index}
                   color={linkColor}
                   fontSize={["10px", "12px", "14px", "16px", "18px"]}
                   _hover={{
@@ -285,7 +271,7 @@ const DesktopNav = () => {
                   minW={"xs"}
                 >
                   <Stack>
-                    {navItem.children.map((child) => (
+                    {navItem.children.map((child, index) => (
                       <DesktopSubNav key={child.label} {...child} />
                     ))}
                   </Stack>
@@ -347,16 +333,17 @@ const MobileNav = () => {
       p={4}
       display={{ lg: "none" }}
     >
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map((navItem, index) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
 
       {/* login buttons */}
       <Box display={"flex"} justifyContent={"space-evenly"}>
-        {Login_Buttons?.map((items) => {
+        {Login_Buttons?.map((items, index) => {
           return (
             <>
               <Box
+                key={items.label}
                 display={{ base: "inline-flex", md: "none" }}
                 style={{
                   border: "1px solid #e0e2e8",
@@ -386,6 +373,7 @@ const MobileNav = () => {
                     <Link
                       // href={items?.href ?? "#"}
                       fontWeight={650}
+                      key={items.label}
                       color={"#fdfffc"}
                       _hover={{
                         textDecoration: "none",
@@ -402,6 +390,7 @@ const MobileNav = () => {
                       // href={items?.href ?? "#"}
                       fontWeight={650}
                       color={"#fdfffc"}
+                      key={items.label}
                       _hover={{
                         textDecoration: "none",
                         color: "#fff",

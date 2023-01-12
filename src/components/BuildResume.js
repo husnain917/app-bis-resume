@@ -24,19 +24,6 @@ export default function BuildResume() {
         <div>
           <Box mb={3}>
             <Link href="/templates">
-              {/* <Button
-                className={styles.ctaBtn}
-                bg="#2CACD5"
-                colorScheme="#2CACD5"
-                borderRadius="20px"
-                fontWeight="bold"
-                color="white"
-                rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
-                mt={5}
-                mb={1}
-              >
-                Build Your Resume
-              </Button> */}
               <CommonButton
                 fontSize={[
                   "1rem",
@@ -51,18 +38,15 @@ export default function BuildResume() {
                 backgroundColor={"#2CACD5"}
                 color={"whitesmoke"}
                 rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
-                // hoverBackgroundColor={"red"}
-                // className={"hoverEffects"}
               />
             </Link>
           </Box>
-          {/* <p className="xsmall-text">No credit card required</p> */}
         </div>
         <div></div>
       </div>
 
       <div className={styles.ctaImageDiv}>
-        <Image src={ImageBuild} />
+        <Image src={ImageBuild} alt="will load soon" />
         <div className={styles.ctaWaveBlind}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
