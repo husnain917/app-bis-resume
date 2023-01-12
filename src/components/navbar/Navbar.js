@@ -109,6 +109,7 @@ export default function Navbar() {
               return (
                 <>
                   <Box
+                    key={items?.label}
                     display={{ base: "inline-block", md: "inline-block" }}
                     justify={{ base: "end" }}
                     style={{
@@ -357,6 +358,7 @@ const MobileNav = () => {
           return (
             <>
               <Box
+              key={items.label}
                 display={{ base: "inline-flex", md: "none" }}
                 style={{
                   border: "1px solid #e0e2e8",
