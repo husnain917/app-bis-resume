@@ -25,59 +25,169 @@ export default function Cookie() {
 
     return (
         <>
+            <Box
+                maxW={["100%", "100%", "92%", "92%"]}
 
-
-            <Container
-                maxW={["100%", "100%", "80%", "80%"]}
                 display={"flex"}
                 justifyContent={"space-between"}
             >
                 <Box
-                    maxW={["0%", "0%", "0%", "5%"]}
-                    // padding={'70px 0px 0px 0px'}
-                    display={["none", "none", "none", "block"]}
+                    padding={'40px 0px'}
+                    maxW={["0%", "0%", "0%", "10%"]}
+                    zIndex={"1049"}
+                    pl="5%"
                 >
                     <Box
                         className={styles.sideBarContainer}
+                
+                        display={["none", "none", "block", "block", "block"]}
+
                     >
                         <SideBar />
                     </Box>
                 </Box>
-                <Box
-                    maxW={["100%", "100%", "100%", "88%"]}
 
-                >
+                <Box maxW={["100%", "100%", "80%", "80%",]}>
+                    {/* main title */}
+                    <Box
+                        padding={'40px 0px'}
+                    >
+                        {
+
+                            TERMS_DATA?.TermsOfUse?.heading?.map((item, index) => (
+                                <>
+                                    <Text
+                                        key={index}
+                                        textAlign={'center'}
+                                        fontWeight={'bold'}
+                                        color={'#313B47'}
+                                        className='main-heading'
+                                    >
+                                        {item?.title}
+                                    </Text>
+                                </>
+                            ))
+                        }
+                    </Box>
+
+                    {/* description */}
                     <Box>
-                        {/* main title */}
-                        <Box
-                            padding={'40px 0px'}
+                        {
+                            TERMS_DATA?.TermsOfUse?.data?.map((item, index) => (
+                                <>
+                                    <Text
+                                        key={index}
+                                        fontSize={'1rem'}
+                                        className='small-text'
+                                        marginBottom={'1rem'}
+                                    >
+                                        {item?.text}
+                                    </Text>
+                                </>
+                            ))
+                        }
+                        <Text
+                            fontSize={'0.80rem'}
+                            lineHeight={'1.5'}
+                            marginBottom={'1rem'}
+                            color={'#757575'}
+                            fontFamily={`'EuclidCircularB', sans-serif`}
+
                         >
-                            {
-                                
-                                TERMS_DATA?.TermsOfUse?.heading?.map((item, index) => (
-                                    <>
-                                        <Text
-                                            key={index}
-                                            textAlign={'center'}
-                                            fontWeight={'bold'}
-                                            color={'#313B47'}
-                                            className='main-heading'
-                                        >
-                                            {item?.title}
-                                        </Text>
-                                    </>
-                                ))
-                            }
-                        </Box>
+                            {TERMS_DATA?.TermsOfUse?.description}
+                        </Text>
+                    </Box>
+
+                    {/* Table of Contents */}
+                    <Box
+                        margin={'40px 0px'}
+                    >
+                        <Text
+                            className='medium-heading1'
+                            color={'#313B47'}
+                        >
+                            {TERMS_DATA?.TableOfContents?.heading}
+                        </Text>
 
                         {/* description */}
-                        <Box>
+                        <Box
+                            margin={'10px 0px 40px 0px'} >
+                            <OrderedList>
+
+                                <ListItem>
+                                    <Text
+
+                                        fontSize={'1em'}
+
+                                        color={'#2679C7'}
+                                        className='small-text'
+                                        cursor="pointer"
+                                        smooth={true}
+                                        onClick={() => scollToRef.current.scrollIntoView({ behavior: 'smooth' })}
+                                    >
+
+                                        What is a cookie?
+                                    </Text>
+                                </ListItem>
+
+                                <ListItem>
+                                    <Text
+                                        fontSize={'1em'}
+
+                                        color={'#2679C7'}
+                                        className='small-text'
+                                        cursor="pointer"
+                                        smooth={true}
+                                        onClick={() => scrollSecend.current.scrollIntoView({ behavior: 'smooth' })}
+                                    >
+
+                                        Use of cookies and web storage(browsing data) by Bisresume
+                                    </Text>
+                                </ListItem>
+
+                                <ListItem>
+                                    <Text
+                                        fontSize={'1em'}
+
+                                        color={'#2679C7'}
+                                        className='small-text'
+                                        cursor="pointer"
+                                        smooth={true}
+                                        onClick={() => scrollThird.current.scrollIntoView({ behavior: 'smooth' })}
+
+
+                                    >
+
+                                        Disabling/Enabling Cookies
+                                    </Text>
+                                </ListItem>
+
+
+                            </OrderedList>
+                        </Box>
+                    </Box>
+
+                    <Box
+                        margin={'40px 0px'}
+                        ref={scollToRef}
+
+
+                    >
+                        <Text
+                            className='medium-heading1'
+                            color={'#313B47'}
+                        >
+                            {TERMS_DATA?.TheNovoresumeContent?.heading}
+                        </Text>
+
+                        <Box
+                            margin={'10px 0px 40px 0px'}
+                        >
                             {
-                                TERMS_DATA?.TermsOfUse?.data?.map((item, index) => (
+                                TERMS_DATA?.TheNovoresumeContent?.data?.map((item, index) => (
                                     <>
                                         <Text
                                             key={index}
-                                            fontSize={'1rem'}
                                             className='small-text'
                                             marginBottom={'1rem'}
                                         >
@@ -86,320 +196,221 @@ export default function Cookie() {
                                     </>
                                 ))
                             }
+                        </Box>
+                    </Box>
+
+                    <Box
+                        margin={'40px 0px'}
+                        ref={scrollSecend}
+
+                    >
+                        <Text
+                            className='medium-heading1'
+                            color={'#313B47'}
+                        >
+                            {TERMS_DATA?.AcceptableUse?.heading}
+                        </Text>
+
+                        <Box
+                            margin={'10px 0px 40px 0px'}
+
+                        >
+                            {
+                                TERMS_DATA?.AcceptableUse?.data?.map((item, index) => (
+                                    <>
+                                        <Text
+                                            key={index}
+                                            className={"small-text"}
+                                            fontWeight={'bold'}
+                                            color="black"
+
+                                        >
+
+                                            {item?.head}
+                                        </Text>
+                                        <Text
+                                            key={index}
+                                            className='small-text'
+                                            marginBottom={'1rem'}
+                                        >
+
+                                            {item?.text}
+                                        </Text>
+                                    </>
+                                ))
+                            }
+
+                            <UnorderedList>
+                                {
+                                    PREMIUM_ACCOUNT_DATA?.map((item) => (
+                                        <>
+                                            <ListItem
+                                                className='small-text'
+                                                fontSize={'1em'}
+                                            >
+                                                {item?.label}
+                                            </ListItem>
+                                        </>
+                                    ))
+                                }
+                            </UnorderedList>
+                        </Box>
+                    </Box>
+
+
+
+
+                    <Box
+                        margin={'40px 0px'}
+                        ref={scrollThird}
+
+                    >
+                        <Text
+                            className='medium-heading1'
+                            color={'#313B47'}
+                        >
+                            {TERMS_DATA?.WarrantyAndPremiumAccount?.heading}
+                        </Text>
+
+                        <Box
+                            margin={'10px 0px 40px 0px'}
+                        >
                             <Text
-                                fontSize={'0.80rem'}
-                                lineHeight={'1.5'}
+                                className='small-text'
                                 marginBottom={'1rem'}
-                                color={'#757575'}
-                                fontFamily={`'EuclidCircularB', sans-serif`}
-
                             >
-                                {TERMS_DATA?.TermsOfUse?.description}
-                            </Text>
-                        </Box>
-
-                        {/* Table of Contents */}
-                        <Box
-                            margin={'40px 0px'}
-                        >
-                            <Text
-                                className='medium-heading1'
-                                color={'#313B47'}
-                            >
-                                {TERMS_DATA?.TableOfContents?.heading}
+                                {TERMS_DATA?.WarrantyAndPremiumAccount?.description}
                             </Text>
 
-                            {/* description */}
-                            <Box
-                                margin={'10px 0px 40px 0px'} >
-                                <OrderedList>
 
-                                    <ListItem>
+
+                            {
+                                TERMS_DATA?.WarrantyAndPremiumAccount?.paragraphs?.map((item, index) => (
+                                    <>
                                         <Text
+                                            className={"small-text"}
+                                            fontWeight={'bold'}
+                                            color="black"
 
-                                            fontSize={'1em'}
-
-                                            color={'#2679C7'}
-                                            className='small-text'
-                                            cursor="pointer"
-                                            smooth={true}
-                                            onClick={() => scollToRef.current.scrollIntoView({ behavior: 'smooth' })}
+                                            key={index}
                                         >
-
-                                            What is a cookie?
+                                            {item?.head}
                                         </Text>
-                                    </ListItem>
-
-                                    <ListItem>
                                         <Text
-                                            fontSize={'1em'}
-
-                                            color={'#2679C7'}
                                             className='small-text'
-                                            cursor="pointer"
-                                            smooth={true}
-                                            onClick={() => scrollSecend.current.scrollIntoView({ behavior: 'smooth' })}
+                                            marginBottom={'1rem'}
+
+
+                                            key={index}
                                         >
-
-                                            Use of cookies and web storage(browsing data) by Bisresume
+                                            {item?.text}
                                         </Text>
-                                    </ListItem>
-
-                                    <ListItem>
-                                        <Text
-                                            fontSize={'1em'}
-
-                                            color={'#2679C7'}
-                                            className='small-text'
-                                            cursor="pointer"
-                                            smooth={true}
-                                            onClick={() => scrollThird.current.scrollIntoView({ behavior: 'smooth' })}
-
-
-                                        >
-
-                                            Disabling/Enabling Cookies
-                                        </Text>
-                                    </ListItem>
-
-
-                                </OrderedList>
-                            </Box>
-                        </Box>
-
-                        <Box
-                            margin={'40px 0px'}
-                            ref={scollToRef}
-
-
-                        >
-                            <Text
-                                className='medium-heading1'
-                                color={'#313B47'}
-                            >
-                                {TERMS_DATA?.TheNovoresumeContent?.heading}
-                            </Text>
-
-                            <Box
-                                margin={'10px 0px 40px 0px'}
-                            >
+                                    </>
+                                ))
+                            }
+                            <UnorderedList>
                                 {
-                                    TERMS_DATA?.TheNovoresumeContent?.data?.map((item, index) => (
+                                    Marketing?.map((item) => (
                                         <>
-                                            <Text
-                                                key={index}
+                                            <ListItem
                                                 className='small-text'
-                                                marginBottom={'1rem'}
+                                                fontSize={'1em'}
                                             >
-                                                {item?.text}
-                                            </Text>
+                                                {item?.label}
+                                            </ListItem>
                                         </>
                                     ))
                                 }
-                            </Box>
+                            </UnorderedList>
+
                         </Box>
+                    </Box>
 
+
+
+
+
+
+                    {/* underline */}
+                    <Underline
+                        height='0.1em'
+                        width='100%'
+                        bgColor='#000'
+                    />
+
+
+                    {/* Contact Us */}
+                    <Box
+                        margin={'30px 0px'}
+                    >
+                        <Text
+                            className='medium-heading1'
+                            color={'#313B47'}
+                        >
+                            {TERMS_DATA?.ContactUs?.heading}
+                        </Text>
+
+                        {/* description */}
                         <Box
-                            margin={'40px 0px'}
-                            ref={scrollSecend}
-
+                            margin={'10px 0px 40px 0px'}
+                            marginBottom={'20px'}
                         >
                             <Text
-                                className='medium-heading1'
-                                color={'#313B47'}
+                                className='small-text'
+                                marginBottom={'1rem'}
+
                             >
-                                {TERMS_DATA?.AcceptableUse?.heading}
+                                {TERMS_DATA?.ContactUs?.subHeading}
                             </Text>
 
-                            <Box
-                                margin={'10px 0px 40px 0px'}
-
-                            >
-                                {
-                                    TERMS_DATA?.AcceptableUse?.data?.map((item, index) => (
-                                        <>
-                                            <Text
-                                                key={index}
-                                                className={"small-text"}
-                                                fontWeight={'bold'}
-                                                color="black"
-
-                                            >
-
-                                                {item?.head}
-                                            </Text>
-                                            <Text
-                                                key={index}
-                                                className='small-text'
-                                                marginBottom={'1rem'}
-                                            >
-
-                                                {item?.text}
-                                            </Text>
-                                        </>
-                                    ))
-                                }
-
+                            <Box>
                                 <UnorderedList>
                                     {
-                                        PREMIUM_ACCOUNT_DATA?.map((item) => (
-                                            <>
-                                                <ListItem
-                                                    className='small-text'
-                                                    fontSize={'1em'}
-                                                >
-                                                    {item?.label}
-                                                </ListItem>
-                                            </>
-                                        ))
-                                    }
-                                </UnorderedList>
-                            </Box>
-                        </Box>
+                                        CONTACT_US_DATA?.map((item) => (
+                                            item?.label === 'one' ?
+                                                <>
+                                                    <ListItem
 
+                                                        className='small-text'
+                                                        fontSize={'1em'}
 
-
-
-                        <Box
-                            margin={'40px 0px'}
-                            ref={scrollThird}
-
-                        >
-                            <Text
-                                className='medium-heading1'
-                                color={'#313B47'}
-                            >
-                                {TERMS_DATA?.WarrantyAndPremiumAccount?.heading}
-                            </Text>
-
-                            <Box
-                                margin={'10px 0px 40px 0px'}
-                            >
-                                <Text
-                                    className='small-text'
-                                    marginBottom={'1rem'}
-                                >
-                                    {TERMS_DATA?.WarrantyAndPremiumAccount?.description}
-                                </Text>
-
-
-
-                                {
-                                    TERMS_DATA?.WarrantyAndPremiumAccount?.paragraphs?.map((item, index) => (
-                                        <>
-                                            <Text
-                                                className={"small-text"}
-                                                fontWeight={'bold'}
-                                                color="black"
-
-                                                key={index}
-                                            >
-                                                {item?.head}
-                                            </Text>
-                                            <Text
-                                                className='small-text'
-                                                marginBottom={'1rem'}
-
-
-                                                key={index}
-                                            >
-                                                {item?.text}
-                                            </Text>
-                                        </>
-                                    ))
-                                }
-                                <UnorderedList>
-                                    {
-                                        Marketing?.map((item) => (
-                                            <>
-                                                <ListItem
-                                                    className='small-text'
-                                                    fontSize={'1em'}
-                                                >
-                                                    {item?.label}
-                                                </ListItem>
-                                            </>
-                                        ))
-                                    }
-                                </UnorderedList>
-
-                            </Box>
-                        </Box>
-
-
-
-
-
-
-                        {/* underline */}
-                        <Underline
-                            height='0.1em'
-                            width='100%'
-                            bgColor='#000'
-                        />
-
-
-                        {/* Contact Us */}
-                        <Box
-                            margin={'30px 0px'}
-                        >
-                            <Text
-                                className='medium-heading1'
-                                color={'#313B47'}
-                            >
-                                {TERMS_DATA?.ContactUs?.heading}
-                            </Text>
-
-                            {/* description */}
-                            <Box
-                                margin={'10px 0px 40px 0px'}
-                                marginBottom={'20px'}
-                            >
-                                <Text
-                                    className='small-text'
-                                    marginBottom={'1rem'}
-
-                                >
-                                    {TERMS_DATA?.ContactUs?.subHeading}
-                                </Text>
-
-                                <Box>
-                                    <UnorderedList>
-                                        {
-                                            CONTACT_US_DATA?.map((item) => (
-                                                item?.label === 'one' ?
-                                                    <>
-                                                        <ListItem
+                                                    >
+                                                        <Text
 
                                                             className='small-text'
-                                                            fontSize={'1em'}
+
 
                                                         >
-                                                            <Text
+                                                            If you have any questions, please feel free to contact us at any time at
+                                                            <Link
 
+                                                                color={'#2679C7'}
                                                                 className='small-text'
 
 
+                                                                marginLeft={"2"}
+                                                                href="mailto:contact@bisresume.com"
                                                             >
-                                                                If you have any questions, please feel free to contact us at any time at
-                                                                <Link
+                                                                contact@bisresume.com
+                                                            </Link>
 
-                                                                    color={'#2679C7'}
-                                                                    className='small-text'
+                                                        </Text>
 
+                                                    </ListItem>
+                                                </>
+                                                :
+                                                item?.label === 'second' ?
+                                                    <>
+                                                        <ListItem
+                                                            className='small-text'
 
-                                                                    marginLeft={"2"}
-                                                                    href="mailto:contact@bisresume.com"
-                                                                >
-                                                                    contact@bisresume.com
-                                                                </Link>
-
-                                                            </Text>
+                                                        >
+                                                            {item?.description}
 
                                                         </ListItem>
                                                     </>
                                                     :
-                                                    item?.label === 'second' ?
+                                                    item?.label === 'third' ?
                                                         <>
                                                             <ListItem
                                                                 className='small-text'
@@ -410,38 +421,27 @@ export default function Cookie() {
                                                             </ListItem>
                                                         </>
                                                         :
-                                                        item?.label === 'third' ?
+                                                        item?.label === 'thirdLink' ?
                                                             <>
                                                                 <ListItem
                                                                     className='small-text'
 
                                                                 >
                                                                     {item?.description}
-
                                                                 </ListItem>
                                                             </>
                                                             :
-                                                            item?.label === 'thirdLink' ?
-                                                                <>
-                                                                    <ListItem
-                                                                        className='small-text'
 
-                                                                    >
-                                                                        {item?.description}
-                                                                    </ListItem>
-                                                                </>
-                                                                :
-
-                                                                <></>
-                                            ))
-                                        }
-                                    </UnorderedList>
-                                </Box>
+                                                            <></>
+                                        ))
+                                    }
+                                </UnorderedList>
                             </Box>
                         </Box>
                     </Box>
                 </Box>
-            </Container>
+
+            </Box>
 
         </>
     )
