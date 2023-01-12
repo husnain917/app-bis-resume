@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Feedback from "../feedbackPopUp/Feedback";
 import TempNavbar from "./TempNavbar";
-import ThemeSideMenu from "./ThemeSIdeMenu";
+import ThemeSideMenu from "./ThemeSideMenu";
 export default function TempLayout({
   children,
   work,
