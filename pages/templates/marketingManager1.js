@@ -24,6 +24,9 @@ const MarketingManager1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
   const [show, setShow] = useShow();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   // PDF download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
   const MainHeading = ({
@@ -83,7 +86,7 @@ const MarketingManager1 = () => {
               minW={830}
               maxW={830}
               borderRadius={6}
-              bg={'#01012a'}
+              bg={backgroundColor ? backgroundColor : '#1c2125'}
               pr={'30px'}
               borderWidth="1px"
               borderColor={'black'}
@@ -120,7 +123,7 @@ const MarketingManager1 = () => {
                       FNameStyle={Classes.name}
                       SNameStyle={Classes.name}
                     />
-                    <Box h={'2px'} bg="white" width={'full'}></Box>
+                    <Box h={'2px'} bg={color ? color : '#fff'} width={'full'}></Box>
                     <Profession professionStyle={Classes.profession} />
                   </Box>
                 </Box>
@@ -144,17 +147,18 @@ const MarketingManager1 = () => {
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, work: false })}
                             onDelete={WORK}
-                            bg="#01012a"
+                            bg="#006772"
+                            iconColor={"#fff"}
                           />
                         )}
                       </div>
                       <div>
                         <MainHeading
-                          line1bBg={'black'}
-                          line2Bg="black"
+                          line1bBg={'#CCC'}
+                          line2Bg={backgroundColor ? backgroundColor : '#000000'}
                           title="EXPERIENCE"
                           weight={700}
-                          txtColor="#26272c"
+                          txtColor={backgroundColor ? backgroundColor : '#000000'}
                           onCl={() => setShow({ ...show, work: true })}
                           w="400px"
                         />
@@ -175,18 +179,19 @@ const MarketingManager1 = () => {
                   {/* ============== Contact Section ============== */}
                   <div style={{ marginLeft: '28px' }}>
                     <MainHeading
-                      line1bBg={'#fff'}
+                      line1bBg={color ? color : '#fff'}
                       line2Bg="#273746"
                       title="CONTACT"
                       weight={600}
-                      txtColor="#fff"
+                      txtColor={color ? color : '#fff'}
                     />
                     <Contact
                       email={true}
                       phone={true}
                       website={true}
                       circleIcon={true}
-                      circleBg="white"
+                      circleBg={color ? color : '#fff'}
+                      iconColor={backgroundColor ? backgroundColor : '#000000'}
                       circleSize="25px"
                       style={Classes.profileText}
                       margin={'7px 0px'}
@@ -200,18 +205,18 @@ const MarketingManager1 = () => {
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, education: false })}
                             onDelete={EDUCATION}
-                            bg="#fff"
-                            iconColor={'#01012a'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                           />
                         )}
                       </div>
                       <div>
                         <MainHeading
-                          line1bBg={'#fff'}
+                          line1bBg={color ? color : '#fff'}
                           line2Bg="#273746"
                           title="EDUCATION"
                           weight={600}
-                          txtColor="#fff"
+                          txtColor={color ? color : '#fff'}
                           onCl={() => setShow({ ...show, education: true })}
                         />
                         <Education
@@ -236,18 +241,18 @@ const MarketingManager1 = () => {
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, skills: false })}
                             onDelete={SKILL}
-                            bg="#fff"
-                            iconColor={'#01012a'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                           />
                         )}
                       </div>
                       <div>
                         <MainHeading
-                          line1bBg={'#fff'}
-                          line2Bg="#273746"
+                          line1bBg={color ? color : '#fff'}
+                          line2Bg={'#273746'}
                           title="EXPERTISE"
                           weight={600}
-                          txtColor="#fff"
+                          txtColor={color ? color : '#fff'}
                           onCl={() => setShow({ ...show, skills: true })}
                         />
                         <Skill skillStyle={Classes.date} margin="5px 0px" />

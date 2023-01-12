@@ -173,8 +173,8 @@ export default function Designer_Template() {
                                             minW="100%"
                                             maxW="100%"
                                             aboutStyle={Classes.aboutText}
-                                            textColor="#000000"
-                                            fontSize="15px"
+                                            fontColor="#000000"
+                                            fontSize="16px"
                                             fontWeight={600}
                                             margin={'5px 10px 30px 10px'}
                                         />
@@ -188,8 +188,8 @@ export default function Designer_Template() {
                                                         {show.skills && (
                                                             <SectionSideMenu
                                                                 onHide={() => setShow({ ...show, skills: false })}
-                                                                bg="#253439"
-                                                                iconColor={'#fff'}
+                                                                bg="#006772"
+                                                                iconColor={"#fff"}
                                                                 onDelete={SKILL}
                                                             />
                                                         )}
@@ -237,8 +237,8 @@ export default function Designer_Template() {
                                                     <div className={Classes.sideMenuBox}>
                                                         {show.interest && (
                                                             <SectionSideMenu
-                                                                bg="#253439"
-                                                                iconColor={'#fff'}
+                                                                bg="#006772"
+                                                                iconColor={"#fff"}
                                                                 onHide={() => setShow({ ...show, interest: false })}
                                                                 onDelete={INTEREST}
                                                             />
@@ -281,8 +281,8 @@ export default function Designer_Template() {
                                                     <div className={Classes.sideMenuBox}>
                                                         {show.languages && (
                                                             <SectionSideMenu
-                                                                bg="#253439"
-                                                                iconColor={'#fff'}
+                                                                bg="#006772"
+                                                                iconColor={"#fff"}
                                                                 onHide={() => setShow({ ...show, languages: false })}
                                                                 onDelete={LANGUAGES}
                                                             />
@@ -330,8 +330,8 @@ export default function Designer_Template() {
                                                         {show.work && (
                                                             <SectionSideMenu
                                                                 onHide={() => setShow({ ...show, work: false })}
-                                                                bg="#253439"
-                                                                iconColor={'#fff'}
+                                                                bg="#006772"
+                                                                iconColor={"#fff"}
                                                                 onDelete={WORK}
                                                             />
                                                         )}
@@ -378,8 +378,8 @@ export default function Designer_Template() {
                                                         {show.education && (
                                                             <SectionSideMenu
                                                                 onHide={() => setShow({ ...show, education: false })}
-                                                                bg="#253439"
-                                                                iconColor={'#fff'}
+                                                                bg="#006772"
+                                                                iconColor={"#fff"}
                                                                 onDelete={EDUCATION}
                                                             />
                                                         )}

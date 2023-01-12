@@ -58,7 +58,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
       dispatch(loginMagicUser(email, setUser, setLoading, setIsModalOpen))
     }
     else {
-      setErr({ inputField: 'This field is required', inputId: 7 })
+      setErr({ inputField: 'This field is required', inputId: 2 })
     }
   }
 
@@ -126,11 +126,11 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
     }
   }
   const loginWithGoogle = () => {
-    if (!terms) {
-      setErr({ inputField: 'Accept the terms and policies before use', inputId: 11 })
-    } else {
-      dispatch(doGoogleLogin(terms, setLoading, setErr, setIsModalOpen))
-    }
+    // if (!terms) {
+    //   setErr({ inputField: 'Accept the terms and policies before use', inputId: 11 })
+    // } else {
+    dispatch(doGoogleLogin(terms, setLoading, setErr, setIsModalOpen))
+    // }
   }
 
   const resetPassword = () => {
@@ -167,7 +167,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
             h={["70%", "85%", "100%", "100%", "100%"]}
           >
             <Box w={[0, 0, 0, "50%"]} h="100%">
-              {isRegister ? (
+              {!isRegister ? (
                 <Image src="/signup.png" w="100%" h="100%" />
               ) : (
                 <Image src="/signin.png" w="100%" h="100%" />
@@ -175,6 +175,21 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
             </Box>
 
             <Box w={["100%", "100%", "100%", "50%"]} h="auto">
+              <CloseIcon
+                w={8}
+                h={8}
+                position='absolute'
+                right='10px'
+                top='10px'
+                color="white"
+                bgColor="#E1E1E1"
+                p="5px"
+                ml="7%"
+                borderRadius="100px"
+                _hover={{ color: " white", borderRadius: "5px" }}
+                onClick={() => { setIsModalOpen(false); setFieldActive(false); setErr({ inputField: '', inputId: 0 }), setResetPass(false) }}
+                className={styles.modalBtn}
+              />
               <Box
                 display="flex"
                 justifyContent={resetPass ? "space-between" : "center"}
@@ -220,18 +235,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                     </Box>
                 }
 
-                <CloseIcon
-                  w={8}
-                  h={8}
-                  color="white"
-                  bgColor="#E1E1E1"
-                  p="5px"
-                  ml="7%"
-                  borderRadius="100px"
-                  _hover={{ color: " white", borderRadius: "5px" }}
-                  onClick={() => { setIsModalOpen(false); setFieldActive(false); setErr({ inputField: '', inputId: 0 }), setResetPass(false) }}
-                  className={styles.modalBtn}
-                />
+
               </Box>
 
               <Box ml="7%" mr="7%" mt={err.fieldErr !== '' ? "3%" : "6%"}>
@@ -260,10 +264,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                           h="50px"
                           pt="10px"
                           pb="10px"
-                          _hover={{
-                            color: "black",
-                            fontSize: "18px",
-                          }}
                           value={fName}
                           onChange={(e) => setFName(e.target.value)}
                         />
@@ -283,10 +283,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                           h="50px"
                           pt="10px"
                           pb="10px"
-                          _hover={{
-                            color: "black",
-                            fontSize: "18px",
-                          }}
                           value={lName}
                           onChange={(e) => setLName(e.target.value)}
                         />
@@ -309,10 +305,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                       pt="10px"
                       pb="10px"
                       mt="3%"
-                      _hover={{
-                        color: "black",
-                        fontSize: "18px",
-                      }}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
@@ -336,10 +328,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                         h="50px"
                         pt="10px"
                         pb="10px"
-                        _hover={{
-                          color: "black",
-                          fontSize: "18px",
-                        }}
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                       />
@@ -364,7 +352,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                     }
                     <Checkbox
                       size="lg"
-                      mt="10%"
+                      mt="5%"
                       colorScheme="MediumSpringGreen"
                       iconColor="MediumSpringGreen"
                       value={terms}
@@ -392,10 +380,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                       h="50px"
                       pt="10px"
                       pb="10px"
-                      _hover={{
-                        color: "black",
-                        fontSize: "18px",
-                      }}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
@@ -420,10 +404,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                         h="50px"
                         pt="10px"
                         pb="10px"
-                        _hover={{
-                          color: "black",
-                          fontSize: "18px",
-                        }}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                       />
@@ -449,10 +429,6 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                               h="50px"
                               pt="10px"
                               pb="10px"
-                              _hover={{
-                                color: "black",
-                                fontSize: "18px",
-                              }}
                               value={password}
                               onChange={(e) => setPassword(e.target.value)}
                             />
@@ -490,24 +466,27 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                           </Text>
                         </>
                       }
-                      <Checkbox
-                        size="lg"
-                        mt="5%"
-                        colorScheme="MediumSpringGreen"
-                        iconColor="MediumSpringGreen"
-                        value={terms}
-                        onChange={(e) => setTerms(e.target.checked)}
-                      >
-                        Remember me
-                      </Checkbox>
+                      <Box>
+                        <Checkbox
+                          size="lg"
+                          mt="5%"
+                          colorScheme="MediumSpringGreen"
+                          iconColor="MediumSpringGreen"
+                          value={terms}
+                          onChange={(e) => setTerms(e.target.checked)}
+                        >
+                          Remember me
+                        </Checkbox>
+                      </Box>
                     </>
                   )}
               </Box>
               {/* Next Buttons */}
-              <Box mt="5%">
+              <Box mt="3%">
                 {active === 0 ? (
                   <>
                     <CustomBtn
+                      clr='green'
                       title={loadingsignup ? "Loading..." : "Register Now"}
                       bgColor="#00C8AA"
                       color="white"
@@ -518,6 +497,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                   </>
                 ) : resetPass ? (
                   <CustomBtn
+                    clr='green'
                     title={resetLoading ? "Loading..." : "Request Password Change"}
                     bgColor="#00C8AA"
                     color="white"
@@ -527,12 +507,13 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                   />
                 ) : (
                   <>
-                    <Text align="center" fontSize="14px" mt="9%" p="5px">
+                    <Text align="center" fontSize="14px" mt="4%" p="5px">
                       We will send you a one-time sign in link.
                     </Text>
                     {
                       fieldActive &&
                       <CustomBtn
+                        clr='green'
                         title={loading ? 'loading...' : "SignIn"}
                         bgColor="#00C8AA"
                         color="white"
@@ -542,6 +523,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                       />
                     }
                     <CustomBtn
+                      clr='green'
                       title={loading ? "loading..." : "SignIn With Magic Link"}
                       bgColor={fieldActive ? "#E1E1E1" : "#00C8AA"}
                       color="white"
@@ -552,6 +534,7 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                     {
                       !fieldActive &&
                       <CustomBtn
+                        clr='grey'
                         title="Switch to password"
                         bgColor="#E1E1E1"
                         color="grey"
@@ -561,33 +544,35 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                     }
                   </>
                 )}
-                {resetPass ? (
-                  <></>
-                )
-                  :
-                  (
-                    <>
-                      <Text fontSize="16px" align="center" mt="5%">
-                        Or Sign In With:
-                      </Text>
-
-                      <Button
-                        leftIcon={<FaGoogle />}
-                        variant="solid"
-                        bgColor="#E1E1E1"
-                        color="grey"
-                        w="85%"
-                        ml="8%"
-                        borderRadius="100px"
-                        fontSize="16px"
-                        mt="3%"
-                        className={styles.modalBtn}
-                        onClick={() => loginWithGoogle()}
-                      >
-                        Google
-                      </Button>
-                    </>
-                  )}
+                {isRegister ? (
+                  <>
+                    <Text fontSize="16px" align="center" mt="3%">
+                      Or Sign Up With:
+                    </Text>
+                  </>
+                ) : (
+                  <>
+                    <Text fontSize="16px" align="center" mt="3%">
+                      Or Sign In With:
+                    </Text>
+                  </>
+                )}
+                <Button
+                  leftIcon={<FaGoogle />}
+                  variant="solid"
+                  bgColor="#E1E1E1"
+                  color="grey"
+                  w="85%"
+                  ml="8%"
+                  borderRadius="100px"
+                  fontSize="16px"
+                  mt="3%"
+                  className='buttonClass'
+                  // className={styles.modalBtn}
+                  onClick={() => loginWithGoogle()}
+                >
+                  Google
+                </Button>
 
 
               </Box>

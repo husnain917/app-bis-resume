@@ -60,20 +60,28 @@ export default function Navbar() {
         >
           <Link href="/#">
             <Image
-              src={logoIcon}
+              src="/Dark_Blue.svg"
               alt="Image Not Found"
-              height={useBreakpointValue({
-                xl: "90px",
-                lg: "60px",
-                md: "70px",
-                sm: "70px",
-              })}
-              width={useBreakpointValue({
-                xl: "230px",
-                lg: "170px",
-                md: "200px",
-                sm: "180px",
-              })}
+              // height={useBreakpointValue({
+              //   xl: "90px",
+              //   lg: "60px",
+              //   md: "70px",
+              //   sm: "70px",
+              // })}
+              // width={useBreakpointValue({
+              //   xl: "230px",
+              //   lg: "170px",
+              //   md: "200px",
+              //   sm: "180px",
+              // })}
+              fill
+              // sizes="(max-width: 768px) 90px,
+              // (max-width: 1200px) 60px,
+              // 33px"
+              height={"70px"}
+              width={"230px"}
+              // layout="fill"
+              // layout="fill"
             />
           </Link>
 
@@ -109,6 +117,19 @@ export default function Navbar() {
                       boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
                       borderRadius: "0.2rem",
                     }}
+                    onClick={
+                      items.label === "Register"
+                        ? () => {
+                            setIsActive(0);
+                            setIsModalOpen(true);
+                          }
+                        : items.label === "Login"
+                        ? () => {
+                            setIsActive(1);
+                            setIsModalOpen(true);
+                          }
+                        : ""
+                    }
                     cursor={"pointer"}
                     width={breakpointWidth}
                     bg={

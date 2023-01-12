@@ -28,6 +28,9 @@ import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 const FlightAttendant1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
   return (
@@ -61,7 +64,7 @@ const FlightAttendant1 = () => {
                 w="40%"
                 pb="10%"
                 minW={'340px'}
-                bgColor="#2A78AB"
+                bgColor={backgroundColor}
                 // borderLeftRadius={6}
                 pr={3}
                 pl={12}
@@ -92,9 +95,9 @@ const FlightAttendant1 = () => {
                   linkedinURL={true}
                   website={true}
                   circleIcon={true}
-                  circleBg="#fff"
+                  circleBg={color ? color : '#000000'}
                   circleSize="25px"
-                  iconColor="#2A78AB"
+                  iconColor={backgroundColor ? backgroundColor : '#fff'}
                   margin={'10px 0px 0px 0px'}
                   style={Classes.profileText}
                 />
@@ -110,8 +113,8 @@ const FlightAttendant1 = () => {
                         {show.skills && (
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, skills: false })}
-                            bg="#E0EFFA"
-                            iconColor={'#2A78AB'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onDelete={SKILL}
                           />
                         )}
@@ -119,8 +122,10 @@ const FlightAttendant1 = () => {
                       <div>
                         <Heading
                           title={'RELEVANT SKILLS'}
-                          color="#fff"
+                          color={color ? color : '#000000'}
                           margin={'0px 0px 0px 0px'}
+                          fontSize={17}
+                          fontWeight={700}
                           onSideSectionShow={() =>
                             setShow({ ...show, skills: true })
                           }
@@ -143,8 +148,8 @@ const FlightAttendant1 = () => {
                         {show.work && (
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, work: false })}
-                            bg="#2A78AB"
-                            iconColor={'#E0EFFA'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onDelete={WORK}
                           />
                         )}
@@ -178,7 +183,7 @@ const FlightAttendant1 = () => {
                           icon={(props) => (
                             <IoMdJet
                               {...props}
-                              color="#2A78AB"
+                              color={backgroundColor}
                               size={32}
                               className={Classes.mr}
                             />
@@ -200,8 +205,8 @@ const FlightAttendant1 = () => {
                         {show.education && (
                           <SectionSideMenu
                             onHide={() => setShow({ ...show, education: false })}
-                            bg="#2A78AB"
-                            iconColor={'#E0EFFA'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onDelete={EDUCATION}
                           />
                         )}
@@ -230,7 +235,7 @@ const FlightAttendant1 = () => {
                           icon={(props) => (
                             <BsFillLayersFill
                               {...props}
-                              color="#2A78AB"
+                              color={backgroundColor}
                               size={32}
                               className={Classes.mr}
                             />
@@ -259,8 +264,8 @@ const FlightAttendant1 = () => {
                             onHide={() =>
                               setShow({ ...show, certificates: false })
                             }
-                            bg="#2A78AB"
-                            iconColor={'#E0EFFA'}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onDelete={CERTIFICATE}
                           />
                         )}
@@ -288,7 +293,7 @@ const FlightAttendant1 = () => {
                           icon={(props) => (
                             <FaAward
                               {...props}
-                              color="#2A78AB"
+                              color={backgroundColor}
                               size={32}
                               className={Classes.mr}
                             />

@@ -4,11 +4,13 @@
   display: flex;
   align-items: center;
 }
+
 .swapCont {
   position: absolute;
   right: 80px;
   top: 80px;
 }
+
 .swap {
   width: 40px;
   height: 40px;
@@ -21,10 +23,12 @@
 
   transition: all 0.2s;
 }
+
 .swap:hover {
   transform: scale(1.1);
   transition: all 0.2s;
 }
+
 .swap img {
   width: 70%;
   filter: invert(1);
@@ -197,9 +201,16 @@
   min-width: 380px;
   max-width: 380px;
 }
-.positionSty{
+
+.positionSty {
   font-size: 22px;
   font-weight: 500;
   max-width: 350px;
   min-width: 350px;
+}
+
+.contactFont {
+  font-size: 16px !important;
+  color: #fff;
+  font-weight: 600;
 }

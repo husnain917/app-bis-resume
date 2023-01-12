@@ -21,27 +21,21 @@ import {
 } from '../../../src/components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../../../src/components/imageSelector';
 import { MdCastForEducation } from 'react-icons/md';
-import { FaSignLanguage, FaRegUser } from 'react-icons/fa';
+import { FaSignLanguage, FaRegUser } from "react-icons/fa";
 import ChangeTempBtn from '../../../src/components/changeTempbtn/ChangeTempBtn';
-import PDFGenerater from '../../../src/components/tempNav/PDFGenerater';
+import PDFGenerater from "../../../src/components/tempNav/PDFGenerater";
 
 export default function Fashion_Temp() {
   // redux Data
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  const { backgroundColor, color } = useSelector(
-    (store) => store.themeReducer.theme
-  );
   const [show, setShow] = useShow();
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
   return (
     <>
-      <div style={{ overflow: 'auto' }}>
-        <TempLayout
-          work={true}
-          education={true}
-          skills={true}
-          downloadPDF={downloadPDFHandler}
-        >
+      <div
+        style={{ overflow: 'auto' }}
+      >
+        <TempLayout work={true} education={true} skills={true} downloadPDF={downloadPDFHandler}>
           <ChangeTempBtn />
           <Flex
             justifyContent={{ base: 'none', md: 'center' }}
@@ -50,15 +44,19 @@ export default function Fashion_Temp() {
             bg={'#fff'}
             pt="70px"
           >
-            <Box m="50px 20px 30px 20px">
-              <Box display={'flex'} ref={pdfRef}>
+            <Box
+              m="50px 20px 30px 20px"
+            >
+              <Box
+                display={'flex'}
+                ref={pdfRef}
+              >
                 <Box
                   w="40%"
                   pb="10%"
                   minW={'340px'}
-                  bgColor={backgroundColor ? backgroundColor : '#FDC726'}
+                  bgColor="#FDC726"
                   borderLeftRadius={6}
-                  transition="0.5s background"
                   pr={3}
                   pl={12}
                   py={8}
@@ -70,11 +68,9 @@ export default function Fashion_Temp() {
                     direction="column"
                     FNameStyle={styles.nameStyle}
                     SNameStyle={styles.nameStyle}
-                    fontColor={color ? color : ''}
                   />
                   <Profession
                     professionStyle={styles.profileSubTitle}
-                    fontColor={color ? color : ''}
                   />
 
                   {/* _____________ Image _____________ */}
@@ -85,15 +81,15 @@ export default function Fashion_Temp() {
                     minHeight="240px"
                     marginTop="30px"
                     marginBottom="30px"
-                    borderColor={color ? color : ''}
+                    marginLeft={'10px'}
                   />
 
                   {/* _____________ About me _____________ */}
                   <Heading
                     title={'ABOUT ME'}
-                    color={color ? color : '#000000'}
+                    color="#000000"
                     circleSize="38px"
-                    circleBg={color ? color : '#000000'}
+                    circleBg="#000000"
                     fontSize="20px"
                     fontWeight={700}
                     circleIconHeading={true}
@@ -101,7 +97,7 @@ export default function Fashion_Temp() {
                       <FaRegUser
                         {...props}
                         size={18}
-                        color={backgroundColor ? backgroundColor : '#FDC726'}
+                        color={'#FDC726'}
                       />
                     )}
                   />
@@ -109,12 +105,14 @@ export default function Fashion_Temp() {
                     minW="100%"
                     maxW="100%"
                     aboutStyle={Classes.aboutText}
-                    fontColor={'#000000'}
+                    fontColor="#000000"
                     fontSize="14px"
                     fontWeight={600}
                   />
                   {/* _____________ Skill _____________ */}
-                  <Box margin={'20px 0px 10px 7px'}>
+                  <Box
+                    margin={'20px 0px 10px 7px'}
+                  >
                     {resumeData?.skills?.visible && (
                       <div className={Classes.sideMenu}>
                         <div className={Classes.sideMenuBox}>
@@ -122,10 +120,8 @@ export default function Fashion_Temp() {
                             <SectionSideMenu
                               onDelete={SKILL}
                               onHide={() => setShow({ ...show, skills: false })}
-                              bg={color ? color : '#000000'}
-                              iconColor={
-                                backgroundColor ? backgroundColor : '#FDC726'
-                              }
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
@@ -134,20 +130,18 @@ export default function Fashion_Temp() {
                             title={'SKILLS'}
                             fontSize="20px"
                             fontWeight={700}
-                            color={color ? color : '#000000'}
+                            color="#000000"
                             circleIconHeading={true}
                             onSideSectionShow={() =>
                               setShow({ ...show, skills: true })
                             }
                             circleSize="38px"
-                            circleBg={color ? color : '#000000'}
+                            circleBg="#000000"
                             icon={(props) => (
                               <FaSignLanguage
                                 {...props}
                                 size={18}
-                                color={
-                                  backgroundColor ? backgroundColor : '#FDC726'
-                                }
+                                color={'#FDC726'}
                               />
                             )}
                           />
@@ -156,7 +150,7 @@ export default function Fashion_Temp() {
                             progressBar={true}
                             strokeWidth="2"
                             lineStyle={styles.line}
-                            strokeColor={color ? color : '#F2DB7A'}
+                            strokeColor="#F2DB7A"
                             trailColor="#fff"
                             percentageStyle={styles.percent}
                             parentContainerStyle={Classes.ml}
@@ -170,8 +164,7 @@ export default function Fashion_Temp() {
                 {/* =============== Second Section ============== */}
                 <Box
                   w="60%"
-                  bg={color ? color : '#0F0F0F'}
-                  transition="0.5s background"
+                  bg="#0F0F0F"
                   h="auto"
                   minW="510px"
                   borderRightRadius={6}
@@ -179,16 +172,16 @@ export default function Fashion_Temp() {
                   {/* _____________ Contact Us _____________ */}
                   <Heading
                     title={'CONTACTS'}
-                    color={backgroundColor ? backgroundColor : '#fff'}
+                    color="#fff"
                     padding={'70px 0px 20px 33px'}
                     circleSize="38px"
-                    circleBg={backgroundColor ? backgroundColor : '#FDC726'}
+                    circleBg="#FDC726"
                     circleIconHeading={true}
                     icon={(props) => (
                       <FaRegUser
                         {...props}
                         size={18}
-                        color={color ? color : '#000000'}
+                        color={'#000000'}
                       />
                     )}
                   />
@@ -198,12 +191,12 @@ export default function Fashion_Temp() {
                     linkedinURL={true}
                     website={true}
                     circleIcon={true}
-                    circleBg={backgroundColor ? backgroundColor : '#FDC726'}
+                    circleBg="#FDC726"
                     circleSize="25px"
-                    iconColor={color ? color : '#000000'}
+                    iconColor="#000000"
                     margin={'5px 0px 0px 0px'}
                     parentStyle={styles.rightContainerWork}
-                    style={Classes.profileText}
+                    style={styles.profileText}
                   />
                   {/* _____________ Work _____________ */}
                   <Box
@@ -217,14 +210,14 @@ export default function Fashion_Temp() {
                             <SectionSideMenu
                               onHide={() => setShow({ ...show, work: false })}
                               onDelete={WORK}
-                              bg={backgroundColor ? backgroundColor : '#FDC726'}
-                              iconColor={color ? color : '#000000'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
                         <div>
                           <Heading
-                            color={backgroundColor ? backgroundColor : '#fff'}
+                            color={'#fff'}
                             title="WORK EXPERIENCE"
                             fontSize={'22px'}
                             fontWeight={700}
@@ -234,14 +227,12 @@ export default function Fashion_Temp() {
                             }
                             maxW={'fit-content'}
                             circleSize="38px"
-                            circleBg={
-                              backgroundColor ? backgroundColor : '#FDC726'
-                            }
+                            circleBg="#FDC726"
                             icon={(props) => (
                               <MdCastForEducation
                                 {...props}
                                 size={18}
-                                color={color ? color : '#000000'}
+                                color={'#000000'}
                               />
                             )}
                           />
@@ -275,15 +266,15 @@ export default function Fashion_Temp() {
                                 setShow({ ...show, education: false })
                               }
                               onDelete={EDUCATION}
-                              bg={backgroundColor ? backgroundColor : '#FDC726'}
-                              iconColor={color ? color : '#000000'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
                         <div>
                           <Heading
                             title={'EDUCATION'}
-                            color={backgroundColor ? backgroundColor : '#fff'}
+                            color={'#fff'}
                             fontSize={'22px'}
                             fontWeight={700}
                             onSideSectionShow={() =>
@@ -291,14 +282,12 @@ export default function Fashion_Temp() {
                             }
                             circleIconHeading={true}
                             circleSize="38px"
-                            circleBg={
-                              backgroundColor ? backgroundColor : '#FDC726'
-                            }
+                            circleBg="#FDC726"
                             icon={(props) => (
                               <MdCastForEducation
                                 {...props}
                                 size={18}
-                                color={color ? color : '#000000'}
+                                color={'#000000'}
                               />
                             )}
                           />
@@ -326,5 +315,5 @@ export default function Fashion_Temp() {
         </TempLayout>
       </div>
     </>
-  );
+  )
 }

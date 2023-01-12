@@ -84,8 +84,9 @@
   color: black;
   max-width: 200px;
   min-width: 200px;
-  color: black;
+  color: black !important;
   margin-left: 40px;
+
 }
 
 .profession {
@@ -96,9 +97,13 @@
   font-weight: 500;
   margin-left: 70px;
 
+
+
   padding: 0px !important;
   margin-bottom: 20px;
 }
+
+
 
 .Educationdescription {
   font-size: 15px;
@@ -107,15 +112,22 @@
   max-width: 250px !important;
 }
 
+
+
+
+
+
 .projectTitleText {
   font-size: 16px;
   font-weight: 500;
   color: white;
+
 }
 
 .mt {
   margin-top: 4%;
   margin-bottom: 2%;
+
 }
 
 .profileText {
@@ -128,6 +140,8 @@
   max-width: 180px !important;
   min-width: 180px !important;
 }
+
+
 
 .postion {
   font-size: 18px;
@@ -181,6 +195,7 @@
   max-width: 180px;
 }
 
+
 .line {
   width: 200px !important;
   height: 10px;
@@ -196,11 +211,15 @@
   font-size: 16px;
   font-weight: 500;
   color: white;
+
 }
+
+
 
 .referenceName {
   font-size: 20px;
   font-weight: 700;
+
 }
 
 .sideMenu {
@@ -210,6 +229,7 @@
 
 .sideMenuBox {
   width: 20px;
+
 }
 
 .proContcat {
@@ -273,4 +293,54 @@
   width: 380px;
   max-width: 180px !important;
   min-width: 180px !important;
+
+}
+
+.rightContainerWork {
+  width: 448px !important;
+}
+
+.langDiv {
+  width: 86% !important;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.skillDiv {
+  width: 448px !important;
+  color: #3C4240;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.refernceDiv {
+  width: 448px !important;
+}
+
+.refernceText {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.rightContainer {
+  width: 100%;
+}
+
+.line {
+  height: 10px;
+  width: 100px;
+  border-radius: 4px;
+  margin-top: 10px !important;
+}
+
+.percent {
+  color: #000000;
+  font-size: 14px !important;
+}
+
+.date {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 600;
 }
