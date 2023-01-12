@@ -9,13 +9,15 @@ import { SimpleGrid, Box } from "@chakra-ui/react";
 
 export default function LatestPosts({ blogs }) {
   console.log("blogs", blogs);
+
   const [searchKey, setSearchKey] = useState("");
-  const dummyArr = [1, 2, 3];
 
   var filterBlog = blogs?.filter(function (item) {
     return (
-      item?.description?.toLowerCase()?.includes(searchKey.toLowerCase()) ||
-      item?.title?.toLowerCase()?.includes(searchKey.toLowerCase())
+      item?.fields?.description
+        ?.toLowerCase()
+        ?.includes(searchKey.toLowerCase()) ||
+      item?.fields?.title?.toLowerCase()?.includes(searchKey.toLowerCase())
     );
   });
   const filteredBlogs = filterBlog?.filter((item) => item?.slug !== "test");
@@ -62,24 +64,32 @@ export default function LatestPosts({ blogs }) {
               columns={{ sm: 1, md: 2, lg: 3 }}
             >
               {filteredBlogs?.map((item, index) => {
+                const {
+                  author,
+                  category,
+                  description,
+                  body,
+                  featuredImage,
+                  publishDate,
+                  slug,
+                  title,
+                } = item.fields;
                 return (
-                  <Box key={index} style={{margin:10}}>
-                    <Link href={`blog/[slug]`} as={`blog/${item.slug}`}>
+                  <Box key={index} style={{ margin: 10 }}>
+                    <Link href={`blog/[slug]`} as={`blog/${slug}`}>
                       <div className={style.imageContainer}>
                         <Image
                           className={style.coverImage}
                           layout="fill"
                           objectFit="cover"
-                          src={item?.thumbnail}
+                          src={"https:" + featuredImage.fields.file.url}
                           alt="image"
                         />
                       </div>
                     </Link>
-                    <h3 className={`${style.Cardtitle} subTitle`}>
-                      {item?.title}
-                    </h3>
+                    <h3 className={`${style.Cardtitle} subTitle`}>{title}</h3>
                     <p className={`${style.cardHeading} paragraph`}>
-                      {item.description}
+                      {description}
                     </p>
                   </Box>
                 );
