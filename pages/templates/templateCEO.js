@@ -27,6 +27,7 @@ import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
 
 
 export default function TemplateCEO() {
+    // redux data
     let resumeData = useSelector((state) => state.editorReducer.resumeData);
     const { backgroundColor, color } = useSelector(
         (store) => store.themeReducer.theme
@@ -34,6 +35,7 @@ export default function TemplateCEO() {
     // custom Hook For Template
     const [show, setShow] = useShow();
     const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
     return (
         <div style={{ overflow: 'auto' }}>
             <TempLayout
