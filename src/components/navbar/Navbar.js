@@ -94,7 +94,6 @@ export default function Navbar() {
                     key={items?.label}
                     display={{ base: "inline-block", md: "inline-block" }}
                     justify={{ base: "end" }}
-                    key={index}
                     style={{
                       border: "1px solid #e0e2e8",
                       boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
