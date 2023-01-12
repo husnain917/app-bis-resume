@@ -36,7 +36,6 @@ const FashionTemp5 = () => {
 
   return (
     <div style={{ overflow: 'auto' }}>
-      {/* <Navbar /> */}
       <TempLayout
         work={true}
         education={true}
