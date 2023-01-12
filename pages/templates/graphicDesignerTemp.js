@@ -1,9 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react';
-import Link from 'next/link';
 import React from 'react';
-import { Tooltip } from 'react-tippy';
 import Name from '../../src/components/commonSection/Name';
-import style from '../../styles/templates/template1.module.scss';
 import styles from "../../styles/graphicDesignerTemp.module.css";
 import Classes from '../../styles/templates/flightAttendant.module.css';
 import Profession from '../../src/components/commonSection/Profession';
@@ -27,7 +24,6 @@ import {
 import ImageSelector from '../../src/components/imageSelector';
 import Underline from "../../src/components/graphicDesignerTemp/Underline";
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import { FaChevronRight } from 'react-icons/fa';
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 export default function Graphic_Design_Temp() {
@@ -180,7 +176,7 @@ export default function Graphic_Design_Temp() {
                         minW="40%"
                         maxW="40%"
                         aboutStyle={Classes.aboutText}
-                        textColor="#947F57"
+                        fontColor="#947F57"
                         fontSize="16px"
                         fontWeight={600}
                       />
@@ -207,8 +203,8 @@ export default function Graphic_Design_Temp() {
                             <div className={Classes.sideMenuBox}>
                               {show.interest && (
                                 <SectionSideMenu
-                                  bg="#947F57"
-                                  iconColor={'#fff'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                   onHide={() => setShow({ ...show, interest: false })}
                                   onDelete={INTEREST}
                                 />
@@ -251,8 +247,8 @@ export default function Graphic_Design_Temp() {
                                 <SectionSideMenu
                                   onDelete={SKILL}
                                   onHide={() => setShow({ ...show, skills: false })}
-                                  bg="#947F57"
-                                  iconColor={'#fff'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                 />
                               )}
                             </div>
@@ -300,8 +296,8 @@ export default function Graphic_Design_Temp() {
                                 <SectionSideMenu
                                   onHide={() => setShow({ ...show, work: false })}
                                   onDelete={WORK}
-                                  bg="#947F57"
-                                  iconColor={'#fff'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                 />
                               )}
                             </div>
@@ -352,8 +348,8 @@ export default function Graphic_Design_Temp() {
                                     setShow({ ...show, education: false })
                                   }
                                   onDelete={EDUCATION}
-                                  bg="#947F57"
-                                  iconColor={'#fff'}
+                                  bg="#006772"
+                                  iconColor={"#fff"}
                                 />
                               )}
                             </div>

@@ -11,7 +11,6 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import {
@@ -30,18 +29,12 @@ import { useSelector } from "react-redux";
 import ProfileComponent from "./ProfileComponent";
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
-  const breakpointfontSize = useBreakpointValue({ xl: "14px", lg: "12px" });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [active, setIsActive] = useState(null);
   const isUserLoggedIn = useSelector(
     (state) => state.AuthReducer.isUserLoggedIn
   );
   const uid = useSelector((state) => state.AuthReducer.userID);
-  const breakpointWidth = useBreakpointValue({
-    xl: "120px",
-    lg: "80px",
-    md: "110px",
-  });
   return (
     <Box>
       <Flex
@@ -49,7 +42,7 @@ export default function Navbar() {
         color={useColorModeValue("gray.600", "white")}
         minH={"110px"}
         py={{ base: 2 }}
-        mx={useBreakpointValue({ xl: "60px", lg: "30px" })}
+        mx={{ xl: "60px", lg: "30px" }}
         align={"center"}
       >
         {/* logo */}
@@ -60,28 +53,19 @@ export default function Navbar() {
         >
           <Link href="/#">
             <Image
-              src={logoIcon}
+              src="/Dark_Blue.svg"
               alt="Image Not Found"
-              height={useBreakpointValue({
-                xl: "90px",
-                lg: "60px",
-                md: "70px",
-                sm: "70px",
-              })}
-              width={useBreakpointValue({
-                xl: "230px",
-                lg: "170px",
-                md: "200px",
-                sm: "180px",
-              })}
+              fill
+              height={"70px"}
+              width={"230px"}
             />
           </Link>
 
           {/* deskTop Nav */}
           <Flex
             display={{ base: "none", lg: "flex" }}
-            marginTop={useBreakpointValue({ xl: "11px", lg: "12px" })}
-            marginLeft={useBreakpointValue({ xl: "2rem", lg: "1.2rem" })}
+            marginTop={{ xl: "11px", lg: "12px" }}
+            marginLeft={{ xl: "2rem", lg: "1.2rem" }}
           >
             <DesktopNav />
           </Flex>
@@ -93,7 +77,7 @@ export default function Navbar() {
           direction={"row"}
           alignItems={"center"}
           spacing={5}
-          marginTop={useBreakpointValue({ xl: "20px", lg: "12px", md: "15px" })}
+          marginTop={{ xl: "20px", lg: "12px", md: "15px" }}
         >
           {/* login buttons */}
           {!isUserLoggedIn ? (
@@ -109,8 +93,25 @@ export default function Navbar() {
                       boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
                       borderRadius: "0.2rem",
                     }}
+                    onClick={
+                      items.label === "Register"
+                        ? () => {
+                            setIsActive(0);
+                            setIsModalOpen(true);
+                          }
+                        : items.label === "Login"
+                        ? () => {
+                            setIsActive(1);
+                            setIsModalOpen(true);
+                          }
+                        : ""
+                    }
                     cursor={"pointer"}
-                    width={breakpointWidth}
+                    width={{
+                      xl: "120px",
+                      lg: "80px",
+                      md: "110px",
+                    }}
                     bg={
                       items?.label === "Register"
                         ? "#006772"
@@ -134,7 +135,7 @@ export default function Navbar() {
                           // href={items?.href ?? '#'}
                           fontWeight={650}
                           color={"#fdfffc"}
-                          fontSize={breakpointfontSize}
+                          fontSize={{ xl: "14px", lg: "12px" }}
                           _hover={{
                             textDecoration: "none",
                             color: "#fff",
@@ -153,7 +154,7 @@ export default function Navbar() {
                           // href={items?.href ?? '#'}
                           fontWeight={650}
                           color={"#fdfffc"}
-                          fontSize={breakpointfontSize}
+                          fontSize={{ xl: "14px", lg: "12px" }}
                           _hover={{
                             textDecoration: "none",
                             color: "#fff",
@@ -221,11 +222,7 @@ const DesktopNav = () => {
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
   return (
-    <Stack
-      direction={"row"}
-      alignItems={"center"}
-      spacing={useBreakpointValue({ xl: 5, lg: 3 })}
-    >
+    <Stack direction={"row"} alignItems={"center"} spacing={{ xl: 5, lg: 3 }}>
       {NAV_ITEMS?.map((navItem) => {
         return (
           <Box key={navItem?.label}>
@@ -337,7 +334,7 @@ const MobileNav = () => {
           return (
             <>
               <Box
-              key={items.label}
+                key={items.label}
                 display={{ base: "inline-flex", md: "none" }}
                 style={{
                   border: "1px solid #e0e2e8",

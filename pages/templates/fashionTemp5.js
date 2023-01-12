@@ -21,27 +21,34 @@ import {
 import { useSelector } from 'react-redux';
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
-import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
 const FashionTemp5 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  let font = useSelector((state) => state.fontReducer.font);
+  console.log('Font:', font);
   const [show, setShow] = useShow();
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   return (
     <div style={{ overflow: 'auto' }}>
       {/* <Navbar /> */}
-      <TempLayout work={true} education={true} languages={true} skills={true} downloadPDF={downloadPDFHandler}>
+      <TempLayout
+        work={true}
+        education={true}
+        languages={true}
+        skills={true}
+        downloadPDF={downloadPDFHandler}
+      >
         <ChangeTempBtn />
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
           flexDir={'column'}
           alignItems={{ base: 'none', lg: 'center' }}
         >
-          <Box
-            mt="100px"
-            mb={10}
-            mx={20}
-          >
+          <Box mt="100px" mb={10} mx={20}>
             <HStack
               minW={830}
               maxW={830}
@@ -54,7 +61,7 @@ const FashionTemp5 = () => {
               <Box
                 minW={280}
                 maxW={280}
-                bg={'#011A34'}
+                bgColor={backgroundColor ? backgroundColor : '#1c2125'}
                 borderLeftRadius={6}
                 pl={'30px'}
                 py={5}
@@ -65,16 +72,17 @@ const FashionTemp5 = () => {
                   minHeight={210}
                   maxHeight={210}
                   marginLeft="3px"
+                  borderColor={color ? color : ''}
                 />
 
                 <Heading
                   title={'CONTACT'}
-                  color="#fff"
+                  color={color ? color : '#fff'}
                   line={true}
                   minW={'full'}
                   lineW={'230px'}
                   margin="30px 0px 0px 5px"
-                  lineBg={'#fff'}
+                  lineBg={color ? color : '#fff'}
                   lineH="3px"
                   fontWeight={700}
                   fontSize={'18px'}
@@ -83,6 +91,7 @@ const FashionTemp5 = () => {
                   phone={true}
                   email={true}
                   location={true}
+                  color={color ? color : '#fff'}
                   heading={true}
                   headingStyle={Classes.contactText}
                   style={Classes.profileText}
@@ -96,8 +105,8 @@ const FashionTemp5 = () => {
                       {show.skills && (
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, skills: false })}
-                          bg="#fff"
-                          iconColor={'#011A34'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                           onDelete={SKILL}
                         />
                       )}
@@ -105,12 +114,12 @@ const FashionTemp5 = () => {
                     <div>
                       <Heading
                         title={'SKILLS'}
-                        color="#fff"
+                        color={color ? color : '#fff'}
                         line={true}
                         minW={'full'}
                         lineW={'230px'}
                         margin="15px 0px 0px 10px"
-                        lineBg={'#fff'}
+                        lineBg={color ? color : '#fff'}
                         lineH="3px"
                         fontWeight={700}
                         fontSize={'18px'}
@@ -119,6 +128,7 @@ const FashionTemp5 = () => {
                         }
                       />
                       <Skill
+                        color={color ? color : '#fff'}
                         skillStyle={Classes.skillText}
                         parentContainerStyle={Classes.ml}
                       />
@@ -131,8 +141,8 @@ const FashionTemp5 = () => {
                       {show.languages && (
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, languages: false })}
-                          bg="#fff"
-                          iconColor={'#011A34'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                           onDelete={LANGUAGES}
                         />
                       )}
@@ -140,12 +150,12 @@ const FashionTemp5 = () => {
                     <div>
                       <Heading
                         title={'LANGUAGES'}
-                        color="#fff"
+                        color={color ? color : '#fff'}
                         line={true}
                         minW={'full'}
                         lineW={'230px'}
                         margin="15px 0px 0px 10px"
-                        lineBg={'#fff'}
+                        lineBg={color ? color : '#fff'}
                         lineH="3px"
                         fontWeight={700}
                         fontSize={'18px'}
@@ -154,6 +164,7 @@ const FashionTemp5 = () => {
                         }
                       />
                       <Language
+                        color={color ? color : '#fff'}
                         langStyle={Classes.skillText}
                         langContainerStyle={Classes.ml}
                       />
@@ -165,6 +176,7 @@ const FashionTemp5 = () => {
                 minW={540}
                 maxW={540}
                 borderRightRadius={6}
+                bg={color ? color : '#fff'}
                 paddingTop={'37px'}
                 px={6}
                 pb={6}
@@ -174,21 +186,31 @@ const FashionTemp5 = () => {
                   SName={true}
                   FNameStyle={Classes.fashionName}
                   SNameStyle={Classes.fashionName}
+                  fontColor={backgroundColor ? backgroundColor : '#000000'}
                 />
-                <Profession professionStyle={Classes.ProfessionFashion} />
+                <Profession
+                  professionStyle={Classes.ProfessionFashion}
+                  fontColor={backgroundColor ? backgroundColor : '#000000'}
+                />
                 <Heading
                   title={'ABOUT ME'}
-                  color="#000"
+                  color={backgroundColor ? backgroundColor : '#000000'}
                   line={true}
                   minW={'full'}
                   lineW={'480px'}
                   margin="24px 0px 0px 0px"
-                  lineBg={'#000'}
+                  lineBg={backgroundColor ? backgroundColor : '#000000'}
                   lineH="3px"
                   fontWeight={800}
                   fontSize={'25px'}
                 />
-                <About minW={'full'} maxW="full" aboutStyle={Classes.aboutText} />
+                <About
+                  minW={'full'}
+                  maxW="full"
+                  aboutStyle={Classes.aboutText}
+                  fontColor="#000000"
+                  fontWeight={'600'}
+                />
                 {resumeData?.work?.visible && (
                   <div className={Classes.sideMenu}>
                     <div
@@ -198,8 +220,8 @@ const FashionTemp5 = () => {
                       {show.work && (
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, work: false })}
-                          bg="#011A34"
-                          iconColor={'#fff'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                           onDelete={WORK}
                         />
                       )}
@@ -207,16 +229,18 @@ const FashionTemp5 = () => {
                     <div>
                       <Heading
                         title={'WORK EXPERIENCE'}
-                        color="#000"
+                        color={backgroundColor ? backgroundColor : '#000000'}
                         line={true}
                         minW={'full'}
                         lineW={'477px'}
                         margin="24px 0px 0px 10px"
-                        lineBg={'#000'}
+                        lineBg={backgroundColor ? backgroundColor : '#000000'}
                         lineH="3px"
                         fontWeight={800}
                         fontSize={'25px'}
-                        onSideSectionShow={() => setShow({ ...show, work: true })}
+                        onSideSectionShow={() =>
+                          setShow({ ...show, work: true })
+                        }
                       />
                       <WorkExperience
                         position={true}
@@ -242,8 +266,8 @@ const FashionTemp5 = () => {
                       {show.education && (
                         <SectionSideMenu
                           onHide={() => setShow({ ...show, education: false })}
-                          bg="#011A34"
-                          iconColor={'#fff'}
+                          bg="#006772"
+                          iconColor={"#fff"}
                           onDelete={EDUCATION}
                         />
                       )}
@@ -251,12 +275,12 @@ const FashionTemp5 = () => {
                     <div>
                       <Heading
                         title={'EDUCATION'}
-                        color="#000"
+                        color={backgroundColor ? backgroundColor : '#000000'}
                         line={true}
                         minW={'full'}
                         lineW={'480px'}
                         margin="24px 0px 0px 10px"
-                        lineBg={'#000'}
+                        lineBg={backgroundColor ? backgroundColor : '#000000'}
                         lineH="3px"
                         fontWeight={800}
                         fontSize={'25px'}

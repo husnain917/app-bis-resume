@@ -1,9 +1,7 @@
-import { Box, Flex, HStack, Link } from "@chakra-ui/react";
-import { BsFillLayersFill } from "react-icons/bs";
-import { MdCastForEducation, MdEmail } from "react-icons/md";
+import { Box, Flex, HStack } from "@chakra-ui/react";
+import { MdEmail } from "react-icons/md";
 import style from "../../styles/templates/template1.module.scss";
 import Classes from "../../styles/templates/hybridTemplate.module.css";
-import { Tooltip } from "react-tippy";
 import Name from "../../src/components/commonSection/Name";
 import About from "../../src/components/commonSection/About";
 import Contact from "../../src/components/commonSection/Contact";
@@ -25,12 +23,13 @@ import {
   REFERENCE,
 } from "../../src/components/tempSectionSide/SectionSideConstant";
 import ChangeTempBtn from "../../src/components/changeTempbtn/ChangeTempBtn";
-import { Center, Image } from "@chakra-ui/react";
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 const SalesRepresentative = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  // custom Hook For Template
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );  // custom Hook For Template
   const [show, setShow] = useShow();
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
@@ -38,7 +37,7 @@ const SalesRepresentative = () => {
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     <Box style={{ overflow: "auto" }}>
       {/* //Template Layout for Template Navbar */}
-      <TempLayout education={true} skills={true} work={true} reference={true} downloadPDF={downloadPDFHandler}>
+      <TempLayout education={true} skills={true} work={true} references={true} downloadPDF={downloadPDFHandler}>
         <div className={style.main}>
           <ChangeTempBtn />
 
@@ -60,7 +59,7 @@ const SalesRepresentative = () => {
                 ref={pdfRef}
               >
                 <Box display="flex" flexDirection="row" background={"whitesmoke"}>
-                  <Box w="20%" minH="25em" backgroundColor="#DBCABA"></Box>
+                  <Box w="20%" minH="25em" backgroundColor={backgroundColor}></Box>
                 </Box>
                 <HStack
                   display="flex"
@@ -71,8 +70,6 @@ const SalesRepresentative = () => {
                   <HStack
                     mt={5}
                     alignItems="stretch"
-                    // borderWidth={1}
-                    // borderColor={"black"}
                     marginTop={"-35%"}
                     width={"92%"}
                   >
@@ -100,7 +97,7 @@ const SalesRepresentative = () => {
                           line={true}
                           lineW="45%"
                           lineH="0.30em"
-                          lineBg="#077BBD"
+                          lineBg={backgroundColor}
                           fontSize={"1.8em"}
                           lineStyle={Class.lineStyle}
                         />
@@ -113,106 +110,104 @@ const SalesRepresentative = () => {
                           circleIcon={true}
                           iconColor="black"
                           iconSize={"24px"}
-                          // style={"manager-f-name"}
                           margin={"2px 0px 2px 0px"}
                           parentStyle={Class.parentStyle}
                           style={Class.style}
                         />
                         {/* _____________ Skill _____________ */}
-                        {resumeData?.skills?.visible && (
-                          <>
-                            <HStack alignItems={"flex-start"} mt={10}>
-                              <Box w="20px" ml={"-27px"}>
+                        <Box margin={'20px 0px 10px 0px'}>
+                          {resumeData?.skills?.visible && (
+                            <div className={Classes.sideMenu}>
+                              <div className={Classes.sideMenuBox}>
                                 {show.skills && (
                                   <SectionSideMenu
                                     onHide={() =>
                                       setShow({ ...show, skills: false })
                                     }
-                                    bg="#E0EFFA"
-                                    iconColor={"#2A78AB"}
+                                    bg="#006772"
+                                    iconColor={"#fff"}
                                     onDelete={SKILL}
                                   />
                                 )}
-                              </Box>
-
-                              <Heading
-                                title={"Skills"}
-                                color="black"
-                                margin={"20px 0px 0px 0px"}
-                                onSideSectionShow={() =>
-                                  setShow({ ...show, skills: true })
-                                }
-                                line={true}
-                                lineW="45%"
-                                lineH="0.30em"
-                                lineBg="#077BBD"
-                                fontSize={"1.8em"}
-                                lineStyle={Class.lineStyle}
-                              />
-                            </HStack>
-                            <Skill
-                              skillStyle={Classes.skillText}
-                              rating={true}
-                              strokeWidth="2"
-                              // lineStyle={styles.line}
-                              strokeColor="#1890ff"
-                              trailColor="#fff"
-                            // percentageStyle={styles.percent}
-                            // parentContainerStyle={Classes.ml}
-                            />
-                          </>
-                        )}
-                        {/* Reference Section  */}
-                        {resumeData?.references?.visible && (
-                          <>
-                            <HStack alignItems={"flex-start"}>
-                              {/* Reference Section Heading */}
-                              <Heading
-                                title={"REFERENCE"}
-                                // headBg={"#3498DB"}
-                                margin={"10px 0px 0px 0px"}
-                                iconHeading={true}
-                                icon={(props) => (
-                                  <MdEmail {...props} size={20} color={"blue"} />
-                                )}
-                                color={"black"}
-                                fontSize={20}
-                                fontWeight="600"
-                                textPadding={"0px 0px 1px 0px"}
-                                padding={"0px 0px 0px 5px"}
-                                letterSpacing={3}
-                                minW={250}
-                                maxW={400}
-                                onSideSectionShow={() =>
-                                  setShow({ ...show, references: true })
-                                }
-                              />
-                              {/* Section Side Menu */}
-                              {show.references && (
-                                <SectionSideMenu
-                                  onHide={() =>
-                                    setShow({ ...show, references: false })
+                              </div>
+                              <div>
+                                <Heading
+                                  title={"Skills"}
+                                  color="black"
+                                  margin={"20px 0px 0px 0px"}
+                                  onSideSectionShow={() =>
+                                    setShow({ ...show, skills: true })
                                   }
-                                  onDelete={REFERENCE}
+                                  line={true}
+                                  lineW="45%"
+                                  lineH="0.30em"
+                                  lineBg={backgroundColor}
+                                  fontSize={"1.8em"}
+                                  lineStyle={Class.lineStyle}
                                 />
-                              )}
-                            </HStack>
-                            {/* &nbsp; */}
-                            {/* Reference Component */}
-                            <Reference
-                              name={true}
-                              profession={true}
-                              email={true}
-                              phone={true}
-                              phoneStyle={Class.profileText}
-                              emailStyle={Class.profileText}
-                              professionStyle={Class.profileText}
-                              nameStyle={Class.profileText}
-                              DndDirection="horizontal"
-                              parentContainerStyle={Class.parentContainerStyle}
-                            />
-                          </>
-                        )}
+                                <Skill
+                                  skillStyle={Classes.skillText}
+                                  rating={true}
+                                  strokeWidth="2"
+                                  strokeColor="#1890ff"
+                                  trailColor="#fff"
+                                />
+                              </div>
+                            </div>
+                          )}
+                        </Box>
+                        {/* Reference Section  */}
+                        <Box margin={'20px 0px 10px 0px'}>
+                          {resumeData?.references?.visible && (
+                            <div className={Classes.sideMenu}>
+                              <div className={Classes.sideMenuBox}>
+                                {show.references && (
+                                  <SectionSideMenu
+                                    onHide={() =>
+                                      setShow({ ...show, references: false })
+                                    }
+                                    bg="#006772"
+                                    iconColor={"#fff"}
+                                    onDelete={REFERENCE}
+                                  />
+                                )}
+                              </div>
+                              <div>
+                                <Heading
+                                  title={"REFERENCE"}
+                                  margin={"5px 0px 0px 0px"}
+                                  iconHeading={true}
+                                  icon={(props) => (
+                                    <MdEmail {...props} size={20} color={backgroundColor} />
+                                  )}
+                                  color={"black"}
+                                  fontSize={20}
+                                  fontWeight="600"
+                                  textPadding={"0px 0px 1px 0px"}
+                                  padding={"0px 0px 0px 5px"}
+                                  letterSpacing={3}
+                                  minW={250}
+                                  maxW={400}
+                                  onSideSectionShow={() =>
+                                    setShow({ ...show, references: true })
+                                  }
+                                />
+                                <Reference
+                                  name={true}
+                                  profession={true}
+                                  email={true}
+                                  phone={true}
+                                  phoneStyle={Class.profileText}
+                                  emailStyle={Class.profileText}
+                                  professionStyle={Class.profileText}
+                                  nameStyle={Class.profileText}
+                                  DndDirection="horizontal"
+                                  parentContainerStyle={Class.parentContainerStyle}
+                                />
+                              </div>
+                            </div>
+                          )}
+                        </Box>
                       </Box>
                     </Box>
                     <Box>
@@ -220,7 +215,6 @@ const SalesRepresentative = () => {
                         minW={350}
                         maxW={500}
                         bg="whitesmoke"
-                        //   p={4}
                         borderRadius={6}
                         marginLeft={"2em"}
                       >
@@ -233,7 +227,6 @@ const SalesRepresentative = () => {
                             SNameStyle={Class.sName}
                           />
                           {/* About Section  */}
-                          {/* <Profession professionStyle={Classes.ProfessionHybrid} /> */}
                           <Box mt="4">
                             <About
                               aboutStyle={Class.profileText}
@@ -243,109 +236,103 @@ const SalesRepresentative = () => {
                           </Box>
                         </Box>
                         {/* Work Experience Section */}
-                        {resumeData?.work?.visible && (
-                          <>
-                            <HStack alignItems={"flex-start"} mt={4}>
-                              {/* Section Side Menu */}
-                              {show.work && (
-                                <SectionSideMenu
-                                  bg={"#313B47"}
-                                  onHide={() => setShow({ ...show, work: false })}
-                                  onDelete={WORK}
-                                />
-                              )}
-                              {/* Work Experience Heading  */}
-                              <Heading
-                                maxW={"400"}
-                                title="WORK EXPERIENCE"
-                                circleSize="38px"
-                                circleBg="#313B47"
-                                circleIconHeading={true}
-                                icon={(props) => (
-                                  <BsFillLayersFill
-                                    {...props}
-                                    size={18}
-                                    color={"white"}
+                        <Box
+                          margin={'20px 0px 10px 0px'}
+                        >
+                          {resumeData?.work?.visible && (
+                            <div className={Classes.sideMenu}>
+                              <div className={Classes.sideMenuBox}>
+                                {show.work && (
+                                  <SectionSideMenu
+                                    bg="#006772"
+                                    iconColor={"#fff"}
+                                    onHide={() => setShow({ ...show, work: false })}
+                                    onDelete={WORK}
                                   />
                                 )}
-                                fontSize="23px"
-                                fontWeight={"bold"}
-                                color="#313B47"
-                                // minW={"full"}
-                                // maxW="full"
-                                margin={"10px 0px"}
-                                onSideSectionShow={() =>
-                                  setShow({ ...show, work: true })
-                                }
-                              />
-                            </HStack>
-                            {/* Work Experience Components */}
-                            <WorkExperience
-                              date={true}
-                              position={true}
-                              company={true}
-                              location={true}
-                              summary={true}
-                              summary_placeholder="Company Description (optional,fill when the company is not well known"
-                              location_placeholder="Country,City"
-                              dateStyle={Classes.date}
-                              positionStyle={Classes.programText}
-                              companyStyle={Classes.institute}
-                              locationStyle={Classes.date}
-                              summaryStyle={Classes.date}
-                            />
-                          </>
-                        )}
-                        {/* Education Section  */}
-                        {resumeData?.education?.visible && (
-                          <>
-                            <HStack alignItems={"flex-start"} mt={4}>
-                              {/* Section Side Menu */}
-                              {show.education && (
-                                <SectionSideMenu
-                                  bg={"#313B47"}
-                                  onHide={() =>
-                                    setShow({ ...show, education: false })
+                              </div>
+                              <div>
+                                <Heading
+                                  maxW={"400"}
+                                  title="WORK EXPERIENCE"
+                                  line={true}
+                                  lineH="0.30em"
+                                  lineBg={backgroundColor}
+                                  lineStyle={Class.lineStyle}
+                                  fontSize="23px"
+                                  fontWeight={"bold"}
+                                  color="#313B47"
+                                  margin={"20px 0px 0px 0px"}
+                                  onSideSectionShow={() =>
+                                    setShow({ ...show, work: true })
                                   }
-                                  onDelete={EDUCATION}
                                 />
-                              )}
-                              {/* Heading For Education Section  */}
-                              <Heading
-                                title="EDUCATION"
-                                circleSize="38px"
-                                circleBg="#313B47"
-                                circleIconHeading={true}
-                                icon={(props) => (
-                                  <MdCastForEducation
-                                    {...props}
-                                    size={18}
-                                    color={"white"}
+                                <WorkExperience
+                                  date={true}
+                                  position={true}
+                                  company={true}
+                                  location={true}
+                                  summary={true}
+                                  summary_placeholder="Company Description (optional,fill when the company is not well known"
+                                  location_placeholder="Country,City"
+                                  dateStyle={Classes.date}
+                                  positionStyle={Classes.programText}
+                                  companyStyle={Classes.institute}
+                                  locationStyle={Classes.date}
+                                  summaryStyle={Classes.date}
+                                />
+                              </div>
+                            </div>
+                          )}
+                        </Box>
+                        {/* Education Section  */}
+                        <Box
+                          margin={'30px 0px 10px 0px'}
+                        >
+                          {resumeData?.education?.visible && (
+                            <div className={Classes.sideMenu}>
+                              <div className={Classes.sideMenuBox}>
+                                {show.education && (
+                                  <SectionSideMenu
+                                    bg="#006772"
+                                    iconColor={"#fff"}
+                                    onHide={() =>
+                                      setShow({ ...show, education: false })
+                                    }
+                                    onDelete={EDUCATION}
                                   />
                                 )}
-                                fontSize="23px"
-                                fontWeight={"bold"}
-                                color="#313B47"
-                                margin={"0px 0px 10px 0px"}
-                                onSideSectionShow={() =>
-                                  setShow({ ...show, education: true })
-                                }
-                              />
-                            </HStack>
-                            {/* Education Components */}
-                            <Education
-                              institution={true}
-                              degree={true}
-                              degree_placeholder="Study Program"
-                              date={true}
-                              location={true}
-                              institutionStyle={Classes.institute}
-                              degreeStyle={Classes.programText}
-                              dateStyle={Classes.date}
-                              locationStyle={Classes.date}
-                            />
-                          </>
-                        )}
+                              </div>
+                              <div>
+                                <Heading
+                                  title="EDUCATION"
+                                  line={true}
+                                  lineH="0.30em"
+                                  lineBg={backgroundColor}
+                                  lineStyle={Class.lineStyle}
+                                  fontSize="23px"
+                                  fontWeight={"bold"}
+                                  color="#313B47"
+                                  margin={"20px 0px 0px 0px"}
+                                  onSideSectionShow={() =>
+                                    setShow({ ...show, education: true })
+                                  }
+                                />
+                                <Education
+                                  institution={true}
+                                  degree={true}
+                                  degree_placeholder="Study Program"
+                                  date={true}
+                                  location={true}
+                                  institutionStyle={Classes.institute}
+                                  degreeStyle={Classes.programText}
+                                  dateStyle={Classes.date}
+                                  locationStyle={Classes.date}
+                                />
+                              </div>
+                            </div>
+                          )}
+                        </Box>
                       </Box>
                     </Box>
                   </HStack>

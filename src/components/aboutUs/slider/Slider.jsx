@@ -58,7 +58,7 @@ const Slider = ({ title, desc, date, name, rating }) => {
             slidesPerGroup: 1,
           },
           390: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             slidesPerGroup: 4,
           },
           550: {

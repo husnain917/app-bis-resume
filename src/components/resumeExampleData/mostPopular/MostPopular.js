@@ -21,7 +21,6 @@ import { Navigation } from "swiper";
 
 const MostPopular = ({ data }) => {
   const swiperRef = useRef();
-  // console.log("Swiper", swiperRef);
   const settings = {
     infinite: true,
     speed: 300,
@@ -29,7 +28,6 @@ const MostPopular = ({ data }) => {
     slidesToScroll: 2,
     autoplay: true,
   };
-  // console.log("mostPopular >>>>>>>>", data.popularTemplates);
   return (
     <Box overflow={["visible", "visible", "hidden"]}>
       <Box
@@ -89,17 +87,10 @@ const MostPopular = ({ data }) => {
           </Box>
         </Box>
       </Box>
-      <Box
-        position={"relative"}
-        // padding={"0 44px"}
-        overflow={"hidden"}
-        // width={"100vw"}
-      >
+      <Box position={"relative"} overflow={"hidden"}>
         <Box
           opacity={1}
-          // position={"relative"}
           maxWidth={"1122px"}
-          // margin={" 0 auto"}
           display={"flex"}
           flexDirection={"column"}
         >

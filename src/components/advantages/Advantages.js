@@ -63,11 +63,18 @@ export default function Advantages() {
             pr="10%"
             pb="5%"
           >
-            <Box w={["100%", "100%", "100%", "50%"]}>
+            <Box
+              w={["100%", "100%", "100%", "50%"]}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"center"}
+              padding={"0px 20px"}
+            >
               <Image
                 src={data[isTabActive].imgSrc}
                 w="100%"
                 h={["90vh", "90vh", "auto", "auto", "auto"]}
+                alt="will show soon"
               />
             </Box>
             <Box w={["100%", "100%", "100%", "50%"]} mt="2.5%">

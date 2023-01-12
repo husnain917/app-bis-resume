@@ -14,45 +14,35 @@ import { CONTACT_US_DATA, PRIVACY_DATA } from "./data";
 import Underline from "../aaronGraphicTemp/Underline";
 import { PRIVACY_PAGE_DATA } from "./data";
 import { extendTheme } from "@chakra-ui/react";
-import styles from "../../../styles/sideBarSection.module.css"
+import styles from "../../../styles/sideBarSection.module.css";
 import SideBar from "../sideBar/SideBar";
 import fonts from "./fonts";
-const theme = extendTheme({
-  fonts: {
-    heading: "Open Sans",
-    body: "'Euclid Circular B', sans-serif",
-  },
-});
+import SideBarSection from "../aboutUs/SideBarSection/SideBarSection";
 
 const PrivacyPage = () => {
   return (
     <>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider>
         {/* <Container  */}
 
-        <Container
-          maxW={["100%", "100%", "80%", "80%"]}
-
+        <Box
+          maxW={["100%", "100%", "92%", "92%"]}
           display={"flex"}
           justifyContent={"space-between"}
         >
           <Box
-            maxW={["0%", "0%", "0%", "5%"]}
-            // padding={'70px 0px 0px 0px'}
-            padding={'40px 0px 0px 0px'}
-            display={["none", "none", "none", "block"]}
+            padding={'40px 0px'}
+            maxW={["0%", "0%", "0%", "10%"]}
+            zIndex={"1049"}
+    
+            pl="5%"
           >
-            <Box
-              className={styles.sideBarContainer}
-            >
+            <Box className={styles.sideBarContainer}>
               <SideBar />
             </Box>
           </Box>
 
-          <Box
-            maxW={["100%", "100%", "100%", "88%"]}
-
-          >
+          <Box maxW={["100%", "100%", "80%", "80%",]}>
             <Box>
               {/* main title */}
               <Box padding={"40px 0px"} marginBottom={10}>
@@ -613,7 +603,7 @@ const PrivacyPage = () => {
               </Box>
             </Box>
           </Box>
-        </Container>
+        </Box>
       </ChakraProvider>
     </>
   );

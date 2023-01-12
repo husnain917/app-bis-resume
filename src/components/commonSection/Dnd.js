@@ -1,80 +1,80 @@
-import React, { Component } from 'react';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import equal from 'deep-equal';
-import { Tooltip } from 'react-tippy';
-import { Image } from '@chakra-ui/react';
+import React, { Component } from "react";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import equal from "deep-equal";
+import { Tooltip } from "react-tippy";
+import { Image } from "@chakra-ui/react";
 
-import styles from '../../../styles/templates/dnd.module.scss';
+import styles from "../../../styles/templates/dnd.module.scss";
 
 const getDragIconStyle = () => ({
-  userSelect: 'none',
-  width: '26px',
-  height: '26px',
-  background: '#006772',
-  position: 'absolute',
-  borderRadius: '100%',
+  userSelect: "none",
+  width: "26px",
+  height: "26px",
+  background: "#006772",
+  position: "absolute",
+  borderRadius: "100%",
   top: -13,
   right: 30,
 });
 const getAddIconStyle = () => ({
-  userSelect: 'none',
-  width: '26px',
-  height: '26px',
-  background: '#006772',
-  position: 'absolute',
-  borderRadius: '100%',
+  userSelect: "none",
+  width: "26px",
+  height: "26px",
+  background: "#006772",
+  position: "absolute",
+  borderRadius: "100%",
   top: -13,
   right: 0,
-  cursor: 'pointer',
+  cursor: "pointer",
 });
 const getRemoveIconStyle = () => ({
-  userSelect: 'none',
-  width: '26px',
-  height: '26px',
-  background: '#006772',
-  position: 'absolute',
-  borderRadius: '100%',
+  userSelect: "none",
+  width: "26px",
+  height: "26px",
+  background: "#006772",
+  position: "absolute",
+  borderRadius: "100%",
   top: -13,
   right: 60,
-  cursor: 'pointer',
+  cursor: "pointer",
 });
 const getdragedStyle = (isDragging) => ({
-  position: 'relative',
+  position: "relative",
   // transform: isDragging ? 'scale(1.07)' : 'scale(1)',
-  '-webkit-box-shadow': isDragging
-    ? '0px 0px 24px 0px rgba(0,0,0,0.16)'
-    : 'none',
-  '-moz-box-shadow': isDragging ? '0px 0px 24px 0px rgba(0,0,0,0.16)' : 'none',
-  'box-shadow': isDragging ? '0px 0px 24px 0px rgba(0,0,0,0.16)' : 'none',
+  "-webkit-box-shadow": isDragging
+    ? "0px 0px 24px 0px rgba(0,0,0,0.16)"
+    : "none",
+  "-moz-box-shadow": isDragging ? "0px 0px 24px 0px rgba(0,0,0,0.16)" : "none",
+  "box-shadow": isDragging ? "0px 0px 24px 0px rgba(0,0,0,0.16)" : "none",
 });
 
 const getListStyle = (isDraggingOver) => ({
-  '-webkit-box-shadow': isDraggingOver
-    ? 'inset 0px 0px 18px 0px rgba(0,0,0,0.08)'
-    : 'none',
-  '-moz-box-shadow': isDraggingOver
-    ? 'inset 0px 0px 18px 0px rgba(0,0,0,0.08)'
-    : 'none',
-  'box-shadow': isDraggingOver
-    ? 'inset 0px 0px 18px 0px rgba(0,0,0,0.08)'
-    : 'none',
-  background: isDraggingOver ? 'none' : 'none',
+  "-webkit-box-shadow": isDraggingOver
+    ? "inset 0px 0px 18px 0px rgba(0,0,0,0.08)"
+    : "none",
+  "-moz-box-shadow": isDraggingOver
+    ? "inset 0px 0px 18px 0px rgba(0,0,0,0.08)"
+    : "none",
+  "box-shadow": isDraggingOver
+    ? "inset 0px 0px 18px 0px rgba(0,0,0,0.08)"
+    : "none",
+  background: isDraggingOver ? "none" : "none",
 });
 
 const getListStyleHorizontal = (isDraggingOver) => ({
-  '-webkit-box-shadow': isDraggingOver
-    ? 'inset 0px 0px 18px 0px rgba(0,0,0,0.08)'
-    : 'none',
-  '-moz-box-shadow': isDraggingOver
-    ? 'inset 0px 0px 18px 0px rgba(0,0,0,0.08)'
-    : 'none',
-  'box-shadow': isDraggingOver
-    ? 'inset 0px 0px 18px 0px rgba(0,0,0,0.08)'
-    : 'none',
-  background: isDraggingOver ? 'none' : 'none',
-  display: 'flex',
-  flexDirection: 'row',
-  flexWrap: 'wrap',
+  "-webkit-box-shadow": isDraggingOver
+    ? "inset 0px 0px 18px 0px rgba(0,0,0,0.08)"
+    : "none",
+  "-moz-box-shadow": isDraggingOver
+    ? "inset 0px 0px 18px 0px rgba(0,0,0,0.08)"
+    : "none",
+  "box-shadow": isDraggingOver
+    ? "inset 0px 0px 18px 0px rgba(0,0,0,0.08)"
+    : "none",
+  background: isDraggingOver ? "none" : "none",
+  display: "flex",
+  flexDirection: "row",
+  flexWrap: "wrap",
 });
 
 class Dnd extends Component {
@@ -170,6 +170,7 @@ class Dnd extends Component {
                               <Image
                                 className={styles.icon}
                                 src="/icons/plus.png"
+                                alt="will show soon"
                               />
                             </Tooltip>
                           </div>
@@ -191,6 +192,7 @@ class Dnd extends Component {
                                 <Image
                                   className={styles.icon2}
                                   src="/icons/equal.png"
+                                  alt="will show soon"
                                 />
                               </Tooltip>
                             </div>
@@ -208,6 +210,7 @@ class Dnd extends Component {
                                 <Image
                                   className={styles.icon2}
                                   src="/icons/minus.png"
+                                  alt="will show soon"
                                 />
                               </Tooltip>
                             </div>

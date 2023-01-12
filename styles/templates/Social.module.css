@@ -1,214 +1,41 @@
-.main {
-  position: relative;
-  background-color: transparent;
-  /* display: flex;
-  justify-content: center; */
-}
-
-.swapCont {
-  position: absolute;
-  right: 80px;
-  top: 80px;
-}
-
-.swap {
-  width: 40px;
-  height: 40px;
-  background-color: #03a9f4;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-
-  transition: all 0.2s;
-}
-
-.swap:hover {
-  transform: scale(1.1);
-  transition: all 0.2s;
-}
-
-.swap img {
-  width: 70%;
-  filter: invert(1);
-}
-
-.summaryHeading {
-  font-size: 2rem;
-}
-
-.mainContainer {
-  background-color: linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
-  ;
-
-}
-
-.name {
-  font-size: 3.3rem !important;
-  font-weight: bold;
-  color: black;
-  max-width: 400px;
-  min-width: 400px;
-  color: #E07559 !important;
-
-}
-
-.profession {
-  color: black;
-  font-size: 1.5rem !important;
-  max-width: 400px;
-  min-width: 400px;
+.nameStyle {
+  font-size: 2.8em;
   font-weight: 500;
-
-  padding: 0px !important;
-  margin-bottom: 20px;
+  color: #E07559;
+  background-color: transparent;
 }
 
-.postion {
-  font-size: 18px;
-  font-weight: bold;
+.profileSubTitle {
+  font-size: 1.6em;
+  font-weight: 500;
+  color: #000000;
+  background-color: transparent !important;
 }
 
-
-
-
-.date {
-  font-size: 22px !important;
-  font-weight: bold;
+.contactFont {
+  font-size: 16px !important;
+  color: #000000;
+  font-weight: 600;
 }
 
-.company {
-  font-size: 22px !important;
-  font-weight: bold;
-  margin: 0 !important;
-  padding: 0 !important;
-  min-width: 350px !important;
-  max-width: 350px !important;
+.rightContainerWork {
+  width: 90%;
 }
-
 
 .line {
-  width: 200px !important;
   height: 10px;
+  width: 100px;
   border-radius: 4px;
-  margin-top: 15px !important;
+  margin-top: 10px !important;
 }
 
 .percent {
-  margin-top: 5px !important;
-}
-
-.projectTitleText {
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-
-}
-.description {
-  font-size: 22px;
-  font-weight: 500;
-  min-width: 380px;
-  max-width: 380px;
-  margin-top: 10px;
-}
-
-.Educationdescription {
-  font-size: 15px;
-  font-weight: 500;
-  min-width: 380px;
-  max-width: 380px;
-}
-
-.date {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-
-
-.skillText {
-  font-size: 16px;
-
-  color: black !important;
-  min-width: 180px;
-  max-width: 180px;
-}
-.projectTitleText {
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-
-}
-
-.mt {
-  margin-top: 4%;
-  margin-bottom: 2%;
-
-}
-
-.profileText {
-  color: black;
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 5px !important;
-  padding: 0 !important;
-}
-
-
-
-.referenceName {
-  font-size: 20px;
-  font-weight: 700;
-
-}
-
-.sideMenu {
-  display: flex;
-  align-items: flex-start;
-}
-
-.sideMenuBox {
-  width: 20px;
-
-}
-
-.proContcat {
-  font-size: 20px;
-}
-
-.contactAddress {
-  font-size: 20px;
-  font-weight: 500;
-  min-width: 380px;
-  max-width: 380px;
-}
-
-.lineText {
-  height: 10px;
-  width: 120px;
-  border-radius: 4px;
-  margin-top: 10px !important;
-
-  margin-left: 70px;
-}
-
-.percentExp {
-  color: black;
+  color: #000000;
   font-size: 14px !important;
 }
 
-.company1 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0 !important;
-  padding: 0 !important;
-  min-width: 380px;
-  max-width: 380px;
-}
-.positionSty{
-  font-size: 22px;
-  font-weight: 500;
-  max-width: 350px;
-  min-width: 350px;
+.date {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 600;
 }

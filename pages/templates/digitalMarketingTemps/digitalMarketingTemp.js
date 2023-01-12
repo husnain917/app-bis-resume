@@ -29,6 +29,9 @@ export default function Digital_Marketing_Temp() {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   return (
     <>
       <div
@@ -61,11 +64,12 @@ export default function Digital_Marketing_Temp() {
                   w="40%"
                   pb="10%"
                   minW={'340px'}
-                  bgColor="#3A4D6C"
+                  bgColor={backgroundColor ? backgroundColor : '#3A4D6C'}
                   borderLeftRadius={6}
                   pr={3}
                   pl={12}
                   py={8}
+                  transition={'0.5s'}
                 >
                   {/* _____________ Profile _____________ */}
                   <ImageSelector
@@ -103,7 +107,7 @@ export default function Digital_Marketing_Temp() {
                     minW="100%"
                     maxW="100%"
                     aboutStyle={Classes.aboutText}
-                    textColor="#fff"
+                    fontColor="#fff"
                   />
 
                   {/* _____________ Skill _____________ */}
@@ -117,8 +121,8 @@ export default function Digital_Marketing_Temp() {
                             <SectionSideMenu
                               onDelete={SKILL}
                               onHide={() => setShow({ ...show, skills: false })}
-                              bg="#F2DB7A"
-                              iconColor={'#3A4D6C'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
@@ -197,8 +201,8 @@ export default function Digital_Marketing_Temp() {
                             <SectionSideMenu
                               onHide={() => setShow({ ...show, work: false })}
                               onDelete={WORK}
-                              bg="#F2DB7A"
-                              iconColor={'#3A4D6C'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
@@ -252,8 +256,8 @@ export default function Digital_Marketing_Temp() {
                                 setShow({ ...show, education: false })
                               }
                               onDelete={EDUCATION}
-                              bg="#F2DB7A"
-                              iconColor={'#3A4D6C'}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
