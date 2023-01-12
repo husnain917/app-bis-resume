@@ -25,22 +25,24 @@ const PrivacyPage = () => {
       <ChakraProvider>
         {/* <Container  */}
 
-        <Container
-          maxW={["100%", "100%", "80%", "80%"]}
+        <Box
+          maxW={["100%", "100%", "92%", "92%"]}
           display={"flex"}
           justifyContent={"space-between"}
         >
           <Box
-            maxW={["0%", "0%", "0%", "5%"]}
-            padding={"40px 0px 0px 0px"}
-            display={["none", "none", "none", "block"]}
+            padding={'40px 0px'}
+            maxW={["0%", "0%", "0%", "10%"]}
+            zIndex={"1049"}
+    
+            pl="5%"
           >
             <Box className={styles.sideBarContainer}>
               <SideBar />
             </Box>
           </Box>
 
-          <Box maxW={["100%", "100%", "100%", "88%"]}>
+          <Box maxW={["100%", "100%", "80%", "80%",]}>
             <Box>
               {/* main title */}
               <Box padding={"40px 0px"} marginBottom={10}>
@@ -601,7 +603,7 @@ const PrivacyPage = () => {
               </Box>
             </Box>
           </Box>
-        </Container>
+        </Box>
       </ChakraProvider>
     </>
   );

@@ -30,26 +30,9 @@ import Section5 from "./section5/Section5";
 import SideBar from "../sideBar/SideBar";
 import SideBarSection from "./SideBarSection/SideBarSection";
 import GoTopButton from "./goToTopButton/GoTopButton";
+import styles from "../../../styles/sideBarSection.module.css"
 const AboutUs = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const listenToScroll = () => {
-    let heightToHidden = 0.5;
-    let againHide = 5050;
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (winScroll < heightToHidden || winScroll > againHide) {
-      setIsVisible(false);
-    } else if (winScroll > heightToHidden) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-  
-  useEffect(() => {
-    window.addEventListener("scroll", listenToScroll);
-  }, []);
   const swiperRef = useRef();
   useEffect(() => {
     AOS.init();
@@ -59,22 +42,6 @@ const AboutUs = () => {
       <Box className="masterWrapper">
         <Box>
           <Box>
-            <Box
-              borderRadius={["60px"]}
-              width={["60px"]}
-              position={["fixed"]}
-              zIndex={"1049"}
-              transform={["scale(1)"]}
-              marginLeft={"10px"}
-              display={["none", "none", "block", "block", "block"]}
-            >
-              {isVisible && (
-                <Fade>
-                  {" "}
-                  <SideBarSection />{" "}
-                </Fade>
-              )}
-            </Box>
             <Box
               padding={"50px 0px 50px 0px"}
               className={"mainWrapper"}
@@ -150,6 +117,31 @@ const AboutUs = () => {
             </Box>
           </Box>
         </Box>
+
+        <Box
+                maxW={["100%", "100%", "80%", "80%","85%"]}
+
+                display={"flex"}
+                justifyContent={"space-between"}
+            >
+                <Box
+                    padding={'40px 0px'}
+                    maxW={["0%", "0%", "0%", "10%"]}
+                    zIndex={"1049"}
+          
+                >
+                    <Box
+                        className={styles.sideBarContainer}
+                        ml="20%"
+                    >
+                        <SideBar />
+                    </Box>
+                </Box>
+
+
+
+        <Box maxW={["100%", "100%", "80%", "80%","85%"]}>
+
         <Box className={"section1"} padding={"50px 0px 50px 0px"}>
           <Box maxW={"750px"} className={"container1"}>
             <Box maxW={"750px"} margin={"0 auto"} fontSize={"1.1rem"}>
@@ -186,6 +178,7 @@ const AboutUs = () => {
             </Box>
           </Box>
         </Box>
+  
         <Box
           className={"section2"}
           style={{
@@ -254,6 +247,9 @@ const AboutUs = () => {
             </UnorderedList>
           </Box>
         </Box>
+</Box>
+</Box>
+
         <Box className="section4" paddingTop={"50px"} bg={"#f6f5f0"}>
           <Box
             className="container1"

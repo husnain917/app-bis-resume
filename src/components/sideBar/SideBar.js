@@ -32,7 +32,8 @@ export default function SideBar() {
         <Box
             maxW={["0%", "0%", "0%", "10%"]}
             // padding={'70px 0px 0px 0px'}
-            display={["none", "none", "none", "block"]}
+            display={["none", "none", "block", "block", "block"]}
+
         >
             <Box
                 width={'5rem'}
@@ -42,8 +43,6 @@ export default function SideBar() {
                 left="0%"
     
             >
-
-
                 <nav className={styles.nav}>
 
                     {
