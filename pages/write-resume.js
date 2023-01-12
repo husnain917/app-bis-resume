@@ -26,39 +26,31 @@ export default function Write_resume() {
 
             <>
                 <Box bgColor={"#f2f4f6"} h={["100%", "100%"]} display={"flex"}
+                                maxW={["100%", "100%", "100%", "100%"]}
+
                     justifyContent={"space-between"}  >
-
-
                     <Box
-                        maxW={["0%", "0%", "0%", "5%"]}
-                        // padding={'70px 0px 0px 0px'}
-                        ml={"7%"}
-                        display={["none", "none", "none", "block"]}
+                        padding={'40px 0px'}
+        
+                        zIndex={"1049"}
+                      pl={["","","5%"]}
+    
                     >
                         <Box
                             className={styles.sideBarContainer}
+
                         >
                             <SideBar />
                         </Box>
                     </Box>
-
-
                     <Container
-                        maxW={['100%', '100%', '100%', '70%', '70%']}
+                        maxW={['100%', '100%', '70%', '70%', '70%']}
                         bgColor="white"
                         border="3px"
-
                     >
-
-
-
-
-
                         <Box
-                            maxW={["100%", "100%", "100%", "88%"]}
-
+                            maxW={["100%", "100%", "100%", "100%"]}
                         >
-
                             <Box p={["5%", "5%"]} >
 
                                 <Text fontSize={["30px", "40px", "40px"]} className={"main-heading"} mb="3%"  >How to Write a Resume in 2022 | Beginners Guide

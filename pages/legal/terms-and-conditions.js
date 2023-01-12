@@ -17,43 +17,32 @@ import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import TableOfContent from "../../src/components/legal/TableOfContent";
 import SideBarSection from "../../src/components/aboutUs/SideBarSection/SideBarSection";
 import styles from "../../styles/resumeFormats.module.css";
+import SideBar from "../../src/components/sideBar/SideBar";
 
 export default function Terms_And_Conditions() {
   // sidebar state
-  const [isVisible, setIsVisible] = useState(false);
-  const listenToScroll = () => {
-    let heightToHidden = 20;
-    let againHide = 4310;
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-
-    if (winScroll < heightToHidden || winScroll > againHide) {
-      setIsVisible(false);
-    } else if (winScroll > heightToHidden) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", listenToScroll);
-  }, []);
 
   return (
     <>
-      <Container
-        maxW={["100%", "100%", "80%", "80%"]}
-        display={"flex"}
+      <Box
+        maxW={["100%", "100%", "92%", "92%"]} display={"flex"}
         justifyContent={"space-between"}
       >
         <Box
+          padding={'40px 0px'}
           maxW={["0%", "0%", "0%", "10%"]}
-          // padding={'70px 0px 0px 0px'}
-          display={["none", "none", "none", "block"]}
+          zIndex={"1049"}
+          pl="5%"
         >
-          <Box position={["fixed"]} zIndex={"1049"}></Box>
+          <Box
+            className={styles.sideBarContainer}
+            display={["none", "none", "block", "block", "block"]}
+          >
+            <SideBar />
+          </Box>
         </Box>
-        <Box maxW={["100%", "100%", "100%", "88%"]}>
+        <Box maxW={["100%", "100%", "80%", "80%"]}>
+
           {/* main title */}
           <Box padding={"40px 0px"}>
             {TERMS_DATA?.TermsOfUse?.heading?.map((item, index) => (
@@ -503,7 +492,7 @@ export default function Terms_And_Conditions() {
             </Box>
           </Box>
         </Box>
-      </Container>
+      </Box>
     </>
   );
 }

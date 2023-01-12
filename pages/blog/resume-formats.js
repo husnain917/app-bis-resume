@@ -14,6 +14,7 @@ import styles from "../../styles/resumeFormats.module.css";
 import FormatsTables from "../../src/components/blog/FormatsTables";
 import Footer from "../../src/components/footer/Footer";
 import Layout from "../../src/Layout";
+import SideBar from "../../src/components/sideBar/SideBar";
 
 export default function Resume_Formats() {
   // state
@@ -21,22 +22,30 @@ export default function Resume_Formats() {
 
   return (
     <>
-  
+
       <ResumeFormats />
       {/* content container */}
       <Container
-        maxW={["100%", "100%", "80%", "80%"]}
+        maxW={["100%", "100%", "90%", "90%"]}
         display={"flex"}
         justifyContent={"space-between"}
       >
         <Box
-          maxW={["0%", "0%", "0%", "10%"]}
+          padding={'40px 0px'}
+          maxW={["0%", "0%", "0%", "5%"]}
+          zIndex={"1049"}
         >
-          <Sidebar />
+          <Box
+            className={styles.sideBarContainer}
+            display={["none", "none", "block", "block", "block"]}
+          >
+            <SideBar />
+          </Box>
         </Box>
+
         <Box
           padding={"20px 0px 40px 0px"}
-          maxW={["100%", "100%", "100%", "88%"]}
+          maxW={["100%", "100%", "80%", "80%"]}
         >
           {
             RESUME_NOW.map((item, index) => (
