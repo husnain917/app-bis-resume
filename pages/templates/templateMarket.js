@@ -130,7 +130,7 @@ export default function TemplateMarket() {
                                     </Box>
                                     {/* language */}
                                     <Box
-                                        margin={'20px 0px 30px 5px'}
+                                        margin={'20px 0px 30px 6px'}
                                     >
                                         {resumeData?.languages?.visible && (
                                             <div className={Classes.sideMenu}>

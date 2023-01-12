@@ -75,7 +75,7 @@ export default function TemplateBabySitter() {
                             >
                                 <Box
                                     py={8}
-                                    pl={12}
+                                    px={10}
                                     bgColor={backgroundColor ? backgroundColor : '#DDCAB4'}
                                     transition="0.5s background"
                                     borderRadius={'50px 50px'}
@@ -86,13 +86,14 @@ export default function TemplateBabySitter() {
                                         maxWidth="240px"
                                         maxHeight="240px"
                                         minHeight="240px"
-                                        marginTop="30px"
+                                        marginTop="10px"
+                                        marginLeft="8px"
                                         borderColor={color ? color : ''}
                                     />
                                     <Heading
                                         title={'CONTACT PERSON'}
                                         color={color ? color : '#000000'}
-                                        margin={'20px 0px 0px 0px'}
+                                        margin={'30px 0px 0px 0px'}
                                         fontWeight={700}
                                     />
                                     <Contact
