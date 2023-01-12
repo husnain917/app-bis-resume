@@ -91,6 +91,7 @@ export default function Navbar() {
               return (
                 <>
                   <Box
+                    key={items?.label}
                     display={{ base: "inline-block", md: "inline-block" }}
                     justify={{ base: "end" }}
                     key={index}

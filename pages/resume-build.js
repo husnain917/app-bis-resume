@@ -27,7 +27,7 @@ export default function ResumeBuild() {
             <div >
                 <Box w={["100%", "100%", "100%"]} mt={["2%", "2%", "2%"]} display="flex" flexDirection={["column", "column", "row"]} justifyContent="space-around"    >
                     <Box
-                        w={["100%", "40%", "40%"]} mt={["2%", "2%", "2%"]} >
+                        w={["100%","100%","100%", "40%", "40%"]} mt={["2%", "2%", "2%"]} >
 
 
                         <Box fontSize={["40px", "50px", "50px"]} color="black" className={"main-heading"}
@@ -65,7 +65,7 @@ export default function ResumeBuild() {
                     </Box>
 
                     <Box
-                        w={["100%", "50%", "50%"]} mt={["2%", "2%", "2%"]} >
+                        w={["85%","85%","85%", "50%", "50%"]} mt={["2%", "2%", "2%"]}  ml={["11%", "8%", "8%"]}>
 
 
                         <Image

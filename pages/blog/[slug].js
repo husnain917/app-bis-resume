@@ -1,14 +1,17 @@
-import fs from "fs";
-import matter from "gray-matter";
 import React from "react";
 import BlogsDetail from "../../src/components/blog/blogsDetail/BlogsDetail";
-function Blogs({ data, allBlogs }) {
-  const allData = JSON.parse(allBlogs);
-  const mdData = JSON.parse(data);
-
+import { createClient } from "contentful";
+const client = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+});
+function Blogs({ allBlogs, blogDetail }) {
+  if (!blogDetail) {
+    return <div>Loading</div>;
+  }
   return (
     <div>
-      <BlogsDetail allBlogs={allData} mdData={mdData} />
+      <BlogsDetail allBlogs={allBlogs} blogDetail={blogDetail} />
     </div>
   );
 }
@@ -16,45 +19,30 @@ function Blogs({ data, allBlogs }) {
 export default Blogs;
 
 export async function getStaticProps({ params: { slug } }) {
-  // List of files in blgos folder
-  const filesInBlogs = fs.readdirSync("./_posts/blogs");
-
-  // Get the front matter and slug (the filename without .md) of all files
-  const blogs = filesInBlogs.map((filename) => {
-    const file = fs.readFileSync(`./_posts/blogs/${filename}`, "utf8");
-    const matterData = matter(file);
-
-    return {
-      ...matterData.data, // matterData.data contains front matter
-      slug: filename.slice(0, filename.indexOf(".")),
-    };
+  const allBlogs = await client.getEntries({
+    content_type: "bisResumeBlogs",
   });
-  const allBlogs = JSON.stringify(blogs);
-
-  const fileContent = matter(
-    fs.readFileSync(`./_posts/blogs/${slug}.md`, "utf8")
-  );
-  let frontmatter = fileContent.data;
-  const markdown = fileContent.content;
-  const data = JSON.stringify({ frontmatter, markdown });
+  const response = await client.getEntries({
+    content_type: "bisResumeBlogs",
+    "fields.slug": slug,
+  });
 
   return {
     props: {
-      allBlogs,
-      data,
+      allBlogs: allBlogs.items,
+      blogDetail: response.items[0],
     },
   };
 }
 export async function getStaticPaths() {
-  const filesInProjects = fs.readdirSync("./_posts/blogs");
+  const response = await client.getEntries({ content_type: "bisResumeBlogs" });
 
-  const paths = filesInProjects.map((file) => {
-    const filename = file.slice(0, file.indexOf("."));
-    return { params: { slug: filename } };
+  const paths = response.items.map((file) => {
+    return { params: { slug: file?.fields.slug } };
   });
 
   return {
     paths,
-    fallback: false, // This shows a 404 page if the page is not found
+    fallback: true, // This shows a 404 page if the page is not found
   };
 }
