@@ -27,13 +27,24 @@ import { useState } from "react";
 import AuthModal from "../authModal/AuthModal";
 import { useSelector } from "react-redux";
 import ProfileComponent from "./ProfileComponent";
+import { useDispatch } from "react-redux";
+import { modalClose, modalOpen } from "../../../store/actions/AuthAction";
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [active, setIsActive] = useState(null);
   const isUserLoggedIn = useSelector(
     (state) => state.AuthReducer.isUserLoggedIn
   );
+  const modalOpenstate = useSelector(
+    (state) => state.AuthReducer.isModalOpen
+  );
+  const dispatch = useDispatch()
+  const ismodalOpen = async () => {
+    dispatch(modalOpen());
+  }
+  const ismodalClose = async () => {
+    dispatch(modalClose());
+  }
   const uid = useSelector((state) => state.AuthReducer.userID);
   return (
     <Box>
@@ -96,15 +107,18 @@ export default function Navbar() {
                     onClick={
                       items.label === "Register"
                         ? () => {
-                            setIsActive(0);
-                            setIsModalOpen(true);
-                          }
+                          setIsActive(0);
+                          localStorage.setItem("active", 0);
+                          ismodalOpen();
+                        }
                         : items.label === "Login"
-                        ? () => {
+                          ? () => {
+
                             setIsActive(1);
-                            setIsModalOpen(true);
+                            localStorage.setItem("active", 1);
+                            ismodalOpen();
                           }
-                        : ""
+                          : ""
                     }
                     cursor={"pointer"}
                     width={{
@@ -116,8 +130,8 @@ export default function Navbar() {
                       items?.label === "Register"
                         ? "#006772"
                         : items?.label === "Login"
-                        ? "#006772"
-                        : ""
+                          ? "#006772"
+                          : ""
                     }
                     textAlign={"center"}
                     padding={"10px 5px"}
@@ -142,8 +156,9 @@ export default function Navbar() {
                             color: "#fff",
                           }}
                           onClick={() => {
-                            setIsModalOpen(true);
                             setIsActive(0);
+                            localStorage.setItem("active", 0);
+                            ismodalOpen()
                           }}
                         >
                           {items.label}
@@ -163,7 +178,8 @@ export default function Navbar() {
                           }}
                           onClick={() => {
                             setIsActive(1);
-                            setIsModalOpen(true);
+                            localStorage.setItem("active", 1);
+                            ismodalOpen()
                           }}
                         >
                           {items.label}
@@ -173,9 +189,9 @@ export default function Navbar() {
                       <></>
                     )}
                     <AuthModal
-                      isModalOpen={isModalOpen}
-                      setIsModalOpen={setIsModalOpen}
-                      active={active}
+                      ismodalClose={ismodalClose}
+                      isModalOpen={modalOpenstate}
+                      setIsModalOpen={ismodalOpen}
                       setIsActive={setIsActive}
                     />
                   </Box>
@@ -213,7 +229,7 @@ export default function Navbar() {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        <MobileNav ismodalOpen={modalOpenstate} setIsModalOpen={ismodalOpen} />
       </Collapse>
     </Box>
   );
@@ -244,8 +260,8 @@ const DesktopNav = () => {
                 >
                   {navItem?.label}
                   {navItem.label === "Resume" ||
-                  navItem.label === "CV" ||
-                  navItem.label === "Cover Letter" ? (
+                    navItem.label === "CV" ||
+                    navItem.label === "Cover Letter" ? (
                     <>
                       <Icon color={"black.400"} w={5} h={5} as={navItem.icon} />
                     </>
@@ -318,8 +334,9 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
   );
 };
 
-const MobileNav = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const MobileNav = (
+  { setIsModalOpen, ismodalOpen }
+) => {
 
   return (
     <Stack
@@ -350,8 +367,8 @@ const MobileNav = () => {
                   items?.label === "Register"
                     ? "#006772"
                     : items?.label === "Login"
-                    ? "#006772"
-                    : ""
+                      ? "#006772"
+                      : ""
                 }
                 justifyContent={"center"}
                 padding={"10px 0px"}
@@ -373,7 +390,7 @@ const MobileNav = () => {
                         textDecoration: "none",
                         color: "#fff",
                       }}
-                      onClick={() => setIsModalOpen(true)}
+                      onClick={() => setIsModalOpen()}
                     >
                       {items.label}
                     </Link>
@@ -389,7 +406,7 @@ const MobileNav = () => {
                         textDecoration: "none",
                         color: "#fff",
                       }}
-                      onClick={() => setIsModalOpen(true)}
+                      onClick={() => setIsModalOpen()}
                     >
                       {items.label}
                     </Link>
@@ -398,7 +415,7 @@ const MobileNav = () => {
                   <></>
                 )}
                 <AuthModal
-                  isModalOpen={isModalOpen}
+                  isModalOpen={ismodalOpen}
                   setIsModalOpen={setIsModalOpen}
                 />
               </Box>

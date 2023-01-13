@@ -3,13 +3,13 @@
 import { auth, db } from '../../config/firebase';
 import { collection, query, where, getDocs, doc, getDoc, addDoc, updateDoc, arrayUnion, orderBy } from "firebase/firestore";
 import { Magic } from 'magic-sdk'
-import { LOGIN, LOGOUT, SIGN_UP, CHECK_USER, ACTIVE_USER, REDIRECT } from '../type/Type'
+import { LOGIN, LOGOUT, SIGN_UP, CHECK_USER, ACTIVE_USER, REDIRECT, MODAL_OPEN } from '../type/Type'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, getAdditionalUserInfo, sendPasswordResetEmail } from "firebase/auth";
 import { getAuth, sendEmailVerification } from "firebase/auth";
 import { ToastSuccess } from '../../src/components/Toast';
 const fullAuth = getAuth()
 import { storeToken, getToken, removeToken, userToken, getUserToken, removeUserToken } from '../../src/components/localStorage/LocalStorage';
-export const doLogin = (data, setLoading, setErr, setIsModalOpen) => async (dispatch) => {
+export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
     try {
         setLoading(true);
         const logInData = await signInWithEmailAndPassword(auth, data.email, data.password);
@@ -22,9 +22,12 @@ export const doLogin = (data, setLoading, setErr, setIsModalOpen) => async (disp
                 type: LOGIN,
                 payload: userLoginData?.uid,
             });
-            setIsModalOpen(false)
             setErr({ fieldErr: '' })
             ToastSuccess("Login Successfull")
+            dispatch({
+                type: MODAL_OPEN,
+                payload: false,
+            })
         }
     } catch (e) {
         const errorCode = e.code;
@@ -40,7 +43,7 @@ export const doLogin = (data, setLoading, setErr, setIsModalOpen) => async (disp
     }
 }
 
-export const doGoogleLogin = (terms, setLoading, setErr, setIsModalOpen) => async (dispatch) => {
+export const doGoogleLogin = (terms, setLoading, setErr ) => async (dispatch) => {
     const provider = new GoogleAuthProvider();
 
     try {
@@ -74,6 +77,10 @@ export const doGoogleLogin = (terms, setLoading, setErr, setIsModalOpen) => asyn
                     userData: details.profile
                 },
             });
+            dispatch({
+                type: MODAL_OPEN,
+                payload: false,
+            })
             setIsModalOpen(false)
             setErr({ fieldErr: '' })
             setLoading(false)
@@ -98,7 +105,7 @@ export const doGoogleLogin = (terms, setLoading, setErr, setIsModalOpen) => asyn
     }
 }
 
-export const doSignUp = (data, setErr, setIsModalOpen, setLoadingsignup) => async (dispatch) => {
+export const doSignUp = (data, setErr,  setLoadingsignup) => async (dispatch) => {
     try {
         setLoadingsignup(true);
         const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password);
@@ -113,6 +120,7 @@ export const doSignUp = (data, setErr, setIsModalOpen, setLoadingsignup) => asyn
             id: userData.uid,
 
         });
+
         if (userData) {
             dispatch({
                 type: SIGN_UP,
@@ -128,7 +136,10 @@ export const doSignUp = (data, setErr, setIsModalOpen, setLoadingsignup) => asyn
         console.log('Error at signup: ', errorCode);
     } finally {
         setLoadingsignup(false);
-        setIsModalOpen(false)
+        dispatch({
+            type: MODAL_OPEN,
+            payload: false,
+        })
     }
 }
 
@@ -224,7 +235,20 @@ export const redirect = () => async (dispatch) => {
 
 
 }
-export const loginMagicUser = (email, setUser, setLoading, setIsModalOpen) => async (dispatch) => {
+export const modalOpen = () => async (dispatch) => {
+    dispatch({
+        type: MODAL_OPEN,
+        payload: true
+    })
+    console.log("smi")
+}
+export const modalClose = () => async (dispatch) => {
+    dispatch({  
+        type: MODAL_OPEN,
+        payload: false
+    })
+}
+export const loginMagicUser = (email, setUser, setLoading) => async (dispatch) => {
     let magic;
     if (typeof window !== 'undefined') {
         magic = new Magic(process.env.NEXT_PUBLIC_MAGIC_API_KEY);
@@ -241,7 +265,10 @@ export const loginMagicUser = (email, setUser, setLoading, setIsModalOpen) => as
                 type: LOGIN,
                 payload: user?.publicAddress,
             });
-            setIsModalOpen(false)
+            dispatch({
+                type: MODAL_OPEN,
+                payload: false,
+            })
             ToastSuccess("Login Successfull")
         }
         return didToken;
