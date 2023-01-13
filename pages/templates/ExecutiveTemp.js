@@ -35,15 +35,16 @@ import {
   WORK,
 } from '../../src/components/tempSectionSide/SectionSideConstant';
 import TempLayout from '../../src/components/tempNav/TempLayout';
-import Link from 'next/link';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+
 const ExecutiveTemp = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // custom Hook For Template
   const [show, setShow] = useShow();
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
   return (
     //  ~~~~~~~~~~~~~~ Executive Resume Template ~~~~~~~~~~~~~~  //
     <div style={{ overflow: 'auto' }}>
@@ -142,8 +143,8 @@ const ExecutiveTemp = () => {
                           {/* Section Side Menu */}
                           {show.education && (
                             <SectionSideMenu
-                            bg="#006772"
-                            iconColor={"#fff"}
+                              bg="#006772"
+                              iconColor={"#fff"}
                               onHide={() =>
                                 setShow({ ...show, education: false })
                               }
@@ -195,8 +196,8 @@ const ExecutiveTemp = () => {
                           {/* Section Side Menu */}
                           {show.work && (
                             <SectionSideMenu
-                            bg="#006772"
-                            iconColor={"#fff"}
+                              bg="#006772"
+                              iconColor={"#fff"}
                               onHide={() => setShow({ ...show, work: false })}
                               onDelete={WORK}
                             />
@@ -253,8 +254,8 @@ const ExecutiveTemp = () => {
                       <div className={Classes.width}>
                         {show.skills && (
                           <SectionSideMenu
-                          bg="#006772"
-                          iconColor={"#fff"}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onHide={() => setShow({ ...show, skills: false })}
                             onDelete={SKILL}
                           />
@@ -292,8 +293,8 @@ const ExecutiveTemp = () => {
                         {/* Section Side Menu */}
                         {show.project && (
                           <SectionSideMenu
-                          bg="#006772"
-                          iconColor={"#fff"}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onHide={() => setShow({ ...show, project: false })}
                             onDelete={PROJECT}
                           />
@@ -341,8 +342,8 @@ const ExecutiveTemp = () => {
                         {/* Section Side Menu */}
                         {show.organization && (
                           <SectionSideMenu
-                          bg="#006772"
-                          iconColor={"#fff"}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onHide={() =>
                               setShow({ ...show, organization: false })
                             }
@@ -390,8 +391,8 @@ const ExecutiveTemp = () => {
                         {/* Section Side Menu */}
                         {show.certificates && (
                           <SectionSideMenu
-                          bg="#006772"
-                          iconColor={"#fff"}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onHide={() =>
                               setShow({ ...show, certificates: false })
                             }
@@ -438,8 +439,8 @@ const ExecutiveTemp = () => {
                         {/* Section Side Menu */}
                         {show.languages && (
                           <SectionSideMenu
-                          bg="#006772"
-                          iconColor={"#fff"}
+                            bg="#006772"
+                            iconColor={"#fff"}
                             onHide={() => setShow({ ...show, languages: false })}
                             onDelete={LANGUAGES}
                           />
@@ -482,8 +483,8 @@ const ExecutiveTemp = () => {
                           {/* Section Side Menu */}
                           {show.interest && (
                             <SectionSideMenu
-                            bg="#006772"
-                            iconColor={"#fff"}
+                              bg="#006772"
+                              iconColor={"#fff"}
                               onHide={() => setShow({ ...show, interest: false })}
                               onDelete={INTEREST}
                             />

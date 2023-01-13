@@ -25,6 +25,7 @@ import {
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+
 const FlightAttendant1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
@@ -33,11 +34,11 @@ const FlightAttendant1 = () => {
   );
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
   return (
     <div style={{ overflow: 'auto' }}>
       <TempLayout work={true} education={true} certificate={true} skills={true} downloadPDF={downloadPDFHandler}>
         <ChangeTempBtn />
-
         <Flex
           justifyContent={{ base: 'none', md: 'center' }}
           flexDir={'column'}
@@ -64,7 +65,7 @@ const FlightAttendant1 = () => {
                 w="40%"
                 pb="10%"
                 minW={'340px'}
-                bgColor={backgroundColor}
+                bgColor={backgroundColor ? backgroundColor : '#00b4d8'}
                 // borderLeftRadius={6}
                 pr={3}
                 pl={12}

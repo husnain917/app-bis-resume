@@ -22,6 +22,7 @@ import { useSelector } from 'react-redux';
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from '../../src/components/tempNav/PDFGenerater';
+
 const FashionTemp5 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   let font = useSelector((state) => state.fontReducer.font);
@@ -32,9 +33,9 @@ const FashionTemp5 = () => {
   const { backgroundColor, color } = useSelector(
     (store) => store.themeReducer.theme
   );
+
   return (
     <div style={{ overflow: 'auto' }}>
-      {/* <Navbar /> */}
       <TempLayout
         work={true}
         education={true}
