@@ -31,6 +31,7 @@ const FashionDesigner2 = () => {
   const [show, setShow] = useShow();
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
   return (
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Fashion Designer Templat ~~~~~~~~~~~~~~~~~~~~~~~~~//
     <Box style={{ overflow: "auto" }}>
@@ -41,7 +42,7 @@ const FashionDesigner2 = () => {
         <div className={style.main}>
           <Flex
             justifyContent={{ base: "none", lg: "center" }}
-            bg={"blackAlpha.100"}
+            bg={"#fff"}
             overflow="auto"
             flexDir={"column"}
             alignItems={{ sm: "none", md: "center" }}
@@ -51,7 +52,7 @@ const FashionDesigner2 = () => {
             >
               <Box
                 minW={910}
-                bg={"white"}
+                bg={"whitesmoke"}
                 padding={'40px 0px'}
                 borderRadius={6}
                 ref={pdfRef}
@@ -62,7 +63,7 @@ const FashionDesigner2 = () => {
                   display="flex"
                   justifyContent="center"
                   flexDirection="column"
-                  backgroundColor={backgroundColor}
+                  backgroundColor={backgroundColor ? backgroundColor : '#00b4d8'}
                 ></Box>
                 <HStack
                   display={"flex"}

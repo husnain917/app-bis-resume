@@ -189,7 +189,7 @@ export default function SocialSpecialist() {
                     maxWidth="240px"
                     maxHeight="240px"
                     minHeight="240px"
-                    marginTop="30px"
+                    marginTop="50px"
                     borderColor={backgroundColor ? backgroundColor : '#000000'}
                   />
                 </Box>

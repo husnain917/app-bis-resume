@@ -25,11 +25,13 @@ import WorkExperience from '../../src/components/commonSection/WorkExperience';
 import TempLayout from '../../src/components/tempNav/TempLayout';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
-const MarketingManager = (props) => {
+
+const MarketingManager = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
   // PDf Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+  
   return (
     // ___________ Marketing Manager Template ____________
     <div style={{ overflow: 'auto' }}>

@@ -47,6 +47,7 @@ const HybridTemplate = () => {
   // custom Hook For Template
   const [show, setShow] = useShow();
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
   return (
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     //Template Layout for Template Navbar
@@ -92,7 +93,7 @@ const HybridTemplate = () => {
                     minHeight={150}
                     maxHeight={150}
                     marginLeft="40px"
-                    borderColor={backgroundColor}
+                    borderColor={backgroundColor ? backgroundColor : '#313B47'}
                   />
                   <Box>
                     <Name
@@ -108,7 +109,7 @@ const HybridTemplate = () => {
                 </HStack>
 
                 <HStack
-                  bg={backgroundColor}
+                  bg={backgroundColor ? backgroundColor : '#313B47'}
                   width="full"
                   minH={'110px'}
                   borderTopRightRadius={6}

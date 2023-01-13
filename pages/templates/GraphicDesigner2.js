@@ -41,6 +41,7 @@ export default function GraphicDesigner2() {
   );
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
   return (
     <div style={{ overflow: 'auto' }}>
       <TempLayout work={true} education={true} skills={true} downloadPDF={downloadPDFHandler}>
