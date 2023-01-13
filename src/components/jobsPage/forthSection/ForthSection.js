@@ -15,7 +15,6 @@ const ForthSection = () => {
   return (
     <Box padding={"10px 0px"}>
       {forthContent.map((item, index) => {
-        console.log("FAQS CONTENT: ", item.faqsContent);
         return (
           <>
             {item.id === "Heading" ? (

@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Button,
   Circle,
   Icon,
+  Image,
   Text,
   Drawer,
   DrawerOverlay,
@@ -15,28 +16,28 @@ import {
   useDisclosure,
   Popover,
   PopoverTrigger,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 import {
   MoonIcon,
   EditIcon,
   SettingsIcon,
   HamburgerIcon,
-} from '@chakra-ui/icons';
+} from "@chakra-ui/icons";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaTwitter,
-} from 'react-icons/fa';
-import LayoutModal from './LayoutModal';
-import { useState } from 'react';
-import { MobileNavItem } from '../navbar/Navbar';
-import { NAV_ITEMS } from '../constant/navbarLinks/NavbarLinks';
-import Link from 'next/link';
-import DownloadModal from '../downloadModel/DownloadModal';
+} from "react-icons/fa";
+import LayoutModal from "./LayoutModal";
+import { useState } from "react";
+import { MobileNavItem } from "../navbar/Navbar";
+import { NAV_ITEMS } from "../constant/navbarLinks/NavbarLinks";
+import Link from "next/link";
+import DownloadModal from "../downloadModel/DownloadModal";
 
-import ThemeModal from '../themeModal/ThemeModal';
-import FontPopover from '../fontPopover/FontPopover';
+import ThemeModal from "../themeModal/ThemeModal";
+import FontPopover from "../fontPopover/FontPopover";
 export default function TempNavbar({
   work,
   education,
@@ -54,24 +55,24 @@ export default function TempNavbar({
   const [showNav, setShowNav] = useState(false);
   return (
     <Box
-      display={'flex'}
+      display={"flex"}
       h="auto"
-      minW={{ base: '1000px', lg: '100vw' }}
+      minW={{ base: "1000px", lg: "100vw" }}
       mt={1}
       zIndex="999"
-      pos={{ base: 'relative', lg: 'fixed' }}
-      justifyContent={'center'}
+      pos={{ base: "relative", lg: "fixed" }}
+      justifyContent={"center"}
     >
-      <Link href={'/'}>
-        <img
-          src={'https://www.linkpicture.com/q/bisResumeLogo.svg'}
+      <Link href={"/"}>
+        <Image
+          src={"https://www.linkpicture.com/q/bisResumeLogo.svg"}
           width="200px"
-          height={'auto'}
+          height={"auto"}
           style={{
-            position: 'absolute',
-            left: '20px',
-            top: '0px',
-            cursor: 'pointer',
+            position: "absolute",
+            left: "20px",
+            top: "0px",
+            cursor: "pointer",
           }}
           alt="Image not Found"
         />
@@ -80,21 +81,21 @@ export default function TempNavbar({
         w="600px"
         display="flex"
         bgColor="#006772"
-        borderRadius={'100px'}
+        borderRadius={"100px"}
         justifyContent="center"
         py={1}
-        ml={{ base: '120px', md: '0px' }}
+        ml={{ base: "120px", md: "0px" }}
       >
         <Popover>
           <PopoverTrigger>
             <Button
               bgColor="transparent"
-              fontSize={{ base: '12px', sm: '14px', md: '16px' }}
+              fontSize={{ base: "12px", sm: "14px", md: "16px" }}
               color="white"
               _hover={{
-                backgroundColor: 'transparent',
-                color: '#313C4E',
-                transition: '0.4s',
+                backgroundColor: "transparent",
+                color: "#313C4E",
+                transition: "0.4s",
               }}
             >
               <EditIcon mr="5px" />
@@ -108,13 +109,13 @@ export default function TempNavbar({
           <PopoverTrigger>
             <Button
               bgColor="transparent"
-              fontSize={{ base: '12px', sm: '14px', md: '16px' }}
+              fontSize={{ base: "12px", sm: "14px", md: "16px" }}
               color="white"
               _hover={{
-                backgroundColor: 'transparent',
+                backgroundColor: "transparent",
 
-                color: '#313C4E',
-                transition: '0.4s',
+                color: "#313C4E",
+                transition: "0.4s",
               }}
             >
               <MoonIcon mr="5px" />
@@ -137,12 +138,12 @@ export default function TempNavbar({
         <Button
           bgColor="transparent"
           color="white"
-          fontSize={{ base: '12px', sm: '14px', md: '16px' }}
+          fontSize={{ base: "12px", sm: "14px", md: "16px" }}
           _hover={{
-            backgroundColor: 'transparent',
+            backgroundColor: "transparent",
 
-            color: '#313C4E',
-            transition: '0.4s',
+            color: "#313C4E",
+            transition: "0.4s",
           }}
         >
           <SettingsIcon mr="5px" />
@@ -151,15 +152,15 @@ export default function TempNavbar({
         <DownloadModal downloadPDF={downloadPDF} />
       </Box>
 
-      <Box position={'absolute'} right={{ base: '10px', lg: '25px' }}>
+      <Box position={"absolute"} right={{ base: "10px", lg: "25px" }}>
         <Icon
           as={HamburgerIcon}
           onClick={onOpen}
           h="30px"
           w="30px"
           cursor="pointer"
-          color={'#006772'}
-          mr={{ base: '0px', md: '10px', lg: '0px' }}
+          color={"#006772"}
+          mr={{ base: "0px", md: "10px", lg: "0px" }}
         />
       </Box>
       <Drawer
@@ -172,16 +173,16 @@ export default function TempNavbar({
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>
-            <Link href={'/'}>
-              <img
-                src={'https://www.linkpicture.com/q/bisResumeLogo.svg'}
+            <Link href={"/"}>
+              <Image
+                src={"https://www.linkpicture.com/q/bisResumeLogo.svg"}
                 width="200px"
-                height={'auto'}
+                height={"auto"}
                 style={{
-                  cursor: 'pointer',
-                  marginLeft: '-30px',
-                  marginBottom: '30px',
-                  marginTop: '30px',
+                  cursor: "pointer",
+                  marginLeft: "-30px",
+                  marginBottom: "30px",
+                  marginTop: "30px",
                 }}
                 alt="Image not Found"
               />
@@ -193,56 +194,56 @@ export default function TempNavbar({
             ))}
             <Box w="full" bg="gray" h="1px" mb="10px" mt="10px"></Box>
             <Text
-              fontSize={'16px'}
+              fontSize={"16px"}
               _hover={{
-                color: '#006772',
-                transition: 'all .2s  ease-in',
+                color: "#006772",
+                transition: "all .2s  ease-in",
               }}
               cursor="pointer"
             >
               Sign Out
             </Text>
-            <Box display={'flex'} justifyContent="space-evenly" mt="20px">
+            <Box display={"flex"} justifyContent="space-evenly" mt="20px">
               <Circle
-                size={'35px'}
-                bg={'#313C4E'}
+                size={"35px"}
+                bg={"#313C4E"}
                 _hover={{
-                  bg: ' #002D6C',
-                  transition: 'background .1s ease-out',
+                  bg: " #002D6C",
+                  transition: "background .1s ease-out",
                 }}
               >
-                <FaFacebookF color="#fff" size={'20px'} />
+                <FaFacebookF color="#fff" size={"20px"} />
               </Circle>
 
               <Circle
-                size={'35px'}
-                bg={'#313C4E'}
+                size={"35px"}
+                bg={"#313C4E"}
                 _hover={{
-                  bg: '#0073b1',
-                  transition: 'background .1s ease-out',
+                  bg: "#0073b1",
+                  transition: "background .1s ease-out",
                 }}
               >
-                <FaLinkedinIn color="#fff" size={'20px'} />
+                <FaLinkedinIn color="#fff" size={"20px"} />
               </Circle>
               <Circle
-                size={'35px'}
-                bg={'#313C4E'}
+                size={"35px"}
+                bg={"#313C4E"}
                 _hover={{
-                  bg: '#0073b1',
-                  transition: 'background .1s ease-out',
+                  bg: "#0073b1",
+                  transition: "background .1s ease-out",
                 }}
               >
-                <FaTwitter color="#fff" size={'20px'} />
+                <FaTwitter color="#fff" size={"20px"} />
               </Circle>
               <Circle
-                size={'35px'}
-                bg={'#313C4E'}
+                size={"35px"}
+                bg={"#313C4E"}
                 _hover={{
-                  bg: '#cf4848',
-                  transition: 'background .3s ease-out',
+                  bg: "#cf4848",
+                  transition: "background .3s ease-out",
                 }}
               >
-                <FaInstagram color="#fff" size={'20px'} />
+                <FaInstagram color="#fff" size={"20px"} />
               </Circle>
             </Box>
           </DrawerBody>

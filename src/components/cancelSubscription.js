@@ -8,17 +8,10 @@ export default function CancelSubscription() {
   return (
     <Box>
       <SideBar />
-      <Box
-        display={"flex"}
-        alignItems={"center"}
-        // justifyContent={"center"}
-        flexDirection={"column"}
-      >
+      <Box display={"flex"} alignItems={"center"} flexDirection={"column"}>
         <Box
           borderWidth={"thin"}
-          // minWidth={"90%"}
           minW="50%"
-          // background="black"
           display={"flex"}
           flexDirection={"row"}
         >

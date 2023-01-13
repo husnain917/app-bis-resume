@@ -16,7 +16,6 @@ import { PRIVACY_PAGE_DATA } from "./data";
 import { extendTheme } from "@chakra-ui/react";
 import styles from "../../../styles/sideBarSection.module.css";
 import SideBar from "../sideBar/SideBar";
-import fonts from "./fonts";
 import SideBarSection from "../aboutUs/SideBarSection/SideBarSection";
 
 const PrivacyPage = () => {

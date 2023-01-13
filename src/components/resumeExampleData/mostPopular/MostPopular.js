@@ -41,7 +41,7 @@ const MostPopular = ({ data }) => {
       >
         <Box display={"flex"}>
           <Box>
-            <Image src="./diamond.png" h="3.5em" />
+            <Image src="./diamond.png" h="3.5em" alt="will load soon" />
           </Box>
           <Box
             ml="10px"
@@ -139,7 +139,6 @@ const MostPopular = ({ data }) => {
                     <Box
                       key={index}
                       bg={"whitesmoke"}
-                      // h={["auto", "auto", "200px", "200px", "200px"]}
                       padding={"5"}
                       borderRadius={"10"}
                       _hover={{

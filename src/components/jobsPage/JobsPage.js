@@ -92,6 +92,7 @@ const JobsPage = () => {
                 <Image
                   src={"./jobsPage/topimage1.png"}
                   height={"-webkit-fit-content"}
+                  alt="will load soon"
                 />
               </Box>
               {/* <Box
@@ -299,7 +300,7 @@ const JobsPage = () => {
                   {item?.listItems?.map((item, index) => {
                     return (
                       <>
-                        <Image src={item.imageUrl} />
+                        <Image src={item.imageUrl} alt="will load soon" />
                       </>
                     );
                   })}
@@ -385,7 +386,7 @@ const JobsPage = () => {
       </Box>
       <Box id={"border-section"} bg={"#FFD67B"}>
         <Box>
-          <Image src="yellow-wave.png" />
+          <Image src="yellow-wave.png" alt="will load soon" />
         </Box>
         <Grid
           templateColumns="repeat(3, 1fr)"
@@ -681,6 +682,7 @@ const JobsPage = () => {
                                 src={item.imageUrl}
                                 // height={"100px"}
                                 // width={"200px"}
+                                alt="will load soon"
                               />
                             </Box>
                           </>
@@ -698,7 +700,7 @@ const JobsPage = () => {
       </Box>
       <Box id={"border-section"} bg={"#FFD67B"}>
         <Box>
-          <Image src="yellow-wave-wbg-top.png" />
+          <Image src="yellow-wave-wbg-top.png" alt="will load soon" />
         </Box>
       </Box>
       <Box>

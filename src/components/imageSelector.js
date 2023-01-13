@@ -87,7 +87,7 @@ const ImageSelector = ({
                 }
                 background={"white"}
                 ref={uploadedImage}
-                alt=""
+                alt="will load soon"
                 borderRadius={borderRadius || "full"}
                 minHeight={minHeight || "15.7em"}
                 maxHeight={maxHeight || "15.7em"}

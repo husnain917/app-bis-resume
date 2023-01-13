@@ -27,14 +27,6 @@ export default function CommonButton({
   icon,
 }) {
   return (
-    // bg="#2CACD5"
-    // colorScheme="#2CACD5"
-    // borderRadius="20px"
-    // fontWeight="bold"
-    // color="white"
-    // rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
-    // mt={5}
-    // mb={1}
     <Button
       className={`button-text ${className}`}
       width={width}
@@ -63,10 +55,6 @@ export default function CommonButton({
       disabled={disabled}
     >
       {loading ? loading : icon}
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
     </Button>
   );
 }

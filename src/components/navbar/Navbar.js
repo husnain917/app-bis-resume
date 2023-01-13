@@ -81,7 +81,7 @@ export default function Navbar() {
         >
           {/* login buttons */}
           {!isUserLoggedIn ? (
-            Login_Buttons?.map((items) => {
+            Login_Buttons?.map((items, index) => {
               return (
                 <>
                   <Box
@@ -133,6 +133,7 @@ export default function Navbar() {
                       <>
                         <Link
                           // href={items?.href ?? '#'}
+                          key={items.label}
                           fontWeight={650}
                           color={"#fdfffc"}
                           fontSize={{ xl: "14px", lg: "12px" }}
@@ -152,6 +153,7 @@ export default function Navbar() {
                       <>
                         <Link
                           // href={items?.href ?? '#'}
+                          key={items.label}
                           fontWeight={650}
                           color={"#fdfffc"}
                           fontSize={{ xl: "14px", lg: "12px" }}
@@ -225,12 +227,13 @@ const DesktopNav = () => {
     <Stack direction={"row"} alignItems={"center"} spacing={{ xl: 5, lg: 3 }}>
       {NAV_ITEMS?.map((navItem) => {
         return (
-          <Box key={navItem?.label}>
+          <Box key={navItem.label}>
             <Popover trigger={"hover"} placement={"bottom-start"}>
               <PopoverTrigger position={"absolute"}>
                 <Link
                   href={navItem?.href ?? "#"}
                   fontWeight={500}
+                  key={navItem.label}
                   color={linkColor}
                   fontSize={["10px", "12px", "14px", "16px", "18px"]}
                   _hover={{
@@ -262,7 +265,7 @@ const DesktopNav = () => {
                   minW={"xs"}
                 >
                   <Stack>
-                    {navItem.children.map((child) => (
+                    {navItem.children.map((child, index) => (
                       <DesktopSubNav key={child.label} {...child} />
                     ))}
                   </Stack>
@@ -324,13 +327,13 @@ const MobileNav = () => {
       p={4}
       display={{ lg: "none" }}
     >
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map((navItem, index) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
 
       {/* login buttons */}
       <Box display={"flex"} justifyContent={"space-evenly"}>
-        {Login_Buttons?.map((items) => {
+        {Login_Buttons?.map((items, index) => {
           return (
             <>
               <Box
@@ -364,6 +367,7 @@ const MobileNav = () => {
                     <Link
                       // href={items?.href ?? "#"}
                       fontWeight={650}
+                      key={items.label}
                       color={"#fdfffc"}
                       _hover={{
                         textDecoration: "none",
@@ -380,6 +384,7 @@ const MobileNav = () => {
                       // href={items?.href ?? "#"}
                       fontWeight={650}
                       color={"#fdfffc"}
+                      key={items.label}
                       _hover={{
                         textDecoration: "none",
                         color: "#fff",
