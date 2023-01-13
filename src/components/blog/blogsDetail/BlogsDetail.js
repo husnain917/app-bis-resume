@@ -40,15 +40,17 @@ export default function BlogsDetail({ blogDetail, allBlogs }) {
               <h1 className={style.blogTitle}>{title}</h1>
               <br />
               <br />
-              <img
+
+              <Image
                 src={"https:" + featuredImage.fields.file.url}
                 style={{
                   marginBottom: "50px",
                 }}
+                alt="will load soon"
               />
               {/* <ReactMarkdown>{markdown}</ReactMarkdown> */}
               <div className={style.bodyContent}>
-              {documentToReactComponents(body)}
+                {documentToReactComponents(body)}
               </div>
             </div>
           </GridItem>
@@ -88,7 +90,7 @@ export default function BlogsDetail({ blogDetail, allBlogs }) {
                               onClick={() => alert("working")}
                               className={style.sideImage}
                             >
-                              <img
+                              <Image
                                 className={style.postsImage}
                                 src={item?.thumbnail}
                                 alt="Image1"

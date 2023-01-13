@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../styles/Index.module.css";
-import { Image, Box, Text } from "@chakra-ui/react";
+import { Box, Text, Image } from "@chakra-ui/react";
+// import Image from "next/image";
 import Link from "next/link";
 import CommonButton from "./commonButton/CommonButton";
 import { FaArrowRight } from "react-icons/fa";
@@ -26,7 +27,7 @@ export default function CallToAction() {
         >
           <Link href="/templates">
             <CommonButton
-              className={'buttonClass'}
+              className={"buttonClass"}
               title="Build My Resume"
               hoverCursor={"pointer"}
               backgroundColor={"#2CACD5"}
@@ -40,8 +41,6 @@ export default function CallToAction() {
                 "1.1rem",
                 "1.5rem",
               ]}
-            // hoverBackgroundColor={"red"}
-            // className={"hoverEffects"}
             />
           </Link>
         </Box>
@@ -53,13 +52,40 @@ export default function CallToAction() {
           Some of Our Customers have been hired by:
         </Box>
         <div className={styles.heroIconImgs}>
-          <Image src="/amazon.png" w="25%" h="auto" mt="5px" />
-          <Image src="/qatar.png" w="25%" h="auto" />
-          <Image src="/netflix.png" w="25%" h="auto" />
+          <Image
+            src="/amazon.png"
+            // w="70px"
+            // h="auto"
+            w={"70px"}
+            layout="fill"
+            mt="5px"
+            alt="Will load Soon"
+          />
+          <Image
+            src="/qatar.png"
+            w={"25%"}
+            layout="fill"
+            alt="will load soon"
+          />
+          <Image
+            src="/netflix.png"
+            // w={"70px"}
+            // layout="fill"
+            w={"25%"}
+            alt="will load soon"
+          />
         </div>
       </div>
       <div className={styles.ctaRightSec}>
-        <Image src="/hero.png" w="100%" h="98%" />
+        <Box>
+          <Image
+            src="/hero.png"
+            maxH={"98% !important"}
+            maxW={"100% !important"}
+            layout="fill"
+            alt="will load soon"
+          />
+        </Box>
       </div>
     </div>
   );

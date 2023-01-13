@@ -80,6 +80,7 @@ const WritingGuides = () => {
               ]}
               marginLeft={"-60px"}
               marginTop={"-36px"}
+              alt="will load soon"
             />
           </Box>
           <Box
@@ -90,7 +91,7 @@ const WritingGuides = () => {
             display={"flex"}
             alignItems={"center"}
           >
-            <Image src="./new-york-resume.jpg" />
+            <Image src="./new-york-resume.jpg" alt="will load soon" />
           </Box>{" "}
           <Box
             bottom={"20px"}
@@ -100,7 +101,7 @@ const WritingGuides = () => {
             position={"absolute"}
             display={["none", "none", "block", "block", "block"]}
           >
-            <Image src="./top2.png" marginTop={"-59px"} />
+            <Image src="./top2.png" marginTop={"-59px"} alt="will load soon" />
           </Box>
         </Box>
       </Box>

@@ -49,7 +49,7 @@ export default function Advantages() {
           p="10px"
           className={"sub-heading"}
         >
-          Advantages of Using My Perfect BisResume
+          Advantages of Using My BisResume
         </Text>
         {width > 767 ? (
           <Box

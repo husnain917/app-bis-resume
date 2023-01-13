@@ -123,7 +123,7 @@ const ThirdSection = () => {
                 {item?.listItems?.map((item, index) => {
                   return (
                     <>
-                      <Image src={item.imageUrl} />
+                      <Image src={item.imageUrl} alt="will load soon" />
                     </>
                   );
                 })}

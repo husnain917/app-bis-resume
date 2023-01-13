@@ -5,7 +5,6 @@ import { Text } from "@chakra-ui/react";
 import { CheckCircleIcon, StarIcon } from "@chakra-ui/icons";
 
 const RatingComponent = ({ title, date, name, rating, feedback }) => {
-  console.log("RatingComponent:", rating);
   const [currentValue, setCurrentValue] = useState(rating);
   const [hoverValue, setHoverValue] = useState(undefined);
   return (
