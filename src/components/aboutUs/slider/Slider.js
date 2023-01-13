@@ -21,10 +21,10 @@ import { data } from "./sliderData";
 
 const Slider = ({ title, desc, date, name, rating }) => {
   const swiperRef = useRef();
-  console.log("RatingComponent:", rating);
+
   const [currentValue, setCurrentValue] = useState(rating);
   const [hoverValue, setHoverValue] = useState(undefined);
-  console.log("hoverValue", hoverValue);
+
   const property = {
     title: "Excellent and wonderfull",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iste impedit maxime? Corrupti, saepe quam!",

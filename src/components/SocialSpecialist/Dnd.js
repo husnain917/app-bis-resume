@@ -170,6 +170,7 @@ class Dnd extends Component {
                               <Image
                                 className={styles.icon}
                                 src="/icons/plus.png"
+                                alt="will load soon"
                               />
                             </Tooltip>
                           </div>
@@ -191,6 +192,7 @@ class Dnd extends Component {
                                 <Image
                                   className={styles.icon2}
                                   src="/icons/equal.png"
+                                  alt="will load soon"
                                 />
                               </Tooltip>
                             </div>
@@ -208,6 +210,7 @@ class Dnd extends Component {
                                 <Image
                                   className={styles.icon2}
                                   src="/icons/minus.png"
+                                  alt="will load soon"
                                 />
                               </Tooltip>
                             </div>

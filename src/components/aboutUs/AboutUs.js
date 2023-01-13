@@ -310,7 +310,7 @@ const AboutUs = () => {
                       6829 reviews{" "}
                     </a>{" "}
                     on{" "}
-                    <img
+                    <Image
                       id="tile-star-alignment"
                       className="svg-logo"
                       src="/logo.svg"
