@@ -1,12 +1,11 @@
-import { Box, Image } from "@chakra-ui/react";
-import Link from "next/link";
-import React from "react";
-import { Tooltip } from "react-tippy";
-import style from "../../../styles/templates/template1.module.scss";
+import { Box,Image } from '@chakra-ui/react';
+import React from 'react';
+import { Tooltip } from 'react-tippy';
+import style from '../../../styles/templates/template1.module.scss';
 
-const ChangeTempBtn = () => {
+const ChangeTempBtn = ({onPress}) => {
   return (
-    <Link href={"/templates"}>
+
       <Box
         position={{ base: "relative", lg: "fixed" }}
         top={{ base: "50px", lg: "100px" }}
@@ -21,7 +20,7 @@ const ChangeTempBtn = () => {
           </div>
         </Tooltip>
       </Box>
-    </Link>
+  
   );
 };
 
