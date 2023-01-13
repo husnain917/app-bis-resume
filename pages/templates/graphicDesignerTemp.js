@@ -31,6 +31,7 @@ export default function Graphic_Design_Temp() {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
   return (
     <>
       <div

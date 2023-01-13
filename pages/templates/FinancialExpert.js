@@ -33,6 +33,7 @@ const FinancialExpert = () => {
   const [show, setShow] = useShow();
   // PDF Download Hook
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
+
   return (
     // ~~~~~~~~~~~~~~~~~~~~~~~~~ Financial Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
     <Box style={{ overflow: "auto" }}>
@@ -43,7 +44,7 @@ const FinancialExpert = () => {
 
           <Flex
             justifyContent={{ base: "none", lg: "center" }}
-            bg={"blackAlpha.100"}
+            bg={"#fff"}
             overflow="auto"
             flexDir={"column"}
             alignItems={{ sm: "none", md: "center" }}
@@ -54,19 +55,19 @@ const FinancialExpert = () => {
               <Box
                 minW={910}
                 padding={'40px 0px'}
-                bg={"white"}
+                bg={"whitesmoke"}
                 borderRadius={6}
                 ref={pdfRef}
               >
                 <Box display="flex" flexDirection="row">
-                  <Box w="40%" backgroundColor={backgroundColor}></Box>
+                  <Box w="40%" backgroundColor={backgroundColor ? backgroundColor : '#a4133c'}></Box>
                   <Box
                     w="60%"
                     minH="18em"
                     display="flex"
                     justifyContent="center"
                     flexDirection="column"
-                    backgroundColor={backgroundColor}
+                    backgroundColor={backgroundColor ? backgroundColor : '#a4133c'}
                   >
                     <Name
                       fontColor={color ? color : '#000000'}

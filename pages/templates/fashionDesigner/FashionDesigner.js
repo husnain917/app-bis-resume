@@ -1,390 +1,379 @@
-import React from "react";
-import { Box, Image, Flex, Tooltip, HStack } from "@chakra-ui/react";
-import { useSelector } from "react-redux";
-import { Row } from "antd";
-import styles from "../../../styles/templates/Fashion.module.css";
-import FdText from "../../../src/components/fashionDesigner/FdText";
-import Languages from "../../../src/components/fashionDesigner/Languages";
-
-
-import Link from "next/link";
-
-import { Icon } from "@chakra-ui/react";
-import {
-  FaArchive,
-  FaInfo,
-  FaHeading,
-  FaBuffer,
-  FaSketch,
-  FaHive,
-} from "react-icons/fa";
-import Name from "../../../src/components/commonSection/Name";
+import { Box, Flex } from '@chakra-ui/react';
+import React from 'react';
+import Name from '../../../src/components/commonSection/Name';
+import Classes from '../../../styles/templates/flightAttendant.module.css';
 import Profession from '../../../src/components/commonSection/Profession';
-import About from '../../../src/components/commonSection/About';
 import Contact from '../../../src/components/commonSection/Contact';
+import Heading from '../../../src/components/commonSection/Heading';
+import Skill from '../../../src/components/commonSection/Skill';
 import WorkExperience from '../../../src/components/commonSection/WorkExperience';
+import Education from '../../../src/components/commonSection/Education';
+import TempLayout from '../../../src/components/tempNav/TempLayout';
+import { useSelector } from 'react-redux';
 import useShow from '../../../src/components/tempSectionSide/useShow';
 import SectionSideMenu from '../../../src/components/tempSectionSide/SectionSideMenu';
+import About from '../../../src/components/commonSection/About';
+import ImageSelector from '../../../src/components/imageSelector';
+import styles from "../../../styles/templates/awaisFashion.module.css";
+import ChangeTempBtn from '../../../src/components/changeTempbtn/ChangeTempBtn';
+import PDFGenerater from '../../../src/components/tempNav/PDFGenerater';
 import {
   EDUCATION,
   LANGUAGES,
   SKILL,
   WORK,
-  INTEREST
 } from '../../../src/components/tempSectionSide/SectionSideConstant';
-import TempLayout from '../../../src/components/tempNav/TempLayout';
-import useStoreData from "../../../src/components/useStoreData";
-import Heading from '../../../src/components/commonSection/Heading';
-import ImageSelector from '../../../src/components/imageSelector';
-import Skill from "../../../src/components/commonSection/Skill";
 import Language from "../../../src/components/commonSection/Language";
-import Education from '../../../src/components/commonSection/Education';
-import ChangeTempBtn from '../../../src/components/changeTempbtn/ChangeTempBtn';
-import Interest from "../../../src/components/commonSection/Interest";
-
-
+import {
+  FaArchive,
+  FaPhoneAlt,
+  FaBuffer,
+  FaHive,
+  FaUser,
+  FaSketch,
+} from "react-icons/fa";
 
 export default function FashionDesigner() {
-  const {
-    resumeData,
-    theme,
-    updater
-  } = useStoreData();
+  let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const { backgroundColor, color } = useSelector(
+    (store) => store.themeReducer.theme
+  );
+  // custom Hook For Template
   const [show, setShow] = useShow();
-  console.log(resumeData);
+  const { downloadPDFHandler, pdfRef } = PDFGenerater();
 
   return (
     <>
       <div style={{ overflow: 'auto' }}>
-
-
-        <TempLayout work={true} education={true} skills={true} interest={true} languages={true} >
+        <TempLayout
+          work={true}
+          education={true}
+          skills={true}
+          languages={true}
+          downloadPDF={downloadPDFHandler}
+        >
           <ChangeTempBtn />
-          <Box overflow="auto">
-            <Box
-              display="flex"
-              flexDir="row"
-              w="100%"
-              bgColor="#E6D5C2"
-              h="100%"
-              mt="5%"
-              ml="20%"
-              minW="950px"
-              maxW="950px"
-              mr={["12%", "12%", "10%", "10%", ,]}
-              mb="5%"
-            >
+          <Flex
+            justifyContent={{ base: 'none', md: 'center' }}
+            flexDir={'column'}
+            alignItems={{ sm: 'none', md: 'center' }}
+            bg={'#fff'}
+            pt="70px"
+          >
+            <Box mx={'20px'} mt="50px">
               <Box
-                w="60%"
-                mt="7%"
-                ml="5%"
-                pb="10%"
-                minW={["350px", "400px", "400px", "450px", "500px"]}
-                bgColor="#E6D5C2"
+                display="flex"
+                flexDir="row"
+                w="100%"
+                minW="850px"
+                maxW="850px"
+                mb={'20px'}
+                ref={pdfRef}
               >
-                
-                <Row style={{ overflow: 'hidden' }} >
+                {/* =============== First Section ============== */}
+                <Box
+                  w="40%"
+                  pb="10%"
+                  minW={'510px'}
+                  bgColor={backgroundColor ? backgroundColor : '#E6D5C2'}
+                  borderLeftRadius={6}
+                  pr={3}
+                  pl={12}
+                  py={8}
+                  transition="0.5s background"
+                >
+                  {/* _____________ Profile _____________ */}
                   <Name
                     FName={true}
                     SName={true}
-
-                    FNameStyle={styles.name}
-                    SNameStyle={styles.name}
-
+                    direction="column"
+                    FNameStyle={styles.nameStyle}
+                    SNameStyle={styles.nameStyle}
+                    margin={'6% 0% 0% 0%'}
+                    fontColor={color ? color : '#1B4245'}
+                  />
+                  <Box bgColor={color ? color : '#1B4245'} w="43%" h="5px" mt="2%"></Box>
+                  <Profession
+                    professionStyle={styles.profileSubTitle}
+                    margin={'2% 0% 5% 0%'}
+                    fontColor={color ? color : '#1B4245'}
                   />
 
-                </Row>
-                <Box bgColor="#1B4245" w="43%" h="5px" mt="2%"></Box>
-              
-                <Profession
-                  professionStyle={styles.profileSubTitle}
-                />
-                <Flex alignItems="center" mt="10%">
-                  <Icon as={FaInfo} w={10} h={10} />
-                  <p className={styles.heading}>About Me</p>
-                </Flex>
-               
-                <About
-                  aboutStyle={styles.description}
-                  aboutPlaceholder="  Let me introduce myself, I am a fashion designer
-                who has 7 years of experience in this job. I am
-                very experienced in various fashion styles for all
-                seasons and I have made various models for
-                men and women for a world famous brand.
-                "
-                />
-                <Box>
-
-                  <div>
-                    {resumeData?.work?.visible && (
-                      <>
-                        <HStack alignItems={'flex-start'} mt={'20px'}>
-                          <Box w="20px" ml={'-27px'}>
-                            {show.work && (
-                              <SectionSideMenu
-                                onHide={() => setShow({ ...show, work: false })}
-                                bg="#2A78AB"
-                                iconColor={'#E0EFFA'}
-                                onDelete={WORK}
-                              />
-                            )}
-                          </Box>
-                          <div className={styles.templateceoHeadingTitle}>
-                            <Box ml="2%">
-                              <Heading
-                                minW={"670"}
-                                maxW={'670px'}
-                                font-size={"2.4em"}
-                                font-weight={900}
-
-
-                                circleIconHeading={true}
-                                icon={(props) => (
-                                  <FaArchive
-                                    {...props}
-                                    size={30}
-                                    color={'black'}
-                                  />
-                                )}
-
-                                color={"black"}
-                                title="Work Experience"
-
-                                height={50}
-                                fontSize={30}
-                                fontWeight={500}
-                                onSideSectionShow={() => setShow({ ...show, work: true })}
-                              />
-                            </Box>
-                          </div>
-                        </HStack>
-                        <Box mr="12%" mt="3%" >
-                          <WorkExperience
-
-                            position={true}
-                            company={true}
-                            company_placeholder={"Company"}
-                            position_placeholder={"Position"}
-                            positionStyle={styles.positionSty}
-
-                            summary={true}
-                            companyStyle={styles.positionSty}
-
-
-
-                            summaryStyle={styles.description}
-                            summary_placeholder={"Summary"}
-                            parentContainerStyle={styles.mt}
-                          />
-                        </Box>
-                      </>
+                  {/* _____________ About me _____________ */}
+                  <Heading
+                    title={'ABOUT ME'}
+                    color={color ? color : '#1B4245'}
+                    margin={'20px 0px 0px 0px'}
+                    fontWeight={700}
+                    circleIconHeading={true}
+                    icon={(props) => (
+                      <FaUser
+                        color={color ? color : '#1B4245'}
+                        size={25}
+                        {...props}
+                      />
                     )}
-                  </div>
-                
-                  {resumeData?.hobbies?.visible && (
-                    <>
-                      <div className={styles.sideMenu}>
-                        <div className={styles.width}>
-                          {/* Section Side Menu */}
-                          {show.interest && (
+                  />
+                  <About
+                    minW="100%"
+                    maxW="100%"
+                    aboutStyle={Classes.aboutText}
+                    fontColor="#1B4245"
+                    fontWeight={'600'}
+                    fontSize={'16px'}
+                  />
+                  {/* _____________ Work _____________ */}
+                  <Box
+                    margin={'20px 0px 10px 7px'}
+                  >
+                    {resumeData?.work?.visible && (
+                      <div className={Classes.sideMenu}>
+                        <div className={Classes.sideMenuBox}>
+                          {show?.work && (
                             <SectionSideMenu
-                              bg={'#313B47'}
-                              onHide={() => setShow({ ...show, interest: false })}
-                              onDelete={INTEREST}
+                              onHide={() => setShow({ ...show, work: false })}
+                              onDelete={WORK}
+                              bg="#006772"
+                              iconColor={"#fff"}
                             />
                           )}
                         </div>
                         <div>
-<Box >
                           <Heading
-                            title={'Interest'}
-
+                            color={color ? color : '#1B4245'}
+                            title="WORK EXPERIENCE"
+                            fontSize={'22px'}
+                            fontWeight={700}
+                            minW="300px"
+                            onSideSectionShow={() =>
+                              setShow({ ...show, work: true })
+                            }
                             circleIconHeading={true}
                             icon={(props) => (
-                              <FaInfo
+                              <FaArchive
+                                color={color ? color : '#1B4245'}
+                                size={25}
                                 {...props}
-                                size={32}
-                                color={'black'}
                               />
                             )}
-                            fontSize={30}
-
-
-                            color="black"
-                            onSideSectionShow={() =>
-                              setShow({ ...show, interest: true })
-                            }
+                            maxW={'fit-content'}
                           />
-                          </Box>
-                          {/* Interest Component  */}
-                          <Box ml="4%">
-                            <Interest
-
-                              interestStyle={styles.skillText1}
-                            />
-                          </Box>
+                          <WorkExperience
+                            company={true}
+                            position={true}
+                            date={true}
+                            summary={true}
+                            companyStyle={Classes.company}
+                            positionStyle={Classes.programText}
+                            dateStyle={Classes.date}
+                            summaryStyle={Classes.description}
+                            parentContainerStyle={styles.rightContainerWork}
+                            textColor="#1B4245"
+                          />
                         </div>
                       </div>
-                    </>
-                  )}
-                </Box>
-              </Box>
-              {/* Right Section Code  */}
-
-              <Box
-                w="50%"
-                bgColor="#1B4245"
-                h="auto"
-                ml="5%"
-                pb="10%"
-                minW="400px"
-
-              >
-                <ImageSelector
-                  minWidth={280}
-                  maxWidth={280}
-                  minHeight={280}
-                  maxHeight={280}
-                  marginLeft="40px"
-                  marginTop={10}
-                />
-
-                <Box ml="10%">
-                  <Flex alignItems="center" mt="10%">
-                    <Icon as={FaHive} w={8} h={8} color="white" />
-                    <p className={styles.rightHeading}>Contact</p>
-                  </Flex>
-
-                  <Contact
-                    phone={true}
-                    email={true}
-                    linkedinURL={true}
-                    website={true}
-                    circleIcon={true}
-                    circleBg="#fff"
-                    circleSize="35px"
-                    iconColor="#1C2125"
-                    margin={'10px 0px 0px 0px'}
-                    style={styles.profileText}
-                  />
-                </Box>
-                <Box>
-
-                  <Box mt="20%">
-
+                    )}
+                  </Box>
+                  {/* _____________ Education _____________ */}
+                  <Box
+                    margin={'20px 0px 10px 7px'}
+                  >
                     {resumeData?.education?.visible && (
-                      <>
-                        <HStack alignItems={'flex-start'} mt={'20px'}>
-                          <Box w="30px" >
-                            {show.education && (
-                              <SectionSideMenu
-                                onHide={() => setShow({ ...show, education: false })}
-                                bg="#2A78AB"
-                                iconColor={'#E0EFFA'}
-                                onDelete={EDUCATION}
-                              />
-                            )}
-                          </Box>
-
-
+                      <div className={Classes.sideMenu}>
+                        <div className={Classes.sideMenuBox}>
+                          {show?.education && (
+                            <SectionSideMenu
+                              onHide={() =>
+                                setShow({ ...show, education: false })
+                              }
+                              onDelete={EDUCATION}
+                              bg="#006772"
+                              iconColor={"#fff"}
+                            />
+                          )}
+                        </div>
+                        <div>
                           <Heading
-                            color={"white"}
-
-
+                            title={'EDUCATION'}
+                            color={color ? color : '#1B4245'}
+                            fontSize={'22px'}
+                            fontWeight={700}
+                            onSideSectionShow={() =>
+                              setShow({ ...show, education: true })
+                            }
                             circleIconHeading={true}
                             icon={(props) => (
                               <FaBuffer
+                                color={color ? color : '#1B4245'}
+                                size={25}
                                 {...props}
-                                size={30}
-                                color={'white'}
                               />
                             )}
-
-                            title="EDUCATION"
-
-
-                            fontSize={30}
-                            fontWeight={500}
-                            lineBg={"white"}
-                            onSideSectionShow={() => setShow({ ...show, education: true })}
                           />
-
-
-
-                        </HStack>
-                        <Box mr={"10%"} ml={"13%"} mt="5%">
                           <Education
+                            degree={true}
                             institution={true}
                             date={true}
                             summary={true}
-
-                            summaryStyle={styles.Educationdescription}
-                            dateStyle={styles.date}
-                            institutionStyle={styles.company}
-                            institution_placeholder={"College"}
-
-                            parentContainerStyle={styles.mt}
-
+                            parentContainerStyle={styles.rightContainerWork}
+                            institutionStyle={Classes.company}
+                            degreeStyle={Classes.programText}
+                            dateStyle={Classes.date}
+                            summaryStyle={Classes.description}
+                            degree_placeholder="Study Program"
+                            textColor="#1B4245"
                           />
-                        </Box>
-                      </>
+                        </div>
+                      </div>
                     )}
                   </Box>
-
-
-
-
-                  <Box ml="8%">
-                    {resumeData?.languages?.visible && (
-                      <>
-                        <HStack alignItems={'flex-start'} mt={5}>
-                          <Box >
-                            {show.languages && (
-                              <SectionSideMenu
-                                onHide={() => setShow({ ...show, languages: false })}
-                                bg="#2A78AB"
-                                iconColor={'#E0EFFA'}
-                                onDelete={LANGUAGES}
+                </Box>
+                {/* =============== Second Section ============== */}
+                <Box
+                  w="60%"
+                  bg={color ? color : '#1B4245'}
+                  h="auto"
+                  minW="340px"
+                  borderRightRadius={6}
+                  paddingBottom={'40px'}
+                  transition="0.5s background"
+                >
+                  {/* Image */}
+                  <Box
+                    display={'flex'}
+                    justifyContent={'center'}
+                  >
+                    <ImageSelector
+                      minWidth="240px"
+                      maxWidth="240px"
+                      maxHeight="240px"
+                      minHeight="240px"
+                      marginTop="50px"
+                      borderColor={backgroundColor ? backgroundColor : '#1B4245'}
+                    />
+                  </Box>
+                  {/* contact */}
+                  <Box
+                    margin={'40px 0px 10px 30px'}
+                  >
+                    <Heading
+                      title={'CONTACT PERSON'}
+                      color={backgroundColor ? backgroundColor : '#fff'}
+                      margin={'20px 0px 0px 0px'}
+                      fontWeight={700}
+                      circleIconHeading={true}
+                      icon={(props) => (
+                        <FaPhoneAlt
+                          color={backgroundColor ? backgroundColor : '#fff'}
+                          size={25}
+                          {...props}
+                        />
+                      )}
+                    />
+                    <Contact
+                      phone={true}
+                      email={true}
+                      linkedinURL={true}
+                      website={true}
+                      circleIcon={true}
+                      circleBg={backgroundColor ? backgroundColor : '#fff'}
+                      circleSize="30px"
+                      iconColor={color ? color : '#1B4245'}
+                      margin={'10px 0px 0px 0px'}
+                      parentStyle={styles.contactFont}
+                    />
+                  </Box>
+                  {/* _____________ Skill _____________ */}
+                  <Box margin={'20px 0px 10px 40px'}>
+                    {resumeData?.skills?.visible && (
+                      <div className={Classes.sideMenu}>
+                        <div className={Classes.sideMenuBox}>
+                          {show?.skills && (
+                            <SectionSideMenu
+                              onDelete={SKILL}
+                              onHide={() => setShow({ ...show, skills: false })}
+                              bg="#006772"
+                              iconColor={"#fff"}
+                            />
+                          )}
+                        </div>
+                        <div>
+                          <Heading
+                            title={'SKILLS'}
+                            fontSize="20px"
+                            fontWeight={700}
+                            color={backgroundColor ? backgroundColor : '#fff'}
+                            onSideSectionShow={() =>
+                              setShow({ ...show, skills: true })
+                            }
+                            circleIconHeading={true}
+                            icon={(props) => (
+                              <FaHive
+                                color={backgroundColor ? backgroundColor : '#fff'}
+                                size={25}
+                                {...props}
                               />
                             )}
-                          </Box>
-                          <div className={styles.contactHeadingTitle}>
-                            <Heading
-                              title={'LANGUAGES'}
-                              circleIconHeading={true}
-                              icon={(props) => (
-                                <FaSketch
-                                  {...props}
-                                  size={30}
-                                  color={'white'}
-                                />
-                              )}
-
-
-                              color="#fff"
-                              onSideSectionShow={() =>
-                                setShow({ ...show, languages: true })
-                              }
-                            />
-                          </div>
-                        </HStack>
-                        <Box mt="2%" mb="3%" mr="15%" ml="7%">
-                          <Language
-                            langStyle={styles.skillText}
                           />
-                        </Box>
-                      </>
+                          <Skill
+                            skillStyle={styles.contactFont}
+                            progressBar={true}
+                            strokeWidth="2"
+                            lineStyle={styles.line}
+                            strokeColor={color ? color : '#2A78AB'}
+                            trailColor="#fff"
+                            percentageStyle={styles.percent}
+                            parentContainerStyle={Classes.ml}
+                          />
+                        </div>
+                      </div>
                     )}
                   </Box>
-
+                  {/* _____________ Language _____________ */}
+                  <Box margin={'20px 0px 10px 40px'}>
+                    {resumeData?.languages?.visible && (
+                      <div className={Classes.sideMenu}>
+                        <div className={Classes.sideMenuBox}>
+                          {show?.languages && (
+                            <SectionSideMenu
+                              bg="#006772"
+                              iconColor={"#fff"}
+                              onHide={() => setShow({ ...show, languages: false })}
+                              onDelete={LANGUAGES}
+                            />
+                          )}
+                        </div>
+                        <div>
+                          <Heading
+                            title={'LANGUAGES'}
+                            fontSize="20px"
+                            fontWeight={700}
+                            color={backgroundColor ? backgroundColor : '#fff'}
+                            onSideSectionShow={() =>
+                              setShow({ ...show, languages: true })
+                            }
+                            circleIconHeading={true}
+                            icon={(props) => (
+                              <FaSketch
+                                color={backgroundColor ? backgroundColor : '#fff'}
+                                size={25}
+                                {...props}
+                              />
+                            )}
+                          />
+                          <Language
+                            langStyle={styles.contactFont}
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </Box>
                 </Box>
               </Box>
             </Box>
-          </Box>
+          </Flex>
         </TempLayout>
-
       </div>
-
     </>
   );
 }

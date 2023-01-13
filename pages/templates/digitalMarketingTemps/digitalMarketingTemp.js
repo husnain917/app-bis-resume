@@ -32,6 +32,7 @@ export default function Digital_Marketing_Temp() {
   const { backgroundColor, color } = useSelector(
     (store) => store.themeReducer.theme
   );
+
   return (
     <>
       <div
@@ -94,7 +95,7 @@ export default function Digital_Marketing_Temp() {
                     circleSize="25px"
                     iconColor="#3A4D6C"
                     margin={'10px 0px 0px 0px'}
-                    style={Classes.profileText}
+                    style={styles.skillText}
                   />
 
                   {/* _____________ About me _____________ */}
@@ -145,7 +146,7 @@ export default function Digital_Marketing_Temp() {
                             )}
                           />
                           <Skill
-                            skillStyle={Classes.skillText}
+                            skillStyle={styles.skillText}
                             progressBar={true}
                             strokeWidth="2"
                             lineStyle={styles.line}
@@ -170,7 +171,7 @@ export default function Digital_Marketing_Temp() {
                 >
                   <Box
                     width={'100%'}
-                    backgroundColor={'#F2DB7A'}
+                    backgroundColor={color ? color : '#F2DB7A'}
                     padding={'20px 0px 20px 0px'}
                     marginTop={'15%'}
                     display={'flex'}
@@ -208,7 +209,7 @@ export default function Digital_Marketing_Temp() {
                         </div>
                         <div>
                           <Heading
-                            color={'#3A4D6C'}
+                            color={color ? color : '#3A4D6C'}
                             title="WORK EXPERIENCE"
                             fontSize={'22px'}
                             fontWeight={700}
@@ -220,7 +221,7 @@ export default function Digital_Marketing_Temp() {
                             maxW={'fit-content'}
                             icon={(props) => (
                               <FaChevronRight
-                                color="#3A4D6C"
+                                color={color ? color : '#3A4D6C'}
                                 size={22}
                                 {...props}
                               />
@@ -264,7 +265,7 @@ export default function Digital_Marketing_Temp() {
                         <div>
                           <Heading
                             title={'EDUCATION'}
-                            color={'#3A4D6C'}
+                            color={color ? color : '#3A4D6C'}
                             fontSize={'22px'}
                             fontWeight={700}
                             onSideSectionShow={() =>
@@ -273,7 +274,7 @@ export default function Digital_Marketing_Temp() {
                             circleIconHeading={true}
                             icon={(props) => (
                               <FaChevronRight
-                                color="#3A4D6C"
+                                color={color ? color : '#3A4D6C'}
                                 size={22}
                                 {...props}
                               />
@@ -299,7 +300,7 @@ export default function Digital_Marketing_Temp() {
                   <Box
                     height={'50px'}
                     width={'100%'}
-                    backgroundColor={'#F2DB7A'}
+                    backgroundColor={color ? color : '#F2DB7A'}
                     marginTop={'10px'}
                   >
                     {/* footer container */}

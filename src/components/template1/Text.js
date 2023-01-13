@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { onBlurField } from '../../../store/actions/builderAction';
-import styles from '../../../styles/templates/Fashion.module.css';
+import styles from '../../../styles/templates/commonTemplates.module.css';
 import { colors } from '../../../constants/colors';
 
 function Text(props) {

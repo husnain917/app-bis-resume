@@ -18,6 +18,7 @@ import {
 import ImageSelector from '../../src/components/imageSelector';
 import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
+
 const FashionTemp4 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [show, setShow] = useShow();
@@ -27,6 +28,7 @@ const FashionTemp4 = () => {
   const { backgroundColor, color } = useSelector(
     (store) => store.themeReducer.theme
   );
+
   return (
     <div style={{ overflow: 'auto' }}>
       <TempLayout work={true} education={true} downloadPDF={downloadPDFHandler}>
@@ -47,7 +49,7 @@ const FashionTemp4 = () => {
               maxW={830}
               h={'full'}
               borderRadius={6}
-              bg={backgroundColor}
+              bg={backgroundColor ? backgroundColor : '#fcd5ce'}
               pl={'90px'}
               pr={'70px'}
               pt={8}

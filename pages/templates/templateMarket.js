@@ -5,7 +5,7 @@ import Profession from '../../src/components/commonSection/Profession';
 import styles from '../../styles/templates/templateMarket.module.css'
 import Classes from '../../styles/templates/flightAttendant.module.css';
 import style from "../../styles/templates/template1.module.scss";
-import useStoreData from '../../src/components/templateMarket/useStoreData';
+import { useSelector } from 'react-redux'
 import ImageSelector from '../../src/components/imageSelector'
 import useShow from '../../src/components/tempSectionSide/useShow';
 import Heading from '../../src/components/commonSection/Heading';
@@ -29,11 +29,7 @@ import ChangeTempBtn from '../../src/components/changeTempbtn/ChangeTempBtn';
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 
 export default function TemplateMarket() {
-    const {
-        resumeData,
-        theme,
-        updater
-    } = useStoreData();
+    let resumeData = useSelector((state) => state.editorReducer.resumeData);
     const [show, setShow] = useShow();
     // PDF Download Hook
     const { downloadPDFHandler, pdfRef } = PDFGenerater();
@@ -134,7 +130,7 @@ export default function TemplateMarket() {
                                     </Box>
                                     {/* language */}
                                     <Box
-                                        margin={'20px 0px 30px 5px'}
+                                        margin={'20px 0px 30px 6px'}
                                     >
                                         {resumeData?.languages?.visible && (
                                             <div className={Classes.sideMenu}>
