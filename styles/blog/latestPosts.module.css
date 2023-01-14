@@ -12,14 +12,19 @@
 
 .imageContainer {
     position: relative;
-    height: 300px;
-    width: 300px;
+    height: 180px;
+    width: 180px;
     cursor: pointer;
 }
 
 .coverImage {
     width: 100%;
-    width: 100%;
+    border-radius: 3%;
+
+}
+
+.imageContainer:hover {
+    transform: scale(1.05);
 }
 
 .imageContainerE {
@@ -150,9 +155,10 @@
 }
 
 .dateHeading {
-    color: #fff;
+    color: black;
     padding-right: 10px;
-    margin-top: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .imageHover {
@@ -190,6 +196,17 @@
     align-items: baseline;
     justify-content: center;
 }
+
+
+.centerblogs2 {
+    display: flex;
+    /* align-items: baseline;
+    justify-content: center; */
+    justify-content: space-between;
+
+}
+
+
 
 .Cardtitle {
     margin-top: 20px;
