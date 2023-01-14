@@ -23,7 +23,17 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { BsFolder2 } from 'react-icons/bs';
 import { TbArrowBack } from 'react-icons/tb';
 import url from '../../config/endpoint';
+import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 const Profile = () => {
+  const userData = useSelector((store) =>
+    store.AuthReducer.user)
+  const isUserLoggedIn = useSelector((store) =>
+    store.AuthReducer.isUserLoggedIn)
+  const router = useRouter()
+  if (!isUserLoggedIn) {
+    router.push('/')
+  }
   const [preview, setPreview] = useState('');
 
   const imageChange = (e) => {
@@ -36,6 +46,17 @@ const Profile = () => {
   const removeSelectedImage = () => {
     setPreview('');
   };
+
+  const [name, setName] = useState(userData?.name || '');
+  const [email, setEmail] = useState(userData?.email || '');
+  const [picture, setPicture] = useState(userData?.picture || '');
+  const [family_name, setFamilyName] = useState(userData?.family_name || '')
+  const [given_name, setGivenName] = useState( userData?.given_name || '')
+  const [verified_email, setVerifiedEmail] = useState(userData?.verified_email || '')
+
+
+
+
   return (
     <>
       {/* ~~~~~~~~~~~~~~ User Profile Page ~~~~~~~~~~~~~~ */}
@@ -46,7 +67,7 @@ const Profile = () => {
           fontSize={{ base: '20px', md: '30px' }}
           fontWeight={700}
         >
-          Abubakar Ansari
+          {name && name}
         </Text>
         {/* ________________ Upload and Delete Image Section ________________ */}
         <Box
@@ -94,8 +115,8 @@ const Profile = () => {
           borderWidth={3}
           zIndex={9}
           src={
-            preview
-              ? preview
+            picture
+              ? picture
               : 'https://novoresume.com/file/picture/user/1666891932864/2823f710-40b4-11ed-bb5c-375ab1d0bdc6/photo.jpeg'
           }
           className={`${Style.avatar}`}
@@ -226,13 +247,13 @@ const Profile = () => {
                     <Box w={'50%'}>
                       <Text color={'#9B9B9B'}>Given Name</Text>
                       <Text color="#fff" fontSize={14} fontWeight="500">
-                        Name
+                        {given_name}
                       </Text>
                     </Box>
                     <Box w={{ base: '100%', md: '50%' }}>
                       <Text color={'#9B9B9B'}>Family Name</Text>
                       <Text color="#fff" fontSize={14} fontWeight="500">
-                        Name
+                        {family_name}
                       </Text>
                     </Box>
                   </Stack>
@@ -263,16 +284,25 @@ const Profile = () => {
                     </Text>
                   </HStack>
                   <Text color={'#9B9B9B'}>Password</Text>
-                  <Text
-                    fontSize={15}
-                    fontWeight="500"
-                    color={'#00c8aa'}
-                    _hover={{
-                      textDecoration: 'underline',
-                    }}
-                  >
-                    Request Password Change
-                  </Text>
+                  {
+                    verified_email ? (
+                      <Text color="#fff" fontSize={14} fontWeight="500">
+                        Google Account
+                      </Text>
+                    ) : (
+                      <Text
+                        fontSize={15}
+                        fontWeight="500"
+                        color={'#00c8aa'}
+                        _hover={{
+                          textDecoration: 'underline',
+                        }}
+                      >
+                        Request Password Change
+                      </Text>
+                    )
+                  }
+
                 </Box>
               </Stack>
               <Stack direction={{ base: 'column', md: 'row' }} gap="1vw">
@@ -311,7 +341,7 @@ const Profile = () => {
                   <Box mt={2}>
                     <Text color={'#9B9B9B'}>Account Email</Text>
                     <Text color="#fff" fontSize={14} fontWeight="500">
-                      Email Here
+                      {email}
                     </Text>
                   </Box>
                 </Box>
