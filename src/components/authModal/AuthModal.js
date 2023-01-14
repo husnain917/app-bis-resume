@@ -28,6 +28,7 @@ import {
   doLogin,
   doSignUp,
   loginMagicUser,
+  modalClose,
   passwordReset,
 } from "../../../store/actions/AuthAction";
 import { ToastContainer } from "react-toastify";
@@ -42,11 +43,10 @@ const inCorrect = {
 
 export default function AuthModal({
   isModalOpen,
-  setIsModalOpen,
+  // setIsModalOpen,
   handle,
-  active,
-  setIsActive,
 }) {
+  
   const [fieldActive, setFieldActive] = useState(false);
   const [isRegister, setIsRegister] = useState(true);
   const [fName, setFName] = useState("");
@@ -64,10 +64,16 @@ export default function AuthModal({
   const handleClick = () => setShow(!show);
   const dispatch = useDispatch();
   const [user, setUser] = useState(null);
-
+  const ismodalClose = async () => {
+   dispatch(modalClose());
+  }
+  let active=+localStorage.getItem(
+    "active"
+  )
+  console.log("sami",active)
   const magicLogin = async () => {
     if (email !== "") {
-      dispatch(loginMagicUser(email, setUser, setLoading, setIsModalOpen));
+      dispatch(loginMagicUser(email, setUser, setLoading));
     } else {
       setErr({ inputField: "This field is required", inputId: 2 });
     }
@@ -81,7 +87,7 @@ export default function AuthModal({
 
   const onChangeHandler = (index) => {
     setFieldActive(false);
-    setIsActive(index);
+    localStorage.setItem("active",index);
     if (isRegister) {
       return setIsRegister(false);
     } else {
@@ -118,7 +124,7 @@ export default function AuthModal({
         password: password,
         terms: terms,
       };
-      dispatch(doSignUp(data, setErr, setIsModalOpen, setLoadingsignup));
+      dispatch(doSignUp(data, setErr, setLoadingsignup, setIsModalOpen));
       setErr({ inputField: "", inputId: 0 });
     }
   };
@@ -140,7 +146,7 @@ export default function AuthModal({
         email: email,
         password: password,
       };
-      dispatch(doLogin(data, setLoading, setErr, setIsModalOpen));
+      dispatch(doLogin(data, setLoading, setErr));
       setErr({ inputField: "", inputId: 0 });
     }
   };
@@ -148,7 +154,7 @@ export default function AuthModal({
     // if (!terms) {
     //   setErr({ inputField: 'Accept the terms and policies before use', inputId: 11 })
     // } else {
-    dispatch(doGoogleLogin(terms, setLoading, setErr, setIsModalOpen));
+    dispatch(doGoogleLogin(terms, setLoading, setErr));
     // }
   };
 
@@ -215,7 +221,7 @@ export default function AuthModal({
                 borderRadius="100px"
                 _hover={{ color: " white", borderRadius: "5px" }}
                 onClick={() => {
-                  setIsModalOpen(false);
+                  ismodalClose()
                   setFieldActive(false);
                   setErr({ inputField: "", inputId: 0 }), setResetPass(false);
                 }}
@@ -257,8 +263,8 @@ export default function AuthModal({
                           <AuthButton
                             btn={btn}
                             onChangeHandler={() => onChangeHandler(btn.id)}
-                            bgColor={active === btn.id ? "#00C8AA" : "#E1E1E1"}
-                            color={active === btn.id ? "white" : "black"}
+                            bgColor={+active === btn.id ? "#00C8AA" : "#E1E1E1"}
+                            color={+active === btn.id ? "white" : "black"}
                           />
                         </div>
                       );
@@ -337,8 +343,8 @@ export default function AuthModal({
                     />
                     {((err.inputField !== "" && err.inputId === 7) ||
                       (err.inputField !== "" && err.inputId === 8)) && (
-                      <span style={inCorrect}>{err.inputField}</span>
-                    )}
+                        <span style={inCorrect}>{err.inputField}</span>
+                      )}
                     <InputGroup>
                       <Input
                         variant="outline"
@@ -372,8 +378,8 @@ export default function AuthModal({
 
                     {((err.inputField !== "" && err.inputId === 9) ||
                       (err.inputField !== "" && err.inputId === 10)) && (
-                      <span style={inCorrect}>{err.inputField}</span>
-                    )}
+                        <span style={inCorrect}>{err.inputField}</span>
+                      )}
                     <Checkbox
                       size="lg"
                       mt="5%"
@@ -429,8 +435,8 @@ export default function AuthModal({
                     />
                     {((err.inputField !== "" && err.inputId === 1) ||
                       (err.inputField !== "" && err.inputId === 2)) && (
-                      <span style={inCorrect}>{err.inputField}</span>
-                    )}
+                        <span style={inCorrect}>{err.inputField}</span>
+                      )}
                     {fieldActive && (
                       <>
                         <InputGroup>
@@ -465,8 +471,8 @@ export default function AuthModal({
                         </InputGroup>
                         {((err.inputField !== "" && err.inputId === 3) ||
                           (err.inputField !== "" && err.inputId === 4)) && (
-                          <span style={inCorrect}>{err.inputField}</span>
-                        )}
+                            <span style={inCorrect}>{err.inputField}</span>
+                          )}
                         <Text
                           onClick={() => setResetPass(true)}
                           color="#2a69cb"
