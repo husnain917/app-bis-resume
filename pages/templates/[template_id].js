@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import styles from "../../styles/TemplateDetail.module.css";
 import TempLayout from "../../src/components/tempNav/TempLayout";
 import { useWindowSizing } from "../../customHooks/useWindowSizing";
@@ -24,8 +24,11 @@ const TemplateDetail = () => {
   const selected =
     CUSTOM_TEMP_DATA?.find((item) => item.id === template) ||
     CUSTOM_TEMP_DATA.find((item) => item.id === parseInt(template_id));
+
   return (
-    <div style={{ overflow: "auto" }}>
+    <Box
+      overflow={'auto'}
+    >
       <TempLayout
         work={true}
         education={true}
@@ -46,24 +49,40 @@ const TemplateDetail = () => {
           {sideTempSelect && (
             <Box
               className={styles.sideBarTempContainer}
-              columns={{ base: 1, sm: 1, md: 1, lg: 2, xl: 2 }}
-              spacing={10}
-              py={4}
-              px={10}
+              columns={{ base: 2, sm: 1, md: 1, lg: 2, xl: 2 }}
+              margin={'11% 0% 0% 3%'}
+              borderRadius={6}
+              border={'1px solid #313b47'}
             >
               {CUSTOM_TEMP_DATA?.map((items, index) => (
                 <>
                   <Box
-                    className="cursor"
                     key={index}
                     onClick={() => settemplate(items?.id)}
-                    style={{ paddingLeft: 20, paddingTop: 20 }}
+                    px={2}
+                    py={4}
+                    color={'#fff'}
+                    cursor={'pointer'}
+                    _hover={{
+                      color: '#00c8aa'
+                    }}
                   >
-                    <img
+                    <Text
+                      fontSize={'16px'}
+                      fontWeight={700}
+                      m={'0px 0px 3px 13px'}
+                    >
+                      {items?.heading}
+                    </Text>
+                    <Image
                       src={items?.src}
                       alt={items?.alt}
-                      height={items?.height}
-                      width={items?.width}
+                      boxSize={'250px'}
+                      borderRadius={8}
+                      p={3}
+                      _hover={{
+                        border: '2px solid #00c8aa'
+                      }}
                     />
                   </Box>
                 </>
@@ -87,27 +106,41 @@ const TemplateDetail = () => {
                 {sideTempSelect && (
                   <Box
                     className={styles.sideBarTempSmallContainer}
-                    columns={{ base: 1, sm: 1, md: 1, lg: 2, xl: 2 }}
-                    spacing={10}
-                    py={4}
-                    px={10}
+                    py={2}
+                    mt={10}
                   >
                     {CUSTOM_TEMP_DATA?.map((items, index) => (
                       <>
                         <Box
-                          className="cursor"
                           key={index}
                           onClick={() => {
                             settemplate(items?.id);
                             setsideTempSelect(false);
                           }}
-                          style={{ paddingLeft: 20, paddingTop: 20 }}
+                          px={6}
+                          py={4}
+                          color={'#fff'}
+                          cursor={'pointer'}
+                          _hover={{
+                            color: '#00c8aa'
+                          }}
                         >
-                          <img
+                          <Text
+                            fontSize={'16px'}
+                            fontWeight={700}
+                            m={'0px 0px 3px 13px'}
+                          >
+                            {items?.heading}
+                          </Text>
+                          <Image
                             src={items?.src}
                             alt={items?.alt}
-                            height={items?.height}
-                            width={items?.width}
+                            boxSize={'250px'}
+                            borderRadius={8}
+                            p={3}
+                            _hover={{
+                              border: '2px solid #00c8aa'
+                            }}
                           />
                         </Box>
                       </>
@@ -119,7 +152,7 @@ const TemplateDetail = () => {
           </Modal>
         </div>
       </TempLayout>
-    </div>
+    </Box>
   );
 };
 export default TemplateDetail;

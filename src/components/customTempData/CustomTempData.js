@@ -1,48 +1,54 @@
-
 import {
-  templateCEO,fashionTemp5,fashionTemp4,
-  SalesRepresentative
+  templateCEO, 
+   fashionTemp4,
+   fashionTemp5,
+  // SalesRepresentative
 
 
 } from "../../templates";
+import { GenerateCustomID } from "./GenerateCustomID";
 
 export const CUSTOM_TEMP_DATA = [
   {
-    id: 1,
+    id: GenerateCustomID(),
     href: "/templates/1",
     src: "/Chief_Exclusive_Office.jpg",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
+    heading: 'Combined',
     component: templateCEO,
   },
   {
-    id: 2,
+    id: GenerateCustomID(),
     href: "/templates/2",
     src: "/FashTemp5.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
+    heading: 'Minimalist',
     component: fashionTemp5,
   },
   {
-    id: 3,
+    id: GenerateCustomID(),
     href: "/templates/3",
     src: "/FashTemp4.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
+    heading: 'Traditional',
     component: fashionTemp4,
   },
-  {
-    id: 4,
-    href: "/templates/4",
-    src: "/SalesRepresentive2n.PNG",
-    alt: "Template Not Found",
-    height: "200px",
-    width: "250px",
-    component: SalesRepresentative,
-  },
+  // {
+  //   id: GenerateCustomID(),
+  //   href: "/templates/4",
+  //   src: "/SalesRepresentive2n.PNG",
+  //   alt: "Template Not Found",
+  //   height: "200px",
+  //   width: "250px",
+  //   heading: 'IT',
+  //   component: SalesRepresentative,
+  // },
   // {
   //   id: 5,
 
