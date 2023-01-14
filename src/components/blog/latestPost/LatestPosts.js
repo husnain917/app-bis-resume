@@ -63,10 +63,10 @@ export default function LatestPosts({ blogs }) {
       >
         {PostData?.map((item, index) => {
           return (
-
-            <Box>
-              <>
-              <Box key={index} style={{ margin: 5, borderBottom: "2px solid", borderColor: "#C6C6C6", paddingBottom: "5%" }}>
+            
+            <Box key={index}>
+            
+              <Box  style={{ margin: 5, borderBottom: "2px solid", borderColor: "#C6C6C6", paddingBottom: "5%" }}>
                 <Box className={style.imageContainer} style={{ height: 300, borderRadius: 50 }}>
 
                   <Image
@@ -93,7 +93,7 @@ export default function LatestPosts({ blogs }) {
                   <SocialIcons />
                 </Box>
               </Box>
-              </>
+              
             </Box>
           );
 
