@@ -24,7 +24,16 @@ import { BsFolder2 } from 'react-icons/bs';
 import { TbArrowBack } from 'react-icons/tb';
 import url from '../../config/endpoint';
 import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 const Profile = () => {
+  const userData = useSelector((store) =>
+    store.AuthReducer.user)
+  const isUserLoggedIn = useSelector((store) =>
+    store.AuthReducer.isUserLoggedIn)
+  const router = useRouter()
+  if (!isUserLoggedIn) {
+    router.push('/')
+  }
   const [preview, setPreview] = useState('');
 
   const imageChange = (e) => {
@@ -37,11 +46,17 @@ const Profile = () => {
   const removeSelectedImage = () => {
     setPreview('');
   };
-  const userData = useSelector((store) =>
-    store.AuthReducer.user)
-  console.log("sami", userData.user_token)
-  const { email, family_name, given_name, granted_scopes, id, locale, name, picture, verified_email } = userData?.user_token
-  console.log("sami", picture)
+
+  const [name, setName] = useState(userData?.name || '');
+  const [email, setEmail] = useState(userData?.email || '');
+  const [picture, setPicture] = useState(userData?.picture || '');
+  const [family_name, setFamilyName] = useState(userData?.family_name || '')
+  const [given_name, setGivenName] = useState( userData?.given_name || '')
+  const [verified_email, setVerifiedEmail] = useState(userData?.verified_email || '')
+
+
+
+
   return (
     <>
       {/* ~~~~~~~~~~~~~~ User Profile Page ~~~~~~~~~~~~~~ */}
@@ -52,7 +67,7 @@ const Profile = () => {
           fontSize={{ base: '20px', md: '30px' }}
           fontWeight={700}
         >
-          {name}
+          {name && name}
         </Text>
         {/* ________________ Upload and Delete Image Section ________________ */}
         <Box
@@ -279,7 +294,7 @@ const Profile = () => {
                         fontSize={15}
                         fontWeight="500"
                         color={'#00c8aa'}
-                        _hover={{ 
+                        _hover={{
                           textDecoration: 'underline',
                         }}
                       >
