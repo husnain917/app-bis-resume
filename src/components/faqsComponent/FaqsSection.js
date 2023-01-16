@@ -38,96 +38,69 @@ const FaqsSection = () => {
         ></Box>
       </Box> */}
       <FaqRightImage
-        heading={"Why should I use a resume builder?"}
+        heading={"How does a resume builder benefit me in my job search?"}
         text1={
-          "Using a resume builder makes the process of creating a resume significantly faster and easier. Ever tried building your resume with Word?"
+          "A resume builder not only saves you time and effort in creating a professional-looking resume"
         }
         text2={
-          " The whole process is a huge pain - you make a TINY change to your resume, and the entire resume layout gets completely messed up."
+          "It also helps you tailor your resume to specific job opportunities by providing pre-written, industry-specific bullet points and matching your resume to the job description."
         }
-        text3={`With a resume builder, you don't have to worry about the nitty gritty of resume creation, like font selection, layout, formatting, etc.`}
-        text4={` All you have to do is pick a resume template, fill it in, and then you're ready to start applying for jobs! `}
         image={"/faq0@2x.png"}
       />
       <FaqLeftImage
-        heading={`            What is the best resume builder?      `}
-        text1={`  Over the past 7 years, we’ve been working hard to make BisResume the best resume builder out there.`}
-        text2={`  And we’d say we succeeded! Here’s what sets us apart from the rest of the competition:`}
-        item1h={`                Easy to Use        `}
-        item1={`- Our builder is very easy to use, even if you're not too tech-friendly.`}
-        item2h={`                Get Started in under 5 Minutes`}
-        item2={`- Just pick one of our resume templates, and you're good to go!`}
-        item3h={`                It's 100% free`}
-        item3={`- Some resume builders out there pretend to be free… and then they hit you with a paywall once you’re done writing your resume! We don’t do that. Our builder will instantly notify you if you’re using any of our premium features.`}
-        item4h={`Cover Letter Builder`}
-        item4={`- If you’re using BisResume Premium, you gain access to our cover letter builder for free (including matching cover letter templates).`}
-        item5h={`Tons of Customization and Design Options`}
-        item5={`- Our builder offers a ton of customization. You can make changes to the layout, color schemes, and much more.`}
-        item6={` - Our resume templates are built on top of some of the most popular applicant tracking systems out there. Meaning, your resume won't automatically get rejected by any ATS.`}
-        item6h={`ATS-Friendly Resume Templates`}
+        heading={`            Can I customize my resume to the job I am applying for?    `}
+        text1={`  Yes, BisResume allows you to customize your resume to the job by providing a feature to copy and paste a job description and getting a job-specific resume match score. `}
+        text2={"This feature guides you through tailoring your resume for the job."}
         image={"/faq1@2x.png"}
       />
       <FaqRightImage
-        heading={"Is this a completely free resume builder?"}
-        text1={"Yes, BisResume is a 100% free resume builder.          "}
+        heading={"Why is it important to have a professional resume?"}
+        text1={"Having a professional resume is essential in today's job market. "}
         text2={
-          " If you’re on a budget, you can use it to create your resume completely free of charge. And no, unlike some other resume builders out there, we don’t hit you with a paywall once you’ve completed your resume."
+          " It is often the first impression a potential employer has of you, and it should showcase your qualifications and experience in the best possible light. "
         }
         text3={
-          "If you use any of our premium features, the software will let you know about it. It will then ask if you did it accidentally, or if you would like to upgrade to BisResume Premium. You're in control!          "
+          "A professional resume demonstrates that you are a serious candidate and that you have put effort into your job search."
+        }
+        text4={
+          "It also helps you stand out among other applicants and increases your chances of getting an interview and getting hired."
         }
         image={"/faq2@2x.png"}
       />
       <FaqLeftImage
-        heading={`            What is a resume?     `}
-        text1={`  A resume (also known as a CV, or curriculum vitae) is a 1-2 page document that summarizes your work experience and career history.`}
-        text2={`  It usually includes information about the following:`}
-        item1={`Your work history`}
-        item2={`Educational background`}
-        item3={`Achievements`}
-        item4={`Contact information`}
-        item5={`Resume summary or resume objective
-`}
+        heading={`   What are the most important elements of a resume?     `}
+        text1={` The most important elements of a resume include your contact information, a professional summary or objective, your work experience, and your education.`}
+        text2={` Additional elements such as skills, certifications, and volunteer experience can also be included, depending on the job and your personal brand.`}
+        text3={'It is important to highlight your accomplishments and use keywords relevant to the job you are applying for.'}
         image={"/faq3@2x.png"}
       />
       <FaqRightImage
-        heading={"What's the difference between a CV and a resume?        "}
-        text1={`In the EU, the words "CV" and "resume" are used interchangeably`}
+        heading={"How can I optimize my resume to pass applicant tracking systems (ATS)?        "}
+        text1={`Our resume builder offers ATS-friendly templates and allows you to customize your resume 
+        to match the specific job you are applying for. Additionally, our AI-powered content analyzer
+         will check and optimize your resume for keywords and formatting to increase your chances of passing ATS.`}
         text2={
           " In the United States, however, a resume is a document you use to apply for jobs, while a CV is mainly used by academics."
-        }
-        text3={
-          "Want to learn more? Check out our article on the differences between CVs and resumes."
         }
         image={"/faq4@2x.png"}
       />
       <FaqLeftImage
-        heading={`            How can I create my resume?
+        heading={`           Can I save and edit my resume later?
         `}
-        text01={`  Making a resume with BisResume is very straightforward.
-
+        text1={`  Yes, with BisResume you can easily save and access your resume from any device.
         `}
-        text2={`  Just pick one of our professional resume templates.
-
-        `}
-        text3={`  Then, you’ll be forwarded to our resume builder, where all you have to do is fill in your resume content!
+        text2={`  You can also make changes and updates at any time and download it in multiple formats.
 
         `}
         image={"/faq5@2x.png"}
       />
-      <FaqRightImageWithList
-        heading={"What should a resume include?      "}
+      <FaqRightImage
+        heading={"How can I stand out from other applicants with my resume?       "}
+        text1={`Our resume builder offers a wide variety of professional templates to choose from, and also allows you to customize the design and layout to make it unique. `}
+        text2={`  Additionally, our expertly crafted phrases and resume score feature will help you to highlight your skills and achievements to stand out to potential employers.
+ `}
         image={"/faq6@2x.png"}
-        text1={`The must-have contents in your resume include the following sections:`}
-        text2={" The optional ones are:          "}
-        item1={`Educational Background
-        `}
-        item2={`Contact Information        `}
-        item3={`Resume summary or Resume Objective        `}
-        item4={`Work Experience        `}
-        item5={`Hobbies & Interests        `}
-        item6={`Skills        `}
-        item7={`Volunteering Experience        `}
+
       />
     </Box>
   );
