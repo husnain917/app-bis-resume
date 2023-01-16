@@ -20,10 +20,9 @@ import {
     LANGUAGES,
 } from '../components/tempSectionSide/SectionSideConstant';
 import ImageSelector from '../components/imageSelector';
-import styles from '../../styles/templates/templateceo.module.css'
+import styles from '../../styles/templates/templatebabysitter.module.css'
 
-export default function TemplateCEO() {
-    // redux data
+export default function TemplateBabySitter() {
     let resumeData = useSelector((state) => state.editorReducer.resumeData);
     const { backgroundColor, color } = useSelector(
         (store) => store.themeReducer.theme
@@ -50,114 +49,111 @@ export default function TemplateCEO() {
                 <Box
                     w="40%"
                     pb="10%"
-                    minW={'340px'}
-                    bgColor={backgroundColor ? backgroundColor : '#1c2125'}
+                    minW={'380px'}
+                    bgColor={color ? color : '#F8F2EA'}
                     borderLeftRadius={6}
                     pr={3}
-                    pl={12}
+                    pl={8}
                     py={8}
                     transition="0.5s background"
                 >
-                    {/* _____________ Profile _____________ */}
-                    <ImageSelector
-                        minWidth="240px"
-                        maxWidth="240px"
-                        maxHeight="240px"
-                        minHeight="240px"
-                        marginTop="30px"
-                        borderColor={color ? color : ''}
-                    />
-                    <Heading
-                        title={'CONTACT PERSON'}
-                        color={color ? color : '#fff'}
-                        margin={'20px 0px 0px 0px'}
-                        line={true}
-                        lineW="270px"
-                        lineH="0.15em"
-                        lineBg={color ? color : '#fff'}
-                        fontWeight={700}
-                    />
-                    <Contact
-                        phone={true}
-                        email={true}
-                        linkedinURL={true}
-                        website={true}
-                        circleIcon={true}
-                        circleBg="#f8f9fa"
-                        circleSize="25px"
-                        iconColor={color ? color : '#000000'}
-                        margin={'10px 0px 0px 0px'}
-                        parentStyle={styles.contactFont}
-                    />
+                    <Box
+                        py={8}
+                        px={10}
+                        bgColor={backgroundColor ? backgroundColor : '#DDCAB4'}
+                        transition="0.5s background"
+                        borderRadius={'50px 50px'}
+                    >
+                        {/* _____________ Profile _____________ */}
+                        <ImageSelector
+                            minWidth="240px"
+                            maxWidth="240px"
+                            maxHeight="240px"
+                            minHeight="240px"
+                            marginTop="10px"
+                            marginLeft="8px"
+                            borderColor={color ? color : ''}
+                        />
+                        <Heading
+                            title={'CONTACT PERSON'}
+                            color={color ? color : '#000000'}
+                            margin={'30px 0px 0px 0px'}
+                            fontWeight={700}
+                        />
+                        <Contact
+                            phone={true}
+                            email={true}
+                            linkedinURL={true}
+                            website={true}
+                            circleIcon={true}
+                            circleBg="#000000"
+                            circleSize="25px"
+                            iconColor={color ? color : '#fff'}
+                            margin={'10px 0px 0px 0px'}
+                            parentStyle={styles.contactFont}
+                        />
 
-                    {/* _____________ About me _____________ */}
-                    <Heading
-                        title={'ABOUT ME'}
-                        color={color ? color : '#fff'}
-                        margin={'20px 0px 0px 0px'}
-                        line={true}
-                        lineW="270px"
-                        lineH="0.13em"
-                        lineBg={color ? color : '#fff'}
-                        fontWeight={700}
-                    />
-                    <About
-                        minW="100%"
-                        maxW="100%"
-                        aboutStyle={Classes.aboutText}
-                        fontColor="#fff"
-                        fontWeight={'600'}
-                    />
+                        {/* _____________ About me _____________ */}
+                        <Heading
+                            title={'ABOUT ME'}
+                            color={color ? color : '#000000'}
+                            margin={'20px 0px 0px 0px'}
+                            fontWeight={700}
+                        />
+                        <About
+                            minW="100%"
+                            maxW="100%"
+                            aboutStyle={Classes.aboutText}
+                            fontColor="#000000"
+                            fontWeight={'600'}
+                        />
 
-                    {/* _____________ Skill _____________ */}
-                    <Box margin={'20px 0px 10px 7px'}>
-                        {resumeData?.skills?.visible && (
-                            <div className={Classes.sideMenu}>
-                                <div className={Classes.sideMenuBox}>
-                                    {show?.skills && (
-                                        <SectionSideMenu
-                                            onDelete={SKILL}
-                                            onHide={() => setShow({ ...show, skills: false })}
-                                            bg="#006772"
-                                            iconColor={"#fff"}
+                        {/* _____________ Skill _____________ */}
+                        <Box margin={'20px 0px 10px 7px'}>
+                            {resumeData?.skills?.visible && (
+                                <div className={Classes.sideMenu}>
+                                    <div className={Classes.sideMenuBox}>
+                                        {show?.skills && (
+                                            <SectionSideMenu
+                                                onDelete={SKILL}
+                                                onHide={() => setShow({ ...show, skills: false })}
+                                                bg="#006772"
+                                                iconColor={"#fff"}
+                                            />
+                                        )}
+                                    </div>
+                                    <div>
+                                        <Heading
+                                            title={'SKILLS'}
+                                            fontSize="20px"
+                                            fontWeight={700}
+                                            color={color ? color : '#000000'}
+                                            onSideSectionShow={() =>
+                                                setShow({ ...show, skills: true })
+                                            }
                                         />
-                                    )}
+                                        <Skill
+                                            skillStyle={styles.contactFont}
+                                            progressBar={true}
+                                            strokeWidth="2"
+                                            lineStyle={styles.line}
+                                            strokeColor={color ? color : '#2A78AB'}
+                                            trailColor="#fff"
+                                            percentageStyle={styles.percent}
+                                            parentContainerStyle={Classes.ml}
+                                        />
+                                    </div>
                                 </div>
-                                <div>
-                                    <Heading
-                                        title={'SKILLS'}
-                                        fontSize="20px"
-                                        fontWeight={700}
-                                        color={color ? color : '#fff'}
-                                        line={true}
-                                        lineW="270px"
-                                        lineH="0.15em"
-                                        lineBg={color ? color : '#fff'}
-                                        onSideSectionShow={() =>
-                                            setShow({ ...show, skills: true })
-                                        }
-                                    />
-                                    <Skill
-                                        skillStyle={styles.contactFont}
-                                        progressBar={true}
-                                        strokeWidth="2"
-                                        lineStyle={styles.line}
-                                        strokeColor={color ? color : '#2A78AB'}
-                                        trailColor="#fff"
-                                        percentageStyle={styles.percent}
-                                        parentContainerStyle={Classes.ml}
-                                    />
-                                </div>
-                            </div>
-                        )}
+                            )}
+                        </Box>
                     </Box>
                 </Box>
                 {/* =============== Second Section ============== */}
                 <Box
                     w="60%"
-                    bg={color ? color : '#fff'}
+                    bg={color ? color : '#F8F2EA'}
                     h="auto"
-                    minW="490px"
+                    minW="450"
                     borderRightRadius={6}
                     paddingBottom={'40px'}
                     transition="0.5s background"
@@ -168,17 +164,17 @@ export default function TemplateCEO() {
                         direction="row"
                         FNameStyle={styles.nameStyle}
                         SNameStyle={styles.nameStyle}
-                        margin={'15% 0% 0% 10%'}
+                        margin={'15% 0% 0% 4%'}
                         fontColor={backgroundColor ? backgroundColor : '#000000'}
                     />
                     <Profession
                         professionStyle={styles.profileSubTitle}
-                        margin={'0% 0% 0% 10%'}
+                        margin={'0% 0% 0% 4%'}
                         fontColor={backgroundColor ? backgroundColor : '#000000'}
                     />
                     {/* Work */}
                     <Box
-                        padding={'0px 0px 0px 57px'}
+                        padding={'0px 0px 0px 30px'}
                         margin={'30px 0px 10px 0px'}
                     >
                         {resumeData?.work?.visible && (
@@ -197,10 +193,6 @@ export default function TemplateCEO() {
                                     <Heading
                                         color={backgroundColor ? backgroundColor : '#000000'}
                                         title="WORK EXPERIENCE"
-                                        line={true}
-                                        lineW="410px"
-                                        lineH="0.15em"
-                                        lineBg={backgroundColor ? backgroundColor : '#000000'}
                                         fontSize={'22px'}
                                         fontWeight={700}
                                         minW="300px"
@@ -227,7 +219,7 @@ export default function TemplateCEO() {
                     </Box>
                     {/* _____________ Education _____________ */}
                     <Box
-                        padding={'0px 0px 0px 57px'}
+                        padding={'0px 0px 0px 30px'}
                         margin={'30px 0px 10px 0px'}
                     >
                         {resumeData?.education?.visible && (
@@ -248,10 +240,6 @@ export default function TemplateCEO() {
                                     <Heading
                                         title={'EDUCATION'}
                                         color={backgroundColor ? backgroundColor : '#000000'}
-                                        line={true}
-                                        lineW="410px"
-                                        lineH="0.15em"
-                                        lineBg={backgroundColor ? backgroundColor : '#000000'}
                                         fontSize={'22px'}
                                         fontWeight={700}
                                         onSideSectionShow={() =>
@@ -277,7 +265,7 @@ export default function TemplateCEO() {
                     </Box>
                     {/* _____________ Language _____________ */}
                     <Box
-                        padding={'0px 0px 0px 57px'}
+                        padding={'0px 0px 0px 30px'}
                         margin={'37px 0px 0px 0px'}
                     >
                         {resumeData?.languages?.visible && (
@@ -298,10 +286,6 @@ export default function TemplateCEO() {
                                         fontSize="20px"
                                         fontWeight={700}
                                         color={backgroundColor ? backgroundColor : '#000000'}
-                                        line={true}
-                                        lineW="410px"
-                                        lineH="0.15em"
-                                        lineBg={backgroundColor ? backgroundColor : '#000000'}
                                         onSideSectionShow={() =>
                                             setShow({ ...show, languages: true })
                                         }

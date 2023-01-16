@@ -1,29 +1,27 @@
 import { Box, Flex } from '@chakra-ui/react';
 import React from 'react';
-import Name from '../components/commonSection/Name';
+import Name from '../../src/components/commonSection/Name';
 import Classes from '../../styles/templates/flightAttendant.module.css';
-import Profession from '../components/commonSection/Profession';
-import Contact from '../components/commonSection/Contact';
-import Heading from '../components/commonSection/Heading';
-import Skill from '../components/commonSection/Skill';
-import WorkExperience from '../components/commonSection/WorkExperience';
-import Education from '../components/commonSection/Education';
-import Language from '../components/commonSection/Language';
+import Profession from '../../src/components/commonSection/Profession';
+import Contact from '../../src/components/commonSection/Contact';
+import Heading from '../../src/components/commonSection/Heading';
+import Skill from '../../src/components/commonSection/Skill';
+import WorkExperience from '../../src/components/commonSection/WorkExperience';
+import Education from '../../src/components/commonSection/Education';
 import { useSelector } from 'react-redux';
-import useShow from '../components/tempSectionSide/useShow';
-import SectionSideMenu from '../components/tempSectionSide/SectionSideMenu';
-import About from '../components/commonSection/About';
+import useShow from '../../src/components/tempSectionSide/useShow';
+import SectionSideMenu from '../../src/components/tempSectionSide/SectionSideMenu';
+import About from '../../src/components/commonSection/About';
 import {
     EDUCATION,
     SKILL,
     WORK,
-    LANGUAGES,
-} from '../components/tempSectionSide/SectionSideConstant';
-import ImageSelector from '../components/imageSelector';
-import styles from '../../styles/templates/templateceo.module.css'
+} from '../../src/components/tempSectionSide/SectionSideConstant';
+import ImageSelector from '../../src/components/imageSelector';
+import styles from '../../styles/templates/graphTemp/graphTemp.module.css';
+import { FaChevronRight } from 'react-icons/fa';
 
-export default function TemplateCEO() {
-    // redux data
+export default function Graph_Template() {
     let resumeData = useSelector((state) => state.editorReducer.resumeData);
     const { backgroundColor, color } = useSelector(
         (store) => store.themeReducer.theme
@@ -48,10 +46,8 @@ export default function TemplateCEO() {
             >
                 {/* =============== First Section ============== */}
                 <Box
-                    w="40%"
-                    pb="10%"
-                    minW={'340px'}
-                    bgColor={backgroundColor ? backgroundColor : '#1c2125'}
+                    w="45%"
+                    bgColor={backgroundColor ? backgroundColor : '#000000'}
                     borderLeftRadius={6}
                     pr={3}
                     pl={12}
@@ -65,6 +61,7 @@ export default function TemplateCEO() {
                         maxHeight="240px"
                         minHeight="240px"
                         marginTop="30px"
+                        marginLeft="20px"
                         borderColor={color ? color : ''}
                     />
                     <Heading
@@ -72,7 +69,7 @@ export default function TemplateCEO() {
                         color={color ? color : '#fff'}
                         margin={'20px 0px 0px 0px'}
                         line={true}
-                        lineW="270px"
+                        lineW="100%"
                         lineH="0.15em"
                         lineBg={color ? color : '#fff'}
                         fontWeight={700}
@@ -83,7 +80,7 @@ export default function TemplateCEO() {
                         linkedinURL={true}
                         website={true}
                         circleIcon={true}
-                        circleBg="#f8f9fa"
+                        circleBg="#fff"
                         circleSize="25px"
                         iconColor={color ? color : '#000000'}
                         margin={'10px 0px 0px 0px'}
@@ -96,7 +93,7 @@ export default function TemplateCEO() {
                         color={color ? color : '#fff'}
                         margin={'20px 0px 0px 0px'}
                         line={true}
-                        lineW="270px"
+                        lineW="100%"
                         lineH="0.13em"
                         lineBg={color ? color : '#fff'}
                         fontWeight={700}
@@ -110,7 +107,7 @@ export default function TemplateCEO() {
                     />
 
                     {/* _____________ Skill _____________ */}
-                    <Box margin={'20px 0px 10px 7px'}>
+                    <Box margin={'20px 0px 10px 0px'}>
                         {resumeData?.skills?.visible && (
                             <div className={Classes.sideMenu}>
                                 <div className={Classes.sideMenuBox}>
@@ -130,12 +127,20 @@ export default function TemplateCEO() {
                                         fontWeight={700}
                                         color={color ? color : '#fff'}
                                         line={true}
-                                        lineW="270px"
+                                        lineW="100%"
                                         lineH="0.15em"
                                         lineBg={color ? color : '#fff'}
+                                        circleIconHeading={true}
                                         onSideSectionShow={() =>
                                             setShow({ ...show, skills: true })
                                         }
+                                        icon={(props) => (
+                                            <FaChevronRight
+                                                color={color ? color : '#fff'}
+                                                size={22}
+                                                {...props}
+                                            />
+                                        )}
                                     />
                                     <Skill
                                         skillStyle={styles.contactFont}
@@ -146,6 +151,7 @@ export default function TemplateCEO() {
                                         trailColor="#fff"
                                         percentageStyle={styles.percent}
                                         parentContainerStyle={Classes.ml}
+                                        margin="0px 0px 0px 30px"
                                     />
                                 </div>
                             </div>
@@ -154,32 +160,30 @@ export default function TemplateCEO() {
                 </Box>
                 {/* =============== Second Section ============== */}
                 <Box
-                    w="60%"
-                    bg={color ? color : '#fff'}
+                    w="55%"
+                    bg={color ? color : '#000000'}
                     h="auto"
-                    minW="490px"
                     borderRightRadius={6}
-                    paddingBottom={'40px'}
                     transition="0.5s background"
                 >
                     <Name
                         FName={true}
                         SName={true}
-                        direction="row"
+                        direction="column"
                         FNameStyle={styles.nameStyle}
                         SNameStyle={styles.nameStyle}
                         margin={'15% 0% 0% 10%'}
-                        fontColor={backgroundColor ? backgroundColor : '#000000'}
+                        fontColor={backgroundColor ? backgroundColor : '#fff'}
                     />
                     <Profession
                         professionStyle={styles.profileSubTitle}
-                        margin={'0% 0% 0% 10%'}
-                        fontColor={backgroundColor ? backgroundColor : '#000000'}
+                        margin={'2% 0% 10% 10%'}
+                        fontColor={backgroundColor ? backgroundColor : '#fff'}
                     />
                     {/* Work */}
                     <Box
-                        padding={'0px 0px 0px 57px'}
-                        margin={'30px 0px 10px 0px'}
+                        padding={'0px 0px 0px 53px'}
+                        margin={'20px 0px 10px 0px'}
                     >
                         {resumeData?.work?.visible && (
                             <div className={Classes.sideMenu}>
@@ -195,19 +199,29 @@ export default function TemplateCEO() {
                                 </div>
                                 <div>
                                     <Heading
-                                        color={backgroundColor ? backgroundColor : '#000000'}
+                                        color={backgroundColor ? backgroundColor : '#fff'}
                                         title="WORK EXPERIENCE"
                                         line={true}
-                                        lineW="410px"
+                                        lineW="100%"
                                         lineH="0.15em"
-                                        lineBg={backgroundColor ? backgroundColor : '#000000'}
+                                        lineBg={backgroundColor ? backgroundColor : '#fff'}
                                         fontSize={'22px'}
                                         fontWeight={700}
+                                        circleIconHeading={true}
                                         minW="300px"
                                         onSideSectionShow={() =>
                                             setShow({ ...show, work: true })
                                         }
                                         maxW={'fit-content'}
+                                        icon={(props) => (
+                                            <FaChevronRight
+                                                color={
+                                                    backgroundColor ? backgroundColor : '#fff'
+                                                }
+                                                size={22}
+                                                {...props}
+                                            />
+                                        )}
                                     />
                                     <WorkExperience
                                         company={true}
@@ -219,7 +233,7 @@ export default function TemplateCEO() {
                                         dateStyle={Classes.date}
                                         summaryStyle={Classes.description}
                                         parentContainerStyle={styles.rightContainerWork}
-                                        textColor="#000000"
+                                        textColor="#fff"
                                     />
                                 </div>
                             </div>
@@ -227,8 +241,8 @@ export default function TemplateCEO() {
                     </Box>
                     {/* _____________ Education _____________ */}
                     <Box
-                        padding={'0px 0px 0px 57px'}
-                        margin={'30px 0px 10px 0px'}
+                        padding={'0px 0px 0px 53px'}
+                        margin={'20px 0px 10px 0px'}
                     >
                         {resumeData?.education?.visible && (
                             <div className={Classes.sideMenu}>
@@ -247,16 +261,26 @@ export default function TemplateCEO() {
                                 <div>
                                     <Heading
                                         title={'EDUCATION'}
-                                        color={backgroundColor ? backgroundColor : '#000000'}
+                                        color={backgroundColor ? backgroundColor : '#fff'}
                                         line={true}
-                                        lineW="410px"
+                                        lineW="100%"
                                         lineH="0.15em"
-                                        lineBg={backgroundColor ? backgroundColor : '#000000'}
+                                        lineBg={backgroundColor ? backgroundColor : '#fff'}
                                         fontSize={'22px'}
                                         fontWeight={700}
                                         onSideSectionShow={() =>
                                             setShow({ ...show, education: true })
                                         }
+                                        circleIconHeading={true}
+                                        icon={(props) => (
+                                            <FaChevronRight
+                                                color={
+                                                    backgroundColor ? backgroundColor : '#fff'
+                                                }
+                                                size={22}
+                                                {...props}
+                                            />
+                                        )}
                                     />
                                     <Education
                                         degree={true}
@@ -269,45 +293,7 @@ export default function TemplateCEO() {
                                         dateStyle={Classes.date}
                                         summaryStyle={Classes.description}
                                         degree_placeholder="Study Program"
-                                        textColor="#000000"
-                                    />
-                                </div>
-                            </div>
-                        )}
-                    </Box>
-                    {/* _____________ Language _____________ */}
-                    <Box
-                        padding={'0px 0px 0px 57px'}
-                        margin={'37px 0px 0px 0px'}
-                    >
-                        {resumeData?.languages?.visible && (
-                            <div className={Classes.sideMenu}>
-                                <div className={Classes.sideMenuBox}>
-                                    {show?.languages && (
-                                        <SectionSideMenu
-                                            onDelete={LANGUAGES}
-                                            onHide={() => setShow({ ...show, languages: false })}
-                                            bg="#006772"
-                                            iconColor={"#fff"}
-                                        />
-                                    )}
-                                </div>
-                                <div>
-                                    <Heading
-                                        title={'LANGUAGES'}
-                                        fontSize="20px"
-                                        fontWeight={700}
-                                        color={backgroundColor ? backgroundColor : '#000000'}
-                                        line={true}
-                                        lineW="410px"
-                                        lineH="0.15em"
-                                        lineBg={backgroundColor ? backgroundColor : '#000000'}
-                                        onSideSectionShow={() =>
-                                            setShow({ ...show, languages: true })
-                                        }
-                                    />
-                                    <Language
-                                        langStyle={styles.langFont}
+                                        textColor="#fff"
                                     />
                                 </div>
                             </div>

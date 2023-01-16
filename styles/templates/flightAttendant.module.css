@@ -31,22 +31,16 @@
   font-weight: 700;
   margin: 0 !important;
   padding: 0 !important;
-  min-width: 430px;
-  max-width: 430px;
 }
 .company {
   font-size: 17px;
   font-weight: 500;
   margin: 0 !important;
   padding: 0 !important;
-  min-width: 430px;
-  max-width: 430px;
 }
 .description {
   font-size: 15px;
   font-weight: 500;
-  min-width: 430px;
-  max-width: 430px;
 }
 .date {
   color: black;

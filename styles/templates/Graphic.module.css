@@ -34,11 +34,11 @@
   filter: invert(1);
 }
 
-.bgContainer {
+/* .bgContainer {
   background-image: url(../../public/gdImagetop.png);
   background-repeat: no-repeat;
   background-position: top right;
-}
+} */
 
 .fullName {
   text-transform: uppercase;

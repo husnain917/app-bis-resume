@@ -1,6 +1,6 @@
 // generate ID
 export const GenerateCustomID = () => {
-    const length = 12;
+    const length = 16;
     var result = '';
     var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var charactersLength = characters.length;

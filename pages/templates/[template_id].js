@@ -14,6 +14,7 @@ import { CUSTOM_TEMP_DATA } from "../../src/components/customTempData/CustomTemp
 import ChangeTempBtn from "../../src/components/changeTempbtn/ChangeTempBtn";
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 import { useRouter } from "next/router";
+
 const TemplateDetail = () => {
   const router = useRouter();
   const { template_id } = router.query;
@@ -23,7 +24,7 @@ const TemplateDetail = () => {
   const [template, settemplate] = useState();
   const selected =
     CUSTOM_TEMP_DATA?.find((item) => item.id === template) ||
-    CUSTOM_TEMP_DATA.find((item) => item.id === parseInt(template_id));
+    CUSTOM_TEMP_DATA.find((item) => item.id === template_id);
 
   return (
     <Box
@@ -34,6 +35,11 @@ const TemplateDetail = () => {
         education={true}
         languages={true}
         skills={true}
+        projects={true}
+        references={true}
+        organization={true}
+        interest={true}
+        certificate={true}
         downloadPDF={downloadPDFHandler}
       >
         <ChangeTempBtn onPress={() => setsideTempSelect(!sideTempSelect)} />
@@ -59,8 +65,7 @@ const TemplateDetail = () => {
                   <Box
                     key={index}
                     onClick={() => settemplate(items?.id)}
-                    px={2}
-                    py={4}
+                    m={'15px 8px 8px 8px'}
                     color={'#fff'}
                     cursor={'pointer'}
                     _hover={{
@@ -68,7 +73,7 @@ const TemplateDetail = () => {
                     }}
                   >
                     <Text
-                      fontSize={'16px'}
+                      fontSize={'14px'}
                       fontWeight={700}
                       m={'0px 0px 3px 13px'}
                     >
@@ -77,11 +82,11 @@ const TemplateDetail = () => {
                     <Image
                       src={items?.src}
                       alt={items?.alt}
-                      boxSize={'250px'}
+                      boxSize={'200px'}
                       borderRadius={8}
-                      p={3}
+                      p={'1px'}
                       _hover={{
-                        border: '2px solid #00c8aa'
+                        border: '3px solid #00c8aa'
                       }}
                     />
                   </Box>
@@ -91,7 +96,13 @@ const TemplateDetail = () => {
           )}
 
           {CUSTOM_TEMP_DATA?.find((item) => item.id === template)?.component}
-          <Box ref={pdfRef}>{selected && <selected.component />}</Box>
+          <Box
+            mt={'70px'}
+            ml={'50px'}
+            overflow={'auto'}
+          >
+            <Box ref={pdfRef}>{selected && <selected.component />}</Box>
+          </Box>
         </Flex>
         <div>
           <Modal
@@ -137,9 +148,9 @@ const TemplateDetail = () => {
                             alt={items?.alt}
                             boxSize={'250px'}
                             borderRadius={8}
-                            p={3}
+                            p={'1px'}
                             _hover={{
-                              border: '2px solid #00c8aa'
+                              border: '3px solid #00c8aa'
                             }}
                           />
                         </Box>
