@@ -46,7 +46,7 @@ export default function HintSection() {
             // margin={"0 auto"}
             lineHeight={["30px", "30px", "40px", "40px", "40px"]}
           >
-            Build Your Resume Fast and Easy.
+          Create a High-Impact Resume in Seconds.
           </Text>
         </Box>
 
@@ -76,38 +76,41 @@ export default function HintSection() {
           mt="3%"
           className="only-font-family"
         >
-          BisResume is lightning fast. There is no software to download. No
-          multi-part sign-up form. No long-winded tutorials. Just a
-          straightforward process.
+        BisResume is lightning fast. There is no software to download. No multi-part sign-up form. 
+        No long-winded tutorials. Just a straightforward process." effectively emphasizes the speed 
+        and ease of use of your resume builder service. This content clearly communicates the benefits 
+        of using your service and highlights the simplicity of the process, which is likely to appeal 
+        to users looking to quickly create a professional resume.
+
         </Text>
         <Hint
           number="1"
-          message="Pick a Template"
-          description="Dont sabotage your job search before it has even begun. Choose from our ATS-friendly, hand-crafted resume templates"
+          message="Choose a Resume Template"
+          description="Boost your job search with our ATS-friendly, hand-crafted resume templates, designed to make you stand out."
           imgSrc={"./svg-export/svgexport-4.svg"}
           isRight={true}
           paddingBottom="30px"
         />
         <Hint
           number="2"
-          message="Customize Your Layout"
-          description="Make the resume template truly your own. Customize the layout based on your experience level."
+          message="Customize your Design"
+          description="Optimize your resume, Customize the design based on your professional experience."
           imgSrc={"./svg-export/svgexport-5.svg"}
           isRight={false}
           paddingBottom="20px"
         />
         <Hint
           number="3"
-          message="Fill in the Blanks"
-          description="Fill in your resume information, let our AI content analyzer do its job, and see your resume changes dynamically in real time."
+          message="Fill in the Blanks with Your Career Information"
+          description="Streamline Your Resume Building,Fill in your information and watch it come to life with our real-time AI updates."
           imgSrc={"./svg-export/svgexport-6.svg"}
           isRight={true}
           paddingBottom="20px"
         />
         <Hint
           number="4"
-          message="Hit Download!'"
-          description="And yes, its free! We dont hit you with a paywall once you have completed your resume in the Basic Account. If you use any of our premium features, the software will let you know about it."
+          message="Download Your Resume"
+          description="Say Goodbye to Paywalls and Hidden Costs,Build a Winning Resume for Free with our Basic Account."
           imgSrc={"./svg-export/svgexport-7.svg"}
           isRight={false}
           paddingBottom="5px"

@@ -13,8 +13,6 @@ const FaqRightImageWithList = ({
   heading,
   text1,
   text2,
-  text3,
-  text4,
   item1,
   item2,
   item3,
@@ -22,7 +20,6 @@ const FaqRightImageWithList = ({
   item5,
   item6,
   item7,
-  item8,
   image,
 }) => {
   return (

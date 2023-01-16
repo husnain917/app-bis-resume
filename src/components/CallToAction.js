@@ -17,7 +17,7 @@ export default function CallToAction() {
           lineHeight={["30px", "30px", "36px", "50px", "50px"]}
           textAlign={["center", "center", "center", "start", "start"]}
         >
-          Get hired faster with our resume builder!
+         Get Ahead of the Competition with Our Professional Resume Builder!
         </Text>
         <Box
           mt={"30px"}
@@ -49,7 +49,7 @@ export default function CallToAction() {
           fontSize={["1rem", "1rem", "1.1rem", "1.1rem", "1.1rem", "1.5rem"]}
           marginTop={["8%", "8%", "5%", "10%", "10%"]}
         >
-          Some of Our Customers have been hired by:
+          Our customers have landed jobs at top companies like:
         </Box>
         <div className={styles.heroIconImgs}>
           <Image
