@@ -6,8 +6,8 @@
 .sideBarTempContainer {
   display: flex;
   flex-wrap: wrap;
-  width: 470px;
-  height: 500px;
+  width: 440px;
+  height: 540px;
   overflow-y: scroll;
   overflow-x: hidden;
   justify-content: center;

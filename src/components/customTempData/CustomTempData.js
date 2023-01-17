@@ -49,6 +49,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Combined',
     component: templateCEO,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'ny1FF7ED91mc6i2k',
@@ -59,6 +70,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Minimalist',
     component: fashionTemp5,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: '7UM1U7FJgAQ5sjWD',
@@ -69,6 +91,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Traditional',
     component: fashionTemp4,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: false,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'ovIeX2yz4B7V1y0G',
@@ -79,6 +112,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'IT',
     component: SalesRepresentative,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: true,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: '9H2XODEcK2Aibm5d',
@@ -89,6 +133,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Tech',
     component: FinancialExpert,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: true,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'b5BJwQR7sCmlADl5',
@@ -99,6 +154,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Skill-Based',
     component: FashionDesigner2,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'UaMsr4yxtyAJ0d9T',
@@ -109,6 +175,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Basic',
     component: GraphicDesigner1,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'Z8T9Wg5LoA7Ihbsq',
@@ -119,6 +196,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Executive',
     component: templateMarket,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: true,
+    }
   },
   {
     id: 'pSJl09vc4C39lNL3',
@@ -129,6 +217,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'General',
     component: digitalMarketingTemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'MTmaNZdZrNEMy0v0',
@@ -139,6 +238,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Hybird',
     component: FlightAttendant1,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: true,
+    }
   },
   {
     id: 'QbnlV2ff7hB3mbdx',
@@ -149,6 +259,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Creative',
     component: graphicDesignerTemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: true,
+      certificate: false,
+    }
   },
   {
     id: 'PhhchnzxtXfKZXBz',
@@ -159,6 +280,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Functional',
     component: SocialSpecialist,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'Mmq0HbjSLc364GmS',
@@ -169,6 +301,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Modren',
     component: TemplateBabySitter,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'd9Ow8i0HO4dP9FMG',
@@ -179,6 +322,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Professional',
     component: hybridTemplate,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: true,
+      references: false,
+      organization: true,
+      interest: true,
+      certificate: true,
+    }
   },
   {
     id: 'vn6uST13L2DZbKXe',
@@ -189,6 +343,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'College',
     component: DigitalMarkTemp2,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: '5RpawNwFi49M8BrR',
@@ -199,6 +364,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Simple',
     component: fashionTemp1,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: false,
+      references: true,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'pC5lVexxlHtEY2v2',
@@ -209,6 +385,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Creative',
     component: GraphicDesigner2,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: true,
+      certificate: false,
+    }
   },
   {
     id: 'UKkFhQx6Qe7JsEXT',
@@ -219,6 +406,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Hybird',
     component: template5,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'zApetir0shFU3R40',
@@ -229,6 +427,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Minimalist',
     component: marketingManager1,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: '6iz8Y7EFbpAos1dn',
@@ -239,6 +448,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Traditional',
     component: designerTemplate,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: true,
+      certificate: false,
+    }
   },
 
   {
@@ -250,6 +470,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Executive',
     component: aaronGraphicTemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: true,
+      interest: true,
+      certificate: false,
+    }
   },
   {
     id: 'q7I7S5FySY1L035S',
@@ -260,6 +491,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Modren',
     component: GraphicDesigner8,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'ZmNpNzLENZPooOwP',
@@ -270,6 +512,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'IT',
     component: marketingManager,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: true,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'zY7eR3FNn1HaM2Kd',
@@ -280,6 +533,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Modren',
     component: GraphicDesigner3,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: true,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: '0S4gN5d6gsN4xFd2',
@@ -290,6 +554,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Classic',
     component: harumiGraphicTemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: '2HU7Uuw10GMgVWgJ',
@@ -300,6 +575,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Executive',
     component: TemplateContentCreater,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: false,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'a8e9GJtWwOAIbAVf',
@@ -310,6 +596,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Simple',
     component: ExecutiveTemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: true,
+      references: false,
+      organization: true,
+      interest: true,
+      certificate: true,
+    }
   },
   {
     id: '4WEhJ5hAXOIcASUB',
@@ -320,6 +617,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Professional',
     component: graphicDesigner,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: '8xDcvDwe76xjzVG3',
@@ -330,6 +638,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'General',
     component: StudentTemplate,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: '3JeA53zVHMSQsOay',
@@ -340,6 +659,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Skill-Based',
     component: TechTemplate,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: true,
+      references: false,
+      organization: true,
+      interest: true,
+      certificate: true,
+    }
   },
   {
     id: '6nJppDLrOJST3qF2',
@@ -350,6 +680,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Professional',
     component: SoftEngineer,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'aacKzXcwGUZADCut',
@@ -360,6 +701,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'General',
     component: fashionTemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'DkXlwWNOhGxOYVIN',
@@ -370,6 +722,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Simple',
     component: CollegeTemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: true,
+      references: false,
+      organization: true,
+      interest: true,
+      certificate: true,
+    }
   },
   {
     id: 'Dd7HVIibnPERnyhy',
@@ -380,6 +743,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Hybird',
     component: simpleTempDesign,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: true,
+      references: false,
+      organization: true,
+      interest: true,
+      certificate: true,
+    }
   },
   {
     id: 'qUv6wvZZDD75QZ5c',
@@ -390,6 +764,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Modren',
     component: templatebrand,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'XziZdLJgLdEOFB3j',
@@ -400,6 +785,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'General',
     component: graphTemplate,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
   {
     id: 'sBpVCiYIojHRtGlh',
@@ -410,6 +806,17 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Skill-Based',
     component: SkillBaseTemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: true,
+      references: false,
+      organization: true,
+      interest: true,
+      certificate: true,
+    }
   },
   {
     id: 'yrXn4MHXPhkKy5Xf',
@@ -420,5 +827,16 @@ export const CUSTOM_TEMP_DATA = [
     width: "250px",
     heading: 'Classic',
     component: FashionDesigner,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+    }
   },
 ];

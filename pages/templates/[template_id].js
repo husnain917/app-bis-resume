@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, } from "@chakra-ui/react";
 import styles from "../../styles/TemplateDetail.module.css";
 import TempLayout from "../../src/components/tempNav/TempLayout";
 import { useWindowSizing } from "../../customHooks/useWindowSizing";
@@ -24,22 +24,22 @@ const TemplateDetail = () => {
   const [template, settemplate] = useState();
   const selected =
     CUSTOM_TEMP_DATA?.find((item) => item.id === template) ||
-    CUSTOM_TEMP_DATA.find((item) => item.id === template_id);
+    CUSTOM_TEMP_DATA?.find((item) => item.id === template_id);
 
   return (
     <Box
       overflow={'auto'}
     >
       <TempLayout
-        work={true}
-        education={true}
-        languages={true}
-        skills={true}
-        projects={true}
-        references={true}
-        organization={true}
-        interest={true}
-        certificate={true}
+        work={selected?.sections?.work}
+        education={selected?.sections?.education}
+        languages={selected?.sections?.languages}
+        skills={selected?.sections?.skills}
+        projects={selected?.sections?.projects}
+        references={selected?.sections?.references}
+        organization={selected?.sections?.organization}
+        interest={selected?.sections?.interest}
+        certificate={selected?.sections?.certificate}
         downloadPDF={downloadPDFHandler}
       >
         <ChangeTempBtn onPress={() => setsideTempSelect(!sideTempSelect)} />
@@ -56,7 +56,8 @@ const TemplateDetail = () => {
             <Box
               className={styles.sideBarTempContainer}
               columns={{ base: 2, sm: 1, md: 1, lg: 2, xl: 2 }}
-              margin={'11% 0% 0% 3%'}
+              margin={'9% 0% 0% 0%'}
+              ml={'74px'}
               borderRadius={6}
               border={'1px solid #313b47'}
             >
@@ -69,7 +70,8 @@ const TemplateDetail = () => {
                     color={'#fff'}
                     cursor={'pointer'}
                     _hover={{
-                      color: '#00c8aa'
+                      color: '#00c8aa',
+                      transition: '0.5s color'
                     }}
                   >
                     <Text
@@ -82,7 +84,7 @@ const TemplateDetail = () => {
                     <Image
                       src={items?.src}
                       alt={items?.alt}
-                      boxSize={'200px'}
+                      boxSize={'190px'}
                       borderRadius={8}
                       p={'1px'}
                       _hover={{
@@ -133,7 +135,8 @@ const TemplateDetail = () => {
                           color={'#fff'}
                           cursor={'pointer'}
                           _hover={{
-                            color: '#00c8aa'
+                            color: '#00c8aa',
+                            transition: '0.5s color'
                           }}
                         >
                           <Text
