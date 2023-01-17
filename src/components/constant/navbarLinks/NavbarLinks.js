@@ -111,7 +111,7 @@ export const NAV_ITEMS = [
   // },
   {
     label: "Blogs",
-    href: "#",
+    href: "/blog",
   },
   {
     label: "Job Search",
