@@ -1,9 +1,21 @@
 import { SimpleGrid, Box, Image } from "@chakra-ui/react";
 import React from "react";
-import Link from "next/link";
+import { Link } from "@chakra-ui/react";
 import { CUSTOM_TEMP_DATA } from "../../src/components/customTempData/CustomTempData";
+import { useDispatch } from "react-redux";
+import { modalOpen } from "../../store/actions/AuthAction";
+import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 
 function Templates() {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer.isUserLoggedIn
+  );
+  const ismodalOpen = async () => {
+    dispatch(modalOpen());
+  }
   return (
     <div>
       <SimpleGrid
@@ -15,7 +27,12 @@ function Templates() {
         {CUSTOM_TEMP_DATA?.map((items, index) => (
           <>
             <Box className="cursor" key={index}>
-              <Link href={items?.href} style={{ cursor: "default" }}>
+              <Link onClick={() => {
+                isUserLoggedIn ?
+                  router.push(items.href)
+                  :
+                  ismodalOpen()
+              }} style={{ cursor: "default" }}>
                 <div class="templatecontainer">
                   <Image
                     className="templateimage"

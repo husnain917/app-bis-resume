@@ -10,9 +10,22 @@ import "slick-carousel/slick/slick-theme.css";
 import { createWrapper } from "next-redux-wrapper";
 import GoToTopBtn from "../src/components/goTopBtn/GoToTopBtn";
 import Layout from "../src/Layout";
+import { getToken } from "../src/components/localStorage/LocalStorage";
+import { redirect } from "../store/actions/AuthAction";
+import { useDispatch } from "react-redux";
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+  const dispatch = useDispatch()
   const [showChild, setShowChild] = useState(false);
+
+  useEffect(() => {
+    if (getToken()) {
+      let token = getToken()
+      if (token.access_token) {
+        dispatch(redirect())
+      }
+    }
+  }, [])
   useEffect(() => {
     setShowChild(true);
   }, []);
