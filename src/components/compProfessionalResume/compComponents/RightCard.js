@@ -48,10 +48,10 @@ export default function RightCard({ cardData }) {
           lineHeight={["14px", "18px", "23px", "22px", "22px"]}
           mt={2}
         >
-         Include your full name, professional email address,
+          Include your full name, professional email address&apos;
           phone number and location. Consider adding a link to
-           your LinkedIn profile or personal website to showcase 
-           your online presence.
+          your LinkedIn profile or personal website to showcase
+          your online presence.
         </Text>
       ) : cardData.text === "2" ? (
         <Text
@@ -63,9 +63,9 @@ export default function RightCard({ cardData }) {
           className={"small-text"}
           mt={2}
         >
-         A short, powerful statement that summarizes your key skills, experience and qualifications.
-        It should be tailored to the specific job you are applying for and highlight your unique value 
-        as a candidate.
+          A short&apos; powerful statement that summarizes your key skills&apos; experience and qualifications.
+          It should be tailored to the specific job you are applying for and highlight your unique value
+          as a candidate.
         </Text>
       ) : cardData.text === "3" ? (
         <Text
@@ -77,10 +77,10 @@ export default function RightCard({ cardData }) {
           lineHeight={["22px", "22px", "23px", "26px", "26px"]}
           mt={2}
         >
-         
-         List your most recent and relevant work experience in reverse chronological order.
-          Use bullet points to highlight your achievements and responsibilities, 
-         and make sure to include specific details such as project names, results and metrics.
+
+          List your most recent and relevant work experience in reverse chronological order.
+          Use bullet points to highlight your achievements and responsibilities&apos;
+          and make sure to include specific details such as project names, results and metrics.
         </Text>
       ) : cardData.text === "4" ? (
         <Text
@@ -92,9 +92,9 @@ export default function RightCard({ cardData }) {
           lineHeight={["14px", "18px", "23px", "22px", "22px"]}
           mt={2}
         >
-         Identify the most important skills required for the job and showcase them prominently on 
-         your resume. This can include both hard skills 
-         (technical abilities) and soft skills (such as communication, problem-solving and teamwork).
+          Identify the most important skills required for the job and showcase them prominently on
+          your resume. This can include both hard skills
+          (technical abilities) and soft skills (such as communication&apos; problem-solving and teamwork).
         </Text>
       ) : (
         cardData.text === "5" && (
@@ -107,9 +107,9 @@ export default function RightCard({ cardData }) {
             lineHeight={["14px", "18px", "23px", "22px", "22px"]}
             mt={2}
           >
-            Include your highest level of education, the name of the institution and the date of completion. 
-            If you have any relevant certifications or training, 
-            list them here as well. Don't forget to include any relevant coursework or honors. 
+            Include your highest level of education&apos; the name of the institution and the date of completion.
+            If you have any relevant certifications or training&apos;
+            list them here as well. {"Don't"} forget to include any relevant coursework or honors. 
           </Text>
         )
       )}
