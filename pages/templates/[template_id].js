@@ -56,7 +56,7 @@ const TemplateDetail = () => {
             <Box
               className={styles.sideBarTempContainer}
               columns={{ base: 2, sm: 1, md: 1, lg: 2, xl: 2 }}
-              margin={'9% 0% 0% 0%'}
+              margin={'8% 0% 0% 0%'}
               ml={'74px'}
               borderRadius={6}
               border={'1px solid #313b47'}
