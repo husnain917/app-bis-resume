@@ -6,7 +6,7 @@ const ChangeTempBtn = ({ onPress }) => {
   return (
     <Box
       position={{ base: "relative", lg: "fixed" }}
-      top={{ base: "129px", lg: "129px" }}
+      top={{ base: "128px", lg: "128px" }}
       mb={{ base: "20px", lg: "0px" }}
       left={"10px"}
       zIndex="999"
