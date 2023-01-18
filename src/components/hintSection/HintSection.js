@@ -83,6 +83,7 @@ export default function HintSection() {
           communicates the benefits of using your service and highlights the
           simplicity of the process, which is likely to appeal to users looking
           to quickly create a professional resume.`&#34;`
+
         </Text>
         <Hint
           number="1"
