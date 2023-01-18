@@ -15,6 +15,14 @@ import {
   Divider,
 } from "@chakra-ui/react";
 import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaTwitter,
+  FaInstagram,
+} from "react-icons/fa";
+import CommonSocial from "../../../commonButton/CommonSocial";
+import { useWindowSizing } from "../../../../../customHooks/useWindowSizing";
+import {
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
@@ -42,9 +50,13 @@ import {
   DrawerContent,
   DrawerCloseButton,
 } from "@chakra-ui/react";
+
 // import { useDisclosure } from "@chakra-ui/react";
 import { useRef } from "react";
+
 export default function Navbar() {
+  const size = useWindowSizing();
+  const width = size.width;
   const { isOpen, onToggle } = useDisclosure();
   const [active, setIsActive] = useState(null);
   const isUserLoggedIn = useSelector(
@@ -84,15 +96,21 @@ export default function Navbar() {
               width={"150px"}
             />
           </Link>
-          <Link href="/#" mt={"10px"}>
-            <Image
-              src="/career-blog.png"
-              alt="Image Not Found"
-              fill
-              height={"26px"}
-              width={"130px"}
-            />
-          </Link>
+          {width < 1320 ? (
+            <></>
+          ) : (
+            <>
+              <Link href="/#" mt={"10px"}>
+                <Image
+                  src="/career-blog.png"
+                  alt="Image Not Found"
+                  fill
+                  height={"26px"}
+                  width={"130px"}
+                />
+              </Link>
+            </>
+          )}
 
           {/* deskTop Nav */}
           <Flex
@@ -110,7 +128,7 @@ export default function Navbar() {
           direction={"row"}
           alignItems={"center"}
           spacing={5}
-          marginTop={{ xl: "20px", lg: "12px", md: "15px" }}
+          marginTop={{ xl: "10px", lg: "12px", md: "15px" }}
         >
           {/* login buttons */}
           {!isUserLoggedIn ? (
@@ -246,9 +264,14 @@ export default function Navbar() {
               aria-label={"Toggle Navigation"}
             />
           </Flex> */}
-          <RightBar ismodalOpen={modalOpenstate} setIsModalOpen={ismodalOpen} />
+
+          {/* <RightBar ismodalOpen={modalOpenstate} setIsModalOpen={ismodalOpen} /> */}
+
           {/* toogle button end */}
         </Stack>
+        <Box marginTop={["10px", "10px", "10px", "15px", "10px"]}>
+          <RightBar ismodalOpen={modalOpenstate} setIsModalOpen={ismodalOpen} />
+        </Box>
       </Flex>
 
       {/* <Collapse in={isOpen} animateOpacity display={"flex"}>
@@ -262,6 +285,8 @@ export default function Navbar() {
 }
 
 const DesktopNav = () => {
+  const size = useWindowSizing();
+  const width = size.width;
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
@@ -272,21 +297,44 @@ const DesktopNav = () => {
           <Box key={navItem.label}>
             <Popover trigger={"hover"} placement={"bottom-start"}>
               <PopoverTrigger position={"absolute"}>
-                <Link
-                  href={navItem?.href ?? "#"}
-                  fontWeight={500}
-                  key={navItem.label}
-                  color={linkColor}
-                  // border={"1px solid black"}
-                  fontSize={["10px", "12px", "14px", "12px", "17px"]}
-                  _hover={{
-                    textDecoration: "none",
-                    color: linkHoverColor,
-                  }}
-                  className="afterlink"
-                >
-                  {navItem?.label}
-                </Link>
+                {width < 1180 ? (
+                  <>
+                    <Link
+                      href={navItem?.href ?? "#"}
+                      fontWeight={500}
+                      key={navItem.label}
+                      color={linkColor}
+                      // border={"1px solid black"}
+                      fontSize={"14px"}
+                      _hover={{
+                        textDecoration: "none",
+                        color: linkHoverColor,
+                      }}
+                      className="afterlink"
+                    >
+                      {navItem?.label}
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      href={navItem?.href ?? "#"}
+                      fontWeight={500}
+                      key={navItem.label}
+                      color={linkColor}
+                      // border={"1px solid black"}
+
+                      fontSize={["15px", "17px"]}
+                      _hover={{
+                        textDecoration: "none",
+                        color: linkHoverColor,
+                      }}
+                      className="afterlink"
+                    >
+                      {navItem?.label}
+                    </Link>
+                  </>
+                )}
               </PopoverTrigger>
             </Popover>
           </Box>
@@ -438,14 +486,131 @@ export const MobileNavItem = ({ label, children, href }) => {
   const mobileNavBorder = useColorModeValue("gray.200", "gray.700");
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Stack
+      spacing={4}
+      onClick={children && onToggle}
+      display={"flex"}
+      justifyContent={"flex-start"}
+      alignItems={"flex-start"}
+    >
       {label === "About" ? (
         <>
           <Divider />
-          <Flex marginTop={"100px"}>
+          <Flex
+            fontSize={"14px"}
+            as={Link}
+            direction={"column"}
+            href={href ?? "#"}
+            _hover={{
+              textDecoration: "none",
+            }}
+          >
             <Text fontWeight={600} margin={"20px 0px"} color={mobileNavColor}>
               {label}
             </Text>
+            <Flex direction={"row"} mt={14}>
+              <Link href="https://web.facebook.com/login/?_rdc=1&_rdr">
+                <CommonSocial
+                  hoverCursor={"pointer"}
+                  backgroundColor={"#006772"}
+                  borderRadius={"50%"}
+                  color={"whitesmoke"}
+                  margin={"0"}
+                  padding={"0"}
+                  hoverBorder={"1px solid black"}
+                  // className={"hoverEffects"}
+                  icon={
+                    <FaFacebookF
+                      color={"white"}
+                      fontWeight={"bold"}
+                      fontSize={"1.1rem"}
+                    />
+                  }
+                />
+              </Link>
+              <Link href="https://www.linkedin.com/home">
+                <CommonSocial
+                  hoverCursor={"pointer"}
+                  backgroundColor={"#006772"}
+                  borderRadius={"50%"}
+                  color={"whitesmoke"}
+                  margin={"0px 20px 0px 20px"}
+                  padding={"0"}
+                  hoverBorder={"1px solid black"}
+                  icon={
+                    <FaLinkedinIn
+                      color={"white"}
+                      fontWeight={"bold"}
+                      fontSize={"1.1rem"}
+                    />
+                  }
+                />
+              </Link>
+              <Link href="https://twitter.com/login">
+                <CommonSocial
+                  hoverCursor={"pointer"}
+                  backgroundColor={"#006772"}
+                  borderRadius={"50%"}
+                  color={"whitesmoke"}
+                  margin={"0px 20px 0px 0px"}
+                  padding={"0"}
+                  hoverBorder={"1px solid black"}
+                  // className={"hoverEffects"}
+                  icon={
+                    <FaTwitter
+                      color={"white"}
+                      fontWeight={"bold"}
+                      fontSize={"1.1rem"}
+                    />
+                  }
+                />
+              </Link>
+              <Link href="https://www.instagram.com/accounts/login/">
+                <CommonSocial
+                  hoverCursor={"pointer"}
+                  backgroundColor={"#006772"}
+                  borderRadius={"50%"}
+                  color={"whitesmoke"}
+                  margin={"0"}
+                  padding={"0"}
+                  hoverBorder={"1px solid black"}
+                  // className={"hoverEffects"}
+                  icon={
+                    <FaInstagram
+                      color={"white"}
+                      fontWeight={"bold"}
+                      fontSize={"1.1rem"}
+                    />
+                  }
+                />
+              </Link>
+            </Flex>
+            <Flex
+              mt={6}
+              fontSize={"14px"}
+              as={Link}
+              href={
+                "mailto://?subject=I%20think%20you%27d%20be%20interested%20in%20this%3A%20Add%20a%20return%20email%20(mailto%3A)%20link%20in%20a%20message&body=Add%20a%20return%20email%20(mailto%3A)%20link%20in%20a%20message%20https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Foffice%2Fadd-a-return-email-mailto-link-in-a-message-86cea017-8f4e-4f20-85aa-0683779ccb0a"
+              }
+              _hover={{
+                textDecoration: "none",
+              }}
+            >
+              <Text>contact@bisresume.com</Text>
+            </Flex>
+            <Flex
+              mt={6}
+              fontSize={"14px"}
+              as={Link}
+              href={
+                "mailto://?subject=I%20think%20you%27d%20be%20interested%20in%20this%3A%20Add%20a%20return%20email%20(mailto%3A)%20link%20in%20a%20message&body=Add%20a%20return%20email%20(mailto%3A)%20link%20in%20a%20message%20https%3A%2F%2Fsupport.microsoft.com%2Fen-us%2Foffice%2Fadd-a-return-email-mailto-link-in-a-message-86cea017-8f4e-4f20-85aa-0683779ccb0a"
+              }
+              _hover={{
+                textDecoration: "none",
+              }}
+            >
+              <Text>Help Center</Text>
+            </Flex>
           </Flex>
         </>
       ) : (
@@ -453,12 +618,16 @@ export const MobileNavItem = ({ label, children, href }) => {
           <Flex
             py={2}
             as={Link}
+            margin={"2px 0px"}
             href={href ?? "#"}
-            justify={"space-between"}
+            justify={"flex-start"}
             align={"center"}
+            width={"-moz-fit-content"}
             _hover={{
               textDecoration: "none",
+              color: "red",
             }}
+            fontSize={"14px"}
           >
             <Text fontWeight={600} color={mobileNavColor}>
               {label}
@@ -471,6 +640,7 @@ export const MobileNavItem = ({ label, children, href }) => {
                 color={isOpen ? "#006772" : "#006772"}
                 w={6}
                 h={6}
+                ml={"20px"}
               />
             )}
           </Flex>
@@ -573,14 +743,16 @@ function RightBar({ setIsModalOpen, ismodalOpen }) {
     <>
       {/* <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
         Open */}
-      <HamburgerIcon
-        w={10}
-        h={10}
-        onClick={onOpen}
-        _hover={{
-          cursor: "pointer",
-        }}
-      />
+      <Box>
+        <HamburgerIcon
+          w={16}
+          h={10}
+          onClick={onOpen}
+          _hover={{
+            cursor: "pointer",
+          }}
+        />
+      </Box>
       {/* </Button> */}
       <Drawer
         isOpen={isOpen}
@@ -698,12 +870,12 @@ function RightBar({ setIsModalOpen, ismodalOpen }) {
             />
           </DrawerBody>
 
-          <DrawerFooter>
+          {/* <DrawerFooter>
             <Button variant="outline" mr={3} onClick={onClose}>
               Cancel
             </Button>
             <Button colorScheme="blue">Save</Button>
-          </DrawerFooter>
+          </DrawerFooter> */}
         </DrawerContent>
       </Drawer>
     </>

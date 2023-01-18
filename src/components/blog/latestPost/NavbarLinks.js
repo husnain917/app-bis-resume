@@ -127,17 +127,17 @@ export const NAV_ITEMS1 = [
     icon: ChevronDownIcon,
     children: [
       {
-        label: "Resume Builder",
+        label: "All Articles",
         subLabel: "Use our builder to create a resume in 5 minutes.",
         href: "/resume-build",
       },
       {
-        label: "Resume Templates",
+        label: "Resume & CV Writing",
         subLabel: "Find the perfect resume template.",
         href: "/templates",
       },
       {
-        label: "Resume Examples",
+        label: "Cover letter Writing",
         subLabel: "See perfect resume examples that get you jobs.",
         href: "/resume-examples",
       },
@@ -147,14 +147,22 @@ export const NAV_ITEMS1 = [
         href: "/blog/resume-formats",
       },
       {
-        label: "How to Write a Resume",
+        label: "Examples",
         subLabel: "Learn how to write a resume that lands you jobs.",
         href: "/write-resume",
       },
       {
-        label: "Resume Help",
+        label: "Personal Development",
         subLabel: "Use our expert guides to improve your resume writing.",
         href: "/help/resume-help",
+      },
+      {
+        label: "Inspiring Stories",
+        href: "#",
+      },
+      {
+        label: "Interviews & Find A Job",
+        href: "#",
       },
     ],
   },
