@@ -6,8 +6,8 @@ const ChangeTempBtn = ({ onPress }) => {
   return (
     <Box
       position={{ base: "relative", lg: "fixed" }}
-      top={{ base: "128px", lg: "128px" }}
-      mb={{ base: "20px", lg: "0px" }}
+      top={{ base: "100px", lg: "100px" }}
+      mb={'40px'}
       left={"10px"}
       zIndex="999"
       onClick={onPress}
@@ -26,6 +26,7 @@ const ChangeTempBtn = ({ onPress }) => {
           color: '#00c8aa',
           transition: '0.5s color'
         }}
+        width={'fit-content'}
       >
         <Text
           mb={'5px'}

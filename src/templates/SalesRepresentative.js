@@ -31,9 +31,9 @@ const SalesRepresentative = () => {
     return (
         // ~~~~~~~~~~~~~~~~~~~~~~~~~ Hybrid Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
         <Flex
-            justifyContent={{ base: 'none', md: 'center' }}
+            justifyContent={{ base: 'none', lg: 'center' }}
             flexDir={'column'}
-            alignItems={{ sm: 'none', md: 'center' }}
+            alignItems={{ sm: 'none', lg: 'center' }}
             bg={'#fff'}
         >
             <Box

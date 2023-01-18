@@ -58,7 +58,7 @@ export default function TempNavbar({
     <Box
       display={"flex"}
       h="auto"
-      minW={{ base: "1000px", lg: "100vw" }}
+      minW={{ base: "1100px", lg: "100vw" }}
       mt={1}
       zIndex="999"
       pos={{ base: "relative", lg: "fixed" }}

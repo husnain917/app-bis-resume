@@ -29,10 +29,10 @@ const FashionDesigner2 = () => {
     return (
         // ~~~~~~~~~~~~~~~~~~~~~~~~~ Fashion Designer Templat ~~~~~~~~~~~~~~~~~~~~~~~~~//
         <Flex
-            justifyContent={{ base: "none", lg: "center" }}
-            bg={"#fff"}
-            flexDir={"column"}
-            alignItems={{ sm: "none", md: "center" }}
+            justifyContent={{ base: 'none', lg: 'center' }}
+            flexDir={'column'}
+            alignItems={{ sm: 'none', lg: 'center' }}
+            bg={'#fff'}
         >
             <Box
                 minW="830px"

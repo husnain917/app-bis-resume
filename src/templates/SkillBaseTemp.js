@@ -46,6 +46,7 @@ const SkillBaseTemp = () => {
             justifyContent={{ base: 'none', lg: 'center' }}
             flexDir={'column'}
             alignItems={{ sm: 'none', lg: 'center' }}
+            bg={'#fff'}
         >
             <Box
                 minW={830}
