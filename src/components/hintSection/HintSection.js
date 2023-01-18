@@ -46,7 +46,7 @@ export default function HintSection() {
             // margin={"0 auto"}
             lineHeight={["30px", "30px", "40px", "40px", "40px"]}
           >
-          Create a High-Impact Resume in Seconds.
+            Create a High-Impact Resume in Seconds.
           </Text>
         </Box>
 
@@ -76,12 +76,9 @@ export default function HintSection() {
           mt="3%"
           className="only-font-family"
         >
-        BisResume is lightning fast. There is no software to download. No multi-part sign-up form. 
-        No long-winded tutorials. Just a straightforward process." effectively emphasizes the speed 
-        and ease of use of your resume builder service. This content clearly communicates the benefits 
-        of using your service and highlights the simplicity of the process, which is likely to appeal 
-        to users looking to quickly create a professional resume.
-
+          {
+            "BisResume is lightning fast. There is no software to download. No multi-part sign-up form. No long-winded tutorials. Just a straightforward process effectively emphasizes the speed and ease of use of your resume builder service. This content clearly communicates the benefits of using your service and highlights the simplicity of the process, which is likely to appeal to users looking to quickly create a professional resume."
+          }
         </Text>
         <Hint
           number="1"
