@@ -11,7 +11,7 @@ export default function Layout({ children }) {
 
   return (
     <>
-      {path.includes("templates/") || path.includes("blog/") ? (
+      {path.includes("templates/") || path.includes("/blog") ? (
         <>
           <main>{children}</main>
         </>
