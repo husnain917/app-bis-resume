@@ -2742,7 +2742,11 @@ video {
   background-color: #2cacd5;
   opacity: 1;
 }
-
+/* .chakra-collapse{
+  display: flex !important;
+  justify-content: flex-end;
+  z-index: 999;
+} */
 
 .mainContainer {
   padding-left: 60px;

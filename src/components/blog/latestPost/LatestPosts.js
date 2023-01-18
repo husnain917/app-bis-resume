@@ -9,7 +9,6 @@ import { SimpleGrid, Box, Container, Text } from "@chakra-ui/react";
 import SocialIcons from "../../Social/SocialIcons";
 import { PostData } from "./PostData";
 
-
 export default function LatestPosts({ blogs }) {
   console.log("blogs", blogs);
   const [searchKey, setSearchKey] = useState("");
@@ -24,7 +23,6 @@ export default function LatestPosts({ blogs }) {
   const filteredBlogs = filterBlog?.filter((item) => item?.slug !== "test");
 
   return (
-
     <div className="mainContainer">
       {/* <SimpleGrid columns={{ lg: 2, sm: 1 }} spacing={10}>
           <Box className={style.titleContainer} lg={6} md={6} sm={6} xs={12}>
@@ -48,13 +46,34 @@ export default function LatestPosts({ blogs }) {
             </div>
           </Box>
         </SimpleGrid> */}
-      <Box lg={12} md={12} sm={6} xs={12} style={{ display: "flex", flexDirection: 'row', justifyContent: "center" }}>
-        <h1 className={`${style.title} title`}>All Articles</h1>
+      <Box
+        lg={12}
+        md={12}
+        sm={6}
+        xs={12}
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+        }}
+      >
+        <Text as="h1" className={`${style.title} title`}>
+          All Articles
+        </Text>
       </Box>
 
-      <Box maxW={["100%", "100%", "94%", "94%", "94%"]} style={{ borderBottom: "1px solid", borderColor: "#C6C6C6", marginTop: "2%" }} ml={["", "", "5%", "5%", "5%"]}
+      <Box
+        maxW={["100%", "100%", "94%", "94%", "94%"]}
+        style={{
+          borderBottom: "1px solid",
+          borderColor: "#C6C6C6",
+          marginTop: "2%",
+        }}
+        ml={["", "", "5%", "5%", "5%"]}
       ></Box>
-
+      <Text fontStyle={"italic"} ml={"60px"}>
+        Featured
+      </Text>
       <SimpleGrid
         className={style.centerblogs}
         columns={{ sm: 1, md: 2, lg: 2 }}
@@ -63,19 +82,25 @@ export default function LatestPosts({ blogs }) {
       >
         {PostData?.map((item, index) => {
           return (
-            
             <Box key={index}>
-            
-              <Box  style={{ margin: 5, borderBottom: "2px solid", borderColor: "#C6C6C6", paddingBottom: "5%" }}>
-                <Box className={style.imageContainer} style={{ height: 300, borderRadius: 50 }}>
-
+              <Box
+                style={{
+                  margin: 5,
+                  borderBottom: "2px solid",
+                  borderColor: "#C6C6C6",
+                  paddingBottom: "5%",
+                }}
+              >
+                <Box
+                  className={style.imageContainer}
+                  style={{ height: 300, borderRadius: 50 }}
+                >
                   <Image
                     className={style.coverImage}
                     layout="fill"
                     objectFit="cover"
                     alt="image"
                     src={item.im}
-
                   />
                 </Box>
                 <h3 className={`${style.Cardtitle} subTitle`}>{item.text}</h3>
@@ -88,18 +113,21 @@ export default function LatestPosts({ blogs }) {
                 </p>
               </Box>
               <Box>
-                <Box m="3% 1%" >
-                  <Text m="2% 0%" className={"subTitle"}>Share Within your Network</Text>
+                <Box m="3% 1%">
+                  <Text m="2% 0%" className={"subTitle"}>
+                    Share Within your Network
+                  </Text>
                   <SocialIcons />
                 </Box>
               </Box>
-              
             </Box>
           );
-
         })}
       </SimpleGrid>
-      <Box maxW={["100%", "100%", "96%", "96%", "96%"]} style={{ borderBottom: "1px solid", borderColor: "#C6C6C6" }} ml={["", "", "5%", "5%", "5%"]}
+      <Box
+        maxW={["100%", "100%", "96%", "96%", "96%"]}
+        style={{ borderBottom: "1px solid", borderColor: "#C6C6C6" }}
+        ml={["", "", "5%", "5%", "5%"]}
       ></Box>
 
       <div>
@@ -110,7 +138,6 @@ export default function LatestPosts({ blogs }) {
               width="400px"
               height="400px"
               alt="No data found"
-
             />
             <h3 className={`${style.notFound} title`}>No Blogs Found</h3>
           </div>
@@ -136,7 +163,6 @@ export default function LatestPosts({ blogs }) {
                 <Box key={index} style={{ margin: 5 }}>
                   <Link href={`blog/[slug]`} as={`blog/${slug}`}>
                     <div className={style.imageContainer}>
-
                       <Image
                         className={style.coverImage}
                         layout="fill"
@@ -161,6 +187,5 @@ export default function LatestPosts({ blogs }) {
         )}
       </div>
     </div>
-
   );
 }
