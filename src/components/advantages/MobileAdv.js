@@ -50,6 +50,7 @@ export default function MobileAdv({ advNum, title, advDesc, imgSrc }) {
           fontWeight="bold"
           pl="10px"
           className="sub-heading"
+          lineHeight={'18px'}
         >
           {title}
         </Text>

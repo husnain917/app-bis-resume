@@ -39,12 +39,12 @@ export default function HintSection() {
             color="#313B47"
             fontWeight="bold"
             textAlign="center"
-            pl={["7%", "14%"]}
-            pr={["14%"]}
+            pl={["7%", "7%"]}
+            pr={["7%"]}
             // className={"afterHeading"}
             className={"sub-heading"}
             // margin={"0 auto"}
-            lineHeight={["30px", "30px", "40px", "40px", "40px"]}
+            lineHeight={["30px", "40px", "50px", "50px", "40px"]}
           >
             Create a High-Impact Resume in Seconds.
           </Text>
@@ -98,7 +98,7 @@ export default function HintSection() {
         />
         <Hint
           number="3"
-          message="Fill in the Blanks with Your Career Information"
+          message="Fill in the Blanks with your Career Information"
           description="Streamline Your Resume Building,Fill in your information and watch it come to life with our real-time AI updates."
           imgSrc={"./svg-export/svgexport-6.svg"}
           isRight={true}
@@ -106,7 +106,7 @@ export default function HintSection() {
         />
         <Hint
           number="4"
-          message="Download Your Resume"
+          message="Download your Resume"
           description="Say Goodbye to Paywalls and Hidden Costs,Build a Winning Resume for Free with our Basic Account."
           imgSrc={"./svg-export/svgexport-7.svg"}
           isRight={false}
