@@ -1,26 +1,19 @@
 .mainDiv {
     background-color: white;
-
-    padding-top: 5%;
-
 }
 
-.innerMainDiv {}
 
 .innerMainDiv1 {
     background-color: white;
-    width: 900px;
-
-    margin-top: 10%;
+    width: 830px;
     border-width: 2px;
-    border-color:#00000023;
-
-
+    border-color: #00000023;
 }
 
 .profileDiv {
     margin: 40px 50px;
 }
+
 .contactHeadingTitle {
     font-size: 1.4em;
     font-weight: 600;
