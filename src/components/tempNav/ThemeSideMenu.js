@@ -73,7 +73,7 @@ export default function ThemeSideMenu({
         _hover={{
           backgroundColor: "transparent",
 
-          color: "#313C4E",
+          color: "#00c8aa",
           transition: "0.4s",
         }}
         onClick={() => setleftMenu(false)}
@@ -89,7 +89,7 @@ export default function ThemeSideMenu({
             color="white"
             _hover={{
               backgroundColor: "transparent",
-              color: "#313C4E",
+              color: "#00c8aa",
               transition: "0.4s",
             }}
           >
@@ -108,7 +108,7 @@ export default function ThemeSideMenu({
             color="white"
             _hover={{
               backgroundColor: "transparent",
-              color: "#313C4E",
+              color: "#00c8aa",
               transition: "0.4s",
             }}
           >
@@ -138,7 +138,7 @@ export default function ThemeSideMenu({
         _hover={{
           backgroundColor: "transparent",
 
-          color: "#313C4E",
+          color: "#00c8aa",
           transition: "0.4s",
         }}
       >

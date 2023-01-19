@@ -40,7 +40,7 @@ const ChangeTempBtn = ({
     >
       <Box
         onClick={onPress}
-        bg={"#313b47"}
+        bg={"#006772"}
         display={"flex"}
         flexDirection={"column"}
         alignItems={"center"}

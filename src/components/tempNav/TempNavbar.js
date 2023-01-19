@@ -99,7 +99,7 @@ export default function TempNavbar({
                 color="white"
                 _hover={{
                   backgroundColor: "transparent",
-                  color: "#313C4E",
+                  color: "#00c8aa",
                   transition: "0.4s",
                 }}
               >
@@ -119,7 +119,7 @@ export default function TempNavbar({
                 _hover={{
                   backgroundColor: "transparent",
 
-                  color: "#313C4E",
+                  color: "#00c8aa",
                   transition: "0.4s",
                 }}
               >
@@ -147,7 +147,7 @@ export default function TempNavbar({
             _hover={{
               backgroundColor: "transparent",
 
-              color: "#313C4E",
+              color: "#00c8aa",
               transition: "0.4s",
             }}
           >
@@ -162,7 +162,7 @@ export default function TempNavbar({
             _hover={{
               backgroundColor: "transparent",
 
-              color: "#313C4E",
+              color: "#00c8aa",
               transition: "0.4s",
             }}
             onClick={setleftMenu}

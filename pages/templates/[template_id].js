@@ -27,7 +27,7 @@ const TemplateDetail = () => {
     CUSTOM_TEMP_DATA?.find((item) => item.id === template_id);
 
   return (
-    <Box overflow={"auto"}>
+    <Box>
       <TempLayout
         work={selected?.sections?.work}
         education={selected?.sections?.education}
