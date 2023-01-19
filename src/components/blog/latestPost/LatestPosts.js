@@ -151,6 +151,7 @@ export default function LatestPosts({ blogs }) {
         style={{ borderBottom: "1px solid", borderColor: "#C6C6C6" }}
         ml={["", "", "5%", "5%", "5%"]}
         marginBottom={"20px"}
+        marginTop={"20px"}
       ></Box>
 
       <div>
