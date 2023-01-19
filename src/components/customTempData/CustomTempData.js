@@ -36,18 +36,18 @@ import {
   templatebrand,
   graphTemplate,
   SkillBaseTemp,
-  FashionDesigner
+  FashionDesigner,
 } from "../../templates";
 
 export const CUSTOM_TEMP_DATA = [
   {
-    id: 'zyCeSJJ2A8fEGNRx',
+    id: "zyCeSJJ2A8fEGNRx",
     href: "/templates/zyCeSJJ2A8fEGNRx",
     src: "/Chief_Exclusive_Office.jpg",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Combined',
+    heading: "Combined",
     component: templateCEO,
     sections: {
       work: true,
@@ -59,16 +59,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'ny1FF7ED91mc6i2k',
+    id: "ny1FF7ED91mc6i2k",
     href: "/templates/ny1FF7ED91mc6i2k",
     src: "/FashTemp5.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Minimalist',
+    heading: "Minimalist",
     component: fashionTemp5,
     sections: {
       work: true,
@@ -80,16 +80,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: '7UM1U7FJgAQ5sjWD',
+    id: "7UM1U7FJgAQ5sjWD",
     href: "/templates/7UM1U7FJgAQ5sjWD",
     src: "/FashTemp4.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Traditional',
+    heading: "Traditional",
     component: fashionTemp4,
     sections: {
       work: true,
@@ -101,16 +101,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'ovIeX2yz4B7V1y0G',
+    id: "ovIeX2yz4B7V1y0G",
     href: "/templates/ovIeX2yz4B7V1y0G",
     src: "/SalesRepresentive2n.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'IT',
+    heading: "IT",
     component: SalesRepresentative,
     sections: {
       work: true,
@@ -122,16 +122,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: '9H2XODEcK2Aibm5d',
+    id: "9H2XODEcK2Aibm5d",
     href: "/templates/9H2XODEcK2Aibm5d",
     src: "/FinancialAnalyst.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Tech',
+    heading: "Tech",
     component: FinancialExpert,
     sections: {
       work: true,
@@ -143,16 +143,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'b5BJwQR7sCmlADl5',
+    id: "b5BJwQR7sCmlADl5",
     href: "/templates/b5BJwQR7sCmlADl5",
     src: "/FashionDesigner2n.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Skill-Based',
+    heading: "Skill-Based",
     component: FashionDesigner2,
     sections: {
       work: true,
@@ -164,16 +164,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'UaMsr4yxtyAJ0d9T',
+    id: "UaMsr4yxtyAJ0d9T",
     href: "/templates/UaMsr4yxtyAJ0d9T",
     src: "/GraphicDesigner12n.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Basic',
+    heading: "Basic",
     component: GraphicDesigner1,
     sections: {
       work: true,
@@ -185,16 +185,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'Z8T9Wg5LoA7Ihbsq',
+    id: "Z8T9Wg5LoA7Ihbsq",
     href: "/templates/Z8T9Wg5LoA7Ihbsq",
     src: "/TemplateMarket1n.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Executive',
+    heading: "Executive",
     component: templateMarket,
     sections: {
       work: true,
@@ -206,16 +206,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: true,
-    }
+    },
   },
   {
-    id: 'pSJl09vc4C39lNL3',
+    id: "pSJl09vc4C39lNL3",
     href: "/templates/pSJl09vc4C39lNL3",
     src: "/digitalMarketingTemp.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'General',
+    heading: "General",
     component: digitalMarketingTemp,
     sections: {
       work: true,
@@ -227,16 +227,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'MTmaNZdZrNEMy0v0',
+    id: "MTmaNZdZrNEMy0v0",
     href: "/templates/MTmaNZdZrNEMy0v0",
     src: "/FlightAttendantTemplate.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Hybird',
+    heading: "Hybird",
     component: FlightAttendant1,
     sections: {
       work: true,
@@ -248,16 +248,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: true,
-    }
+    },
   },
   {
-    id: 'QbnlV2ff7hB3mbdx',
+    id: "QbnlV2ff7hB3mbdx",
     href: "/templates/QbnlV2ff7hB3mbdx",
     src: "/graphicTemp.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Creative',
+    heading: "Creative",
     component: graphicDesignerTemp,
     sections: {
       work: true,
@@ -269,16 +269,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: true,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'PhhchnzxtXfKZXBz',
+    id: "PhhchnzxtXfKZXBz",
     href: "/templates/PhhchnzxtXfKZXBz",
     src: "/socialMediaSpecialist.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Functional',
+    heading: "Functional",
     component: SocialSpecialist,
     sections: {
       work: true,
@@ -290,16 +290,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'Mmq0HbjSLc364GmS',
+    id: "Mmq0HbjSLc364GmS",
     href: "/templates/Mmq0HbjSLc364GmS",
     src: "/BabySitterTemplate.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Modren',
+    heading: "Modren",
     component: TemplateBabySitter,
     sections: {
       work: true,
@@ -311,16 +311,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'd9Ow8i0HO4dP9FMG',
+    id: "d9Ow8i0HO4dP9FMG",
     href: "/templates/d9Ow8i0HO4dP9FMG",
     src: "/Hybrid_Template_Design.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Professional',
+    heading: "Professional",
     component: hybridTemplate,
     sections: {
       work: true,
@@ -332,16 +332,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
-    }
+    },
   },
   {
-    id: 'vn6uST13L2DZbKXe',
+    id: "vn6uST13L2DZbKXe",
     href: "/templates/vn6uST13L2DZbKXe",
     src: "/DigitalMarketingTemp2.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'College',
+    heading: "College",
     component: DigitalMarkTemp2,
     sections: {
       work: true,
@@ -353,16 +353,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: '5RpawNwFi49M8BrR',
+    id: "5RpawNwFi49M8BrR",
     href: "/templates/5RpawNwFi49M8BrR",
     src: "/FashionDesigner1.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Simple',
+    heading: "Simple",
     component: fashionTemp1,
     sections: {
       work: true,
@@ -374,16 +374,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'pC5lVexxlHtEY2v2',
+    id: "pC5lVexxlHtEY2v2",
     href: "/templates/pC5lVexxlHtEY2v2",
     src: "/gdBanner2.jpg",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Creative',
+    heading: "Creative",
     component: GraphicDesigner2,
     sections: {
       work: true,
@@ -395,16 +395,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: true,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'UKkFhQx6Qe7JsEXT',
+    id: "UKkFhQx6Qe7JsEXT",
     href: "/templates/UKkFhQx6Qe7JsEXT",
     src: "/GraphicDesigner5.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Hybird',
+    heading: "Hybird",
     component: template5,
     sections: {
       work: true,
@@ -416,16 +416,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'zApetir0shFU3R40',
+    id: "zApetir0shFU3R40",
     href: "/templates/zApetir0shFU3R40",
     src: "/MarketingManagerTemp.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Minimalist',
+    heading: "Minimalist",
     component: marketingManager1,
     sections: {
       work: true,
@@ -437,16 +437,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: '6iz8Y7EFbpAos1dn',
+    id: "6iz8Y7EFbpAos1dn",
     href: "/templates/6iz8Y7EFbpAos1dn",
     src: "/designerTemplate.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Traditional',
+    heading: "Traditional",
     component: designerTemplate,
     sections: {
       work: true,
@@ -458,17 +458,17 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: true,
       certificate: false,
-    }
+    },
   },
 
   {
-    id: 'dhqAtIa3jaWjxQLb',
+    id: "dhqAtIa3jaWjxQLb",
     href: "/templates/dhqAtIa3jaWjxQLb",
     src: "/graphicTemplate.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Executive',
+    heading: "Executive",
     component: aaronGraphicTemp,
     sections: {
       work: true,
@@ -480,16 +480,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'q7I7S5FySY1L035S',
+    id: "q7I7S5FySY1L035S",
     href: "/templates/q7I7S5FySY1L035S",
     src: "/graphDes8.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Modren',
+    heading: "Modren",
     component: GraphicDesigner8,
     sections: {
       work: true,
@@ -501,16 +501,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'ZmNpNzLENZPooOwP',
+    id: "ZmNpNzLENZPooOwP",
     href: "/templates/ZmNpNzLENZPooOwP",
     src: "/MarkManager2.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'IT',
+    heading: "IT",
     component: marketingManager,
     sections: {
       work: true,
@@ -522,16 +522,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'zY7eR3FNn1HaM2Kd',
+    id: "zY7eR3FNn1HaM2Kd",
     href: "/templates/zY7eR3FNn1HaM2Kd",
     src: "/gdBanner3.jpg",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Modren',
+    heading: "Modren",
     component: GraphicDesigner3,
     sections: {
       work: true,
@@ -543,16 +543,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: '0S4gN5d6gsN4xFd2',
+    id: "0S4gN5d6gsN4xFd2",
     href: "/templates/0S4gN5d6gsN4xFd2",
     src: "/harumiTemplate.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Classic',
+    heading: "Classic",
     component: harumiGraphicTemp,
     sections: {
       work: true,
@@ -564,16 +564,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: '2HU7Uuw10GMgVWgJ',
+    id: "2HU7Uuw10GMgVWgJ",
     href: "/templates/2HU7Uuw10GMgVWgJ",
     src: "/ContentCreater.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Executive',
+    heading: "Executive",
     component: TemplateContentCreater,
     sections: {
       work: true,
@@ -585,16 +585,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'a8e9GJtWwOAIbAVf',
+    id: "a8e9GJtWwOAIbAVf",
     href: "/templates/a8e9GJtWwOAIbAVf",
     src: "/ExecTemp.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Simple',
+    heading: "Simple",
     component: ExecutiveTemp,
     sections: {
       work: true,
@@ -606,16 +606,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
-    }
+    },
   },
   {
-    id: '4WEhJ5hAXOIcASUB',
+    id: "4WEhJ5hAXOIcASUB",
     href: "/templates/4WEhJ5hAXOIcASUB",
     src: "/graphic.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Professional',
+    heading: "Professional",
     component: graphicDesigner,
     sections: {
       work: true,
@@ -627,16 +627,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: '8xDcvDwe76xjzVG3',
+    id: "8xDcvDwe76xjzVG3",
     href: "/templates/8xDcvDwe76xjzVG3",
     src: "/studentTemp.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'General',
+    heading: "General",
     component: StudentTemplate,
     sections: {
       work: true,
@@ -648,16 +648,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: '3JeA53zVHMSQsOay',
+    id: "3JeA53zVHMSQsOay",
     href: "/templates/3JeA53zVHMSQsOay",
     src: "/TechTemp.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Skill-Based',
+    heading: "Skill-Based",
     component: TechTemplate,
     sections: {
       work: true,
@@ -669,16 +669,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
-    }
+    },
   },
   {
-    id: '6nJppDLrOJST3qF2',
+    id: "6nJppDLrOJST3qF2",
     href: "/templates/6nJppDLrOJST3qF2",
     src: "/softEngr.jpg",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Professional',
+    heading: "Professional",
     component: SoftEngineer,
     sections: {
       work: true,
@@ -690,16 +690,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'aacKzXcwGUZADCut',
+    id: "aacKzXcwGUZADCut",
     href: "/templates/aacKzXcwGUZADCut",
     src: "/fashionTemp.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'General',
+    heading: "General",
     component: fashionTemp,
     sections: {
       work: true,
@@ -711,16 +711,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'DkXlwWNOhGxOYVIN',
+    id: "DkXlwWNOhGxOYVIN",
     href: "/templates/DkXlwWNOhGxOYVIN",
     src: "/CollegeTemp.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Simple',
+    heading: "Simple",
     component: CollegeTemp,
     sections: {
       work: true,
@@ -732,16 +732,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
-    }
+    },
   },
   {
-    id: 'Dd7HVIibnPERnyhy',
+    id: "Dd7HVIibnPERnyhy",
     href: "/templates/Dd7HVIibnPERnyhy",
     src: "/simpleTemp.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Hybird',
+    heading: "Hybird",
     component: simpleTempDesign,
     sections: {
       work: true,
@@ -753,16 +753,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
-    }
+    },
   },
   {
-    id: 'qUv6wvZZDD75QZ5c',
+    id: "qUv6wvZZDD75QZ5c",
     href: "/templates/qUv6wvZZDD75QZ5c",
     src: "/BRAND_STRATEGIST.jpg",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Modren',
+    heading: "Modren",
     component: templatebrand,
     sections: {
       work: true,
@@ -774,16 +774,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'XziZdLJgLdEOFB3j',
+    id: "XziZdLJgLdEOFB3j",
     href: "/templates/XziZdLJgLdEOFB3j",
     src: "/fashionDesignerTemp.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'General',
+    heading: "General",
     component: graphTemplate,
     sections: {
       work: true,
@@ -795,16 +795,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
   {
-    id: 'sBpVCiYIojHRtGlh',
+    id: "sBpVCiYIojHRtGlh",
     href: "/templates/sBpVCiYIojHRtGlh",
     src: "/SkilledBaseTemplate.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Skill-Based',
+    heading: "Skill-Based",
     component: SkillBaseTemp,
     sections: {
       work: true,
@@ -816,16 +816,16 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
-    }
+    },
   },
   {
-    id: 'yrXn4MHXPhkKy5Xf',
+    id: "yrXn4MHXPhkKy5Xf",
     href: "/templates/yrXn4MHXPhkKy5Xf",
     src: "/fashionDesigher1n.PNG",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: 'Classic',
+    heading: "Classic",
     component: FashionDesigner,
     sections: {
       work: true,
@@ -837,6 +837,6 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-    }
+    },
   },
 ];
