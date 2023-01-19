@@ -162,14 +162,16 @@ export default function LatestPosts({ blogs }) {
               height="400px"
               alt="No data found"
             />
-            <h3 className={`${style.notFound} title`}>No Blogs Found</h3>
+            <Text as={"h3"} className={`${style.notFound} title`}>
+              No Blogs Found
+            </Text>
           </div>
         ) : (
           // article show
           <SimpleGrid
             className={style.centerblogs}
             columns={{ sm: 1, md: 2, lg: 3 }}
-            spacing={["3"]}
+            spacing={[1, 1, 2, 3, 3]}
             ml={["", "", "5%", "5%", "5%", "5%"]}
           >
             {filteredBlogs?.map((item, index) => {
