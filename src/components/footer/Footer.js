@@ -114,7 +114,6 @@ export default function Footer() {
           </div>
           <div>
             <Link href="/write-resume">How to Write a Resume</Link>
-            
           </div>
           {/* <div>
             <Link href="#/">How to Write a CV</Link>

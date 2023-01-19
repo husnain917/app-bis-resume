@@ -80,7 +80,7 @@ export default function LatestPosts({ blogs }) {
       </Text>
       <SimpleGrid
         className={style.centerblogs}
-        columns={{ sm: 1, md: 3, lg: 3 }}
+        columns={[1, 1, 2, 2, 3]}
         ml={["", "", "5%", "5%", "5%", "5%"]}
         spacing={[0, 0, 6, 6, 6]}
       >
