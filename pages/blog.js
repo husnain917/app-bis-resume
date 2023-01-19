@@ -2,6 +2,7 @@ import React from "react";
 import LatestPosts from "../src/components/blog/latestPost/LatestPosts";
 import { createClient } from "contentful";
 import Navbar from "../src/components/blog/latestPost/navbar/Navbar";
+import Footer from "../src/components/footer/Footer";
 export default function Blog({ allBlogs }) {
   return (
     <>
@@ -9,6 +10,7 @@ export default function Blog({ allBlogs }) {
       <div>
         <LatestPosts blogs={allBlogs} />
       </div>
+      <Footer />
     </>
   );
 }
