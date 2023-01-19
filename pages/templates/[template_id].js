@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Flex, Image, Text, } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import styles from "../../styles/TemplateDetail.module.css";
 import TempLayout from "../../src/components/tempNav/TempLayout";
 import { useWindowSizing } from "../../customHooks/useWindowSizing";
@@ -27,9 +27,7 @@ const TemplateDetail = () => {
     CUSTOM_TEMP_DATA?.find((item) => item.id === template_id);
 
   return (
-    <Box
-      overflow={'auto'}
-    >
+    <Box overflow={"auto"}>
       <TempLayout
         work={selected?.sections?.work}
         education={selected?.sections?.education}
@@ -55,40 +53,39 @@ const TemplateDetail = () => {
           {sideTempSelect && (
             <Box
               className={styles.sideBarTempContainer}
-              columns={{ base: 2, sm: 1, md: 1, lg: 2, xl: 2 }}
-              margin={'6% 0% 0% 0%'}
-              ml={'74px'}
+              margin={"6% 0% 0% 0%"}
+              ml={"74px"}
               borderRadius={6}
-              border={'1px solid #313b47'}
+              border={"1px solid #313b47"}
             >
               {CUSTOM_TEMP_DATA?.map((items, index) => (
                 <>
                   <Box
                     key={index}
                     onClick={() => settemplate(items?.id)}
-                    m={'15px 8px 8px 8px'}
-                    color={'#fff'}
-                    cursor={'pointer'}
+                    m={"15px 8px 8px 8px"}
+                    color={"#fff"}
+                    cursor={"pointer"}
                     _hover={{
-                      color: '#00c8aa',
-                      transition: '0.5s color'
+                      color: "#00c8aa",
+                      transition: "0.5s color",
                     }}
                   >
                     <Text
-                      fontSize={'14px'}
+                      fontSize={"14px"}
                       fontWeight={700}
-                      m={'0px 0px 3px 13px'}
+                      m={"0px 0px 3px 13px"}
                     >
                       {items?.heading}
                     </Text>
                     <Image
                       src={items?.src}
                       alt={items?.alt}
-                      boxSize={'190px'}
+                      boxSize={"190px"}
                       borderRadius={8}
-                      p={'1px'}
+                      p={"1px"}
                       _hover={{
-                        border: '3px solid #00c8aa'
+                        border: "3px solid #00c8aa",
                       }}
                     />
                   </Box>
@@ -98,17 +95,13 @@ const TemplateDetail = () => {
           )}
 
           {CUSTOM_TEMP_DATA?.find((item) => item.id === template)?.component}
-          <Box
-            mt={'70px'}
-            ml={'50px'}
-            overflow={'auto'}
-          >
+          <Box  className={styles.templateMainContainer}>
             <Box ref={pdfRef}>{selected && <selected.component />}</Box>
           </Box>
         </Flex>
         <div>
           <Modal
-            isOpen={width < 1400 ? sideTempSelect : false}
+            isOpen={width < 1130 ? sideTempSelect : false}
             onClose={() => setsideTempSelect(false)}
             size={"full"}
           >
@@ -132,28 +125,28 @@ const TemplateDetail = () => {
                           }}
                           px={6}
                           py={4}
-                          color={'#fff'}
-                          cursor={'pointer'}
+                          color={"#fff"}
+                          cursor={"pointer"}
                           _hover={{
-                            color: '#00c8aa',
-                            transition: '0.5s color'
+                            color: "#00c8aa",
+                            transition: "0.5s color",
                           }}
                         >
                           <Text
-                            fontSize={'16px'}
+                            fontSize={"16px"}
                             fontWeight={700}
-                            m={'0px 0px 3px 13px'}
+                            m={"0px 0px 3px 13px"}
                           >
                             {items?.heading}
                           </Text>
                           <Image
                             src={items?.src}
                             alt={items?.alt}
-                            boxSize={'250px'}
+                            boxSize={"250px"}
                             borderRadius={8}
-                            p={'1px'}
+                            p={"1px"}
                             _hover={{
-                              border: '3px solid #00c8aa'
+                              border: "3px solid #00c8aa",
                             }}
                           />
                         </Box>

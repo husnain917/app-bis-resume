@@ -28,14 +28,16 @@
   border-radius: 10px;
   background-color: #00c8aa;
 }
-
+.templateMainContainer {
+  margin-top: 70px;
+  margin-left: 50px;
+}
 @media (max-width: 1400px) {
   .smalScreeenModal {
     display: none;
   }
 }
-
-@media (max-width: 1400px) {
+@media (max-width: 1130px) {
   .sideBarTempContainer {
     display: none;
   }
@@ -50,5 +52,10 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: #425061;
+  }
+  .templateMainContainer {
+    margin-left: 20px;
+
+    overflow: auto !important;
   }
 }
