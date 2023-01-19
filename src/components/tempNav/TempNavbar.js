@@ -22,6 +22,7 @@ import {
   EditIcon,
   SettingsIcon,
   HamburgerIcon,
+  ArrowBackIcon,
 } from "@chakra-ui/icons";
 import {
   FaFacebookF,
@@ -49,6 +50,8 @@ export default function TempNavbar({
   interest,
   certificate,
   downloadPDF,
+  leftMenu,
+  setleftMenu,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -58,7 +61,7 @@ export default function TempNavbar({
     <Box
       display={"flex"}
       h="auto"
-      minW={{ base: "1100px", lg: "100vw" }}
+      minW={{ lg: "100vw" }}
       mt={1}
       zIndex="999"
       pos={{ base: "relative", lg: "fixed" }}
@@ -78,80 +81,97 @@ export default function TempNavbar({
           alt="Image not Found"
         />
       </Link>
-      <Box
-        w="600px"
-        display="flex"
-        bgColor="#006772"
-        borderRadius={"100px"}
-        justifyContent="center"
-        py={1}
-        ml={{ base: "120px", md: "0px" }}
-      >
-        <Popover>
-          <PopoverTrigger>
-            <Button
-              bgColor="transparent"
-              fontSize={{ base: "12px", sm: "14px", md: "16px" }}
-              color="white"
-              _hover={{
-                backgroundColor: "transparent",
-                color: "#313C4E",
-                transition: "0.4s",
-              }}
-            >
-              <EditIcon mr="5px" />
-              Fonts
-            </Button>
-          </PopoverTrigger>
-          <FontPopover />
-        </Popover>
-
-        <Popover>
-          <PopoverTrigger>
-            <Button
-              bgColor="transparent"
-              fontSize={{ base: "12px", sm: "14px", md: "16px" }}
-              color="white"
-              _hover={{
-                backgroundColor: "transparent",
-
-                color: "#313C4E",
-                transition: "0.4s",
-              }}
-            >
-              <MoonIcon mr="5px" />
-              Theme
-            </Button>
-          </PopoverTrigger>
-          <ThemeModal />
-        </Popover>
-        <LayoutModal
-          work={work}
-          education={education}
-          references={references}
-          skills={skills}
-          languages={languages}
-          projects={projects}
-          organization={organization}
-          interest={interest}
-          certificate={certificate}
-        />
-        <Button
-          bgColor="transparent"
-          color="white"
-          fontSize={{ base: "12px", sm: "14px", md: "16px" }}
-          _hover={{
-            backgroundColor: "transparent",
-
-            color: "#313C4E",
-            transition: "0.4s",
-          }}
+      {!leftMenu && (
+        <Box
+          w="650px"
+          bgColor="#006772"
+          borderRadius={"100px"}
+          justifyContent="center"
+          py={1}
+          ml={{ base: "120px", md: "0px" }}
+          display={{ base: "none", lg: "flex" }}
         >
-          <SettingsIcon mr="5px" />
-          Setting
-        </Button>
-        <DownloadModal downloadPDF={downloadPDF} />
-      </Box>
+          <Popover>
+            <PopoverTrigger>
+              <Button
+                bgColor="transparent"
+                fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+                color="white"
+                _hover={{
+                  backgroundColor: "transparent",
+                  color: "#313C4E",
+                  transition: "0.4s",
+                }}
+              >
+                <EditIcon mr="5px" />
+                Fonts
+              </Button>
+            </PopoverTrigger>
+            <FontPopover />
+          </Popover>
+
+          <Popover>
+            <PopoverTrigger>
+              <Button
+                bgColor="transparent"
+                fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+                color="white"
+                _hover={{
+                  backgroundColor: "transparent",
+
+                  color: "#313C4E",
+                  transition: "0.4s",
+                }}
+              >
+                <MoonIcon mr="5px" />
+                Theme
+              </Button>
+            </PopoverTrigger>
+            <ThemeModal />
+          </Popover>
+          <LayoutModal
+            work={work}
+            education={education}
+            references={references}
+            skills={skills}
+            languages={languages}
+            projects={projects}
+            organization={organization}
+            interest={interest}
+            certificate={certificate}
+          />
+          <Button
+            bgColor="transparent"
+            color="white"
+            fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+            _hover={{
+              backgroundColor: "transparent",
+
+              color: "#313C4E",
+              transition: "0.4s",
+            }}
+          >
+            <SettingsIcon mr="5px" />
+            Setting
+          </Button>
+          <DownloadModal downloadPDF={downloadPDF} />
+          <Button
+            bgColor="transparent"
+            color="white"
+            fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+            _hover={{
+              backgroundColor: "transparent",
+
+              color: "#313C4E",
+              transition: "0.4s",
+            }}
+            onClick={() => setleftMenu(true)}
+          >
+            <ArrowBackIcon mr="5px" />
+            Left
+          </Button>
+        </Box>
+      )}
 
       <Box position={"absolute"} right={{ base: "10px", lg: "25px" }}>
         <Icon

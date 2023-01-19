@@ -1,7 +1,8 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import Feedback from '../feedbackPopUp/Feedback';
-import TempNavbar from './TempNavbar';
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import Feedback from "../feedbackPopUp/Feedback";
+import TempNavbar from "./TempNavbar";
+import ThemeSideMenu from "./ThemeSideMenu";
 export default function TempLayout({
   children,
   work,
@@ -16,6 +17,7 @@ export default function TempLayout({
   downloadPDF,
 }) {
   const feedBackGet = useSelector((state) => state?.feedBackReducer?.feedBack);
+  const [leftMenu, setleftMenu] = useState(false);
   return (
     <div>
       <TempNavbar
@@ -29,7 +31,25 @@ export default function TempLayout({
         interest={interest}
         certificate={certificate}
         downloadPDF={downloadPDF}
+        leftMenu={leftMenu}
+        setleftMenu={setleftMenu}
       />
+      {leftMenu && (
+        <ThemeSideMenu
+          work={work}
+          education={education}
+          references={references}
+          skills={skills}
+          languages={languages}
+          projects={projects}
+          organization={organization}
+          interest={interest}
+          certificate={certificate}
+          downloadPDF={downloadPDF}
+          setleftMenu={setleftMenu}
+        />
+      )}
+
       {feedBackGet && <Feedback />}
       <main>{children}</main>
     </div>

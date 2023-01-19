@@ -40,7 +40,19 @@ const TemplateDetail = () => {
         certificate={selected?.sections?.certificate}
         downloadPDF={downloadPDFHandler}
       >
-        <ChangeTempBtn onPress={() => setsideTempSelect(!sideTempSelect)} />
+        <ChangeTempBtn
+          onPress={() => setsideTempSelect(!sideTempSelect)}
+          work={selected?.sections?.work}
+          education={selected?.sections?.education}
+          languages={selected?.sections?.languages}
+          skills={selected?.sections?.skills}
+          projects={selected?.sections?.projects}
+          references={selected?.sections?.references}
+          organization={selected?.sections?.organization}
+          interest={selected?.sections?.interest}
+          certificate={selected?.sections?.certificate}
+          downloadPDF={downloadPDFHandler}
+        />
         <Flex
           flexDir={"row"}
           alignItems={{
@@ -95,7 +107,7 @@ const TemplateDetail = () => {
           )}
 
           {CUSTOM_TEMP_DATA?.find((item) => item.id === template)?.component}
-          <Box  className={styles.templateMainContainer}>
+          <Box className={styles.templateMainContainer}>
             <Box ref={pdfRef}>{selected && <selected.component />}</Box>
           </Box>
         </Flex>
