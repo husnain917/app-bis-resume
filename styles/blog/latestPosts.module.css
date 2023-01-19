@@ -1,3 +1,15 @@
+.coverImage:hover{
+    transform: scale(1.05);
+    
+}
+.blogContainer:hover .coverImage{
+    transform:scale(1.05);
+}
+
+.mainContainer:hover .imageContainer{
+    transform: scale(1.05);
+}
+
 .bgColor {
     background-color: rgba(226, 231, 253, 1);
     width: 100%;
@@ -21,12 +33,13 @@
 .coverImage {
     width: 100%;
     border-radius: 3%;
+    transition: 0.8s;
 
 }
 
-.imageContainer:hover {
+/* .imageContainer:hover {
     transform: scale(1.05);
-}
+} */
 
 .imageContainerE {
     display: flex;
@@ -135,7 +148,7 @@
 }
 
 .imageContainer {
-    margin-top: 50px;
+    margin-bottom: 50px;
     width: 100%;
 
 }

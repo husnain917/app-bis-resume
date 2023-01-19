@@ -57,7 +57,7 @@ export default function LatestPosts({ blogs }) {
           justifyContent: "center",
         }}
       >
-        <Text as="h1" className={`${style.title} title`}>
+        <Text as="h1" className={"title"} mt={["10px"]}>
           All Articles
         </Text>
       </Box>
@@ -71,7 +71,11 @@ export default function LatestPosts({ blogs }) {
         }}
         ml={["", "", "5%", "5%", "5%"]}
       ></Box>
-      <Text fontStyle={"italic"} ml={"60px"}>
+      <Text
+        fontStyle={"italic"}
+        ml={["5px", "5px", "40px", "50px", "60px"]}
+        mb={"20px"}
+      >
         Featured
       </Text>
       <SimpleGrid
@@ -85,11 +89,12 @@ export default function LatestPosts({ blogs }) {
             <Box key={index}>
               <Box
                 style={{
-                  margin: 5,
+                  margin: "0 5px 5px 5px",
                   borderBottom: "2px solid",
                   borderColor: "#C6C6C6",
                   paddingBottom: "5%",
                 }}
+                className={style.mainContainer}
               >
                 <Box
                   className={style.imageContainer}
@@ -103,11 +108,28 @@ export default function LatestPosts({ blogs }) {
                     src={item.im}
                   />
                 </Box>
-                <h3 className={`${style.Cardtitle} subTitle`}>{item.text}</h3>
-                <div className={style.dateHeading}>
-                  <span className={"xsmall-heading"}>Today | </span>
-                  <span className={"xsmall-heading"}>25 min read</span>
-                </div>
+                <Text as={"h3"} className={`${style.Cardtitle} subTitle`}>
+                  {item.text}
+                </Text>
+                <Box
+                  className={style.dateHeading}
+                  display={"flex"}
+                  alignItems={"center"}
+                >
+                  <Text as={"span"} className={"xsmall-heading"} mr={"3px"}>
+                    Today |{" "}
+                  </Text>
+                  <Image
+                    src={"/clock.png"}
+                    fill
+                    alt="will load soon"
+                    width="15px"
+                    height="15px"
+                  />
+                  <Text as={"span"} className={"xsmall-heading"} ml={"3px"}>
+                    25 min read
+                  </Text>
+                </Box>
                 <p className={`${style.cardHeadingFeat} paragraph`}>
                   {item.des}
                 </p>
@@ -146,6 +168,7 @@ export default function LatestPosts({ blogs }) {
           <SimpleGrid
             className={style.centerblogs}
             columns={{ sm: 1, md: 2, lg: 3 }}
+            spacing={["3"]}
             ml={["", "", "5%", "5%", "5%", "5%"]}
           >
             {filteredBlogs?.map((item, index) => {
@@ -160,9 +183,13 @@ export default function LatestPosts({ blogs }) {
                 title,
               } = item.fields;
               return (
-                <Box key={index} style={{ margin: 5 }}>
+                <Box
+                  key={index}
+                  style={{ margin: 5 }}
+                  className={style.blogContainer}
+                >
                   <Link href={`blog/[slug]`} as={`blog/${slug}`}>
-                    <div className={style.imageContainer}>
+                    <Box className={style.imageContainer}>
                       <Image
                         className={style.coverImage}
                         layout="fill"
@@ -170,13 +197,28 @@ export default function LatestPosts({ blogs }) {
                         src={"https:" + featuredImage.fields.file.url}
                         alt="image"
                       />
-                    </div>
+                    </Box>
                   </Link>
                   <h3 className={`${style.Cardtitle} subTitle`}>{title}</h3>
-                  <div className={style.dateHeading}>
-                    <span className={"xsmall-heading"}>Today | </span>
-                    <span className={"xsmall-heading"}>25 min read</span>
-                  </div>
+                  <Box
+                    className={style.dateHeading}
+                    display={"flex"}
+                    alignItems={"center"}
+                  >
+                    <Text as={"span"} className={"xsmall-heading"} mr={"4px"}>
+                      Today |{" "}
+                    </Text>
+                    <Image
+                      src={"/clock.png"}
+                      fill
+                      alt="will load soon"
+                      width="15px"
+                      height="15px"
+                    />
+                    <Text as={"span"} className={"xsmall-heading"} ml={"4px"}>
+                      25 min read
+                    </Text>
+                  </Box>
                   <p className={`${style.cardHeading} paragraph`}>
                     {description}
                   </p>
