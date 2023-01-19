@@ -165,7 +165,7 @@ export default function TempNavbar({
               color: "#313C4E",
               transition: "0.4s",
             }}
-            onClick={() => setleftMenu(true)}
+            onClick={setleftMenu}
           >
             <ArrowBackIcon mr="5px" />
             Left

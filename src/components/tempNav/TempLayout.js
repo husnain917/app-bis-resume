@@ -15,6 +15,8 @@ export default function TempLayout({
   interest,
   certificate,
   downloadPDF,
+  sideTempSelect,
+  setsideTempSelect,
 }) {
   const feedBackGet = useSelector((state) => state?.feedBackReducer?.feedBack);
   const [leftMenu, setleftMenu] = useState(false);
@@ -32,9 +34,12 @@ export default function TempLayout({
         certificate={certificate}
         downloadPDF={downloadPDF}
         leftMenu={leftMenu}
-        setleftMenu={setleftMenu}
+        setleftMenu={() => {
+          setsideTempSelect(false);
+          setleftMenu(true);
+        }}
       />
-      {leftMenu && (
+      {leftMenu && !sideTempSelect && (
         <ThemeSideMenu
           work={work}
           education={education}

@@ -39,6 +39,8 @@ const TemplateDetail = () => {
         interest={selected?.sections?.interest}
         certificate={selected?.sections?.certificate}
         downloadPDF={downloadPDFHandler}
+        sideTempSelect={sideTempSelect}
+        setsideTempSelect={setsideTempSelect}
       >
         <ChangeTempBtn
           onPress={() => setsideTempSelect(!sideTempSelect)}
