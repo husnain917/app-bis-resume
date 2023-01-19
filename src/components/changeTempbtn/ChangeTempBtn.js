@@ -1,47 +1,145 @@
-import { Box, Text } from '@chakra-ui/react';
-import React from 'react';
+import React from "react";
 import { BsArrowLeftRight } from "react-icons/bs";
+import { Box, Button, Text, Popover, PopoverTrigger } from "@chakra-ui/react";
+import {
+  MoonIcon,
+  EditIcon,
+  SettingsIcon,
+  HamburgerIcon,
+  ArrowBackIcon,
+} from "@chakra-ui/icons";
+import FontPopover from "../fontPopover/FontPopover";
+import LayoutModal from "../tempNav/LayoutModal";
+import ThemeModal from "../themeModal/ThemeModal";
+import DownloadModal from "../downloadModel/DownloadModal";
 
-const ChangeTempBtn = ({ onPress }) => {
+const ChangeTempBtn = ({
+  onPress,
+  work,
+  education,
+  references,
+  skills,
+  languages,
+  projects,
+  organization,
+  interest,
+  certificate,
+  downloadPDF,
+}) => {
   return (
     <Box
       position={{ base: "relative", lg: "fixed" }}
-      top={{ base: "128px", lg: "128px" }}
-      mb={{ base: "20px", lg: "0px" }}
+      top={{ base: "100px", lg: "100px" }}
+      mb={"40px"}
       left={"10px"}
       zIndex="999"
-      onClick={onPress}
-      cursor={'pointer'}
+      cursor={"pointer"}
+      display={"flex"}
+      flexDirection={"row"}
+      alignItems={"center"}
     >
       <Box
-        bg={'#313b47'}
-        display={'flex'}
-        flexDirection={'column'}
-        alignItems={'center'}
-        textAlign={'center'}
-        color={'#fff'}
-        p={'12px 8px'}
+        onClick={onPress}
+        bg={"#313b47"}
+        display={"flex"}
+        flexDirection={"column"}
+        alignItems={"center"}
+        textAlign={"center"}
+        color={"#fff"}
+        p={"12px 8px"}
         borderRadius={6}
         _hover={{
-          color: '#00c8aa',
-          transition: '0.5s color'
+          color: "#00c8aa",
+          transition: "0.5s color",
         }}
+        width={"fit-content"}
       >
-        <Text
-          mb={'5px'}
-        >
+        <Text mb={"5px"}>
           <BsArrowLeftRight size={18} />
         </Text>
-        <Text
-          fontSize={'10px'}
-          fontWeight={600}
-        >
+        <Text fontSize={"10px"} fontWeight={600}>
           Switch <br />
           Template
         </Text>
       </Box>
-    </Box>
+      <Box
+        maxWidth="650px"
+        display={{ base: "flex", lg: "none" }}
+        bgColor="#006772"
+        flexWrap={"wrap"}
+        borderRadius={"10px"}
+        justifyContent="center"
+        alignItems={"center"}
+        py={1}
+        ml={{ base: "15px" }}
+        mr={{ base: "20px" }}
+      >
+        <Popover>
+          <PopoverTrigger>
+            <Button
+              bgColor="transparent"
+              fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+              color="white"
+              _hover={{
+                backgroundColor: "transparent",
+                color: "#313C4E",
+                transition: "0.4s",
+              }}
+            >
+              <EditIcon mr="5px" />
+              Fonts
+            </Button>
+          </PopoverTrigger>
+          <FontPopover />
+        </Popover>
 
+        <Popover>
+          <PopoverTrigger>
+            <Button
+              bgColor="transparent"
+              fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+              color="white"
+              _hover={{
+                backgroundColor: "transparent",
+
+                color: "#313C4E",
+                transition: "0.4s",
+              }}
+            >
+              <MoonIcon mr="5px" />
+              Theme
+            </Button>
+          </PopoverTrigger>
+          <ThemeModal />
+        </Popover>
+        <LayoutModal
+          work={work}
+          education={education}
+          references={references}
+          skills={skills}
+          languages={languages}
+          projects={projects}
+          organization={organization}
+          interest={interest}
+          certificate={certificate}
+        />
+        <Button
+          bgColor="transparent"
+          color="white"
+          fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+          _hover={{
+            backgroundColor: "transparent",
+
+            color: "#313C4E",
+            transition: "0.4s",
+          }}
+        >
+          <SettingsIcon mr="5px" />
+          Setting
+        </Button>
+        <DownloadModal downloadPDF={downloadPDF} />
+      </Box>
+    </Box>
   );
 };
 

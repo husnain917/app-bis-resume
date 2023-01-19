@@ -32,9 +32,10 @@ const FashionTemp1 = () => {
     return (
         // ~~~~~~~~~~~~~~~~~~~~~~~~~ Fashion Temp 1 Template ~~~~~~~~~~~~~~~~~~~~~~~~~//
         <Flex
-            justifyContent={{ base: 'none', md: 'center' }}
+            justifyContent={{ base: 'none', lg: 'center' }}
             flexDir={'column'}
-            alignItems={{ base: 'none', lg: 'center' }}
+            alignItems={{ sm: 'none', lg: 'center' }}
+            bg={'#fff'}
         >
             <HStack
                 minW={830}

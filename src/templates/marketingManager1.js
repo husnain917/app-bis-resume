@@ -68,9 +68,10 @@ const MarketingManager1 = () => {
     return (
         // ==========Marketing Manager Template 1 ===========
         <Flex
-            justifyContent={{ base: 'none', md: 'center' }}
+            justifyContent={{ base: 'none', lg: 'center' }}
             flexDir={'column'}
-            alignItems={{ base: 'none', lg: 'center' }}
+            alignItems={{ sm: 'none', lg: 'center' }}
+            bg={'#fff'}
         >
             <Box
                 minW={830}

@@ -38,9 +38,9 @@ export default function Simple_Temp_Design() {
         <>
             <Flex
                 justifyContent={{ base: 'none', lg: 'center' }}
-                bg={'#fff'}
                 flexDir={'column'}
-                alignItems={{ sm: 'none', md: 'center' }}
+                alignItems={{ sm: 'none', lg: 'center' }}
+                bg={'#fff'}
             >
                 <Box
                     minW={830}
