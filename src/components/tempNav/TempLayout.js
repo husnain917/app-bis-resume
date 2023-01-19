@@ -46,8 +46,7 @@ export default function TempLayout({
           interest={interest}
           certificate={certificate}
           downloadPDF={downloadPDF}
-        setleftMenu={setleftMenu}
-
+          setleftMenu={setleftMenu}
         />
       )}
 

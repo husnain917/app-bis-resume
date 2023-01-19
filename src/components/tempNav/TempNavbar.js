@@ -61,7 +61,7 @@ export default function TempNavbar({
     <Box
       display={"flex"}
       h="auto"
-      minW={{ base: "1000px", lg: "100vw" }}
+      minW={{ lg: "100vw" }}
       mt={1}
       zIndex="999"
       pos={{ base: "relative", lg: "fixed" }}
@@ -84,12 +84,12 @@ export default function TempNavbar({
       {!leftMenu && (
         <Box
           w="650px"
-          display="flex"
           bgColor="#006772"
           borderRadius={"100px"}
           justifyContent="center"
           py={1}
           ml={{ base: "120px", md: "0px" }}
+          display={{ base: "none", lg: "flex" }}
         >
           <Popover>
             <PopoverTrigger>

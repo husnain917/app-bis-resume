@@ -50,22 +50,21 @@ export default function ThemeSideMenu({
   organization,
   interest,
   certificate,
-  downloadPDF,setleftMenu
+  downloadPDF,
+  setleftMenu,
 }) {
   return (
     <Box
       w="140px"
-      display="flex"
       bgColor="#006772"
       borderRadius={"10px"}
       justifyContent="center"
-      py={1}
-      ml={{ base: "120px", md: "0px" }}
       flexDirection={"column"}
       position={"fixed"}
       top={200}
-      left={10}
+      left={"10px"}
       alignItems={"center"}
+      display={{ base: "none", lg: "flex" }}
     >
       <Button
         bgColor="transparent"
