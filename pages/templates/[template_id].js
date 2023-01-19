@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import styles from "../../styles/TemplateDetail.module.css";
 import TempLayout from "../../src/components/tempNav/TempLayout";
@@ -14,14 +14,33 @@ import { CUSTOM_TEMP_DATA } from "../../src/components/customTempData/CustomTemp
 import ChangeTempBtn from "../../src/components/changeTempbtn/ChangeTempBtn";
 import PDFGenerater from "../../src/components/tempNav/PDFGenerater";
 import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { modalOpen } from "../../store/actions/AuthAction";
 
 const TemplateDetail = () => {
   const router = useRouter();
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer.isUserLoggedIn
+  );
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    if (!isUserLoggedIn) {
+      router.push('/')
+      dispatch(modalOpen());
+    }
+  })
+  if (!isUserLoggedIn) {
+    router.push('/')
+    dispatch(modalOpen());
+    
+  }
   const { template_id } = router.query;
   const [sideTempSelect, setsideTempSelect] = useState(false);
   const { width } = useWindowSizing();
   const { downloadPDFHandler, pdfRef } = PDFGenerater();
   const [template, settemplate] = useState();
+
   const selected =
     CUSTOM_TEMP_DATA?.find((item) => item.id === template) ||
     CUSTOM_TEMP_DATA?.find((item) => item.id === template_id);

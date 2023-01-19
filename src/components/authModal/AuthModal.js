@@ -124,7 +124,7 @@ export default function AuthModal({
         password: password,
         terms: terms,
       };
-      dispatch(doSignUp(data, setErr, setLoadingsignup, setIsModalOpen));
+      dispatch(doSignUp(data, setErr, setLoadingsignup));
       setErr({ inputField: "", inputId: 0 });
     }
   };
@@ -568,18 +568,26 @@ export default function AuthModal({
                 )}
                 {isRegister ? (
                   <>
+                   {
+                    !fieldActive &&
                     <Text fontSize="16px" align="center" mt="3%">
                       Or Sign Up With:
                     </Text>
+                    }
                   </>
                 ) : (
                   <>
-                    <Text fontSize="16px" align="center" mt="3%">
+                 
+                     <Text fontSize="16px" align="center" mt="3%">
                       Or Sign In With:
                     </Text>
+                  
+                   
                   </>
                 )}
-                <Button
+                {
+                  !fieldActive &&
+                  <Button
                   leftIcon={<FaGoogle />}
                   variant="solid"
                   bgColor="#E1E1E1"
@@ -595,6 +603,7 @@ export default function AuthModal({
                 >
                   Google
                 </Button>
+                }
               </Box>
             </Box>
           </Box>

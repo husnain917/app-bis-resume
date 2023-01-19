@@ -126,7 +126,9 @@ export const doSignUp = (data, setErr,  setLoadingsignup) => async (dispatch) =>
                 type: SIGN_UP,
                 payload: userData,
             })
-
+        }
+        else{
+            setErr({ fieldErr: 'This email already in use.' })
         }
     } catch (e) {
         const errorCode = e.code;
