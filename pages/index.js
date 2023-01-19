@@ -15,6 +15,8 @@ import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSect
 import ChatButton from "../src/components/resumeExampleData/chatButton/chatButton";
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
+
+
   const listenToScroll = () => {
     let heightToHidden = 0.5;
     let againHide = 7700;
@@ -40,22 +42,7 @@ export default function Home() {
         <meta name="description" content="Create resume with ease!" />
         <link rel="icon" href="/Bisicon.png"></link>
       </Head>
-      <Box
-        borderRadius={["60px"]}
-        width={["60px"]}
-        position={["fixed"]}
-        zIndex={"1049"}
-        transform={["scale(1)"]}
-        marginLeft={"10px"}
-        display={["none", "none", "block", "block", "block"]}
-      >
-        {isVisible && (
-          <Fade>
-            {" "}
-            <SideBarSection />{" "}
-          </Fade>
-        )}
-      </Box>
+
       <CallToAction />
       {/* <SliderComponent /> */}
 

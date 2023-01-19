@@ -1,25 +1,48 @@
-import { Box, Image } from "@chakra-ui/react";
-import Link from "next/link";
-import React from "react";
-import { Tooltip } from "react-tippy";
-import style from "../../../styles/templates/template1.module.scss";
-const ChangeTempBtn = () => {
+import { Box, Text } from '@chakra-ui/react';
+import React from 'react';
+import { BsArrowLeftRight } from "react-icons/bs";
+
+const ChangeTempBtn = ({ onPress }) => {
   return (
-    <Link href={"/templates"}>
+    <Box
+      position={{ base: "relative", lg: "fixed" }}
+      top={{ base: "100px", lg: "100px" }}
+      mb={'40px'}
+      left={"10px"}
+      zIndex="999"
+      onClick={onPress}
+      cursor={'pointer'}
+    >
       <Box
-        position={{ base: "relative", lg: "fixed" }}
-        top={{ base: "50px", lg: "100px" }}
-        mb={{ base: "20px", lg: "0px" }}
-        left={"50px"}
-        zIndex="999"
+        bg={'#313b47'}
+        display={'flex'}
+        flexDirection={'column'}
+        alignItems={'center'}
+        textAlign={'center'}
+        color={'#fff'}
+        p={'12px 8px'}
+        borderRadius={6}
+        _hover={{
+          color: '#00c8aa',
+          transition: '0.5s color'
+        }}
+        width={'fit-content'}
       >
-        <Tooltip title="Change Template" arrow distance={20}>
-          <div className={style.swap} style={{ background: "#006772" }}>
-            <Image src="/icons/swap.png" alt="will show soon" />
-          </div>
-        </Tooltip>
+        <Text
+          mb={'5px'}
+        >
+          <BsArrowLeftRight size={18} />
+        </Text>
+        <Text
+          fontSize={'10px'}
+          fontWeight={600}
+        >
+          Switch <br />
+          Template
+        </Text>
       </Box>
-    </Link>
+    </Box>
+
   );
 };
 

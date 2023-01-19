@@ -27,9 +27,7 @@ export default function ResumeBuild() {
             <div >
                 <Box w={["100%", "100%", "100%"]} mt={["2%", "2%", "2%"]} display="flex" flexDirection={["column", "column", "row"]} justifyContent="space-around"    >
                     <Box
-                        w={["100%","100%","100%", "40%", "40%"]} mt={["2%", "2%", "2%"]} >
-
-
+                        w={["100%", "100%", "100%", "40%", "40%"]} mt={["2%", "2%", "2%"]} >
                         <Box fontSize={["40px", "50px", "50px"]} color="black" className={"main-heading"}
                             ml={["11%", "8%", "8%"]} mb={["11%", "5%", "5%"]} mt={["0%", "10%", "10%"]} >
                             <Text style={{ fontWeight: "bold" }} >
@@ -56,30 +54,20 @@ export default function ResumeBuild() {
                                     />
                                 </Link>
                             </Box>
-
-
                         </Box>
-
-
-
                     </Box>
 
                     <Box
-                        w={["85%","85%","85%", "50%", "50%"]} mt={["2%", "2%", "2%"]}  ml={["11%", "8%", "8%"]}>
+                        w={["85%", "85%", "85%", "50%", "50%"]} mt={["2%", "2%", "2%"]} ml={["11%", "8%", "8%"]}>
 
 
                         <Image
-
                             src={HeadResume}
                             alt={'Image Not Found'}
                         />
                     </Box>
 
                 </Box>
-
-
-
-
                 <Box display="flex" flexDirection={["column", "row", "row"]} justifyContent={["", "space-around", "space-around"]} ml={["11%", "0%", "0%"]} mb={["11%", "5%", "5%"]} mt="5%" >
 
                     <Box display="flex" flexDirection={["row", "row", "row"]} mt={["3%", "0%"]}>
@@ -118,20 +106,15 @@ export default function ResumeBuild() {
                 <hr></hr>
 
 
-                <Container
-                    maxW={["100%", "100%", "100%", "100%"]}
+                <Box
+                    maxW={["100%", "100%", "90%", "90%"]}
                     display={"flex"}
-
+                    justifyContent="space-around"
                 >
                     <Box
-
-                        // padding={'70px 0px 0px 0px'}
-                        padding={'40px 0px 0px 0px'}
-                        display={["none", "none", "none", "block"]}
-
-                        maxW={["0%", "0%", "0%", "10%"]}
-                        marginRight="14%"
-                        ml="6%"
+                        maxW={["0%", "0%", "0%", "3%"]}
+                        padding={'40px 0px'}
+                        zIndex={"1049"}
                     >
                         <Box
                             className={styles.sideBarContainer}
@@ -140,7 +123,7 @@ export default function ResumeBuild() {
                         </Box>
                     </Box>
                     <Box
-                        maxW={["100%", "100%", "100%", "60%", "60%"]}>
+                        maxW={["100%", "100%", "70%", "70%", "70%"]}>
                         <Box marginTop="10%">
                             <Text className={"only-font-family"}
                                 fontSize={"16px"} >With BisResumes free resume builder, applying for your dream job is easy and fast. Choose from hundreds of free, designer-made templates and customize them within a few clicks.
@@ -331,7 +314,7 @@ export default function ResumeBuild() {
                             </Container>
                         </>
                     </Box>
-                </Container>
+                </Box>
 
 
 

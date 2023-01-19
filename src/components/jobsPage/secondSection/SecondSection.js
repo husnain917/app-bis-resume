@@ -81,7 +81,7 @@ const SecondSection = () => {
               "50px",
             ]}
           >
-            <Image src="/hunting-for-jobs.png" alt="" />
+            <Image src="/hunting-for-jobs.png" alt="will load soon" />
           </Box>
         </Box>
         <Box

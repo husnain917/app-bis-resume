@@ -11,7 +11,6 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import RenderData from "./renderData/renderData";
 
 const CommonComponent = ({ data }) => {
   const [expanded, setExpanded] = useState(false);
@@ -46,6 +45,7 @@ const CommonComponent = ({ data }) => {
               src={data.icon || "./diamond.png"}
               width={"40px"}
               height={"40px"}
+              alt="will load soon..."
             />
           </Box>
 
@@ -129,7 +129,6 @@ const CommonComponent = ({ data }) => {
                 <Box
                   key={index}
                   bg={"whitesmoke"}
-                  // h={["auto", "auto", "200px", "200px", "200px"]}
                   padding={"5"}
                   borderRadius={"10"}
                   _hover={{
@@ -163,7 +162,6 @@ const CommonComponent = ({ data }) => {
                 <Box
                   key={index}
                   bg={"whitesmoke"}
-                  // h={["auto", "auto", "200px", "200px", "200px"]}
                   padding={"5"}
                   borderRadius={"10"}
                   _hover={{
@@ -200,7 +198,6 @@ const CommonComponent = ({ data }) => {
                 <Box
                   key={index}
                   bg={"whitesmoke"}
-                  // h={["auto", "auto", "200px", "200px", "200px"]}
                   padding={"5"}
                   borderRadius={"10"}
                   _hover={{
@@ -229,9 +226,7 @@ const CommonComponent = ({ data }) => {
               );
             })}
       </SimpleGrid>
-      {/* <Button type="button" onClick={() => setExpanded(!expanded)} mt={"8"}>
-        {expanded ? "Show Less" : "Show More"}
-      </Button> */}
+
       <Box m={4}>
         <CommonButton
           backgroundColor={"#2CACD5"}

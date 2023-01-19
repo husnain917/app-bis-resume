@@ -4,6 +4,7 @@ import {
   Button,
   Circle,
   Icon,
+  Image,
   Text,
   Drawer,
   DrawerOverlay,
@@ -55,6 +56,7 @@ export default function TempNavbar({
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const [showNav, setShowNav] = useState(false);
+
   return (
     <Box
       display={"flex"}
@@ -66,7 +68,7 @@ export default function TempNavbar({
       justifyContent={"center"}
     >
       <Link href={"/"}>
-        <img
+        <Image
           src={"https://www.linkpicture.com/q/bisResumeLogo.svg"}
           width="200px"
           height={"auto"}
@@ -193,7 +195,7 @@ export default function TempNavbar({
           <DrawerCloseButton />
           <DrawerHeader>
             <Link href={"/"}>
-              <img
+              <Image
                 src={"https://www.linkpicture.com/q/bisResumeLogo.svg"}
                 width="200px"
                 height={"auto"}
