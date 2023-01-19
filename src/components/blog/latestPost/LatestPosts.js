@@ -150,6 +150,7 @@ export default function LatestPosts({ blogs }) {
         maxW={["100%", "100%", "96%", "96%", "96%"]}
         style={{ borderBottom: "1px solid", borderColor: "#C6C6C6" }}
         ml={["", "", "5%", "5%", "5%"]}
+        marginBottom={"20px"}
       ></Box>
 
       <div>
@@ -185,7 +186,7 @@ export default function LatestPosts({ blogs }) {
               return (
                 <Box
                   key={index}
-                  style={{ margin: 5 }}
+                  marginBottom={"40px"}
                   className={style.blogContainer}
                 >
                   <Link href={`blog/[slug]`} as={`blog/${slug}`}>
