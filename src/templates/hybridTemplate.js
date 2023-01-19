@@ -50,7 +50,8 @@ const HybridTemplate = () => {
             <Flex
                 justifyContent={{ base: 'none', lg: 'center' }}
                 flexDir={'column'}
-                alignItems={{ base: 'none', lg: 'center' }}
+                alignItems={{ sm: 'none', lg: 'center' }}
+                bg={'#fff'}
             >
                 <Box
                     minW={'830px'}

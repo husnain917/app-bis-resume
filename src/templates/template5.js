@@ -39,9 +39,11 @@ const Template5 = () => {
 
     return (
         <Flex
-            justifyContent={{ base: 'none', lg: 'center' }}
             mb="20px"
-            alignItems={{ base: 'none', lg: 'center' }}
+            justifyContent={{ base: 'none', lg: 'center' }}
+            flexDir={'column'}
+            alignItems={{ sm: 'none', lg: 'center' }}
+            bg={'#fff'}
         >
             <SimpleGrid
                 minW={830}
