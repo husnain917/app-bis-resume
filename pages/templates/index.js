@@ -22,24 +22,17 @@ function Templates() {
   return (
     <Box>
       <Box
-        margin={'1% 0% 0% 6%'}
+        display={'flex'}
+        justifyContent={'center'}
+        margin={'20px 0px'}
       >
-        <Text
-          fontSize={'2.6rem'}
-          fontStyle={'normal'}
-          fontFamily={`poppins-bold`}
-          color={'#006772'}
-        >
-          Categories :
-        </Text>
         <Text
           fontSize={'1.6rem'}
           fontStyle={'normal'}
           fontFamily={`poppins-bold`}
-          margin={'10px'}
-          // className="afterlink"
+          className="afterlink"
           width={'fit-content'}
-          color={'#757575'}
+          color={'#313B47'}
         >
           Professional
         </Text>
@@ -108,24 +101,17 @@ function Templates() {
       </SimpleGrid>
 
       <Box
-        margin={'0% 0% 0% 6%'}
+        display={'flex'}
+        justifyContent={'center'}
+        margin={'20px 0px'}
       >
-        <Text
-          fontSize={'2.6rem'}
-          fontStyle={'normal'}
-          fontFamily={`poppins-bold`}
-          color={'#006772'}
-        >
-          Categories :
-        </Text>
         <Text
           fontSize={'1.6rem'}
           fontStyle={'normal'}
           fontFamily={`poppins-bold`}
-          margin={'10px'}
-          // className="afterlink"
+          className="afterlink"
           width={'fit-content'}
-          color={'#757575'}
+          color={'#313B47'}
         >
           Modern
         </Text>
