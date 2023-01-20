@@ -137,11 +137,6 @@ export default function Navbar() {
                     padding={"10px 5px"}
                     textTransform={"uppercase"}
                     ml="1.5rem"
-                    _hover={{
-                      textDecoration: "none",
-                      backgroundColor: "red",
-                      color: "white",
-                    }}
                   >
                     {items?.label === "Register" ? (
                       <>

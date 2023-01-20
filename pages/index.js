@@ -13,6 +13,7 @@ import SliderComponent from "../src/components/sliderComponent/SliderComponent";
 import BuildResume from "../src/components/BuildResume";
 import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
 import ChatButton from "../src/components/resumeExampleData/chatButton/chatButton";
+import { ToastContainer } from "react-toastify";
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -42,7 +43,6 @@ export default function Home() {
         <meta name="description" content="Create resume with ease!" />
         <link rel="icon" href="/Bisicon.png"></link>
       </Head>
-
       <CallToAction />
       {/* <SliderComponent /> */}
 
