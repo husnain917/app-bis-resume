@@ -78,7 +78,7 @@ const SelectResume = () => {
                       "left",
                     ]}
                   >
-                    Beautiful ready-to-use resume templates
+                    Elegant and Professional Resume Templates
                   </Text>
                   <Box
                     color={"white"}
@@ -92,9 +92,13 @@ const SelectResume = () => {
                       "left",
                     ]}
                   >
-                    Win over employers and recruiters by using one of our 18
-                    elegant, professionally-designed resume templates. Download
-                    to word or PDF.
+                   {`Make a lasting impression on potential employers with one 
+                   of our 18 beautifully designed, ready-to-use resume templates.
+                    These templates are professionally crafted to help you stand
+                     out from the competition and win over recruiters. Simply download 
+                     the template in Word or PDF format and fill in your information to
+                      create a polished and professional resume. With our easy-to-use templates, you can create
+                    a resume that showcases your skills and experiences in a visually appealing and elegant way.`}
                   </Box>
                   <Box
                     marginBottom={"60px"}

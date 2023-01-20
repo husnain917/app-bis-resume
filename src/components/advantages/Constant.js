@@ -1,7 +1,7 @@
 export const data = [
   {
     advNum: "1",
-    title: "Stand Out from the Crowd,Create a Professional Resume with Our Customizable Templates",
+    title: "Stand Out from the Crowd, Create a Professional Resume with Our Customizable Templates",
     advDesc:
       "Stand out from the crowd and create a professional resume that showcases your skills and experience with our customizable templates. Our templates are designed to suit all styles and industries, from modern and minimalistic to classic and traditional. With our easy-to-use interface, you can personalize the template to match your experience level and the job you're applying for in no time.",
     imgSrc: "/online_cv.svg",
@@ -22,7 +22,7 @@ export const data = [
   },
   {
     advNum: "4",
-    title: "Maximize Your Job Chances,Optimize Your Resume with Our Expert Analysis",
+    title: "Maximize Your Job Chances, Optimize Your Resume with Our Expert Analysis",
     advDesc:
       "Maximize your job chances and make your resume stand out with our expert analysis. Our professional team will evaluate your resume and provide you with a detailed report on how to improve its effectiveness.",
     imgSrc: "/updated_resume.svg",

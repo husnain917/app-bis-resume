@@ -56,7 +56,7 @@ const TryResume = () => {
               maxWidth={["auto", "auto", "10em", "10em", "10em"]}
               className={"sub-heading"}
             >
-              Try our Professional Resume builder now!
+              Create the perfect resume with our user-friendly resume builder
             </Text>
             <Box
               padding={[
@@ -73,9 +73,9 @@ const TryResume = () => {
                 fontSize={["16px", "16px", "16px", "16px", "16px"]}
                 lineHeight={"24px"}
               >
-                Save time with our easy 3-step resume builder. No more writer’s
-                block or formatting difficulties in Word. Rapidly make a perfect
-                resume employers love.
+                Say goodbye to writers block and formatting struggles. In just a few simple steps,
+                 you can have a polished, professional resume ready to impress employers. 
+                Upgrade your job search today with our powerful resume tool.
               </Text>{" "}
             </Box>
             <Box display={"flex"} alignItems={"center"}>

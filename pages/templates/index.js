@@ -57,42 +57,44 @@ function Templates() {
                 }}
               >
                 <div className="templatecontainer">
-                  <Image
-                    className="templateimage"
-                    src={items?.src}
-                    alt={items?.alt}
-                    height={items?.height}
-                    width={items?.width}
-                  />
-                  <div className="templatemiddle">
-                    <div className="templatetext">Create my Resume</div>
+                  <div class="templatecontainer">
+                    <Image
+                      className="templateimage"
+                      src={items?.src}
+                      alt={items?.alt}
+                      height={items?.height}
+                      width={items?.width}
+                    />
+                    <div className="templatemiddle">
+                      <div className="templatetext">Create my Resume</div>
+                    </div>
+                    <Box
+                      display={'flex'}
+                      margin={'20px 0px 0px 0px'}
+                      width={'87%'}
+                    >
+                      <Text
+                        fontSize={'1.3rem'}
+                        fontStyle={'normal'}
+                        fontFamily={`poppins-bold`}
+                        margin={'20px 0px'}
+                        color={'#313B47'}
+                      >
+                        {items?.category?.categoryName}
+                      </Text>
+                      <Text
+                        fontSize={'0.92rem'}
+                        fontStyle={'normal'}
+                        fontFamily={`poppins`}
+                        margin={'22px 0px 20px 20px'}
+                        color={'#757575'}
+                      >
+                        {items?.category?.categoryID}
+                        {"/"}
+                        {items?.category?.totalCategory}
+                      </Text>
+                    </Box>
                   </div>
-                  <Box
-                    display={'flex'}
-                    margin={'20px 0px 0px 0px'}
-                    width={'87%'}
-                  >
-                    <Text
-                      fontSize={'1.3rem'}
-                      fontStyle={'normal'}
-                      fontFamily={`poppins-bold`}
-                      margin={'20px 0px'}
-                      color={'#313B47'}
-                    >
-                      {items?.category?.categoryName}
-                    </Text>
-                    <Text
-                      fontSize={'0.92rem'}
-                      fontStyle={'normal'}
-                      fontFamily={`poppins`}
-                      margin={'22px 0px 20px 20px'}
-                      color={'#757575'}
-                    >
-                      {items?.category?.categoryID}
-                      {"/"}
-                      {items?.category?.totalCategory}
-                    </Text>
-                  </Box>
                 </div>
               </Link>
             </Box>

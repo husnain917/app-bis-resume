@@ -65,18 +65,7 @@ export default function Resume_Formats() {
             fontSize={"17px"}
             lineHeight={8}
           >
-            <span
-              style={{
-                fontWeight: "bold"
-              }}
-            >Want to save time and have your resume ready in 5 minutes? </span>
-            <span>Try our resume builder. Its fast and easy to use. Plus, you ll get ready-made content to add with one click.</span>
-            <Link
-              color={"#3983fa"}
-              href={'/templates'}
-            >
-              See 20+ resume templates and create your resume here.
-            </Link>
+            <span>Use our resume builder for quick, easy, and professional results. With pre-written content and one-click editing, you can have your resume ready in seconds.</span>
           </Text>
 
           {/* button */}
@@ -182,7 +171,7 @@ export default function Resume_Formats() {
                 textAlign={"center"}
                 fontSize={"16px"}
               >
-                An example of a well-formatted resume made in our builder—
+                Create your own professional resume in minutes with our easy-to-use builder.
                 <Link color={"#3983fa"}>See more resume examples here.</Link>
               </Text>
             </Box>
@@ -207,7 +196,7 @@ export default function Resume_Formats() {
                 textAlign={"center"}
                 fontSize={"16px"}
               >
-                [I used] a nice template I found on Zety. My resume is now one page long, not three. With the same stuff.
+               I used a professional resume template from BisResume, and it helped me land my dream job.
               </Text>
             </Box>
           </Container>

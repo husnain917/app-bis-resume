@@ -72,7 +72,7 @@ export default function ResumeFormats() {
             className={styles.ctaHeading}
             fontFamily={`'EuclidCircularB', sans-serif`}
           >
-            The 3 Best Resume Formats to Use in 2022 (Examples)
+            {'The 3 Best Resume Formats to Use in 2023 (Examples)'}
           </Text>
 
           {/* about */}

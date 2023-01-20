@@ -1,42 +1,42 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 export const NAV_ITEMS = [
-  {
-    label: "Resume",
-    icon: ChevronDownIcon,
-    children: [
-      {
-        label: "Resume Builder",
-        subLabel: "Use our builder to create a resume in 5 minutes.",
-        href: "/resume-build",
-      },
-      {
-        label: "Resume Templates",
-        subLabel: "Find the perfect resume template.",
-        href: "/templates",
-      },
-      {
-        label: "Resume Examples",
-        subLabel: "See perfect resume examples that get you jobs.",
-        href: "/resume-examples",
-      },
-      {
-        label: "Resume Format",
-        subLabel: "Choose the right resume format for your needs.",
-        href: "/blog/resume-formats",
-      },
-      {
-        label: "How to Write a Resume",
-        subLabel: "Learn how to write a resume that lands you jobs.",
-        href: "/write-resume",
-      },
-      {
-        label: "Resume Help",
-        subLabel: "Use our expert guides to improve your resume writing.",
-        href: "/help/resume-help",
-      },
-    ],
-  },
+  //   {
+  //     label: "Resume",
+  //     icon: ChevronDownIcon,
+  //     children: [
+  //       {
+  //         label: "Resume Builder",
+  //         subLabel: "Use our builder to create a resume in 5 minutes.",
+  //         href: "/resume-build",
+  //       },
+  //       {
+  //         label: "Resume Templates",
+  //         subLabel: "Find the perfect resume template.",
+  //         href: "/templates",
+  //       },
+  //       {
+  //         label: "Resume Examples",
+  //         subLabel: "See perfect resume examples that get you jobs.",
+  //         href: "/resume-examples",
+  //       },
+  //       {
+  //         label: "Resume Format",
+  //         subLabel: "Choose the right resume format for your needs.",
+  //         href: "/blog/resume-formats",
+  //       },
+  //       {
+  //         label: "How to Write a Resume",
+  //         subLabel: "Learn how to write a resume that lands you jobs.",
+  //         href: "/write-resume",
+  //       },
+  //       {
+  //         label: "Resume Help",
+  //         subLabel: "Use our expert guides to improve your resume writing.",
+  //         href: "/help/resume-help",
+  //       },
+  //     ],
+  //   },
   // {
   //     label: 'CV',
   //     icon: ChevronDownIcon,
@@ -110,24 +110,32 @@ export const NAV_ITEMS = [
   //     ],
   // },
   {
-    label: "Blogs",
-    href: "/blog",
-  },
-  {
-    label: "Job Search",
+    label: "AllArticles",
     href: "#",
   },
   {
-    label: "Job Interviews",
+    label: "Resume & CV Writing",
     href: "#",
   },
   {
-    label: "Career Advice",
+    label: "Cover letter Writing",
     href: "#",
   },
   {
-    label: "About",
-    href: "/about-us",
+    label: "Examples",
+    href: "#",
+  },
+  {
+    label: "Personal Development",
+    href: "#",
+  },
+  {
+    label: "Inspiring Stories",
+    href: "#",
+  },
+  {
+    label: "Interviews & Find A Job",
+    href: "#",
   },
 ];
 

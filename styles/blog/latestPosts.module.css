@@ -1,3 +1,15 @@
+.coverImage:hover{
+    transform: scale(1.05);
+    
+}
+.blogContainer:hover .coverImage{
+    transform:scale(1.05);
+}
+
+.mainContainer:hover .imageContainer{
+    transform: scale(1.05);
+}
+
 .bgColor {
     background-color: rgba(226, 231, 253, 1);
     width: 100%;
@@ -12,15 +24,22 @@
 
 .imageContainer {
     position: relative;
-    height: 300px;
-    width: 300px;
+    height: 180px;
+    width: 180px;
     cursor: pointer;
+    transition: 0.8s;
 }
 
 .coverImage {
     width: 100%;
-    width: 100%;
+    border-radius: 3%;
+    transition: 0.8s;
+
 }
+
+/* .imageContainer:hover {
+    transform: scale(1.05);
+} */
 
 .imageContainerE {
     display: flex;
@@ -129,7 +148,7 @@
 }
 
 .imageContainer {
-    margin-top: 50px;
+    margin-bottom: 50px;
     width: 100%;
 
 }
@@ -150,9 +169,10 @@
 }
 
 .dateHeading {
-    color: #fff;
+    color: black;
     padding-right: 10px;
-    margin-top: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .imageHover {
@@ -190,6 +210,17 @@
     align-items: baseline;
     justify-content: center;
 }
+
+
+.centerblogs2 {
+    display: flex;
+    /* align-items: baseline;
+    justify-content: center; */
+    justify-content: space-between;
+
+}
+
+
 
 .Cardtitle {
     margin-top: 20px;
