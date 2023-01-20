@@ -33,46 +33,50 @@ const BlogPost = () => {
                 margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
                 className={"small-text"}
               >
-                Explore our professional resume examples and find the perfect template
-                 to help you stand out from the competition. Our collection includes resumes
-                  for various industries, such as finance, healthcare, technology, and more.
-                   Each sample is expertly crafted to reflect the best practices of your field,
-                    and includes tips and tricks to make your resume shine. Whether you're a recent graduate or a seasoned professional, our resume examples will
-                 help you land your dream job. Browse now and start creating the perfect resume today.
+                Explore our professional resume examples and find the perfect
+                template to help you stand out from the competition. Our
+                collection includes resumes for various industries, such as
+                finance, healthcare, technology, and more. Each sample is
+                expertly crafted to reflect the best practices of your field,
+                and includes tips and tricks to make your resume shine. Whether
+                you are a recent graduate or a seasoned professional, our resume
+                examples will help you land your dream job. Browse now and start
+                creating the perfect resume today.
               </Text>
-             
-              <Text
-                className={"small-text"}
-                margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
-              >
-              </Text>
-              <Text className={"medium-heading"} marginY={"3"}>
-              Elevate Your Hiring Potential,Discover Our Proven Resume Examples
-              </Text>
-              <Text
-                className={"small-text"}
-                margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
-              >
-                Our professional resume builder offers a variety
-                 of customizable templates, designed by certified resume writers to help you land your dream job.
-                  With easy-to-use features and step-by-step guidance, creating a polished, professional 
-                  resume has never been easier. Say goodbye to writer's block and formatting headaches and
-                   hello to a resume that stands out and gets results. Upgrade to our premium plan for even 
-                   more features and support, including cover letter and LinkedIn profile building. Try it 
-                   now and take the first step towards landing your dream job.
 
+              <Text
+                className={"small-text"}
+                margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
+              ></Text>
+              <Text className={"medium-heading"} marginY={"3"}>
+                Elevate Your Hiring Potential,Discover Our Proven Resume
+                Examples
               </Text>
               <Text
                 className={"small-text"}
                 margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
               >
-               
+                Our professional resume builder offers a variety of customizable
+                templates, designed by certified resume writers to help you land
+                your dream job. With easy-to-use features and step-by-step
+                guidance, creating a polished, professional resume has never
+                been easier. Say goodbye to writers block and formatting
+                headaches and hello to a resume that stands out and gets
+                results. Upgrade to our premium plan for even more features and
+                support, including cover letter and LinkedIn profile building.
+                Try it now and take the first step towards landing your dream
+                job.
+              </Text>
+              <Text
+                className={"small-text"}
+                margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
+              >
                 <Link href="/" mr={2}>
                   <a>cover letter examples </a>
                 </Link>
                 a cut above the rest.
               </Text>
-             
+
               <Box className={"compare-resumes js-wide-element"}>
                 <Box
                   className={
@@ -148,7 +152,7 @@ const BlogPost = () => {
                     Build your resume in 15 seconds
                   </Box>
                   <Box className="small-text">
-                  	Elevate Your Career with Our Stunning Resume Templates
+                    Elevate Your Career with Our Stunning Resume Templates
                   </Box>
                 </Box>
               </Box>

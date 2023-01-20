@@ -580,7 +580,7 @@ export default function FormatsTables() {
                             lineHeight={8}
                             fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
-                            Reverse chronological resume format is popular and preferred by recruiters as it highlights relevant information and easy to spot. It's also simple to use. 
+                            Reverse chronological resume format is popular and preferred by recruiters as it highlights relevant information and easy to spot. Its also simple to use. 
                         </Text>
 
                         <Text
@@ -710,7 +710,7 @@ export default function FormatsTables() {
                                     padding={"20px"}
                                     fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
-                                    	It's well-suited for job seekers with a consistent work history, as it allows potential employers to see the progression of your career.
+                                    	Its well-suited for job seekers with a consistent work history, as it allows potential employers to see the progression of your career.
                                 </Text>
                                 <Text
                                     fontSize={"16px"}
@@ -760,7 +760,7 @@ export default function FormatsTables() {
                                     padding={"20px"}
                                     fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
-                                   	If you've held multiple positions at the same company, it can make the resume appear cluttered, and the focus may be on quantity of positions rather than quality of experience.
+                                   	If you have held multiple positions at the same company, it can make the resume appear cluttered, and the focus may be on quantity of positions rather than quality of experience.
                                 </Text>
                                 <Text
                                     fontSize={"16px"}
@@ -864,7 +864,7 @@ export default function FormatsTables() {
                             marginBottom={"20px"}
                             fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
-A functional resume format, also known as a skills-based resume format, focuses on highlighting an individual's skills and abilities rather than their work experience.                         </Text>
+A functional resume format, also known as a skills-based resume format, focuses on highlighting an individual skills and abilities rather than their work experience.                         </Text>
 
                         <Text
                             fontSize={"16px"}
@@ -1007,7 +1007,7 @@ This format is useful for job seekers who have gaps in their work history, have 
                                     padding={"20px"}
                                     fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
-	It emphasizes an individual's skills and abilities, rather than their work experience, which makes it a great choice for job seekers with gaps in their work history, have changed careers, or have transferable skills.                                </Text>
+	It emphasizes an individual skills and abilities, rather than their work experience, which makes it a great choice for job seekers with gaps in their work history, have changed careers, or have transferable skills.                                </Text>
                                 <Text
                                     fontSize={"16px"}
                                     lineHeight={8}
@@ -1056,7 +1056,7 @@ This format is useful for job seekers who have gaps in their work history, have 
                                     padding={"20px"}
                                     fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
-                                    	It may not be the best choice for job seekers with a consistent work history or those who are just starting out, as it doesn't showcase their progression in their career.
+                                    	It may not be the best choice for job seekers with a consistent work history or those who are just starting out, as it does not showcase their progression in their career.
                                 </Text>
                                 <Text
                                     fontSize={"16px"}
@@ -1064,7 +1064,7 @@ This format is useful for job seekers who have gaps in their work history, have 
                                     padding={"20px"}
                                     fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
-                                   	It can make it difficult for recruiters to see how long you've been in the workforce, or how you've progressed in your career.
+                                   	It can make it difficult for recruiters to see how long you have been in the workforce, or how you have progressed in your career.
                                 </Text>
                                 <Text
                                     fontSize={"16px"}
@@ -1072,7 +1072,7 @@ This format is useful for job seekers who have gaps in their work history, have 
                                     padding={"20px"}
                                     fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
-                                   	It may not be the best choice for highly specialized roles, as it doesn't always provide a clear picture of your work history and qualifications.
+                                   	It may not be the best choice for highly specialized roles, as it does not always provide a clear picture of your work history and qualifications.
                                 </Text>
                             </Box>
                         </Box>
@@ -1353,7 +1353,7 @@ This format is useful for job seekers who have gaps in their work history, have 
                                     padding={"20px"}
                                     fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
-                                   	It may not be the best choice for job seekers with a consistent work history or those who are just starting out, as it doesn't showcase their progression in their career.
+                                   	It may not be the best choice for job seekers with a consistent work history or those who are just starting out, as it does not showcase their progression in their career.
                                 </Text>
                                 <Text
                                     fontSize={"16px"}
@@ -1361,7 +1361,7 @@ This format is useful for job seekers who have gaps in their work history, have 
                                     padding={"20px"}
                                     fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
-                                  	It can make it difficult for recruiters to see how long you've been in the workforce, or how you've progressed in your career.
+                                  	It can make it difficult for recruiters to see how long you have been in the workforce, or how you have progressed in your career.
                                 </Text>
                                 <Text
                                     fontSize={"16px"}
@@ -1369,7 +1369,7 @@ This format is useful for job seekers who have gaps in their work history, have 
                                     padding={"20px"}
                                     fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
-                                  		It may not be the best choice for highly specialized roles, as it doesn't always provide a clear picture of your work history and qualifications.
+                                  		It may not be the best choice for highly specialized roles, as it does not always provide a clear picture of your work history and qualifications.
                                 </Text>
                             </Box>
                         </Box>
@@ -1436,7 +1436,7 @@ This format is useful for job seekers who have gaps in their work history, have 
                         lineHeight={8}
                         fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
-                         To ensure your resume is ATS-friendly, use keywords and phrases relevant to the job you're applying for, use a clean, simple format, and avoid using fancy formatting or graphics. 
+                         To ensure your resume is ATS-friendly, use keywords and phrases relevant to the job you are applying for, use a clean, simple format, and avoid using fancy formatting or graphics. 
                     </Text>
 
                     <Text
@@ -1444,7 +1444,7 @@ This format is useful for job seekers who have gaps in their work history, have 
                         marginBottom={"25px"}
                         fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                     >
-                       Use clear headings and sections, proofread for errors and use common file types such as .doc, .docx or .pdf. Tailor your resume to the job description and make it as relevant as possible to the position you're applying for.
+                       Use clear headings and sections, proofread for errors and use common file types such as .doc, .docx or .pdf. Tailor your resume to the job description and make it as relevant as possible to the position you are applying for.
                     </Text>
 
                     <Text

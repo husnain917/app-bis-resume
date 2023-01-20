@@ -73,7 +73,7 @@ const TryResume = () => {
                 fontSize={["16px", "16px", "16px", "16px", "16px"]}
                 lineHeight={"24px"}
               >
-                Say goodbye to writer's block and formatting struggles. In just a few simple steps,
+                Say goodbye to writers block and formatting struggles. In just a few simple steps,
                  you can have a polished, professional resume ready to impress employers. 
                 Upgrade your job search today with our powerful resume tool.
               </Text>{" "}
