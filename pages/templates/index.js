@@ -10,12 +10,12 @@ import { useRouter } from "next/router";
 function Templates() {
   const dispatch = useDispatch();
   const router = useRouter();
-  const isUserLoggedIn = useSelector(
-    (state) => state.AuthReducer.isUserLoggedIn
-  );
-  const ismodalOpen = async () => {
-    dispatch(modalOpen());
-  }
+  // const isUserLoggedIn = useSelector(
+  //   (state) => state.AuthReducer.isUserLoggedIn
+  // );
+  // const ismodalOpen = async () => {
+  //   dispatch(modalOpen());
+  // }
   return (
     <div>
       <SimpleGrid
@@ -28,11 +28,12 @@ function Templates() {
           <>
             <Box className="cursor" key={index}>
               <Link onClick={() => {
-                isUserLoggedIn ?
-                  router.push(items.href)
-                  :
-                  ismodalOpen()
-              }} style={{ cursor: "default" }}>
+                // isUserLoggedIn ?
+                router.push(items.href)
+                // :
+                // ismodalOpen()
+              }}
+                style={{ cursor: "default" }}>
                 <div class="templatecontainer">
                   <Image
                     className="templateimage"

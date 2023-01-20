@@ -20,21 +20,21 @@ import { modalOpen } from "../../store/actions/AuthAction";
 
 const TemplateDetail = () => {
   const router = useRouter();
-  const isUserLoggedIn = useSelector(
-    (state) => state.AuthReducer.isUserLoggedIn
-  );
+  // const isUserLoggedIn = useSelector(
+  //   (state) => state.AuthReducer.isUserLoggedIn
+  // );
   const dispatch = useDispatch()
-  useEffect(()=>{
-    if (!isUserLoggedIn) {
-      router.push('/')
-      dispatch(modalOpen());
-    }
-  })
-  if (!isUserLoggedIn) {
-    router.push('/')
-    dispatch(modalOpen());
+  // useEffect(()=>{
+  //   if (!isUserLoggedIn) {
+  //     router.push('/')
+  //     dispatch(modalOpen());
+  //   }
+  // })
+  // if (!isUserLoggedIn) {
+  //   router.push('/')
+  //   dispatch(modalOpen());
     
-  }
+  // }
   const { template_id } = router.query;
   const [sideTempSelect, setsideTempSelect] = useState(false);
   const { width } = useWindowSizing();
