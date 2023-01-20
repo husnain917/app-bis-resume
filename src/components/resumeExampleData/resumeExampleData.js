@@ -3,7 +3,7 @@ export const data = [
     icon: "./diamond.png",
     title: "Fashion Designer",
     description:
-      "The fashion industry might seem like a close-knit community, but in reality, it's not. It's a global industry with hundreds of thousands of available jobs. Improve your chances of landing that perfect job by using our real resume examples to make a winning Accounting and Finance Resume. Try it out now for free!",
+    "Stand out in the fashion industry with a standout resume. Our fashion designer resume examples and templates showcase the skills and experience necessary to land your dream job. From creating mood boards to sketching designs, our templates highlight your creativity and technical abilities. Customize your resume and take the first step towards your dream career with BisResume.",
     exampleData: [
       {
         label: "Fashion Designer ",
@@ -41,7 +41,7 @@ export const data = [
     icon: "./diamond.png",
     title: "Student Template",
     description:
-      "Create the best Legal Resumes today using one of our free samples and templates and easy-to-use Builder. Stop wasting time trying to figure out the perfect format and structure, and let our builder do the work for you.",
+      "Our Student Template is the perfect choice for students or recent graduates looking to land their first job in the legal field. With a clean and modern design, this template showcases your education, skills, and experience in a professional and easy-to-read format. Tailor it to your specific needs and stand out from the competition with a strong and effective resume. Try it out now for free and increase your chances of landing your dream job in the legal industry.",
     exampleData: [
       {
         label: "College Resume",
@@ -61,7 +61,7 @@ export const data = [
     icon: "./diamond.png",
     title: "Graphic Designer",
     description:
-      "Create the best Legal Resumes today using one of our free samples and templates and easy-to-use Builder. Stop wasting time trying to figure out the perfect format and structure, and let our builder do the work for you.",
+      "Make a lasting impression on hiring managers and legal professionals with a polished and professional legal resume created with our expert guidance and templates. Our user-friendly builder allows you to customize your resume to match the specific requirements of the legal field, highlighting your relevant skills and experience. Get started now and take the first step towards landing your dream job in the legal industry.",
     exampleData: [
       {
         label: "Graphic Designer",
@@ -129,7 +129,7 @@ export const data = [
     icon: "./diamond.png",
     title: "Marketing",
     description:
-      "Create the best Legal Resumes today using one of our free samples and templates and easy-to-use Builder. Stop wasting time trying to figure out the perfect format and structure, and let our builder do the work for you.",
+      "Craft a winning legal resume with the help of our professional templates and expert-backed tips. Our easy-to-use builder will guide you through the process of creating a polished, job-winning resume in no time. From crafting a compelling summary to highlighting your relevant experience and skills, our free samples and templates have everything you need to stand out in the competitive legal job market. Try it out now and take the first step towards landing your dream job.",
     exampleData: [
       {
         label: "Marketing Manager",
@@ -191,7 +191,7 @@ export const data = [
     icon: "./diamond.png",
     title: "Technology Templates",
     description:
-      "Create the best Legal Resumes today using one of our free samples and templates and easy-to-use Builder. Stop wasting time trying to figure out the perfect format and structure, and let our builder do the work for you.",
+      "If you are looking to create a professional legal resume, look no further. Our easy-to-use builder offers a wide variety of customizable templates, sample phrases, and intuitive tools to help you create a polished and effective resume. Whether you are a recent law school graduate or an experienced attorney, our builder can help you showcase your skills, achievements and qualifications in the best possible light. With our builder, you can create a resume that stands out and makes a strong impression on hiring managers. Try it out now and take the first step towards your dream legal job.",
     exampleData: [
       {
         label: "Software Engineer",
@@ -211,7 +211,7 @@ export const data = [
     icon: "./diamond.png",
     title: "Remaining Templates",
     description:
-      "Create the best Legal Resumes today using one of our free samples and templates and easy-to-use Builder. Stop wasting time trying to figure out the perfect format and structure, and let our builder do the work for you.",
+      "Elevate your legal career with a polished, professional resume. Our builder offers customizable, industry-specific templates and expert tips to make the resume-creation process a breeze. Try it out now for free and land your dream job in no time.",
     exampleData: [
       {
         label: "Simple Template",
