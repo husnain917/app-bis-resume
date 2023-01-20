@@ -20,7 +20,7 @@ export default function RightCard({ cardData }) {
     >
       <Box
         pos="relative"
-        height={["60px", "60px", "35px", "35px", "34px", "60px"]}
+        height={["60px", "60px", "35px", "35px", "38px", "60px"]}
         textAlign={width >= 767 ? null : "center"}
       >
         <Circle

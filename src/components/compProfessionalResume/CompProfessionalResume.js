@@ -20,6 +20,7 @@ export default function CompProfessionalResume() {
       spacing={6}
       pl={{ base: 5, sm: 8, md: 16 }}
       pr={{ base: 5, sm: 4, md: 6 }}
+      py={{ base: 5, sm: 8, md: 16 }}
       bg="#f6f5f0"
     >
       <Box>
