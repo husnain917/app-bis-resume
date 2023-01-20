@@ -296,7 +296,7 @@ const AboutUs = () => {
                       alt="Star Summary"
                     />
                   </p>
-                  <p className="excellent">
+                  {/* <p className="excellent">
                     Based on{" "}
                     <a
                       href="#"
@@ -319,7 +319,7 @@ const AboutUs = () => {
                       width="90"
                       height="22"
                     />
-                  </p>
+                  </p> */}
                 </Box>
                 <Box className="reviews">
                   <Slider />
