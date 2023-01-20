@@ -18,7 +18,8 @@ export default function CompProfessionalResume() {
     <SimpleGrid
       columns={{ base: 1, md: 2 }}
       spacing={6}
-      p={{ base: 5, sm: 8, md: 16 }}
+      pl={{ base: 5, sm: 8, md: 16 }}
+      pr={{ base: 5, sm: 4, md: 6 }}
       bg="#f6f5f0"
     >
       <Box>
