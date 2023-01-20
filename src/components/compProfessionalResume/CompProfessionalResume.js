@@ -46,6 +46,7 @@ export default function CompProfessionalResume() {
         pb={width >= 767 ? "auto" : "20px"}
         display={width >= 767 ? "block" : "flex"}
         justifyContent={width >= 767 ? null : "center"}
+        mt={4}
       >
         {width >= 767 ? (
           cardData.map((item, index) => {

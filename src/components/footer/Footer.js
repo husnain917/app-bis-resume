@@ -15,80 +15,109 @@ export default function Footer() {
   return (
     <>
       <div className={styles.fcontainer2}>
-        <Link href="https://web.facebook.com/login/?_rdc=1&_rdr">
-          <CommonSocial
-            hoverCursor={"pointer"}
-            backgroundColor={"white"}
-            borderRadius={"50%"}
-            color={"whitesmoke"}
-            margin={"0"}
-            padding={"0"}
-            hoverBorder={"1px solid black"}
-            // className={"hoverEffects"}
-            icon={
-              <FaFacebookF
-                color={"#463477"}
-                fontWeight={"bold"}
-                fontSize={"1.1rem"}
-              />
-            }
-          />
+        <Link
+          target="_blank"
+          href={"#"}
+          passhref
+          as={"https://web.facebook.com/login/?_rdc=1&_rdr"}
+        >
+          <a target="_blank">
+            <CommonSocial
+              hoverCursor={"pointer"}
+              backgroundColor={"white"}
+              borderRadius={"50%"}
+              color={"whitesmoke"}
+              margin={"0"}
+              padding={"0"}
+              hoverBorder={"1px solid black"}
+              // className={"hoverEffects"}
+              icon={
+                <FaFacebookF
+                  color={"#463477"}
+                  fontWeight={"bold"}
+                  fontSize={"1.1rem"}
+                />
+              }
+            />
+          </a>
         </Link>
-        <Link href="https://www.linkedin.com/home">
-          <CommonSocial
-            hoverCursor={"pointer"}
-            backgroundColor={"white"}
-            borderRadius={"50%"}
-            color={"whitesmoke"}
-            margin={"0px 20px 0px 20px"}
-            padding={"0"}
-            hoverBorder={"1px solid black"}
-            icon={
-              <FaLinkedinIn
-                color={"#463477"}
-                fontWeight={"bold"}
-                fontSize={"1.1rem"}
-              />
-            }
-          />
+        <Link
+          // href={"#"}
+          target="_blank"
+          passhref
+          href={"https://www.linkedin.com/home"}
+          as={"https://www.linkedin.com/home"}
+        >
+          <a target={"_blank"}>
+            <CommonSocial
+              hoverCursor={"pointer"}
+              backgroundColor={"white"}
+              borderRadius={"50%"}
+              color={"whitesmoke"}
+              margin={"0px 20px 0px 20px"}
+              padding={"0"}
+              hoverBorder={"1px solid black"}
+              icon={
+                <FaLinkedinIn
+                  color={"#463477"}
+                  fontWeight={"bold"}
+                  fontSize={"1.1rem"}
+                />
+              }
+            />
+          </a>
         </Link>
-        <Link href="https://twitter.com/login">
-          <CommonSocial
-            hoverCursor={"pointer"}
-            backgroundColor={"white"}
-            borderRadius={"50%"}
-            color={"whitesmoke"}
-            margin={"0px 20px 0px 0px"}
-            padding={"0"}
-            hoverBorder={"1px solid black"}
-            // className={"hoverEffects"}
-            icon={
-              <FaTwitter
-                color={"#463477"}
-                fontWeight={"bold"}
-                fontSize={"1.1rem"}
-              />
-            }
-          />
+        <Link
+          href={"https://twitter.com/login"}
+          target="_blank"
+          passhref
+          as="https://twitter.com/login"
+        >
+          <a target={"_blank"}>
+            <CommonSocial
+              hoverCursor={"pointer"}
+              backgroundColor={"white"}
+              borderRadius={"50%"}
+              color={"whitesmoke"}
+              margin={"0px 20px 0px 0px"}
+              padding={"0"}
+              hoverBorder={"1px solid black"}
+              // className={"hoverEffects"}
+              icon={
+                <FaTwitter
+                  color={"#463477"}
+                  fontWeight={"bold"}
+                  fontSize={"1.1rem"}
+                />
+              }
+            />
+          </a>
         </Link>
-        <Link href="https://www.instagram.com/accounts/login/">
-          <CommonSocial
-            hoverCursor={"pointer"}
-            backgroundColor={"white"}
-            borderRadius={"50%"}
-            color={"whitesmoke"}
-            margin={"0"}
-            padding={"0"}
-            hoverBorder={"1px solid black"}
-            // className={"hoverEffects"}
-            icon={
-              <FaInstagram
-                color={"#463477"}
-                fontWeight={"bold"}
-                fontSize={"1.1rem"}
-              />
-            }
-          />
+        <Link
+          href={"https://www.instagram.com/accounts/login/"}
+          target="_blank"
+          passhref
+          as="https://www.instagram.com/accounts/login/"
+        >
+          <a target="_blank">
+            <CommonSocial
+              hoverCursor={"pointer"}
+              backgroundColor={"white"}
+              borderRadius={"50%"}
+              color={"whitesmoke"}
+              margin={"0"}
+              padding={"0"}
+              hoverBorder={"1px solid black"}
+              // className={"hoverEffects"}
+              icon={
+                <FaInstagram
+                  color={"#463477"}
+                  fontWeight={"bold"}
+                  fontSize={"1.1rem"}
+                />
+              }
+            />
+          </a>
         </Link>
       </div>
       <div className={styles.fcontainer1}>
@@ -114,7 +143,6 @@ export default function Footer() {
           </div>
           <div>
             <Link href="/write-resume">How to Write a Resume</Link>
-            
           </div>
           {/* <div>
             <Link href="#/">How to Write a CV</Link>
@@ -174,7 +202,7 @@ export default function Footer() {
         <p>Ny Carlsberg Vej 80</p>
         <p>DK 1799 Copenhangen,Denmark</p>
         <p className={styles.copyright}>
-          Copyright {year} Bisresume ApS. All Rights Reserved
+          Copyright {year} Bisresume. All Rights Reserved
         </p>
       </div>
     </>
