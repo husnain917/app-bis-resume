@@ -2760,3 +2760,16 @@ video {
     padding-right: 30px;
   }
 }
+.menu-item::after{
+  z-index: "2";
+              content: " ";
+              display: block;
+              top: -1rem;
+              left: 6rem;
+              position: absolute;
+              width: 2rem;
+              height: 2rem;
+              transform: rotate(-45deg);
+              background-color: #FFF;
+              box-shadow: 0 1px 5px 0 rgb(0 0 0 / 25%);
+}
