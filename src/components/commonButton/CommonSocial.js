@@ -57,7 +57,7 @@ export default function CommonButton({
       onClick={onClick}
       disabled={disabled}
     >
-      {loading ? loading : icon}
+      <a target="_blank">{loading ? loading : icon}</a>
     </Button>
   );
 }
