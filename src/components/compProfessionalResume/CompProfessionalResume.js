@@ -18,7 +18,9 @@ export default function CompProfessionalResume() {
     <SimpleGrid
       columns={{ base: 1, md: 2 }}
       spacing={6}
-      p={{ base: 5, sm: 8, md: 16 }}
+      pl={{ base: 5, sm: 8, md: 16 }}
+      pr={{ base: 5, sm: 4, md: 6 }}
+      py={{ base: 5, sm: 8, md: 16 }}
       bg="#f6f5f0"
     >
       <Box>
@@ -46,6 +48,7 @@ export default function CompProfessionalResume() {
         pb={width >= 767 ? "auto" : "20px"}
         display={width >= 767 ? "block" : "flex"}
         justifyContent={width >= 767 ? null : "center"}
+        mt={4}
       >
         {width >= 767 ? (
           cardData.map((item, index) => {

@@ -22,7 +22,7 @@ const Card = () => {
               bg="#f6f5f0"
               marginRight={"1.95%"}
               borderRadius={"8px"}
-              padding={"25px"}
+              padding={"10px"}
               display={"flex"}
               alignItems={"center"}
               flexDirection={"column"}

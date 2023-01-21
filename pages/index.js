@@ -17,7 +17,6 @@ import { ToastContainer } from "react-toastify";
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
-
   const listenToScroll = () => {
     let heightToHidden = 0.5;
     let againHide = 7700;

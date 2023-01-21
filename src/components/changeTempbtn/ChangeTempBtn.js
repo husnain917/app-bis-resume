@@ -123,20 +123,6 @@ const ChangeTempBtn = ({
           interest={interest}
           certificate={certificate}
         />
-        <Button
-          bgColor="transparent"
-          color="white"
-          fontSize={{ base: "12px", sm: "14px", md: "16px" }}
-          _hover={{
-            backgroundColor: "transparent",
-
-            color: "#313C4E",
-            transition: "0.4s",
-          }}
-        >
-          <SettingsIcon mr="5px" />
-          Setting
-        </Button>
         <DownloadModal downloadPDF={downloadPDF} />
       </Box>
     </Box>
