@@ -20,6 +20,7 @@ import { modalOpen } from "../../store/actions/AuthAction";
 
 const TemplateDetail = () => {
   const router = useRouter();
+  let resumeData = useSelector((state) => state.editorReducer.resumeData);
   // const isUserLoggedIn = useSelector(
   //   (state) => state.AuthReducer.isUserLoggedIn
   // );
@@ -38,7 +39,7 @@ const TemplateDetail = () => {
   const { template_id } = router.query;
   const [sideTempSelect, setsideTempSelect] = useState(false);
   const { width } = useWindowSizing();
-  const { downloadPDFHandler, pdfRef } = PDFGenerater();
+  const { downloadPDFHandler, pdfRef ,downloadWordHandler} = PDFGenerater();
   const [template, settemplate] = useState();
 
   const selected =
@@ -58,6 +59,10 @@ const TemplateDetail = () => {
         interest={selected?.sections?.interest}
         certificate={selected?.sections?.certificate}
         downloadPDF={downloadPDFHandler}
+        downloadWord={()=>{downloadWordHandler({
+          ...resumeData,
+          id:selected.id
+        })}}
         sideTempSelect={sideTempSelect}
         setsideTempSelect={setsideTempSelect}
       >
