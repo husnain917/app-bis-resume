@@ -39,6 +39,7 @@ import DownloadModal from "../downloadModel/DownloadModal";
 
 import ThemeModal from "../themeModal/ThemeModal";
 import FontPopover from "../fontPopover/FontPopover";
+import SettingModal from "../setting/SettingModal";
 export default function TempNavbar({
   work,
   education,
@@ -140,20 +141,27 @@ export default function TempNavbar({
             interest={interest}
             certificate={certificate}
           />
-          <Button
-            bgColor="transparent"
-            color="white"
-            fontSize={{ base: "12px", sm: "14px", md: "16px" }}
-            _hover={{
-              backgroundColor: "transparent",
+          <Popover>
+            <PopoverTrigger>
+              <Button
+                bgColor="transparent"
+                color="white"
+                fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+                _hover={{
+                  backgroundColor: "transparent",
 
-              color: "#313C4E",
-              transition: "0.4s",
-            }}
-          >
-            <SettingsIcon mr="5px" />
-            Setting
-          </Button>
+                  color: "#313C4E",
+                  transition: "0.4s",
+                }}
+                position={'relative'}
+              >
+                <SettingsIcon mr="5px" />
+                Setting
+              </Button>
+            </PopoverTrigger>
+            <SettingModal />
+          </Popover>
+
           <DownloadModal downloadPDF={downloadPDF} />
           <Button
             bgColor="transparent"

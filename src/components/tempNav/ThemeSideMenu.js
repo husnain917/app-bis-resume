@@ -130,21 +130,7 @@ export default function ThemeSideMenu({
           interest={interest}
           certificate={certificate}
         />
-      </Box>
-      <Button
-        bgColor="transparent"
-        color="white"
-        fontSize={{ base: "12px", sm: "14px", md: "16px" }}
-        _hover={{
-          backgroundColor: "transparent",
-
-          color: "#313C4E",
-          transition: "0.4s",
-        }}
-      >
-        <SettingsIcon mr="5px" />
-        Setting
-      </Button>
+      </Box> 
       <DownloadModal downloadPDF={downloadPDF} />
     </Box>
   );
