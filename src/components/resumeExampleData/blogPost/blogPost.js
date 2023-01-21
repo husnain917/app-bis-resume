@@ -33,87 +33,50 @@ const BlogPost = () => {
                 margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
                 className={"small-text"}
               >
-                A great resume is a key that opens doors to a better future.
-                Exceptional formatting is one way to stand out, but precise,
-                professional writing is equally important. That’s why we’ve
-                created more than 300 resume samples to get you started on
-                drafting the perfect resume no matter your industry or job
-                title. Each sample has been expertly crafted to reflect the best
-                practices of your field and walk you through every aspect of
-                resume creation, from the profile summary to the layout. And the
-                best part? Every single one is completely free.
+                Explore our professional resume examples and find the perfect
+                template to help you stand out from the competition. Our
+                collection includes resumes for various industries, such as
+                finance, healthcare, technology, and more. Each sample is
+                expertly crafted to reflect the best practices of your field,
+                and includes tips and tricks to make your resume shine. Whether
+                you are a recent graduate or a seasoned professional, our resume
+                examples will help you land your dream job. Browse now and start
+                creating the perfect resume today.
               </Text>
-              <Text className={"small-text"}>
-                We understand that resume writing can feel daunting. That’s why
-                our resume and{" "}
-                <Link href="/" mr={2}>
-                  <a
-                    style={{
-                      color: "blue",
-                    }}
-                  >
-                    cover letter examples{" "}
-                  </a>
-                </Link>
-                guide you through the process and break down the anatomy of a
-                great resumes, section by section. We dive deep into the
-                realities of today’s job market and hiring practices to help you
-                overcome 22st century challenges like Applicant Tracking Systems
-                and the best file formats. What’s more, our resume samples
-                address common obstacles and choices you may face and help you
-                troubleshoot any issues.
-              </Text>
+
               <Text
                 className={"small-text"}
                 margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
-              >
-                When you’re on the job hunt, competition can be fierce. That’s
-                why our samples are chock full of practical tips to equip you
-                with the specific tools needed to create a resume that catches a
-                hiring manager’s attention and lands you your dream job. So go
-                ahead and get started! Search our ever-expanding collection of
-                resume samples and templates to level up your career in no time.
-              </Text>
+              ></Text>
               <Text className={"medium-heading"} marginY={"3"}>
-                Examples to get you hired fast
+                Elevate Your Hiring Potential,Discover Our Proven Resume
+                Examples
               </Text>
               <Text
                 className={"small-text"}
                 margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
               >
-                Sometimes, a resume just won’t cut it. That’s why we’ve got you
-                covered when it comes to creating a flawless Curriculum Vitae
-                (CV). Our comprehensive CV examples are expertly designed to
-                simplify the process of creating a robust document that brings
-                your experience to life.
-              </Text>
-              <Text className="small-text">
-                Whereas most American employers tend to request resumes,
-                international companies often deal with CVs. These documents
-                often contain multiple pages for a more thorough examination of
-                the candidate’s academic and professional history. In some
-                countries, a photo and information about the candidate’s family
-                and personal life are also commonplace.
+                Our professional resume builder offers a variety of customizable
+                templates, designed by certified resume writers to help you land
+                your dream job. With easy-to-use features and step-by-step
+                guidance, creating a polished, professional resume has never
+                been easier. Say goodbye to writers block and formatting
+                headaches and hello to a resume that stands out and gets
+                results. Upgrade to our premium plan for even more features and
+                support, including cover letter and LinkedIn profile building.
+                Try it now and take the first step towards landing your dream
+                job.
               </Text>
               <Text
                 className={"small-text"}
                 margin={[" 20px 0px", "20px 0px", "0px", "0px", "0px"]}
               >
-                When writing a CV, it’s important to understand the position
-                you’re applying for and the qualifications an employer is
-                seeking. Our field-tested CV examples help you get hired faster
-                with industry-specific tips and inside knowledge to{" "}
                 <Link href="/" mr={2}>
                   <a>cover letter examples </a>
                 </Link>
                 a cut above the rest.
               </Text>
-              <Text className={"small-text"}>
-                When it comes to making your resume, you’ve got options. That’s
-                great news because no candidate is alike. However, there are
-                some basic rules to help you pick the correct sample that best
-                suits the hiring manager’s needs.
-              </Text>
+
               <Box className={"compare-resumes js-wide-element"}>
                 <Box
                   className={
@@ -173,7 +136,7 @@ const BlogPost = () => {
             <Box className="post-banner-cta post-banner-cta--wide">
               <Box className="post-banner-cta__main">
                 <Box className="post-banner-cta__title post-banner-cta__title--top">
-                  Build your resume in 15 minutes
+                  Build your resume in 15 seconds
                 </Box>
                 <Box
                   className="post-banner-cta__image is-image-loaded"
@@ -186,11 +149,10 @@ const BlogPost = () => {
                 ></Box>
                 <Box className="post-banner-cta__text">
                   <Box className="medium-heading">
-                    Build your resume in 15 minutes
+                    Build your resume in 15 seconds
                   </Box>
                   <Box className="small-text">
-                    Use professional field-tested resume templates that follow
-                    the exact ‘resume rules’ employers look for.
+                    Elevate Your Career with Our Stunning Resume Templates
                   </Box>
                 </Box>
               </Box>
@@ -212,7 +174,7 @@ const BlogPost = () => {
                 <Box className="post-banner-cta">
                   <Box className="post-banner-cta__main">
                     <Box className="post-banner-cta__title post-banner-cta__title--top">
-                      Build your resume in 15 minutes
+                      Build your resume in 15 seconds
                     </Box>
                     <Box className="post-banner-cta__animation">
                       <Box className="post-banner-cta__animation-frame"></Box>
@@ -222,7 +184,7 @@ const BlogPost = () => {
                     </Box>
                     <Box className="post-banner-cta__text">
                       <Box className="small-heading">
-                        Build your resume in 15 minutes
+                        Build your resume in 15 seconds
                       </Box>
                       <Box className="xsmall-text">
                         Use professional field-tested resume templates that

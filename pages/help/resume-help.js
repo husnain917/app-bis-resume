@@ -27,7 +27,7 @@ export default function HelpCenter() {
                     >
                         <Box
                             maxW={["0%", "0%", "0%", "5%"]}
-                            display={["none", "none", "block", "block", "block","block"]}
+                            display={["none", "none", "block", "block", "block", "block"]}
 
                             mt="3%"
                             mb='3%'

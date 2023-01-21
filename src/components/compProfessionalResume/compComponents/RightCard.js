@@ -113,9 +113,12 @@ export default function RightCard({ cardData }) {
             lineHeight={["14px", "18px", "23px", "22px", "22px"]}
             mt={2}
           >
-            {
-              " Include your highest level of education, the name of the institution and the date of completion. If you have any relevant certifications or training, list them here as well. Don't forget to include any relevant coursework or honors."
-            }
+
+            Include your highest level of education, the name of the institution
+            and the date of completion. If you have any relevant certifications
+            or training, list them here as well. Don`&#34;`t forget to include
+            any relevant coursework or honors. 
+
           </Text>
         )
       )}

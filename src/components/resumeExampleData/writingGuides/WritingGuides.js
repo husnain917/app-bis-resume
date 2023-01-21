@@ -25,7 +25,7 @@ const WritingGuides = () => {
             className={["sub-heading"]}
             textAlign={["center", "center", "center", "start", "start"]}
           >
-            350+ Professional Resume Examples (+Writing Guides)
+            Unlock the full potential of your job search with our vast collection of over 350 professionally written resume examples
           </Box>
           <Box
             fontSize={["16px", "16px", "20px", "20px", "20px"]}
@@ -42,9 +42,11 @@ const WritingGuides = () => {
             className={"medium-text"}
             textAlign={["center", "center", "center", "start", "start"]}
           >
-            Check out our free resume samples for inspiration. Use the expert
-            guides and our resume builder to create a beautiful resume in
-            minutes. We also provide a library of resume templates.
+           With a wide range of industries and job titles, our expertly curated resume 
+           samples provide the guidance and inspiration you need to create a winning resume.
+            From entry-level to executive, our user-friendly resume builder and comprehensive 
+            writing guides make it easy to build a resume that stands out. Take the first step 
+            towards your dream job today with our free resume examples and templates.
           </Box>
           <Box textAlign={["center", "center", "center", "start", "start"]}>
             <CommonButton
