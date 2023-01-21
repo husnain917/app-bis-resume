@@ -25,8 +25,10 @@ import { TbArrowBack } from "react-icons/tb";
 import url from "../../config/endpoint";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import { EmailIcon } from "@chakra-ui/icons";
 import { MdOutlineEmail } from "react-icons/md";
+import ImageSelector from "../../src/components/imageSelector";
 
 const Profile = () => {
   const userData = useSelector((store) => store.AuthReducer.user);
@@ -40,7 +42,7 @@ const Profile = () => {
   const [preview, setPreview] = useState("");
 
   const imageChange = (e) => {
-    console.log(e);
+    // setPreview(URL.createObjectURL(e.target.files[0]));
     if (e.target.files && e.target.files.length !== 0) {
       setPreview(URL.createObjectURL(e.target.files[0]));
     } else {
@@ -48,7 +50,7 @@ const Profile = () => {
     }
   };
   const removeSelectedImage = () => {
-    setPreview("");
+    setPreview(picture);
   };
 
   const [name, setName] = useState(userData?.name || "");
@@ -117,13 +119,10 @@ const Profile = () => {
           size="2xl"
           borderWidth={3}
           zIndex={9}
-          src={
-            picture
-              ? picture
-              : "https://novoresume.com/file/picture/user/1666891932864/2823f710-40b4-11ed-bb5c-375ab1d0bdc6/photo.jpeg"
-          }
+          src={picture ? picture : preview}
           className={`${Style.avatar}`}
         />
+        {/* <ImageSelector className={`${Style.avatar}`} /> */}
       </VStack>
       {/* =============== Account Type =============== */}
       <Box bg="#1f262e" py={"60px"} mt={"-60px"} className={`${Style.rotate}`}>
@@ -197,20 +196,22 @@ const Profile = () => {
                     11 extra features at your disposal.
                   </Text>
                 </Box>
-                <Button
-                  bg="#00C8AA"
-                  size="lg"
-                  position={{ base: "static", md: "absolute" }}
-                  right={4}
-                  borderRadius="20px"
-                  h={"40px"}
-                  color={"#fff"}
-                  fontSize={{ sm: "14px", md: "16px" }}
-                  className={`${Style.btn}`}
-                  _hover={{ bg: "#00C8AA" }}
-                >
-                  Upgrade Now
-                </Button>
+                <Link href={"#"}>
+                  <Button
+                    bg="#00C8AA"
+                    size="lg"
+                    position={{ base: "static", md: "absolute" }}
+                    right={4}
+                    borderRadius="20px"
+                    h={"40px"}
+                    color={"#fff"}
+                    fontSize={{ sm: "14px", md: "16px" }}
+                    className={`${Style.btn}`}
+                    _hover={{ bg: "#00C8AA" }}
+                  >
+                    Upgrade Now
+                  </Button>
+                </Link>
               </Stack>
             </HStack>
             {/* _______________ Tab Section _______________ */}
@@ -244,7 +245,7 @@ const Profile = () => {
                         cursor: "pointer",
                       }}
                     >
-                      Edit
+                      <Link href={"#"}>Edit</Link>
                     </Text>
                   </HStack>
                   <Stack direction={{ base: "column", md: "row" }} mt={2}>
@@ -293,17 +294,21 @@ const Profile = () => {
                       Google Account
                     </Text>
                   ) : (
-                    <Text
-                      fontSize={15}
-                      fontWeight="500"
-                      color={"#00c8aa"}
-                      _hover={{
-                        textDecoration: "underline",
-                        cursor: "pointer",
-                      }}
-                    >
-                      Request Password Change
-                    </Text>
+                    <>
+                      <Link href={"#"}>
+                        <Text
+                          fontSize={15}
+                          fontWeight="500"
+                          color={"#00c8aa"}
+                          _hover={{
+                            textDecoration: "underline",
+                            cursor: "pointer",
+                          }}
+                        >
+                          Request Password Change
+                        </Text>
+                      </Link>
+                    </>
                   )}
                 </Box>
               </Stack>
@@ -329,17 +334,19 @@ const Profile = () => {
                     >
                       Email
                     </Text>
-                    <Text
-                      fontSize={15}
-                      fontWeight="600"
-                      color={"#00c8aa"}
-                      _hover={{
-                        textDecoration: "underline",
-                        cursor: "pointer",
-                      }}
-                    >
-                      Change
-                    </Text>
+                    <Link href={"#"}>
+                      <Text
+                        fontSize={15}
+                        fontWeight="600"
+                        color={"#00c8aa"}
+                        _hover={{
+                          textDecoration: "underline",
+                          cursor: "pointer",
+                        }}
+                      >
+                        Change
+                      </Text>
+                    </Link>
                   </HStack>
 
                   <Box mt={2}>
@@ -394,30 +401,42 @@ const Profile = () => {
                 Personal Data
               </Text>
             </HStack>
-            <Text color="#fff" fontSize={{ base: 11, md: 14 }} fontWeight="400">
+            <Link href={"#"}>
               <Text
                 as={"span"}
                 _hover={{
                   cursor: "pointer",
                 }}
+                fontSize={{ base: 11, md: 14 }}
+                fontWeight="400"
                 className={`${Style.spn}`}
+                mr={2}
               >
                 Here
-              </Text>{" "}
+              </Text>
+            </Link>
+            <Text
+              as={"span"}
+              color="#fff"
+              fontSize={{ base: 11, md: 14 }}
+              fontWeight="400"
+            >
               you can get a detailed view of your personal data.
             </Text>
             {/* =============== Leave Section =============== */}
             <HStack mt={4}>
               <TbArrowBack size={24} color="#fff" />
-              <Text
-                fontSize={{ base: 16, md: 20 }}
-                fontWeight="700"
-                color="#fff"
-                letterSpacing={"0.5px"}
-                _hover={{ color: "#00c8aa", cursor: "pointer" }}
-              >
-                Want to leave us ?
-              </Text>
+              <Link href={"#"}>
+                <Text
+                  fontSize={{ base: 16, md: 20 }}
+                  fontWeight="700"
+                  color="#fff"
+                  letterSpacing={"0.5px"}
+                  _hover={{ color: "#00c8aa", cursor: "pointer" }}
+                >
+                  Want to leave us ?
+                </Text>
+              </Link>
             </HStack>
           </Box>
         </Box>
