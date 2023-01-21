@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Box, Text, Button, Image, calc } from "@chakra-ui/react";
+import { Box, Text, Button, Image, calc, Link } from "@chakra-ui/react";
 import YouTube from "react-youtube";
-import Link from "next/link";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import Fade from "react-reveal/Fade";
 
@@ -156,15 +155,22 @@ const BlogPost = () => {
                   </Box>
                 </Box>
               </Box>
-              <Box
-                className="post-banner-cta__button"
-                display={"flex"}
-                justifyContent={"center"}
-                alignItems={"center"}
+              <Link
+                href={'/templates'}
+                _hover={{
+                  textDecoration: 'none',
+                }}
               >
-                <Text mr={4}>Create my resume</Text>
-                <ArrowForwardIcon color={"white"} h={5} w={5} />
-              </Box>
+                <Box
+                  className="post-banner-cta__button"
+                  display={"flex"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                >
+                  <Text mr={4}>Create my Resume</Text>
+                  <ArrowForwardIcon color={"white"} h={5} w={5} />
+                </Box>
+              </Link>
             </Box>
           </Box>
 
