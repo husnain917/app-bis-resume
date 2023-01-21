@@ -29,9 +29,9 @@ const ChangeTempBtn = ({
   return (
     <Box
       position={{ base: "relative", lg: "fixed" }}
-      top={{ base: "100px", lg: "100px" }}
+      top={{ base: "96px", lg: "96px" }}
       mb={"40px"}
-      left={"10px"}
+      left={"40px"}
       zIndex="999"
       cursor={"pointer"}
       display={"flex"}
@@ -40,7 +40,7 @@ const ChangeTempBtn = ({
     >
       <Box
         onClick={onPress}
-        bg={"#313b47"}
+        bg={"#006772"}
         display={"flex"}
         flexDirection={"column"}
         alignItems={"center"}

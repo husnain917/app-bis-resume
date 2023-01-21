@@ -46,7 +46,7 @@ const TemplateDetail = () => {
     CUSTOM_TEMP_DATA?.find((item) => item.id === template_id);
 
   return (
-    <Box overflow={"auto"}>
+    <Box>
       <TempLayout
         work={selected?.sections?.work}
         education={selected?.sections?.education}
@@ -87,7 +87,7 @@ const TemplateDetail = () => {
             <Box
               className={styles.sideBarTempContainer}
               margin={"6% 0% 0% 0%"}
-              ml={"74px"}
+              ml={"105px"}
               borderRadius={6}
               border={"1px solid #313b47"}
             >
