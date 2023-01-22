@@ -20,12 +20,12 @@ const TryResume = () => {
         >
           <Box
             width={["100%", "100%", "45%", "57%", "49%"]}
-            marginBottom={["16px"]}
+            marginBottom={["24px"]}
             position="relative"
             marginRight={["0", "0", "0", "16px", "32px"]}
             flexShrink={["0", "0", "", "", "0"]}
             minWidth={["50%", "", "", "0%", "0%"]}
-            height={["320px"]}
+            height={["420px"]}
           >
             <Image
               src="./sampleTemplate.png"
@@ -73,9 +73,10 @@ const TryResume = () => {
                 fontSize={["16px", "16px", "16px", "16px", "16px"]}
                 lineHeight={"24px"}
               >
-                Say goodbye to writers block and formatting struggles. In just a few simple steps,
-                 you can have a polished, professional resume ready to impress employers. 
-                Upgrade your job search today with our powerful resume tool.
+                Say goodbye to writers block and formatting struggles. In just a
+                few simple steps, you can have a polished, professional resume
+                ready to impress employers. Upgrade your job search today with
+                our powerful resume tool.
               </Text>{" "}
             </Box>
             <Box display={"flex"} alignItems={"center"}>
@@ -83,7 +84,7 @@ const TryResume = () => {
                 <Link
                   href="/templates"
                   _hover={{
-                    textDecoration: 'none'
+                    textDecoration: "none",
                   }}
                 >
                   <CommonButton
@@ -98,6 +99,7 @@ const TryResume = () => {
                   />
                 </Link>
               </Box>
+
               <Button fontSize={["14x", "14px", "16px", "16px", "16px"]}>
                 Resume Examples
               </Button>

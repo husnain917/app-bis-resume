@@ -132,8 +132,9 @@ const CommonComponent = ({ data }) => {
                   padding={"5"}
                   borderRadius={"10"}
                   _hover={{
-                    background: "white",
+                    // background: "white",
                     cursor: "pointer",
+                    // transform: scale(0.8),
                   }}
                   onClick={() => {}}
                 >
@@ -165,7 +166,7 @@ const CommonComponent = ({ data }) => {
                   padding={"5"}
                   borderRadius={"10"}
                   _hover={{
-                    background: "white",
+                    // background: "white",
                     cursor: "pointer",
                   }}
                   onClick={() => {}}
@@ -201,7 +202,7 @@ const CommonComponent = ({ data }) => {
                   padding={"5"}
                   borderRadius={"10"}
                   _hover={{
-                    background: "white",
+                    // background: "white",
                     cursor: "pointer",
                   }}
                   onClick={() => {}}

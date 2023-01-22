@@ -18,14 +18,15 @@ const WritingGuides = () => {
         >
           {" "}
           <Box
-            fontSize={["24px", "24px", "36px", "38px", "38px"]}
+            fontSize={["24px", "24px", "34px", "34px", "34px"]}
             lineHeight={["34px", "34px", "54px", "40px", "40px"]}
             marginBottom={"12px"}
-            maxW={["100%", "100%", "95%", "80%", "80%"]}
+            maxW={["100%", "100%", "95%", "80%", "100%"]}
             className={["sub-heading"]}
             textAlign={["center", "center", "center", "start", "start"]}
           >
-            Unlock the full potential of your job search with our vast collection of over 350 professionally written resume examples
+            Unlock the full potential of your job search with our vast
+            collection of over 350 professionally written resume examples
           </Box>
           <Box
             fontSize={["16px", "16px", "20px", "20px", "20px"]}
@@ -38,21 +39,23 @@ const WritingGuides = () => {
               "24px 0px",
               "24px 0px",
             ]}
-            maxW={["100%", "100%", "95%", "80%", "80%"]}
+            maxW={["100%", "100%", "95%", "90%", "90%"]}
             className={"medium-text"}
             textAlign={["center", "center", "center", "start", "start"]}
           >
-           With a wide range of industries and job titles, our expertly curated resume 
-           samples provide the guidance and inspiration you need to create a winning resume.
-            From entry-level to executive, our user-friendly resume builder and comprehensive 
-            writing guides make it easy to build a resume that stands out. Take the first step 
-            towards your dream job today with our free resume examples and templates.
+            With a wide range of industries and job titles, our expertly curated
+            resume samples provide the guidance and inspiration you need to
+            create a winning resume. From entry-level to executive, our
+            user-friendly resume builder and comprehensive writing guides make
+            it easy to build a resume that stands out. Take the first step
+            towards your dream job today with our free resume examples and
+            templates.
           </Box>
           <Box textAlign={["center", "center", "center", "start", "start"]}>
             <Link
               href="/templates"
               _hover={{
-                textDecoration: 'none',
+                textDecoration: "none",
               }}
             >
               <CommonButton
