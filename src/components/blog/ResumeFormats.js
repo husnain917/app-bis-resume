@@ -13,7 +13,7 @@ export default function ResumeFormats() {
             {/* blogs */}
             <Box display={"flex"} alignItems={"center"}>
               <Link
-                href="/blog/resume-formats"
+                href="/blog"
                 color={"#fff"}
                 fontSize={["1.2em", "1.2em", "1.2em", "1.2em"]}
                 _hover={{
