@@ -290,6 +290,11 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer.isUserLoggedIn
+  );
+  const fontSize = isUserLoggedIn ? "12px" : "14px";
+  const fontSizes = isUserLoggedIn ? ["14px", "16px"] : ["15px", "17px"];
   return (
     <Stack direction={"row"} alignItems={"center"} spacing={{ xl: 2, lg: 2 }}>
       {NAV_ITEMS?.map((navItem) => {
@@ -305,7 +310,7 @@ const DesktopNav = () => {
                       key={navItem.label}
                       color={linkColor}
                       // border={"1px solid black"}
-                      fontSize={"14px"}
+                      fontSize={fontSize}
                       _hover={{
                         textDecoration: "none",
                         color: linkHoverColor,
@@ -324,7 +329,7 @@ const DesktopNav = () => {
                       color={linkColor}
                       // border={"1px solid black"}
 
-                      fontSize={["15px", "17px"]}
+                      fontSize={fontSizes}
                       _hover={{
                         textDecoration: "none",
                         color: linkHoverColor,

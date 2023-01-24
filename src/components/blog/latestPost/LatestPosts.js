@@ -21,6 +21,7 @@ export default function LatestPosts({ blogs }) {
     );
   });
   const filteredBlogs = filterBlog?.filter((item) => item?.slug !== "test");
+  console.log("FILTERED BLOGS", filteredBlogs);
 
   return (
     <div className="mainContainer">
@@ -84,7 +85,17 @@ export default function LatestPosts({ blogs }) {
         ml={["", "", "5%", "5%", "5%", "5%"]}
         spacing={[0, 0, 6, 6, 6]}
       >
-        {PostData?.map((item, index) => {
+        {filteredBlogs?.map((item, index) => {
+          const {
+            author,
+            category,
+            description,
+            body,
+            featuredImage,
+            publishDate,
+            slug,
+            title,
+          } = item.fields;
           return (
             <Box key={index}>
               <Box
@@ -105,11 +116,11 @@ export default function LatestPosts({ blogs }) {
                     layout="fill"
                     objectFit="cover"
                     alt="image"
-                    src={item.im}
+                    src={"https:" + featuredImage.fields.file.url}
                   />
                 </Box>
                 <Text as={"h3"} className={`${style.Cardtitle} subTitle`}>
-                  {item.text}
+                  {title}
                 </Text>
                 <Box
                   className={style.dateHeading}
@@ -131,16 +142,16 @@ export default function LatestPosts({ blogs }) {
                   </Text>
                 </Box>
                 <p className={`${style.cardHeadingFeat} paragraph`}>
-                  {item.des}
+                  {description}
                 </p>
               </Box>
               <Box>
-                <Box m="3% 1%">
+                {/* <Box m="3% 1%">
                   <Text m="2% 0%" className={"subTitle"}>
                     Share Within your Network
                   </Text>
                   <SocialIcons />
-                </Box>
+                </Box> */}
               </Box>
             </Box>
           );
