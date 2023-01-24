@@ -741,6 +741,9 @@ export const MobileNavItem = ({ label, children, href }) => {
 };
 
 function RightBar({ setIsModalOpen, ismodalOpen }) {
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer.isUserLoggedIn
+  );
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 
@@ -776,36 +779,40 @@ function RightBar({ setIsModalOpen, ismodalOpen }) {
             {Login_Buttons?.map((items, index) => {
               return (
                 <>
-                  <Box
-                    key={items.label}
-                    // display={{ base: "inline-flex" }}
-                    // style={{
-                    //   border: "1px solid #e0e2e8",
-                    //   boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
-                    //   borderRadius: "0.2rem",
-                    //   width: "110px",
-                    // }}
-                    // cursor={"pointer"}
-                    // bg={
-                    //   items?.label === "Register"
-                    //     ? "#006772"
-                    //     : items?.label === "Login"
-                    //     ? "#006772"
-                    //     : ""
-                    // }
-                    // justifyContent={"center"}
-                    // padding={"10px 0px"}
-                    // textTransform={"uppercase"}
-                    // _hover={{
-                    //   textDecoration: "none",
-                    //   backgroundColor: "red",
-                    //   color: "white",
-                    // }}
-                    display={"flex"}
-                  >
-                    {items?.label === "Register" ? (
-                      <>
-                        {/* <Link
+                  {isUserLoggedIn ? (
+                    ""
+                  ) : (
+                    <>
+                      <Box
+                        key={items.label}
+                        // display={{ base: "inline-flex" }}
+                        // style={{
+                        //   border: "1px solid #e0e2e8",
+                        //   boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
+                        //   borderRadius: "0.2rem",
+                        //   width: "110px",
+                        // }}
+                        // cursor={"pointer"}
+                        // bg={
+                        //   items?.label === "Register"
+                        //     ? "#006772"
+                        //     : items?.label === "Login"
+                        //     ? "#006772"
+                        //     : ""
+                        // }
+                        // justifyContent={"center"}
+                        // padding={"10px 0px"}
+                        // textTransform={"uppercase"}
+                        // _hover={{
+                        //   textDecoration: "none",
+                        //   backgroundColor: "red",
+                        //   color: "white",
+                        // }}
+                        display={"flex"}
+                      >
+                        {items?.label === "Register" ? (
+                          <>
+                            {/* <Link
                           // href={items?.href ?? "#"}
                           fontWeight={650}
                           key={items.label}
@@ -818,21 +825,21 @@ function RightBar({ setIsModalOpen, ismodalOpen }) {
                         >
                           {items.label}
                         </Link> */}
-                        <CommonButton
-                          width={"255px"}
-                          margin={"10px 0px"}
-                          fontWeight={650}
-                          key={items.label}
-                          color={"#fdfffc"}
-                          title={items.label}
-                          onClick={() => setIsModalOpen()}
-                          backgroundColor={"#006772"}
-                        />
-                      </>
-                    ) : items.label === "Login" ? (
-                      <>
-                        <Box>
-                          {/* <Link
+                            <CommonButton
+                              width={"255px"}
+                              margin={"10px 0px"}
+                              fontWeight={650}
+                              key={items.label}
+                              color={"#fdfffc"}
+                              title={items.label}
+                              onClick={() => setIsModalOpen()}
+                              backgroundColor={"#006772"}
+                            />
+                          </>
+                        ) : items.label === "Login" ? (
+                          <>
+                            <Box>
+                              {/* <Link
                           // href={items?.href ?? "#"}
                           fontWeight={650}
                           color={"#fdfffc"}
@@ -846,23 +853,25 @@ function RightBar({ setIsModalOpen, ismodalOpen }) {
                           {items.label}
                         </Link> */}
 
-                          <CommonButton
-                            margin={"10px 0px"}
-                            width={"250px"}
-                            fontWeight={650}
-                            key={items.label}
-                            color={"#fdfffc"}
-                            title={items.label}
-                            onClick={() => setIsModalOpen()}
-                            backgroundColor={"#006772"}
-                          />
-                          <Divider size={10} />
-                        </Box>
-                      </>
-                    ) : (
-                      <></>
-                    )}
-                  </Box>
+                              <CommonButton
+                                margin={"10px 0px"}
+                                width={"250px"}
+                                fontWeight={650}
+                                key={items.label}
+                                color={"#fdfffc"}
+                                title={items.label}
+                                onClick={() => setIsModalOpen()}
+                                backgroundColor={"#006772"}
+                              />
+                              <Divider size={10} />
+                            </Box>
+                          </>
+                        ) : (
+                          <></>
+                        )}
+                      </Box>
+                    </>
+                  )}
                 </>
               );
             })}
