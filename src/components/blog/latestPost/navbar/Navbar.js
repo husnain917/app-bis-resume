@@ -293,7 +293,7 @@ const DesktopNav = () => {
   const isUserLoggedIn = useSelector(
     (state) => state.AuthReducer.isUserLoggedIn
   );
-  const fontSize = isUserLoggedIn ? "12px" : "14px";
+  const fontSize = isUserLoggedIn ? "12.5px" : "14px";
   const fontSizes = isUserLoggedIn ? ["14px", "16px"] : ["15px", "17px"];
   return (
     <Stack direction={"row"} alignItems={"center"} spacing={{ xl: 2, lg: 2 }}>
@@ -302,7 +302,7 @@ const DesktopNav = () => {
           <Box key={navItem.label}>
             <Popover trigger={"hover"} placement={"bottom-start"}>
               <PopoverTrigger position={"absolute"}>
-                {width < 1180 ? (
+                {width < 1200 ? (
                   <>
                     <Link
                       href={navItem?.href ?? "#"}
