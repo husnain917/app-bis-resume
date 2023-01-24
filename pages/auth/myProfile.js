@@ -53,9 +53,6 @@ const Profile = () => {
       setPreview("");
     }
   };
-  const removeSelectedImage = () => {
-    setChangeImage(!true);
-  };
 
   const [name, setName] = useState(userData?.name || "");
   const [email, setEmail] = useState(userData?.email || "");
@@ -67,6 +64,9 @@ const Profile = () => {
   const [verified_email, setVerifiedEmail] = useState(
     userData?.verified_email || ""
   );
+  const removeSelectedImage = () => {
+    setPicture("");
+  };
 
   return (
     <>
@@ -129,7 +129,7 @@ const Profile = () => {
           className={`${Style.avatar}`}
         /> */}
         <ProfileImage
-          // image={picture ? picture : preview}
+          image={picture ? picture : preview}
           className={`${Style.avatar}`}
           borderWidth={"1px"}
           minWidth={"120px"}

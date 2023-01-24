@@ -20,6 +20,7 @@ const ProfileImage = ({
   minWidth,
   className,
   changeImage,
+  image,
 }) => {
   useEffect(() => {
     console.log("Height", height, "Width", width);
@@ -37,11 +38,14 @@ const ProfileImage = ({
   const [aspect, setAspect] = useState(16 / 9);
   const [src, setsrc] = useState();
   const dispatch = useDispatch();
-  useEffect(() => {
-    setPicture("/uploadpic1.png");
-    setsrc("/uploadpic1.png");
-    console.log("changeImage in UseEffect", changeImage);
-  }, [changeImage]);
+  if ((changeImage = false)) {
+    setPicture("");
+  }
+  // useEffect(() => {
+  //   setPicture("/uploadpic1.png");
+  //   setsrc("/uploadpic1.png");
+  //   console.log("changeImage in UseEffect", changeImage);
+  // }, [changeImage]);
   const handleImageUpload = (e) => {
     setsrc(URL.createObjectURL(e.target.files[0]));
     setisOpen(true);
@@ -92,7 +96,8 @@ const ProfileImage = ({
 
             <Box onClick={() => imageUploader.current.click()}>
               <Image
-                src={picture ? picture : "/uploadpic1.png"}
+                // src={picture ? picture : "/uploadpic1.png"}
+                src={image}
                 background={"white"}
                 ref={uploadedImage}
                 alt="will load soon"
