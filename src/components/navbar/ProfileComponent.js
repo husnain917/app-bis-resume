@@ -61,18 +61,18 @@ export default function ProfileComponent() {
           _hover={{
             backgroundColor: "white",
           }}
-          // _after={{
-          //   content: '" "',
-          //   display: "block",
-          //   top: "-1rem",
-          //   left: "6rem",
-          //   position: "absolute",
-          //   width: "2rem",
-          //   height: "2rem",
-          //   transform: "rotate(-45deg)",
-          //   backgroundColor: "#FFF",
-          //   boxShadow: "0 1px 5px 0 rgb(0 0 0 / 25%)",
-          // }}
+          _after={{
+            content: '" "',
+            display: "block",
+            top: "-1rem",
+            left: "6rem",
+            position: "absolute",
+            width: "2rem",
+            height: "2rem",
+            transform: "rotate(-45deg)",
+            backgroundColor: "#FFF",
+            boxShadow: "0 1px 5px 0 rgb(0 0 0 / 25%)",
+          }}
         >
           <MenuItem
             minH="30px"
@@ -93,7 +93,7 @@ export default function ProfileComponent() {
                 // pt="5px"
                 // pb="5px"
               >
-                Account Page
+                My Profile
               </Text>
             </Link>
           </MenuItem>

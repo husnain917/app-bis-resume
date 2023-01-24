@@ -29,9 +29,13 @@ import Link from "next/link";
 import { EmailIcon } from "@chakra-ui/icons";
 import { MdOutlineEmail } from "react-icons/md";
 import ImageSelector from "../../src/components/imageSelector";
+import ImageCrop from "../../src/components/Crop/ImageCrop";
+import ProfileImage from "./useProfileImage";
+import { useEffect } from "react";
 
 const Profile = () => {
   const userData = useSelector((store) => store.AuthReducer.user);
+
   const isUserLoggedIn = useSelector(
     (store) => store.AuthReducer.isUserLoggedIn
   );
@@ -50,7 +54,7 @@ const Profile = () => {
     }
   };
   const removeSelectedImage = () => {
-    setPreview(picture);
+    setChangeImage(!true);
   };
 
   const [name, setName] = useState(userData?.name || "");
@@ -58,6 +62,8 @@ const Profile = () => {
   const [picture, setPicture] = useState(userData?.picture || "");
   const [family_name, setFamilyName] = useState(userData?.family_name || "");
   const [given_name, setGivenName] = useState(userData?.given_name || "");
+  const [changeImage, setChangeImage] = useState(true);
+  console.log("CHANGE IMAGE", changeImage);
   const [verified_email, setVerifiedEmail] = useState(
     userData?.verified_email || ""
   );
@@ -115,14 +121,23 @@ const Profile = () => {
           </Box>
         </Box>
         {/* =============== Avatar Section =============== */}
-        <Avatar
+        {/* <Avatar
           size="2xl"
           borderWidth={3}
           zIndex={9}
           src={picture ? picture : preview}
           className={`${Style.avatar}`}
+        /> */}
+        <ProfileImage
+          // image={picture ? picture : preview}
+          className={`${Style.avatar}`}
+          borderWidth={"1px"}
+          minWidth={"120px"}
+          minHeight={"120px"}
+          maxWidth={"120px"}
+          maxHeight={"120px"}
+          changeImage={changeImage}
         />
-        {/* <ImageSelector className={`${Style.avatar}`} /> */}
       </VStack>
       {/* =============== Account Type =============== */}
       <Box bg="#1f262e" py={"60px"} mt={"-60px"} className={`${Style.rotate}`}>

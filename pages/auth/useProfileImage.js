@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Box, Image, Button } from "@chakra-ui/react";
-import ImageCrop from "./Crop/ImageCrop";
-import { canvasPreview } from "./canvasPreview";
+import { Box, Image } from "@chakra-ui/react";
+import ImageCrop from "../../src/components/Crop/ImageCrop";
+import { canvasPreview } from "../../src/components/canvasPreview";
 import { useDispatch, useSelector } from "react-redux";
 import { onBlurField } from "../../store/actions/builderAction";
-const ImageSelector = ({
+import { EmailIcon } from "@chakra-ui/icons";
+const ProfileImage = ({
   height,
   width,
   marginTop,
@@ -17,15 +18,18 @@ const ImageSelector = ({
   maxWidth,
   minHeight,
   minWidth,
+  className,
+  changeImage,
 }) => {
   useEffect(() => {
     console.log("Height", height, "Width", width);
   }, [height, width]);
-  let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  console.log("resumeData", resumeData?.profile?.profileImage);
+  const userData = useSelector((store) => store.AuthReducer.user);
+  console.log("resumeData", userData?.Image);
   const [isOpen, setisOpen] = useState(false);
   const uploadedImage = React.useRef(null);
   const imageUploader = React.useRef(null);
+  const [picture, setPicture] = useState(userData?.picture || "");
   const [scale, setScale] = useState(1);
   const [rotate, setRotate] = useState(0);
   const imgRef = useRef(null);
@@ -33,10 +37,18 @@ const ImageSelector = ({
   const [aspect, setAspect] = useState(16 / 9);
   const [src, setsrc] = useState();
   const dispatch = useDispatch();
+  useEffect(() => {
+    setPicture("/uploadpic1.png");
+    setsrc("/uploadpic1.png");
+    console.log("changeImage in UseEffect", changeImage);
+  }, [changeImage]);
   const handleImageUpload = (e) => {
     setsrc(URL.createObjectURL(e.target.files[0]));
     setisOpen(true);
     return;
+  };
+  const removeSelectedImage = () => {
+    setPreview(picture);
   };
 
   const onDone = async () => {
@@ -80,11 +92,7 @@ const ImageSelector = ({
 
             <Box onClick={() => imageUploader.current.click()}>
               <Image
-                src={
-                  resumeData?.profile?.profileImage
-                    ? resumeData?.profile?.profileImage
-                    : "/uploadpic1.png"
-                }
+                src={picture ? picture : "/uploadpic1.png"}
                 background={"white"}
                 ref={uploadedImage}
                 alt="will load soon"
@@ -103,6 +111,7 @@ const ImageSelector = ({
                   }`,
                   transition: "1s border",
                 }}
+                className={className}
               />
             </Box>
           </Box>
@@ -112,4 +121,4 @@ const ImageSelector = ({
   );
 };
 
-export default ImageSelector;
+export default ProfileImage;
