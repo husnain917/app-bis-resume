@@ -56,6 +56,7 @@
     "react-to-print": "^2.14.10",
     "react-toastify": "^9.1.1",
     "react-youtube": "^10.1.0",
+    "read-more-react": "^1.0.10",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",

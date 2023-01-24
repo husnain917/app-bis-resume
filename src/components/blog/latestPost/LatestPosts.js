@@ -8,6 +8,7 @@ import Link from "next/link";
 import { SimpleGrid, Box, Container, Text } from "@chakra-ui/react";
 import SocialIcons from "../../Social/SocialIcons";
 import { PostData } from "./PostData";
+import ReadMoreReact from "read-more-react";
 
 export default function LatestPosts({ blogs }) {
   console.log("blogs", blogs);
@@ -95,7 +96,11 @@ export default function LatestPosts({ blogs }) {
             publishDate,
             slug,
             title,
+            readingTime,
           } = item.fields;
+          const minimumLength = 20;
+          const idealLength = 40;
+          const maxLength = 60;
           return (
             <Box key={index}>
               <Box
@@ -138,12 +143,23 @@ export default function LatestPosts({ blogs }) {
                     height="15px"
                   />
                   <Text as={"span"} className={"xsmall-heading"} ml={"3px"}>
-                    25 min read
+                    {readingTime} min read
                   </Text>
                 </Box>
-                <p className={`${style.cardHeadingFeat} paragraph`}>
-                  {description}
-                </p>
+                <Text
+                  as={"p"}
+                  className={`${style.cardHeadingFeat} paragraph`}
+                  padding={"4px"}
+                >
+                  {/* <ReadMoreReact
+                    text={description}
+                    min={minimumLength}
+                    ideal={idealLength}
+                    max={maxLength}
+                    readMoreText={"Read More"}
+                  /> */}
+                  <ReadMore text={description} />
+                </Text>
               </Box>
               <Box>
                 {/* <Box m="3% 1%">
@@ -246,3 +262,25 @@ export default function LatestPosts({ blogs }) {
     </div>
   );
 }
+
+const ReadMore = ({ text }) => {
+  const [isReadMore, setIsReadMore] = useState(true);
+  const toggleReadMore = () => {
+    setIsReadMore(!isReadMore);
+  };
+  return (
+    <Text as={"p"} className="text">
+      {isReadMore ? text.slice(0, 100) : text}
+      <Text
+        as={"span"}
+        onClick={toggleReadMore}
+        color={"blue"}
+        _hover={{
+          cursor: "pointer",
+        }}
+      >
+        {isReadMore ? "...read more" : " show less"}
+      </Text>
+    </Text>
+  );
+};
