@@ -204,9 +204,7 @@ const BlogPost = () => {
                     cursor="pointer"
                   >
                     <Link href="/ComingSoon" mr={2} cursor="pointer">
-                      <a href="/ComingSoon" cursor="pointer">
-                        Cover letter examples{" "}
-                      </a>
+                      <a cursor="pointer">Cover letter examples </a>
                     </Link>
                     <ArrowForwardIcon w={6} h={6} />
                   </Box>
