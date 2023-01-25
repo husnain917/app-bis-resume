@@ -4,8 +4,10 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import SearchIcon from "../../../../public/searchIcon.webp";
 
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, Box } from "@chakra-ui/react";
 import Image from "next/image";
+import { AiFillGithub, AiOutlineInstagram } from "react-icons/ai";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 export default function BlogsDetail({ blogDetail, allBlogs }) {
   const {
     author,
@@ -33,28 +35,70 @@ export default function BlogsDetail({ blogDetail, allBlogs }) {
 
   return (
     <div>
-      <div className={style.mainContainer}>
-        <Grid gap={4} templateColumns="repeat(4, 1fr)">
-          <GridItem colSpan={3}>
-            <div className={style.blogData}>
-              <h1 className={style.blogTitle}>{title}</h1>
-              <br />
-              <br />
+      <Box>
+        <Image
+          src={"https:" + featuredImage.fields.file.url}
+          style={{
+            marginBottom: "10px",
+          }}
+          alt="will load soon"
+          // layout="fill"
+          height={"600px"}
+          width={"1450px"}
+        />
+      </Box>
 
-              <Image
+      <div className={style.mainContainer}>
+        {/* <Box position={"sticky"}> Ahsan Ali</Box> */}
+        {/* <Box>
+          <Image
+            src={"https:" + featuredImage.fields.file.url}
+            style={{
+              marginBottom: "50px",
+            }}
+            alt="will load soon"
+            layout="fill"
+          />
+        </Box> */}
+        <Grid
+          gap={4}
+          templateColumns="repeat(1fr 3fr 1fr)"
+          templateAreas={[`"leftbar textArea sidebar"`]}
+          gridTemplateRows={"1,1fr"}
+          position={"relative"}
+        >
+          {/* <Box position={"sticky"}> Ahsan Ali</Box> */}
+          {/* <Image
                 src={"https:" + featuredImage.fields.file.url}
                 style={{
                   marginBottom: "50px",
                 }}
                 alt="will load soon"
-              />
+                layout="fill"
+              /> */}
+          <GridItem colSpan={3} area={"text"}>
+            {/* <Box position={"sticky"}> Ahsan Ali</Box> */}
+            <div className={style.blogData}>
+              <h1 className={style.blogTitle}>{title}</h1>
+              <br />
+              <br />
+
+              {/* <Image
+                src={"https:" + featuredImage.fields.file.url}
+                style={{
+                  marginBottom: "50px",
+                }}
+                alt="will load soon"
+                layout="fill"
+              /> */}
+              {/* <Box> Ahsan Ali</Box> */}
               {/* <ReactMarkdown>{markdown}</ReactMarkdown> */}
               <div className={style.bodyContent}>
                 {documentToReactComponents(body)}
               </div>
             </div>
           </GridItem>
-          <GridItem colSpan={1}>
+          <GridItem colSpan={1} area={"rightbar"}>
             <div
               className={style.fixed}
               // className={scrollY > 367 && scrollY < height - 180 ? style.fixed : scrollY > height - 180 && scrollY > 367 ? style.fixed : ''}
@@ -94,6 +138,8 @@ export default function BlogsDetail({ blogDetail, allBlogs }) {
                                 className={style.postsImage}
                                 src={item?.thumbnail}
                                 alt="Image1"
+                                width="30px"
+                                height="30px"
                               />
                             </div>
                             <div className={style.imageText}>
@@ -111,6 +157,61 @@ export default function BlogsDetail({ blogDetail, allBlogs }) {
                   )}
                 </div>
               </div>
+            </div>
+          </GridItem>
+          <GridItem
+            area={"leftbar"}
+            position={"sticky"}
+            height={"50px"}
+            width={"50px"}
+          >
+            <div
+              className={style.iconsMainFix}
+
+              // className={scrollY > 367 && scrollY < height - 180 ? style.iconsMainFix : scrollY > height - 180 && scrollY > 367 ? style.iconsMainFix : ''}
+            >
+              <ul className={style.IconsContainer}>
+                <li>
+                  <a
+                    className={style.iconMain}
+                    href="https://www.github.com/techloset"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <AiFillGithub className={style.icon} />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={style.iconMain}
+                    href="https://www.instagram.com/techlosetsolutions"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <AiOutlineInstagram className={style.icon} />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={style.iconMain}
+                    href="https://www.facebook.com/techloset"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaFacebookF className={style.icon} />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className={style.iconMain}
+                    href="https://www.linkedin.com/company/techloset"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedinIn className={style.icon} />
+                  </a>
+                </li>
+              </ul>
             </div>
           </GridItem>
         </Grid>

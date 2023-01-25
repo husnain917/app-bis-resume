@@ -282,7 +282,7 @@
 .IconsContainer li a {
   width: 35px;
   height: 35px;
-  background-color: var(--main-color);
+  background-color: #f05c2f;
   display: block;
   border-radius: 50%;
   position: relative;
