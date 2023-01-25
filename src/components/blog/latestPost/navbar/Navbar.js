@@ -77,7 +77,7 @@ export default function Navbar() {
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
         minH={"80px"}
-        py={{ base: 2 }}
+        // py={{ base: 2 }}
         mx={["5px", "5px", "10px", "10px", "10px"]}
         align={"center"}
       >
@@ -92,8 +92,8 @@ export default function Navbar() {
               src="/Dark_Blue.svg"
               alt="Image Not Found"
               fill
-              height={"50px"}
-              width={"150px"}
+              height={"100px"}
+              width={"220px"}
             />
           </Link>
           {width < 1320 ? (
@@ -105,8 +105,8 @@ export default function Navbar() {
                   src="/career-blog.png"
                   alt="Image Not Found"
                   fill
-                  height={"26px"}
-                  width={"130px"}
+                  height={"35px"}
+                  width={"200px"}
                 />
               </Link>
             </>
@@ -294,7 +294,7 @@ const DesktopNav = () => {
     (state) => state.AuthReducer.isUserLoggedIn
   );
   const fontSize = isUserLoggedIn ? "12.5px" : "14px";
-  const fontSizes = isUserLoggedIn ? ["14px", "16px"] : ["15px", "17px"];
+  const fontSizes = isUserLoggedIn ? ["18px", "20px"] : ["15px", "17px"];
   return (
     <Stack direction={"row"} alignItems={"center"} spacing={{ xl: 2, lg: 2 }}>
       {NAV_ITEMS?.map((navItem) => {
@@ -304,40 +304,50 @@ const DesktopNav = () => {
               <PopoverTrigger position={"absolute"}>
                 {width < 1200 ? (
                   <>
-                    <Link
-                      href={navItem?.href ?? "#"}
-                      fontWeight={500}
-                      key={navItem.label}
-                      color={linkColor}
-                      // border={"1px solid black"}
-                      fontSize={fontSize}
-                      _hover={{
-                        textDecoration: "none",
-                        color: linkHoverColor,
-                      }}
-                      className="afterlink"
-                    >
-                      {navItem?.label}
-                    </Link>
+                    <Box margin={"0 10px 0 10px"}>
+                      <Link
+                        href={navItem?.href ?? "#"}
+                        fontWeight={500}
+                        key={navItem.label}
+                        color={linkColor}
+                        // border={"1px solid black"}
+                        fontSize={fontSize}
+                        _hover={{
+                          textDecoration: "none",
+                          color: linkHoverColor,
+                        }}
+                        onSelect={{
+                          color: "blue",
+                        }}
+                        className="afterlink"
+                      >
+                        {navItem?.label}
+                      </Link>
+                    </Box>
                   </>
                 ) : (
                   <>
-                    <Link
-                      href={navItem?.href ?? "#"}
-                      fontWeight={500}
-                      key={navItem.label}
-                      color={linkColor}
-                      // border={"1px solid black"}
+                    <Box margin={"0 10px 0 10px"}>
+                      <Link
+                        href={navItem?.href ?? "#"}
+                        fontWeight={500}
+                        key={navItem.label}
+                        color={linkColor}
+                        // border={"1px solid black"}
 
-                      fontSize={fontSizes}
-                      _hover={{
-                        textDecoration: "none",
-                        color: linkHoverColor,
-                      }}
-                      className="afterlink"
-                    >
-                      {navItem?.label}
-                    </Link>
+                        fontSize={fontSizes}
+                        _hover={{
+                          textDecoration: "none",
+                          color: linkHoverColor,
+                        }}
+                        className="afterlink"
+                        onSelect={{
+                          color: "blue",
+                        }}
+                      >
+                        {navItem?.label}
+                      </Link>
+                    </Box>
                   </>
                 )}
               </PopoverTrigger>

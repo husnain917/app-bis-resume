@@ -113,18 +113,18 @@ export const NAV_ITEMS = [
     label: "Blogs",
     href: "/blog",
   },
-  {
-    label: "Job Search",
-    href: "#",
-  },
-  {
-    label: "Job Interviews",
-    href: "#",
-  },
-  {
-    label: "Career Advice",
-    href: "#",
-  },
+  // {
+  //   label: "Job Search",
+  //   href: "#",
+  // },
+  // {
+  //   label: "Job Interviews",
+  //   href: "#",
+  // },
+  // {
+  //   label: "Career Advice",
+  //   href: "#",
+  // },
   {
     label: "About",
     href: "/about-us",

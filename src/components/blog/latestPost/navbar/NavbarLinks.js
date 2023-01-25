@@ -113,28 +113,40 @@ export const NAV_ITEMS = [
     label: "AllArticles",
     href: "#",
   },
+  // {
+  //   label: "Resume & CV Writing",
+  //   href: "#",
+  // },
+  // {
+  //   label: "Cover letter Writing",
+  //   href: "#",
+  // },
+  // {
+  //   label: "Examples",
+  //   href: "#",
+  // },
+  // {
+  //   label: "Personal Development",
+  //   href: "#",
+  // },
+  // {
+  //   label: "Inspiring Stories",
+  //   href: "#",
+  // },
+  // {
+  //   label: "Interviews & Find A Job",
+  //   href: "#",
+  // },
   {
-    label: "Resume & CV Writing",
+    label: "Job Search",
+    href: "/Jobs",
+  },
+  {
+    label: "Job Interviews",
     href: "#",
   },
   {
-    label: "Cover letter Writing",
-    href: "#",
-  },
-  {
-    label: "Examples",
-    href: "#",
-  },
-  {
-    label: "Personal Development",
-    href: "#",
-  },
-  {
-    label: "Inspiring Stories",
-    href: "#",
-  },
-  {
-    label: "Interviews & Find A Job",
+    label: "Career Advice",
     href: "#",
   },
 ];
