@@ -231,6 +231,7 @@ export default function LatestPosts({ blogs }) {
                 slug,
                 title,
                 featured,
+                readingTime,
               } = item.fields;
               return (
                 <>
@@ -270,7 +271,7 @@ export default function LatestPosts({ blogs }) {
                         height="15px"
                       />
                       <Text as={"span"} className={"xsmall-heading"} ml={"4px"}>
-                        25 min read
+                        {readingTime} min read
                       </Text>
                     </Box>
                     <p className={`${style.cardHeading} paragraph`}>
