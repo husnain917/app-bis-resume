@@ -110,7 +110,7 @@ export const NAV_ITEMS = [
   //     ],
   // },
   {
-    label: "AllArticles",
+    label: "All Articles",
     href: "#",
   },
   // {
@@ -125,14 +125,14 @@ export const NAV_ITEMS = [
   //   label: "Examples",
   //   href: "#",
   // },
-  // {
-  //   label: "Personal Development",
-  //   href: "#",
-  // },
-  // {
-  //   label: "Inspiring Stories",
-  //   href: "#",
-  // },
+  {
+    label: "Personal Development",
+    href: "#",
+  },
+  {
+    label: "Inspiring Stories",
+    href: "#",
+  },
   // {
   //   label: "Interviews & Find A Job",
   //   href: "#",

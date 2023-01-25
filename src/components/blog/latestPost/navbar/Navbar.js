@@ -92,8 +92,8 @@ export default function Navbar() {
               src="/Dark_Blue.svg"
               alt="Image Not Found"
               fill
-              height={"100px"}
-              width={"220px"}
+              height={"80px"}
+              width={"200px"}
             />
           </Link>
           {width < 1320 ? (
@@ -105,8 +105,8 @@ export default function Navbar() {
                   src="/career-blog.png"
                   alt="Image Not Found"
                   fill
-                  height={"35px"}
-                  width={"200px"}
+                  height={"30px"}
+                  width={"160px"}
                 />
               </Link>
             </>
@@ -294,7 +294,7 @@ const DesktopNav = () => {
     (state) => state.AuthReducer.isUserLoggedIn
   );
   const fontSize = isUserLoggedIn ? "12.5px" : "14px";
-  const fontSizes = isUserLoggedIn ? ["18px", "20px"] : ["15px", "17px"];
+  const fontSizes = isUserLoggedIn ? ["14px", "16px"] : ["15px", "17px"];
   return (
     <Stack direction={"row"} alignItems={"center"} spacing={{ xl: 2, lg: 2 }}>
       {NAV_ITEMS?.map((navItem) => {
