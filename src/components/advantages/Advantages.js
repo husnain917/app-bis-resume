@@ -25,17 +25,20 @@ export default function Advantages() {
     setDisplay("block");
     setIsTabActive(index);
   };
-
   useEffect(() => {
     const progressBar = setInterval(() => {
-      setToastWidth((prev) => (prev - 25) % 100);
-    }, 2000);
+      if (toastWidth < 100) {
+        setToastWidth((prev) => prev + 25);
+      }
+    }, 200);
 
     const interval = setInterval(() => {
+      setToastWidth(0);
       setIsTabActive((prev) => (prev + 1) % data.length);
     }, 8000);
   }, []);
 
+  const imageSrc = toastWidth >= 125 ? isTabActive : isTabActive - 1;
   return (
     <>
       <Box bgColor="#F6F5F0">
@@ -71,7 +74,7 @@ export default function Advantages() {
               padding={"0px 20px"}
             >
               <Image
-                src={data[isTabActive].imgSrc}
+                src={data[imageSrc < 0 ? 0 : imageSrc].imgSrc}
                 w="100%"
                 h={["90vh", "90vh", "auto", "auto", "auto"]}
                 alt="will show soon"
