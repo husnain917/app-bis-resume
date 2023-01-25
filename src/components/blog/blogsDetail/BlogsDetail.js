@@ -43,7 +43,7 @@ export default function BlogsDetail({ blogDetail, allBlogs }) {
           }}
           alt="will load soon"
           // layout="fill"
-          height={"600px"}
+          height={"450px"}
           width={"1450px"}
         />
       </Box>

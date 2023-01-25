@@ -161,7 +161,7 @@ export default function LatestPosts({ blogs }) {
                       <Text
                         as={"p"}
                         className={`${style.cardHeadingFeat} paragraph`}
-                        padding={"4px"}
+                        padding={"2px"}
                       >
                         {/* <ReadMoreReact
                     text={description}
