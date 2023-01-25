@@ -9,11 +9,17 @@
 .mainContainer:hover .imageContainer{
     transform: scale(1.05);
 }
+#secondBox{
+    min-height: 60px !important;
+}
 
 .bgColor {
     background-color: rgba(226, 231, 253, 1);
     width: 100%;
     padding-bottom: 60px;
+}
+.imageContainer{
+    min-height: 60px;
 }
 
 @media only screen and (max-width:425px) {
@@ -209,6 +215,7 @@
     display: flex;
     align-items: baseline;
     justify-content: center;
+    min-height: 60px;
 }
 
 

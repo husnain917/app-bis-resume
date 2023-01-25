@@ -85,6 +85,7 @@ export default function LatestPosts({ blogs }) {
         columns={[1, 1, 2, 2, 3]}
         ml={["", "", "5%", "5%", "5%", "5%"]}
         spacing={[0, 0, 6, 6, 6]}
+        // minHeight={"60px"}
       >
         {filteredBlogs?.map((item, index) => {
           const {
@@ -97,79 +98,95 @@ export default function LatestPosts({ blogs }) {
             slug,
             title,
             readingTime,
+            featured,
           } = item.fields;
-          const minimumLength = 20;
-          const idealLength = 40;
-          const maxLength = 60;
           return (
-            <Box key={index}>
-              <Box
-                style={{
-                  margin: "0 5px 5px 5px",
-                  borderBottom: "2px solid",
-                  borderColor: "#C6C6C6",
-                  paddingBottom: "5%",
-                }}
-                className={style.mainContainer}
-              >
-                <Box
-                  className={style.imageContainer}
-                  style={{ height: 300, borderRadius: 50 }}
-                >
-                  <Image
-                    className={style.coverImage}
-                    layout="fill"
-                    objectFit="cover"
-                    alt="image"
-                    src={"https:" + featuredImage.fields.file.url}
-                  />
-                </Box>
-                <Text as={"h3"} className={`${style.Cardtitle} subTitle`}>
-                  {title}
-                </Text>
-                <Box
-                  className={style.dateHeading}
-                  display={"flex"}
-                  alignItems={"center"}
-                >
-                  <Text as={"span"} className={"xsmall-heading"} mr={"3px"}>
-                    Today |{" "}
-                  </Text>
-                  <Image
-                    src={"/clock.png"}
-                    fill
-                    alt="will load soon"
-                    width="15px"
-                    height="15px"
-                  />
-                  <Text as={"span"} className={"xsmall-heading"} ml={"3px"}>
-                    {readingTime} min read
-                  </Text>
-                </Box>
-                <Text
-                  as={"p"}
-                  className={`${style.cardHeadingFeat} paragraph`}
-                  padding={"4px"}
-                >
-                  {/* <ReadMoreReact
+            <>
+              {featured === true ? (
+                <>
+                  <Box key={index} minHeight={"520px"}>
+                    <Box
+                      margin={"0 5px 5px 5px"}
+                      borderBottom={"2px solid"}
+                      borderColor={"#C6C6C6"}
+                      paddingBottom={"5%"}
+                      className={style.mainContainer}
+                      height={"auto"}
+                      minHeight={"550px"}
+                      // minH={"60px"}
+                      // minHeight={"60px"}
+                    >
+                      <Box
+                        className={style.imageContainer}
+                        style={{ height: 300, borderRadius: 50 }}
+                      >
+                        <Image
+                          className={style.coverImage}
+                          layout="fill"
+                          objectFit="cover"
+                          alt="image"
+                          src={"https:" + featuredImage.fields.file.url}
+                        />
+                      </Box>
+                      <Text as={"h3"} className={`${style.Cardtitle} subTitle`}>
+                        {title}
+                      </Text>
+                      <Box
+                        className={style.dateHeading}
+                        display={"flex"}
+                        alignItems={"center"}
+                      >
+                        <Text
+                          as={"span"}
+                          className={"xsmall-heading"}
+                          mr={"3px"}
+                        >
+                          Today |{" "}
+                        </Text>
+                        <Image
+                          src={"/clock.png"}
+                          fill
+                          alt="will load soon"
+                          width="15px"
+                          height="15px"
+                        />
+                        <Text
+                          as={"span"}
+                          className={"xsmall-heading"}
+                          ml={"3px"}
+                        >
+                          {readingTime} min read
+                        </Text>
+                      </Box>
+                      <Text
+                        as={"p"}
+                        className={`${style.cardHeadingFeat} paragraph`}
+                        padding={"4px"}
+                      >
+                        {/* <ReadMoreReact
                     text={description}
                     min={minimumLength}
                     ideal={idealLength}
                     max={maxLength}
                     readMoreText={"Read More"}
                   /> */}
-                  <ReadMore text={description} />
-                </Text>
-              </Box>
-              <Box>
-                {/* <Box m="3% 1%">
+                        <ReadMore text={description} />
+                      </Text>
+                    </Box>
+                    <Box>
+                      {/* <Box m="3% 1%">
                   <Text m="2% 0%" className={"subTitle"}>
                     Share Within your Network
                   </Text>
                   <SocialIcons />
                 </Box> */}
-              </Box>
-            </Box>
+                    </Box>
+                  </Box>
+                </>
+              ) : (
+                ""
+              )}
+            </>
           );
         })}
       </SimpleGrid>
@@ -188,6 +205,7 @@ export default function LatestPosts({ blogs }) {
               src="/images/career/no-data-found.svg"
               width="400px"
               height="400px"
+              layout="fill"
               alt="No data found"
             />
             <Text as={"h3"} className={`${style.notFound} title`}>
@@ -212,48 +230,54 @@ export default function LatestPosts({ blogs }) {
                 publishDate,
                 slug,
                 title,
+                featured,
               } = item.fields;
               return (
-                <Box
-                  key={index}
-                  marginBottom={"40px"}
-                  className={style.blogContainer}
-                >
-                  <Link href={`blog/[slug]`} as={`blog/${slug}`}>
-                    <Box className={style.imageContainer}>
-                      <Image
-                        className={style.coverImage}
-                        layout="fill"
-                        objectFit="cover"
-                        src={"https:" + featuredImage.fields.file.url}
-                        alt="image"
-                      />
-                    </Box>
-                  </Link>
-                  <h3 className={`${style.Cardtitle} subTitle`}>{title}</h3>
+                <>
+                  {featured === true ? "" : ""}
                   <Box
-                    className={style.dateHeading}
-                    display={"flex"}
-                    alignItems={"center"}
+                    key={index}
+                    marginBottom={"40px"}
+                    className={style.blogContainer}
                   >
-                    <Text as={"span"} className={"xsmall-heading"} mr={"4px"}>
-                      Today |{" "}
-                    </Text>
-                    <Image
-                      src={"/clock.png"}
-                      fill
-                      alt="will load soon"
-                      width="15px"
-                      height="15px"
-                    />
-                    <Text as={"span"} className={"xsmall-heading"} ml={"4px"}>
-                      25 min read
-                    </Text>
+                    <Link href={`blog/[slug]`} as={`blog/${slug}`}>
+                      <Box className={style.imageContainer}>
+                        <Image
+                          className={style.coverImage}
+                          layout="fill"
+                          objectFit="cover"
+                          src={"https:" + featuredImage.fields.file.url}
+                          alt="image"
+                          width={"80px"}
+                          height={"80px"}
+                        />
+                      </Box>
+                    </Link>
+                    <h3 className={`${style.Cardtitle} subTitle`}>{title}</h3>
+                    <Box
+                      className={style.dateHeading}
+                      display={"flex"}
+                      alignItems={"center"}
+                    >
+                      <Text as={"span"} className={"xsmall-heading"} mr={"4px"}>
+                        Today |{" "}
+                      </Text>
+                      <Image
+                        src={"/clock.png"}
+                        fill
+                        alt="will load soon"
+                        width="15px"
+                        height="15px"
+                      />
+                      <Text as={"span"} className={"xsmall-heading"} ml={"4px"}>
+                        25 min read
+                      </Text>
+                    </Box>
+                    <p className={`${style.cardHeading} paragraph`}>
+                      <ReadMore text={description} />
+                    </p>
                   </Box>
-                  <p className={`${style.cardHeading} paragraph`}>
-                    {description}
-                  </p>
-                </Box>
+                </>
               );
             })}
           </SimpleGrid>
