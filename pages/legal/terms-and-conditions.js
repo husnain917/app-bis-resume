@@ -25,11 +25,12 @@ export default function Terms_And_Conditions() {
   return (
     <>
       <Box
-        maxW={["100%", "100%", "92%", "92%"]} display={"flex"}
+        maxW={["100%", "100%", "92%", "92%"]}
+        display={"flex"}
         justifyContent={"space-between"}
       >
         <Box
-          padding={'40px 0px'}
+          padding={"40px 0px"}
           maxW={["0%", "0%", "0%", "10%"]}
           zIndex={"1049"}
           pl="5%"
@@ -42,7 +43,6 @@ export default function Terms_And_Conditions() {
           </Box>
         </Box>
         <Box maxW={["100%", "100%", "80%", "80%"]}>
-
           {/* main title */}
           <Box padding={"40px 0px"}>
             {TERMS_DATA?.TermsOfUse?.heading?.map((item, index) => (
@@ -244,7 +244,7 @@ export default function Terms_And_Conditions() {
                 If you would like to cancel your purchase, we advise that you do
                 so by sending us an email at <br />
                 <Link
-                  href={"#"}
+                  href={"https://gmail.com/"}
                   color={"#2679C7"}
                   lineHeight={"1.5"}
                   fontSize={"1rem"}
@@ -305,7 +305,7 @@ export default function Terms_And_Conditions() {
                   this case, you can request your receipt by sending us an email
                   at &nbsp;
                   <Link
-                    href={"#"}
+                    href={"https://gmail.com/"}
                     color={"#2679C7"}
                     lineHeight={"1.5"}
                     fontSize={"1rem"}
@@ -324,7 +324,7 @@ export default function Terms_And_Conditions() {
                   purchase which will result in your premium account not being
                   activated, please email us at &nbsp;
                   <Link
-                    href={"#"}
+                    href={"https://gmail.com/"}
                     color={"#2679C7"}
                     lineHeight={"1.5"}
                     fontSize={"1rem"}
@@ -468,7 +468,7 @@ export default function Terms_And_Conditions() {
                         <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
                           {item?.description}
                           <Link
-                            href={"#"}
+                            href={"https://gmail.com/"}
                             color={"#2679C7"}
                             lineHeight={"1.5"}
                             fontSize={"1rem"}

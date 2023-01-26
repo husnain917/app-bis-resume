@@ -49,17 +49,6 @@ export default function BlogsDetail({ blogDetail, allBlogs }) {
       </Box>
 
       <div className={style.mainContainer}>
-        {/* <Box position={"sticky"}> Ahsan Ali</Box> */}
-        {/* <Box>
-          <Image
-            src={"https:" + featuredImage.fields.file.url}
-            style={{
-              marginBottom: "50px",
-            }}
-            alt="will load soon"
-            layout="fill"
-          />
-        </Box> */}
         <Grid
           gap={4}
           templateColumns="repeat(1fr 3fr 1fr)"
@@ -67,32 +56,12 @@ export default function BlogsDetail({ blogDetail, allBlogs }) {
           gridTemplateRows={"1,1fr"}
           position={"relative"}
         >
-          {/* <Box position={"sticky"}> Ahsan Ali</Box> */}
-          {/* <Image
-                src={"https:" + featuredImage.fields.file.url}
-                style={{
-                  marginBottom: "50px",
-                }}
-                alt="will load soon"
-                layout="fill"
-              /> */}
           <GridItem colSpan={3} area={"text"}>
-            {/* <Box position={"sticky"}> Ahsan Ali</Box> */}
             <div className={style.blogData}>
               <h1 className={style.blogTitle}>{title}</h1>
               <br />
               <br />
 
-              {/* <Image
-                src={"https:" + featuredImage.fields.file.url}
-                style={{
-                  marginBottom: "50px",
-                }}
-                alt="will load soon"
-                layout="fill"
-              /> */}
-              {/* <Box> Ahsan Ali</Box> */}
-              {/* <ReactMarkdown>{markdown}</ReactMarkdown> */}
               <div className={style.bodyContent}>
                 {documentToReactComponents(body)}
               </div>
