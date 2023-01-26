@@ -30,7 +30,7 @@ import { EmailIcon } from "@chakra-ui/icons";
 import { MdOutlineEmail } from "react-icons/md";
 import ImageSelector from "../../src/components/imageSelector";
 import ImageCrop from "../../src/components/Crop/ImageCrop";
-import ProfileImage from "./useProfileImage";
+import UseProfileImage from "./useProfileImage";
 import { useEffect } from "react";
 
 const Profile = () => {
@@ -128,7 +128,7 @@ const Profile = () => {
           src={picture ? picture : preview}
           className={`${Style.avatar}`}
         /> */}
-        <ProfileImage
+        <UseProfileImage
           image={picture ? picture : preview}
           className={`${Style.avatar}`}
           borderWidth={"1px"}

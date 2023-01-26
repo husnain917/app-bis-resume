@@ -5,7 +5,7 @@ import { canvasPreview } from "../../src/components/canvasPreview";
 import { useDispatch, useSelector } from "react-redux";
 import { onBlurField } from "../../store/actions/builderAction";
 import { EmailIcon } from "@chakra-ui/icons";
-const ProfileImage = ({
+const UseProfileImage = ({
   height,
   width,
   marginTop,
@@ -126,4 +126,4 @@ const ProfileImage = ({
   );
 };
 
-export default ProfileImage;
+export default UseProfileImage;
