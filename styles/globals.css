@@ -2806,3 +2806,8 @@ video {
     font-size: 2.4rem;
   }
 }
+.rotate{
+  transform: rotate(5deg);
+  display: "none";
+  
+}
