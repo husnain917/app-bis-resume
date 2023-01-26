@@ -31,11 +31,19 @@ import { MdOutlineEmail } from "react-icons/md";
 import ImageSelector from "../../src/components/imageSelector";
 import ImageCrop from "../../src/components/Crop/ImageCrop";
 import UseProfileImage from "./useProfileImage";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { onBlurField } from "../../store/actions/builderAction";
+import { useDispatch } from "react-redux";
+import { canvasPreview } from "../../src/components/canvasPreview";
 
 const Profile = () => {
   const userData = useSelector((store) => store.AuthReducer.user);
-
+  const [isOpen, setisOpen] = useState(false);
+  const [scale, setScale] = useState(1);
+  const [rotate, setRotate] = useState(0);
+  const [crop, setCrop] = useState();
+  const imgRef = useRef(null);
+  const uploadedImage = React.useRef(null);
   const isUserLoggedIn = useSelector(
     (store) => store.AuthReducer.isUserLoggedIn
   );
@@ -43,15 +51,23 @@ const Profile = () => {
   if (!isUserLoggedIn) {
     router.push("/");
   }
-  const [preview, setPreview] = useState("");
+  const [preview, setPreview] = useState("/uploadpic1.png");
 
   const imageChange = (e) => {
     // setPreview(URL.createObjectURL(e.target.files[0]));
     if (e.target.files && e.target.files.length !== 0) {
       setPreview(URL.createObjectURL(e.target.files[0]));
+      setisOpen(true);
     } else {
       setPreview("");
     }
+  };
+  const onDone = async () => {
+    setisOpen(false);
+    const result = await canvasPreview(imgRef.current, crop, scale, rotate);
+    const { current } = uploadedImage;
+    current.src = result;
+    dispatch(onBlurField(result, "profile.profileImage"));
   };
 
   const [name, setName] = useState(userData?.name || "");
@@ -65,7 +81,7 @@ const Profile = () => {
     userData?.verified_email || ""
   );
   const removeSelectedImage = () => {
-    setPicture("");
+    setPreview("/uploadpic1.png");
   };
 
   return (
@@ -88,6 +104,17 @@ const Profile = () => {
           display="flex"
           flexDir={"row"}
         >
+          {isOpen && (
+            <ImageCrop
+              isOpen={isOpen}
+              onClose={() => setisOpen(false)}
+              crop={crop}
+              setCrop={setCrop}
+              src={preview}
+              onDone={onDone}
+              imgRef={imgRef}
+            />
+          )}
           <FormLabel
             className={`${Style.photo}`}
             fontSize={13}
@@ -121,13 +148,15 @@ const Profile = () => {
           </Box>
         </Box>
         {/* =============== Avatar Section =============== */}
-        {/* <Avatar
-          size="2xl"
-          borderWidth={3}
-          zIndex={9}
-          src={picture ? picture : preview}
-          className={`${Style.avatar}`}
-        /> */}
+        {/* <Box zIndex={100}>
+          <Avatar
+            size="2xl"
+            borderWidth={3}
+            zIndex={100}
+            src={picture ? picture : preview}
+            className={`${Style.avatar}`}
+          />
+        </Box> */}
         <UseProfileImage
           image={picture ? picture : preview}
           className={`${Style.avatar}`}

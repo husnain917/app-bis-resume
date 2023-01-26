@@ -33,14 +33,12 @@ const UseProfileImage = ({
   const [picture, setPicture] = useState(userData?.picture || "");
   const [scale, setScale] = useState(1);
   const [rotate, setRotate] = useState(0);
-  const imgRef = useRef(null);
   const [crop, setCrop] = useState();
   const [aspect, setAspect] = useState(16 / 9);
+  const imgRef = useRef(null);
   const [src, setsrc] = useState();
   const dispatch = useDispatch();
-  if ((changeImage = false)) {
-    setPicture("");
-  }
+
   // useEffect(() => {
   //   setPicture("/uploadpic1.png");
   //   setsrc("/uploadpic1.png");
@@ -51,9 +49,13 @@ const UseProfileImage = ({
     setisOpen(true);
     return;
   };
-  const removeSelectedImage = () => {
-    setPreview(picture);
-  };
+
+  // useEffect(() => {
+  //   const removeSelectedImage = () => {
+  //     setsrc("");
+  //   };
+  //   console.log("Delete Button Clicked");
+  // }, [changeImage]);
 
   const onDone = async () => {
     setisOpen(false);
@@ -94,10 +96,10 @@ const UseProfileImage = ({
               />
             </Box>
 
-            <Box onClick={() => imageUploader.current.click()}>
+            <Box>
               <Image
                 // src={picture ? picture : "/uploadpic1.png"}
-                src={image}
+                src={image || "/uploadpic2.png"}
                 background={"white"}
                 ref={uploadedImage}
                 alt="will load soon"

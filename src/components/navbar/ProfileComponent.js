@@ -53,19 +53,21 @@ export default function ProfileComponent() {
           </Box>
         </MenuButton>
         <MenuList
+          mt={4}
           p={0}
           minW="0"
           w={"140px"}
-          padding={"6px"}
-          // zIndex={"3"}
+          padding={"2px"}
           _hover={{
             backgroundColor: "white",
           }}
           _after={{
             content: '" "',
-            display: "block",
-            top: "-1rem",
-            left: "6rem",
+            // display: "block",
+            zIndex: "-1",
+            top: "0.2rem",
+            // opacity: "0.6",
+            left: "5rem",
             position: "absolute",
             width: "2rem",
             height: "2rem",
@@ -75,8 +77,10 @@ export default function ProfileComponent() {
           }}
         >
           <MenuItem
+            zIndex={"4"}
             minH="30px"
             closeOnSelect={true}
+            // borderTopColor={"transparent"}
             background={"white"}
             _hover={{
               backgroundColor: "white",
@@ -84,12 +88,13 @@ export default function ProfileComponent() {
           >
             <Link href="/auth/myProfile">
               <Text
-                fontSize="16px"
+                fontSize="18px"
                 fontWeight={"500"}
                 // color="#00C8AA"
                 _hover={{
                   color: "#00C8AA",
                 }}
+                letterSpacing={"1px"}
                 // pt="5px"
                 // pb="5px"
               >
@@ -106,13 +111,14 @@ export default function ProfileComponent() {
             }}
           >
             <Text
-              fontSize="16px"
+              fontSize="18px"
               fontWeight={"500"}
               _hover={{
                 color: "tomato",
               }}
               // pb="5px"
               // pt="5px"
+              letterSpacing={"1px"}
             >
               Sign Out
             </Text>
