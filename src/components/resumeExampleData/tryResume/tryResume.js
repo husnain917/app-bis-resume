@@ -73,9 +73,10 @@ const TryResume = () => {
                 fontSize={["16px", "16px", "16px", "16px", "16px"]}
                 lineHeight={"24px"}
               >
-                Say goodbye to writers block and formatting struggles. In just a few simple steps,
-                 you can have a polished, professional resume ready to impress employers. 
-                Upgrade your job search today with our powerful resume tool.
+                Say goodbye to writers block and formatting struggles. In just a
+                few simple steps, you can have a polished, professional resume
+                ready to impress employers. Upgrade your job search today with
+                our powerful resume tool.
               </Text>{" "}
             </Box>
             <Box display={"flex"} alignItems={"center"}>
@@ -83,7 +84,7 @@ const TryResume = () => {
                 <Link
                   href="/templates"
                   _hover={{
-                    textDecoration: 'none'
+                    textDecoration: "none",
                   }}
                 >
                   <CommonButton
@@ -98,8 +99,24 @@ const TryResume = () => {
                   />
                 </Link>
               </Box>
-              <Button fontSize={["14x", "14px", "16px", "16px", "16px"]}>
-                Resume Examples
+              <Button>
+                <Link
+                  href="/resume-examples"
+                  textDecoration={"none"}
+                  cursor="pointer"
+                  color="black"
+                  _hover={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                  <Text
+                    fontSize={["14x", "14px", "16px", "16px", "16px"]}
+                    textDecoration={"none"}
+                  >
+                    Resume Examples
+                  </Text>
+                </Link>
               </Button>
             </Box>
           </Box>

@@ -418,15 +418,17 @@ const AboutUs = () => {
                     className={"small-heading"}
                   />
                 </Link> */}
-                <CommonButton
-                  borderRadius={"10px"}
-                  title={"Contact Us"}
-                  color={"whitesmoke"}
-                  className={"small-heading"}
-                  backgroundColor={"#02818c"}
-                  height={"43px"}
-                  width={"120px"}
-                />
+                <Link href={"/contact-us"}>
+                  <CommonButton
+                    borderRadius={"10px"}
+                    title={"Contact Us"}
+                    color={"whitesmoke"}
+                    className={"small-heading"}
+                    backgroundColor={"#02818c"}
+                    height={"43px"}
+                    width={"120px"}
+                  />
+                </Link>
 
                 {/* <Button
                   className="btn btn-primary"

@@ -156,9 +156,9 @@ const BlogPost = () => {
                 </Box>
               </Box>
               <Link
-                href={'/templates'}
+                href={"/templates"}
                 _hover={{
-                  textDecoration: 'none',
+                  textDecoration: "none",
                 }}
               >
                 <Box
@@ -166,6 +166,7 @@ const BlogPost = () => {
                   display={"flex"}
                   justifyContent={"center"}
                   alignItems={"center"}
+                  cursor="pointer"
                 >
                   <Text mr={4}>Create my Resume</Text>
                   <ArrowForwardIcon color={"white"} h={5} w={5} />
@@ -198,9 +199,12 @@ const BlogPost = () => {
                       </Box>
                     </Box>
                   </Box>
-                  <Box className="post-banner-cta__button small-heading">
-                    <Link href="/" mr={2}>
-                      <a>Cover letter examples </a>
+                  <Box
+                    className="post-banner-cta__button small-heading"
+                    cursor="pointer"
+                  >
+                    <Link href="/ComingSoon" mr={2} cursor="pointer">
+                      <a cursor="pointer">Cover letter examples </a>
                     </Link>
                     <ArrowForwardIcon w={6} h={6} />
                   </Box>
