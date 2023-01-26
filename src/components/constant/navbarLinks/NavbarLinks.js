@@ -30,11 +30,11 @@ export const NAV_ITEMS = [
         subLabel: "Learn how to write a resume that lands you jobs.",
         href: "/write-resume",
       },
-      {
-        label: "Resume Help",
-        subLabel: "Use our expert guides to improve your resume writing.",
-        href: "/help/resume-help",
-      },
+      // {
+      //   label: "Resume Help",
+      //   subLabel: "Use our expert guides to improve your resume writing.",
+      //   href: "/help/resume-help",
+      // },
     ],
   },
   // {
