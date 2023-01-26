@@ -6,9 +6,6 @@ import SearchIcon from "../../../../public/searchIcon.webp";
 import Skeleton from "react-loading-skeleton";
 import Link from "next/link";
 import { SimpleGrid, Box, Container, Text } from "@chakra-ui/react";
-import SocialIcons from "../../Social/SocialIcons";
-import { PostData } from "./PostData";
-import ReadMoreReact from "read-more-react";
 
 export default function LatestPosts({ blogs }) {
   console.log("blogs", blogs);
