@@ -26,28 +26,6 @@ export default function LatestPosts({ blogs }) {
 
   return (
     <div className="mainContainer">
-      {/* <SimpleGrid columns={{ lg: 2, sm: 1 }} spacing={10}>
-          <Box className={style.titleContainer} lg={6} md={6} sm={6} xs={12}>
-            <h1 className={`${style.title} title`}>Latest Posts</h1>
-          </Box>
-          <Box className={style.titleContainer} lg={6} md={6} sm={6} xs={12}>
-            <div className={style.searchIconContainer}>
-              <div className={style.searchIcon}>
-                <Image
-                  width="30px"
-                  height="30px"
-                  src={SearchIcon}
-                  alt="SearchIcon"
-                />
-              </div>
-              <input
-                onChange={(e) => setSearchKey(e.target.value)}
-                className={style.input}
-                placeholder="Search"
-              />
-            </div>
-          </Box>
-        </SimpleGrid> */}
       <Box
         lg={12}
         md={12}
@@ -85,7 +63,6 @@ export default function LatestPosts({ blogs }) {
         columns={[1, 1, 2, 2, 3]}
         ml={["", "", "5%", "5%", "5%", "5%"]}
         spacing={[0, 0, 6, 6, 6]}
-        // minHeight={"60px"}
       >
         {filteredBlogs?.map((item, index) => {
           const {
@@ -113,8 +90,6 @@ export default function LatestPosts({ blogs }) {
                       className={style.mainContainer}
                       height={"auto"}
                       minHeight={"550px"}
-                      // minH={"60px"}
-                      // minHeight={"60px"}
                     >
                       <Box
                         className={style.imageContainer}
@@ -163,24 +138,10 @@ export default function LatestPosts({ blogs }) {
                         className={`${style.cardHeadingFeat} paragraph`}
                         padding={"2px"}
                       >
-                        {/* <ReadMoreReact
-                    text={description}
-                    min={minimumLength}
-                    ideal={idealLength}
-                    max={maxLength}
-                    readMoreText={"Read More"}
-                  /> */}
                         <ReadMore text={description} />
                       </Text>
                     </Box>
-                    <Box>
-                      {/* <Box m="3% 1%">
-                  <Text m="2% 0%" className={"subTitle"}>
-                    Share Within your Network
-                  </Text>
-                  <SocialIcons />
-                </Box> */}
-                    </Box>
+                    <Box></Box>
                   </Box>
                 </>
               ) : (
