@@ -1,68 +1,506 @@
 /* color collection */
 :root {
-  --font-color: #313b47;
+  --font-color: rgb(49, 59, 71);
 }
 
-/* font collection */
-@font-face {
-  font-family: EuclidCircularB-Bold;
-  src: url(../assets/fonts/EuclidCircularB-Bold.ttf);
-  font-weight: bold;
-}
+/* new font styles with font sizes for all screens below*/
 
 @font-face {
-  font-family: EuclidCircularB-Light;
-  src: url(../assets/fonts/EuclidCircularB-Light.ttf);
-  font-weight: bold;
+  font-family: poppins;
+  src: url(../assets/fonts/Poppins/Poppins-Light.ttf);
 }
 
 @font-face {
-  font-family: EuclidCircularB-Medium;
-  src: url(../assets/fonts/EuclidCircularB-Medium.ttf);
-  font-weight: bold;
+  font-family: poppins-bold;
+  src: url(../assets/fonts/Poppins/Poppins-Medium.ttf);
+}
+
+/* Bragndon text font */
+@font-face {
+  font-family: bt-regular;
+  src: url(../assets/fonts/brandon-text/HVD\ Fonts\ -\ BrandonText-Regular.otf);
 }
 
 @font-face {
-  font-family: EuclidCircularB;
-  src: url(../assets/fonts/EuclidCircularB-Regular.ttf);
-  font-weight: bold;
+  font-family: bt-light;
+  src: url(../assets/fonts/brandon-text/HVD\ Fonts\ -\ BrandonText-Light.otf);
 }
 
 @font-face {
-  font-family: EuclidCircularB-italic;
-  src: url(../assets/fonts/EuclidCircularB-MediumItalic.ttf);
-  font-weight: bold;
+  font-family: bt-regular-italic;
+  src: url(../assets/fonts/brandon-text/HVD\ Fonts\ -\ BrandonText-RegularItalic.otf);
 }
 
 @font-face {
-  font-family: EuclidCircularB-SemiBold;
-  src: url(../assets/fonts/EuclidCircularB-SemiBold.ttf);
-  font-weight: bold;
+  font-family: bt-bold;
+  src: url(../assets/fonts/brandon-text/HVD\ Fonts\ -\ BrandonText-Bold.otf);
 }
 
 @font-face {
-  font-family: EuclidCircularB-SemiBold;
-  src: url(../assets/fonts/EuclidCircularB-SemiBold.ttf);
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: EuclidCircularB-SemiBold;
-  src: url(../assets/fonts/EuclidCircularB-SemiBold.ttf);
-  font-weight: bold;
+  font-family: bt-thin;
+  src: url(../assets/fonts/brandon-text/HVD\ Fonts\ -\ BrandonText-Thin.otf);
 }
 
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "proxima-nova";
 }
+
+/* =================================================================================================================================================== */
+
+/* -----------------------------------------------------------------Generel FontStyles---------------------------------------------------------------- */
+
+/* =================================================================================================================================================== */
+.typewriterTxt {
+  /* Font style/size use for all mein headings in this website- className = 'title' */
+  font-family: "poppins-bold";
+  font-style: bold;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: 0.2vh;
+}
+
+.inputTitle {
+  font-family: "poppins-bold";
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.1vh;
+}
+
+.title {
+  /* Font style/size use for all mein headings in this website- className = 'title' */
+  font-family: "poppins-bold";
+  font-style: bold;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 45px;
+  letter-spacing: 0.2vh;
+  color: black;
+}
+
+.subTitle {
+  /* Font style/size use for all sub headings in this website- className = 'subTitle' */
+  font-family: "poppins-bold";
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1vh;
+}
+
+.heading {
+  font-family: "poppins";
+  font-size: 22px;
+  line-height: 24px;
+  letter-spacing: 0.1vh;
+  color: rgb(99, 98, 98);
+}
+
+.paragraph {
+  /* Font style/size use for all paragraphs in this website- className = 'paragraphs' */
+  font-family: "poppins";
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  color: rgb(99, 98, 98);
+}
+
+.linkText {
+  /* Font style/size use for all list items in this website- className = 'linkText' */
+  font-family: "poppins-bold";
+  font-weight: 200;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.8px;
+}
+
+.commonText {
+  /* Font style/size use for any common text which will not fall any of category mentioned above, in 
+  this website- className = 'commonText' */
+  font-family: "poppins-bold";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 10px;
+  letter-spacing: 0.1vh;
+}
+
+.navLinksMobile {
+  font-family: "poppins-bold";
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 22px;
+  letter-spacing: 0.8px;
+}
+
+/* @media only screen and (min-width: 1400px){
+  .navLinksMobile{
+    font-family: 'proxima-nova';
+    font-style: bold;
+    font-weight: 600;
+    font-size: 22px ;
+    line-height: 24px ;
+    letter-spacing: 2px ;
+  }
+} */
+@media only screen and (max-width: 991px) {
+  .navLinksMobile {
+    /* Font style/size use for all sub headings in this website- className = 'subTitle' */
+    font-family: "poppins-bold";
+    font-style: bold;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 24px;
+    letter-spacing: 2px;
+  }
+}
+
+/* =================================================================================================================================================== */
+
+/* -----------------------------------------------------------------Max-1024px screen's FontStyles---------------------------------------------------- */
+
+/* =================================================================================================================================================== */
+/* @media only screen and (min-width: 1400px) {
+  .title {
+    font-family: 'poppins-bold';
+    font-style: bold;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 50px;
+    letter-spacing: .2vh;
+  }
+} */
+
+@media only screen and (max-width: 1024px) {
+  .title {
+    /* Font style/size use for all mein headings in this website- className = 'title' */
+    font-family: "poppins-bold";
+    font-style: bold;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 50px;
+    letter-spacing: 0.2vh;
+  }
+
+  .subTitle {
+    /* Font style/size use for all sub headings in this website- className = 'subTitle' */
+    font-family: "poppins-bold";
+    font-style: bold;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1vh;
+  }
+
+  .heading {
+    font-family: "poppins";
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.1vh;
+  }
+
+  .paragraph {
+    /* Font style/size use for all paragraphs in this website- className = 'paragraphs' */
+    font-family: "poppins";
+    font-style: bold;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+  }
+
+  .linkText {
+    /* Font style/size use for all list items in this website- className = 'linkText' */
+    font-family: "poppins-bold";
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.8px;
+  }
+
+  .commonText {
+    font-family: "poppins-bold";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px !important;
+    line-height: 3vh;
+    letter-spacing: 0.1vh;
+  }
+}
+
+/* =================================================================================================================================================== */
+
+/* -----------------------------------------------------------Tablet Max-768px screen's FontStyles---------------------------------------------------- */
+
+/* =================================================================================================================================================== */
+
+@media only screen and (max-width: 768px) {
+  .title {
+    /* Font style/size use for all mein headings in this website- className = 'title' */
+    font-family: "poppins-bold";
+    font-style: bold;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0.2vh;
+  }
+
+  .subTitle {
+    /* Font style/size use for all sub headings in this website- className = 'subTitle' */
+    font-family: "poppins-bold";
+    font-style: bold;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.1vh;
+  }
+
+  .heading {
+    font-family: "poppins";
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1vh;
+  }
+
+  .paragraph {
+    /* Font style/size use for all paragraphs in this website- className = 'paragraphs' */
+    font-family: "poppins";
+    font-style: bold;
+    font-size: 14px !;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+  }
+
+  .linkText {
+    /* Font style/size use for all list items in this website- className = 'linkText' */
+    font-family: "poppins-bold";
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.8px;
+  }
+
+  .commonText {
+    font-family: "poppins-bold";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px !important;
+    line-height: 12px;
+    letter-spacing: 0.1vh;
+  }
+}
+
+/* =================================================================================================================================================== */
+
+/* -----------------------------------------------------------Mobile Max-425px screen's FontStyles---------------------------------------------------- */
+
+/* =================================================================================================================================================== */
+
+@media only screen and (max-width: 425px) {
+  .title {
+    /* Font style/size use for all mein headings in this website- className = 'title' */
+    font-family: "poppins-bold";
+    font-style: bold;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.2vh;
+  }
+
+  .heading {
+    font-family: "poppins";
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1vh;
+  }
+
+  .subTitle {
+    /* Font style/size use for all sub headings in this website- className = 'subTitle' */
+    font-family: "poppins-bold";
+    font-style: bold;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.1vh;
+  }
+
+  .paragraph {
+    /* Font style/size use for all paragraphs in this website- className = 'paragraphs' */
+    font-family: "poppins";
+    font-style: bold;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+  }
+
+  .linkText {
+    /* Font style/size use for all list items in this website- className = 'linkText' */
+    font-family: "poppins-bold";
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.8px;
+  }
+
+  .commonText {
+    font-family: "poppins-bold";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4vh;
+    line-height: 3vh;
+    letter-spacing: 0.1vh;
+  }
+}
+
+/* new font styles with font sizes for all screens above*/
+
+/* button with style like novoresume */
+
+.buttonClassGreen {
+  width: auto;
+  position: relative;
+  line-height: 1 !important;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+  color: #fff;
+  user-select: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #00c8aa;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5rem;
+  transition: linear 0.2s;
+}
+.buttonClassGreen:hover {
+  cursor: pointer;
+  font-size: 1.1rem;
+  background-color: transparent;
+  opacity: 1;
+  color: white;
+  border-radius: 10px;
+}
+
+.buttonClassGreen::before {
+  display: block;
+  border-radius: 5rem;
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transition: ease 0.2s;
+  border-radius: 5rem;
+  background-color: #00c8aa !important;
+}
+
+.buttonClassGreen:hover::before {
+  border-radius: 10px;
+  transform: translate(-6px, -6px);
+  z-index: -1;
+}
+
+.buttonClassGreen::after {
+  display: block;
+  border-radius: 5rem;
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transition: ease 0.2s;
+  border-radius: 5rem;
+  background-color: #00c8aa;
+}
+
+.buttonClassGreen:hover::after {
+  border-radius: 10px;
+  transform: translate(2px, 2px);
+  z-index: -1;
+}
+
+.buttonClass {
+  width: auto;
+  position: relative;
+  line-height: 1 !important;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+  user-select: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #e1e1e1;
+  padding: 10px 30px 10px 30px;
+  border-radius: 5rem;
+  transition: linear 0.2s;
+}
+
+.buttonClass:hover {
+  cursor: pointer;
+  font-size: 1.1rem;
+  background-color: transparent;
+  opacity: 1;
+  border-radius: 10px;
+}
+
+.buttonClass::before {
+  display: block;
+  border-radius: 5rem;
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transition: ease 0.2s;
+  border-radius: 5rem;
+  background-color: #e1e1e1 !important;
+}
+
+.buttonClass:hover::before {
+  border-radius: 10px;
+  transform: translate(-6px, -6px);
+  z-index: -1;
+}
+
+.buttonClass::after {
+  display: block;
+  border-radius: 5rem;
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transition: ease 0.2s;
+  border-radius: 5rem;
+  background-color: #e1e1e1;
+}
+
+.buttonClass:hover::after {
+  border-radius: 10px;
+  transform: translate(2px, 2px);
+  z-index: -1;
+}
+
+/* button styles end */
 
 /* common Classes */
 
 .main-heading {
-  font-family: 'EuclidCircularB', sans-serif;
+  font-family: "bt-bold", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 42px;
@@ -71,7 +509,7 @@ body {
 }
 
 .sub-heading {
-  font-family: 'EuclidCircularB-Bold', sans-serif;
+  font-family: "poppins-bold", sans-serif;
   font-size: 35px;
   font-weight: 700;
   font-style: normal;
@@ -80,7 +518,7 @@ body {
 }
 
 .medium-heading1 {
-  font-family: 'EuclidCircularB-Medium', sans-serif;
+  font-family: "bt-regular", sans-serif;
   font-size: 29px;
   font-weight: 600;
   font-style: normal;
@@ -89,7 +527,7 @@ body {
 }
 
 .medium-heading {
-  font-family: 'EuclidCircularB-Medium', sans-serif;
+  font-family: "bt-regular", sans-serif;
   font-size: 26px;
   font-weight: 700;
   font-style: normal;
@@ -98,7 +536,7 @@ body {
 }
 
 .small-heading {
-  font-family: 'EuclidCircularB-Medium', sans-serif;
+  font-family: "bt-light", sans-serif;
   font-size: 22px;
   font-weight: 700;
   font-style: normal;
@@ -107,7 +545,7 @@ body {
 }
 
 .xsmall-heading {
-  font-family: 'EuclidCircularB', sans-serif;
+  font-family: "bt-thin", sans-serif;
   font-size: 16px;
   font-weight: 700;
   font-style: normal;
@@ -116,7 +554,7 @@ body {
 }
 
 .xsmall-heading-light {
-  font-family: 'EuclidCircularB', sans-serif;
+  font-family: "bt-thin", sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
@@ -125,7 +563,7 @@ body {
 }
 
 .italic-text {
-  font-family: 'EuclidCircularB-italic', sans-serif;
+  font-family: "bt-regular-italic", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -134,7 +572,7 @@ body {
 }
 
 .medium-text {
-  font-family: 'EuclidCircularB', sans-serif;
+  font-family: "bt-regular", sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -143,18 +581,19 @@ body {
 }
 
 .small-text {
-  font-family: 'EuclidCircularB', sans-serif;
+  font-family: "bt-light", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
-  margin: '3px 0px 3px 0px';
+  margin: "3px 0px 3px 0px";
   color: var(--font-color);
 }
 
 .xsmall-text,
+a,
 .navLinks {
-  font-family: 'EuclidCircularB', sans-serif;
+  font-family: "poppins", sans-serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -163,7 +602,7 @@ body {
 }
 
 .footer-bottom-text {
-  font-family: 'EuclidCircularB', sans-serif;
+  font-family: "bt-thin", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -172,7 +611,7 @@ body {
 }
 
 .button-text {
-  font-family: 'EuclidCircularB-Medium', sans-serif;
+  font-family: "poppins", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -181,15 +620,71 @@ body {
 }
 
 .footer-Link {
-  font-family: 'EuclidCircularB', sans-serif;
+  font-family: "bt-light", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
 }
+
 .only-font-family {
-  font-family: 'EuclidCircularB', sans-serif;
+  font-family: "bt-regular", sans-serif;
   /* color:rgb(7, 9, 11); */
+}
+
+/*  */
+
+.templatecontainer {
+  position: relative;
+}
+
+.templateimage {
+  opacity: 1;
+  display: block;
+  height: 320px !important;
+  width: 300px !important;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.templatemiddle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.templatecontainer:hover .templateimage {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.templatecontainer:hover .templatemiddle {
+  opacity: 1;
+}
+
+.templatetext {
+  font-family: "EuclidCircularB-Medium", sans-serif;
+  font-weight: 700;
+  background-color: #313b47;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+.templateHover {
+  transition: transform 0.3s;
+  /* Specifies a transition effect when the image is transformed */
+}
+
+.templateHover:hover {
+  transform: scale(1.1);
+  /* Scales the image up by 20% on hover */
 }
 
 a {
@@ -301,10 +796,10 @@ a {
   font-weight: bold;
 }
 
-input[type='date']:in-range::-webkit-datetime-edit-year-field,
-input[type='date']:in-range::-webkit-datetime-edit-month-field,
-input[type='date']:in-range::-webkit-datetime-edit-day-field,
-input[type='date']:in-range::-webkit-datetime-edit-text {
+input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+input[type="date"]:in-range::-webkit-datetime-edit-day-field,
+input[type="date"]:in-range::-webkit-datetime-edit-text {
   color: #999;
 }
 
@@ -423,6 +918,7 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 .cursor img {
   height: 320px;
   border: 1px solid black;
+  border-radius: 6px 6px;
 }
 
 .slick-prev {
@@ -467,9 +963,9 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 }
 
 .fD2textContainer {
-  display: 'flex';
-  flex-direction: 'column';
-  align-items: 'center';
+  display: "flex";
+  flex-direction: "column";
+  align-items: "center";
 }
 
 /* swiper */
@@ -952,7 +1448,7 @@ button {
 }
 
 .resume1 {
-  background-image: url('/public/Chief_Exclusive_Office.jpg');
+  background-image: url("/public/Chief_Exclusive_Office.jpg");
 }
 
 /* Compare Resumes */
@@ -1013,7 +1509,7 @@ button {
 }
 
 .blog-post__content .compare-resumes__mark::before {
-  content: '';
+  content: "";
   position: absolute;
   width: calc(100% - 24px);
   height: calc(100% - 24px);
@@ -1131,7 +1627,7 @@ user agent stylesheet div {
 }
 
 .blog-post__content .compare-resumes__mark::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1362,7 +1858,7 @@ user agent stylesheet div {
 }
 
 .post-banner-cta__button:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1884,32 +2380,6 @@ video {
   height: 300px;
 }
 
-/* #selectResume .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: rgb(228, 217, 217);
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-#selectResume .swiper-pagination-bullet-active {
-  color: #fff;
-  background: #007aff;
-} */
-/* .mainWrapper:after {
-  content: " ";
-  width: 220px;
-  height: 220px;
-  position: absolute;
-  bottom: -219px;
-  box-shadow: 50px -30px 0 0 #f6f5f0;
-  right: 0;
-  z-index: 0;
-  border-radius: 0% 50% 0% 0%;
-} */
 .container1 {
   padding-right: 15px;
   padding-left: 15px;
@@ -2006,7 +2476,7 @@ video {
   /* width: auto !important; */
   left: auto !important;
   margin: 0;
-  width: '100%';
+  width: "100%";
 }
 
 .arrows.eos {
@@ -2064,7 +2534,7 @@ video {
 }
 
 .container:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2115,7 +2585,7 @@ video {
   /* width: auto !important; */
   left: auto !important;
   margin: 0;
-  width: '100%';
+  width: "100%";
 }
 
 .feedbackBtn {
@@ -2141,34 +2611,38 @@ video {
   font-weight: 600;
   font-size: 16px;
 }
+
 .afterlink {
   position: relative;
   font-family: EuclidCircularB-Bold;
 }
+
 .afterlink::after {
-  content: '';
+  content: "";
   position: absolute;
   background: #00c8aa;
   width: 0%;
   height: 2px;
   display: block;
   margin: auto;
-  transition: 1s;
+  transition: 1.5s;
   left: 0;
 }
+
 .afterlink:hover::after {
   width: 100%;
   text-decoration: none;
   box-shadow: 5px solid black;
   text-shadow: 5px solid black;
 }
+
 .afterHeading {
   position: relative;
-  font-family: 'EuclidCircularB-Bold', sans-serif;
+  font-family: "EuclidCircularB-Bold", sans-serif;
 }
 
 .afterHeading::after {
-  content: '';
+  content: "";
   position: absolute;
   background: #00c8aa;
   width: 30%;
@@ -2187,28 +2661,13 @@ video {
   text-shadow: 5px solid black;
 }
 
-.noselectText {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-  supported by Chrome, Edge, Opera and Firefox */
-}
 .hoverEffects {
   --c: goldenrod;
   color: black;
   background-color: #006772;
   /* font-size: 16px; */
   border: 0.3em solid goldenrod;
-  font-family: 'EuclidCircularB-Bold';
+  font-family: "EuclidCircularB-Bold";
   border-radius: 0.5em;
   /* width: 12em;
   height: 3em; */
@@ -2224,6 +2683,7 @@ video {
   transition: 0.5s;
   /* margin: 1em; */
 }
+
 .hoverEffects span {
   position: absolute;
   width: 25%;
@@ -2236,6 +2696,7 @@ video {
   transition-delay: calc((var(--n) - 1) * 0.1s);
   z-index: -1;
 }
+
 .hoverEffects:hover {
   color: white;
   border: 1px solid goldenrod;
@@ -2259,4 +2720,89 @@ video {
 
 .hoverEffects span:nth-child(4) {
   --n: 4;
+}
+
+.sectionModalBtn:before {
+  content: "+";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 0.2s ease-in;
+  opacity: 0;
+  border-radius: 5px;
+  font-size: 25px;
+  transition: 0.5s opacity;
+}
+
+.sectionModalBtn:hover::before {
+  background-color: #06bca3;
+  opacity: 1;
+}
+
+.sectionModalBtn2:before {
+  content: "-";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: background-color 0.2s ease-in;
+  opacity: 0;
+  border-radius: 5px;
+  font-size: 25px;
+  transition: 0.5s opacity;
+}
+
+.sectionModalBtn2:hover::before {
+  background-color: #2cacd5;
+  opacity: 1;
+}
+/* .chakra-collapse{
+  display: flex !important;
+  justify-content: flex-end;
+  z-index: 999;
+} */
+
+.mainContainer {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+@media only screen and (max-width: 991px) {
+  .mainContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+/* Not Found page Styling  */
+.notFoundContainer {
+  background-color: #1b6671;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coming-soon-text {
+  font-size: 4rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media screen and (max-width: 501px) {
+  .coming-soon-text {
+    font-size: 2.4rem;
+  }
 }

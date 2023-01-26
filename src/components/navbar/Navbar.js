@@ -11,7 +11,6 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import {
@@ -23,26 +22,30 @@ import {
 import logoIcon from "../../../public/bisResumeLogo.svg";
 import Image from "next/image";
 import CommonButton from "../commonButton/CommonButton";
-import {
-  NAV_ITEMS,
-  Login_Buttons,
-} from "../constant/navbarLinks/NavbarLinks";
+import { NAV_ITEMS, Login_Buttons } from "../constant/navbarLinks/NavbarLinks";
 import { useState } from "react";
 import AuthModal from "../authModal/AuthModal";
 import { useSelector } from "react-redux";
 import ProfileComponent from "./ProfileComponent";
+import { useDispatch } from "react-redux";
+import { modalClose, modalOpen } from "../../../store/actions/AuthAction";
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
-  const breakpointfontSize = useBreakpointValue({ xl: "14px", lg: "12px" });
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [active, setIsActive] = useState(null);
-  const isUserLoggedIn = useSelector(state => state.AuthReducer.isUserLoggedIn)
-  const uid = useSelector(state => state.AuthReducer.userID)
-  const breakpointWidth = useBreakpointValue({
-    xl: "120px",
-    lg: "80px",
-    md: "110px",
-  });
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer.isUserLoggedIn
+  );
+  const modalOpenstate = useSelector(
+    (state) => state.AuthReducer.isModalOpen
+  );
+  const dispatch = useDispatch()
+  const ismodalOpen = async () => {
+    dispatch(modalOpen());
+  }
+  const ismodalClose = async () => {
+    dispatch(modalClose());
+  }
+  const uid = useSelector((state) => state.AuthReducer.userID);
   return (
     <Box>
       <Flex
@@ -50,7 +53,7 @@ export default function Navbar() {
         color={useColorModeValue("gray.600", "white")}
         minH={"110px"}
         py={{ base: 2 }}
-        mx={useBreakpointValue({ xl: "60px", lg: "30px" })}
+        mx={{ xl: "60px", lg: "30px" }}
         align={"center"}
       >
         {/* logo */}
@@ -61,28 +64,19 @@ export default function Navbar() {
         >
           <Link href="/#">
             <Image
-              src={logoIcon}
+              src="/Dark_Blue.svg"
               alt="Image Not Found"
-              height={useBreakpointValue({
-                xl: "90px",
-                lg: "60px",
-                md: "70px",
-                sm: "70px",
-              })}
-              width={useBreakpointValue({
-                xl: "230px",
-                lg: "170px",
-                md: "200px",
-                sm: "180px",
-              })}
+              fill
+              height={"70px"}
+              width={"230px"}
             />
           </Link>
 
           {/* deskTop Nav */}
           <Flex
             display={{ base: "none", lg: "flex" }}
-            marginTop={useBreakpointValue({ xl: "11px", lg: "12px" })}
-            marginLeft={useBreakpointValue({ xl: "2rem", lg: "1.2rem" })}
+            marginTop={{ xl: "11px", lg: "12px" }}
+            marginLeft={{ xl: "2rem", lg: "1.2rem" }}
           >
             <DesktopNav />
           </Flex>
@@ -94,106 +88,114 @@ export default function Navbar() {
           direction={"row"}
           alignItems={"center"}
           spacing={5}
-          marginTop={useBreakpointValue({ xl: "20px", lg: "12px", md: "15px" })}
+          marginTop={{ xl: "20px", lg: "12px", md: "15px" }}
         >
           {/* login buttons */}
-          {
-            !isUserLoggedIn ?
-              Login_Buttons?.map((items) => {
-                return (
-                  <>
-                    <Box
-                      display={{ base: "inline-block", md: "inline-block" }}
-                      justify={{ base: "end" }}
-                      style={{
-                        border: "1px solid #e0e2e8",
-                        boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
-                        borderRadius: "0.2rem",
-                      }}
-                      onClick={items.label==='Register'?
-                      () => {
-                        setIsActive(0)
-                        setIsModalOpen(true)
+          {!isUserLoggedIn ? (
+            Login_Buttons?.map((items, index) => {
+              return (
+                <>
+                  <Box
+                    key={items?.label}
+                    display={{ base: "inline-block", md: "inline-block" }}
+                    justify={{ base: "end" }}
+                    style={{
+                      border: "1px solid #e0e2e8",
+                      boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
+                      borderRadius: "0.2rem",
+                    }}
+                    onClick={
+                      items.label === "Register"
+                        ? () => {
+                          setIsActive(0);
+                          localStorage.setItem("active", 0);
+                          ismodalOpen();
+                        }
+                        : items.label === "Login"
+                          ? () => {
 
-                      }:
-                    items.label==='Login'?
-                    () => {
-                      setIsActive(1)
-                      setIsModalOpen(true)
-
+                            setIsActive(1);
+                            localStorage.setItem("active", 1);
+                            ismodalOpen();
+                          }
+                          : ""
                     }
-                  :
-                ''}
-                      cursor={"pointer"}
-                      width={breakpointWidth}
-                      bg={
-                        items?.label === "Register"
+                    cursor={"pointer"}
+                    width={{
+                      xl: "120px",
+                      lg: "80px",
+                      md: "110px",
+                    }}
+                    bg={
+                      items?.label === "Register"
+                        ? "#006772"
+                        : items?.label === "Login"
                           ? "#006772"
-                          : items?.label === "Login"
-                            ? "#006772"
-                            : ""
-                      }
-                      textAlign={"center"}
-                      padding={"10px 5px"}
-                      textTransform={"uppercase"}
-                      ml="1.5rem"
-                      _hover={{
-                        textDecoration: "none",
-                        backgroundColor: "red",
-                        color: "white",
-                      }}
-                    >
-                      {items?.label === "Register" ? (
-                        <>
-                          <Link
-                            // href={items?.href ?? '#'}
-                            fontWeight={650}
-                            color={"#fdfffc"}
-                            fontSize={breakpointfontSize}
-                            _hover={{
-                              textDecoration: "none",
-                              color: "#fff",
-                            }}
-                            onClick={() => {
-                              setIsModalOpen(true)
-                              setIsActive(0)
-                            }}
-                          >
-                            {items.label}
-                          </Link>
-                        </>
-                      ) : items.label === "Login" ? (
-                        <>
-                          <Link
-                            // href={items?.href ?? '#'}
-                            fontWeight={650}
-                            color={"#fdfffc"}
-                            fontSize={breakpointfontSize}
-                            _hover={{
-                              textDecoration: "none",
-                              color: "#fff",
-                            }}
-                            onClick={() => {
-                              setIsActive(1)
-                              setIsModalOpen(true)
-
-                            }
-                            }
-                          >
-                            {items.label}
-                          </Link>
-                        </>
-                      ) : (
-                        <></>
-                      )}
-                      <AuthModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} active={active} setIsActive={setIsActive} />
-                    </Box>
-                  </>
-                );
-              })
-              :
-              <ProfileComponent />
-          }
+                          : ""
+                    }
+                    textAlign={"center"}
+                    padding={"10px 5px"}
+                    textTransform={"uppercase"}
+                    ml="1.5rem"
+                  >
+                    {items?.label === "Register" ? (
+                      <>
+                        <Link
+                          // href={items?.href ?? '#'}
+                          key={items.label}
+                          fontWeight={650}
+                          color={"#fdfffc"}
+                          fontSize={{ xl: "14px", lg: "12px" }}
+                          _hover={{
+                            textDecoration: "none",
+                            color: "#fff",
+                          }}
+                          onClick={() => {
+                            setIsActive(0);
+                            localStorage.setItem("active", 0);
+                            ismodalOpen()
+                          }}
+                        >
+                          {items.label}
+                        </Link>
+                      </>
+                    ) : items.label === "Login" ? (
+                      <>
+                        <Link
+                          // href={items?.href ?? '#'}
+                          key={items.label}
+                          fontWeight={650}
+                          color={"#fdfffc"}
+                          fontSize={{ xl: "14px", lg: "12px" }}
+                          _hover={{
+                            textDecoration: "none",
+                            color: "#fff",
+                          }}
+                          onClick={() => {
+                            setIsActive(1);
+                            localStorage.setItem("active", 1);
+                            ismodalOpen()
+                          }}
+                        >
+                          {items.label}
+                        </Link>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                    <AuthModal
+                      ismodalClose={ismodalClose}
+                      isModalOpen={modalOpenstate}
+                      setIsModalOpen={ismodalOpen}
+                      setIsActive={setIsActive}
+                    />
+                  </Box>
+                </>
+              );
+            })
+          ) : (
+            <ProfileComponent />
+          )}
 
           {/* login button end */}
 
@@ -222,7 +224,7 @@ export default function Navbar() {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        <MobileNav ismodalOpen={modalOpenstate} setIsModalOpen={ismodalOpen} />
       </Collapse>
     </Box>
   );
@@ -233,19 +235,16 @@ const DesktopNav = () => {
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
   return (
-    <Stack
-      direction={"row"}
-      alignItems={"center"}
-      spacing={useBreakpointValue({ xl: 5, lg: 3 })}
-    >
+    <Stack direction={"row"} alignItems={"center"} spacing={{ xl: 5, lg: 3 }}>
       {NAV_ITEMS?.map((navItem) => {
         return (
-          <Box key={navItem?.label}>
+          <Box key={navItem.label}>
             <Popover trigger={"hover"} placement={"bottom-start"}>
               <PopoverTrigger position={"absolute"}>
                 <Link
                   href={navItem?.href ?? "#"}
                   fontWeight={500}
+                  key={navItem.label}
                   color={linkColor}
                   fontSize={["10px", "12px", "14px", "16px", "18px"]}
                   _hover={{
@@ -277,7 +276,7 @@ const DesktopNav = () => {
                   minW={"xs"}
                 >
                   <Stack>
-                    {navItem.children.map((child) => (
+                    {navItem.children.map((child, index) => (
                       <DesktopSubNav key={child.label} {...child} />
                     ))}
                   </Stack>
@@ -330,8 +329,9 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
   );
 };
 
-const MobileNav = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const MobileNav = (
+  { setIsModalOpen, ismodalOpen }
+) => {
 
   return (
     <Stack
@@ -339,16 +339,17 @@ const MobileNav = () => {
       p={4}
       display={{ lg: "none" }}
     >
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map((navItem, index) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
 
       {/* login buttons */}
       <Box display={"flex"} justifyContent={"space-evenly"}>
-        {Login_Buttons?.map((items) => {
+        {Login_Buttons?.map((items, index) => {
           return (
             <>
               <Box
+                key={items.label}
                 display={{ base: "inline-flex", md: "none" }}
                 style={{
                   border: "1px solid #e0e2e8",
@@ -378,12 +379,13 @@ const MobileNav = () => {
                     <Link
                       // href={items?.href ?? "#"}
                       fontWeight={650}
+                      key={items.label}
                       color={"#fdfffc"}
                       _hover={{
                         textDecoration: "none",
                         color: "#fff",
                       }}
-                      onClick={() => setIsModalOpen(true)}
+                      onClick={() => setIsModalOpen()}
                     >
                       {items.label}
                     </Link>
@@ -394,11 +396,12 @@ const MobileNav = () => {
                       // href={items?.href ?? "#"}
                       fontWeight={650}
                       color={"#fdfffc"}
+                      key={items.label}
                       _hover={{
                         textDecoration: "none",
                         color: "#fff",
                       }}
-                      onClick={() => setIsModalOpen(true)}
+                      onClick={() => setIsModalOpen()}
                     >
                       {items.label}
                     </Link>
@@ -407,7 +410,7 @@ const MobileNav = () => {
                   <></>
                 )}
                 <AuthModal
-                  isModalOpen={isModalOpen}
+                  isModalOpen={ismodalOpen}
                   setIsModalOpen={setIsModalOpen}
                 />
               </Box>

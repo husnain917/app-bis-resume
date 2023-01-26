@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Box, Text, Button, Image } from "@chakra-ui/react";
+import { Box, Text, Button, Image, } from "@chakra-ui/react";
 import { Grid } from "@chakra-ui/react";
 // Swiper js
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,6 +14,7 @@ import Link from "next/link";
 import { useWindowSizing } from "../../../../customHooks/useWindowSizing";
 import Carasol from "../carasol/Carasol";
 import Carasol1 from "../carasol/Carasol1";
+import CommonButton from "../../commonButton/CommonButton";
 import {
   ArrowLeftIcon,
   ArrowBackIcon,
@@ -31,19 +32,6 @@ const SelectResume = () => {
   const swiperRef = useRef();
   return (
     <>
-      {/* <Box
-        position={"relative"}
-        padding={[
-          "40px 44px",
-          "40px 44px",
-          "40px 44px",
-          "40px 44px",
-          "120px 40px 144px",
-          "120px 44px 144px",
-        ]}
-        backgroundColor={["#282b8f"]}
-        overflow={["hidden"]}
-      > */}
       {showCarasol ? (
         <Box
           position={"relative"}
@@ -90,7 +78,7 @@ const SelectResume = () => {
                       "left",
                     ]}
                   >
-                    Beautiful ready-to-use resume templates
+                    Elegant and Professional Resume Templates
                   </Text>
                   <Box
                     color={"white"}
@@ -104,17 +92,37 @@ const SelectResume = () => {
                       "left",
                     ]}
                   >
-                    Win over employers and recruiters by using one of our 18
-                    elegant, professionally-designed resume templates. Download
-                    to word or PDF.
+                   {`Make a lasting impression on potential employers with one 
+                   of our 18 beautifully designed, ready-to-use resume templates.
+                    These templates are professionally crafted to help you stand
+                     out from the competition and win over recruiters. Simply download 
+                     the template in Word or PDF format and fill in your information to
+                      create a polished and professional resume. With our easy-to-use templates, you can create
+                    a resume that showcases your skills and experiences in a visually appealing and elegant way.`}
                   </Box>
                   <Box
                     marginBottom={"60px"}
                     display={["none", "none", "none", "block", "block"]}
                   >
-                    <a className="button" href="/app/create-resume">
-                      Select Template
-                    </a>
+                    <Box mx={2}>
+                      <Link
+                        href={'/templates'}
+                        _hover={{
+                          textDecoration: 'none'
+                        }}
+                      >
+                        <CommonButton
+                          backgroundColor={"#2CACD5"}
+                          color={"whitesmoke"}
+                          fontSize={["14x", "14px", "16px", "16px", "16px"]}
+                          height={"40px"}
+                          width={"180px"}
+                          padding={"20px"}
+                          borderRadius={"5px"}
+                          title={"Select Template"}
+                        />
+                      </Link>
+                    </Box>
                   </Box>
                 </Box>
                 <Box className="resume-templates__trustpilot">
@@ -151,22 +159,12 @@ const SelectResume = () => {
               className={"resume-templates__slider-wrapper"}
               left={["44%", "44%", "44%", "48%", "44%"]}
             >
-              {/* <Box
-                onClick={() => setShowCarasol(!showCarasol)}
-                _hover={{
-                  cursor: "pointer",
-                }}
-                display={["none", "none", "none", "block", "block"]}
-              >
-                <ArrowLeftIcon />
-              </Box> */}
               <Box
                 className={"resume-templates__slider-container"}
                 width={"1406px"}
                 display={"flex"}
                 flexDirection={"column"}
                 justifyContent={"center"}
-                // alignItems={"center"}
               >
                 <Carasol />
               </Box>

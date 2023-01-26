@@ -26,6 +26,7 @@
   margin: 0 !important;
 }
 .name {
+  color: #2a78ab;
   font-size: 50px;
   font-weight: 700;
   text-align: left;
@@ -74,6 +75,7 @@
   margin-top: 4px !important;
 }
 .profession {
+  color: #2a78ab;
   font-size: 25px;
   font-weight: 700;
   text-align: left;

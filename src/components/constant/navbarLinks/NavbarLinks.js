@@ -8,7 +8,7 @@ export const NAV_ITEMS = [
       {
         label: "Resume Builder",
         subLabel: "Use our builder to create a resume in 5 minutes.",
-        href: "/ResumeBuild",
+        href: "/resume-build",
       },
       {
         label: "Resume Templates",
@@ -18,22 +18,22 @@ export const NAV_ITEMS = [
       {
         label: "Resume Examples",
         subLabel: "See perfect resume examples that get you jobs.",
-        href: "#",
+        href: "/resume-examples",
       },
-      {
-        label: "Resume Format",
-        subLabel: "Choose the right resume format for your needs.",
-        href: "/blog/resumeFormats",
-      },
+      // {
+      //   label: "Resume Format",
+      //   subLabel: "Choose the right resume format for your needs.",
+      //   href: "/blog/resume-formats",
+      // },
       {
         label: "How to Write a Resume",
         subLabel: "Learn how to write a resume that lands you jobs.",
-        href: "/ResumeBuild",
+        href: "/write-resume",
       },
       {
         label: "Resume Help",
         subLabel: "Use our expert guides to improve your resume writing.",
-        href: "/ResumeHelp",
+        href: "/help/resume-help",
       },
     ],
   },
@@ -110,20 +110,34 @@ export const NAV_ITEMS = [
   //     ],
   // },
   {
-    label: "Job Search",
-    href: "#",
+    label: "Resume Help",
+    subLabel: "Use our expert guides to improve your resume writing.",
+    href: "/help/resume-help",
   },
   {
-    label: "Job Interviews",
-    href: "#",
+    label: "Resume Format",
+    subLabel: "Choose the right resume format for your needs.",
+    href: "/blog/resume-formats",
   },
   {
-    label: "Career Advice",
-    href: "#",
+    label: "Blogs",
+    href: "/blog",
   },
+  // {
+  //   label: "Job Search",
+  //   href: "#",
+  // },
+  // {
+  //   label: "Job Interviews",
+  //   href: "#",
+  // },
+  // {
+  //   label: "Career Advice",
+  //   href: "#",
+  // },
   {
     label: "About",
-    href: "/About",
+    href: "/about-us",
   },
 ];
 

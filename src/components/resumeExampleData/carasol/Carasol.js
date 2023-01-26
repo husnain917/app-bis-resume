@@ -36,12 +36,13 @@ const Carasol = () => {
         <ArrowLeftIcon />
       </Box>
       <Swiper
-        // id="selectResume"
+        id="selectResume"
         spaceBetween={15}
         grabCursor
         initialSlide={1}
         centeredSlides={true}
         loop
+        dots={true}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -49,23 +50,27 @@ const Carasol = () => {
         modules={[Pagination]}
         breakpoints={{
           100: {
-            slidesPerView: 1,
-            pagination: true,
-            spaceBetween: 2,
-          },
-          390: {
             slidesPerView: 2,
             pagination: true,
             spaceBetween: 1,
+            dots: false,
+          },
+          390: {
+            slidesPerView: 3,
+            pagination: false,
+            spaceBetween: 1,
+            dots: false,
           },
           786: {
-            slidesPerView: 3,
-            pagination: true,
-            spaceBetween: 1,
+            slidesPerView: 2,
+            pagination: false,
+            spaceBetween: 2,
+            dots: false,
           },
           992: {
             slidesPerView: 3,
             spaceBetween: 1,
+            dots: false,
           },
           1300: {
             slidesPerView: 3,
@@ -84,7 +89,7 @@ const Carasol = () => {
                 key={index}
                 bg={"whitesmoke"}
                 maxW={"395px"}
-                height={"520px"}
+                height={["350px", "400px", "520px", "520px", "520px"]}
                 //   padding={"5"}
                 borderRadius={"10"}
                 _hover={{
@@ -98,9 +103,9 @@ const Carasol = () => {
                     <Image
                       src={template.src}
                       alt={template.alt}
-                      height={["520px"]}
-                      minW={["395px", "395px", "395px", "395px", "395px"]}
-                      maxW={["395px", "395px", "395px", "395px", "395px"]}
+                      height={["350px", "400px", "520px", "520px", "520px"]}
+                      minW={["280px", "350px", "395px", "395px", "395px"]}
+                      maxW={["280px", "350px", "395px", "395px", "395px"]}
                     />
                   </Link>
                 </Box>
@@ -111,7 +116,7 @@ const Carasol = () => {
       </Swiper>
       <Box
         className={"resume-templates__slider-button"}
-        left={["35%", "28%", "25%", "23%", "23%"]}
+        left={["41%", "28%", "25%", "23%", "23%"]}
         opacity={["1", "1", "1", "0", "0"]}
         onClick={() => swiperRef.current.slidePrev()}
       >
@@ -119,7 +124,7 @@ const Carasol = () => {
       </Box>
       <Box
         className={"resume-templates__slider-button"}
-        right={["35%", "28%", "25%", "23%", "23%"]}
+        right={["39%", "30%", "25%", "23%", "23%"]}
         opacity={["1", "1", "1", "0", "0"]}
         onClick={() => swiperRef.current.slideNext()}
       >

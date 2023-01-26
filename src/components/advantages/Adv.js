@@ -44,8 +44,10 @@ export default function Adv({
           {advNum}
         </Text>
         <Text
+          className="sub-heading"
           color="#002D6B"
-          fontSize={["0.5rem", "0.8rem", "1.2rem", "1.2rem", "1.2rem", "2rem"]}
+          fontSize={["0.5rem", "0.8rem", "1rem", "1.4rem", "1.4rem"]}
+          lineHeight={"30px"}
           fontWeight="bold"
           pl="10px"
         >
@@ -67,22 +69,24 @@ export default function Adv({
           borderBottomLeftRadius="12px"
           bgColor="white"
           textAlign="left"
-          fontSize={["0.5rem", "0.8rem", "0.8rem", "0.8rem", "0.8rem", "1.5em"]}
+          className={"small-text"}
+          fontSize={["0.5rem", "0.8rem", "0.9em", "1.1em", "1.1em"]}
           pl="5%"
           pr="5%"
           pb="3%"
           pt="2%"
+          lineHeight={["14px", "18px", "18px", "22px", "22px"]}
         >
           {advDesc}
         </Text>
         <Box mt="3%">
-        <Line
+          <Line
             percent={toastWidth}
             strokeWidth={1}
             strokeColor="#FF8873"
             className={styles.toastLine}
           />
-        {/* <ProgressBar completed={toastWidth} bgColor="#FF8873" height="5px"  /> */}
+          {/* <ProgressBar completed={toastWidth} bgColor="#FF8873" height="5px"  /> */}
         </Box>
       </Box>
     </div>

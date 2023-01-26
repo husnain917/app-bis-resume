@@ -25,17 +25,20 @@ export default function Advantages() {
     setDisplay("block");
     setIsTabActive(index);
   };
-
   useEffect(() => {
     const progressBar = setInterval(() => {
-      setToastWidth((prev) => (prev - 25) % 100);
-    }, 2000);
+      if (toastWidth < 100) {
+        setToastWidth((prev) => prev + 0.1);
+      }
+    });
 
     const interval = setInterval(() => {
+      setToastWidth(0);
       setIsTabActive((prev) => (prev + 1) % data.length);
-    }, 8000);
+    }, 10000);
   }, []);
 
+  const imageSrc = toastWidth >= 100 ? isTabActive : isTabActive - 1;
   return (
     <>
       <Box bgColor="#F6F5F0">
@@ -49,7 +52,7 @@ export default function Advantages() {
           p="10px"
           className={"sub-heading"}
         >
-          Advantages of Using My Perfect BisResume
+          Discover the Advantages of Using My BisResume
         </Text>
         {width > 767 ? (
           <Box
@@ -74,6 +77,7 @@ export default function Advantages() {
                 src={data[isTabActive].imgSrc}
                 w="100%"
                 h={["90vh", "90vh", "auto", "auto", "auto"]}
+                alt="will show soon"
               />
             </Box>
             <Box w={["100%", "100%", "100%", "50%"]} mt="2.5%">

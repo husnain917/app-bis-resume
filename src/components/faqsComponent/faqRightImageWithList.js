@@ -13,8 +13,6 @@ const FaqRightImageWithList = ({
   heading,
   text1,
   text2,
-  text3,
-  text4,
   item1,
   item2,
   item3,
@@ -22,7 +20,6 @@ const FaqRightImageWithList = ({
   item5,
   item6,
   item7,
-  item8,
   image,
 }) => {
   return (
@@ -39,8 +36,8 @@ const FaqRightImageWithList = ({
         ]}
         display={["flex", "flex", "grid", "grid", "grid", "grid", "grid"]}
         flexDirection={["column-reverse"]}
-        marginInlineStart={["60px", "60px", "60px", "35px", "40px"]}
-        marginInlineEnd={["60px", "60px", "60px", "35px", "40px"]}
+        marginInlineStart={["20px", "40px", "60px", "35px", "40px"]}
+        marginInlineEnd={["20px", "40px", "60px", "35px", "40px"]}
       >
         <GridItem
           pl="2"
@@ -48,17 +45,28 @@ const FaqRightImageWithList = ({
           position="relative"
           // className="small-text"
         >
-          <Text fontSize={["2em"]} fontWeight="700" className="sub-heading">
+          <Text
+            fontSize={["1.4em", "1.4em", "1.9em", "1.9em", "1.9em"]}
+            lineHeight={["30px", "30px", "30px", "30px", "30px"]}
+            className="sub-heading"
+          >
             {heading}
           </Text>
           <Text
             fontSize={["1em", "1em", "1em", "1.1em", "1.1em", "1.3em"]}
             my={4}
+            lineHeight={["23px", "24px", "30px", "30px", "30px"]}
+            className={"small-text"}
           >
             {" "}
             {text1}
           </Text>
-          <UnorderedList ml={2} fontSize={"1em"}>
+          <UnorderedList
+            ml={2}
+            fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
+            lineHeight={["20px", "20px", "24px", "24px", "24px"]}
+            className={"medium-text"}
+          >
             <ListItem ml="3" mb={0.5}>
               {item1}
             </ListItem>
@@ -75,11 +83,17 @@ const FaqRightImageWithList = ({
           <Text
             fontSize={["1em", "1em", "1em", "1.1em", "1.1em", "1.3em"]}
             my={4}
-            fontWeight="400"
+            lineHeight={["23px", "24px", "30px", "30px", "30px"]}
+            className={"small-text"}
           >
             {text2}
           </Text>
-          <UnorderedList ml={2} fontSize={"1em"}>
+          <UnorderedList
+            ml={2}
+            className={"medium-text"}
+            fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
+            lineHeight={["20px", "20px", "24px", "24px", "24px"]}
+          >
             <ListItem ml="3" mb={0.5}>
               {item5}
             </ListItem>

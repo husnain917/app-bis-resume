@@ -23,8 +23,15 @@ import CustomBtn from "./CustomBtn";
 import { data } from "./data";
 import { CloseIcon, ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useDispatch } from "react-redux";
-import { doGoogleLogin, doLogin, doSignUp, loginMagicUser, passwordReset } from "../../../store/actions/AuthAction";
-import { ToastContainer } from 'react-toastify';
+import {
+  doGoogleLogin,
+  doLogin,
+  doSignUp,
+  loginMagicUser,
+  modalClose,
+  passwordReset,
+} from "../../../store/actions/AuthAction";
+import { ToastContainer } from "react-toastify";
 import { ToastSuccess } from "../Toast";
 
 const inCorrect = {
@@ -34,43 +41,53 @@ const inCorrect = {
   textAlign: "left",
 };
 
-export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active, setIsActive }) {
-  const [fieldActive, setFieldActive] = useState(false)
-  const [isRegister, setIsRegister] = useState(true);
-  const [fName, setFName] = useState('');
+export default function AuthModal({
+  isModalOpen,
+  // setIsModalOpen,
+  handle,
+}) {
 
-  const [lName, setLName] = useState('');
-  const [email, setEmail] = useState('');
+  const [fieldActive, setFieldActive] = useState(false);
+  const [isRegister, setIsRegister] = useState(true);
+  const [fName, setFName] = useState("");
+
+  const [lName, setLName] = useState("");
+  const [email, setEmail] = useState("");
   const [terms, setTerms] = useState(false);
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
   const [resetPass, setResetPass] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [loadingsignup, setLoadingsignup] = useState(false)
-  const [resetLoading, setResetLoading] = useState(false)
-  const [err, setErr] = useState({ inputId: 0, inputField: '', fieldErr: '' })
-  const [show, setShow] = React.useState(true)
-  const handleClick = () => setShow(!show)
-  const dispatch = useDispatch()
-  const [user, setUser] = useState(null)
-
-  const magicLogin = async () => {
-    if (email !== '') {
-      dispatch(loginMagicUser(email, setUser, setLoading, setIsModalOpen))
-    }
-    else {
-      setErr({ inputField: 'This field is required', inputId: 2 })
-    }
+  const [loadingsignup, setLoadingsignup] = useState(false);
+  const [resetLoading, setResetLoading] = useState(false);
+  const [err, setErr] = useState({ inputId: 0, inputField: "", fieldErr: "" });
+  const [show, setShow] = React.useState(true);
+  const handleClick = () => setShow(!show);
+  const dispatch = useDispatch();
+  const [user, setUser] = useState(null);
+  const ismodalClose = async () => {
+    dispatch(modalClose());
   }
+  let active = +localStorage.getItem(
+    "active"
+  )
+  console.log("sami", active)
+  const magicLogin = async () => {
+    if (email !== "") {
+      dispatch(loginMagicUser(email, setUser, setLoading));
+    } else {
+      setErr({ inputField: "This field is required", inputId: 2 });
+    }
+  };
 
   const validateEmail = (email) => {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-z  A-Z]{2,}))$/;
+    var re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-z  A-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   };
 
-
   const onChangeHandler = (index) => {
-    setFieldActive(false)
-    setIsActive(index);
+    setFieldActive(false);
+    localStorage.setItem("active", index);
     if (isRegister) {
       return setIsRegister(false);
     } else {
@@ -79,20 +96,26 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
   };
 
   const signUp = () => {
-    if (fName === '') {
-      setErr({ inputField: 'This field is required', inputId: 5 })
-    } else if (lName === '') {
-      setErr({ inputField: 'This field is required', inputId: 6 });
-    } else if (email === '') {
-      setErr({ inputField: 'This field is required', inputId: 7 })
+    if (fName === "") {
+      setErr({ inputField: "This field is required", inputId: 5 });
+    } else if (lName === "") {
+      setErr({ inputField: "This field is required", inputId: 6 });
+    } else if (email === "") {
+      setErr({ inputField: "This field is required", inputId: 7 });
     } else if (validateEmail(email) === false) {
-      setErr({ inputField: 'This email is not valid', inputId: 8 });
-    } else if (password === '') {
-      setErr({ inputField: 'This field is required', inputId: 9 })
+      setErr({ inputField: "This email is not valid", inputId: 8 });
+    } else if (password === "") {
+      setErr({ inputField: "This field is required", inputId: 9 });
     } else if (password.length < 8) {
-      setErr({ inputField: 'The password should have at least 8 characters', inputId: 10 })
+      setErr({
+        inputField: "The password should have at least 8 characters",
+        inputId: 10,
+      });
     } else if (!terms) {
-      setErr({ inputField: 'Accept the terms and policies before use', inputId: 11 })
+      setErr({
+        inputField: "Accept the terms and policies before use",
+        inputId: 11,
+      });
     } else {
       const data = {
         firstName: fName,
@@ -100,61 +123,62 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
         email: email,
         password: password,
         terms: terms,
-      }
-      dispatch(doSignUp(data, setErr, setIsModalOpen, setLoadingsignup))
-      setErr({ inputField: '', inputId: 0 })
+      };
+      dispatch(doSignUp(data, setErr, setLoadingsignup,err.inputId));
+      setErr({ inputField: "", inputId: 0 });
     }
-  }
+  };
 
   const login = () => {
-    if (email === '') {
-      setErr({ inputField: 'This field is required', inputId: 1 })
+    if (email === "") {
+      setErr({ inputField: "This field is required", inputId: 1 });
     } else if (validateEmail(email) === false) {
-      setErr({ inputField: 'This email is not valid', inputId: 2 });
-    } else if (password === '') {
-      setErr({ inputField: 'This field is required', inputId: 3 })
+      setErr({ inputField: "This email is not valid", inputId: 2 });
+    } else if (password === "") {
+      setErr({ inputField: "This field is required", inputId: 3 });
     } else if (password.length < 8) {
-      setErr({ inputField: 'The password should have at least 8 characters', inputId: 4 })
-    }
-    else {
+      setErr({
+        inputField: "The password should have at least 8 characters",
+        inputId: 4,
+      });
+    } else {
       const data = {
         email: email,
-        password: password
-      }
-      dispatch(doLogin(data, setLoading, setErr, setIsModalOpen))
-      setErr({ inputField: '', inputId: 0 })
+        password: password,
+      };
+      dispatch(doLogin(data, setLoading, setErr));
+      setErr({ inputField: "", inputId: 0 });
     }
-  }
+  };
   const loginWithGoogle = () => {
-    if (!terms) {
-      setErr({ inputField: 'Accept the terms and policies before use', inputId: 11 })
-    } else {
-      dispatch(doGoogleLogin(terms, setLoading, setErr, setIsModalOpen))
-    }
-  }
+    // if (!terms) {
+    //   setErr({ inputField: 'Accept the terms and policies before use', inputId: 11 })
+    // } else {
+    dispatch(doGoogleLogin(terms, setLoading, setErr));
+    // }
+  };
 
   const resetPassword = () => {
-    if (email === '') {
-      setErr({ inputField: 'This field is required', inputId: 12 })
+    if (email === "") {
+      setErr({ inputField: "This field is required", inputId: 12 });
     } else if (validateEmail(email) === false) {
-      setErr({ inputField: 'This email is not valid', inputId: 12 });
+      setErr({ inputField: "This email is not valid", inputId: 12 });
     } else {
-      dispatch(passwordReset(setLoading, setErr, email))
-      setResetLoading(true)
+      dispatch(passwordReset(setLoading, setErr, email));
+      setResetLoading(true);
       setTimeout(() => {
-        setResetLoading(false)
-        ToastSuccess("Mail sent successfully")
-      }, 3000)
+        setResetLoading(false);
+        ToastSuccess("Mail sent successfully");
+      }, 3000);
     }
-  }
-
-
+  };
 
   return (
     <>
-      <ToastContainer />
-      <Modal isCentered isOpen={isModalOpen} size={'full'}>
-        <ModalOverlay />
+      {/* <ToastContainer /> */}
+      <Modal isOpen={isModalOpen} onClose={ismodalClose} size={"ful"} isCentered>
+        <ModalOverlay bg='blackAlpha.300'
+          backdropFilter='blur(1px) hue-rotate(90deg)' />
         <ModalContent
           w={["100%", "100%", "100%", "70%", "60%"]}
           borderRadius="10px"
@@ -166,11 +190,23 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
             display="flex"
             h={["70%", "85%", "100%", "100%", "100%"]}
           >
-            <Box w={[0, 0, 0, "50%"]} h="100%" >
+            <Box w={[0, 0, 0, "50%"]} h="100%" overflow='hidden'>
               {!isRegister ? (
-                <Image src="/signup.png" w="100%" h="100%" borderRadius={10} />
+                <Image
+                  src="/signup.png"
+                  w="100%"
+                  h="100%"
+                  alt="will load soon"
+                  transform="scale(1.4,1.1)"
+                />
               ) : (
-                <Image src="/signin.png" w="100%" h="100%" borderRadius={10} />
+                <Image
+                  src="/signin.png"
+                  w="100%"
+                  h="100%"
+                  alt="will load soon"
+                  transform="scale(1.4,1.1)"
+                />
               )}
             </Box>
 
@@ -178,15 +214,20 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
               <CloseIcon
                 w={8}
                 h={8}
+                position="absolute"
+                right="10px"
+                top="10px"
                 color="white"
-                position={"absolute"}
-                right={4}
-                top={2}
                 bgColor="#E1E1E1"
                 p="5px"
                 ml="7%"
                 borderRadius="100px"
-                onClick={() => { setIsModalOpen(false); setFieldActive(false); setErr({ inputField: '', inputId: 0 }), setResetPass(false) }}
+                _hover={{ color: " white", borderRadius: "5px" }}
+                onClick={() => {
+                  ismodalClose()
+                  setFieldActive(false);
+                  setErr({ inputField: "", inputId: 0 }), setResetPass(false);
+                }}
                 className={styles.modalBtn}
               />
               <Box
@@ -194,63 +235,61 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                 justifyContent={resetPass ? "space-between" : "center"}
                 alignItems="center"
                 mt="7%"
-                pl={'7%'}
-                pr={'7%'}
+                pl={"7%"}
+                pr={"7%"}
               >
-                {
-                  resetPass ?
-                    <Text
-                      onClick={() => setResetPass(false)}
-                      color="#2a69cb"
-                      fontSize={16}
-                      fontWeight={500}
-                      cursor='pointer'
-                      mt={2}
-                      _hover={{
-                        textDecoration: "underline"
-                      }}
-                    > {'< Back to Sign in'}
-                    </Text>
-                    :
-                    <Box
-                      display="flex"
-                      // w={[,,,"70%"]}
-                      bgColor="#E1E1E1"
-                      borderRadius="15px"
-                    >
-
-                      {data?.map((btn, index) => {
-                        return (
-                          <div key={index}>
-                            <AuthButton
-                              btn={btn}
-                              onChangeHandler={() => onChangeHandler(btn.id)}
-                              bgColor={active === btn.id ? "#00C8AA" : "#E1E1E1"}
-                              color={active === btn.id ? "white" : "black"}
-                            />
-                          </div>
-                        );
-                      })}
-                    </Box>
-                }
-
-
+                {resetPass ? (
+                  <Text
+                    onClick={() => setResetPass(false)}
+                    color="#2a69cb"
+                    fontSize={16}
+                    fontWeight={500}
+                    cursor="pointer"
+                    mt={2}
+                    _hover={{
+                      textDecoration: "underline",
+                    }}
+                  >
+                    {" "}
+                    {"< Back to Sign in"}
+                  </Text>
+                ) : (
+                  <Box
+                    display="flex"
+                    // w={[,,,"70%"]}
+                    bgColor="#E1E1E1"
+                    borderRadius="15px"
+                  >
+                    {data?.map((btn, index) => {
+                      return (
+                        <div key={index}>
+                          <AuthButton
+                            btn={btn}
+                            onChangeHandler={() => onChangeHandler(btn.id)}
+                            bgColor={+active === btn.id ? "#00C8AA" : "#E1E1E1"}
+                            color={+active === btn.id ? "white" : "black"}
+                          />
+                        </div>
+                      );
+                    })}
+                  </Box>
+                )}
               </Box>
 
-              <Box ml="7%" mr="7%" mt={err.fieldErr !== '' ? "3%" : "6%"}>
-                {
-                  err.fieldErr !== '' &&
+              <Box ml="7%" mr="7%" mt={err.fieldErr !== "" ? "3%" : "6%"}>
+                {err.fieldErr !== "" && (
                   <p
                     style={{
                       fontSize: "0.8rem",
-                      fontWeight: 'bold',
+                      fontWeight: "bold",
                       color: "crimson",
                       textAlign: "center",
-                      marginBottom: '3%'
-                    }}>
+                      marginBottom: "3%",
+                    }}
+                  >
                     {err.fieldErr}
                   </p>
-                }
+                )}
                 {active === 0 ? (
                   <>
                     <Stack direction="row">
@@ -263,18 +302,12 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                           h="50px"
                           pt="10px"
                           pb="10px"
-                          _hover={{
-                            color: "black",
-                          }}
                           value={fName}
                           onChange={(e) => setFName(e.target.value)}
                         />
-                        {
-                          (err.inputField !== '' && err.inputId === 5) &&
-                          <span style={inCorrect}>
-                            {err.inputField}
-                          </span>
-                        }
+                        {err.inputField !== "" && err.inputId === 5 && (
+                          <span style={inCorrect}>{err.inputField}</span>
+                        )}
                       </div>
                       <div>
                         <Input
@@ -285,82 +318,71 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                           h="50px"
                           pt="10px"
                           pb="10px"
-                          _hover={{
-                            color: "black",
-                          }}
                           value={lName}
                           onChange={(e) => setLName(e.target.value)}
                         />
-                        {
-                          (err.inputField !== '' && err.inputId === 6) &&
-                          <span style={inCorrect}>
-                            {err.inputField}
-                          </span>
-                        }
+                        {err.inputField !== "" && err.inputId === 6 && (
+                          <span style={inCorrect}>{err.inputField}</span>
+                        )}
                       </div>
                     </Stack>
                     <Input
                       variant="outline"
                       placeholder="Email"
                       focusBorderColor="#00C8AA"
-                      borderColor={err.inputId === 7 || err.inputId === 8 ? 'red' : '#E1E1E1'}
+                      borderColor={
+                        err.inputId === 7 || err.inputId === 8
+                          ? "red"
+                          : "#E1E1E1"
+                      }
                       bgColor="#E1E1E1"
                       w="100%"
                       h="50px"
                       pt="10px"
                       pb="10px"
                       mt="3%"
-                      _hover={{
-                        color: "black",
-                      }}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
-                    {
-                      (err.inputField !== '' && err.inputId === 7 || err.inputField !== '' && err.inputId === 8) &&
-                      <span style={inCorrect}>
-                        {err.inputField}
-                      </span>
-                    }
+                    {((err.inputField !== "" && err.inputId === 7) ||
+                      (err.inputField !== "" && err.inputId === 8)) && (
+                        <span style={inCorrect}>{err.inputField}</span>
+                      )}
                     <InputGroup>
-
                       <Input
                         variant="outline"
                         focusBorderColor="#00C8AA"
-                        borderColor={err.inputId === 9 || err.inputId === 10 ? 'red' : '#E1E1E1'}
+                        borderColor={
+                          err.inputId === 9 || err.inputId === 10
+                            ? "red"
+                            : "#E1E1E1"
+                        }
                         placeholder="Password"
                         bgColor="#E1E1E1"
-                        type={!show ? 'text' : 'password'}
+                        type={!show ? "text" : "password"}
                         w="100%"
                         mt="10px"
                         h="50px"
                         pt="10px"
                         pb="10px"
-                        _hover={{
-                          color: "black",
-                        }}
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                       />
                       <InputRightElement
                         style={{ marginTop: 15, cursor: "pointer" }}
                       >
-                        {
-                          show ?
-                            <ViewIcon color='gray' onClick={handleClick} />
-                            :
-                            <ViewOffIcon color='gray' onClick={handleClick} />
-
-                        }
+                        {show ? (
+                          <ViewIcon color="gray" onClick={handleClick} />
+                        ) : (
+                          <ViewOffIcon color="gray" onClick={handleClick} />
+                        )}
                       </InputRightElement>
                     </InputGroup>
 
-                    {
-                      (err.inputField !== '' && err.inputId === 9 || err.inputField !== '' && err.inputId === 10) &&
-                      <span style={inCorrect}>
-                        {err.inputField}
-                      </span>
-                    }
+                    {((err.inputField !== "" && err.inputId === 9) ||
+                      (err.inputField !== "" && err.inputId === 10)) && (
+                        <span style={inCorrect}>{err.inputField}</span>
+                      )}
                     <Checkbox
                       size="lg"
                       mt="5%"
@@ -371,19 +393,16 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                     >
                       I Consent to the terms & Privacy Policy
                     </Checkbox>
-                    {
-                      (err.inputField !== '' && err.inputId === 11) &&
-                      <span style={inCorrect}>
-                        {err.inputField}
-                      </span>
-                    }
+                    {err.inputId === 11 && (
+                      <span style={inCorrect}>{err.inputField}</span>
+                    )}
                   </>
                 ) : resetPass ? (
                   <>
                     <Input
                       variant="outline"
                       focusBorderColor="#00C8AA"
-                      borderColor={err.inputId === 12 ? 'red' : '#E1E1E1'}
+                      borderColor={err.inputId === 12 ? "red" : "#E1E1E1"}
                       placeholder="Email"
                       bgColor="#E1E1E1"
                       mt={"100px"}
@@ -391,103 +410,88 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                       h="50px"
                       pt="10px"
                       pb="10px"
-                      _hover={{
-                        color: "black",
-                      }}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
-                    {
-                      (err.inputField !== '' && err.inputId === 12) &&
-                      <span style={inCorrect}>
-                        {err.inputField}
-                      </span>
-                    }
+                    {err.inputField !== "" && err.inputId === 12 && (
+                      <span style={inCorrect}>{err.inputField}</span>
+                    )}
                   </>
-                )
-                  :
-                  (
-                    <>
-                      <Input
-                        variant="outline"
-                        focusBorderColor="#00C8AA"
-                        borderColor={err.inputId === 1 || err.inputId === 2 ? 'red' : '#E1E1E1'}
-                        placeholder="Email"
-                        bgColor="#E1E1E1"
-                        w="100%"
-                        h="50px"
-                        pt="10px"
-                        pb="10px"
-                        _hover={{
-                          color: "black",
-                          fontSize: "18px",
-                        }}
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                      {
-                        (err.inputField !== '' && err.inputId === 1 || err.inputField !== '' && err.inputId === 2) &&
-                        <span style={inCorrect}>
-                          {err.inputField}
-                        </span>
+                ) : (
+                  <>
+                    <Input
+                      variant="outline"
+                      focusBorderColor="#00C8AA"
+                      borderColor={
+                        err.inputId === 1 || err.inputId === 2
+                          ? "red"
+                          : "#E1E1E1"
                       }
-                      {
-                        fieldActive &&
-                        <>
-                          <InputGroup>
-                            <Input
-                              variant="outline"
-                              focusBorderColor="#00C8AA"
-                              borderColor={err.inputId === 3 || err.inputId === 4 ? 'red' : '#E1E1E1'}
-                              placeholder="Password"
-                              bgColor="#E1E1E1"
-                              type={!show ? 'text' : 'password'}
-                              w="100%"
-                              mt="10px"
-                              h="50px"
-                              pt="10px"
-                              pb="10px"
-                              _hover={{
-                                color: "black",
-                                fontSize: "18px",
-                              }}
-                              value={password}
-                              onChange={(e) => setPassword(e.target.value)}
-                            />
-                            <InputRightElement
-                              style={{ marginTop: 15, cursor: "pointer" }}
-                            >
-                              {
-                                show ?
-                                  <ViewIcon color='gray' onClick={handleClick} />
-                                  :
-                                  <ViewOffIcon color='gray' onClick={handleClick} />
-
-                              }
-                            </InputRightElement>
-                          </InputGroup>
-                          {
-                            (err.inputField !== '' && err.inputId === 3 || err.inputField !== '' && err.inputId === 4) &&
-                            <span style={inCorrect}>
-                              {err.inputField}
-                            </span>
-                          }
-                          <Text
-                            onClick={() => setResetPass(true)}
-                            color="#2a69cb"
-                            fontSize={16}
-                            fontWeight={500}
-                            cursor='pointer'
-                            mt={2}
-                            _hover={{
-                              textDecoration: "underline"
-                            }}
+                      placeholder="Email"
+                      bgColor="#E1E1E1"
+                      w="100%"
+                      h="50px"
+                      pt="10px"
+                      pb="10px"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    {((err.inputField !== "" && err.inputId === 1) ||
+                      (err.inputField !== "" && err.inputId === 2)) && (
+                        <span style={inCorrect}>{err.inputField}</span>
+                      )}
+                    {fieldActive && (
+                      <>
+                        <InputGroup>
+                          <Input
+                            variant="outline"
+                            focusBorderColor="#00C8AA"
+                            borderColor={
+                              err.inputId === 3 || err.inputId === 4
+                                ? "red"
+                                : "#E1E1E1"
+                            }
+                            placeholder="Password"
+                            bgColor="#E1E1E1"
+                            type={!show ? "text" : "password"}
+                            w="100%"
+                            mt="10px"
+                            h="50px"
+                            pt="10px"
+                            pb="10px"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                          />
+                          <InputRightElement
+                            style={{ marginTop: 15, cursor: "pointer" }}
                           >
-                            Request password change
-
-                          </Text>
-                        </>
-                      }
+                            {show ? (
+                              <ViewIcon color="gray" onClick={handleClick} />
+                            ) : (
+                              <ViewOffIcon color="gray" onClick={handleClick} />
+                            )}
+                          </InputRightElement>
+                        </InputGroup>
+                        {((err.inputField !== "" && err.inputId === 3) ||
+                          (err.inputField !== "" && err.inputId === 4)) && (
+                            <span style={inCorrect}>{err.inputField}</span>
+                          )}
+                        <Text
+                          onClick={() => setResetPass(true)}
+                          color="#2a69cb"
+                          fontSize={16}
+                          fontWeight={500}
+                          cursor="pointer"
+                          mt={2}
+                          _hover={{
+                            textDecoration: "underline",
+                          }}
+                        >
+                          Request password change
+                        </Text>
+                      </>
+                    )}
+                    <Box>
                       <Checkbox
                         size="lg"
                         mt="5%"
@@ -498,14 +502,16 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                       >
                         Remember me
                       </Checkbox>
-                    </>
-                  )}
+                    </Box>
+                  </>
+                )}
               </Box>
               {/* Next Buttons */}
-              <Box mt="5%">
+              <Box mt="3%">
                 {active === 0 ? (
                   <>
                     <CustomBtn
+                      clr="green"
                       title={loadingsignup ? "Loading..." : "Register Now"}
                       bgColor="#00C8AA"
                       color="white"
@@ -516,7 +522,10 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                   </>
                 ) : resetPass ? (
                   <CustomBtn
-                    title={resetLoading ? "Loading..." : "Request Password Change"}
+                    clr="green"
+                    title={
+                      resetLoading ? "Loading..." : "Request Password Change"
+                    }
                     bgColor="#00C8AA"
                     color="white"
                     blue={true}
@@ -525,71 +534,79 @@ export default function AuthModal({ isModalOpen, setIsModalOpen, handle, active,
                   />
                 ) : (
                   <>
-                    <Text align="center" fontSize="14px" mt="9%" p="5px">
+                    <Text align="center" fontSize="14px" mt="4%" p="5px">
                       We will send you a one-time sign in link.
                     </Text>
-                    {
-                      fieldActive &&
+                    {fieldActive && (
                       <CustomBtn
-                        title={loading ? 'loading...' : "SignIn"}
+                        clr="green"
+                        title={loading ? "loading..." : "Sign In"}
                         bgColor="#00C8AA"
                         color="white"
                         blue={true}
                         mt="5%"
                         onClickHandler={login}
                       />
-                    }
+                    )}
                     <CustomBtn
-                      title={loading ? "loading..." : "SignIn With Magic Link"}
+                      clr="green"
+                      title={loading ? "loading..." : "Sign In With Magic Link"}
                       bgColor={fieldActive ? "#E1E1E1" : "#00C8AA"}
                       color="white"
                       blue={true}
                       onClickHandler={magicLogin}
                       mt="5%"
                     />
-                    {
-                      !fieldActive &&
+                    {!fieldActive && (
                       <CustomBtn
+                        clr="grey"
                         title="Switch to password"
                         bgColor="#E1E1E1"
                         color="grey"
                         mt="5%"
                         onClickHandler={() => setFieldActive(true)}
                       />
-                    }
+                    )}
                   </>
                 )}
-                {resetPass ? (
-                  <></>
-                )
-                  :
-                  active === 0 ?
-                    (
-                      <>
-                        <Text fontSize="16px" align="center" mt="3%">
-                          Or Sign In With:
-                        </Text>
+                {isRegister ? (
+                  <>
+                    {
+                      !fieldActive &&
+                      <Text fontSize="16px" align="center" mt="3%">
+                        Or Sign Up With:
+                      </Text>
+                    }
+                  </>
+                ) : (
+                  <>
 
-                        <Button
-                          leftIcon={<FaGoogle />}
-                          variant="solid"
-                          bgColor="#E1E1E1"
-                          color="grey"
-                          w="85%"
-                          ml="8%"
-                          borderRadius="100px"
-                          fontSize="16px"
-                          mt="3%"
-                          className={styles.modalBtn}
-                          onClick={() => loginWithGoogle()}
-                        >
-                          Google
-                        </Button>
-                      </>
-                    ) :
-                    ''}
+                    <Text fontSize="16px" align="center" mt="3%">
+                      Or Sign In With:
+                    </Text>
 
 
+                  </>
+                )}
+                {
+                  !fieldActive &&
+                  <Button
+                    leftIcon={<FaGoogle />}
+                    variant="solid"
+                    bgColor="#E1E1E1"
+                    color="grey"
+                    w="85%"
+                    ml="8%"
+                    borderRadius="100px"
+                    fontSize="16px"
+                    mt="3%"
+                    className="buttonClass"
+                    // className={styles.modalBtn}
+                    onClick={() => loginWithGoogle()}
+                  >
+                    Google
+                  </Button>
+                }
               </Box>
             </Box>
           </Box>

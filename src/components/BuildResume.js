@@ -1,5 +1,5 @@
 import styles from "../../styles/build.module.css";
-import { Button, Box } from "@chakra-ui/react";
+import { Button, Box, Text } from "@chakra-ui/react";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import ImageBuild from "../../public/mainImageBuild.webp";
@@ -11,26 +11,19 @@ export default function BuildResume() {
     <>
       <div className={styles.ctsMain}>
         <Box id="svg-section" mt={10}></Box>
-        <h1 className={"sub-heading"}>Ready to Jump-Start Your Career</h1>
+        <Text
+          className={"sub-heading"}
+          fontSize={["24px", "24px", "30px", "36px", "36px"]}
+          lineHeight={["26px", "26px", "36px", "48px", "48px"]}
+        >
+          Ready to Jump-Start Your Career
+        </Text>
 
         <Box className={styles.ctaHr} mt={3} mb={4}></Box>
 
         <div>
           <Box mb={3}>
             <Link href="/templates">
-              {/* <Button
-                className={styles.ctaBtn}
-                bg="#2CACD5"
-                colorScheme="#2CACD5"
-                borderRadius="20px"
-                fontWeight="bold"
-                color="white"
-                rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
-                mt={5}
-                mb={1}
-              >
-                Build Your Resume
-              </Button> */}
               <CommonButton
                 fontSize={[
                   "1rem",
@@ -45,18 +38,15 @@ export default function BuildResume() {
                 backgroundColor={"#2CACD5"}
                 color={"whitesmoke"}
                 rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
-                // hoverBackgroundColor={"red"}
-                // className={"hoverEffects"}
               />
             </Link>
           </Box>
-          {/* <p className="xsmall-text">No credit card required</p> */}
         </div>
         <div></div>
       </div>
 
       <div className={styles.ctaImageDiv}>
-        <Image src={ImageBuild} />
+        <Image src={ImageBuild} alt="will load soon" />
         <div className={styles.ctaWaveBlind}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path

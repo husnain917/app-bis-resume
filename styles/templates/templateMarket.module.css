@@ -1,39 +1,25 @@
 .mainDiv {
-  background-color:white;
+  background-color: white;
   width: 100%;
-  min-height: 100vh;
-  padding-top: 8%;
-  
-  padding-left: 5%;
-
 }
 
 .innerMainDiv {
-  max-width: 900px;
-  min-width: 900px;
+  max-width: 830px;
+  min-width: 830px;
   display: flex;
-  height: 100%;
-  margin-bottom: 5%;
-  /* margin-top: 5%; */
-  justify-content: center;
-  border-width: 3px;
-  border-color:#00000023;
-
+  border: 2px solid #00000023;
+  margin: 0px 0px 20px 0px;
+  border-radius: 6px;
 }
 
 .innerMainDiv1 {
-  background-color: #ffffff;
-
-  width: 400px;
-  padding: 0 25px;
-  min-height: 100%
+  width: 340px;
+  padding: 30px 0px 0px 0px;
 }
 
 .innerMainDiv2 {
-  background-color: #ffffff;
-  width: 500px;
-  padding: 20px 40px;
-  min-height: 100%
+  width: 490px;
+  padding: 0px 40px;
 }
 
 .contactHeadingTitle {
@@ -143,7 +129,7 @@
   background-color: black;
   color: white;
   text-align: center;
-  
+
   width: 350px;
   display: flex;
   justify-content: center;
@@ -253,9 +239,9 @@
 }
 
 .skillTxt {
-  font-size: 14px;
-  font-weight: 500;
-  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000;
 
 }
 
@@ -267,7 +253,7 @@
 
 .percent {
   margin-top: 4px !important;
-  color: #ffffff;
+  color: #000000;
 }
 
 .sideMenu {
@@ -280,9 +266,10 @@
 
 
 .ContactText {
-  color: #ffffff !important;
+  color: #000000 !important;
   min-width: 280px;
   max-width: 280px;
+  font-weight: 600;
 }
 
 .skillMain {
@@ -295,7 +282,7 @@
 }
 
 .percentageStyle {
-  color: white;
+  color: #000000;
   margin-left: 5%;
 }
 
@@ -312,4 +299,18 @@
 .sideMenuBox {
   width: 15px;
   margin-left: 3px;
+}
+
+.nameStyle {
+  font-size: 2.8em;
+  font-weight: 500;
+  color: #000000;
+  background-color: transparent;
+}
+
+.profileSubTitle {
+  font-size: 1.6em;
+  font-weight: 500;
+  color: #000000;
+  background-color: transparent !important;
 }

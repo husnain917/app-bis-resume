@@ -26,12 +26,21 @@ const Section5 = () => {
         margin={"0 auto 30px"}
         padding={"0 15px"}
       >
-        <Text textAlign={"center"} fontSize={"3.4rem"}>
+        <Text
+          textAlign={"center"}
+          fontSize={["2rem", "2rem", "2.6rem", "3.4rem", "3.4rem"]}
+          className={"medium-heading1"}
+        >
           Meet our team of experts
         </Text>
-        <Text textAlign={"center"} fontSize={"18px"} mt={"20px"}>
+        <Text
+          textAlign={"center"}
+          fontSize={["16px", "16px", "18px", "18px", "18px"]}
+          mt={"20px"}
+          className={"small-text"}
+        >
           Get to know some of the passionate professionals, career experts,
-          technologists, and certified resume writers behind My Perfect Resume.
+          technologists, and certified resume writers behind BisResume.
         </Text>
       </Box>
       <Box className="cardContent">

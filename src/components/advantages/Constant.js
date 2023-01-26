@@ -1,44 +1,44 @@
 export const data = [
   {
     advNum: "1",
-    title: "Professional, customizable templates",
+    title: "Stand Out from the Crowd, Create a Professional Resume with Our Customizable Templates",
     advDesc:
-      "Stand out with My Perfect Resumes eye-catching templates! Building an impressive resume has never been easier or faster.",
+      "Stand out from the crowd and create a professional resume that showcases your skills and experience with our customizable templates. Our templates are designed to suit all styles and industries, from modern and minimalistic to classic and traditional. With our easy-to-use interface, you can personalize the template to match your experience level and the job you're applying for in no time.",
     imgSrc: "/online_cv.svg",
   },
   {
     advNum: "2",
-    title: "Expertly crafted phrases",
+    title: "Streamline Your Resume Writing with Use Our Pre-written, Industry-Specific Phrases",
     advDesc:
-      "Dont get stuck writing about your work experience. Our Resume Builder has pre-written, industry-specific bullet points to create an impressive resume.",
+      "Streamline your resume writing process and create a professional resume in seconds with our pre-written, industry-specific phrases. Written by industry experts, these phrases are tailored to the job market and will help you to showcase your skills and experience in the most effective way possible. With our easy-to-use interface, you can choose the phrases that best match your experience level and the job you're applying for. Get your resume done fast and increase your chances of getting hired.",
     imgSrc: "/illus3.png",
   },
   {
     advNum: "3",
-    title: "Popular format downloads",
+    title: "Flexible Resume Formattin, Multiple Export and Download Options",
     advDesc:
-      "Need your resume in PDF, word, or an image file? You are in control with multiple export and download options.",
+     "Flexible resume formatting is just a few clicks away with our multiple export and download options. Choose from popular formats like PDF, Word, or even an image file. The choice is yours. With our easy-to-use interface, you can export and download your resume in just a few clicks. No more struggling with complicated software or formatting. Get your resume in the format that works best for you and your job application.",
     imgSrc: "/undraw_engineering_team_a7n2.svg",
   },
   {
     advNum: "4",
-    title: "Optimize your resume",
+    title: "Maximize Your Job Chances, Optimize Your Resume with Our Expert Analysis",
     advDesc:
-      "With resume score and resume check, we will rate the strength of your resume and guide you through actionable steps to create a resume that showcases your best professional self!",
+      "Maximize your job chances and make your resume stand out with our expert analysis. Our professional team will evaluate your resume and provide you with a detailed report on how to improve its effectiveness.",
     imgSrc: "/updated_resume.svg",
   },
   {
     advNum: "5",
-    title: "Customize your resume to the job",
+    title: "Get the Job You Want, Customize Your Resume to the Job",
     advDesc:
-      "Copy and paste a job description from any listing and get a job-specific resume match score. We will guide you through tailoring your resume for the job!",
+     "When applying for a job, it's essential to have a resume that's tailored to the specific job you're applying for. Our service makes it easy to do so. Simply copy and paste a job description from any listing, and our algorithm will analyze it and provide you with a job-specific match score. This score will guide you through customizing your resume to the job. From highlighting your relevant skills and experience to emphasizing your qualifications, our customization feature will help you create a resume that is tailored to the job you want. Don't let a generic resume hold you back, take control of your job search with our resume customization service.",
     imgSrc: "/work.svg",
   },
   {
     advNum: "6",
-    title: "Up your application game",
+    title: "Level Up Your Job Application, Introducing Smart Apply",
     advDesc:
-      "With Smart Apply, we will help you find an opportunity, customize your resume, create a matching cover letter, and download your documents.",
+      "Want to take your job application to the next level? Look no further than our Smart Apply feature. With just a few clicks, we'll help you find the perfect job opportunity, customize your resume to match the job requirements, create a matching cover letter, and download your documents. Say goodbye to the hassle of juggling multiple tabs and documents, and hello to a streamlined and efficient job application process. Upgrade your job search with Smart Apply.",
     imgSrc: "/2666421.png",
   },
 ];

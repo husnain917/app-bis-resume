@@ -3,6 +3,7 @@ import { Box, Text, Button, Image, SimpleGrid } from "@chakra-ui/react";
 import { Badge } from "@chakra-ui/react";
 import Link from "next/link";
 import { useWindowSizing } from "../../../../customHooks/useWindowSizing";
+import CommonButton from "../../commonButton/CommonButton";
 
 import {
   PhoneIcon,
@@ -10,7 +11,6 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import RenderData from "./renderData/renderData";
 
 const CommonComponent = ({ data }) => {
   const [expanded, setExpanded] = useState(false);
@@ -36,17 +36,23 @@ const CommonComponent = ({ data }) => {
         paddingBottom={"20px"}
         borderBottom={"1px solid whitesmoke"}
         justifyContent={"space-between"}
-        height={"100px"}
+        height={["auto", "auto", "100px", "100px", "100px"]}
         marginBottom={"inherit"}
       >
         <Box display={"flex"}>
           <Box>
-            <Image src={data.icon || "./diamond.png"} h="3.5em" />
+            <Image
+              src={data.icon || "./diamond.png"}
+              width={"40px"}
+              height={"40px"}
+              alt="will load soon..."
+            />
           </Box>
 
           <Box
             ml="10px"
             className={"main-heading"}
+            fontSize={["17px", "17px", "30px", "1.9em", "2.5em"]}
             transition={"color .15s"}
             display={"flex"}
           >
@@ -69,7 +75,13 @@ const CommonComponent = ({ data }) => {
         <Box display={["none", "none", "flex", "flex", "flex"]}>
           {" "}
           <Box h={12} w={"40em"}>
-            <Text className="xsmall-text">
+            <Text
+              fontSize={["12px", "12px", "12px", "14px", "14px"]}
+              className="xsmall-text"
+              lineHeight={"20px"}
+              letterSpacing={"1px"}
+              color={"gray.600"}
+            >
               {data.description ||
                 "Our tailor-made samples and guides has all of the tools you needto easily craft a government CV in just minutes. Our samples have been field-tested and are expertly designed to set you up for success."}
             </Text>
@@ -92,7 +104,10 @@ const CommonComponent = ({ data }) => {
                   }}
                   onClick={() => {}}
                 >
-                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                  <Text
+                    fontSize={["1.1em", "1.3em"]}
+                    className={"medium-heading"}
+                  >
                     {template.label}
                   </Text>
                   <Box mt={6} border={"1px solid black"}>
@@ -114,7 +129,6 @@ const CommonComponent = ({ data }) => {
                 <Box
                   key={index}
                   bg={"whitesmoke"}
-                  // h={["auto", "auto", "200px", "200px", "200px"]}
                   padding={"5"}
                   borderRadius={"10"}
                   _hover={{
@@ -123,7 +137,10 @@ const CommonComponent = ({ data }) => {
                   }}
                   onClick={() => {}}
                 >
-                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                  <Text
+                    fontSize={["1.1em", "1.3em"]}
+                    className={"medium-heading"}
+                  >
                     {template.label}
                   </Text>
                   <Box mt={6} border={"1px solid black"}>
@@ -145,7 +162,6 @@ const CommonComponent = ({ data }) => {
                 <Box
                   key={index}
                   bg={"whitesmoke"}
-                  // h={["auto", "auto", "200px", "200px", "200px"]}
                   padding={"5"}
                   borderRadius={"10"}
                   _hover={{
@@ -154,7 +170,11 @@ const CommonComponent = ({ data }) => {
                   }}
                   onClick={() => {}}
                 >
-                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
+                  <Text
+                    fontSize={["1.1em", "1.3em"]}
+                    fontWeight={"500"}
+                    className={"medium-heading"}
+                  >
                     {template.label}
                   </Text>
                   <Box mt={6}>
@@ -178,7 +198,6 @@ const CommonComponent = ({ data }) => {
                 <Box
                   key={index}
                   bg={"whitesmoke"}
-                  // h={["auto", "auto", "200px", "200px", "200px"]}
                   padding={"5"}
                   borderRadius={"10"}
                   _hover={{
@@ -187,7 +206,10 @@ const CommonComponent = ({ data }) => {
                   }}
                   onClick={() => {}}
                 >
-                  <Text fontSize={["1.1em", "1.3em"]} fontWeight={"600"}>
+                  <Text
+                    fontSize={["1.1em", "1.3em"]}
+                    className={"medium-heading"}
+                  >
                     {template.label}
                   </Text>
                   <Box mt={6} border={"1px solid black"}>
@@ -204,9 +226,19 @@ const CommonComponent = ({ data }) => {
               );
             })}
       </SimpleGrid>
-      <Button type="button" onClick={() => setExpanded(!expanded)} mt={"8"}>
-        {expanded ? "Show Less" : "Show More"}
-      </Button>
+
+      <Box m={4}>
+        <CommonButton
+          backgroundColor={"#2CACD5"}
+          color={"whitesmoke"}
+          borderRadius={"none"}
+          height={"40px"}
+          width={"150px"}
+          title={expanded ? "Show Less" : "Show More"}
+          onClick={() => setExpanded(!expanded)}
+          mt={"8"}
+        />
+      </Box>
     </Box>
   );
 };

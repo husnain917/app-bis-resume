@@ -12,12 +12,17 @@ export default function RightCard({ cardData }) {
       bg="white"
       minHeight={width >= 767 ? "fit-content" : { base: 530, sm: 330 }}
       borderRadius="10px"
-      py={width >= 767 ? 4 : 6}
+      py={width >= 767 ? 3 : 6}
       px={6}
       my={width >= 767 ? 3 : 0}
       mx={3}
+      mt={7}
     >
-      <Box pos="relative" textAlign={width >= 767 ? null : "center"}>
+      <Box
+        pos="relative"
+        height={["60px", "60px", "35px", "35px", "38px", "60px"]}
+        textAlign={width >= 767 ? null : "center"}
+      >
         <Circle
           data={{ customStyle: cardData.customStyle, text: cardData.text }}
         />
@@ -25,10 +30,10 @@ export default function RightCard({ cardData }) {
           px={2}
           pos={width >= 767 ? "absolute" : null}
           color="#002d6b"
-          fontSize={{ base: "1.4rem", md: "1.1rem", lg: "1.4rem" }}
+          fontSize={["1.4rem", "1.4rem", "1rem", "1.4rem", "1.4rem"]}
           // fontWeight="bold"
           // fontFamily="'Nunito',Helvetica,Arial,sans-serif"
-          className={"medium-heading1"}
+          className={"sub-heading"}
           textAlign={width >= 767 ? null : "center"}
           display={width >= 767 ? "inline-block" : "block"}
           mx={2}
@@ -40,40 +45,32 @@ export default function RightCard({ cardData }) {
       {cardData.text === "1" ? (
         <Text
           // fontSize="17px"
-          wordSpacing="1px"
+          // wordSpacing="1px"
           // fontFamily="'Nunito',Helvetica,Arial,sans-serif"
           // color="#002d6b"
           className={"small-text"}
+          fontSize={["0.5rem", "0.8rem", "1em", "1.1em", "1.1em"]}
+          lineHeight={["14px", "18px", "23px", "22px", "22px"]}
           mt={2}
         >
-          Keep this simple, just your name, a professional email address, and
-          your city and state of residence. Your resume header can also include
-          links to a portfolio website or online job networking profile, like
-          LinkedIn.
+          Include your full name, professional email address, phone number and
+          location. Consider adding a link to your LinkedIn profile or personal
+          website to showcase your online presence.
         </Text>
       ) : cardData.text === "2" ? (
         <Text
           // fontSize="17px"
           // fontFamily="'Nunito',Helvetica,Arial,sans-serif"
           // color="#002d6b"
+          fontSize={["0.5rem", "0.8rem", "1em", "1.1em", "1.1em"]}
+          lineHeight={["14px", "18px", "23px", "22px", "22px"]}
           className={"small-text"}
           mt={2}
         >
-          A{" "}
-          <Link
-            href="/test"
-            style={{
-              fontWeight: "800",
-              color: "#0058ac",
-              fontFamily: "BlinkMacSystemFont",
-            }}
-          >
-            professional summary
-          </Link>{" "}
-          should explain your top abilities and work experiences in two to three
-          sentences. A good resume summary is an elevator pitch that
-          communicates your value and strengths as an employee and compels an
-          employer to keep reading.
+          A short, powerful statement that summarizes your key skills,
+          experience and qualifications. It should be tailored to the specific
+          job you are applying for and highlight your unique value as a
+          candidate.
         </Text>
       ) : cardData.text === "3" ? (
         <Text
@@ -81,25 +78,14 @@ export default function RightCard({ cardData }) {
           // fontFamily="'Nunito',Helvetica,Arial,sans-serif"
           // color="#002d6b"
           className={"small-text"}
+          fontSize={["0.5rem", "0.8rem", "1em", "1.1em", "1.1em"]}
+          lineHeight={["22px", "22px", "23px", "26px", "26px"]}
           mt={2}
         >
-          In reverse-chronological order (current or most recent job first),
-          list your{" "}
-          <Link
-            href="/test"
-            style={{
-              fontWeight: "800",
-              color: "#0058ac",
-              fontFamily: "BlinkMacSystemFont",
-            }}
-          >
-            work history{" "}
-          </Link>{" "}
-          with your job title, company and dates of employment. Using only three
-          to five bullet points under each resume work experience entry,
-          highlight notable work achievements. Examples of successful projects
-          and contributions make a bigger impression than just simply listing
-          daily tasks.
+          List your most recent and relevant work experience in reverse
+          chronological order. Use bullet points to highlight your achievements
+          and responsibilities, and make sure to include specific details such
+          as project names, results and metrics.
         </Text>
       ) : cardData.text === "4" ? (
         <Text
@@ -107,25 +93,14 @@ export default function RightCard({ cardData }) {
           // fontFamily="'Nunito',Helvetica,Arial,sans-serif"
           // color="#002d6b"
           className={"small-text"}
+          fontSize={["0.5rem", "0.8rem", "1em", "1.1em", "1.1em"]}
+          lineHeight={["14px", "18px", "23px", "22px", "22px"]}
           mt={2}
         >
-          To write the best{" "}
-          <Link
-            href="/test"
-            style={{
-              // fontWeight: "800",
-              color: "#0058ac",
-              // fontFamily: "BlinkMacSystemFont",
-            }}
-            className={"small-text"}
-          >
-            resume skills section
-          </Link>{" "}
-          , find the required skills from the job posting, match them to your
-          own abilities, and list them in bullet points. Feature a mix of hard
-          skills (e.g., specific software programs or training-based knowledge)
-          and important soft skills, such as attention to detail or good
-          communication.
+          Identify the most important skills required for the job and showcase
+          them prominently on your resume. This can include both hard skills
+          (technical abilities) and soft skills (such as communication,
+          problem-solving and teamwork).
         </Text>
       ) : (
         cardData.text === "5" && (
@@ -134,14 +109,16 @@ export default function RightCard({ cardData }) {
             // fontFamily="'Nunito',Helvetica,Arial,sans-serif"
             // color="#002d6b"
             className={"small-text"}
+            fontSize={["0.5rem", "0.8rem", "1em", "1.1em", "1.1em"]}
+            lineHeight={["14px", "18px", "23px", "22px", "22px"]}
             mt={2}
           >
-            Present your most advanced education credentials (e.g., college
-            degree or high school diploma) in reverse-chronological order, along
-            with the name of the institution where you earned your credential.
-            If you have advanced training in areas that are related to the job
-            you’re applying for (e.g., a software certification), list these
-            courses under this resume section as well.
+
+            Include your highest level of education, the name of the institution
+            and the date of completion. If you have any relevant certifications
+            or training, list them here as well. Don`&#34;`t forget to include
+            any relevant coursework or honors. 
+
           </Text>
         )
       )}

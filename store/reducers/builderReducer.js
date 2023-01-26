@@ -1,18 +1,18 @@
-import { actionTypes } from '../../constants/actionTypes';
-import { sampleData } from '../../constants/sampleData';
+import { actionTypes } from "../../constants/actionTypes";
+import { sampleData } from "../../constants/sampleData";
 
 const initialState = {
   resumeData: JSON.parse(JSON.stringify({ ...sampleData.data })),
   theme: {
-    color: '#03A9F4',
-    fontFamily: 'Source Sans Pro',
+    color: "#03A9F4",
+    fontFamily: "Source Sans Pro",
   },
   updater: new Date(),
   // serverUpdater: new Date(),
-  resumeName: 'Resumas',
-  currentTemplate: 'chonological',
-  getScanResultStatus: 'loading',
-  getResumeBuilderChoice: 'form',
+  resumeName: "Resumas",
+  currentTemplate: "chonological",
+  getScanResultStatus: "loading",
+  getResumeBuilderChoice: "form",
   builderResumeData: {},
 };
 
@@ -30,7 +30,15 @@ export default function resumeEditor(state = initialState, action) {
         updater: new Date(),
         serverUpdater: new Date(),
       };
+    case actionTypes.DATE_HANDLER:
+      return {
+        ...state,
 
+        resumeData: {
+          ...state.resumeData,
+          date: action.payload,
+        },
+      };
     ///////////// end Custom Cases /////////////////////////////////////
 
     case actionTypes.UPDATE_USER_DATA:

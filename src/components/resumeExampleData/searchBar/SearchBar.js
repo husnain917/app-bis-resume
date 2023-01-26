@@ -26,7 +26,6 @@ const SearchBar = () => {
           color="gray.300"
           fontSize="1.2em"
           borderRadius={"4px"}
-          // children={<SearchIcon color="gray.500" />}
         />
         <Input placeholder="Enter amount" borderRadius={"4px"} bg={"white"} />
       </InputGroup>

@@ -3,7 +3,7 @@
     width: 70px;
     transition: all 0.9s linear;
 
-    position: absolute;
+    /* position: absolute; */
     margin-top: 20px;
     margin-left: 30px;
     
@@ -33,9 +33,6 @@
     background: #cad5e2;
     margin-bottom: 10px;
 }
-
-
-
 .nav li:nth-child(2) a {
     background-color: #cad5e2;
 }
@@ -43,7 +40,6 @@
 .nav li:nth-child(3) a {
     background: #cad5e2;
 }
-
 .nav li:nth-child(3) a {
     background: #cad5e2;
 }
@@ -113,24 +109,15 @@
     z-index: 1;
     width: 190px;
     overflow-y: hidden;
-    
-
-
 }
-
-
 
 .ul li:hover a span {
     padding-left: 25%;
     display: block;
-
 }
 
 .sideBarContainer {
     position: sticky;
     top: 15%;
     left: 0%;
-
-
-
 }

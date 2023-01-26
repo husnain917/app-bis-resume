@@ -1,36 +1,42 @@
 .nameStyle {
-  font-size: 2.8em;
-  font-weight: 500;
-  color: #fff;
-  background-color: transparent;
+    font-size: 2.8em;
+    font-weight: 500;
+    color: #fff !important;
+    background-color: #0C1E37 !important;
 }
 
 .profileSubTitle {
-  font-size: 1.6em;
-  font-weight: 500;
-  color: #fff;
-  background-color: transparent !important;
+    font-size: 1.6em;
+    font-weight: 500;
+    color: #fff !important;
+    background-color: #0C1E37 !important;
+}
+
+.profileText{
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
 }
 
 .rightContainerWork {
-  padding: 0px 0px 0px 30px;
-  width: 90%;
+    padding: 0px 0px 0px 30px;
+    width: 90%;
 }
 
 .line {
-  height: 10px;
-  width: 100px;
-  border-radius: 4px;
-  margin-top: 10px !important;
+    height: 10px;
+    width: 100px;
+    border-radius: 4px;
+    margin-top: 10px !important;
 }
 
 .percent {
-  color: #fff;
-  font-size: 14px !important;
+    color: #fff;
+    font-size: 14px !important;
 }
 
 .date {
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
 }

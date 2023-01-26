@@ -21,7 +21,6 @@ import { Navigation } from "swiper";
 
 const MostPopular = ({ data }) => {
   const swiperRef = useRef();
-  // console.log("Swiper", swiperRef);
   const settings = {
     infinite: true,
     speed: 300,
@@ -29,7 +28,6 @@ const MostPopular = ({ data }) => {
     slidesToScroll: 2,
     autoplay: true,
   };
-  // console.log("mostPopular >>>>>>>>", data.popularTemplates);
   return (
     <Box overflow={["visible", "visible", "hidden"]}>
       <Box
@@ -43,11 +41,11 @@ const MostPopular = ({ data }) => {
       >
         <Box display={"flex"}>
           <Box>
-            <Image src="./diamond.png" h="3.5em" />
+            <Image src="./diamond.png" h="3.5em" alt="will load soon" />
           </Box>
           <Box
             ml="10px"
-            fontSize="2.5em"
+            fontSize={["26px", "26px", "30px", "2.5em", "2.5em"]}
             fontWeight={"400"}
             transition={"color .15s"}
           >
@@ -89,17 +87,10 @@ const MostPopular = ({ data }) => {
           </Box>
         </Box>
       </Box>
-      <Box
-        position={"relative"}
-        // padding={"0 44px"}
-        overflow={"hidden"}
-        // width={"100vw"}
-      >
+      <Box position={"relative"} overflow={"hidden"}>
         <Box
           opacity={1}
-          // position={"relative"}
           maxWidth={"1122px"}
-          // margin={" 0 auto"}
           display={"flex"}
           flexDirection={"column"}
         >
@@ -148,7 +139,6 @@ const MostPopular = ({ data }) => {
                     <Box
                       key={index}
                       bg={"whitesmoke"}
-                      // h={["auto", "auto", "200px", "200px", "200px"]}
                       padding={"5"}
                       borderRadius={"10"}
                       _hover={{

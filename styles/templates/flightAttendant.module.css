@@ -1,5 +1,5 @@
 .name {
-  color: white;
+  color: #000000;
   text-align: left;
   font-size: 25px;
   font-weight: 700;
@@ -7,21 +7,21 @@
   margin: 0px !important;
 }
 .profession {
-  color: white;
+  color: #000000;
   font-size: 21px;
   font-weight: 600;
   padding: 0px !important;
   margin-bottom: 20px;
 }
 .profileText {
-  color: white;
+  color: #000000;
   font-size: 14px;
   font-weight: 400;
   margin: 0 !important;
   padding: 0 !important;
 }
 .skillText {
-  color: white;
+  color: #000000;
   font-size: 15px;
   font-weight: 500;
 }
@@ -31,22 +31,16 @@
   font-weight: 700;
   margin: 0 !important;
   padding: 0 !important;
-  min-width: 430px;
-  max-width: 430px;
 }
 .company {
   font-size: 17px;
   font-weight: 500;
   margin: 0 !important;
   padding: 0 !important;
-  min-width: 430px;
-  max-width: 430px;
 }
 .description {
   font-size: 15px;
   font-weight: 500;
-  min-width: 430px;
-  max-width: 430px;
 }
 .date {
   color: black;

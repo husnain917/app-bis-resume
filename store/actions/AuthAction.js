@@ -3,13 +3,13 @@
 import { auth, db } from '../../config/firebase';
 import { collection, query, where, getDocs, doc, getDoc, addDoc, updateDoc, arrayUnion, orderBy } from "firebase/firestore";
 import { Magic } from 'magic-sdk'
-import { LOGIN, LOGOUT, SIGN_UP, CHECK_USER, ACTIVE_USER } from '../type/Type'
+import { LOGIN, LOGOUT, SIGN_UP, CHECK_USER, ACTIVE_USER, REDIRECT, MODAL_OPEN } from '../type/Type'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, getAdditionalUserInfo, sendPasswordResetEmail } from "firebase/auth";
 import { getAuth, sendEmailVerification } from "firebase/auth";
 import { ToastSuccess } from '../../src/components/Toast';
 const fullAuth = getAuth()
-import { storeToken, getToken, removeToken } from '../../src/components/localStorage/LocalStorage';
-export const doLogin = (data, setLoading, setErr, setIsModalOpen) => async (dispatch) => {
+import { storeToken, getToken, removeToken, userToken, getUserToken, removeUserToken } from '../../src/components/localStorage/LocalStorage';
+export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
     try {
         setLoading(true);
         const logInData = await signInWithEmailAndPassword(auth, data.email, data.password);
@@ -22,9 +22,12 @@ export const doLogin = (data, setLoading, setErr, setIsModalOpen) => async (disp
                 type: LOGIN,
                 payload: userLoginData?.uid,
             });
-            setIsModalOpen(false)
             setErr({ fieldErr: '' })
             ToastSuccess("Login Successfull")
+            dispatch({
+                type: MODAL_OPEN,
+                payload: false,
+            })
         }
     } catch (e) {
         const errorCode = e.code;
@@ -40,7 +43,7 @@ export const doLogin = (data, setLoading, setErr, setIsModalOpen) => async (disp
     }
 }
 
-export const doGoogleLogin = (terms, setLoading, setErr, setIsModalOpen) => async (dispatch) => {
+export const doGoogleLogin = (terms, setLoading, setErr) => async (dispatch) => {
     const provider = new GoogleAuthProvider();
 
     try {
@@ -51,9 +54,13 @@ export const doGoogleLogin = (terms, setLoading, setErr, setIsModalOpen) => asyn
         const user = userLoginData.user;
         if (user) {
             storeToken(user?.uid)
+
             const details = getAdditionalUserInfo(userLoginData)
+            userToken(details.profile)
             if (details.isNewUser) {
+
                 let name = user.displayName.split(' ')
+
                 const docRef = await addDoc(collection(db, "users"), {
                     firstName: name[0],
                     lastName: name[1],
@@ -65,8 +72,15 @@ export const doGoogleLogin = (terms, setLoading, setErr, setIsModalOpen) => asyn
 
             dispatch({
                 type: LOGIN,
-                payload: user?.uid,
+                payload: {
+                    userId: user?.uid,
+                    userData: details.profile
+                },
             });
+            dispatch({
+                type: MODAL_OPEN,
+                payload: false,
+            })
             setIsModalOpen(false)
             setErr({ fieldErr: '' })
             setLoading(false)
@@ -91,7 +105,7 @@ export const doGoogleLogin = (terms, setLoading, setErr, setIsModalOpen) => asyn
     }
 }
 
-export const doSignUp = (data, setErr, setIsModalOpen, setLoadingsignup) => async (dispatch) => {
+export const doSignUp = (data, setErr, setLoadingsignup, err) => async (dispatch) => {
     try {
         setLoadingsignup(true);
         const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password);
@@ -99,20 +113,23 @@ export const doSignUp = (data, setErr, setIsModalOpen, setLoadingsignup) => asyn
         updateProfile(fullAuth.currentUser, {
             displayName: data.firstName, // it can be a value of an input
         });
-        console.log("sami", userCredential)
-        await sendEmailVerification(fullAuth.currentUser)
+     
+        sendEmailVerification(fullAuth.currentUser)
         ToastSuccess("Verification Email Sent.")
         const docRef = await addDoc(collection(db, "users"), {
             ...data,
             id: userData.uid,
 
         });
+
         if (userData) {
             dispatch({
                 type: SIGN_UP,
                 payload: userData,
             })
-
+        }
+        else {
+            setErr({ fieldErr: 'This email already in use.', inputId: 12 })
         }
     } catch (e) {
         const errorCode = e.code;
@@ -122,7 +139,18 @@ export const doSignUp = (data, setErr, setIsModalOpen, setLoadingsignup) => asyn
         console.log('Error at signup: ', errorCode);
     } finally {
         setLoadingsignup(false);
-        setIsModalOpen(false)
+        if (err !== 12) {
+            dispatch({
+                type: MODAL_OPEN,
+                payload: true,
+            })
+        }
+        else {
+            dispatch({
+                type: MODAL_OPEN,
+                payload: false,
+            })
+        }
     }
 }
 
@@ -151,6 +179,7 @@ export const doLogout = (setLoading) => async (dispatch) => {
     try {
         setLoading(true)
         removeToken()
+        removeUserToken()
         const res = await auth.signOut();
         dispatch({
             type: LOGOUT,
@@ -202,8 +231,35 @@ export const doCheckUser = (uid) => async (dispatch) => {
         console.log("error at Check user data", error);
     }
 };
+export const redirect = () => async (dispatch) => {
+    if (getToken()) {
+        console.log("redirect", getToken(), getUserToken())
+        let user = getUserToken()
+        dispatch({
+            type: LOGIN,
+            payload: {
+                userId: getToken(),
+                userData: user
+            }
+        })
+    }
 
-export const loginMagicUser = (email, setUser, setLoading, setIsModalOpen) => async (dispatch) => {
+
+}
+export const modalOpen = () => async (dispatch) => {
+    dispatch({
+        type: MODAL_OPEN,
+        payload: true
+    })
+    console.log("smi")
+}
+export const modalClose = () => async (dispatch) => {
+    dispatch({
+        type: MODAL_OPEN,
+        payload: false
+    })
+}
+export const loginMagicUser = (email, setUser, setLoading) => async (dispatch) => {
     let magic;
     if (typeof window !== 'undefined') {
         magic = new Magic(process.env.NEXT_PUBLIC_MAGIC_API_KEY);
@@ -220,8 +276,10 @@ export const loginMagicUser = (email, setUser, setLoading, setIsModalOpen) => as
                 type: LOGIN,
                 payload: user?.publicAddress,
             });
-            setIsModalOpen(false)
-            setErr({ fieldErr: '' })
+            dispatch({
+                type: MODAL_OPEN,
+                payload: false,
+            })
             ToastSuccess("Login Successfull")
         }
         return didToken;

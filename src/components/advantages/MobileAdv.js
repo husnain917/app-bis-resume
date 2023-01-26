@@ -16,7 +16,12 @@ export default function MobileAdv({ advNum, title, advDesc, imgSrc }) {
       mt="2%"
     >
       <Box w={["100%", "100%", "100%"]}>
-        <Image src={imgSrc} w="100%" h={["50vh","65vh"]} />
+        <Image
+          src={imgSrc}
+          w="100%"
+          h={["50vh", "65vh"]}
+          alt="will show soon"
+        />
       </Box>
       <Box
         display="flex"
@@ -26,6 +31,7 @@ export default function MobileAdv({ advNum, title, advDesc, imgSrc }) {
         bgColor="white"
         pt="20px"
         pb="20px"
+        height={"200px"}
         borderRadius="10px"
       >
         <Text
@@ -41,9 +47,11 @@ export default function MobileAdv({ advNum, title, advDesc, imgSrc }) {
         </Text>
         <Text
           color="#002D6B"
-          fontSize={["0.8rem", "1rem", "1.2rem"]}
+          fontSize={["0.8rem", "0.8rem", "1.2rem", "1.2rem", "1.2rem"]}
           fontWeight="bold"
           pl="10px"
+          className="sub-heading"
+          lineHeight={"18px"}
         >
           {title}
         </Text>

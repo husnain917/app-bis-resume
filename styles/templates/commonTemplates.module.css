@@ -1,0 +1,360 @@
+.contentEditableContainer {
+    padding: 4px 2px;
+    white-space: pre-line;
+    border-radius: 4px;
+    outline: 0;
+}
+
+.contentEditableContainer:empty::before {
+    content: attr(data-placeholder);
+    opacity: 1;
+}
+
+.contentEditableContainer:focus {
+    border-radius: 4px;
+    outline: 0;
+}
+
+.contentEditableContainer:active {
+    border-radius: 4px;
+    outline: 0;
+}
+
+.contentEditableContainer:visited {
+    border-radius: 4px;
+    outline: 0;
+}
+
+.unselectedDragItems .dragBox {
+    transition: all 0.2s ease-in-out;
+}
+
+.unselectedDragItems .dragBox:hover {
+    border: 1px dashed #000;
+    transition-delay: 0.1s;
+}
+
+.dragBoxIcon {
+    opacity: 0;
+    text-align: center;
+}
+
+.unselectedDragItems .dragBox:hover>.dragBoxIcon {
+    transition-delay: 0.2s;
+    /* display: block; */
+    opacity: 1;
+}
+
+.selectedDragItems .dragBox {
+    border: 2px dashed rgba(255, 255, 255, 0);
+}
+
+.icon {
+    filter: invert(1);
+}
+
+.icon2 {
+    width: 14px;
+    margin: auto;
+    margin-top: 6px;
+    filter: invert(1);
+}
+
+.dndIcon {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.fullName {
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #1b4245;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #1b4245;
+    padding-left: 20px;
+}
+
+.aboutMe {
+    width: 95%;
+    text-align: justify;
+    font-size: 1.35rem;
+    margin-top: 3%;
+    word-spacing: 1px;
+}
+
+.rightHeading {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #ffffff;
+    padding-left: 20px;
+}
+
+.experienceContainer {
+    background-color: #e6d5c2;
+    display: flex;
+    flex-direction: row;
+}
+
+.work {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.wrokFeild {
+    word-spacing: 2px;
+    text-align: justify;
+}
+
+.main {
+    position: relative;
+    background-color: transparent;
+}
+
+.swapCont {
+    position: absolute;
+    right: 40px;
+    top: 80px;
+}
+
+.swap {
+    width: 40px;
+    height: 40px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    transition: all .2s;
+}
+
+.swap:hover {
+    transform: scale(1.1);
+    transition: all .2s;
+}
+
+.swap img {
+    width: 70%;
+    filter: invert(1);
+}
+
+.name {
+    font-size: 2.2rem !important;
+    font-weight: bold;
+    color: black;
+    max-width: 400px;
+    min-width: 400px;
+    color: black !important;
+
+}
+
+.profession {
+    color: black;
+    font-size: 1.5rem !important;
+    max-width: 400px;
+    min-width: 400px;
+    font-weight: 500;
+
+    padding: 0px !important;
+    margin-bottom: 20px;
+}
+
+.postion {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Educationdescription {
+    font-size: 18px;
+    font-weight: 500;
+    min-width: 220px !important;
+    max-width: 220px !important;
+    color: white !important;
+
+}
+
+.skillText1 {
+    font-size: 16px;
+
+    color: black !important;
+    min-width: 260px;
+    max-width: 260px;
+}
+
+.line {
+    width: 200px !important;
+    height: 10px;
+    border-radius: 4px;
+    margin-top: 15px !important;
+}
+
+.percent {
+    margin-top: 5px !important;
+}
+
+.projectTitleText {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+
+}
+
+.profileText {
+    color: white !important;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 5px !important;
+    padding: 0 !important;
+    width: 380px;
+    max-width: 220px !important;
+    min-width: 220px !important;
+}
+
+.postion {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 22px;
+    font-weight: 500;
+    min-width: 380px;
+    max-width: 380px;
+    margin-top: 10px;
+}
+
+
+.date {
+    font-size: 18px;
+    font-weight: bold;
+    color: white !important;
+
+
+}
+
+.company {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 220px;
+    max-width: 220px;
+    color: white !important;
+}
+
+.skillText {
+    font-size: 16px;
+
+    color: white !important;
+    min-width: 180px;
+    max-width: 180px;
+}
+
+.mt {
+    margin-top: 4%;
+    margin-bottom: 2%;
+
+}
+
+.referenceName {
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.sideMenu {
+    display: flex;
+    align-items: flex-start;
+}
+
+.sideMenuBox {
+    width: 20px;
+
+}
+
+.proContcat {
+    font-size: 20px;
+}
+
+.contactAddress {
+    font-size: 20px;
+    font-weight: 500;
+    min-width: 380px;
+    max-width: 380px;
+}
+
+.lineText {
+    height: 10px;
+    width: 120px;
+    border-radius: 4px;
+    margin-top: 10px !important;
+
+    margin-left: 70px;
+}
+
+.percentExp {
+    color: black;
+    font-size: 14px !important;
+}
+
+.company1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 380px;
+    max-width: 380px;
+}
+
+.positionSty {
+    font-size: 20px;
+    font-weight: 900;
+    max-width: 240px;
+    min-width: 240px;
+}
+
+.DetailStyle {
+    font-size: 18px;
+    font-weight: 500;
+
+    color: white;
+}
+
+.lineColor {
+    color: white !important;
+}
+
+.profileSubTitle {
+    font-size: 1.7rem !important;
+
+    color: #1b4245 !important;
+
+}
+
+.sideMenu {
+    display: flex;
+    align-items: flex-start;
+}
+
+.sideMenuBox {
+    width: 80px;
+
+    margin-right: 4px;
+    margin-top: 10px;
+}
+
+.width {
+    min-width: 2px !important;
+    margin-left: -3px;
+    margin-top: 10px;
+}

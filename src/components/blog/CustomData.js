@@ -3,21 +3,17 @@ import {
   AiOutlineWhatsApp,
   AiOutlineComment,
 } from 'react-icons/ai';
-import { FiFacebook } from 'react-icons/fi';
-import { SlSocialLinkedin, SlSocialTwitter } from 'react-icons/sl';
+import { SlSocialLinkedin, SlSocialTwitter, SlSocialFacebook } from 'react-icons/sl';
 
 export const RESUME_NOW = [
   {
-    text: 'The perfect resume format for 2022 has to pass applicant tracking systems. Show off your value as a future employee. And help recruiters make the right decision—invite you to the interview.',
+    text: 'As we enter 2023, the job market is becoming increasingly competitive, and it is more important than ever to have a resume that stands out.',
   },
   {
-    text: 'Pick the wrong one, and you ll annoy those little bots and their human overlords—',
+    text: 'One of the key factors in creating a winning resume is choosing the right format.',
   },
   {
-    text: 'But which resume format is best?',
-  },
-  {
-    text: 'Most importantly, how to pick the proper resume format for you?',
+    text: 'With so many options available,it can be overwhelming to decide which format is best for you.',
   },
 ];
 
@@ -61,42 +57,46 @@ export const RESUME_TABLE_DATA = {
 export const RESUME_FORMATS = {
   istTitle: [
     {
-      text: 'Here are the simple, standard rules you have to follow when formatting a resume.',
+      text: 'One of the most important things to keep in mind when choosing a resume format is that it needs to pass applicant tracking systems (ATS). These are software programs that screen resumes before they reach the hands of a hiring manager. To ensure your resume makes it through the ATS, it is important to use a clean and simple format with clear headings and easy-to-read font.',
     },
     {
-      text: '(Feel free to skip this section if you simply want to pick a format and start working on your resume.)',
+      text: 'Another important factor to consider is how to showcase your value as a future employee. A well-formatted resume should highlight your skills, experience, and achievements in a way that makes you stand out from the competition. Use bullet points, action verbs, and quantifiable data to demonstrate your value to potential employers.',
+    },
+    {
+      text: 'If you are struggling to choose the right format for your resume, consider using a resume builder. These tools can save you time and provide you with ready-made content that you can easily customize to fit your needs. ',
     },
   ],
   secTitle:
-    'For a professional resume, follow these 10 resume formatting steps:',
+    'When formatting a resume, itis important to keep it simple, yet professional. Here are 10 steps to help you create a winning resume that is sure to impress potential employers:',
   thirdTitle: 'How to format a resume?',
   fileFormat: {
-    title: 'What about the proper file format?',
+    title: 'What should be file format of resume',
     data: [
       {
-        text: 'Usually, a PDF is your best bet: it makes sure your resume layout stays intact across all devices.',
+        text: 'Yes, it is important to pay attention to the file format when submitting a resume. ',
       },
       {
-        text: 'Some companies require resumes sent as MS Word (DOC or DOCX) files. Pay attention to the job ad, if they want you to send a DOC resume, you have to play by their rules.',
+        text: 'PDF is a widely accepted format as it preserves the layout and formatting of the document across all devices. However, some companies may require resumes in a specific format, such as MS Word (DOC or DOCX).',
       },
       {
-        text: 'To stay on the safe side, have your resume available in both PDF and DOC file formats.',
+        text: 'It is best to have your resume available in both PDF and DOC format to ensure it is compatible with different applicant tracking systems. ',
       },
       {
-        text: 'Avoid file formats with no text layer, such as JPG or PNG, or files dedicated to graphic software (PSD, INDD, or AI).',
+        text: 'Avoid file formats without a text layer, such as JPG or PNG, and files dedicated to graphic software, such as PSD, INDD, or AI, as these may not be compatible with applicant tracking systems and can make it difficult for recruiters to read your resume.        ',
       },
     ],
   },
-  idealFormat: 'To learn more about ideal file formats for resumes, see:',
-  idealFormatPDF: ` PDF? DOC? What"s the Best File Format for a Resume`,
-  enoughTheory:
-    'Enough theory, though. Here are two examples of the bad vs the good way of how to format a resume. We ve created the sample resume format on the right in our builder.',
+  
 };
 
 export const RESUME_EXAMPLES = {
   titleDes: [
     {
-      text: `Resume formatting isn"t that hard. But, truth is, whatever word processing software you use, it takes time and effort to create a neat, polished document that looks the way you want it to. So why not let Zety guide you through the process? With our resume builder, you don"t need to worry about formatting your job application—just type up the contents and our software will make sure your resume always looks professional.`,
+      text: `Resume formatting can be time-consuming and challenging, but with the right tools, 
+      it doesn't have to be.  The software guides you through the process, allowing you to focus on 
+      the content of your resume. It automatically formats your resume, ensuring that it always looks 
+      neat and professional. With Bisresume resume builder, you can save time and effort and still end 
+      up with a great-looking resume that will help you stand out to potential employers.`,
     },
     {
       text: `See some sample resume formats from our builder, pick the one you like best, and make it yours with a few clicks.`,
@@ -107,61 +107,64 @@ export const RESUME_EXAMPLES = {
       title: 'Fashion Designer',
       img: '/formateTemp1.jpg',
       description:
-        'Nanica is one of the all-time favorites among our users, despite being a super simple resume format. The best thing about it? A very universal design with lots of white space. Highly recommended for job applications in conservative fields: law, finance, general business.',
+       'To create a truly unique and professional resume, use a modern and professional design that is clean and easy to read. Incorporate a strong headline or summary statement that grabs the attention of potential employers and clearly conveys your value as a candidate. Highlight your specific skills and experiences that are most relevant to the job you are applying for, using keywords and phrases specific to the job and industry. Include specific examples and accomplishments that demonstrate your qualifications and capabilities, using action verbs and quantifiable data to showcase your achievements and impact. Proofread your resume multiple times and ask for a second opinion to ensure it is error-free and easy to read.',
     },
     {
       title: 'Graphic Designer',
       img: '/formateTemp2.jpg',
       description:
-        'Another uncluttered resume format available in our builder. Simple and elegant yet with a modern touch. Primo uses a timeline on the left-hand side to make your work experience and education dates easier to track. A sidebar for your skills and extra sections lets you save space and fit more information onto a single page.',
+        'When creating a unique and professional resume, it is important to stand out from the competition while showcasing your skills and experiences. One way to do this is by using a visually appealing and modern format like the Primo. This format uses a timeline to organize your work experience and education, making it easy for recruiters to see your career progression. The sidebar feature in the Primo format allows you to highlight your skills and add extra sections, such as certifications, awards, and languages, while also saving space and fitting more information on a single page. This format not only makes it easy for recruiters to see your professional experiences but also makes it more organized and clean. Additionally, you can use some unique design elements to make it look more visually appealing and modern.',
     },
     {
       title: 'Digital Marketing',
       img: '/formateTemp3.jpg',
-      description: `If you care for my personal opinion, I"d say Cubic is the prettiest resume format available in our builder. A perfect combination of classical elegance and modern creativity. Subtle shading helps guide the reader"s eyes across different sections, the side column for contact details and skills adds a dynamic twist to the design. A great choice for applicants hunting jobs in IT, marketing, or sales.`,
+      description: `The Cubic resume format is a unique and visually appealing option that combines classical elegance with modern creativity to create a professional and eye-catching design. The format utilizes subtle shading to guide the reader's eyes across different sections, making it easy to follow and read. The side column for contact details and skills adds a dynamic twist to the design, making it stand out from the traditional format. This format is ideal for job applicants in fields such as IT, marketing, or sales, where a modern and creative approach is valued. The Cubic format is a great choice for those who want to showcase their professional experiences and qualifications in a unique and visually appealing way that will help them stand out to potential employers.`,
     },
     {
       title: 'Social Media Specialist',
       img: '/formateTemp4.jpg',
-      description: `As the name of this format implies, diamonds highlight the key areas: section headings, skill levels, and bullets in the work history section. This resume is full-width from top to bottom (no side column featured), making it very easy to go through your work history, chronologically. A great pick for candidates with many years of experience under their belts.`,
+      description: `The Diamond format is a unique and visually striking option that uses diamond shapes to highlight key areas such as section headings, skill levels and bullets in the work history section. The full-width design of this format, with no side column, makes it easy to go through the candidate's work history chronologically. This format is suitable for job applicants who have many years of experience and want to showcase their professional journey in a clear and easy-to-read manner. The diamond shapes in the format adds a creative touch to the resume and make it stand out, making it a great pick for candidates looking to get noticed by the recruiters.`,
     },
     {
       title: 'Marketing Manager',
       img: '/formateTemp5.jpg',
-      description: `A very minimalist template for everyone who likes to keep things simple and clear. With Newcast, you get a traditional resume with a few details that help your application stand out, like the tasteful icons for section headings and bar charts to indicate skill levels. If you"re applying for a job at a company with conservative culture, Newcast will be a great bet!`,
+      description: `The Newcast template is perfect for job seekers who prefer a clean and simple design. It includes traditional resume elements, with added touches such as icons for section headings and bar charts to showcase skill levels. This template is particularly well-suited for applicants targeting companies with conservative cultures, as it presents a professional and polished image.`,
     },
   ],
   commonResFormats: [
     {
-      text: 'Reverse-chronological, chronological or standard resume format.',
+      text: 'The main types of resume formats are reverse-chronological, functional and combination. ',
     },
     {
-      text: 'Functional or skills-based resume format.',
+      text: 'Reverse-chronological format focuses on work experience in a chronological order.',
     },
     {
-      text: 'Combination, hybrid or chrono-functional resume format.',
+      text: 'Functional format emphasizes on skills and qualifications.',
+    },
+    {
+      text: 'Combination format combines elements of the both formats, work experience and skills. Choose the format that best highlights your qualifications and suits your job application.',
     },
   ],
   bestFormats: [
     {
-      text: 'The chronological resume format focuses on work experience.',
+      text: 'The chronological format highlights work experience in a chronological order. ',
     },
     {
-      text: 'The skills-based resume format is based on, well, skills.',
+      text: 'The skills-based format focuses on skills and qualifications. ',
     },
     {
-      text: `The hybrid / combination resume format highlights both your experience and skills, linking the skills in the skills summary to real-life experience that shows how you gained them.`,
+      text: ` The hybrid format showcases both experience and skills, linking skills to real-life examples.Choose the format that best presents your qualifications for the job.`,
     },
   ],
   careerFormats: [
     {
-      text: `Looking for a job in your industry in which you have lots of experience? Go for the reverse-chronological resume format.`,
+      text: `Yes, the choice of resume format often depends on the job and your career path so far.If you have a consistent work history and are applying for a job in your industry, the reverse-chronological format is a great choice as it highlights your relevant work experience in a clear and easy-to-follow manner.`,
     },
     {
-      text: `Eying a creative gig where your portfolio of projects and broad skills set are more important than the work history? Pick a functional resume format.`,
+      text: `If you are applying for a creative job where your portfolio of projects and diverse skills set are more important than your work history, the functional format is a good option as it emphasizes your skills and qualifications.`,
     },
     {
-      text: `Applying for a highly specialized position for very experienced senior candidates? A combination resume format will be perfect for you.`,
+      text: `If you are a highly experienced senior candidate applying for a specialized position, the combination format is a great choice as it showcases both your relevant work experience and specialized skills, making you stand out from the competition.`,
     },
   ],
   resumeOrderSection: [
@@ -186,28 +189,25 @@ export const RESUME_EXAMPLES = {
   ],
   reverseResume: [
     {
-      text: 'Start with your current or most recent job.',
+      text: 'Yes, when using the reverse chronological format, it is important to list your work experience in reverse order, starting with your current or most recent job.',
     },
     {
-      text: 'Follow it with the one before it, then the one before and so on.',
+      text: 'In each entry, include your position, the name of the company, and the dates worked.',
     },
     {
-      text: 'In each entry list: your position, the name of the company, and the dates worked.',
+      text: 'Under each job, use bullet points to highlight your achievements, rather than just listing your duties. Use action words and quantify your accomplishments whenever possible to make them stand out.',
     },
     {
-      text: 'Under each job, put up to 5 bullet points. But dont just list duties. Focus on achievements.',
+      text: 'It is also a good idea to add a Key Achievement section at the bottom of the work experience section.',
     },
     {
-      text: `Use action words. “Supervised” instead of “responsible for supervising.”`,
+      text: `In this section, describe your proudest professional accomplishment and how it relates to the position you are applying for.”`,
     },
     {
-      text: 'Quantify whenever possible. Numbers pop!',
+      text: 'It is important to tailor your resume to the job description and focus on the most relevant information for the position you are applying for.',
     },
     {
-      text: 'At the bottom, add a “Key Achievement” subsection. Describe your proudest professional win.',
-    },
-    {
-      text: 'Dont list all your professional responsibilities and accomplishments. Focus on whats important for this particular position. Tailor your resume to the job description.',
+      text: 'Instead of listing all your professional responsibilities and accomplishments, highlight the ones that are most important for the position and will make you stand out to the hiring manager.',
     },
   ],
   skillResumeFormats: {
@@ -215,87 +215,82 @@ export const RESUME_EXAMPLES = {
       title: 'Functional Resume Order of Sections',
       data: [
         {
-          text: 'Contact information',
+          text: 'Contact information: This includes your name, address, phone number, and email address.',
         },
         {
-          text: 'Resume Objective',
+          text: '	Resume Objective: A brief statement that highlights your qualifications and career goals.',
         },
         {
-          text: 'Skills Summary',
+          text: '	Skills Summary: A section that lists your most relevant skills and qualifications, tailored to the job you are applying for.',
         },
         {
-          text: 'Additional Skills',
+          text: '	Additional Skills: A section that lists any additional skills or qualifications that may be relevant to the job.',
         },
         {
-          text: 'Work Experience',
+          text: '	Work Experience: A brief section that lists your past job experiences, but not in chronological order, and only the most relevant to the position you are applying for.',
         },
         {
-          text: 'Education',
+          text: '	Education: A section that lists your educational qualifications, including degrees or certifications.',
         },
       ],
       description:
-        'The two crucial components of a functional resume are the resume objective at the very top and the skills summary. This is how to write them step by step:',
+        'In the functional resume format, the resume objective and skills summary are crucial components as they allow you to emphasize your qualifications and skills, and take the focus off of your work experience. It is important to tailor these sections to the specific job you are applying for, and to highlight the skills and qualifications that make you the best fit for the position.',
     },
     secContent: {
       title: 'Functional Resume: Resume Objective and Skills Summary',
       data: [
         {
-          text: 'In the resume objective at the top, briefly explain your motivation for pursuing a given career and discuss the most important skills you ve mastered so far.',
+          text: 'The functional resume format is an ideal choice for job seekers who want to emphasize their skills and abilities rather than their work experience. This format allows you to highlight your qualifications and qualifications, and take the focus off of any gaps in your work history or career changes.',
         },
         {
-          text: 'If you have one, add a link to your online portfolio, a blog, or a personal website to the resume objective.',
+          text: 'In the functional resume format, the resume objective and skills summary are crucial components. ',
         },
         {
-          text: 'For the skills summary, pick 4 to 5 skills that are most relevant to the job you re applying for.',
+          text: 'To make your resume stand out, it is important to tailor these sections to the specific job you are applying for, and to highlight the skills and qualifications that make you the best fit for the position.',
         },
         {
-          text: 'Dont just list your skills. Be specific. Give examples of when and how you applied them. Mention software you re proficient in and quantify whenever you can.',
+          text: 'When writing your resume objective, be sure to include your motivation for pursuing a given career and mention the most important skills you have mastered so far. If you have an online portfolio, blog or personal website, include a link to it in the resume objective.',
         },
         {
-          text: 'Use bullet points or go for plain paragraphs.',
+          text: 'For the skills summary, choose 4-5 skills that are most relevant to the job you are applying for. Do not just list your skills, be specific and give examples of when and how you applied them.',
         },
       ],
-      description: 'Have another look at how Thomas did it:',
+      description: 'Mention software you are proficient in and quantify your skills whenever possible. Use bullet points or plain paragraphs to make the information easy to read.',
     },
   },
   hybridFormats: [
     {
-      text: 'Contact information',
+      text: 	' Contact information: This includes your name address, phone number, and email address.',
     },
     {
-      text: 'Skills Summary',
+      text: '	Skills Summary: A section that lists your most relevant skills and qualifications, tailored to the job you are applying for and validates them by providing examples of past achievements and professional experience in bullet points.',
     },
     {
-      text: 'Additional Skills',
+      text: '	Additional Skills: A section that lists any additional skills or qualifications that may be relevant to the job.',
     },
     {
-      text: 'Work Experience',
+      text: 	'Work Experience: A section that lists your past job experiences in reverse chronological order, starting with your current or most recent job. Include the job title, company name, and dates of employment, as well as a brief description of your responsibilities and achievements.',
     },
     {
-      text: 'Education',
+      text: '	Education: A section that lists your educational qualifications in reverse chronological order, starting with your most recent degree or certification.',
     },
   ],
   hybridFormatsSection: [
     {
-      text: 'Start with listing skills that are most relevant to the job you want to land.',
+      text: ' The combination or hybrid resume format is a versatile option for job seekers with a diverse range of skills and experience.',
     },
     {
-      text: 'Underneath each skill, add up to 4 bullet points describing your professional achievements that prove you actually have the skills.',
+      text: 'It combines the best elements of a chronological and functional resume.',
     },
     {
-      text: 'Focus on quantified and measurable accomplishments.',
+      text: 'In the combination resume format, the skills summary is the focal point and comes at the top of the resume, just below your contact information. It is important to start by listing skills that are most relevant to the job you want to land, and provide specific examples of your professional achievements that prove you have the skills',
+    },
+    {
+      text: 'Use quantified and measurable accomplishments, such as specific projects you have completed, awards you have received or metrics you have improved.',
     },
   ],
   hybridFormatsSkill: [
-    {
-      text: 'Great at programming and mobile app development.',
-    },
-    {
-      text: 'An inspired leader and mentor.',
-    },
-    {
-      text: 'A seasoned business executive.',
-    },
+    
   ],
   recapFormatsTable: {
     tableHeadings: [
@@ -433,26 +428,25 @@ export const PASS_SCAN_FORMATS = {
   title: 'How to Pass the ATS Scan:',
   data: [
     {
-      text: 'Place the contact details at the top of your resume',
+      text: 'That is correct, ensuring that your resume is ATS-friendly can increase the chances of it passing the initial screening process and reaching a human reader. Some tips for passing the ATS scan include',
     },
     {
-      text: 'Avoid fancy graphics',
+      text: '	Placing your contact details at the top of your resume so that they are easily found by the system.',
     },
     {
-      text: 'Save your resume in the PDF format',
+      text: '	Avoiding the use of fancy graphics, as these can cause issues with the ATS system.',
     },
     {
-      text: 'Copy all the contents of your resume',
+      text: '	Saving your resume in a plain-text format or a PDF format, as these are the most commonly accepted file types.',
     },
     {
-      text: 'Paste them into a TXT text editor (such as Notepad)',
+      text: '	Copying and pasting the contents of your resume into a plain-text editor like Notepad to check that it is easily readable and not scrambled.',
     },
     {
-      text: 'If the text in the editor isnt scrambled, your resume is scannable',
+      text: '	Using relevant keywords and phrases that match the job description, as ATS systems use these to filter resumes.',
     },
   ],
-  description: 'For more information on how to beat the bots, see:',
-  link: 'Resume Keywords to Get You Past the ATS',
+  description: '	Tailoring your resume to the job description and making it as relevant as possible to the position you are applying for.',
 };
 
 export const RESUME_FORMATS_EXTRA_TIPS = {
@@ -514,7 +508,7 @@ export const SIDEBAR_DATA = [
     text: 'likes',
   },
   {
-    icon: <FiFacebook />,
+    icon: <SlSocialFacebook />,
     href: '#',
   },
   {
