@@ -28,9 +28,9 @@ export default function Advantages() {
   useEffect(() => {
     const progressBar = setInterval(() => {
       if (toastWidth < 100) {
-        setToastWidth((prev) => prev + 25);
+        setToastWidth((prev) => prev + 0.3);
       }
-    }, 200);
+    });
 
     const interval = setInterval(() => {
       setToastWidth(0);
