@@ -46,7 +46,7 @@ export default function AuthModal({
   // setIsModalOpen,
   handle,
 }) {
-  
+
   const [fieldActive, setFieldActive] = useState(false);
   const [isRegister, setIsRegister] = useState(true);
   const [fName, setFName] = useState("");
@@ -65,12 +65,12 @@ export default function AuthModal({
   const dispatch = useDispatch();
   const [user, setUser] = useState(null);
   const ismodalClose = async () => {
-   dispatch(modalClose());
+    dispatch(modalClose());
   }
-  let active=+localStorage.getItem(
+  let active = +localStorage.getItem(
     "active"
   )
-  console.log("sami",active)
+  console.log("sami", active)
   const magicLogin = async () => {
     if (email !== "") {
       dispatch(loginMagicUser(email, setUser, setLoading));
@@ -87,7 +87,7 @@ export default function AuthModal({
 
   const onChangeHandler = (index) => {
     setFieldActive(false);
-    localStorage.setItem("active",index);
+    localStorage.setItem("active", index);
     if (isRegister) {
       return setIsRegister(false);
     } else {
@@ -124,7 +124,7 @@ export default function AuthModal({
         password: password,
         terms: terms,
       };
-      dispatch(doSignUp(data, setErr, setLoadingsignup, setIsModalOpen));
+      dispatch(doSignUp(data, setErr, setLoadingsignup,err.inputId));
       setErr({ inputField: "", inputId: 0 });
     }
   };
@@ -175,9 +175,10 @@ export default function AuthModal({
 
   return (
     <>
-      <ToastContainer />
-      <Modal isOpen={isModalOpen} size={"ful"}>
-        <ModalOverlay />
+      {/* <ToastContainer /> */}
+      <Modal isOpen={isModalOpen} onClose={ismodalClose} size={"ful"} isCentered>
+        <ModalOverlay bg='blackAlpha.300'
+          backdropFilter='blur(1px) hue-rotate(90deg)' />
         <ModalContent
           w={["100%", "100%", "100%", "70%", "60%"]}
           borderRadius="10px"
@@ -189,13 +190,14 @@ export default function AuthModal({
             display="flex"
             h={["70%", "85%", "100%", "100%", "100%"]}
           >
-            <Box w={[0, 0, 0, "50%"]} h="100%">
+            <Box w={[0, 0, 0, "50%"]} h="100%" overflow='hidden'>
               {!isRegister ? (
                 <Image
                   src="/signup.png"
                   w="100%"
                   h="100%"
                   alt="will load soon"
+                  transform="scale(1.4,1.1)"
                 />
               ) : (
                 <Image
@@ -203,6 +205,7 @@ export default function AuthModal({
                   w="100%"
                   h="100%"
                   alt="will load soon"
+                  transform="scale(1.4,1.1)"
                 />
               )}
             </Box>
@@ -390,7 +393,7 @@ export default function AuthModal({
                     >
                       I Consent to the terms & Privacy Policy
                     </Checkbox>
-                    {err.inputField !== "" && err.inputId === 11 && (
+                    {err.inputId === 11 && (
                       <span style={inCorrect}>{err.inputField}</span>
                     )}
                   </>
@@ -537,7 +540,7 @@ export default function AuthModal({
                     {fieldActive && (
                       <CustomBtn
                         clr="green"
-                        title={loading ? "loading..." : "SignIn"}
+                        title={loading ? "loading..." : "Sign In"}
                         bgColor="#00C8AA"
                         color="white"
                         blue={true}
@@ -547,7 +550,7 @@ export default function AuthModal({
                     )}
                     <CustomBtn
                       clr="green"
-                      title={loading ? "loading..." : "SignIn With Magic Link"}
+                      title={loading ? "loading..." : "Sign In With Magic Link"}
                       bgColor={fieldActive ? "#E1E1E1" : "#00C8AA"}
                       color="white"
                       blue={true}
@@ -568,33 +571,42 @@ export default function AuthModal({
                 )}
                 {isRegister ? (
                   <>
-                    <Text fontSize="16px" align="center" mt="3%">
-                      Or Sign Up With:
-                    </Text>
+                    {
+                      !fieldActive &&
+                      <Text fontSize="16px" align="center" mt="3%">
+                        Or Sign Up With:
+                      </Text>
+                    }
                   </>
                 ) : (
                   <>
+
                     <Text fontSize="16px" align="center" mt="3%">
                       Or Sign In With:
                     </Text>
+
+
                   </>
                 )}
-                <Button
-                  leftIcon={<FaGoogle />}
-                  variant="solid"
-                  bgColor="#E1E1E1"
-                  color="grey"
-                  w="85%"
-                  ml="8%"
-                  borderRadius="100px"
-                  fontSize="16px"
-                  mt="3%"
-                  className="buttonClass"
-                  // className={styles.modalBtn}
-                  onClick={() => loginWithGoogle()}
-                >
-                  Google
-                </Button>
+                {
+                  !fieldActive &&
+                  <Button
+                    leftIcon={<FaGoogle />}
+                    variant="solid"
+                    bgColor="#E1E1E1"
+                    color="grey"
+                    w="85%"
+                    ml="8%"
+                    borderRadius="100px"
+                    fontSize="16px"
+                    mt="3%"
+                    className="buttonClass"
+                    // className={styles.modalBtn}
+                    onClick={() => loginWithGoogle()}
+                  >
+                    Google
+                  </Button>
+                }
               </Box>
             </Box>
           </Box>

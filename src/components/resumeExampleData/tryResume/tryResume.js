@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Button, Image } from "@chakra-ui/react";
+import { Box, Text, Button, Image, Link } from "@chakra-ui/react";
 import { Grid } from "@chakra-ui/react";
 import CommonButton from "../../commonButton/CommonButton";
 
@@ -73,26 +73,50 @@ const TryResume = () => {
                 fontSize={["16px", "16px", "16px", "16px", "16px"]}
                 lineHeight={"24px"}
               >
-                Say goodbye to writer's block and formatting struggles. In just a few simple steps,
-                 you can have a polished, professional resume ready to impress employers. 
-                Upgrade your job search today with our powerful resume tool.
+                Say goodbye to writers block and formatting struggles. In just a
+                few simple steps, you can have a polished, professional resume
+                ready to impress employers. Upgrade your job search today with
+                our powerful resume tool.
               </Text>{" "}
             </Box>
             <Box display={"flex"} alignItems={"center"}>
               <Box mx={2}>
-                <CommonButton
-                  backgroundColor={"#2CACD5"}
-                  color={"whitesmoke"}
-                  fontSize={["14x", "14px", "16px", "16px", "16px"]}
-                  height={"40px"}
-                  width={"150px"}
-                  padding={"20px"}
-                  borderRadius={"5px"}
-                  title={"Create My Resume"}
-                />
+                <Link
+                  href="/templates"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  <CommonButton
+                    backgroundColor={"#2CACD5"}
+                    color={"whitesmoke"}
+                    fontSize={["14x", "14px", "16px", "16px", "16px"]}
+                    height={"40px"}
+                    width={"180px"}
+                    padding={"20px"}
+                    borderRadius={"5px"}
+                    title={"Create My Resume"}
+                  />
+                </Link>
               </Box>
-              <Button fontSize={["14x", "14px", "16px", "16px", "16px"]}>
-                Resume Examples
+              <Button>
+                <Link
+                  href="/resume-examples"
+                  textDecoration={"none"}
+                  cursor="pointer"
+                  color="black"
+                  _hover={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                  <Text
+                    fontSize={["14x", "14px", "16px", "16px", "16px"]}
+                    textDecoration={"none"}
+                  >
+                    Resume Examples
+                  </Text>
+                </Link>
               </Button>
             </Box>
           </Box>
