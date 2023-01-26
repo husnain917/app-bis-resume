@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import style from "../../../../styles/blog/latestPosts.module.css";
 import Image from "next/image";
-import SearchIcon from "../../../../public/searchIcon.webp";
-// import { Row, Col } from 'react-bootstrap'
-import Skeleton from "react-loading-skeleton";
 import Link from "next/link";
-import { SimpleGrid, Box, Container, Text } from "@chakra-ui/react";
-
+import { SimpleGrid, Box, Text } from "@chakra-ui/react";
 export default function LatestPosts({ blogs }) {
   console.log("blogs", blogs);
   const [searchKey, setSearchKey] = useState("");
