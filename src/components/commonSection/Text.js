@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { onBlurField } from '../../../store/actions/builderAction';
 import styles from '../../../styles/templates/commonTemplates.module.css';
 import { colors } from '../../../constants/colors';
+import {  GrammarlyEditorPlugin } from "@grammarly/editor-sdk-react";
 
 function Text(props) {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ function Text(props) {
 
   return (
     <div className={styles.main}>
+      <GrammarlyEditorPlugin>
       <TagName
         style={{
           border: 'none',
@@ -61,6 +63,7 @@ function Text(props) {
           setAddBorder(true);
         }}
       />
+      </GrammarlyEditorPlugin>
     </div>
   );
 }
