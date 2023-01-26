@@ -65,6 +65,15 @@ const UseProfileImage = ({
     dispatch(onBlurField(result, "profile.profileImage"));
   };
 
+  const onCancel = async () => {
+    setisOpen(false);
+    // const result = await canvasPreview(imgRef.current, crop, scale, rotate);
+    // const { current } = uploadedImage;
+    // current.src = result;
+    // dispatch(onBlurField(result, "profile.profileImage"));
+    return console.log("cancelButtonClicked");
+  };
+
   return (
     <Box>
       {isOpen && (
@@ -76,6 +85,7 @@ const UseProfileImage = ({
           src={src}
           onDone={onDone}
           imgRef={imgRef}
+          onCancel={onCancel}
         />
       )}
       <Box
