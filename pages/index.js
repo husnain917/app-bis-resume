@@ -19,11 +19,10 @@ export default function Home() {
 
   const listenToScroll = () => {
     let heightToHidden = 0.5;
-    let againHide = 7700;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (winScroll < heightToHidden || winScroll > againHide) {
+    if (winScroll < heightToHidden ) {
       setIsVisible(false);
     } else if (winScroll > heightToHidden) {
       setIsVisible(true);

@@ -109,7 +109,7 @@ export default function sideBar() {
                                                 fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                             >
                                                 <Text>
-                                                    {item?.text}
+                                                    {/* {item?.text} */}
                                                 </Text>
                                             </Box>
                                         </Box>
