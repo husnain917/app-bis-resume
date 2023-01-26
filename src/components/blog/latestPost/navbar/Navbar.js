@@ -77,7 +77,7 @@ export default function Navbar() {
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
         minH={"80px"}
-        py={{ base: 2 }}
+        // py={{ base: 2 }}
         mx={["5px", "5px", "10px", "10px", "10px"]}
         align={"center"}
       >
@@ -92,8 +92,8 @@ export default function Navbar() {
               src="/Dark_Blue.svg"
               alt="Image Not Found"
               fill
-              height={"50px"}
-              width={"150px"}
+              height={"80px"}
+              width={"200px"}
             />
           </Link>
           {width < 1320 ? (
@@ -105,8 +105,8 @@ export default function Navbar() {
                   src="/career-blog.png"
                   alt="Image Not Found"
                   fill
-                  height={"26px"}
-                  width={"130px"}
+                  height={"30px"}
+                  width={"160px"}
                 />
               </Link>
             </>
@@ -290,6 +290,11 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer.isUserLoggedIn
+  );
+  const fontSize = isUserLoggedIn ? "12.5px" : "14px";
+  const fontSizes = isUserLoggedIn ? ["14px", "16px"] : ["15px", "17px"];
   return (
     <Stack direction={"row"} alignItems={"center"} spacing={{ xl: 2, lg: 2 }}>
       {NAV_ITEMS?.map((navItem) => {
@@ -297,42 +302,52 @@ const DesktopNav = () => {
           <Box key={navItem.label}>
             <Popover trigger={"hover"} placement={"bottom-start"}>
               <PopoverTrigger position={"absolute"}>
-                {width < 1180 ? (
+                {width < 1200 ? (
                   <>
-                    <Link
-                      href={navItem?.href ?? "#"}
-                      fontWeight={500}
-                      key={navItem.label}
-                      color={linkColor}
-                      // border={"1px solid black"}
-                      fontSize={"14px"}
-                      _hover={{
-                        textDecoration: "none",
-                        color: linkHoverColor,
-                      }}
-                      className="afterlink"
-                    >
-                      {navItem?.label}
-                    </Link>
+                    <Box margin={"0 10px 0 10px"}>
+                      <Link
+                        href={navItem?.href ?? "#"}
+                        fontWeight={500}
+                        key={navItem.label}
+                        color={linkColor}
+                        // border={"1px solid black"}
+                        fontSize={fontSize}
+                        _hover={{
+                          textDecoration: "none",
+                          color: linkHoverColor,
+                        }}
+                        onSelect={{
+                          color: "blue",
+                        }}
+                        className="afterlink"
+                      >
+                        {navItem?.label}
+                      </Link>
+                    </Box>
                   </>
                 ) : (
                   <>
-                    <Link
-                      href={navItem?.href ?? "#"}
-                      fontWeight={500}
-                      key={navItem.label}
-                      color={linkColor}
-                      // border={"1px solid black"}
+                    <Box margin={"0 10px 0 10px"}>
+                      <Link
+                        href={navItem?.href ?? "#"}
+                        fontWeight={500}
+                        key={navItem.label}
+                        color={linkColor}
+                        // border={"1px solid black"}
 
-                      fontSize={["15px", "17px"]}
-                      _hover={{
-                        textDecoration: "none",
-                        color: linkHoverColor,
-                      }}
-                      className="afterlink"
-                    >
-                      {navItem?.label}
-                    </Link>
+                        fontSize={fontSizes}
+                        _hover={{
+                          textDecoration: "none",
+                          color: linkHoverColor,
+                        }}
+                        className="afterlink"
+                        onSelect={{
+                          color: "blue",
+                        }}
+                      >
+                        {navItem?.label}
+                      </Link>
+                    </Box>
                   </>
                 )}
               </PopoverTrigger>
@@ -736,6 +751,9 @@ export const MobileNavItem = ({ label, children, href }) => {
 };
 
 function RightBar({ setIsModalOpen, ismodalOpen }) {
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer.isUserLoggedIn
+  );
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
 
@@ -771,36 +789,40 @@ function RightBar({ setIsModalOpen, ismodalOpen }) {
             {Login_Buttons?.map((items, index) => {
               return (
                 <>
-                  <Box
-                    key={items.label}
-                    // display={{ base: "inline-flex" }}
-                    // style={{
-                    //   border: "1px solid #e0e2e8",
-                    //   boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
-                    //   borderRadius: "0.2rem",
-                    //   width: "110px",
-                    // }}
-                    // cursor={"pointer"}
-                    // bg={
-                    //   items?.label === "Register"
-                    //     ? "#006772"
-                    //     : items?.label === "Login"
-                    //     ? "#006772"
-                    //     : ""
-                    // }
-                    // justifyContent={"center"}
-                    // padding={"10px 0px"}
-                    // textTransform={"uppercase"}
-                    // _hover={{
-                    //   textDecoration: "none",
-                    //   backgroundColor: "red",
-                    //   color: "white",
-                    // }}
-                    display={"flex"}
-                  >
-                    {items?.label === "Register" ? (
-                      <>
-                        {/* <Link
+                  {isUserLoggedIn ? (
+                    ""
+                  ) : (
+                    <>
+                      <Box
+                        key={items.label}
+                        // display={{ base: "inline-flex" }}
+                        // style={{
+                        //   border: "1px solid #e0e2e8",
+                        //   boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
+                        //   borderRadius: "0.2rem",
+                        //   width: "110px",
+                        // }}
+                        // cursor={"pointer"}
+                        // bg={
+                        //   items?.label === "Register"
+                        //     ? "#006772"
+                        //     : items?.label === "Login"
+                        //     ? "#006772"
+                        //     : ""
+                        // }
+                        // justifyContent={"center"}
+                        // padding={"10px 0px"}
+                        // textTransform={"uppercase"}
+                        // _hover={{
+                        //   textDecoration: "none",
+                        //   backgroundColor: "red",
+                        //   color: "white",
+                        // }}
+                        display={"flex"}
+                      >
+                        {items?.label === "Register" ? (
+                          <>
+                            {/* <Link
                           // href={items?.href ?? "#"}
                           fontWeight={650}
                           key={items.label}
@@ -813,21 +835,21 @@ function RightBar({ setIsModalOpen, ismodalOpen }) {
                         >
                           {items.label}
                         </Link> */}
-                        <CommonButton
-                          width={"255px"}
-                          margin={"10px 0px"}
-                          fontWeight={650}
-                          key={items.label}
-                          color={"#fdfffc"}
-                          title={items.label}
-                          onClick={() => setIsModalOpen()}
-                          backgroundColor={"#006772"}
-                        />
-                      </>
-                    ) : items.label === "Login" ? (
-                      <>
-                        <Box>
-                          {/* <Link
+                            <CommonButton
+                              width={"255px"}
+                              margin={"10px 0px"}
+                              fontWeight={650}
+                              key={items.label}
+                              color={"#fdfffc"}
+                              title={items.label}
+                              onClick={() => setIsModalOpen()}
+                              backgroundColor={"#006772"}
+                            />
+                          </>
+                        ) : items.label === "Login" ? (
+                          <>
+                            <Box>
+                              {/* <Link
                           // href={items?.href ?? "#"}
                           fontWeight={650}
                           color={"#fdfffc"}
@@ -841,23 +863,25 @@ function RightBar({ setIsModalOpen, ismodalOpen }) {
                           {items.label}
                         </Link> */}
 
-                          <CommonButton
-                            margin={"10px 0px"}
-                            width={"250px"}
-                            fontWeight={650}
-                            key={items.label}
-                            color={"#fdfffc"}
-                            title={items.label}
-                            onClick={() => setIsModalOpen()}
-                            backgroundColor={"#006772"}
-                          />
-                          <Divider size={10} />
-                        </Box>
-                      </>
-                    ) : (
-                      <></>
-                    )}
-                  </Box>
+                              <CommonButton
+                                margin={"10px 0px"}
+                                width={"250px"}
+                                fontWeight={650}
+                                key={items.label}
+                                color={"#fdfffc"}
+                                title={items.label}
+                                onClick={() => setIsModalOpen()}
+                                backgroundColor={"#006772"}
+                              />
+                              <Divider size={10} />
+                            </Box>
+                          </>
+                        ) : (
+                          <></>
+                        )}
+                      </Box>
+                    </>
+                  )}
                 </>
               );
             })}
