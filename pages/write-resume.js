@@ -59,7 +59,7 @@ export default function Write_resume() {
                                 <Text fontSize={["20px"]} className={"sub-heading"} fontWeight={"bold"} >{'How to Write a Resume - Step by step '}
                                 </Text>
                                 <Text fontSize={'1rem'} className={"only-font-family"} mt={["2%", "3%", "3%"]}>
-                                    For most job-seekers, a good resume is what stands between a dream job and Choice . Get your resume right, and you’ll be getting replies from every other company you apply to
+                                    For most job-seekers, a good resume is what stands between a dream job and Choice . Get your resume right, and you’ll be getting replies from every other company you apply to.
                                 </Text>
 
                                 <Text fontSize={'1rem'} className={"only-font-family"} mt={["2%", "3%", "3%"]}>
