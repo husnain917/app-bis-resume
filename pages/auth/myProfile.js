@@ -494,7 +494,7 @@ const Profile = () => {
                 Personal Data
               </Text>
             </HStack>
-            <Link href={"#"}>
+            <Link href={"/auth/personalData"}>
               <Text
                 as={"span"}
                 _hover={{
