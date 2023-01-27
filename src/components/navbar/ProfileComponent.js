@@ -75,7 +75,7 @@ export default function ProfileComponent() {
             content: '" "',
             // display: "block",
             zIndex: "-1",
-            top: "0.2rem",
+            top: "0.4rem",
             // opacity: "0.6",
             left: "5rem",
             position: "absolute",

@@ -35,6 +35,9 @@ import { useEffect, useRef } from "react";
 import { onBlurField } from "../../store/actions/builderAction";
 import { useDispatch } from "react-redux";
 import { canvasPreview } from "../../src/components/canvasPreview";
+import UseModal from "./useModal";
+import CommonButton from "../../src/components/commonButton/CommonButton";
+// import { UseModal } from "./useModal";
 
 const Profile = () => {
   const userData = useSelector((store) => store.AuthReducer.user);
@@ -69,13 +72,20 @@ const Profile = () => {
     current.src = result;
     dispatch(onBlurField(result, "profile.profileImage"));
   };
-
+  const dummyEmail = "ahsanbutt515@gmail.com";
+  const dummyfirstName = "Ahsan Ali";
+  const dummyLastName = "Butt";
   const [name, setName] = useState(userData?.name || "");
-  const [email, setEmail] = useState(userData?.email || "");
+  const [email, setEmail] = useState(userData?.email || dummyEmail);
   const [picture, setPicture] = useState(userData?.picture || "");
-  const [family_name, setFamilyName] = useState(userData?.family_name || "");
-  const [given_name, setGivenName] = useState(userData?.given_name || "");
+  const [family_name, setFamilyName] = useState(
+    userData?.family_name || dummyLastName
+  );
+  const [given_name, setGivenName] = useState(
+    userData?.given_name || dummyfirstName
+  );
   const [changeImage, setChangeImage] = useState(true);
+  const [updateEmail, setUpdateEmail] = useState(false);
   console.log("CHANGE IMAGE", changeImage);
   const [verified_email, setVerifiedEmail] = useState(
     userData?.verified_email || ""
@@ -83,11 +93,11 @@ const Profile = () => {
   const removeSelectedImage = () => {
     setPreview("/uploadpic1.png");
   };
-
+  console.log("userData", userData);
   return (
     <>
       {/* ~~~~~~~~~~~~~~ User Profile Page ~~~~~~~~~~~~~~ */}
-      <VStack>
+      <VStack transition={"10sec"}>
         {/* =============== User Name =============== */}
         <Text
           color={"#313B47"}
@@ -264,7 +274,7 @@ const Profile = () => {
               <Stack direction={{ base: "column", md: "row" }} gap="1vw">
                 {/* =============== Account Section =============== */}
                 <Box
-                  h={{ base: "200px", md: "140px" }}
+                  h={{ base: "260px", md: "200px" }}
                   bg="#313B47"
                   w={{ base: "85vw", md: "40vw" }}
                   borderRadius={4}
@@ -272,17 +282,18 @@ const Profile = () => {
                   mt={{ base: "4px", md: "0px" }}
                 >
                   <HStack>
-                    <CgProfile size={24} color="#fff" />
+                    <CgProfile size={34} color="#fff" />
                     <Text
-                      fontSize={{ base: 16, md: 20 }}
+                      fontSize={{ base: 18, md: 24 }}
                       fontWeight="700"
                       color="#fff"
                       letterSpacing={"0.5px"}
                     >
                       Account
                     </Text>
+
                     <Text
-                      fontSize={{ base: 14, md: 15 }}
+                      fontSize={{ base: 14, md: 16 }}
                       fontWeight="600"
                       color={"#00c8aa"}
                       _hover={{
@@ -290,25 +301,35 @@ const Profile = () => {
                         cursor: "pointer",
                       }}
                     >
-                      <Link href={"#"}>Edit</Link>
+                      <UseModal
+                        margin={"6px 0 0 0"}
+                        onOpen={updateEmail}
+                        title={"Edit"}
+                      />
                     </Text>
                   </HStack>
                   <Stack direction={{ base: "column", md: "row" }} mt={2}>
                     <Box w={"50%"}>
-                      <Text color={"#9B9B9B"}>Given Name</Text>
+                      <Text color={"#9B9B9B"} fontSize={"18px"} mt={4}>
+                        Given Name
+                      </Text>
                       <Text color="#fff" fontSize={14} fontWeight="500">
                         {given_name}
                       </Text>
                     </Box>
                     <Box w={{ base: "100%", md: "50%" }}>
-                      <Text color={"#9B9B9B"}>Family Name</Text>
+                      <Text color={"#9B9B9B"} fontSize={"18px"} mt={4}>
+                        Family Name
+                      </Text>
                       <Text color="#fff" fontSize={14} fontWeight="500">
                         {family_name}
                       </Text>
                     </Box>
                   </Stack>
                   <Box mt={2}>
-                    <Text color={"#9B9B9B"}>Birthday</Text>
+                    <Text color={"#9B9B9B"} fontSize={"18px"}>
+                      Birthday
+                    </Text>
                     <Text color="#fff" fontSize={14} fontWeight="500">
                       Not Given
                     </Text>
@@ -316,16 +337,16 @@ const Profile = () => {
                 </Box>
                 {/* =============== Security Section =============== */}
                 <Box
-                  h={"140px"}
+                  h={"200px"}
                   bg="#313B47"
                   w={{ base: "85vw", md: "40vw" }}
                   borderRadius={4}
                   p={"15px"}
                 >
                   <HStack>
-                    <BiLock size={24} color="#fff" />
+                    <BiLock size={34} color="#fff" />
                     <Text
-                      fontSize={{ base: 16, md: 20 }}
+                      fontSize={{ base: 18, md: 24 }}
                       fontWeight="700"
                       color="#fff"
                       letterSpacing={"0.5px"}
@@ -333,7 +354,9 @@ const Profile = () => {
                       Security
                     </Text>
                   </HStack>
-                  <Text color={"#9B9B9B"}>Password</Text>
+                  <Text color={"#9B9B9B"} mt={4} fontSize={"18px"}>
+                    Password
+                  </Text>
                   {verified_email ? (
                     <Text color="#fff" fontSize={14} fontWeight="500">
                       Google Account
@@ -360,7 +383,7 @@ const Profile = () => {
               <Stack direction={{ base: "column", md: "row" }} gap="1vw">
                 {/* =============== Email Section =============== */}
                 <Box
-                  h={"140px"}
+                  h={"140"}
                   bg="#313B47"
                   w={{ base: "85vw", md: "40vw" }}
                   borderRadius={4}
@@ -369,37 +392,60 @@ const Profile = () => {
                   mt={{ base: "4px", md: "0px" }}
                 >
                   <HStack>
-                    <MdOutlineEmail size={24} color="#fff" />
+                    <MdOutlineEmail size={34} color="#fff" />
                     {/* <EmailIcon /> */}
                     <Text
-                      fontSize={{ base: 16, md: 20 }}
+                      fontSize={{ base: 18, md: 24 }}
                       fontWeight="700"
                       color="#fff"
                       letterSpacing={"0.5px"}
                     >
                       Email
                     </Text>
-                    <Link href={"#"}>
-                      <Text
-                        fontSize={15}
-                        fontWeight="600"
-                        color={"#00c8aa"}
-                        _hover={{
-                          textDecoration: "underline",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Change
-                      </Text>
-                    </Link>
+                    {/* <Link href={"#"}> */}
+                    {/* <Text
+                      fontSize={"16px"}
+                      fontWeight="600"
+                      color={"#00c8aa"}
+                      _hover={{
+                        textDecoration: "underline",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => setUpdateEmail(true)}
+                    >
+                      Change
+                    </Text> */}
+                    <Box marginTop={"20px"}>
+                      <UseModal
+                        margin={"5px 0 0 0"}
+                        onOpen={updateEmail}
+                        title={"Change"}
+                      />
+                    </Box>
+                    {/* </Link> */}
                   </HStack>
 
                   <Box mt={2}>
-                    <Text color={"#9B9B9B"}>Account Email</Text>
+                    <Text fontSize={"18px"} color={"#9B9B9B"} mt={4}>
+                      Account Email
+                    </Text>
                     <Text color="#fff" fontSize={14} fontWeight="500">
                       {email}
                     </Text>
+                    {/* <Input
+                      readOnly={updateEmail}
+                      border={"0px"}
+                      padding={"0"}
+                      margin={"0"}
+                      color="#fff"
+                      value={"ahsanbutt123@gmail.com"}
+                    ></Input> */}
                   </Box>
+
+                  {/* <VStack>
+                    <CommonButton title={"Save"} />
+                    <CommonButton title={"Cancel"} />
+                  </VStack> */}
                 </Box>
                 {/* =============== Preference Section =============== */}
                 <Box
@@ -411,9 +457,9 @@ const Profile = () => {
                   // className={`${Style.mt}`}
                 >
                   <HStack>
-                    <CgNotes size={24} color="#fff" />
+                    <CgNotes size={34} color="#fff" />
                     <Text
-                      fontSize={{ base: 16, md: 20 }}
+                      fontSize={{ base: 18, md: 24 }}
                       fontWeight="700"
                       color="#fff"
                       letterSpacing={"0.5px"}
@@ -421,10 +467,12 @@ const Profile = () => {
                       Preferences
                     </Text>
                   </HStack>
-                  <Text color={"#9B9B9B"}>Notifications</Text>
+                  <Text color={"#9B9B9B"} fontSize={"18px"} mt={"2"}>
+                    Notifications
+                  </Text>
                   <HStack mt={2}>
                     <Checkbox value="naruto" color="white" />
-                    <Text color={"#fff"} fontSize={14}>
+                    <Text color={"#fff"} fontSize={16}>
                       I want to receive valuable Career tips and special offers
                       on Email.
                     </Text>
