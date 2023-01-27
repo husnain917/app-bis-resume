@@ -53,7 +53,7 @@ export default function Write_resume() {
                         >
                             <Box p={["5%", "5%"]} >
 
-                                <Text fontSize={["30px", "40px", "40px"]} className={"main-heading"} mb="3%"  >How to Write a Resume in 2022 | Beginners Guide
+                                <Text fontSize={["30px", "40px", "40px"]} className={"main-heading"} mb="3%"  > {'Unleash Your Potential: A Comprehensive Guide to Writing a Winning Resume in 2023'}
                                 </Text>
 
                                 <Text fontSize={["20px"]} className={"sub-heading"} fontWeight={"bold"} >How to Write a Resume - Step by step
