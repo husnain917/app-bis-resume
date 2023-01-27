@@ -31,6 +31,7 @@ export default function MobileAdv({ advNum, title, advDesc, imgSrc }) {
         bgColor="white"
         pt="20px"
         pb="20px"
+        height={"200px"}
         borderRadius="10px"
       >
         <Text
@@ -50,6 +51,7 @@ export default function MobileAdv({ advNum, title, advDesc, imgSrc }) {
           fontWeight="bold"
           pl="10px"
           className="sub-heading"
+          lineHeight={"18px"}
         >
           {title}
         </Text>

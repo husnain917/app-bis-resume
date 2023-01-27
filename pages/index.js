@@ -13,17 +13,16 @@ import SliderComponent from "../src/components/sliderComponent/SliderComponent";
 import BuildResume from "../src/components/BuildResume";
 import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
 import ChatButton from "../src/components/resumeExampleData/chatButton/chatButton";
+import { ToastContainer } from "react-toastify";
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
-
   const listenToScroll = () => {
     let heightToHidden = 0.5;
-    let againHide = 7700;
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (winScroll < heightToHidden || winScroll > againHide) {
+    if (winScroll < heightToHidden ) {
       setIsVisible(false);
     } else if (winScroll > heightToHidden) {
       setIsVisible(true);
@@ -42,7 +41,6 @@ export default function Home() {
         <meta name="description" content="Create resume with ease!" />
         <link rel="icon" href="/Bisicon.png"></link>
       </Head>
-
       <CallToAction />
       {/* <SliderComponent /> */}
 

@@ -50,7 +50,7 @@ export default function LayoutModal({
         _hover={{
           backgroundColor: 'transparent',
 
-          color: '#313C4E',
+          color: '#00c8aa',
           transition: '0.4s',
         }}
         fontSize={{ base: '12px', sm: '14px', md: '16px' }}

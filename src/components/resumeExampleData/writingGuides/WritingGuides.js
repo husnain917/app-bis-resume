@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Button, Image } from "@chakra-ui/react";
+import { Box, Text, Button, Image, Link } from "@chakra-ui/react";
 import CommonButton from "../../commonButton/CommonButton";
 const WritingGuides = () => {
   return (
@@ -19,7 +19,7 @@ const WritingGuides = () => {
           {" "}
           <Box
             fontSize={["24px", "24px", "36px", "38px", "38px"]}
-            lineHeight={["34px", "34px", "54px", "40px", "40px"]}
+            lineHeight={["34px", "34px", "54px", "50px", "50px"]}
             marginBottom={"12px"}
             maxW={["100%", "100%", "95%", "80%", "80%"]}
             className={["sub-heading"]}
@@ -49,14 +49,21 @@ const WritingGuides = () => {
             towards your dream job today with our free resume examples and templates.
           </Box>
           <Box textAlign={["center", "center", "center", "start", "start"]}>
-            <CommonButton
-              backgroundColor={"#2CACD5"}
-              color={"whitesmoke"}
-              borderRadius={"none"}
-              height={"40px"}
-              width={"150px"}
-              title={"Check My Resume"}
-            />
+            <Link
+              href="/templates"
+              _hover={{
+                textDecoration: 'none',
+              }}
+            >
+              <CommonButton
+                backgroundColor={"#2CACD5"}
+                color={"whitesmoke"}
+                borderRadius={"none"}
+                height={"40px"}
+                width={"180px"}
+                title={"Check My Resume"}
+              />
+            </Link>
           </Box>
         </Box>
         <Box

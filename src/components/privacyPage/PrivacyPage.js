@@ -30,10 +30,9 @@ const PrivacyPage = () => {
           justifyContent={"space-between"}
         >
           <Box
-            padding={'40px 0px'}
+            padding={"40px 0px"}
             maxW={["0%", "0%", "0%", "10%"]}
             zIndex={"1049"}
-    
             pl="5%"
           >
             <Box className={styles.sideBarContainer}>
@@ -41,7 +40,7 @@ const PrivacyPage = () => {
             </Box>
           </Box>
 
-          <Box maxW={["100%", "100%", "80%", "80%",]}>
+          <Box maxW={["100%", "100%", "80%", "80%"]}>
             <Box>
               {/* main title */}
               <Box padding={"40px 0px"} marginBottom={10}>
@@ -400,7 +399,7 @@ const PrivacyPage = () => {
                         >
                           {item.text}
                           <Link
-                            href={"#"}
+                            href={"https://gmail.com/"}
                             color={"#2679C7"}
                             lineHeight={"1.5"}
                             fontSize={"1.2rem"}
@@ -447,7 +446,7 @@ const PrivacyPage = () => {
                           >
                             {item.description}
                             <Link
-                              href={"#"}
+                              href={"/contact-us"}
                               color={"#2679C7"}
                               lineHeight={"1.5"}
                               fontSize={"1.2rem"}
@@ -470,7 +469,7 @@ const PrivacyPage = () => {
                           >
                             {item?.description3p1}
                             <Link
-                              href={"#"}
+                              href={"/contact-us"}
                               color={"#2679C7"}
                               lineHeight={"1.5"}
                               fontSize={"1.2rem"}
@@ -568,7 +567,7 @@ const PrivacyPage = () => {
                             <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
                               {item?.description}
                               <Link
-                                href={"#"}
+                                href={"https://gmail.com/"}
                                 color={"#2679C7"}
                                 lineHeight={"1.5"}
                                 fontSize={"1rem"}
@@ -577,7 +576,7 @@ const PrivacyPage = () => {
                               </Link>
                               {item?.description2}
                               <Link
-                                href={"#"}
+                                href={"https://gmail.com/"}
                                 color={"#2679C7"}
                                 lineHeight={"1.5"}
                                 fontSize={"1rem"}
