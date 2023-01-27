@@ -718,7 +718,7 @@ export default function FormatsTables() {
                                     padding={"20px"}
                                     fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                                 >
-                                    	•	Recruiters can easily identify your most recent job, education, and experience.
+                                    		Recruiters can easily identify your most recent job, education, and experience.
                                 </Text>
                             </Box>
 
@@ -821,7 +821,7 @@ export default function FormatsTables() {
                             lineHeight={8}
                             fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                         >
-                            <strong>Want to save time and have your skills-based (functional) resume ready in 5 minutes?</strong>
+                            <strong>Want to save time and have your skills-based (functional) resume ready in 5 seconds?</strong>
                             &nbsp;
                             <Link
                                 color={"#3983fa"}

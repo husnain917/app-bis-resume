@@ -171,7 +171,7 @@ export default function Resume_Formats() {
                 textAlign={"center"}
                 fontSize={"16px"}
               >
-                Create your own professional resume in minutes with our easy-to-use builder.
+                Create your own professional resume in seconds with our easy-to-use builder.
                 <Link color={"#3983fa"}>See more resume examples here.</Link>
               </Text>
             </Box>

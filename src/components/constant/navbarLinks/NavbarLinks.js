@@ -7,7 +7,7 @@ export const NAV_ITEMS = [
     children: [
       {
         label: "Resume Builder",
-        subLabel: "Use our builder to create a resume in 5 minutes.",
+        subLabel: "Use our builder to create a resume in seconds.",
         href: "/resume-build",
       },
       {
@@ -79,7 +79,7 @@ export const NAV_ITEMS = [
   //     children: [
   //         {
   //             label: 'Cover Letter Builder',
-  //             subLabel: 'Create your Cover Letter in 5 minutes. Land the job you want.',
+  //             subLabel: 'Create your Cover Letter in 5 seconds. Land the job you want.',
   //             href: '#',
   //         },
   //         {

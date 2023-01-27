@@ -156,9 +156,7 @@ const AboutUs = () => {
                 ]}
                 className={"small-text"}
               >
-                Since 2013, MyPerfectResume has helped more than 15 million
-                people worldwide create stronger resumes, navigate their job
-                search, and achieve career fulfillment.
+                At Job Ready, we have been empowering job seekers to achieve their career goals since 2015. Our team of certified career coaches and resume experts work closely with each individual to understand their unique skills and experiences, and use that knowledge to create a personalized and effective job search strategy. 
               </Text>
               <Text
                 textAlign={[
@@ -170,10 +168,7 @@ const AboutUs = () => {
                 ]}
                 className={"small-text"}
               >
-                Our team of experts is dedicated to helping you every step of
-                the way, from using our tools to create a showstopping resume
-                and cover letter to providing professional interview tips and
-                career guidance.
+               Whether it's crafting a compelling resume and cover letter, preparing for interviews, or providing ongoing career guidance, we are dedicated to helping our clients stand out in today's competitive job market and land the job of their dreams. So, JobReady is the perfect solution for your career search journey.
               </Text>
             </Box>
           </Box>
@@ -440,17 +435,7 @@ const AboutUs = () => {
             </Box>
           </Box>
         </Box>
-        <Box
-          style={{
-            color: "#46464e",
-            fontSize: "12px",
-            margin: "30px 0 0",
-            textAlign: "center",
-          }}
-          className={"xsmall-text"}
-        >
-          Advertisement
-        </Box>
+        
         <Box
           className="footerNotes"
           maxW={"1020px"}
@@ -460,16 +445,6 @@ const AboutUs = () => {
           fontSize={"0.5rem"}
           textAlign={"center"}
         >
-          <Box
-            margin={"0 0 20px"}
-            textAlign={["center", "center", "initial", "initial", "initial"]}
-            className={"small-text"}
-          >
-            *The names and logos of the companies referred to above are all
-            trademarks of their respective holders. Unless specifically stated
-            otherwise, such references are not intended to imply any affiliation
-            or association with MyPerfectResume
-          </Box>
         </Box>
       </Box>
     </Box>

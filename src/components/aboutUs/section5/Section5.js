@@ -39,8 +39,7 @@ const Section5 = () => {
           mt={"20px"}
           className={"small-text"}
         >
-          Get to know some of the passionate professionals, career experts,
-          technologists, and certified resume writers behind My Perfect Resume.
+  These are just a few of the passionate and experienced individuals on our team who are dedicated to helping job seekers achieve their career goals."
         </Text>
       </Box>
       <Box className="cardContent">
