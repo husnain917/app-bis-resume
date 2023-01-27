@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Box, Text, Button, Image } from "@chakra-ui/react";
+import { Box, Text, Button, Image, } from "@chakra-ui/react";
 import { Grid } from "@chakra-ui/react";
 // Swiper js
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -105,16 +105,23 @@ const SelectResume = () => {
                     display={["none", "none", "none", "block", "block"]}
                   >
                     <Box mx={2}>
-                      <CommonButton
-                        backgroundColor={"#2CACD5"}
-                        color={"whitesmoke"}
-                        fontSize={["14x", "14px", "16px", "16px", "16px"]}
-                        height={"40px"}
-                        width={"150px"}
-                        padding={"20px"}
-                        borderRadius={"5px"}
-                        title={"Select Template"}
-                      />
+                      <Link
+                        href={'/templates'}
+                        _hover={{
+                          textDecoration: 'none'
+                        }}
+                      >
+                        <CommonButton
+                          backgroundColor={"#2CACD5"}
+                          color={"whitesmoke"}
+                          fontSize={["14x", "14px", "16px", "16px", "16px"]}
+                          height={"40px"}
+                          width={"180px"}
+                          padding={"20px"}
+                          borderRadius={"5px"}
+                          title={"Select Template"}
+                        />
+                      </Link>
                     </Box>
                   </Box>
                 </Box>

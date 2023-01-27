@@ -47,7 +47,7 @@ export default function Adv({
           className="sub-heading"
           color="#002D6B"
           fontSize={["0.5rem", "0.8rem", "1rem", "1.4rem", "1.4rem"]}
-          lineHeight={"20px"}
+          lineHeight={"30px"}
           fontWeight="bold"
           pl="10px"
         >

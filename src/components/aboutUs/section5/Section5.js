@@ -39,7 +39,8 @@ const Section5 = () => {
           mt={"20px"}
           className={"small-text"}
         >
-  These are just a few of the passionate and experienced individuals on our team who are dedicated to helping job seekers achieve their career goals."
+          {`Get to know some of the passionate professionals, career experts,
+          technologists, and certified resume writers behind BisResume.`}
         </Text>
       </Box>
       <Box className="cardContent">

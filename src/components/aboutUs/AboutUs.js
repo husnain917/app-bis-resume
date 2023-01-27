@@ -30,9 +30,9 @@ import Section5 from "./section5/Section5";
 import SideBar from "../sideBar/SideBar";
 import SideBarSection from "./SideBarSection/SideBarSection";
 import GoTopButton from "./goToTopButton/GoTopButton";
-import styles from "../../../styles/sideBarSection.module.css"
+import styles from "../../../styles/sideBarSection.module.css";
+import Link from "next/link";
 const AboutUs = () => {
-
   const swiperRef = useRef();
   useEffect(() => {
     AOS.init();
@@ -119,131 +119,137 @@ const AboutUs = () => {
         </Box>
 
         <Box
-                maxW={["100%", "100%", "80%", "80%","85%"]}
+          maxW={["100%", "100%", "80%", "80%", "85%"]}
+          display={"flex"}
+          justifyContent={"space-between"}
+        >
+          <Box
+            padding={"40px 0px"}
+            maxW={["0%", "0%", "0%", "10%"]}
+            zIndex={"1049"}
+          >
+            <Box className={styles.sideBarContainer} ml="20%">
+              <SideBar />
+            </Box>
+          </Box>
 
-                display={"flex"}
-                justifyContent={"space-between"}
-            >
-                <Box
-                    padding={'40px 0px'}
-                    maxW={["0%", "0%", "0%", "10%"]}
-                    zIndex={"1049"}
-          
-                >
-                    <Box
-                        className={styles.sideBarContainer}
-                        ml="20%"
-                    >
-                        <SideBar />
-                    </Box>
+          <Box maxW={["100%", "100%", "80%", "80%", "85%"]}>
+            <Box className={"section1"} padding={"50px 0px 50px 0px"}>
+              <Box maxW={"750px"} className={"container1"}>
+                <Box maxW={"750px"} margin={"0 auto"} fontSize={"1.1rem"}>
+                  <Text
+                    my={6}
+                    textAlign={[
+                      "center",
+                      "center",
+                      "initial",
+                      "initial",
+                      "initial",
+                    ]}
+                    className={"small-text"}
+                  >
+                    Since 2013, BisResume has helped more than 15 million people
+                    worldwide create stronger resumes, navigate their job
+                    search, and achieve career fulfillment.
+                  </Text>
+                  <Text
+                    textAlign={[
+                      "center",
+                      "center",
+                      "initial",
+                      "initial",
+                      "initial",
+                    ]}
+                    className={"small-text"}
+                  >
+                    Our team of experts is dedicated to helping you every step
+                    of the way, from using our tools to create a showstopping
+                    resume and cover letter to providing professional interview
+                    tips and career guidance.
+                  </Text>
                 </Box>
+              </Box>
+            </Box>
 
-
-
-        <Box maxW={["100%", "100%", "80%", "80%","85%"]}>
-
-        <Box className={"section1"} padding={"50px 0px 50px 0px"}>
-          <Box maxW={"750px"} className={"container1"}>
-            <Box maxW={"750px"} margin={"0 auto"} fontSize={"1.1rem"}>
-              <Text
-                my={6}
-                textAlign={[
-                  "center",
-                  "center",
-                  "initial",
-                  "initial",
-                  "initial",
-                ]}
-                className={"small-text"}
+            <Box
+              className={"section2"}
+              style={{
+                padding: "50px 0 0 0",
+                position: "relative",
+              }}
+            >
+              <Box
+                maxW={"950px"}
+                width={"100%"}
+                style={{
+                  margin: "0 auto",
+                }}
               >
-                At Job Ready, we have been empowering job seekers to achieve their career goals since 2015. Our team of certified career coaches and resume experts work closely with each individual to understand their unique skills and experiences, and use that knowledge to create a personalized and effective job search strategy. 
-              </Text>
-              <Text
-                textAlign={[
-                  "center",
-                  "center",
-                  "initial",
-                  "initial",
-                  "initial",
-                ]}
-                className={"small-text"}
-              >
-               Whether it's crafting a compelling resume and cover letter, preparing for interviews, or providing ongoing career guidance, we are dedicated to helping our clients stand out in today's competitive job market and land the job of their dreams. So, JobReady is the perfect solution for your career search journey.
-              </Text>
+                {data.map((section2, index) => {
+                  return (
+                    <>
+                      <SecondSection
+                        key={index}
+                        heading={section2.heading}
+                        subHeading={section2.subHeading}
+                        content={section2.content}
+                        image={section2.image}
+                        direction={section2.direction}
+                      />
+                      ;
+                    </>
+                  );
+                })}
+              </Box>
+            </Box>
+            <Box
+              className={"section3"}
+              padding={[
+                "10px 0px",
+                "10px 0px",
+                "30px 0px",
+                "30px 0px",
+                "30px 0px",
+              ]}
+            >
+              <Box maxWidth={"960px"} className="container1">
+                <UnorderedList
+                  margin={["0px"]}
+                  padding={["0px"]}
+                  display={"flex"}
+                  justifyContent={"space-between"}
+                  alignItems={"center"}
+                  width={"100%"}
+                  style={{
+                    listStyle: "none",
+                  }}
+                  flexDirection={["column", "column", "row", "row", "row"]}
+                >
+                  <ListItem>As seen in: </ListItem>
+                  <ListItem>
+                    <Image src="/thegaurdian-blue.png" alt="will show soon" />
+                  </ListItem>
+                  <ListItem>
+                    <Image src="/time-blue.png" alt="will show soon" />
+                  </ListItem>
+                  <ListItem>
+                    <Image
+                      src="/thenewyorktimes-blue.png"
+                      alt="will show soon"
+                    />
+                  </ListItem>
+                  <ListItem>
+                    <Image src="/msn-blue.png" alt="will show soon" />
+                  </ListItem>
+                  <ListItem>
+                    {" "}
+                    <Image src="/forbes-blue.png" alt="will show soon" />
+                  </ListItem>
+                </UnorderedList>
+              </Box>
             </Box>
           </Box>
         </Box>
-  
-        <Box
-          className={"section2"}
-          style={{
-            padding: "50px 0 0 0",
-            position: "relative",
-          }}
-        >
-          <Box
-            maxW={"950px"}
-            width={"100%"}
-            style={{
-              margin: "0 auto",
-            }}
-          >
-            {data.map((section2, index) => {
-              return (
-                <>
-                  <SecondSection
-                    key={index}
-                    heading={section2.heading}
-                    subHeading={section2.subHeading}
-                    content={section2.content}
-                    image={section2.image}
-                    direction={section2.direction}
-                  />
-                  ;
-                </>
-              );
-            })}
-          </Box>
-        </Box>
-        <Box
-          className={"section3"}
-          padding={["10px 0px", "10px 0px", "30px 0px", "30px 0px", "30px 0px"]}
-        >
-          <Box maxWidth={"960px"} className="container1">
-            <UnorderedList
-              margin={["0px"]}
-              padding={["0px"]}
-              display={"flex"}
-              justifyContent={"space-between"}
-              alignItems={"center"}
-              width={"100%"}
-              style={{
-                listStyle: "none",
-              }}
-              flexDirection={["column", "column", "row", "row", "row"]}
-            >
-              <ListItem>As seen in: </ListItem>
-              <ListItem>
-                <Image src="/thegaurdian-blue.png" alt="will show soon" />
-              </ListItem>
-              <ListItem>
-                <Image src="/time-blue.png" alt="will show soon" />
-              </ListItem>
-              <ListItem>
-                <Image src="/thenewyorktimes-blue.png" alt="will show soon" />
-              </ListItem>
-              <ListItem>
-                <Image src="/msn-blue.png" alt="will show soon" />
-              </ListItem>
-              <ListItem>
-                {" "}
-                <Image src="/forbes-blue.png" alt="will show soon" />
-              </ListItem>
-            </UnorderedList>
-          </Box>
-        </Box>
-</Box>
-</Box>
 
         <Box className="section4" paddingTop={"50px"} bg={"#f6f5f0"}>
           <Box
@@ -290,10 +296,10 @@ const AboutUs = () => {
                       alt="Star Summary"
                     />
                   </p>
-                  <p className="excellent">
+                  {/* <p className="excellent">
                     Based on{" "}
                     <a
-                      href="https://www.trustpilot.com/review/myperfectresume.com"
+                      href="#"
                       target="_blank"
                       rel="noreferrer"
                       style={{
@@ -313,7 +319,7 @@ const AboutUs = () => {
                       width="90"
                       height="22"
                     />
-                  </p>
+                  </p> */}
                 </Box>
                 <Box className="reviews">
                   <Slider />
@@ -400,25 +406,30 @@ const AboutUs = () => {
                 alignItems={"center"}
                 justifyContent={"center"}
               >
-                <CommonButton
-                  borderRadius={"10px"}
-                  title={"Join Our Team"}
-                  color={"whitesmoke"}
-                  backgroundColor={"#02818c"}
-                  height={"43px"}
-                  width={"120px"}
-                  margin={"10px 10px"}
-                  className={"small-heading"}
-                />
-                <CommonButton
-                  borderRadius={"10px"}
-                  title={"Contact Us"}
-                  color={"whitesmoke"}
-                  className={"small-heading"}
-                  backgroundColor={"#02818c"}
-                  height={"43px"}
-                  width={"120px"}
-                />
+                {/* <Link href={"/templates"}>
+                  <CommonButton
+                    borderRadius={"10px"}
+                    title={"Join Our Team"}
+                    color={"whitesmoke"}
+                    backgroundColor={"#02818c"}
+                    height={"43px"}
+                    width={"120px"}
+                    margin={"10px 10px"}
+                    className={"small-heading"}
+                  />
+                </Link> */}
+                <Link href={"/contact-us"}>
+                  <CommonButton
+                    borderRadius={"10px"}
+                    title={"Contact Us"}
+                    color={"whitesmoke"}
+                    className={"small-heading"}
+                    backgroundColor={"#02818c"}
+                    height={"43px"}
+                    width={"120px"}
+                  />
+                </Link>
+
                 {/* <Button
                   className="btn btn-primary"
                   margin={"0 17px"}
@@ -435,7 +446,17 @@ const AboutUs = () => {
             </Box>
           </Box>
         </Box>
-        
+        {/* <Box
+          style={{
+            color: "#46464e",
+            fontSize: "12px",
+            margin: "30px 0 0",
+            textAlign: "center",
+          }}
+          className={"xsmall-text"}
+        >
+          Advertisement
+        </Box> */}
         <Box
           className="footerNotes"
           maxW={"1020px"}
@@ -445,6 +466,16 @@ const AboutUs = () => {
           fontSize={"0.5rem"}
           textAlign={"center"}
         >
+          <Box
+            margin={"0 0 20px"}
+            textAlign={["center", "center", "initial", "initial", "initial"]}
+            className={"small-text"}
+          >
+            *The names and logos of the companies referred to above are all
+            trademarks of their respective holders. Unless specifically stated
+            otherwise, such references are not intended to imply any affiliation
+            or association with BisResume
+          </Box>
         </Box>
       </Box>
     </Box>

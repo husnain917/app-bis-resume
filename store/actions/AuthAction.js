@@ -43,7 +43,7 @@ export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
     }
 }
 
-export const doGoogleLogin = (terms, setLoading, setErr ) => async (dispatch) => {
+export const doGoogleLogin = (terms, setLoading, setErr) => async (dispatch) => {
     const provider = new GoogleAuthProvider();
 
     try {
@@ -105,7 +105,7 @@ export const doGoogleLogin = (terms, setLoading, setErr ) => async (dispatch) =>
     }
 }
 
-export const doSignUp = (data, setErr,  setLoadingsignup) => async (dispatch) => {
+export const doSignUp = (data, setErr, setLoadingsignup, err) => async (dispatch) => {
     try {
         setLoadingsignup(true);
         const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password);
@@ -113,7 +113,8 @@ export const doSignUp = (data, setErr,  setLoadingsignup) => async (dispatch) =>
         updateProfile(fullAuth.currentUser, {
             displayName: data.firstName, // it can be a value of an input
         });
-        await sendEmailVerification(fullAuth.currentUser)
+     
+        sendEmailVerification(fullAuth.currentUser)
         ToastSuccess("Verification Email Sent.")
         const docRef = await addDoc(collection(db, "users"), {
             ...data,
@@ -126,7 +127,9 @@ export const doSignUp = (data, setErr,  setLoadingsignup) => async (dispatch) =>
                 type: SIGN_UP,
                 payload: userData,
             })
-
+        }
+        else {
+            setErr({ fieldErr: 'This email already in use.', inputId: 12 })
         }
     } catch (e) {
         const errorCode = e.code;
@@ -136,10 +139,18 @@ export const doSignUp = (data, setErr,  setLoadingsignup) => async (dispatch) =>
         console.log('Error at signup: ', errorCode);
     } finally {
         setLoadingsignup(false);
-        dispatch({
-            type: MODAL_OPEN,
-            payload: false,
-        })
+        if (err !== 12) {
+            dispatch({
+                type: MODAL_OPEN,
+                payload: true,
+            })
+        }
+        else {
+            dispatch({
+                type: MODAL_OPEN,
+                payload: false,
+            })
+        }
     }
 }
 
@@ -243,7 +254,7 @@ export const modalOpen = () => async (dispatch) => {
     console.log("smi")
 }
 export const modalClose = () => async (dispatch) => {
-    dispatch({  
+    dispatch({
         type: MODAL_OPEN,
         payload: false
     })
