@@ -66,7 +66,7 @@ const SelectResume = () => {
                   <Text
                     fontSize={["32px", "32px", "32px", "46px", "46px"]}
                     fontWeight={"700"}
-                    lineHeight={["34px", "34px", "34px", "40px", "40px"]}
+                    lineHeight={["34px", "34px", "34px", "50px", "50px"]}
                     color={"white"}
                     marginBottom={["8px", "8px", "8px", "24px", "24px"]}
                     textAlign={[

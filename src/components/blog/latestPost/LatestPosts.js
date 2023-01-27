@@ -3,7 +3,6 @@ import style from "../../../../styles/blog/latestPosts.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { SimpleGrid, Box, Text } from "@chakra-ui/react";
-
 export default function LatestPosts({ blogs }) {
   console.log("blogs", blogs);
   const [searchKey, setSearchKey] = useState("");
