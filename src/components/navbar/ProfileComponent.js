@@ -56,7 +56,7 @@ export default function ProfileComponent() {
               alt="Fluffybuns the destroyer"
             />
             <TiArrowSortedDown
-              color={iconColor}
+              color={iconColor ? iconColor : ""}
               size={"1.8rem"}
               onClick={handleIconColor}
             />
