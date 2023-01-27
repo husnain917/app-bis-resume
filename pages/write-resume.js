@@ -56,7 +56,7 @@ export default function Write_resume() {
                                 <Text fontSize={["30px", "40px", "40px"]} className={"main-heading"} mb="3%"  > {'Unleash Your Potential: A Comprehensive Guide to Writing a Winning Resume in 2023'}
                                 </Text>
 
-                                <Text fontSize={["20px"]} className={"sub-heading"} fontWeight={"bold"} >How to Write a Resume - Step by step
+                                <Text fontSize={["20px"]} className={"sub-heading"} fontWeight={"bold"} >{'How to Write a Resume - Step by step '}
                                 </Text>
                                 <Text fontSize={'1rem'} className={"only-font-family"} mt={["2%", "3%", "3%"]}>
                                     For most job-seekers, a good resume is what stands between a dream job and Choice . Get your resume right, and you’ll be getting replies from every other company you apply to.
