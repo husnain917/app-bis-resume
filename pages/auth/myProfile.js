@@ -11,7 +11,7 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from '../../src/components/footer/Footer';
 import Navbar from '../../src/components/navbar/Navbar';
 import Style from '../../styles/profile.module.css';
@@ -51,11 +51,16 @@ const Profile = () => {
   const [email, setEmail] = useState(userData?.email || '');
   const [picture, setPicture] = useState(userData?.picture || '');
   const [family_name, setFamilyName] = useState(userData?.family_name || '')
-  const [given_name, setGivenName] = useState( userData?.given_name || '')
+  const [given_name, setGivenName] = useState(userData?.given_name || '')
   const [verified_email, setVerifiedEmail] = useState(userData?.verified_email || '')
-
-
-
+  useEffect(() => {
+    setName(userData?.name)
+    setEmail(userData?.email)
+    setPicture(userData?.picture)
+    setFamilyName(userData?.family_name)
+    setGivenName(userData?.given_name)
+    setVerifiedEmail(userData?.verified_email)
+  },[])
 
   return (
     <>
