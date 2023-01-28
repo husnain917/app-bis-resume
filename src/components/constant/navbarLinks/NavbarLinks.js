@@ -20,11 +20,11 @@ export const NAV_ITEMS = [
         subLabel: "See perfect resume examples that get you jobs.",
         href: "/resume-examples",
       },
-      {
-        label: "Resume Format",
-        subLabel: "Choose the right resume format for your needs.",
-        href: "/blog/resume-formats",
-      },
+      // {
+      //   label: "Resume Format",
+      //   subLabel: "Choose the right resume format for your needs.",
+      //   href: "/blog/resume-formats",
+      // },
       {
         label: "How to Write a Resume",
         subLabel: "Learn how to write a resume that lands you jobs.",
@@ -110,21 +110,31 @@ export const NAV_ITEMS = [
   //     ],
   // },
   {
+    label: "Resume Help",
+    subLabel: "Use our expert guides to improve your resume writing.",
+    href: "/help/resume-help",
+  },
+  {
+    label: "Resume Format",
+    subLabel: "Choose the right resume format for your needs.",
+    href: "/blog/resume-formats",
+  },
+  {
     label: "Blogs",
     href: "/blog",
   },
-  {
-    label: "Job Search",
-    href: "#",
-  },
-  {
-    label: "Job Interviews",
-    href: "#",
-  },
-  {
-    label: "Career Advice",
-    href: "#",
-  },
+  // {
+  //   label: "Job Search",
+  //   href: "#",
+  // },
+  // {
+  //   label: "Job Interviews",
+  //   href: "#",
+  // },
+  // {
+  //   label: "Career Advice",
+  //   href: "#",
+  // },
   {
     label: "About",
     href: "/about-us",

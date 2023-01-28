@@ -74,7 +74,7 @@ export default function FormatsTables() {
             paddingBottom={"25px"}
             fontFamily={`'EuclidCircularB-Medium', sans-serif`}
           >
-            {/* {RESUME_FORMATS?.thirdTitle} */}
+            {RESUME_FORMATS?.thirdTitle}
           </Text>
 
           {/* list items */}

@@ -160,7 +160,7 @@ export default function Pricing() {
                 marginLeft={"2"}
                 className="only-font-family"
                 fontSize={["1em", "1em", "1em", "1.1em", "1.1em", "1.3em"]}
-                href="mailto:contact@bisresume.com"
+                href="https://gmail.com/"
               >
                 contact@bisresume.com
               </Link>

@@ -58,16 +58,16 @@ export default function ResumeFormats() {
 
             {/* The 3 Best Resume Formats to  */}
             <Box>
-              <Text
-                color={"#fff"}
-                fontSize={["1.2em", "1.2em", "1.2em", "1.2em"]}
-                lineHeight={10}
-                fontFamily={`'EuclidCircularB', sans-serif`}
-              >
-                <Link href="/blog/resume-formats">
+              <Link href="/templates" color={"#fff"}>
+                <Text
+                  color={"#fff"}
+                  fontSize={["1.2em", "1.2em", "1.2em", "1.2em"]}
+                  lineHeight={10}
+                  fontFamily={`'EuclidCircularB', sans-serif`}
+                >
                   The 3 Best Resume Formats to...
-                </Link>
-              </Text>
+                </Text>
+              </Link>
             </Box>
           </Box>
           <Text
