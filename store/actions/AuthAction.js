@@ -14,13 +14,26 @@ export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
         setLoading(true);
         const logInData = await signInWithEmailAndPassword(auth, data.email, data.password);
         const userLoginData = logInData.user;
-        // console.log('userLoginData: ', userLoginData);
-
+        const dat = {
+            email: userLoginData.reloadUserInfo['email'],
+            family_name: userLoginData.reloadUserInfo['displayName'].split(" ")[1],
+            given_name: userLoginData.reloadUserInfo['displayName'].split(" ")[0],
+            granted_scopes: "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid",
+            id: userLoginData.reloadUserInfo['localId'],
+            locale: "en",
+            name: userLoginData.reloadUserInfo['displayName'],
+            picture: "https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.eventfulnigeria.com%2Famo-team%2Faudu-maikori%2Favatar-png-free-download%2F&psig=AOvVaw3jK8tBrHXEDwBl_3IC_89q&ust=1674978240601000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIjfk6zi6fwCFQAAAAAdAAAAABAE",
+            verified_email: userLoginData.reloadUserInfo['emailVerified'],
+        }
         if (userLoginData) {
             storeToken(userLoginData?.uid)
+            userToken(dat)
             dispatch({
                 type: LOGIN,
-                payload: userLoginData?.uid,
+                payload: {
+                    userId: userLoginData?.uid,
+                    userData: dat
+                },
             });
             setErr({ fieldErr: '' })
             ToastSuccess("Login Successfull")
@@ -110,11 +123,13 @@ export const doSignUp = (data, setErr, setLoadingsignup, err) => async (dispatch
         setLoadingsignup(true);
         const userCredential = await createUserWithEmailAndPassword(auth, data.email, data.password);
         const userData = userCredential.user;
+       
         updateProfile(fullAuth.currentUser, {
-            displayName: data.firstName, // it can be a value of an input
+            displayName: data.firstName + ' ' + data.lastName, // it can be a value of an input
         });
-     
+
         sendEmailVerification(fullAuth.currentUser)
+      
         ToastSuccess("Verification Email Sent.")
         const docRef = await addDoc(collection(db, "users"), {
             ...data,
@@ -185,6 +200,7 @@ export const doLogout = (setLoading) => async (dispatch) => {
             type: LOGOUT,
             payload: null
         });
+        console.clear()
     } catch (error) {
         console.log("error", error);
     } finally {
@@ -239,7 +255,7 @@ export const redirect = () => async (dispatch) => {
             type: LOGIN,
             payload: {
                 userId: getToken(),
-                userData: user
+                userData: user.user_token
             }
         })
     }

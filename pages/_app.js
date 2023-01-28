@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       let token = getToken();
       if (token.access_token) {
         dispatch(redirect());
+        console.log('sami',token);
       }
     }
   }, []);
