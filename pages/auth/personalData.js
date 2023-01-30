@@ -82,7 +82,10 @@ const PersonalData = () => {
                 </Text>
               </Box>
             </Flex>
-            <Flex marginTop={"20px !important"}>
+            <Flex
+              marginTop={"20px !important"}
+              flexDirection={["column", "row"]}
+            >
               <Box
                 borderRadius={"5px"}
                 width={"300px"}
@@ -107,7 +110,8 @@ const PersonalData = () => {
                 fontSize={"16px"}
                 lineHeight={"36px"}
                 height={"200px"}
-                marginLeft={"10px"}
+                marginLeft={["0px", "10px"]}
+                marginTop={["10px", "0px"]}
               >
                 <Text fontWeight={"bold"}> Export </Text>
                 <Text>
@@ -115,11 +119,17 @@ const PersonalData = () => {
                   Here you can download your data from your resumes & cover
                   letters.{" "}
                 </Text>
-                <CommonButton
-                  title={"Dowanload as JSON"}
-                  margin={"25px 0 0 0"}
-                  backgroundColor={"#00C8AA"}
-                />
+                <Box
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent={"center"}
+                >
+                  <CommonButton
+                    title={"Dowanload as JSON"}
+                    margin={"25px 0 0 0"}
+                    backgroundColor={"#00C8AA"}
+                  />
+                </Box>
               </Box>
             </Flex>
           </VStack>

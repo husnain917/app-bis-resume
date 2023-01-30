@@ -158,15 +158,6 @@ const Profile = () => {
           </Box>
         </Box>
         {/* =============== Avatar Section =============== */}
-        {/* <Box zIndex={100}>
-          <Avatar
-            size="2xl"
-            borderWidth={3}
-            zIndex={100}
-            src={picture ? picture : preview}
-            className={`${Style.avatar}`}
-          />
-        </Box> */}
         <UseProfileImage
           image={picture ? picture : preview}
           className={`${Style.avatar}`}
@@ -402,19 +393,7 @@ const Profile = () => {
                     >
                       Email
                     </Text>
-                    {/* <Link href={"#"}> */}
-                    {/* <Text
-                      fontSize={"16px"}
-                      fontWeight="600"
-                      color={"#00c8aa"}
-                      _hover={{
-                        textDecoration: "underline",
-                        cursor: "pointer",
-                      }}
-                      onClick={() => setUpdateEmail(true)}
-                    >
-                      Change
-                    </Text> */}
+
                     <Box marginTop={"20px"}>
                       <UseModal
                         margin={"5px 0 0 0"}
@@ -422,7 +401,6 @@ const Profile = () => {
                         title={"Change"}
                       />
                     </Box>
-                    {/* </Link> */}
                   </HStack>
 
                   <Box mt={2}>
@@ -432,20 +410,7 @@ const Profile = () => {
                     <Text color="#fff" fontSize={14} fontWeight="500">
                       {email}
                     </Text>
-                    {/* <Input
-                      readOnly={updateEmail}
-                      border={"0px"}
-                      padding={"0"}
-                      margin={"0"}
-                      color="#fff"
-                      value={"ahsanbutt123@gmail.com"}
-                    ></Input> */}
                   </Box>
-
-                  {/* <VStack>
-                    <CommonButton title={"Save"} />
-                    <CommonButton title={"Cancel"} />
-                  </VStack> */}
                 </Box>
                 {/* =============== Preference Section =============== */}
                 <Box

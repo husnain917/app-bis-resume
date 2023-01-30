@@ -39,23 +39,11 @@ const UseProfileImage = ({
   const [src, setsrc] = useState();
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   setPicture("/uploadpic1.png");
-  //   setsrc("/uploadpic1.png");
-  //   console.log("changeImage in UseEffect", changeImage);
-  // }, [changeImage]);
   const handleImageUpload = (e) => {
     setsrc(URL.createObjectURL(e.target.files[0]));
     setisOpen(true);
     return;
   };
-
-  // useEffect(() => {
-  //   const removeSelectedImage = () => {
-  //     setsrc("");
-  //   };
-  //   console.log("Delete Button Clicked");
-  // }, [changeImage]);
 
   const onDone = async () => {
     setisOpen(false);
