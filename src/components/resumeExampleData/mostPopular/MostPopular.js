@@ -103,7 +103,7 @@ const MostPopular = ({ data }) => {
           >
             <Swiper
               id="coverEffectSlider"
-              spaceBetween={15}
+              spaceBetween={20}
               grabCursor
               initialSlide={1}
               loop
@@ -126,7 +126,7 @@ const MostPopular = ({ data }) => {
                   slidesPerView: 3,
                 },
                 1300: {
-                  slidesPerView: 3,
+                  slidesPerView: 4,
                 },
                 1600: {
                   slidesPerView: 4,
@@ -142,9 +142,9 @@ const MostPopular = ({ data }) => {
                       padding={"5"}
                       borderRadius={"10"}
                       _hover={{
-                        background: "white",
                         cursor: "pointer",
                       }}
+                      maxW={80}
                       onClick={() => {}}
                     >
                       <Text fontSize={["1.1em", "1.3em"]} fontWeight={"500"}>
