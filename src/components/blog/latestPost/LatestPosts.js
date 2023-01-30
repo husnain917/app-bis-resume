@@ -4,8 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { SimpleGrid, Box, Container, Text } from "@chakra-ui/react";
 import SocialIcons from "../../Social/SocialIcons";
-import ReadMoreReact from "read-more-react"
-
+import ReadMoreReact from "read-more-react";
 export default function LatestPosts({ blogs }) {
   console.log("blogs", blogs);
   const [searchKey, setSearchKey] = useState("");

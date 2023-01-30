@@ -72,6 +72,7 @@ const Profile = () => {
     current.src = result;
     dispatch(onBlurField(result, "profile.profileImage"));
   };
+
   const dummyEmail = "ahsanbutt515@gmail.com";
   const dummyfirstName = "Ahsan Ali";
   const dummyLastName = "Butt";
@@ -94,6 +95,16 @@ const Profile = () => {
     setPreview("/uploadpic1.png");
   };
   console.log("userData", userData);
+
+  // useEffect(() => {
+  //   setName(userData?.name);
+  //   setEmail(userData?.email);
+  //   setPicture(userData?.picture);
+  //   setFamilyName(userData?.family_name);
+  //   setGivenName(userData?.given_name);
+  //   setVerifiedEmail(userData?.verified_email);
+  // }, []);
+
   return (
     <>
       {/* ~~~~~~~~~~~~~~ User Profile Page ~~~~~~~~~~~~~~ */}
