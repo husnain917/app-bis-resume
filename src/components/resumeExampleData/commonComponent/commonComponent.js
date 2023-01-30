@@ -36,7 +36,7 @@ const CommonComponent = ({ data }) => {
         paddingBottom={"20px"}
         borderBottom={"1px solid whitesmoke"}
         justifyContent={"space-between"}
-        height={["auto", "auto", "100px", "100px", "100px"]}
+        height={["auto", "auto", "140px", "140px", "140px"]}
         marginBottom={"inherit"}
       >
         <Box display={"flex"}>
@@ -132,8 +132,9 @@ const CommonComponent = ({ data }) => {
                   padding={"5"}
                   borderRadius={"10"}
                   _hover={{
-                    background: "white",
+                    // background: "white",
                     cursor: "pointer",
+                    // transform: scale(0.8),
                   }}
                   onClick={() => {}}
                 >
@@ -165,7 +166,7 @@ const CommonComponent = ({ data }) => {
                   padding={"5"}
                   borderRadius={"10"}
                   _hover={{
-                    background: "white",
+                    // background: "white",
                     cursor: "pointer",
                   }}
                   onClick={() => {}}
@@ -201,7 +202,7 @@ const CommonComponent = ({ data }) => {
                   padding={"5"}
                   borderRadius={"10"}
                   _hover={{
-                    background: "white",
+                    // background: "white",
                     cursor: "pointer",
                   }}
                   onClick={() => {}}
