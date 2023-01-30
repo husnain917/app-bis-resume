@@ -25,7 +25,7 @@ const TryResume = () => {
             marginRight={["0", "0", "0", "16px", "32px"]}
             flexShrink={["0", "0", "", "", "0"]}
             minWidth={["50%", "", "", "0%", "0%"]}
-            height={["320px"]}
+            height={["300px"]}
           >
             <Image
               src="./sampleTemplate.png"
@@ -80,7 +80,7 @@ const TryResume = () => {
               </Text>{" "}
             </Box>
             <Box display={"flex"} alignItems={"center"}>
-              <Box mx={2}>
+              <Box mx={2} >
                 <Link
                   href="/templates"
                   _hover={{
