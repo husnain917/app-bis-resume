@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Box, Image, Button } from "@chakra-ui/react";
-import ImageCrop from "./Crop/ImageCrop";
-import { canvasPreview } from "./canvasPreview";
+import { Box, Image } from "@chakra-ui/react";
+import ImageCrop from "../../src/components/Crop/ImageCrop";
+import { canvasPreview } from "../../src/components/canvasPreview";
 import { useDispatch, useSelector } from "react-redux";
 import { onBlurField } from "../../store/actions/builderAction";
-const ImageSelector = ({
+import { EmailIcon } from "@chakra-ui/icons";
+const UseProfileImage = ({
   height,
   width,
   marginTop,
@@ -17,22 +18,27 @@ const ImageSelector = ({
   maxWidth,
   minHeight,
   minWidth,
+  className,
+  changeImage,
+  image,
 }) => {
   useEffect(() => {
     console.log("Height", height, "Width", width);
   }, [height, width]);
-  let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  console.log("resumeData", resumeData?.profile?.profileImage);
+  const userData = useSelector((store) => store.AuthReducer.user);
+  console.log("resumeData", userData?.Image);
   const [isOpen, setisOpen] = useState(false);
   const uploadedImage = React.useRef(null);
   const imageUploader = React.useRef(null);
+  const [picture, setPicture] = useState(userData?.picture || "");
   const [scale, setScale] = useState(1);
   const [rotate, setRotate] = useState(0);
-  const imgRef = useRef(null);
   const [crop, setCrop] = useState();
   const [aspect, setAspect] = useState(16 / 9);
+  const imgRef = useRef(null);
   const [src, setsrc] = useState();
   const dispatch = useDispatch();
+
   const handleImageUpload = (e) => {
     setsrc(URL.createObjectURL(e.target.files[0]));
     setisOpen(true);
@@ -47,6 +53,15 @@ const ImageSelector = ({
     dispatch(onBlurField(result, "profile.profileImage"));
   };
 
+  const onCancel = async () => {
+    setisOpen(false);
+    // const result = await canvasPreview(imgRef.current, crop, scale, rotate);
+    // const { current } = uploadedImage;
+    // current.src = result;
+    // dispatch(onBlurField(result, "profile.profileImage"));
+    return console.log("cancelButtonClicked");
+  };
+
   return (
     <Box>
       {isOpen && (
@@ -58,6 +73,7 @@ const ImageSelector = ({
           src={src}
           onDone={onDone}
           imgRef={imgRef}
+          onCancel={onCancel}
         />
       )}
       <Box
@@ -78,13 +94,10 @@ const ImageSelector = ({
               />
             </Box>
 
-            <Box onClick={() => imageUploader.current.click()}>
+            <Box>
               <Image
-                src={
-                  resumeData?.profile?.profileImage
-                    ? resumeData?.profile?.profileImage
-                    : "/uploadpic1.png"
-                }
+                // src={picture ? picture : "/uploadpic1.png"}
+                src={image || "/uploadpic2.png"}
                 background={"white"}
                 ref={uploadedImage}
                 alt="will load soon"
@@ -103,6 +116,7 @@ const ImageSelector = ({
                   }`,
                   transition: "1s border",
                 }}
+                className={className}
               />
             </Box>
           </Box>
@@ -112,4 +126,4 @@ const ImageSelector = ({
   );
 };
 
-export default ImageSelector;
+export default UseProfileImage;

@@ -20,95 +20,14 @@ export const NAV_ITEMS = [
         subLabel: "See perfect resume examples that get you jobs.",
         href: "/resume-examples",
       },
-      // {
-      //   label: "Resume Format",
-      //   subLabel: "Choose the right resume format for your needs.",
-      //   href: "/blog/resume-formats",
-      // },
+
       {
         label: "How to Write a Resume",
         subLabel: "Learn how to write a resume that lands you jobs.",
         href: "/write-resume",
       },
-      {
-        label: "Resume Help",
-        subLabel: "Use our expert guides to improve your resume writing.",
-        href: "/help/resume-help",
-      },
     ],
   },
-  // {
-  //     label: 'CV',
-  //     icon: ChevronDownIcon,
-  //     children: [
-  //         {
-  //             label: 'CV Builder',
-  //             subLabel: 'Create your CV in 5 minutes. Land the job you want.',
-  //             href: '#',
-  //         },
-  //         {
-  //             label: 'CV Templates',
-  //             subLabel: 'Find the perfect CV template.',
-  //             href: '#',
-  //         },
-  //         {
-  //             label: 'CV Examples',
-  //             subLabel: 'See perfect CV examples that get you jobs.',
-  //             href: '#',
-  //         },
-  //         {
-  //             label: 'CV Format',
-  //             subLabel: 'Choose the right CV format for your needs.',
-  //             href: '#',
-  //         },
-  //         {
-  //             label: 'How to Write a CV',
-  //             subLabel: 'Learn how to write a CV that lands you jobs.',
-  //             href: '#',
-  //         },
-  //         {
-  //             label: 'CV Help',
-  //             subLabel: 'Use our expert guides to improve your CV writing.',
-  //             href: '#',
-  //         },
-  //     ],
-  // },
-  // {
-  //     label: 'Cover Letter',
-  //     icon: ChevronDownIcon,
-  //     children: [
-  //         {
-  //             label: 'Cover Letter Builder',
-  //             subLabel: 'Create your Cover Letter in 5 minutes. Land the job you want.',
-  //             href: '#',
-  //         },
-  //         {
-  //             label: 'Cover Letter Templates',
-  //             subLabel: 'Find the perfect Cover Letter template.',
-  //             href: '#',
-  //         },
-  //         {
-  //             label: 'Cover Letter Examples',
-  //             subLabel: 'See perfect Cover Letter examples that get you jobs.',
-  //             href: '#',
-  //         },
-  //         {
-  //             label: 'Cover Letter Format',
-  //             subLabel: 'Choose the right Cover Letter format for your needs.',
-  //             href: '#',
-  //         },
-  //         {
-  //             label: 'How to Write a Cover Letter',
-  //             subLabel: 'Learn how to write a Cover Letter that lands you jobs.',
-  //             href: '#',
-  //         },
-  //         {
-  //             label: 'Cover Letter Help',
-  //             subLabel: 'Use our expert guides to improve your Cover Letter writing.',
-  //             href: '#',
-  //         },
-  //     ],
-  // },
   {
     label: "Resume Help",
     subLabel: "Use our expert guides to improve your resume writing.",
@@ -123,18 +42,7 @@ export const NAV_ITEMS = [
     label: "Blogs",
     href: "/blog",
   },
-  // {
-  //   label: "Job Search",
-  //   href: "#",
-  // },
-  // {
-  //   label: "Job Interviews",
-  //   href: "#",
-  // },
-  // {
-  //   label: "Career Advice",
-  //   href: "#",
-  // },
+
   {
     label: "About",
     href: "/about-us",
