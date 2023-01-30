@@ -51,7 +51,7 @@ const TryResume = () => {
             <Text
               fontWeight={700}
               fontSize={["2em", "2.4em", "2.5em", "3.8em", "3.8em"]}
-              lineHeight={["36px", "36px", "48px", "48px", "48px"]}
+              lineHeight={["36px", "36px", "62px", "62px", "62px"]}
               marginBottom={["20px"]}
               maxWidth={["auto", "auto", "10em", "10em", "10em"]}
               className={"sub-heading"}
@@ -100,8 +100,28 @@ const TryResume = () => {
                 </Link>
               </Box>
 
+
               <Button fontSize={["14x", "14px", "16px", "16px", "16px"]}>
                 Resume Examples
+
+              <Button>
+                <Link
+                  href="/resume-examples"
+                  textDecoration={"none"}
+                  cursor="pointer"
+                  color="black"
+                  _hover={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                  <Text
+                    fontSize={["14x", "14px", "16px", "16px", "16px"]}
+                    textDecoration={"none"}
+                  >
+                    Resume Examples
+                  </Text>
+                </Link>
               </Button>
             </Box>
           </Box>

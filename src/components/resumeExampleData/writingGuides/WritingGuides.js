@@ -18,8 +18,10 @@ const WritingGuides = () => {
         >
           {" "}
           <Box
+
             fontSize={["24px", "24px", "34px", "34px", "34px"]}
             lineHeight={["34px", "34px", "54px", "40px", "40px"]}
+
             marginBottom={"12px"}
             maxW={["100%", "100%", "95%", "80%", "100%"]}
             className={["sub-heading"]}

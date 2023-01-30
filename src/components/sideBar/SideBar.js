@@ -47,43 +47,45 @@ export default function SideBar() {
                 </Link>
               </li>{" "}
               <li>
-                <a className={styles.a}>
-                  <i>
-                    <RiFileEditFill />
-                  </i>
-                  <span className={styles.BtnOpen}>COVER LETTER Build</span>
-                </a>
+                <Link href={"/ComingSoon"}>
+                  <a className={styles.a}>
+                    <i>
+                      <RiFileEditFill />
+                    </i>
+                    <span className={styles.BtnOpen}>COVER LETTER Build</span>
+                  </a>
+                </Link>
               </li>
               <li className={styles.li}>
-                <a>
+                <a href="https://www.facebook.com/">
                   <i className={styles.pin}>
                     <FaFacebookF />
                   </i>
                 </a>
               </li>
               <li className={styles.li}>
-                <a>
+                <a href="https://www.linkedin.com/feed/">
                   <i className={styles.pin}>
                     <FaLinkedinIn />
                   </i>
                 </a>
               </li>
               <li className={styles.li}>
-                <a>
+                <a href="https://twitter.com/">
                   <i className={styles.pin}>
                     <FaTwitter />
                   </i>
                 </a>
               </li>
               <li className={styles.li}>
-                <a>
+                <a href="https://gmail.com/">
                   <i className={styles.pin}>
                     <MdEmail />
                   </i>
                 </a>
               </li>
               <li className={styles.li}>
-                <a>
+                <a href="https://www.pinterest.com/">
                   <i className={styles.pin}>
                     <TiSocialPinterest />
                   </i>
