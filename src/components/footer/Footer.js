@@ -139,7 +139,7 @@ export default function Footer() {
         <div className={styles.linkDiv}>
           <p className={styles.footerP}>Learn</p>
           <div>
-            <Link href="#/">Career Blog</Link>
+            <Link href="/blog">Career Blog</Link>
           </div>
           <div>
             <Link href="/write-resume">How to Write a Resume</Link>
@@ -166,7 +166,7 @@ export default function Footer() {
             <Link href="/about-us">About Us</Link>
           </div>
           <div>
-            <Link href="#/">E-Book:How to get a job in 2022</Link>
+            <Link href="/Jobs">E-Book:How to get a job in 2022</Link>
           </div>
           {/* <div>
             <Link href="#/">Media Kit</Link>
@@ -190,9 +190,7 @@ export default function Footer() {
             <Link href="#/">Media Kit</Link>
           </div> */}
           <div>
-            <Link href="mailto:Contact@bisresume.com">
-              Contact@bisresume.com
-            </Link>
+            <Link href={"https://gmail.com/"}>Contact@bisresume.com</Link>
           </div>
         </div>
       </div>

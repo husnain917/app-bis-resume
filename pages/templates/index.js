@@ -47,10 +47,7 @@ function Templates() {
           <>
             <Box className="cursor" key={index}>
               <Link onClick={() => {
-                isUserLoggedIn ?
-                  router.push(items?.href)
-                  :
-                  ismodalOpen()
+                router.push(items?.href)
               }} style={{ cursor: "default" }}
                 _hover={{
                   textDecoration: 'none'
