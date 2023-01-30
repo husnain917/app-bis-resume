@@ -36,7 +36,7 @@ const CommonComponent = ({ data }) => {
         paddingBottom={"20px"}
         borderBottom={"1px solid whitesmoke"}
         justifyContent={"space-between"}
-        height={["auto", "auto", "100px", "100px", "100px"]}
+        height={["auto", "auto", "140px", "140px", "140px"]}
         marginBottom={"inherit"}
       >
         <Box display={"flex"}>

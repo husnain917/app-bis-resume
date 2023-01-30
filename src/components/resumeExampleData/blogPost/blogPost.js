@@ -156,9 +156,9 @@ const BlogPost = () => {
                 </Box>
               </Box>
               <Link
-                href={'/templates'}
+                href={"/templates"}
                 _hover={{
-                  textDecoration: 'none',
+                  textDecoration: "none",
                 }}
               >
                 <Box

@@ -3,9 +3,12 @@ import { Box, Text, Button, Image, Link } from "@chakra-ui/react";
 import CommonButton from "../../commonButton/CommonButton";
 const WritingGuides = () => {
   return (
-    <Box padding={["0 20px", "0 20px", "0 44px", "0 44px", "0 44px"]}>
+    <Box
+      backgroundColor={"#EFF2F9"}
+      padding={["0 20px", "0 20px", "0 44px", "0 44px", "0 44px"]}
+    >
       <Box
-        paddingTop={["32px", "64px", "64px", "80px", "80px"]}
+        paddingTop={["32px", "64px", "64px", "0px", "0px"]}
         maxWidth={"1120px"}
         margin={"0 auto"}
         display={"flex"}
@@ -77,6 +80,7 @@ const WritingGuides = () => {
           maxW={["544px", "544px", "380px", "390px", "544px"]}
           w={["344px", "444px", "544px", "544px", "544px", "544px"]}
           display={"flex"}
+          marginTop={"-60px"}
         >
           <Box right={"0"} position={"absolute"} marginTop={"-5%"}>
             <Image
