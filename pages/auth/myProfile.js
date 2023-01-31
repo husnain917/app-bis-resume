@@ -54,15 +54,15 @@ const Profile = () => {
   if (!isUserLoggedIn) {
     router.push("/");
   }
-  const [preview, setPreview] = useState("/uploadpic1.png");
+  // const [preview, setPreview] = useState(userData?.picture);
 
   const imageChange = (e) => {
     // setPreview(URL.createObjectURL(e.target.files[0]));
     if (e.target.files && e.target.files.length !== 0) {
-      setPreview(URL.createObjectURL(e.target.files[0]));
+      setPicture(URL.createObjectURL(e.target.files[0]));
       setisOpen(true);
     } else {
-      setPreview("");
+      setPicture("");
     }
   };
   const onDone = async () => {
@@ -78,7 +78,10 @@ const Profile = () => {
   const dummyLastName = "Butt";
   const [name, setName] = useState(userData?.name || "");
   const [email, setEmail] = useState(userData?.email || dummyEmail);
-  const [picture, setPicture] = useState(userData?.picture || "");
+  const [picture, setPicture] = useState(
+    userData?.picture || "/uploadpic1.png"
+  );
+  console.log("PICTURE", picture);
   const [family_name, setFamilyName] = useState(
     userData?.family_name || dummyLastName
   );
@@ -92,7 +95,7 @@ const Profile = () => {
     userData?.verified_email || ""
   );
   const removeSelectedImage = () => {
-    setPreview("/uploadpic1.png");
+    setPicture("/uploadpic1.png");
   };
   console.log("userData", userData);
 
@@ -131,7 +134,7 @@ const Profile = () => {
               onClose={() => setisOpen(false)}
               crop={crop}
               setCrop={setCrop}
-              src={preview}
+              src={picture}
               onDone={onDone}
               imgRef={imgRef}
             />
@@ -170,7 +173,7 @@ const Profile = () => {
         </Box>
         {/* =============== Avatar Section =============== */}
         <UseProfileImage
-          image={picture ? picture : preview}
+          image={picture ? picture : "/uploadpic1.png"}
           className={`${Style.avatar}`}
           borderWidth={"1px"}
           minWidth={"120px"}
@@ -253,7 +256,7 @@ const Profile = () => {
                     11 extra features at your disposal.
                   </Text>
                 </Box>
-                <Link href={"#"}>
+                <Link href={"/page/pricing-resume"}>
                   <Button
                     bg="#00C8AA"
                     size="lg"
