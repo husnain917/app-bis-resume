@@ -14,7 +14,7 @@ export default function TempLayout({
   organization,
   interest,
   certificate,
-  downloadPDF,
+  downloadPDF,downloadWord,
   sideTempSelect,
   setsideTempSelect,
 }) {
@@ -34,6 +34,8 @@ export default function TempLayout({
         certificate={certificate}
         downloadPDF={downloadPDF}
         leftMenu={leftMenu}
+        downloadWord={downloadWord}
+
         setleftMenu={() => {
           setsideTempSelect(false);
           setleftMenu(true);
@@ -51,6 +53,7 @@ export default function TempLayout({
           interest={interest}
           certificate={certificate}
           downloadPDF={downloadPDF}
+          downloadWord={downloadWord}
           setleftMenu={setleftMenu}
         />
       )}
