@@ -5,6 +5,12 @@ import Link from "next/link";
 import { SimpleGrid, Box, Container, Text } from "@chakra-ui/react";
 import SocialIcons from "../../Social/SocialIcons";
 import ReadMoreReact from "read-more-react";
+import CommonButton from "../../commonButton/CommonButton";
+import moment from 'moment';
+import {
+  AiOutlineClockCircle,
+} from "react-icons/ai";
+
 export default function LatestPosts({ blogs }) {
   console.log("blogs", blogs);
   const [searchKey, setSearchKey] = useState("");
@@ -55,7 +61,7 @@ export default function LatestPosts({ blogs }) {
       </Text>
       <SimpleGrid
         className={style.centerblogs}
-        columns={[1, 1, 2, 2, 3]}
+        columns={[1, 1, 2, 2, 2]}
         ml={["", "", "5%", "5%", "5%", "5%"]}
         spacing={[0, 0, 6, 6, 6]}
       >
@@ -76,28 +82,32 @@ export default function LatestPosts({ blogs }) {
             <>
               {featured === true ? (
                 <>
-                  <Box key={index} minHeight={"520px"}>
+                  <Box key={index} minHeight={"420px"}>
                     <Box
+                    
                       margin={"0 5px 5px 5px"}
                       borderBottom={"2px solid"}
                       borderColor={"#C6C6C6"}
                       paddingBottom={"5%"}
                       className={style.mainContainer}
                       height={"auto"}
-                      minHeight={"550px"}
+                      minHeight={"420px"}
                     >
-                      <Box
-                        className={style.imageContainer}
-                        style={{ height: 300, borderRadius: 50 }}
-                      >
-                        <Image
-                          className={style.coverImage}
-                          layout="fill"
-                          objectFit="cover"
-                          alt="image"
-                          src={"https:" + featuredImage.fields.file.url}
-                        />
-                      </Box>
+                      <Link href={`blog/[slug]`} as={`blog/${slug}`}>
+                        <Box
+                          className={style.imageContainer}
+                          style={{ height: 240, borderRadius: "5%" }}
+                        >
+                          <Image
+                            className={style.coverImage}
+                            style={{border:"2px solid black"}}
+                            layout="fill"
+                            objectFit="cover"
+                            alt="image"
+                            src={"https:" + featuredImage.fields.file.url}
+                          />
+                        </Box>
+                      </Link>
                       <Text as={"h3"} className={`${style.Cardtitle} subTitle`}>
                         {title}
                       </Text>
@@ -111,19 +121,18 @@ export default function LatestPosts({ blogs }) {
                           className={"xsmall-heading"}
                           mr={"3px"}
                         >
-                          Today |{" "}
+                          {publishDate ? moment(publishDate).format('Do MMMM') : null} |{" "}
                         </Text>
-                        <Image
-                          src={"/clock.png"}
-                          fill
-                          alt="will load soon"
-                          width="15px"
-                          height="15px"
+                        <AiOutlineClockCircle
+                          color={"#00C8AA"}
+                          size={18}
+                          style={{ marginLeft: "3px" }}
                         />
                         <Text
                           as={"span"}
                           className={"xsmall-heading"}
-                          ml={"3px"}
+                          ml={"6px"}
+
                         >
                           {readingTime} min read
                         </Text>
@@ -173,7 +182,7 @@ export default function LatestPosts({ blogs }) {
           <SimpleGrid
             className={style.centerblogs}
             columns={{ sm: 1, md: 2, lg: 3 }}
-            spacing={[1, 1, 2, 3, 3]}
+            spacing={[1, 1, 2, 5, 5]}
             ml={["", "", "5%", "5%", "5%", "5%"]}
           >
             {filteredBlogs?.map((item, index) => {
@@ -198,7 +207,8 @@ export default function LatestPosts({ blogs }) {
                     className={style.blogContainer}
                   >
                     <Link href={`blog/[slug]`} as={`blog/${slug}`}>
-                      <Box className={style.imageContainer}>
+                      <Box className={style.imageContainer}
+                      >
                         <Image
                           className={style.coverImage}
                           layout="fill"
@@ -206,7 +216,7 @@ export default function LatestPosts({ blogs }) {
                           src={"https:" + featuredImage.fields.file.url}
                           alt="image"
                           width={"80px"}
-                          height={"80px"}
+                          height={"60px"}
                         />
                       </Box>
                     </Link>
@@ -217,16 +227,15 @@ export default function LatestPosts({ blogs }) {
                       alignItems={"center"}
                     >
                       <Text as={"span"} className={"xsmall-heading"} mr={"4px"}>
-                        Today |{" "}
+                        {publishDate ? moment(publishDate).format('Do MMMM') : null} |{" "}
+
                       </Text>
-                      <Image
-                        src={"/clock.png"}
-                        fill
-                        alt="will load soon"
-                        width="15px"
-                        height="15px"
+                      <AiOutlineClockCircle
+                        color={"#00C8AA"}
+                        size={18}
+                        style={{ marginLeft: "3px" }}
                       />
-                      <Text as={"span"} className={"xsmall-heading"} ml={"4px"}>
+                      <Text as={"span"} className={"xsmall-heading"} ml={"6px"}>
                         {readingTime} min read
                       </Text>
                     </Box>
@@ -240,6 +249,33 @@ export default function LatestPosts({ blogs }) {
           </SimpleGrid>
         )}
       </div>
+
+      <Box
+        mt={"30px"}
+        mb={"30px"}
+        display="flex"
+        flexDirection="row"
+        alignItems={"center"}
+        justifyContent={"center"}
+      >
+
+        <CommonButton
+          title="Load More"
+          hoverCursor={"pointer"}
+          backgroundColor={"#00C8AA"}
+          color={"whitesmoke"}
+          // rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
+
+          fontSize={[
+            "0.9rem",
+            "0.9rem",
+            "1.1rem",
+            "1.1rem",
+            "1.1rem",
+            "1.5rem",
+          ]}
+        />
+      </Box>
     </div>
   );
 }
