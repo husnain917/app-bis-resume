@@ -20,12 +20,12 @@ const TryResume = () => {
         >
           <Box
             width={["100%", "100%", "45%", "57%", "49%"]}
-            marginBottom={["16px"]}
+            marginBottom={["24px"]}
             position="relative"
             marginRight={["0", "0", "0", "16px", "32px"]}
             flexShrink={["0", "0", "", "", "0"]}
             minWidth={["50%", "", "", "0%", "0%"]}
-            height={["320px"]}
+            height={["420px"]}
           >
             <Image
               src="./sampleTemplate.png"
@@ -99,6 +99,7 @@ const TryResume = () => {
                   />
                 </Link>
               </Box>
+
               <Button>
                 <Link
                   href="/resume-examples"
