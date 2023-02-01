@@ -6,6 +6,7 @@ export default function AuthButton({
   bgColor,
   onChangeHandler,
   color,
+  margin,
 }) {
   return (
     <>
@@ -16,9 +17,15 @@ export default function AuthButton({
         color={color}
         bgColor={bgColor}
         borderRadius="10px"
-        _hover={{ bg: "#00C8AA", color: " white", borderRadius: "10px",transition:'0.3s' }}
+        _hover={{
+          bg: "#00C8AA",
+          color: " white",
+          borderRadius: "10px",
+          transition: "0.3s",
+        }}
         // _focus={{ bg: "#00C8AA", color: " white", borderRadius: "10px" }}
         onClick={onChangeHandler}
+        margin={margin}
       >
         {btn.btnName}
       </Button>
