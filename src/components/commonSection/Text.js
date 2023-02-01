@@ -19,16 +19,16 @@ function Text(props) {
     setAddBorder(false);
     dispatch(onBlurField(data, props.path));
   };
-  const onChange = (e) => {
-    if (e.target.innerText.length <= 12) {
-      // console.log("Set Value Here", e.target.innerText);
-    }
-    const data = e.target.innerText ? e.target.innerText : "";
-    setAddBorder(false);
-    dispatch(onBlurField(data, props.path));
+  // const onChange = (e) => {
+  //   if (e.target.innerText.length <= 12) {
+  //     console.log("Set Value Here", e.target.innerText);
+  //   }
+  //   const data = e.target.innerText ? e.target.innerText : "";
+  //   setAddBorder(false);
+  //   dispatch(onBlurField(data, props.path));
 
-    e.preventDefault();
-  };
+  //   e.preventDefault();
+  // };
   const { value, customClass, tag, path, editable = true } = props;
   const TagName = tag ? tag : "p";
 
@@ -56,7 +56,7 @@ function Text(props) {
           // }}
           id={path}
           contentEditable={editable}
-          onInput={onChange}
+          // onInput={onChange}
           onPaste={(e) => {
             var bufferText = (
               (e.originalEvent || e).clipboardData || window.clipboardData
@@ -65,7 +65,7 @@ function Text(props) {
             document.execCommand("insertText", false, bufferText);
           }}
           suppressContentEditableWarning="true"
-          // onBlur={(e) => _onBlur(e.currentTarget)}
+          onBlur={(e) => _onBlur(e.currentTarget)}
           dangerouslySetInnerHTML={{ __html: value }}
           className={styles.contentEditableContainer + " " + customClass}
           data-placeholder={props.placeholder}
