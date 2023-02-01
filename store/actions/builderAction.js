@@ -1,14 +1,15 @@
-import { actionTypes } from '../../constants/actionTypes';
+import { actionTypes } from "../../constants/actionTypes";
 import {
   updateObject,
   insertObj,
   deleteObj,
-} from '../../utils/updateResumeObj';
-import axios from 'axios';
-import url from '../../config/endpoint';
-import uniqid from 'uniqid';
-import objectPath from 'object-path';
-import { sampleData } from '../../constants/sampleData';
+} from "../../utils/updateResumeObj";
+import axios from "axios";
+import url from "../../config/endpoint";
+import uniqid from "uniqid";
+import objectPath from "object-path";
+import { sampleData } from "../../constants/sampleData";
+import { persistor } from "../../config/store";
 
 const randomId = () => {
   const currentTime = new Date().getTime();
@@ -48,11 +49,11 @@ export const addNewWorkExperience = () => {
   const id = randomId();
   const data = {
     id,
-    date: '',
-    jobTitle: '',
-    companyName: '',
-    companyText: '',
-    experienceText: '',
+    date: "",
+    jobTitle: "",
+    companyName: "",
+    companyText: "",
+    experienceText: "",
   };
 
   return {
@@ -87,8 +88,8 @@ export const addEducation = () => {
   const id = randomId();
   const data = {
     id,
-    date: '',
-    title: '',
+    date: "",
+    title: "",
   };
 
   return {
@@ -130,7 +131,7 @@ export const addSkill = () => {
   const id = randomId();
   const data = {
     id,
-    title: '',
+    title: "",
   };
 
   return {
@@ -195,7 +196,7 @@ export const uploadImageAction = (image) => {
   return () =>
     new Promise(() => {
       const formData = new FormData();
-      formData.append('image', image);
+      formData.append("image", image);
     });
 };
 
@@ -273,49 +274,49 @@ export const changeNameHandler = (name) => {
 
 export const getResumeScan = (data) => async (dispatch) => {
   try {
-    let getToken = localStorage.getItem('clientAccessToken');
+    let getToken = localStorage.getItem("clientAccessToken");
 
     if (getToken) {
-      axios.defaults.headers.common['Authorization'] = `Bearer ${getToken}`;
+      axios.defaults.headers.common["Authorization"] = `Bearer ${getToken}`;
     }
     const res = await axios.post(`${url}/get-resume-scan`, data);
     if (res.data.status === 200) {
       let res_data = {};
       if (!data.is_resume) {
         res_data = res.data.data.resume.data;
-        res_data['skills']['items'] = res_data['skills']['items'].map((n) => ({
+        res_data["skills"]["items"] = res_data["skills"]["items"].map((n) => ({
           id: uniqid(),
           name: n,
         }));
       } else {
         if (res.data.data) {
           res_data = res.data.data.data;
-          res_data['skills']['items'] = res_data['skills']['items'].map(
+          res_data["skills"]["items"] = res_data["skills"]["items"].map(
             (n) => ({
               id: uniqid(),
               name: n,
             })
           );
           if (data?.builderResume && res.data?.oid) {
-            localStorage.setItem('builderResumeOid', res.data.oid);
+            localStorage.setItem("builderResumeOid", res.data.oid);
           }
         } else {
           if (data?.builderResume) {
-            localStorage.removeItem('builderResumeOid');
+            localStorage.removeItem("builderResumeOid");
           }
           res_data = sampleData.data;
         }
       }
       dispatch({
-        type: 'GET_RESUME_SCAN_STATUS',
-        payload: 'done',
+        type: "GET_RESUME_SCAN_STATUS",
+        payload: "done",
       });
       dispatch({
-        type: 'GET_RESUME_SCAN',
+        type: "GET_RESUME_SCAN",
         payload: res_data,
       });
       dispatch({
-        type: 'GET_BUILDER_RESUME_DATA',
+        type: "GET_BUILDER_RESUME_DATA",
         payload: res.data,
       });
       if (res.data.data.resumeName) {
@@ -326,14 +327,14 @@ export const getResumeScan = (data) => async (dispatch) => {
       }
     } else {
       dispatch({
-        type: 'GET_RESUME_SCAN_STATUS',
-        payload: 'not-done',
+        type: "GET_RESUME_SCAN_STATUS",
+        payload: "not-done",
       });
     }
   } catch (error) {
     dispatch({
-      type: 'GET_RESUME_SCAN_STATUS',
-      payload: 'not-done',
+      type: "GET_RESUME_SCAN_STATUS",
+      payload: "not-done",
     });
   }
 };
@@ -408,4 +409,4 @@ export const visibleAchievementSection = (data) => {
     type: actionTypes.VISIBLE_ACHIEVEMENT_SECTION,
     payload: data,
   };
-}
+};
