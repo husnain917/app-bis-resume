@@ -74,7 +74,6 @@ const UseModal = ({ title, margin }) => {
         </>
       ) : (
         <>
-          {" "}
           <Modal
             initialFocusRef={initialRef}
             finalFocusRef={finalRef}

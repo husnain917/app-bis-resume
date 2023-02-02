@@ -77,13 +77,15 @@ const Profile = () => {
   const dummyEmail = "ahsanbutt515@gmail.com";
   const dummyfirstName = "Ahsan Ali";
   const dummyLastName = "Butt";
-  // const [name, setName] = useState(userData?.name || "");
-  const [email, setEmail] = useState(userData?.email);
+  const [name, setName] = useState(userData?.name || "");
+  const [email, setEmail] = useState(userData?.email || "");
   const [picture, setPicture] = useState(userData?.picture || "");
-  let name = userData?.displayName?.split(" ");
-  console.log(name, "name in profile");
-  const [family_name, setFamilyName] = useState(name || dummyLastName);
-  const [given_name, setGivenName] = useState(userData?.name || dummyfirstName);
+  const [family_name, setFamilyName] = useState(
+    userData.family_name || dummyfirstName
+  );
+  const [given_name, setGivenName] = useState(
+    userData?.given_name || dummyLastName
+  );
   const [changeImage, setChangeImage] = useState(true);
   const [updateEmail, setUpdateEmail] = useState(false);
   console.log("CHANGE IMAGE", changeImage);
@@ -314,7 +316,7 @@ const Profile = () => {
                         Given Name
                       </Text>
                       <Text color="#fff" fontSize={14} fontWeight="500">
-                        {name}
+                        {family_name}
                       </Text>
                     </Box>
                     <Box w={{ base: "100%", md: "50%" }}>
@@ -322,7 +324,7 @@ const Profile = () => {
                         Family Name
                       </Text>
                       <Text color="#fff" fontSize={14} fontWeight="500">
-                        {name}
+                        {given_name}
                       </Text>
                     </Box>
                   </Stack>
