@@ -11,7 +11,7 @@ import { createWrapper } from "next-redux-wrapper";
 import GoToTopBtn from "../src/components/goTopBtn/GoToTopBtn";
 import Layout from "../src/Layout";
 import { getToken } from "../src/components/localStorage/LocalStorage";
-import { redirect } from "../store/actions/AuthAction";
+import { getLoggedInUser, redirect } from "../store/actions/AuthAction";
 import { useDispatch } from "react-redux";
 import { Grammarly } from "@grammarly/editor-sdk-react";
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
@@ -23,12 +23,15 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       let token = getToken();
       if (token.access_token) {
         dispatch(redirect());
-        console.log('sami',token);
+        console.log("sami", token);
       }
     }
   }, []);
   useEffect(() => {
     setShowChild(true);
+  }, []);
+  useEffect(() => {
+    dispatch(getLoggedInUser());
   }, []);
 
   if (!showChild) {
