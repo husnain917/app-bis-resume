@@ -32,7 +32,7 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 import { getAuth, sendEmailVerification } from "firebase/auth";
-import { ToastSuccess } from "../../src/components/Toast";
+import { ToastSuccess, ToastError } from "../../src/components/Toast";
 const fullAuth = getAuth();
 import {
   storeToken,
@@ -168,6 +168,7 @@ export const doSignUp =
       });
 
       sendEmailVerification(fullAuth.currentUser);
+      setLoadingsignup(false);
 
       ToastSuccess("Verification Email Sent.");
       const docRef = await addDoc(collection(db, "users"), {
@@ -175,33 +176,59 @@ export const doSignUp =
         id: userData.uid,
       });
 
+      // ToastSuccess("Verification Email Sent.");
       if (userData) {
         dispatch({
           type: SIGN_UP,
           payload: userData,
         });
       } else {
+        // ToastError("This Email is already in use");
+        ToastSuccess("Email Already Registered");
         setErr({ fieldErr: "This email already in use.", inputId: 12 });
       }
     } catch (e) {
       const errorCode = e.code;
       if (errorCode === "auth/email-already-in-use") {
+        ToastError("Email Already Registered");
         setErr({ fieldErr: "This email already in use." });
       }
       console.log("Error at signup: ", errorCode);
-    } finally {
-      setLoadingsignup(false);
-      if (err !== 12) {
-        dispatch({
-          type: MODAL_OPEN,
-          payload: false,
-        });
-      } else {
+      // if (errorCode === "auth/email-already-in-use") {
+      //   dispatch({
+      //     type: MODAL_OPEN,
+      //     payload: true,
+      //   });
+      // } else {
+      //   dispatch({
+      //     type: MODAL_OPEN,
+      //     payload: false,
+      //   });
+      // }
+      if (err !== 12 && errorCode === "auth/email-already-in-use") {
         dispatch({
           type: MODAL_OPEN,
           payload: true,
         });
+      } else {
+        dispatch({
+          type: MODAL_OPEN,
+          payload: false,
+        });
       }
+    } finally {
+      setLoadingsignup(false);
+      // if (err !== 12) {
+      //   dispatch({
+      //     type: MODAL_OPEN,
+      //     payload: true,
+      //   });
+      // } else {
+      //   dispatch({
+      //     type: MODAL_OPEN,
+      //     payload: false,
+      //   });
+      // }
     }
   };
 
