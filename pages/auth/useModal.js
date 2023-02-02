@@ -106,8 +106,8 @@ const UseModal = ({ title, margin }) => {
             </ModalContent>
           </Modal>
         </>
-      )}
-    </>
+                    )}
+                  </>
   );
 };
 
