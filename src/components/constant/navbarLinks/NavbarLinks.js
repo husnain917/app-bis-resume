@@ -7,7 +7,7 @@ export const NAV_ITEMS = [
     children: [
       {
         label: "Resume Builder",
-        subLabel: "Use our builder to create a resume in 5 minutes.",
+        subLabel: "Use our builder to create a resume in seconds.",
         href: "/resume-build",
       },
       {
@@ -36,7 +36,7 @@ export const NAV_ITEMS = [
   {
     label: "Resume Format",
     subLabel: "Choose the right resume format for your needs.",
-    href: "/blog/resume-formats",
+    href: "/resume-formats",
   },
   {
     label: "Blogs",

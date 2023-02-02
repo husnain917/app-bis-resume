@@ -30,8 +30,8 @@
 
 .imageContainer {
     position: relative;
-    height: 180px;
-    width: 180px;
+    height: 160px;
+    width: 160px;
     cursor: pointer;
     transition: 0.8s;
 }
@@ -154,7 +154,7 @@
 }
 
 .imageContainer {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     width: 100%;
 
 }
