@@ -41,6 +41,7 @@ import CommonButton from "../../src/components/commonButton/CommonButton";
 
 const Profile = () => {
   const userData = useSelector((store) => store.AuthReducer.user);
+  console.log(userData);
   const [isOpen, setisOpen] = useState(false);
   const [scale, setScale] = useState(1);
   const [rotate, setRotate] = useState(0);
@@ -77,13 +78,13 @@ const Profile = () => {
   const dummyfirstName = "Ahsan Ali";
   const dummyLastName = "Butt";
   const [name, setName] = useState(userData?.name || "");
-  const [email, setEmail] = useState(userData?.email || dummyEmail);
+  const [email, setEmail] = useState(userData?.email || "");
   const [picture, setPicture] = useState(userData?.picture || "");
   const [family_name, setFamilyName] = useState(
-    userData?.family_name || dummyLastName
+    userData.family_name || dummyfirstName
   );
   const [given_name, setGivenName] = useState(
-    userData?.given_name || dummyfirstName
+    userData?.given_name || dummyLastName
   );
   const [changeImage, setChangeImage] = useState(true);
   const [updateEmail, setUpdateEmail] = useState(false);
@@ -94,7 +95,6 @@ const Profile = () => {
   const removeSelectedImage = () => {
     setPreview("/uploadpic1.png");
   };
-  console.log("userData", userData);
 
   // useEffect(() => {
   //   setName(userData?.name);
@@ -316,7 +316,7 @@ const Profile = () => {
                         Given Name
                       </Text>
                       <Text color="#fff" fontSize={14} fontWeight="500">
-                        {given_name}
+                        {family_name}
                       </Text>
                     </Box>
                     <Box w={{ base: "100%", md: "50%" }}>
@@ -324,7 +324,7 @@ const Profile = () => {
                         Family Name
                       </Text>
                       <Text color="#fff" fontSize={14} fontWeight="500">
-                        {family_name}
+                        {given_name}
                       </Text>
                     </Box>
                   </Stack>
@@ -419,7 +419,7 @@ const Profile = () => {
                       Account Email
                     </Text>
                     <Text color="#fff" fontSize={14} fontWeight="500">
-                      {email}
+                      {userData?.email}
                     </Text>
                   </Box>
                 </Box>

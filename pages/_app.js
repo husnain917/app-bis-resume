@@ -11,7 +11,7 @@ import { createWrapper } from "next-redux-wrapper";
 import GoToTopBtn from "../src/components/goTopBtn/GoToTopBtn";
 import Layout from "../src/Layout";
 import { getToken } from "../src/components/localStorage/LocalStorage";
-import { redirect } from "../store/actions/AuthAction";
+import { getLoggedInUser, redirect } from "../store/actions/AuthAction";
 import { useDispatch } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { Grammarly } from "@grammarly/editor-sdk-react";
@@ -30,6 +30,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   }, []);
   useEffect(() => {
     setShowChild(true);
+  }, []);
+  useEffect(() => {
+    dispatch(getLoggedInUser());
   }, []);
 
   if (!showChild) {
