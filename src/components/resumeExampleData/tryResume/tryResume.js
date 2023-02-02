@@ -80,7 +80,7 @@ const TryResume = () => {
               </Text>{" "}
             </Box>
             <Box display={"flex"} alignItems={"center"}>
-              <Box mx={2}>
+              <Box mx={2} >
                 <Link
                   href="/templates"
                   _hover={{
