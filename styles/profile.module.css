@@ -49,7 +49,9 @@
 .spn:hover {
   text-decoration: underline;
 }
-.rotate {
+/* .rotate {
+  transform: rotate(5deg);
 }
 .rotate1 {
-}
+  transform: rotate(-3deg);
+} */

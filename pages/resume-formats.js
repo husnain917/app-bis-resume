@@ -1,14 +1,20 @@
-import React, { useState } from "react";
-import Navbar from "../../src/components/navbar/Navbar";
-import ResumeFormats from "../../src/components/blog/ResumeFormats";
-import { Box, Container, Link, Text, Image } from "@chakra-ui/react";
-import { RESUME_NOW } from "../../src/components/blog/CustomData";
-import Sidebar from "../../src/components/blog/Sidebar";
-import styles from "../../styles/resumeFormats.module.css";
-import FormatsTables from "../../src/components/blog/FormatsTables";
-import Footer from "../../src/components/footer/Footer";
-import Layout from "../../src/Layout";
-import SideBar from "../../src/components/sideBar/SideBar";
+import React, { useState } from "react"
+import Navbar from "../src/components/navbar/Navbar";
+import ResumeFormats from "../src/components/blog/ResumeFormats";
+import {
+  Box,
+  Container,
+  Link,
+  Text,
+  Image
+} from "@chakra-ui/react";
+import { RESUME_NOW } from "../src/components/blog/CustomData";
+import Sidebar from "../src/components/blog/Sidebar";
+import styles from "../styles/resumeFormats.module.css";
+import FormatsTables from "../src/components/blog/FormatsTables";
+import Footer from "../src/components/footer/Footer";
+import Layout from "../src/Layout";
+import SideBar from "../src/components/sideBar/SideBar";
 
 export default function Resume_Formats() {
   // state
@@ -156,11 +162,8 @@ export default function Resume_Formats() {
                 textAlign={"center"}
                 fontSize={"16px"}
               >
-                Create your own professional resume in minutes with our
-                easy-to-use builder.
-                <Link color={"#3983fa"} href="/templates">
-                  See more resume examples here.
-                </Link>
+                Create your own professional resume in seconds with our easy-to-use builder.
+                <Link color={"#3983fa"}>See more resume examples here.</Link>
               </Text>
             </Box>
 

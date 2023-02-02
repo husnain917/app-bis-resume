@@ -9,6 +9,7 @@ import {
   Button,
   Image,
 } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
 import ReactCrop from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 export default function ImageCrop({
@@ -26,18 +27,27 @@ export default function ImageCrop({
   onDone,
   imgRef,
 }) {
+  const [isClose, setIsClose] = useState(isOpen);
+  const [cancelImage, setCancelImage] = useState(src);
+  const onCancel = () => {
+    setIsClose(!isOpen);
+    setCancelImage("/uploadimage1.png");
+  };
   return (
     <>
-      <Modal isOpen={isOpen} onClose={onClose} isCentered>
+      <Modal isOpen={isClose} onClose={onClose} isCentered>
         <ModalOverlay />
         <ModalContent minHeight={400} minWidth={400}>
           <ModalBody>
             <ReactCrop crop={crop} onChange={(c) => setCrop(c)}>
-              <Image src={src} alt={""} ref={imgRef}  />
+              <Image src={cancelImage} alt={""} ref={imgRef} />
             </ReactCrop>
           </ModalBody>
 
           <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={onCancel}>
+              Cancel
+            </Button>
             <Button colorScheme="blue" mr={3} onClick={onDone}>
               Done
             </Button>
