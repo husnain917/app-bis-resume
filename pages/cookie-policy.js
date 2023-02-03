@@ -39,9 +39,7 @@ export default function Cookie() {
                 >
                     <Box
                         className={styles.sideBarContainer}
-                
                         display={["none", "none", "block", "block", "block"]}
-
                     >
                         <SideBar />
                     </Box>
@@ -125,7 +123,6 @@ export default function Cookie() {
                                         smooth={true}
                                         onClick={() => scollToRef.current.scrollIntoView({ behavior: 'smooth' })}
                                     >
-
                                         What is a cookie?
                                     </Text>
                                 </ListItem>
@@ -140,7 +137,6 @@ export default function Cookie() {
                                         smooth={true}
                                         onClick={() => scrollSecend.current.scrollIntoView({ behavior: 'smooth' })}
                                     >
-
                                         Use of cookies and web storage(browsing data) by Bisresume
                                     </Text>
                                 </ListItem>
@@ -161,8 +157,6 @@ export default function Cookie() {
                                         Disabling/Enabling Cookies
                                     </Text>
                                 </ListItem>
-
-
                             </OrderedList>
                         </Box>
                     </Box>
@@ -179,7 +173,6 @@ export default function Cookie() {
                         >
                             {TERMS_DATA?.TheNovoresumeContent?.heading}
                         </Text>
-
                         <Box
                             margin={'10px 0px 40px 0px'}
                         >
@@ -198,8 +191,7 @@ export default function Cookie() {
                             }
                         </Box>
                     </Box>
-
-                    <Box
+        <Box
                         margin={'40px 0px'}
                         ref={scrollSecend}
 
@@ -225,7 +217,6 @@ export default function Cookie() {
                                             color="black"
 
                                         >
-
                                             {item?.head}
                                         </Text>
                                         <Text
@@ -281,9 +272,6 @@ export default function Cookie() {
                             >
                                 {TERMS_DATA?.WarrantyAndPremiumAccount?.description}
                             </Text>
-
-
-
                             {
                                 TERMS_DATA?.WarrantyAndPremiumAccount?.paragraphs?.map((item, index) => (
                                     <>
@@ -322,14 +310,8 @@ export default function Cookie() {
                                     ))
                                 }
                             </UnorderedList>
-
                         </Box>
                     </Box>
-
-
-
-
-
 
                     {/* underline */}
                     <Underline

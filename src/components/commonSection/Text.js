@@ -5,7 +5,9 @@ import styles from "../../../styles/templates/commonTemplates.module.css";
 import { colors } from "../../../constants/colors";
 import { GrammarlyEditorPlugin } from "@grammarly/editor-sdk-react";
 import { persistor } from "../../../config/store";
+
 import { Text as TextField } from "@chakra-ui/react";
+
 
 function Text(props) {
   React.useEffect(() => {

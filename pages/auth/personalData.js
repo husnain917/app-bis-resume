@@ -9,10 +9,12 @@ import {
   Heading,
   Flex,
 } from "@chakra-ui/react";
+import { useSelector } from "react-redux";
 import CommonButton from "../../src/components/commonButton/CommonButton";
 
 const PersonalData = () => {
-  const name = "Ahsan Ali ";
+  const userData = useSelector((store) => store.AuthReducer.user);
+  console.log(userData);
   return (
     <>
       <Box bg={"#1F262E"}>
@@ -20,16 +22,16 @@ const PersonalData = () => {
           <VStack w={"full"} p={"20px 0px"} justifyContent="stretch">
             <Heading color={"white"} fontSize={"48px"}>
               {" "}
-              Personal Data
+              Profile
             </Heading>
             <Heading color={"white"} fontSize={"36px"}>
               {" "}
-              {name}
+              {userData?.displayName}
             </Heading>
             <Box marginTop={"20px"} marginBottom={"20px"}>
               <Image
                 alt=""
-                src={"/Profile.jpeg"}
+                src={userData?.photoURL}
                 height={"260px"}
                 width={"260px"}
                 borderRadius={"50%"}
@@ -97,7 +99,7 @@ const PersonalData = () => {
               >
                 <Text fontWeight={"bold"}> Account </Text>
                 <Text> Account Email </Text>
-                <Text> ahsanbutt515@icloud.com </Text>
+                <Text> {userData?.email}</Text>
                 <Text> Birthday </Text>
                 <Text> Not Given </Text>
               </Box>
