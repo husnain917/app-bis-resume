@@ -4,8 +4,19 @@ import { onBlurField } from "../../../store/actions/builderAction";
 import styles from "../../../styles/templates/commonTemplates.module.css";
 import { colors } from "../../../constants/colors";
 import { GrammarlyEditorPlugin } from "@grammarly/editor-sdk-react";
+import { persistor } from "../../../config/store";
+import { Text as TextField } from "@chakra-ui/react";
 
 function Text(props) {
+  React.useEffect(() => {
+    const myPara = document.getElementById(path);
+    console.log("myPara", myPara?.innerText);
+    if (myPara) {
+      myPara.addEventListener("input", function () {
+        console.log("TEXT >>>> ", document.getElementById(path).innerText);
+      });
+    }
+  });
   const dispatch = useDispatch();
   const { getResumeBuilderChoice } = useSelector(
     (state) => state.editorReducer
@@ -18,19 +29,27 @@ function Text(props) {
     setAddBorder(false);
     dispatch(onBlurField(data, props.path));
   };
-  const onChange = (e) => {
-    if (e.target.innerText.length <= 12) {
-      console.log("Set Value Here", e.target.innerText);
-    }
-    e.preventDefault();
-  };
+
+  // const onChange = (e) => {
+  //   if (e.target.innerText.length <= 12) {
+  //     console.log("Set Value Here", e.target.innerText);
+  //   }
+  //   const data = e.target.innerText ? e.target.innerText : "";
+  //   setAddBorder(false);
+  //   dispatch(onBlurField(data, props.path));
+
+  //   e.preventDefault();
+  // };
   const { value, customClass, tag, path, editable = true } = props;
   const TagName = tag ? tag : "p";
 
   return (
     <div className={styles.main}>
       <GrammarlyEditorPlugin>
-        <TagName
+        {/* <Text as={"p"} id={"para"} contentEditable={"true"}>
+          hello world
+        </Text> */}
+        <TextField
           style={{
             border: "none",
             borderColor: addBorder ? "#4267b2" : "rgba(0, 0, 0, 0.23)",
@@ -49,9 +68,10 @@ function Text(props) {
           // broder: '1px solid',
           // borderColor: addBorder ? colors.blue: colors.grey
           // }}
+          as={"p"}
           id={path}
           contentEditable={editable}
-          onInput={onChange}
+          // onInput={onChange}
           onPaste={(e) => {
             var bufferText = (
               (e.originalEvent || e).clipboardData || window.clipboardData
@@ -68,7 +88,7 @@ function Text(props) {
           onClick={() => {
             setAddBorder(true);
           }}
-        />
+        ></TextField>
       </GrammarlyEditorPlugin>
     </div>
   );
