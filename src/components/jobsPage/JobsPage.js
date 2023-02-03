@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, createRef, useEffect } from "react";
 import {
   Box,
   Image,
@@ -9,6 +9,8 @@ import {
   OrderedList,
   UnorderedList,
   Flex,
+  StatHelpText,
+  Input,
 } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import CommonButton from "../commonButton/CommonButton";
@@ -32,15 +34,49 @@ import {
 import { MdDone } from "react-icons/md";
 
 const JobsPage = () => {
+  const [text, setText] = useState("");
+  console.log("TEXT1111", text);
+  const textRef = useRef();
+  const textRef1 = useRef();
+  console.log(textRef1);
   const handleButton = () => {
     console.log("FOCUSED");
   };
+  const selectRef = useRef();
+  console.log("TEXT >>>> ", selectRef?.target?.innerText);
+  React.useEffect(() => {
+    const myPara = document.getElementById("para");
+    console.log("myPara", myPara?.innerText);
+    if (myPara) {
+      myPara.addEventListener("input", function () {
+        console.log("TEXT >>>> ", document.getElementById("para").innerText);
+      });
+    }
+  });
   return (
     <Box w={"100%"}>
       <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
+        {/* <Text
+          as={"p"}
+          contentEditable={"true"}
+          // inputRef={textRef1}
+          maxWidth={"600px"}
+          onChange={(e) => setText(e.target.value)}
+          ref={selectRef}
+        >
+          Hellow world
+        
+        </Text> */}
+        {/* <Text as={"p"} ref={(e) => setText(e)} contentEditable={"true"}>
+          {" "}
+          Ahsan
+        </Text> */}
         {/* <Box maxW={["0%", "0%", "0%", "10%"]}>
           <Sidebar />
         </Box> */}
+        {/* <Text as={"p"} id={"para"} contentEditable={"true"}>
+          hello world
+        </Text> */}
         <Box
           bg={"#FFD67B"}
           display={"flex"}
