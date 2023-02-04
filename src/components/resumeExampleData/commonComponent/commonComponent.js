@@ -36,7 +36,6 @@ const CommonComponent = ({ data }) => {
         paddingBottom={"20px"}
         borderBottom={"1px solid whitesmoke"}
         justifyContent={"space-between"}
-        height={["auto", "auto", "140px", "140px", "140px"]}
         marginBottom={"inherit"}
       >
         <Box display={"flex"}>
@@ -73,14 +72,14 @@ const CommonComponent = ({ data }) => {
           </Box>
         </Box>
         <Box display={["none", "none", "flex", "flex", "flex"]}>
-          {" "}
-          <Box h={12} w={"40em"}>
+          <Box  w={"40em"}>
             <Text
               fontSize={["12px", "12px", "12px", "14px", "14px"]}
               className="xsmall-text"
               lineHeight={"20px"}
               letterSpacing={"1px"}
               color={"gray.600"}
+              marginLeft={"22px"}
             >
               {data.description ||
                 "Our tailor-made samples and guides has all of the tools you needto easily craft a government CV in just seconds. Our samples have been field-tested and are expertly designed to set you up for success."}

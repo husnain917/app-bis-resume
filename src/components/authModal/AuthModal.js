@@ -128,7 +128,6 @@ export default function AuthModal({
       dispatch(doSignUp(data, setErr, setLoadingsignup, err.inputId));
 
       setErr({ inputField: "", inputId: 0 });
-      // ToastSuccess("You are Successfuly Registered");
       router.push("/");
       // dispatch(modalClose());
     }

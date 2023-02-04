@@ -32,7 +32,9 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 import { getAuth, sendEmailVerification } from "firebase/auth";
+
 import { ToastSuccess, ToastError } from "../../src/components/Toast";
+
 const fullAuth = getAuth();
 import {
   storeToken,
@@ -168,23 +170,25 @@ export const doSignUp =
       });
 
       sendEmailVerification(fullAuth.currentUser);
+
       setLoadingsignup(false);
+
 
       ToastSuccess("Verification Email Sent.");
       const docRef = await addDoc(collection(db, "users"), {
         ...data,
         id: userData.uid,
       });
-
-      // ToastSuccess("Verification Email Sent.");
       if (userData) {
         dispatch({
           type: SIGN_UP,
           payload: userData,
         });
       } else {
+
         // ToastError("This Email is already in use");
         ToastSuccess("Email Already Registered");
+
         setErr({ fieldErr: "This email already in use.", inputId: 12 });
       }
     } catch (e) {

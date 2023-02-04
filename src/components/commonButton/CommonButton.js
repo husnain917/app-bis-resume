@@ -28,6 +28,8 @@ export default function CommonButton({
   fontWeight,
   margin,
   hoverborderRadius,
+  paddingLeft,
+  paddingRight,
 }) {
   return (
     <Button
@@ -44,6 +46,8 @@ export default function CommonButton({
       fontWeight={fontWeight}
       rightIcon={rightIcon}
       leftIcon={leftIcon}
+      pl={paddingLeft}
+      pr={paddingRight}
       _hover={{
         border: hoverBorder,
         color: hoverColor,
