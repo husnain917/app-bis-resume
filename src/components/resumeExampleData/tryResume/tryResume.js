@@ -110,12 +110,16 @@ const TryResume = () => {
                     color: "black",
                   }}
                 >
-                  <Text
+                 <CommonButton
+                    backgroundColor={"#2CACD5"}
+                    color={"whitesmoke"}
                     fontSize={["14x", "14px", "16px", "16px", "16px"]}
-                    textDecoration={"none"}
-                  >
-                    Resume Examples
-                  </Text>
+                    height={"40px"}
+                    width={"180px"}
+                    padding={"20px"}
+                    borderRadius={"5px"}
+                    title={" Resume Examples"}
+                  />
                 </Link>
               </Button>
             </Box>
