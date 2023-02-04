@@ -30,6 +30,7 @@ import {
   signInWithPopup,
   getAdditionalUserInfo,
   sendPasswordResetEmail,
+  updateEmail
 } from "firebase/auth";
 import { getAuth, sendEmailVerification } from "firebase/auth";
 import { ToastSuccess } from "../../src/components/Toast";
@@ -240,20 +241,34 @@ export const doLogout = (setLoading) => async (dispatch) => {
   }
 };
 
-export const passwordReset =
-  (setLoading, setErr, email) => async (dispatch) => {
-    try {
-      setLoading(true);
-      await sendPasswordResetEmail(auth, email);
-    } catch (err) {
-      const errorCode = err.code;
-      if (errorCode === "auth/user-not-found") {
-        setErr({ fieldErr: "No account exists with this email." });
-      }
-    } finally {
-      setLoading(false);
+export const passwordReset = (setLoading, setErr, email) => async (dispatch) => {
+  try {
+    setLoading(true);
+    await sendPasswordResetEmail(auth, email);
+  } catch (err) {
+    const errorCode = err.code;
+    if (errorCode === "auth/user-not-found") {
+      setErr({ fieldErr: "No account exists with this email." });
     }
-  };
+  } finally {
+    setLoading(false);
+  }
+};
+export const ResetE = (setLoading, setErr, email) => async (dispatch) => {
+  console.log("email", email);
+  
+  try {
+    setLoading(true);
+     await updateEmail(fullAuth?.currentUser, `${email}`);
+    ToastSuccess("Change Email SuccessFully")
+  } catch (err) {
+    const errorCode = err.code;
+    if (errorCode === "auth/user-not-found") {
+      setErr({ fieldErr: "No account exists with this email." });
+    }
+  }
+}
+
 
 export const doCheckUser = (uid) => async (dispatch) => {
   try {

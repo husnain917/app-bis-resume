@@ -37,10 +37,13 @@ import { canvasPreview } from "../../src/components/canvasPreview";
 import UseModal from "./useModal";
 import CommonButton from "../../src/components/commonButton/CommonButton";
 import { getLoggedInUser } from "../../store/actions/AuthAction";
+import { getAuth, updateEmail } from "firebase/auth";
+
 // import { UseModal } from "./useModal";
 
 const Profile = () => {
   const userData = useSelector((store) => store.AuthReducer?.userData);
+  console.log(userData);
   const [isOpen, setisOpen] = useState(false);
   const [showFull, setShowFull] = useState(false);
   const [scale, setScale] = useState(1);
@@ -108,6 +111,8 @@ const Profile = () => {
   //   setGivenName(userData?.given_name);
   //   setVerifiedEmail(userData?.verified_email);
   // }, []);
+
+
 
   return (
     <>
@@ -363,7 +368,7 @@ const Profile = () => {
                   <Text color={"#9B9B9B"} mt={4} fontSize={"18px"}>
                     Password
                   </Text>
-                  
+
                   {verified_email ? (
                     <Text color="#fff" fontSize={14} fontWeight="500">
                       Google Account
@@ -381,7 +386,7 @@ const Profile = () => {
                           }}
                           onClick={() => setResetPass(true)}
                         >
-                        Request Password Change
+                          Request Password Change
                         </Text>
                       </Link>
                     </>
@@ -411,13 +416,20 @@ const Profile = () => {
                       Email
                     </Text>
 
-                    <Box marginTop={"20px"}>
-                      <UseModal
-                        margin={"5px 0 0 0"}
-                        onOpen={updateEmail}
-                        title={"Change"}
-                      />
-                    </Box>
+                    <Link href={"/auth/UpdateEmailAddress"}>
+                        <Text
+                          fontSize={15}
+                          fontWeight="500"
+                          color={"#00c8aa"}
+                          _hover={{
+                            textDecoration: "underline",
+                            cursor: "pointer",
+                          }}
+                          onClick={() => setResetPass(true)}
+                        >
+                           Change Email
+                        </Text>
+                      </Link>
                   </HStack>
 
                   <Box mt={2}>
