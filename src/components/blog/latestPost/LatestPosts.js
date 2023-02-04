@@ -6,13 +6,10 @@ import { SimpleGrid, Box, Container, Text } from "@chakra-ui/react";
 import SocialIcons from "../../Social/SocialIcons";
 import ReadMoreReact from "read-more-react";
 import CommonButton from "../../commonButton/CommonButton";
-import moment from 'moment';
-import {
-  AiOutlineClockCircle,
-} from "react-icons/ai";
+import moment from "moment";
+import { AiOutlineClockCircle } from "react-icons/ai";
 
 export default function LatestPosts({ blogs }) {
-  console.log("blogs", blogs);
   const [searchKey, setSearchKey] = useState("");
   var filterBlog = blogs?.filter(function (item) {
     return (
@@ -23,18 +20,7 @@ export default function LatestPosts({ blogs }) {
     );
   });
   const filteredBlogs = filterBlog?.filter((item) => item?.slug !== "test");
-  console.log("FILTERED BLOGS", filteredBlogs);
-
-
   const [expanded, setExpanded] = useState(false);
-
-
- 
-
-
-
-
-
 
   return (
     <div className="mainContainer">
@@ -95,7 +81,6 @@ export default function LatestPosts({ blogs }) {
                 <>
                   <Box key={index} minHeight={"420px"}>
                     <Box
-
                       margin={"0 5px 5px 5px"}
                       borderBottom={"2px solid"}
                       borderColor={"#C6C6C6"}
@@ -132,7 +117,10 @@ export default function LatestPosts({ blogs }) {
                           className={"xsmall-heading"}
                           mr={"3px"}
                         >
-                          {publishDate ? moment(publishDate).format('Do MMMM') : null} |{" "}
+                          {publishDate
+                            ? moment(publishDate).format("Do MMMM")
+                            : null}{" "}
+                          |{" "}
                         </Text>
                         <AiOutlineClockCircle
                           color={"#00C8AA"}
@@ -143,7 +131,6 @@ export default function LatestPosts({ blogs }) {
                           as={"span"}
                           className={"xsmall-heading"}
                           ml={"6px"}
-
                         >
                           {readingTime} min read
                         </Text>
@@ -218,8 +205,7 @@ export default function LatestPosts({ blogs }) {
                     className={style.blogContainer}
                   >
                     <Link href={`blog/[slug]`} as={`blog/${slug}`}>
-                      <Box className={style.imageContainer}
-                      >
+                      <Box className={style.imageContainer}>
                         <Image
                           className={style.coverImage}
                           layout="fill"
@@ -238,8 +224,10 @@ export default function LatestPosts({ blogs }) {
                       alignItems={"center"}
                     >
                       <Text as={"span"} className={"xsmall-heading"} mr={"4px"}>
-                        {publishDate ? moment(publishDate).format('Do MMMM YYYY') : null} |{" "}
-
+                        {publishDate
+                          ? moment(publishDate).format("Do MMMM YYYY")
+                          : null}{" "}
+                        |{" "}
                       </Text>
                       <AiOutlineClockCircle
                         color={"#00C8AA"}
@@ -261,81 +249,77 @@ export default function LatestPosts({ blogs }) {
         )}
       </div>
 
-
-     {
-      expanded ?
-      <SimpleGrid
-      className={style.centerblogs}
-      columns={{ sm: 1, md: 2, lg: 3 }}
-      spacing={[1, 1, 2, 5, 5]}
-      ml={["", "", "5%", "5%", "5%", "5%"]}
-    >
-      {filteredBlogs?.map((item, index) => {
-        const {
-          author,
-          category,
-          description,
-          body,
-          featuredImage,
-          publishDate,
-          slug,
-          title,
-          featured,
-          readingTime,
-        } = item.fields;
-        return (
-          <>
-            {featured === true ? "" : ""}
-            <Box
-              key={index}
-              marginBottom={"40px"}
-              className={style.blogContainer}
-            >
-              <Link href={`blog/[slug]`} as={`blog/${slug}`}>
-                <Box className={style.imageContainer}
+      {expanded ? (
+        <SimpleGrid
+          className={style.centerblogs}
+          columns={{ sm: 1, md: 2, lg: 3 }}
+          spacing={[1, 1, 2, 5, 5]}
+          ml={["", "", "5%", "5%", "5%", "5%"]}
+        >
+          {filteredBlogs?.map((item, index) => {
+            const {
+              author,
+              category,
+              description,
+              body,
+              featuredImage,
+              publishDate,
+              slug,
+              title,
+              featured,
+              readingTime,
+            } = item.fields;
+            return (
+              <>
+                {featured === true ? "" : ""}
+                <Box
+                  key={index}
+                  marginBottom={"40px"}
+                  className={style.blogContainer}
                 >
-                  <Image
-                    className={style.coverImage}
-                    layout="fill"
-                    objectFit="cover"
-                    src={"https:" + featuredImage.fields.file.url}
-                    alt="image"
-                    width={"80px"}
-                    height={"60px"}
-                  />
+                  <Link href={`blog/[slug]`} as={`blog/${slug}`}>
+                    <Box className={style.imageContainer}>
+                      <Image
+                        className={style.coverImage}
+                        layout="fill"
+                        objectFit="cover"
+                        src={"https:" + featuredImage.fields.file.url}
+                        alt="image"
+                        width={"80px"}
+                        height={"60px"}
+                      />
+                    </Box>
+                  </Link>
+                  <h3 className={`${style.Cardtitle} subTitle`}>{title}</h3>
+                  <Box
+                    className={style.dateHeading}
+                    display={"flex"}
+                    alignItems={"center"}
+                  >
+                    <Text as={"span"} className={"xsmall-heading"} mr={"4px"}>
+                      {publishDate
+                        ? moment(publishDate).format("Do MMMM YYYY")
+                        : null}{" "}
+                      |{" "}
+                    </Text>
+                    <AiOutlineClockCircle
+                      color={"#00C8AA"}
+                      size={18}
+                      style={{ marginLeft: "3px" }}
+                    />
+                    <Text as={"span"} className={"xsmall-heading"} ml={"6px"}>
+                      {readingTime} min read
+                    </Text>
+                  </Box>
+                  <p className={`${style.cardHeading} paragraph`}>
+                    <ReadMore text={description} />
+                  </p>
                 </Box>
-              </Link>
-              <h3 className={`${style.Cardtitle} subTitle`}>{title}</h3>
-              <Box
-                className={style.dateHeading}
-                display={"flex"}
-                alignItems={"center"}
-              >
-                <Text as={"span"} className={"xsmall-heading"} mr={"4px"}>
-                  {publishDate ? moment(publishDate).format('Do MMMM YYYY') : null} |{" "}
-
-                </Text>
-                <AiOutlineClockCircle
-                  color={"#00C8AA"}
-                  size={18}
-                  style={{ marginLeft: "3px" }}
-                />
-                <Text as={"span"} className={"xsmall-heading"} ml={"6px"}>
-                  {readingTime} min read
-                </Text>
-              </Box>
-              <p className={`${style.cardHeading} paragraph`}>
-                <ReadMore text={description} />
-              </p>
-            </Box>
-          </>
-        );
-      })}
-    </SimpleGrid>
-    :
-    null
-
-     }
+              </>
+            );
+          })}
+        </SimpleGrid>
+      ) : null}
 
       <Box
         mt={"30px"}
@@ -345,38 +329,33 @@ export default function LatestPosts({ blogs }) {
         alignItems={"center"}
         justifyContent={"center"}
       >
+        {!expanded ? (
+          <CommonButton
+            title="Load More"
+            hoverCursor={"pointer"}
+            backgroundColor={"#00C8AA"}
+            color={"whitesmoke"}
+            onClick={() => setExpanded(true)}
+            // rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
 
-      {
-        !expanded ?
-        <CommonButton
-          title="Load More"
-          hoverCursor={"pointer"}
-          backgroundColor={"#00C8AA"}
-          color={"whitesmoke"}
-          onClick={()=>setExpanded(true)}
-
-
-          // rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
-
-          fontSize={[
-            "0.9rem",
-            "0.9rem",
-            "1.1rem",
-            "1.1rem",
-            "1.1rem",
-            "1.5rem",
-          ]}
-        />
-        :
-        <Box
-        className={"small-heading"}
-        textColor="#00C8AA"
-        fontWeight={"bold"}
-        >
-         All Posts Show
-        </Box>
-      }
-   
+            fontSize={[
+              "0.9rem",
+              "0.9rem",
+              "1.1rem",
+              "1.1rem",
+              "1.1rem",
+              "1.5rem",
+            ]}
+          />
+        ) : (
+          <Box
+            className={"small-heading"}
+            textColor="#00C8AA"
+            fontWeight={"bold"}
+          >
+            All Posts Show
+          </Box>
+        )}
       </Box>
     </div>
   );

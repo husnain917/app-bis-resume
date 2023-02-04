@@ -21,11 +21,11 @@ export const NAV_ITEMS = [
   },
   {
     label: "Job Interviews",
-    href: "#",
+    href: "/ComingSoon",
   },
   {
     label: "Career Advice",
-    href: "#",
+    href: "/ComingSoon",
   },
 ];
 

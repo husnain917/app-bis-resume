@@ -213,7 +213,7 @@ export const getLoggedInUser = () => async (dispatch) => {
         uid = user.uid;
         dispatch({
           type: ACTIVE_USER,
-          payload: uid,
+          payload: user,
         });
       }
     });
