@@ -13,6 +13,7 @@ const initialState = {
   isModalOpen: false,
   userID: "",
   user: null,
+  userData: {},
 };
 
 function AuthReducer(state = initialState, action) {
@@ -46,7 +47,7 @@ function AuthReducer(state = initialState, action) {
       return {
         ...state,
         isUserLoggedIn: true,
-        user: action.payload,
+        userData: action.payload,
       };
     }
 

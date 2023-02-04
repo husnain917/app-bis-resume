@@ -5,6 +5,7 @@ import { canvasPreview } from "../../src/components/canvasPreview";
 import { useDispatch, useSelector } from "react-redux";
 import { onBlurField } from "../../store/actions/builderAction";
 import { EmailIcon } from "@chakra-ui/icons";
+import ImgsViewer from "react-images-viewer";
 const UseProfileImage = ({
   height,
   width,
@@ -21,12 +22,13 @@ const UseProfileImage = ({
   className,
   changeImage,
   image,
+  setShowFull,
+  showFull,
 }) => {
   useEffect(() => {
     console.log("Height", height, "Width", width);
   }, [height, width]);
   const userData = useSelector((store) => store.AuthReducer.user);
-  console.log("resumeData", userData?.Image);
   const [isOpen, setisOpen] = useState(false);
   const uploadedImage = React.useRef(null);
   const imageUploader = React.useRef(null);
@@ -117,6 +119,15 @@ const UseProfileImage = ({
                   transition: "1s border",
                 }}
                 className={className}
+                onClick={() => setShowFull(true)}
+              />
+            </Box>
+            <Box>
+              <ImgsViewer
+                imgs={[{ src: `${image}` }]}
+                isOpen={showFull}
+                onClose={() => setShowFull(false)}
+                style={{ width: "100%", height: "100vh" }}
               />
             </Box>
           </Box>

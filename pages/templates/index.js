@@ -15,24 +15,20 @@ function Templates() {
   );
   const ismodalOpen = async () => {
     dispatch(modalOpen());
-  }
+  };
   const ProfessionalTemp = CUSTOM_TEMP_DATA.slice(0, 16);
   const Modern = CUSTOM_TEMP_DATA.slice(16, 38);
 
   return (
     <Box>
-      <Box
-        display={'flex'}
-        justifyContent={'center'}
-        margin={'20px 0px'}
-      >
+      <Box display={"flex"} justifyContent={"center"} margin={"20px 0px"}>
         <Text
-          fontSize={'1.6rem'}
-          fontStyle={'normal'}
+          fontSize={"1.6rem"}
+          fontStyle={"normal"}
           fontFamily={`poppins-bold`}
           className="afterlink"
-          width={'fit-content'}
-          color={'#313B47'}
+          width={"fit-content"}
+          color={"#313B47"}
         >
           Professional
         </Text>
@@ -46,11 +42,13 @@ function Templates() {
         {ProfessionalTemp?.map((items, index) => (
           <>
             <Box className="cursor" key={index}>
-              <Link onClick={() => {
-                router.push(items?.href)
-              }} style={{ cursor: "default" }}
+              <Link
+                onClick={() => {
+                  router.push(items?.href);
+                }}
+                style={{ cursor: "pointer" }}
                 _hover={{
-                  textDecoration: 'none'
+                  textDecoration: "none",
                 }}
               >
                 <div className="templatecontainer">
@@ -66,28 +64,27 @@ function Templates() {
                       <div className="templatetext">Create my Resume</div>
                     </div>
                     <Box
-                      display={'flex'}
-                      margin={'20px 0px 0px 0px'}
-                      width={'87%'}
+                      display={"flex"}
+                      margin={"20px 0px 0px 0px"}
+                      width={"87%"}
                     >
                       <Text
-                        fontSize={'1.3rem'}
-                        fontStyle={'normal'}
+                        fontSize={"1.3rem"}
+                        fontStyle={"normal"}
                         fontFamily={`poppins-bold`}
-                        margin={'20px 0px'}
-                        color={'#313B47'}
+                        margin={"20px 0px"}
+                        color={"#313B47"}
                       >
                         {items?.category?.categoryName}
                       </Text>
                       <Text
-                        fontSize={'0.92rem'}
-                        fontStyle={'normal'}
+                        fontSize={"0.92rem"}
+                        fontStyle={"normal"}
                         fontFamily={`poppins`}
-                        margin={'22px 0px 20px 20px'}
-                        color={'#757575'}
+                        margin={"22px 0px 20px 20px"}
+                        color={"#757575"}
                       >
                         {items?.category?.categoryID}
-                        {"/"}
                         {items?.category?.totalCategory}
                       </Text>
                     </Box>
@@ -99,18 +96,14 @@ function Templates() {
         ))}
       </SimpleGrid>
 
-      <Box
-        display={'flex'}
-        justifyContent={'center'}
-        margin={'20px 0px'}
-      >
+      <Box display={"flex"} justifyContent={"center"} margin={"20px 0px"}>
         <Text
-          fontSize={'1.6rem'}
-          fontStyle={'normal'}
+          fontSize={"1.6rem"}
+          fontStyle={"normal"}
           fontFamily={`poppins-bold`}
           className="afterlink"
-          width={'fit-content'}
-          color={'#313B47'}
+          width={"fit-content"}
+          color={"#313B47"}
         >
           Modern
         </Text>
@@ -124,14 +117,13 @@ function Templates() {
         {Modern?.map((items, index) => (
           <>
             <Box className="cursor" key={index}>
-              <Link onClick={() => {
-                isUserLoggedIn ?
-                  router.push(items?.href)
-                  :
-                  ismodalOpen()
-              }} style={{ cursor: "default" }}
+              <Link
+                onClick={() => {
+                  isUserLoggedIn ? router.push(items?.href) : ismodalOpen();
+                }}
+                style={{ cursor: "pointer" }}
                 _hover={{
-                  textDecoration: 'none',
+                  textDecoration: "none",
                 }}
               >
                 <div className="templatecontainer">
@@ -146,26 +138,22 @@ function Templates() {
                     <div className="templatetext">Create my Resume</div>
                   </div>
                 </div>
-                <Box
-                  display={'flex'}
-                  margin={'20px 0px 0px 0px'}
-                  width={'87%'}
-                >
+                <Box display={"flex"} margin={"20px 0px 0px 0px"} width={"87%"}>
                   <Text
-                    fontSize={'1.3rem'}
-                    fontStyle={'normal'}
+                    fontSize={"1.3rem"}
+                    fontStyle={"normal"}
                     fontFamily={`poppins-bold`}
-                    margin={'20px 0px'}
-                    color={'#313B47'}
+                    margin={"20px 0px"}
+                    color={"#313B47"}
                   >
                     {items?.category?.categoryName}
                   </Text>
                   <Text
-                    fontSize={'0.92rem'}
-                    fontStyle={'normal'}
+                    fontSize={"0.92rem"}
+                    fontStyle={"normal"}
                     fontFamily={`poppins`}
-                    margin={'22px 0px 20px 20px'}
-                    color={'#757575'}
+                    margin={"22px 0px 20px 20px"}
+                    color={"#757575"}
                   >
                     {items?.category?.categoryID}
                     {"/"}

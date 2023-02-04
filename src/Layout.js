@@ -7,11 +7,14 @@ export default function Layout({ children }) {
   // get path
   const router = useRouter();
   const path = router.pathname;
-  console.log("BLOG >>>>", path);
-
   return (
     <>
-      {path.includes("templates/") || path.includes("/blog") ||path.includes("/personal-development") ||path.includes("/inspiring-stories") ? (
+      {path.includes("templates/") ||
+      path.includes("/blog") ||
+      path.includes("/personal-development") ||
+      path.includes("/Jobs") ||
+      path.includes("/ComingSoon") ||
+      path.includes("/inspiring-stories") ? (
         <>
           <main>{children}</main>
         </>

@@ -1,17 +1,11 @@
-import React from 'react'
-import Navbar from "../src/components/blog/latestPost/navbar/Navbar";
-import Footer from '../src/components/footer/Footer';
+import React from "react";
 
-import ComingSoon from './ComingSoon'
-
+import ComingSoon from "./ComingSoon";
 
 export default function Inspiring_Stories() {
-    return (
-        <div>
-            <Navbar />
-            <ComingSoon />
-            <Footer />
-
-        </div>
-    )
+  return (
+    <div>
+      <ComingSoon />
+    </div>
+  );
 }
