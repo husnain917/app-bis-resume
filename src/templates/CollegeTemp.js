@@ -205,6 +205,7 @@ const CollegeTemp = () => {
                       maxwidth={"450px"}
                       minwidth={"200px"}
                       datewidthmax={"220px"}
+                      maxchr={18}
                     />
                   </div>
                 </div>
@@ -249,7 +250,7 @@ const CollegeTemp = () => {
                   {/* Skill Row Components */}
                   <RowSkill
                     maxwidth={"220px"}
-                    maxchr={26}
+                    maxchr={24}
                     skillStyle={Classes.skillText}
                   />
                 </div>

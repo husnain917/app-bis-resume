@@ -161,6 +161,7 @@ const WorkExperience = (props) => {
                         placeholder={
                           startDate_placeholder ? startDate_placeholder : "From"
                         }
+                        maxChr={props.maxchr}
                         path={`${path}.${index}.startDate`}
                         customClass={`${dateStyle ? dateStyle : ""}`}
                         color={textColor}
@@ -192,6 +193,7 @@ const WorkExperience = (props) => {
                         fontWeight={fontWeight}
                         textAlign={textAlign}
                         maxWidth={datewidthmax}
+                        maxChr={props.maxchr}
                       />
                     </Stack>
                   </Box>
