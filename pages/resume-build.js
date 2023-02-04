@@ -56,11 +56,8 @@ export default function ResumeBuild() {
                             </Box>
                         </Box>
                     </Box>
-
                     <Box
                         w={["85%", "85%", "85%", "50%", "50%"]} mt={["2%", "2%", "2%"]} ml={["11%", "8%", "8%"]}>
-
-
                         <Image
                             src={HeadResume}
                             alt={'Image Not Found'}
@@ -315,27 +312,28 @@ export default function ResumeBuild() {
                         </>
                     </Box>
                 </Box>
-
-
-
-
                 <FaqsSection />
-
+             
                 <Box ml={["3%", "3%", "3%"]} mb={["2%", "2%", "2%"]} >
                     <Box ml={["5%"]}>
-                        <Box mt={10} mb={10}>
+                        <Box mt={10} mb={10}
+                         display="flex"
+                        alignItems="start"
+                        justifyContent="center"
+                        flexDirection="column"
+                        >
+                        
                             <Text
                                 fontSize={["2.7em", "2.9em"]}
-                                textAlign={"center"}
+                                textAlign="start"
                                 fontWeight={"700"}
                                 className="afterHeading"
-                                w={["100%", "100%", "27%"]}
                             >
                                 Brower Templates
                             </Text>
                         </Box>
                     </Box>
-
+               
                     <Templates />
                 </Box>
 

@@ -3,16 +3,16 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 export const NAV_ITEMS = [
   {
     label: "All Articles",
-    href: "#",
+    href: "/blog",
   },
 
   {
     label: "Personal Development",
-    href: "#",
+    href: "/personal-development",
   },
   {
     label: "Inspiring Stories",
-    href: "#",
+    href: "/inspiring-stories",
   },
 
   {
@@ -21,11 +21,11 @@ export const NAV_ITEMS = [
   },
   {
     label: "Job Interviews",
-    href: "#",
+    href: "/ComingSoon",
   },
   {
     label: "Career Advice",
-    href: "#",
+    href: "/ComingSoon",
   },
 ];
 

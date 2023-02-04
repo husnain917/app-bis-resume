@@ -20,12 +20,12 @@ const TryResume = () => {
         >
           <Box
             width={["100%", "100%", "45%", "57%", "49%"]}
-            marginBottom={["16px"]}
+            marginBottom={["24px"]}
             position="relative"
             marginRight={["0", "0", "0", "16px", "32px"]}
             flexShrink={["0", "0", "", "", "0"]}
             minWidth={["50%", "", "", "0%", "0%"]}
-            height={["320px"]}
+            height={["420px"]}
           >
             <Image
               src="./sampleTemplate.png"
@@ -51,7 +51,7 @@ const TryResume = () => {
             <Text
               fontWeight={700}
               fontSize={["2em", "2.4em", "2.5em", "3.8em", "3.8em"]}
-              lineHeight={["36px", "36px", "48px", "48px", "48px"]}
+              lineHeight={["36px", "36px", "62px", "62px", "62px"]}
               marginBottom={["20px"]}
               maxWidth={["auto", "auto", "10em", "10em", "10em"]}
               className={"sub-heading"}
@@ -80,7 +80,7 @@ const TryResume = () => {
               </Text>{" "}
             </Box>
             <Box display={"flex"} alignItems={"center"}>
-              <Box mx={2}>
+              <Box mx={2} >
                 <Link
                   href="/templates"
                   _hover={{
@@ -99,6 +99,7 @@ const TryResume = () => {
                   />
                 </Link>
               </Box>
+
               <Button>
                 <Link
                   href="/resume-examples"

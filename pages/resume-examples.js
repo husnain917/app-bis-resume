@@ -15,6 +15,7 @@ import Fade from "react-reveal/Fade";
 import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
 import SideBar from "../src/components/sideBar/SideBar";
 import styles from "../styles/sideBarSection.module.css";
+import Navbar from "../src/components/navbar/Navbar";
 
 const ResumeExamples = () => {
   return (

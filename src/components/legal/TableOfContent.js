@@ -12,6 +12,7 @@ export default function TableOfContent() {
                         <>
                             <ListItem
                                 key={index}
+                                fontSize={'1rem'}
                             >
                                 <Link
                                     className={`${styles.links} ${`small-text`}`}

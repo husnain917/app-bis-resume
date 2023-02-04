@@ -4,6 +4,7 @@ import { onBlurField } from "../../../store/actions/builderAction";
 import styles from "../../../styles/templates/commonTemplates.module.css";
 import { colors } from "../../../constants/colors";
 import { GrammarlyEditorPlugin } from "@grammarly/editor-sdk-react";
+import { persistor } from "../../../config/store";
 
 function Text(props) {
   const dispatch = useDispatch();
@@ -18,12 +19,16 @@ function Text(props) {
     setAddBorder(false);
     dispatch(onBlurField(data, props.path));
   };
-  const onChange = (e) => {
-    if (e.target.innerText.length <= 12) {
-      console.log("Set Value Here", e.target.innerText);
-    }
-    e.preventDefault();
-  };
+  // const onChange = (e) => {
+  //   if (e.target.innerText.length <= 12) {
+  //     console.log("Set Value Here", e.target.innerText);
+  //   }
+  //   const data = e.target.innerText ? e.target.innerText : "";
+  //   setAddBorder(false);
+  //   dispatch(onBlurField(data, props.path));
+
+  //   e.preventDefault();
+  // };
   const { value, customClass, tag, path, editable = true } = props;
   const TagName = tag ? tag : "p";
 
@@ -51,7 +56,7 @@ function Text(props) {
           // }}
           id={path}
           contentEditable={editable}
-          onInput={onChange}
+          // onInput={onChange}
           onPaste={(e) => {
             var bufferText = (
               (e.originalEvent || e).clipboardData || window.clipboardData
