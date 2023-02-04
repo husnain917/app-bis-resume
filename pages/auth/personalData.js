@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   HStack,
   VStack,
@@ -9,19 +9,23 @@ import {
   Heading,
   Flex,
 } from "@chakra-ui/react";
+import ImgsViewer from "react-images-viewer";
 import { useSelector } from "react-redux";
 import CommonButton from "../../src/components/commonButton/CommonButton";
-
+import { saveAs } from "file-saver";
 const PersonalData = () => {
-  const userData = useSelector((store) => store.AuthReducer.user);
-  console.log(userData);
+  const userData = useSelector((store) => store.AuthReducer?.userData);
+  const [showFull, setShowFull] = useState(false);
+  const photoURL = `${userData?.photoURL}`;
+  const imageDownloadHandler = () => {
+    saveAs(photoURL, "photoURL");
+  };
   return (
     <>
       <Box bg={"#1F262E"}>
         <Box id={"topArea"} margin={"0 auto"}>
           <VStack w={"full"} p={"20px 0px"} justifyContent="stretch">
             <Heading color={"white"} fontSize={"48px"}>
-              {" "}
               Profile
             </Heading>
             <Heading color={"white"} fontSize={"36px"}>
@@ -35,9 +39,23 @@ const PersonalData = () => {
                 height={"260px"}
                 width={"260px"}
                 borderRadius={"50%"}
+                onClick={() => setShowFull(true)}
               />
             </Box>
-            <Button marginTop={"20px !important"}>Dowanload Image</Button>
+            <Box>
+              <ImgsViewer
+                imgs={[{ src: `${userData?.photoURL}` }]}
+                isOpen={showFull}
+                onClose={() => setShowFull(false)}
+                style={{ width: "400px", height: "100vh" }}
+              />
+            </Box>
+            <Button
+              marginTop={"20px !important"}
+              onClick={imageDownloadHandler}
+            >
+              Dowanload Image
+            </Button>
             <Flex marginTop={"20px !important"}>
               <Box>
                 <Text

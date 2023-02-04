@@ -23,7 +23,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsFolder2 } from "react-icons/bs";
 import { TbArrowBack } from "react-icons/tb";
 import url from "../../config/endpoint";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { EmailIcon } from "@chakra-ui/icons";
@@ -33,16 +33,16 @@ import ImageCrop from "../../src/components/Crop/ImageCrop";
 import UseProfileImage from "./useProfileImage";
 import { useEffect, useRef } from "react";
 import { onBlurField } from "../../store/actions/builderAction";
-import { useDispatch } from "react-redux";
 import { canvasPreview } from "../../src/components/canvasPreview";
 import UseModal from "./useModal";
 import CommonButton from "../../src/components/commonButton/CommonButton";
+import { getLoggedInUser } from "../../store/actions/AuthAction";
 // import { UseModal } from "./useModal";
 
 const Profile = () => {
-  const userData = useSelector((store) => store.AuthReducer.user);
-  console.log(userData);
+  const userData = useSelector((store) => store.AuthReducer?.userData);
   const [isOpen, setisOpen] = useState(false);
+  const [showFull, setShowFull] = useState(false);
   const [scale, setScale] = useState(1);
   const [rotate, setRotate] = useState(0);
   const [crop, setCrop] = useState();
@@ -51,6 +51,7 @@ const Profile = () => {
   const isUserLoggedIn = useSelector(
     (store) => store.AuthReducer.isUserLoggedIn
   );
+  const dispatch = useDispatch();
   const router = useRouter();
   if (!isUserLoggedIn) {
     router.push("/");
@@ -69,6 +70,7 @@ const Profile = () => {
   const onDone = async () => {
     setisOpen(false);
     const result = await canvasPreview(imgRef.current, crop, scale, rotate);
+    console.log(result, "image uploaded");
     const { current } = uploadedImage;
     current.src = result;
     dispatch(onBlurField(result, "profile.profileImage"));
@@ -77,25 +79,20 @@ const Profile = () => {
   const dummyEmail = "ahsanbutt515@gmail.com";
   const dummyfirstName = "Ahsan Ali";
   const dummyLastName = "Butt";
-  const [name, setName] = useState(userData?.name || "");
+  // const [name, setName] = useState(userData?.name || "");
   const [email, setEmail] = useState(userData?.email || "");
-  const [picture, setPicture] = useState(userData?.picture || "");
-  const [family_name, setFamilyName] = useState(
-    userData.family_name || dummyfirstName
-  );
-  const [given_name, setGivenName] = useState(
-    userData?.given_name || dummyLastName
-  );
+  const [picture, setPicture] = useState(userData?.photoURL || "");
+
   const [changeImage, setChangeImage] = useState(true);
   const [updateEmail, setUpdateEmail] = useState(false);
-  console.log("CHANGE IMAGE", changeImage);
   const [verified_email, setVerifiedEmail] = useState(
     userData?.verified_email || ""
   );
   const removeSelectedImage = () => {
+    console.log("delete profile photo");
     setPreview("/uploadpic1.png");
   };
-
+  const name = userData?.displayName?.split(" ");
   // useEffect(() => {
   //   setName(userData?.name);
   //   setEmail(userData?.email);
@@ -146,7 +143,6 @@ const Profile = () => {
             <Text position={"absolute"} top="50%" ml={"5px"} mt="-11px">
               Upload Photo
             </Text>
-
             <Input
               type={"file"}
               display="none"
@@ -178,6 +174,8 @@ const Profile = () => {
           maxWidth={"120px"}
           maxHeight={"120px"}
           changeImage={changeImage}
+          showFull={showFull}
+          setShowFull={setShowFull}
         />
       </VStack>
       {/* =============== Account Type =============== */}
@@ -316,7 +314,7 @@ const Profile = () => {
                         Given Name
                       </Text>
                       <Text color="#fff" fontSize={14} fontWeight="500">
-                        {family_name}
+                        {name[0]}
                       </Text>
                     </Box>
                     <Box w={{ base: "100%", md: "50%" }}>
@@ -324,7 +322,7 @@ const Profile = () => {
                         Family Name
                       </Text>
                       <Text color="#fff" fontSize={14} fontWeight="500">
-                        {given_name}
+                        {name[1]}
                       </Text>
                     </Box>
                   </Stack>
