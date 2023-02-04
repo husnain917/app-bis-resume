@@ -239,7 +239,6 @@ export default function FormatsTables() {
                   key={index}
                   fontSize={"16px"}
                   lineHeight={8}
-                  marginBottom={"20px"}
                   fontFamily={`'EuclidCircularB-Medium', sans-serif`}
                 >
                   {item.text}

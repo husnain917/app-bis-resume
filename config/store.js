@@ -1,7 +1,10 @@
-import {applyMiddleware, createStore} from 'redux';
-import rootReducer from '../store/rootReducer';
-import thunk from 'redux-thunk';
+import { applyMiddleware, createStore } from "redux";
+import rootReducer from "../store/rootReducer";
+import thunk from "redux-thunk";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 import { composeWithDevTools } from "redux-devtools-extension";
+import hardSet from "redux-persist/lib/stateReconciler/hardSet";
 const middlewares = [thunk];
 /* eslint-disable no-underscore-dangle */
 
@@ -20,7 +23,15 @@ const middlewares = [thunk];
 
 //   return store;
 // }
+const persistConfig = {
+  key: "root",
+  storage: storage,
+  stateReconciler: hardSet,
+};
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
-
+const persistedReducer = persistReducer(persistConfig, rootReducer);
+const store = createStore(persistedReducer, applyMiddleware(thunk));
+let persistor = persistStore(store);
+persistor.flush();
 export default store;
+export { persistor };

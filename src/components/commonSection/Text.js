@@ -35,6 +35,7 @@ function Text(props) {
     setAddBorder(false);
     dispatch(onBlurField(data, props.path));
   };
+
   const { value, customClass, tag, path, editable = true } = props;
   console.log("MAXCHR", props?.maxChr);
   const maxChr = props?.maxChr;

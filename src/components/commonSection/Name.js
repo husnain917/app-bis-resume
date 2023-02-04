@@ -47,6 +47,7 @@ const Name = (props) => {
           // maxWidth={props.maxWidth}
           minWidth={props.maxWidth}
           maxWidth={props.minWidth}
+          maxChr={props.maxchr}
           color={fontColor ? fontColor : ""}
         />
       )}

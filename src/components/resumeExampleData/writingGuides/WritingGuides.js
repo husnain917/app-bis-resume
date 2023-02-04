@@ -8,11 +8,12 @@ const WritingGuides = () => {
       padding={["0 20px", "0 20px", "0 44px", "0 44px", "0 44px"]}
     >
       <Box
-        paddingTop={["32px", "64px", "64px", "0px", "0px"]}
-        maxWidth={"1120px"}
+        paddingTop={["32px", "64px", "64px", "80px", "80px"]}
+        maxWidth={"1320px"}
         margin={"0 auto"}
         display={"flex"}
-        flexDirection={["column", "column", "column", "row", "row"]}
+        flexDirection={["column", "column", "column", "column", "row"]}
+       
       >
         <Box
           flexGrow={1}
@@ -75,10 +76,10 @@ const WritingGuides = () => {
         <Box
           position={"relative"}
           flexShrink={"0"}
-          alignSelf={["flex-end", "flex-end", "flex-end", "flex-end"]}
+          alignSelf={["center", "center", "center",'center', "flex-end"]}
           marginLeft={"128px"}
-          maxW={["544px", "544px", "380px", "390px", "544px"]}
-          w={["344px", "444px", "544px", "544px", "544px", "544px"]}
+          // maxW={["544px", "544px", "380px", "390px", "544px"]}
+          // w={["344px", "444px", "544px", "544px", "544px", "544px"]}
           display={"flex"}
           marginTop={"-60px"}
         >

@@ -23,7 +23,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsFolder2 } from "react-icons/bs";
 import { TbArrowBack } from "react-icons/tb";
 import url from "../../config/endpoint";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { EmailIcon } from "@chakra-ui/icons";
@@ -33,41 +33,45 @@ import ImageCrop from "../../src/components/Crop/ImageCrop";
 import UseProfileImage from "./useProfileImage";
 import { useEffect, useRef } from "react";
 import { onBlurField } from "../../store/actions/builderAction";
-import { useDispatch } from "react-redux";
 import { canvasPreview } from "../../src/components/canvasPreview";
 import UseModal from "./useModal";
 import CommonButton from "../../src/components/commonButton/CommonButton";
+import { getLoggedInUser } from "../../store/actions/AuthAction";
 // import { UseModal } from "./useModal";
 
 const Profile = () => {
-  const userData = useSelector((store) => store.AuthReducer.user);
+  const userData = useSelector((store) => store.AuthReducer?.userData);
   const [isOpen, setisOpen] = useState(false);
+  const [showFull, setShowFull] = useState(false);
   const [scale, setScale] = useState(1);
   const [rotate, setRotate] = useState(0);
   const [crop, setCrop] = useState();
+  const [resetPass, setResetPass] = useState(false);
   const imgRef = useRef(null);
   const uploadedImage = React.useRef(null);
   const isUserLoggedIn = useSelector(
     (store) => store.AuthReducer.isUserLoggedIn
   );
+  const dispatch = useDispatch();
   const router = useRouter();
   if (!isUserLoggedIn) {
     router.push("/");
   }
-  const [preview, setPreview] = useState("/uploadpic1.png");
+  // const [preview, setPreview] = useState(userData?.picture);
 
   const imageChange = (e) => {
     // setPreview(URL.createObjectURL(e.target.files[0]));
     if (e.target.files && e.target.files.length !== 0) {
-      setPreview(URL.createObjectURL(e.target.files[0]));
+      setPicture(URL.createObjectURL(e.target.files[0]));
       setisOpen(true);
     } else {
-      setPreview("");
+      setPicture("");
     }
   };
   const onDone = async () => {
     setisOpen(false);
     const result = await canvasPreview(imgRef.current, crop, scale, rotate);
+    console.log(result, "image uploaded");
     const { current } = uploadedImage;
     current.src = result;
     dispatch(onBlurField(result, "profile.profileImage"));
@@ -76,26 +80,26 @@ const Profile = () => {
   const dummyEmail = "ahsanbutt515@gmail.com";
   const dummyfirstName = "Ahsan Ali";
   const dummyLastName = "Butt";
-  const [name, setName] = useState(userData?.name || "");
   const [email, setEmail] = useState(userData?.email || dummyEmail);
-  const [picture, setPicture] = useState(userData?.picture || "");
+  const [picture, setPicture] = useState(
+    userData?.picture || "/uploadpic1.png"
+  );
+  console.log("PICTURE", picture);
   const [family_name, setFamilyName] = useState(
-    userData?.family_name || dummyLastName
+    userData.family_name || dummyfirstName
   );
   const [given_name, setGivenName] = useState(
-    userData?.given_name || dummyfirstName
+    userData?.given_name || dummyLastName
   );
   const [changeImage, setChangeImage] = useState(true);
   const [updateEmail, setUpdateEmail] = useState(false);
-  console.log("CHANGE IMAGE", changeImage);
   const [verified_email, setVerifiedEmail] = useState(
     userData?.verified_email || ""
   );
   const removeSelectedImage = () => {
-    setPreview("/uploadpic1.png");
+    setPicture("/uploadpic1.png");
   };
-  console.log("userData", userData);
-
+  const name = userData?.displayName?.split(" ");
   // useEffect(() => {
   //   setName(userData?.name);
   //   setEmail(userData?.email);
@@ -131,7 +135,7 @@ const Profile = () => {
               onClose={() => setisOpen(false)}
               crop={crop}
               setCrop={setCrop}
-              src={preview}
+              src={picture}
               onDone={onDone}
               imgRef={imgRef}
             />
@@ -146,7 +150,6 @@ const Profile = () => {
             <Text position={"absolute"} top="50%" ml={"5px"} mt="-11px">
               Upload Photo
             </Text>
-
             <Input
               type={"file"}
               display="none"
@@ -170,7 +173,7 @@ const Profile = () => {
         </Box>
         {/* =============== Avatar Section =============== */}
         <UseProfileImage
-          image={picture ? picture : preview}
+          image={picture ? picture : "/uploadpic1.png"}
           className={`${Style.avatar}`}
           borderWidth={"1px"}
           minWidth={"120px"}
@@ -178,6 +181,8 @@ const Profile = () => {
           maxWidth={"120px"}
           maxHeight={"120px"}
           changeImage={changeImage}
+          showFull={showFull}
+          setShowFull={setShowFull}
         />
       </VStack>
       {/* =============== Account Type =============== */}
@@ -253,7 +258,7 @@ const Profile = () => {
                     11 extra features at your disposal.
                   </Text>
                 </Box>
-                <Link href={"#"}>
+                <Link href={"/page/pricing-resume"}>
                   <Button
                     bg="#00C8AA"
                     size="lg"
@@ -263,7 +268,6 @@ const Profile = () => {
                     h={"40px"}
                     color={"#fff"}
                     fontSize={{ sm: "14px", md: "16px" }}
-                    className={`${Style.btn}`}
                     _hover={{ bg: "#00C8AA" }}
                   >
                     Upgrade Now
@@ -316,7 +320,7 @@ const Profile = () => {
                         Given Name
                       </Text>
                       <Text color="#fff" fontSize={14} fontWeight="500">
-                        {given_name}
+                        {name[0]}
                       </Text>
                     </Box>
                     <Box w={{ base: "100%", md: "50%" }}>
@@ -324,7 +328,7 @@ const Profile = () => {
                         Family Name
                       </Text>
                       <Text color="#fff" fontSize={14} fontWeight="500">
-                        {family_name}
+                        {name[1]}
                       </Text>
                     </Box>
                   </Stack>
@@ -359,13 +363,14 @@ const Profile = () => {
                   <Text color={"#9B9B9B"} mt={4} fontSize={"18px"}>
                     Password
                   </Text>
+                  
                   {verified_email ? (
                     <Text color="#fff" fontSize={14} fontWeight="500">
                       Google Account
                     </Text>
                   ) : (
                     <>
-                      <Link href={"#"}>
+                      <Link href={"/auth/ForgetPassword"}>
                         <Text
                           fontSize={15}
                           fontWeight="500"
@@ -374,8 +379,9 @@ const Profile = () => {
                             textDecoration: "underline",
                             cursor: "pointer",
                           }}
+                          onClick={() => setResetPass(true)}
                         >
-                          Request Password Change
+                        Request Password Change
                         </Text>
                       </Link>
                     </>
@@ -419,7 +425,7 @@ const Profile = () => {
                       Account Email
                     </Text>
                     <Text color="#fff" fontSize={14} fontWeight="500">
-                      {email}
+                      {userData?.email}
                     </Text>
                   </Box>
                 </Box>
@@ -430,7 +436,7 @@ const Profile = () => {
                   w={{ base: "85vw", md: "40vw" }}
                   borderRadius={4}
                   p={"15px"}
-                  // className={`${Style.mt}`}
+                // className={`${Style.mt}`}
                 >
                   <HStack>
                     <CgNotes size={34} color="#fff" />

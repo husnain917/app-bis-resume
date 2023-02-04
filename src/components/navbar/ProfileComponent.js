@@ -22,7 +22,6 @@ import Router, { useRouter } from "next/router";
 export default function ProfileComponent() {
   const [loading, setLoading] = useState(false);
   const [iconColor, setIconColor] = useState("");
-  console.log(iconColor);
   const dispatch = useDispatch();
   const router = useRouter();
   const logoutHandler = () => {

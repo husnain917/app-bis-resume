@@ -102,13 +102,6 @@ export default function ResumeFormats() {
               >
                 Career Expert
               </Text>
-              <Text
-                fontSize={"15px"}
-                color={"#63B3ED"}
-                fontFamily={`'EuclidCircularB', sans-serif`}
-              >
-                Updated 09/08/2022
-              </Text>
             </Box>
           </Box>
         </Box>
