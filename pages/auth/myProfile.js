@@ -46,6 +46,7 @@ const Profile = () => {
   const [scale, setScale] = useState(1);
   const [rotate, setRotate] = useState(0);
   const [crop, setCrop] = useState();
+  const [resetPass, setResetPass] = useState(false);
   const imgRef = useRef(null);
   const uploadedImage = React.useRef(null);
   const isUserLoggedIn = useSelector(
@@ -56,15 +57,15 @@ const Profile = () => {
   if (!isUserLoggedIn) {
     router.push("/");
   }
-  const [preview, setPreview] = useState("/uploadpic1.png");
+  // const [preview, setPreview] = useState(userData?.picture);
 
   const imageChange = (e) => {
     // setPreview(URL.createObjectURL(e.target.files[0]));
     if (e.target.files && e.target.files.length !== 0) {
-      setPreview(URL.createObjectURL(e.target.files[0]));
+      setPicture(URL.createObjectURL(e.target.files[0]));
       setisOpen(true);
     } else {
-      setPreview("");
+      setPicture("");
     }
   };
   const onDone = async () => {
@@ -79,18 +80,24 @@ const Profile = () => {
   const dummyEmail = "ahsanbutt515@gmail.com";
   const dummyfirstName = "Ahsan Ali";
   const dummyLastName = "Butt";
-  // const [name, setName] = useState(userData?.name || "");
-  const [email, setEmail] = useState(userData?.email || "");
-  const [picture, setPicture] = useState(userData?.photoURL || "");
-
+  const [email, setEmail] = useState(userData?.email || dummyEmail);
+  const [picture, setPicture] = useState(
+    userData?.picture || "/uploadpic1.png"
+  );
+  console.log("PICTURE", picture);
+  const [family_name, setFamilyName] = useState(
+    userData.family_name || dummyfirstName
+  );
+  const [given_name, setGivenName] = useState(
+    userData?.given_name || dummyLastName
+  );
   const [changeImage, setChangeImage] = useState(true);
   const [updateEmail, setUpdateEmail] = useState(false);
   const [verified_email, setVerifiedEmail] = useState(
     userData?.verified_email || ""
   );
   const removeSelectedImage = () => {
-    console.log("delete profile photo");
-    setPreview("/uploadpic1.png");
+    setPicture("/uploadpic1.png");
   };
   const name = userData?.displayName?.split(" ");
   // useEffect(() => {
@@ -128,7 +135,7 @@ const Profile = () => {
               onClose={() => setisOpen(false)}
               crop={crop}
               setCrop={setCrop}
-              src={preview}
+              src={picture}
               onDone={onDone}
               imgRef={imgRef}
             />
@@ -166,7 +173,7 @@ const Profile = () => {
         </Box>
         {/* =============== Avatar Section =============== */}
         <UseProfileImage
-          image={picture ? picture : preview}
+          image={picture ? picture : "/uploadpic1.png"}
           className={`${Style.avatar}`}
           borderWidth={"1px"}
           minWidth={"120px"}
@@ -251,7 +258,7 @@ const Profile = () => {
                     11 extra features at your disposal.
                   </Text>
                 </Box>
-                <Link href={"#"}>
+                <Link href={"/page/pricing-resume"}>
                   <Button
                     bg="#00C8AA"
                     size="lg"
@@ -261,7 +268,6 @@ const Profile = () => {
                     h={"40px"}
                     color={"#fff"}
                     fontSize={{ sm: "14px", md: "16px" }}
-                    className={`${Style.btn}`}
                     _hover={{ bg: "#00C8AA" }}
                   >
                     Upgrade Now
@@ -357,13 +363,14 @@ const Profile = () => {
                   <Text color={"#9B9B9B"} mt={4} fontSize={"18px"}>
                     Password
                   </Text>
+                  
                   {verified_email ? (
                     <Text color="#fff" fontSize={14} fontWeight="500">
                       Google Account
                     </Text>
                   ) : (
                     <>
-                      <Link href={"#"}>
+                      <Link href={"/auth/ForgetPassword"}>
                         <Text
                           fontSize={15}
                           fontWeight="500"
@@ -372,8 +379,9 @@ const Profile = () => {
                             textDecoration: "underline",
                             cursor: "pointer",
                           }}
+                          onClick={() => setResetPass(true)}
                         >
-                          Request Password Change
+                        Request Password Change
                         </Text>
                       </Link>
                     </>
@@ -428,7 +436,7 @@ const Profile = () => {
                   w={{ base: "85vw", md: "40vw" }}
                   borderRadius={4}
                   p={"15px"}
-                  // className={`${Style.mt}`}
+                // className={`${Style.mt}`}
                 >
                   <HStack>
                     <CgNotes size={34} color="#fff" />

@@ -6,6 +6,8 @@ export default function CustomInput({
   paddingBottom,
   marginTop,
   height,
+  value,
+  onChange,
 }) {
   return (
     <>
@@ -20,6 +22,8 @@ export default function CustomInput({
           pb={paddingBottom}
           h={height}
           className={className}
+          onChange={onChange}
+          value={value}
         />
       </Box>
     </>

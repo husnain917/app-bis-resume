@@ -64,7 +64,7 @@ const UseModal = ({ title, margin }) => {
               </ModalBody>
 
               <ModalFooter>
-                <Button colorScheme="blue" mr={3}>
+                <Button onClick={onClose} colorScheme="blue" mr={3}>
                   Save
                 </Button>
                 <Button onClick={onClose}>Cancel</Button>
@@ -97,7 +97,7 @@ const UseModal = ({ title, margin }) => {
               </ModalBody>
 
               <ModalFooter>
-                <Button colorScheme="blue" mr={3}>
+                <Button onClick={onClose} colorScheme="blue" mr={3}>
                   Save
                 </Button>
                 <Button onClick={onClose}>Cancel</Button>
@@ -105,8 +105,8 @@ const UseModal = ({ title, margin }) => {
             </ModalContent>
           </Modal>
         </>
-      )}
-    </>
+                    )}
+                  </>
   );
 };
 
