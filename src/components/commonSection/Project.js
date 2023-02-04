@@ -1,17 +1,17 @@
-import { Box } from '@chakra-ui/react';
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { connect } from 'react-redux';
-import { sampleData } from '../../../constants/sampleData';
+import { Box } from "@chakra-ui/react";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { connect } from "react-redux";
+import { sampleData } from "../../../constants/sampleData";
 import {
   addNewObj,
   deleteObjInArray,
   onBlurField,
   updateOrder,
-} from '../../../store/actions/builderAction';
-import Util from '../../../utils/templateUtils';
-import Dnd from './Dnd';
-import Text from './Text';
+} from "../../../store/actions/builderAction";
+import Util from "../../../utils/templateUtils";
+import Dnd from "./Dnd";
+import Text from "./Text";
 const Project = (props) => {
   const {
     resumeData,
@@ -26,14 +26,15 @@ const Project = (props) => {
     durationStyle,
     childContainerStyle,
     parentContainerStyle,
+    maxwidth,
   } = props;
   const dispatch = useDispatch();
   const data = resumeData?.projects?.items?.length
     ? [...resumeData?.projects?.items]
     : [...sampleData?.data?.projects?.items];
-  const path = 'projects.items';
+  const path = "projects.items";
   const onOrderUpdate = (datas) => {
-    const storeReorder = Util.mapOrder(data, datas, 'id');
+    const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));
   };
   const _addNewItem = () => {
@@ -45,7 +46,7 @@ const Project = (props) => {
     dispatch(deleteObjInArray(deletedPath));
   };
   return (
-    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
+    <div className={`${parentContainerStyle ? parentContainerStyle : ""}`}>
       <Dnd
         data={data}
         additem={_addNewItem}
@@ -54,36 +55,39 @@ const Project = (props) => {
         renderItem={(item, index) => (
           <>
             <Box
-              className={`${childContainerStyle ? childContainerStyle : ''}`}
+              className={`${childContainerStyle ? childContainerStyle : ""}`}
             >
               {project && (
                 <Text
                   value={item.Title}
                   placeholder={
-                    projectPlaceholder ? projectPlaceholder : 'Project'
+                    projectPlaceholder ? projectPlaceholder : "Project"
                   }
-                  customClass={`${projectStyle ? projectStyle : ''}`}
+                  customClass={`${projectStyle ? projectStyle : ""}`}
                   path={`projects.items.${index}.Title`}
+                  maxWidth={maxwidth}
                 />
               )}
               {duration && (
                 <Text
                   value={item.Duration}
                   placeholder={
-                    durationPlaceholder ? durationPlaceholder : 'Duration'
+                    durationPlaceholder ? durationPlaceholder : "Duration"
                   }
-                  customclass={`${durationStyle ? durationStyle : ''}`}
+                  customclass={`${durationStyle ? durationStyle : ""}`}
                   path={`projects.items.${index}.Duration`}
+                  maxWidth={maxwidth}
                 />
               )}
               {summary && (
                 <Text
                   value={item.Summary}
                   placeholder={
-                    summaryPlaceholder ? summaryPlaceholder : 'Summary'
+                    summaryPlaceholder ? summaryPlaceholder : "Summary"
                   }
-                  customclass={`${summaryStyle ? summaryPlaceholder : ''}`}
+                  customclass={`${summaryStyle ? summaryPlaceholder : ""}`}
                   path={`projects.items.${index}.Summary`}
+                  maxWidth={maxwidth}
                 />
               )}
             </Box>

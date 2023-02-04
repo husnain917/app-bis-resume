@@ -1,7 +1,7 @@
-import { Stack } from '@chakra-ui/react';
-import React from 'react';
-import { useSelector } from 'react-redux';
-import Text from './Text';
+import { Stack } from "@chakra-ui/react";
+import React from "react";
+import { useSelector } from "react-redux";
+import Text from "./Text";
 
 const Name = (props) => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
@@ -16,29 +16,38 @@ const Name = (props) => {
     parentContainerStyle,
     margin,
     fontColor,
+    maxchr,
   } = props;
+  console.log("maxChr: " + maxchr, "MAXCHR", props.maxchr);
   return (
     <Stack
-      direction={direction ? direction : 'column'}
-      className={`${parentContainerStyle ? parentContainerStyle : ''}`}
-      m={margin ? margin : ''}
+      direction={direction ? direction : "column"}
+      className={`${parentContainerStyle ? parentContainerStyle : ""}`}
+      m={margin ? margin : ""}
     >
       {FName && (
         <Text
           value={resumeData?.profile?.firstName}
-          placeholder={FNamePlaceholder ? FNamePlaceholder : 'First Name'}
+          placeholder={FNamePlaceholder ? FNamePlaceholder : "First Name"}
           customClass={`${FNameStyle}`}
-          path={'profile.firstName'}
-          color={fontColor ? fontColor : ''}
+          path={"profile.firstName"}
+          color={fontColor ? fontColor : ""}
+          // maxWidth={props.maxWidth}
+          minWidth={props.maxWidth}
+          maxWidth={props.minWidth}
+          maxChr={props.maxchr}
         />
       )}
       {SName && (
         <Text
           value={resumeData?.profile?.lastName}
-          placeholder={SNamePlaceholder ? SNamePlaceholder : 'Last Name'}
+          placeholder={SNamePlaceholder ? SNamePlaceholder : "Last Name"}
           customClass={`${SNameStyle}`}
-          path={'profile.lastName'}
-          color={fontColor ? fontColor : ''}
+          path={"profile.lastName"}
+          // maxWidth={props.maxWidth}
+          minWidth={props.maxWidth}
+          maxWidth={props.minWidth}
+          color={fontColor ? fontColor : ""}
         />
       )}
     </Stack>

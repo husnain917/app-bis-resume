@@ -1,17 +1,17 @@
-import { Box, HStack, Text as ChakraText } from '@chakra-ui/react';
-import React from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { Box, HStack, Text as ChakraText } from "@chakra-ui/react";
+import React from "react";
+import { connect, useDispatch } from "react-redux";
 import {
   addNewObj,
   deleteObjInArray,
   updateOrder,
-} from '../../../store/actions/builderAction';
-import Util from '../../../utils/templateUtils';
+} from "../../../store/actions/builderAction";
+import Util from "../../../utils/templateUtils";
 
-import Dnd from './Dnd';
-import { onBlurField } from '../../../store/actions/builderAction';
-import Text from './Text';
-import { sampleData } from '../../../constants/sampleData';
+import Dnd from "./Dnd";
+import { onBlurField } from "../../../store/actions/builderAction";
+import Text from "./Text";
+import { sampleData } from "../../../constants/sampleData";
 const RowSkill = (props) => {
   const {
     resumeData,
@@ -27,7 +27,7 @@ const RowSkill = (props) => {
   const data = resumeData?.skills?.items?.length
     ? [...resumeData?.skills?.items]
     : [...sampleData?.data?.skills?.items];
-  const path = 'skills.items';
+  const path = "skills.items";
   const dispatch = useDispatch();
   const _addNewItem = () => {
     console.log(data);
@@ -39,11 +39,11 @@ const RowSkill = (props) => {
     dispatch(deleteObjInArray(deletedPath));
   };
   const onOrderUpdate = (datas) => {
-    const storeReorder = Util.mapOrder(data, datas, 'id');
+    const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));
   };
   return (
-    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
+    <div className={`${parentContainerStyle ? parentContainerStyle : ""}`}>
       <Dnd
         data={data}
         direction="horizontal"
@@ -52,17 +52,19 @@ const RowSkill = (props) => {
         reorder={(e) => onOrderUpdate(e)}
         renderItem={(item, index) => (
           <Box
-            h={height ? height : '32px'}
+            h={height ? height : "32px"}
             m={margin ? margin : 0.4}
-            bg={bg ? bg : 'blackAlpha.400'}
+            bg={bg ? bg : "blackAlpha.400"}
             borderRadius={borderRadius ? borderRadius : 6}
-            className={`${childContainerStyle ? childContainerStyle : ''}`}
+            className={`${childContainerStyle ? childContainerStyle : ""}`}
           >
             <Text
               value={item.title}
-              placeholder={skillPlaceholder ? skillPlaceholder : 'Skill'}
+              placeholder={skillPlaceholder ? skillPlaceholder : "Skill"}
               customClass={`${skillStyle}`}
               path={`${path}.${index}.title`}
+              maxWidth={props.maxwidth}
+              maxChr={props.maxchr}
             />
           </Box>
         )}
