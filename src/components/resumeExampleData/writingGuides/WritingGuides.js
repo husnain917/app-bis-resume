@@ -77,7 +77,7 @@ const WritingGuides = () => {
           position={"relative"}
           flexShrink={"0"}
           alignSelf={["center", "center", "center",'center', "flex-end"]}
-          // marginLeft={"128px"}
+          marginLeft={"128px"}
           // maxW={["544px", "544px", "380px", "390px", "544px"]}
           // w={["344px", "444px", "544px", "544px", "544px", "544px"]}
           display={"flex"}
