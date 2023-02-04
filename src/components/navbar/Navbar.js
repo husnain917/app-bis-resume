@@ -35,16 +35,14 @@ export default function Navbar() {
   const isUserLoggedIn = useSelector(
     (state) => state.AuthReducer.isUserLoggedIn
   );
-  const modalOpenstate = useSelector(
-    (state) => state.AuthReducer.isModalOpen
-  );
-  const dispatch = useDispatch()
+  const modalOpenstate = useSelector((state) => state.AuthReducer.isModalOpen);
+  const dispatch = useDispatch();
   const ismodalOpen = async () => {
     dispatch(modalOpen());
-  }
+  };
   const ismodalClose = async () => {
     dispatch(modalClose());
-  }
+  };
   const uid = useSelector((state) => state.AuthReducer.userID);
   return (
     <Box>
@@ -107,18 +105,17 @@ export default function Navbar() {
                     onClick={
                       items.label === "Register"
                         ? () => {
-                          setIsActive(0);
-                          localStorage.setItem("active", 0);
-                          ismodalOpen();
-                        }
+                            setIsActive(0);
+                            localStorage.setItem("active", 0);
+                            ismodalOpen();
+                          }
                         : items.label === "Login"
-                          ? () => {
-
+                        ? () => {
                             setIsActive(1);
                             localStorage.setItem("active", 1);
                             ismodalOpen();
                           }
-                          : ""
+                        : ""
                     }
                     cursor={"pointer"}
                     width={{
@@ -130,8 +127,8 @@ export default function Navbar() {
                       items?.label === "Register"
                         ? "#006772"
                         : items?.label === "Login"
-                          ? "#006772"
-                          : ""
+                        ? "#006772"
+                        : ""
                     }
                     textAlign={"center"}
                     padding={"10px 5px"}
@@ -153,7 +150,7 @@ export default function Navbar() {
                           onClick={() => {
                             setIsActive(0);
                             localStorage.setItem("active", 0);
-                            ismodalOpen()
+                            ismodalOpen();
                           }}
                         >
                           {items.label}
@@ -174,7 +171,7 @@ export default function Navbar() {
                           onClick={() => {
                             setIsActive(1);
                             localStorage.setItem("active", 1);
-                            ismodalOpen()
+                            ismodalOpen();
                           }}
                         >
                           {items.label}
@@ -255,8 +252,8 @@ const DesktopNav = () => {
                 >
                   {navItem?.label}
                   {navItem.label === "Resume" ||
-                    navItem.label === "CV" ||
-                    navItem.label === "Cover Letter" ? (
+                  navItem.label === "CV" ||
+                  navItem.label === "Cover Letter" ? (
                     <>
                       <Icon color={"black.400"} w={5} h={5} as={navItem.icon} />
                     </>
@@ -329,10 +326,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
   );
 };
 
-const MobileNav = (
-  { setIsModalOpen, ismodalOpen }
-) => {
-
+const MobileNav = ({ setIsModalOpen, ismodalOpen }) => {
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
@@ -362,8 +356,8 @@ const MobileNav = (
                   items?.label === "Register"
                     ? "#006772"
                     : items?.label === "Login"
-                      ? "#006772"
-                      : ""
+                    ? "#006772"
+                    : ""
                 }
                 justifyContent={"center"}
                 padding={"10px 0px"}

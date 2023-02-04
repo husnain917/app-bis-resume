@@ -15,24 +15,20 @@ function Templates() {
   );
   const ismodalOpen = async () => {
     dispatch(modalOpen());
-  }
+  };
   const ProfessionalTemp = CUSTOM_TEMP_DATA.slice(0, 16);
   const Modern = CUSTOM_TEMP_DATA.slice(16, 38);
 
   return (
     <Box>
-      <Box
-        display={'flex'}
-        justifyContent={'center'}
-        margin={'20px 0px'}
-      >
+      <Box display={"flex"} justifyContent={"center"} margin={"20px 0px"}>
         <Text
-          fontSize={'1.6rem'}
-          fontStyle={'normal'}
+          fontSize={"1.6rem"}
+          fontStyle={"normal"}
           fontFamily={`poppins-bold`}
           className="afterlink"
-          width={'fit-content'}
-          color={'#313B47'}
+          width={"fit-content"}
+          color={"#313B47"}
         >
           Professional
         </Text>
@@ -51,7 +47,7 @@ function Templates() {
                 router.push(items?.href)
               }} style={{ cursor: "default" }}
                 _hover={{
-                  textDecoration: 'none'
+                  textDecoration: "none",
                 }}
               >
                 <div class="templatecontainer">
@@ -98,18 +94,14 @@ function Templates() {
         ))}
       </Container>
 
-      <Box
-        display={'flex'}
-        justifyContent={'center'}
-        margin={'20px 0px'}
-      >
+      <Box display={"flex"} justifyContent={"center"} margin={"20px 0px"}>
         <Text
-          fontSize={'1.6rem'}
-          fontStyle={'normal'}
+          fontSize={"1.6rem"}
+          fontStyle={"normal"}
           fontFamily={`poppins-bold`}
           className="afterlink"
-          width={'fit-content'}
-          color={'#313B47'}
+          width={"fit-content"}
+          color={"#313B47"}
         >
           Modern
         </Text>
@@ -131,7 +123,7 @@ function Templates() {
                   ismodalOpen()
               }} style={{ cursor: "default" }}
                 _hover={{
-                  textDecoration: 'none',
+                  textDecoration: "none",
                 }}
               >
                 <div className="templatecontainer">
@@ -152,8 +144,8 @@ function Templates() {
                   alignItems={'center'}
                 >
                   <Text
-                    fontSize={'1.3rem'}
-                    fontStyle={'normal'}
+                    fontSize={"1.3rem"}
+                    fontStyle={"normal"}
                     fontFamily={`poppins-bold`}
                     margin={'10px 0px 0px 0px'}
                     color={'#313B47'}
@@ -161,8 +153,8 @@ function Templates() {
                     {items?.category?.categoryName}
                   </Text>
                   <Text
-                    fontSize={'0.92rem'}
-                    fontStyle={'normal'}
+                    fontSize={"0.92rem"}
+                    fontStyle={"normal"}
                     fontFamily={`poppins`}
                     margin={'10px 0px 0px 20px'}
                     color={'#757575'}
