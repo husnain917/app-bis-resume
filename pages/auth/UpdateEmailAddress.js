@@ -7,13 +7,11 @@ import {
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {
-    passwordReset,
+    ChangeEmail,
 } from "../../store/actions/AuthAction";
 import CommonButton from '../../src/components/commonButton/CommonButton';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { ResetE } from '../../store/actions/AuthAction';
-
 
 export default function UpdateEmailAddress() {
     const [err, setErr] = useState();
@@ -22,8 +20,6 @@ export default function UpdateEmailAddress() {
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
     const notify = () => toast("Wow so easy!");
-
-
     const validateEmail = (email) => {
         var re =
             /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-z  A-Z]{2,}))$/;
@@ -37,12 +33,11 @@ export default function UpdateEmailAddress() {
         } else if (validateEmail(email) === false) {
             setErr(toast.error("This Email is not Valid"));
         } else {
-            dispatch(ResetE(setLoading, setErr, email));
+            dispatch(ChangeEmail(setLoading, setErr, email));
             setResetLoading(true);
             setTimeout(() => {
                 setResetLoading(false);
                 setEmail("")
-                toast.success("Email Send")
             }, 3000);
         }
     };

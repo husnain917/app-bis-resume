@@ -30,7 +30,8 @@ import {
   signInWithPopup,
   getAdditionalUserInfo,
   sendPasswordResetEmail,
-  updateEmail
+  updateEmail,
+  signOut
 } from "firebase/auth";
 import { getAuth, sendEmailVerification } from "firebase/auth";
 import { ToastSuccess } from "../../src/components/Toast";
@@ -254,18 +255,38 @@ export const passwordReset = (setLoading, setErr, email) => async (dispatch) => 
     setLoading(false);
   }
 };
-export const ResetE = (setLoading, setErr, email) => async (dispatch) => {
+
+export const ChangeEmail = (setLoading, setErr, email) => async (dispatch) => {
   console.log("email", email);
-  
-  try {
-    setLoading(true);
-     await updateEmail(fullAuth?.currentUser, `${email}`);
-    ToastSuccess("Change Email SuccessFully")
-  } catch (err) {
-    const errorCode = err.code;
-    if (errorCode === "auth/user-not-found") {
-      setErr({ fieldErr: "No account exists with this email." });
+
+  if (email !== fullAuth?.currentUser?.email) {
+    try {
+      setLoading(true);
+      const data = await updateEmail(fullAuth?.currentUser, email);
+      console.log(data);
+      ToastSuccess("Change Email SuccessFully");
+      
+    } catch (err) {
+      console.log(err);
     }
+  }
+  else {
+    ToastSuccess("same account not enter")
+  }
+}
+
+
+export const UpdateProfileDatai = (firstName, lastName, birth) => async (dispatch) => {
+  try {
+    const datai = updateProfile(fullAuth?.currentUser, {
+      displayName: firstName + " " + lastName,// it can be a value of an input   
+    })
+
+
+
+    console.log("lsdlsld", datai);
+  } catch (error) {
+    console.log(error);
   }
 }
 

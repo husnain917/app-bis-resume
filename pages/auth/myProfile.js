@@ -43,7 +43,7 @@ import { getAuth, updateEmail } from "firebase/auth";
 
 const Profile = () => {
   const userData = useSelector((store) => store.AuthReducer?.userData);
-  console.log(userData);
+  console.log(userData?.uid);
   const [isOpen, setisOpen] = useState(false);
   const [showFull, setShowFull] = useState(false);
   const [scale, setScale] = useState(1);
@@ -302,22 +302,19 @@ const Profile = () => {
                     >
                       Account
                     </Text>
-
-                    <Text
-                      fontSize={{ base: 14, md: 16 }}
-                      fontWeight="600"
-                      color={"#00c8aa"}
-                      _hover={{
-                        textDecoration: "underline",
-                        cursor: "pointer",
-                      }}
-                    >
-                      <UseModal
-                        margin={"6px 0 0 0"}
-                        onOpen={updateEmail}
-                        title={"Edit"}
-                      />
-                    </Text>
+                    <Link href={"/auth/EditAccount"}>
+                      <Text
+                        fontSize={{ base: 14, md: 16 }}
+                        fontWeight="600"
+                        color={"#00c8aa"}
+                        _hover={{
+                          textDecoration: "underline",
+                          cursor: "pointer",
+                        }}
+                      >
+                        Edit
+                      </Text>
+                    </Link>
                   </HStack>
                   <Stack direction={{ base: "column", md: "row" }} mt={2}>
                     <Box w={"50%"}>
@@ -417,19 +414,19 @@ const Profile = () => {
                     </Text>
 
                     <Link href={"/auth/UpdateEmailAddress"}>
-                        <Text
-                          fontSize={15}
-                          fontWeight="500"
-                          color={"#00c8aa"}
-                          _hover={{
-                            textDecoration: "underline",
-                            cursor: "pointer",
-                          }}
-                          onClick={() => setResetPass(true)}
-                        >
-                           Change Email
-                        </Text>
-                      </Link>
+                      <Text
+                        fontSize={15}
+                        fontWeight="500"
+                        color={"#00c8aa"}
+                        _hover={{
+                          textDecoration: "underline",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => setResetPass(true)}
+                      >
+                        Change Email
+                      </Text>
+                    </Link>
                   </HStack>
 
                   <Box mt={2}>
