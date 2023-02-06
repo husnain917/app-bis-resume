@@ -110,6 +110,7 @@ const GraphicDesigner8 = () => {
                                     institutionStyle={Classes.institute}
                                     degreeStyle={Classes.program}
                                     degree_placeholder="Study Program"
+                                    maxWidth="260px"
                                 />
                             </div>
                         </div>
@@ -135,6 +136,7 @@ const GraphicDesigner8 = () => {
                         iconColor="#2A78AB"
                         style={Classes.contact}
                         margin="10px 0px 0px 30px"
+                        maxWidth="260px"
                     />
                 </Box>
                 {/* _______________ Second Section _______________  */}
@@ -157,6 +159,7 @@ const GraphicDesigner8 = () => {
                     <Profession
                         professionStyle={Classes.profession}
                         margin="0px 0px 0px 30px"
+                        maxWidth="260px"
                     />
                     {/* =============== Work Experience Section ============== */}
                     {resumeData?.work?.visible && (
@@ -191,6 +194,8 @@ const GraphicDesigner8 = () => {
                                     positionStyle={Classes.workText}
                                     dateStyle={Classes.date}
                                     summaryStyle={Classes.date}
+                                    maxWidth="360px"
+                                    datewidthmax={'100px'}
                                 />
                             </div>
                         </div>
@@ -234,6 +239,7 @@ const GraphicDesigner8 = () => {
                                     percentStyle={Classes.mt}
                                     minWText="210px"
                                     maxWText="210px"
+                                    
                                 />
                             </div>
                         </div>
