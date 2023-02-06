@@ -191,7 +191,7 @@ export default function GraphicDesigner1() {
                 />
                 <WorkExperience
                   date={true}
-                  maxWidth={"400px"}
+                  maxWidth={"440px"}
                   datewidthmax={"200px"}
                   maxChr={20}
                   position={true}
