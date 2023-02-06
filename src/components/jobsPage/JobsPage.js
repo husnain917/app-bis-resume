@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, createRef, useEffect } from "react";
 import {
   Box,
   Image,
@@ -9,6 +9,8 @@ import {
   OrderedList,
   UnorderedList,
   Flex,
+  StatHelpText,
+  Input,
 } from "@chakra-ui/react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import CommonButton from "../commonButton/CommonButton";
@@ -33,10 +35,18 @@ import { MdDone } from "react-icons/md";
 import Navbar from "../blog/latestPost/navbar/Navbar";
 
 const JobsPage = () => {
-  const handleButton = () => {
-    console.log("FOCUSED");
-  };
+
   return (
+
+    <Box w={"100%"}>
+      <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
+        
+        <Box
+          bg={"#FFD67B"}
+          display={"flex"}
+          flexDirection={["column", "column", "row", "row", "row"]}
+          padding={"20px 10px 0px 10px"}
+        >
     <>
       <Navbar />
 
@@ -44,9 +54,8 @@ const JobsPage = () => {
       
       <Box w={"100%"}>
         <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
-          {/* <Box maxW={["0%", "0%", "0%", "10%"]}>
-          <Sidebar />
-        </Box> */}
+         
+
           <Box
             bg={"#FFD67B"}
             display={"flex"}
