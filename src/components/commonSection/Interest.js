@@ -1,26 +1,26 @@
-import { Box, ListItem, UnorderedList } from '@chakra-ui/react';
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { connect } from 'react-redux';
-import { sampleData } from '../../../constants/sampleData';
+import { Box, ListItem, UnorderedList } from "@chakra-ui/react";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { connect } from "react-redux";
+import { sampleData } from "../../../constants/sampleData";
 import {
   addNewObj,
   deleteObjInArray,
   onBlurField,
   updateOrder,
-} from '../../../store/actions/builderAction';
-import Util from '../../../utils/templateUtils';
-import Dnd from './Dnd';
-import Text from './Text';
+} from "../../../store/actions/builderAction";
+import Util from "../../../utils/templateUtils";
+import Dnd from "./Dnd";
+import Text from "./Text";
 const Interest = (props) => {
-  const { resumeData } = props;
+  const { resumeData, maxwidth } = props;
   const data = resumeData?.hobbies?.items?.length
     ? [...resumeData?.hobbies?.items]
     : [...sampleData?.data?.hobbies?.items];
   const dispatch = useDispatch();
-  const path = 'hobbies.items';
+  const path = "hobbies.items";
   const onOrderUpdate = (datas) => {
-    const storeReorder = Util.mapOrder(data, datas, 'id');
+    const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));
   };
   const _addNewItem = () => {
@@ -40,29 +40,30 @@ const Interest = (props) => {
     borderColor,
   } = props;
   return (
-    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
+    <div className={`${parentContainerStyle ? parentContainerStyle : ""}`}>
       <Dnd
-        direction={dndDirection ? dndDirection : ''}
+        direction={dndDirection ? dndDirection : ""}
         data={data}
         additem={_addNewItem}
         reorder={(e) => onOrderUpdate(e)}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <div className={`${childContainerStyle ? childContainerStyle : ''}`}>
-            {dndDirection == 'horizontal' ? (
+          <div className={`${childContainerStyle ? childContainerStyle : ""}`}>
+            {dndDirection == "horizontal" ? (
               <Box
                 borderWidth={2}
-                borderColor={borderColor ? borderColor : 'blackAlpha.400'}
+                borderColor={borderColor ? borderColor : "blackAlpha.400"}
                 borderRadius={6}
                 m={0.5}
               >
                 <Text
                   value={item.title}
                   placeholder={
-                    interestPlaceholder ? interestPlaceholder : 'Interest'
+                    interestPlaceholder ? interestPlaceholder : "Interest"
                   }
-                  customClass={`${interestStyle ? interestStyle : ''}`}
+                  customClass={`${interestStyle ? interestStyle : ""}`}
                   path={`${path}.${index}.title`}
+                  maxWidth={maxwidth}
                 />
               </Box>
             ) : (
@@ -71,10 +72,11 @@ const Interest = (props) => {
                   <Text
                     value={item.title}
                     placeholder={
-                      interestPlaceholder ? interestPlaceholder : 'Interest'
+                      interestPlaceholder ? interestPlaceholder : "Interest"
                     }
-                    customClass={`${interestStyle ? interestStyle : ''}`}
+                    customClass={`${interestStyle ? interestStyle : ""}`}
                     path={`${path}.${index}.title`}
+                    maxWidth={maxwidth}
                   />
                 </ListItem>
               </UnorderedList>

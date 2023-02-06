@@ -1,16 +1,16 @@
-import React from 'react';
-import Util from '../../../utils/templateUtils';
-import Text from './Text';
-import Dnd from './Dnd';
-import { Box, Stack, VStack } from '@chakra-ui/react';
-import { connect, useDispatch } from 'react-redux';
-import { onBlurField } from '../../../store/actions/builderAction';
+import React from "react";
+import Util from "../../../utils/templateUtils";
+import Text from "./Text";
+import Dnd from "./Dnd";
+import { Box, Stack, VStack } from "@chakra-ui/react";
+import { connect, useDispatch } from "react-redux";
+import { onBlurField } from "../../../store/actions/builderAction";
 import {
   updateOrder,
   addNewObj,
   deleteObjInArray,
-} from '../../../store/actions/builderAction';
-import { sampleData } from '../../../constants/sampleData';
+} from "../../../store/actions/builderAction";
+import { sampleData } from "../../../constants/sampleData";
 const Education = (props) => {
   const { resumeData } = props;
   const data = resumeData?.education?.items?.length
@@ -18,10 +18,10 @@ const Education = (props) => {
     : [...sampleData?.data?.education?.items];
 
   const dispatch = useDispatch();
-  const path = 'education.items';
+  const path = "education.items";
 
   const onOrderUpdate = (datas) => {
-    const storeReorder = Util.mapOrder(data, datas, 'id');
+    const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));
   };
 
@@ -60,7 +60,7 @@ const Education = (props) => {
     location,
     extracurricular,
     direction,
-    dateDirection = 'row',
+    dateDirection = "row",
     row1MinW = 160,
     row1MaxW = 160,
     row2MaxW = 230,
@@ -69,93 +69,105 @@ const Education = (props) => {
     icon,
     iconShow,
     margin,
+    maxWidth,
+    minWidth,
+    datewidthmax,
+    datewidthmin,
+    maxChr,
   } = props;
 
   return (
     <div
-      className={`${parentContainerStyle ? parentContainerStyle : ''}`}
-      style={{ margin: margin ? margin : '' }}
+      className={`${parentContainerStyle ? parentContainerStyle : ""}`}
+      style={{ margin: margin ? margin : "" }}
     >
       <Dnd
         data={data}
-        direction={DndDirection ? DndDirection : ''}
+        direction={DndDirection ? DndDirection : ""}
         reorder={(e) => onOrderUpdate(e)}
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
           <div
-            className={`${childContainerStyle ? childContainerStyle : ''}`}
-            style={{ display: 'flex' }}
+            className={`${childContainerStyle ? childContainerStyle : ""}`}
+            style={{ display: "flex" }}
           >
             {iconShow && React.createElement(icon)}
-            <VStack justifyContent={'flex-start'} alignItems="flex-start">
-              <Stack direction={direction ? direction : 'column'}>
+            <VStack justifyContent={"flex-start"} alignItems="flex-start">
+              <Stack direction={direction ? direction : "column"}>
                 {degree && (
                   <Box
-                    minW={direction === 'row' && row1MinW}
-                    maxW={direction === 'row' && row1MaxW}
+                    minW={direction === "row" && row1MinW}
+                    maxW={direction === "row" && row1MaxW}
                   >
                     <Text
                       value={item.degree}
                       placeholder={
-                        degree_placeholder ? degree_placeholder : 'Degree'
+                        degree_placeholder ? degree_placeholder : "Degree"
                       }
                       path={`${path}.${index}.degree`}
-                      customClass={`${degreeStyle ? degreeStyle : ''}`}
+                      customClass={`${degreeStyle ? degreeStyle : ""}`}
                       color={textColor}
                       fontSize={fontSize}
                       fontWeight={fontWeight}
                       textAlign={textAlign}
+                      maxWidth={maxWidth}
+                      minWidth={minWidth}
                     />
                   </Box>
                 )}
                 {institution && (
                   <Box
-                    minW={direction === 'row' && row2MinW}
-                    maxW={direction === 'row' && row2MaxW}
+                    minW={direction === "row" && row2MinW}
+                    maxW={direction === "row" && row2MaxW}
                   >
                     <Text
                       value={item.institution}
                       placeholder={
                         institution_placeholder
                           ? institution_placeholder
-                          : 'University/Institute'
+                          : "University/Institute"
                       }
                       path={`${path}.${index}.institution`}
                       customClass={`${
-                        institutionStyle ? institutionStyle : ''
+                        institutionStyle ? institutionStyle : ""
                       }`}
                       color={textColor}
                       fontSize={fontSize}
                       fontWeight={fontWeight}
                       textAlign={textAlign}
+                      maxWidth={maxWidth}
+                      minWidth={minWidth}
                     />
                   </Box>
                 )}
               </Stack>
-              <Stack direction={direction ? direction : 'column'}>
+              <Stack direction={direction ? direction : "column"}>
                 {date && (
                   <Box
-                    minW={direction === 'row' && row1MinW}
-                    maxW={direction === 'row' && row1MaxW}
+                    minW={direction === "row" && row1MinW}
+                    maxW={direction === "row" && row1MaxW}
                   >
-                    <Stack direction={dateDirection ? dateDirection : 'row'}>
+                    <Stack direction={dateDirection ? dateDirection : "row"}>
                       <Text
                         value={item.startDate}
                         placeholder={
-                          startDate_placeholder ? startDate_placeholder : 'From'
+                          startDate_placeholder ? startDate_placeholder : "From"
                         }
                         path={`${path}.${index}.startDate`}
-                        customClass={`${dateStyle ? dateStyle : ''}`}
+                        customClass={`${dateStyle ? dateStyle : ""}`}
                         color={textColor}
                         fontSize={fontSize}
                         fontWeight={fontWeight}
                         textAlign={textAlign}
+                        maxWidth={datewidthmax}
+                        minWidth={datewidthmin}
+                        maxChr={maxChr}
                       />
-                      {dateDirection == 'row' && (
+                      {dateDirection == "row" && (
                         <p
                           style={{
-                            fontWeight: 'bold',
+                            fontWeight: "bold",
                           }}
                           className={`${dateStyle}`}
                         >
@@ -166,14 +178,17 @@ const Education = (props) => {
                       <Text
                         value={item.endDate}
                         placeholder={
-                          endDate_placeholder ? endDate_placeholder : 'End'
+                          endDate_placeholder ? endDate_placeholder : "End"
                         }
                         path={`${path}.${index}.endDate`}
-                        customClass={`${dateStyle ? dateStyle : ''}`}
+                        customClass={`${dateStyle ? dateStyle : ""}`}
                         color={textColor}
                         fontSize={fontSize}
                         fontWeight={fontWeight}
                         textAlign={textAlign}
+                        maxWidth={datewidthmax}
+                        minWidth={datewidthmin}
+                        maxChr={maxChr}
                       />
                     </Stack>
                   </Box>
@@ -181,21 +196,23 @@ const Education = (props) => {
 
                 {summary && (
                   <Box
-                    minW={direction === 'row' && row2MinW}
-                    maxW={direction === 'row' && row2MaxW}
+                    minW={direction === "row" && row2MinW}
+                    maxW={direction === "row" && row2MaxW}
                   >
                     <Text
                       value={item.summary}
                       placeholder={
                         summary_placeholder
                           ? summary_placeholder
-                          : 'Short Description'
+                          : "Short Description"
                       }
                       path={`${path}.${index}.summary`}
-                      customClass={`${summaryStyle ? summaryStyle : ''}`}
+                      customClass={`${summaryStyle ? summaryStyle : ""}`}
                       fontSize={fontSize}
                       color={textColor}
                       textAlign={textAlign}
+                      maxWidth={maxWidth}
+                      minWidth={minWidth}
                     />
                   </Box>
                 )}
@@ -207,11 +224,11 @@ const Education = (props) => {
                     placeholder={
                       extracurricular_placeholder
                         ? extracurricularStyle
-                        : 'Extra Curricular'
+                        : "Extra Curricular"
                     }
                     path={`${path}.${index}.extracurricular`}
                     customClass={`${
-                      extracurricularStyle ? extracurricularStyle : ''
+                      extracurricularStyle ? extracurricularStyle : ""
                     }`}
                     fontSize={fontSize}
                     color={textColor}
@@ -223,14 +240,16 @@ const Education = (props) => {
                 <>
                   <Text
                     placeholder={
-                      location_placeholder ? location_placeholder : 'Location'
+                      location_placeholder ? location_placeholder : "Location"
                     }
                     path={`${path}.${index}.location`}
                     value={`${item.location}`}
-                    customClass={`${locationStyle ? locationStyle : ''}`}
+                    customClass={`${locationStyle ? locationStyle : ""}`}
                     fontSize={fontSize}
                     color={textColor}
                     textAlign={textAlign}
+                    maxWidth={maxWidth}
+                    minWidth={minWidth}
                   />
                 </>
               )}
