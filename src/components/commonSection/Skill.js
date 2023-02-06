@@ -86,6 +86,7 @@ const Skill = (props) => {
     margin,
     percentStyle,
     maxwidth,
+    maxWidth,
   } = props;
 
   return (
@@ -116,7 +117,7 @@ const Skill = (props) => {
                   placeholder={skillPlaceholder ? skillPlaceholder : "Skill"}
                   customClass={`${skillStyle}`}
                   path={`skills.items.${index}.title`}
-                  maxWidth={maxwidth}
+                  maxWidth={maxwidth || maxWidth}
                 />
               ) : (
                 <UnorderedList>
@@ -128,7 +129,7 @@ const Skill = (props) => {
                       }
                       customClass={`${skillStyle}`}
                       path={`skills.items.${index}.title`}
-                      maxWidth={maxwidth}
+                      maxWidth={maxwidth || maxWidth}
                     />
                   </ListItem>
                 </UnorderedList>
