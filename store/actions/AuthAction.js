@@ -10,6 +10,7 @@ import {
   updateDoc,
   arrayUnion,
   orderBy,
+
 } from "firebase/firestore";
 import { Magic } from "magic-sdk";
 import {
@@ -265,7 +266,7 @@ export const ChangeEmail = (setLoading, setErr, email) => async (dispatch) => {
       const data = await updateEmail(fullAuth?.currentUser, email);
       console.log(data);
       ToastSuccess("Change Email SuccessFully");
-      
+
     } catch (err) {
       console.log(err);
     }
@@ -276,19 +277,6 @@ export const ChangeEmail = (setLoading, setErr, email) => async (dispatch) => {
 }
 
 
-export const UpdateProfileDatai = (firstName, lastName, birth) => async (dispatch) => {
-  try {
-    const datai = updateProfile(fullAuth?.currentUser, {
-      displayName: firstName + " " + lastName,// it can be a value of an input   
-    })
-
-
-
-    console.log("lsdlsld", datai);
-  } catch (error) {
-    console.log(error);
-  }
-}
 
 
 export const doCheckUser = (uid) => async (dispatch) => {

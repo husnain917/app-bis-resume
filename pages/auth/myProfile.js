@@ -302,19 +302,21 @@ const Profile = () => {
                     >
                       Account
                     </Text>
-                    <Link href={"/auth/EditAccount"}>
-                      <Text
-                        fontSize={{ base: 14, md: 16 }}
-                        fontWeight="600"
-                        color={"#00c8aa"}
-                        _hover={{
-                          textDecoration: "underline",
-                          cursor: "pointer",
-                        }}
-                      >
-                        Edit
-                      </Text>
-                    </Link>
+                    <Text
+                      fontSize={{ base: 14, md: 16 }}
+                      fontWeight="600"
+                      color={"#00c8aa"}
+                      _hover={{
+                        textDecoration: "underline",
+                        cursor: "pointer",
+                      }}
+                    >
+                      <UseModal
+                        margin={"6px 0 0 0"}
+                        onOpen={updateEmail}
+                        title={"Edit"}
+                      />
+                    </Text>
                   </HStack>
                   <Stack direction={{ base: "column", md: "row" }} mt={2}>
                     <Box w={"50%"}>
