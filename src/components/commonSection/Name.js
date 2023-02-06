@@ -17,6 +17,7 @@ const Name = (props) => {
     margin,
     fontColor,
     maxchr,
+    textAlign,
   } = props;
   console.log("maxChr: " + maxchr, "MAXCHR", props.maxchr);
   return (
@@ -35,6 +36,8 @@ const Name = (props) => {
           minWidth={props.maxWidth}
           maxWidth={props.minWidth}
           maxChr={props.maxChr}
+          lineHeight={props.lineHeight}
+          textAlign={textAlign}
         />
       )}
       {SName && (
@@ -47,6 +50,7 @@ const Name = (props) => {
           maxWidth={props.minWidth}
           maxChr={props.maxChr}
           color={fontColor ? fontColor : ""}
+          lineHeight={props.lineHeight}
         />
       )}
     </Stack>

@@ -70,6 +70,8 @@ function Text(props) {
             fontFamily: font,
             transition: "1s color",
           }}
+          lineHeight={props.lineHeight}
+          textAlign={props.textAlign}
           // style={{
 
           // broder: '1px solid',
