@@ -6,7 +6,9 @@ import { colors } from "../../../constants/colors";
 import { GrammarlyEditorPlugin } from "@grammarly/editor-sdk-react";
 import { persistor } from "../../../config/store";
 import { Text as TextField } from "@chakra-ui/react";
+
 import { useState } from "react";
+
 
 function Text(props) {
   React.useEffect(() => {
@@ -14,12 +16,16 @@ function Text(props) {
     console.log("myPara", myPara?.innerText);
     if (myPara) {
       myPara.addEventListener("input", function () {
+
+        console.log("TEXT >>>> ", document.getElementById(path).innerText);
+
         const text = document.getElementById(path).innerText;
         if (text.length <= 10) {
           console.log("TEXT >>>> ", document.getElementById(path).innerText);
         } else {
           // return alert("Maximum text length reached.");
         }
+
       });
     }
   });

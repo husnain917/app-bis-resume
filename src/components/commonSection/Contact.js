@@ -45,7 +45,6 @@ const Contact = (props) => {
     minWidth,
     maxChr,
   } = props;
-  console.log("MAXWIDTH", maxWidth, "MINWIDTH", minWidth);
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const { font } = useSelector((state) => state.fontReducer.font);
   const CircleDesign = ({ icon }) => (

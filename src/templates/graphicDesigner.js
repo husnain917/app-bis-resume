@@ -84,6 +84,7 @@ export default function Graphic_Designer() {
                         iconColor={color ? color : '#f8f9fa'}
                         margin={'10px 0px 0px 0px'}
                         parentStyle={styles.contactFont}
+                        maxWidth={'220px'}
                     />
 
                     {/* _____________ About me _____________ */}
@@ -151,6 +152,7 @@ export default function Graphic_Designer() {
                                         percentageStyle={styles.percent}
                                         parentContainerStyle={Classes.ml}
                                         margin="0px 0px 0px 30px"
+                                        
                                     />
                                 </div>
                             </div>
@@ -233,6 +235,9 @@ export default function Graphic_Designer() {
                                         summaryStyle={Classes.description}
                                         parentContainerStyle={styles.rightContainerWork}
                                         textColor="#000000"
+                                        maxWidth={'350px'}
+                    datewidthmax={'120px'}
+
                                     />
                                 </div>
                             </div>
@@ -293,6 +298,8 @@ export default function Graphic_Designer() {
                                         summaryStyle={Classes.description}
                                         degree_placeholder="Study Program"
                                         textColor="#000000"
+                                        maxWidth={'350px'}
+                    datewidthmax={'120px'}
                                     />
                                 </div>
                             </div>

@@ -13,7 +13,6 @@ import Util from "../../../utils/templateUtils";
 import Dnd from "./Dnd";
 import Text from "./Text";
 const Interest = (props) => {
-  const { resumeData, maxwidth } = props;
   const data = resumeData?.hobbies?.items?.length
     ? [...resumeData?.hobbies?.items]
     : [...sampleData?.data?.hobbies?.items];
@@ -32,6 +31,7 @@ const Interest = (props) => {
     dispatch(deleteObjInArray(deletedPath));
   };
   const {
+    resumeData,
     dndDirection,
     interestPlaceholder,
     interestStyle,
