@@ -29,7 +29,7 @@ function Text(props) {
 
   //   e.preventDefault();
   // };
-  const { value, customClass, tag, path, editable = true } = props;
+  const { value, maxWidth, customClass, tag, path, editable = true } = props;
   const TagName = tag ? tag : "p";
 
   return (
@@ -48,6 +48,7 @@ function Text(props) {
             marginTop: props.marginTop,
             fontFamily: font,
             transition: "1s color",
+            maxWidth: props.maxWidth,
           }}
           // style={{
 
