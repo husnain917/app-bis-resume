@@ -68,6 +68,9 @@ export default function FashionDesigner() {
                         <Name
                             FName={true}
                             SName={true}
+                            maxWidth={"360px"}
+                            minWidth={"360px"}
+                            maxChr={38}
                             direction="column"
                             FNameStyle={styles.nameStyle}
                             SNameStyle={styles.nameStyle}
@@ -78,6 +81,7 @@ export default function FashionDesigner() {
                         <Profession
                             professionStyle={styles.profileSubTitle}
                             margin={'2% 0% 5% 0%'}
+                            maxWidth={"360px"}
                             fontColor={color ? color : '#1B4245'}
                         />
 
@@ -97,8 +101,8 @@ export default function FashionDesigner() {
                             )}
                         />
                         <About
-                            minW="100%"
-                            maxW="100%"
+                            minW="90%"
+                            maxW="90%"
                             aboutStyle={Classes.aboutText}
                             fontColor="#1B4245"
                             fontWeight={'600'}
@@ -151,6 +155,9 @@ export default function FashionDesigner() {
                                             summaryStyle={Classes.description}
                                             parentContainerStyle={styles.rightContainerWork}
                                             textColor="#1B4245"
+                                            datewidthmax={"160px"}
+                                            maxChr={20}
+                                            maxWidth={"350px"}
                                         />
                                     </div>
                                 </div>
@@ -204,6 +211,9 @@ export default function FashionDesigner() {
                                             summaryStyle={Classes.description}
                                             degree_placeholder="Study Program"
                                             textColor="#1B4245"
+                                            datewidthmax={"160px"}
+                                            maxChr={20}
+                                            maxWidth={"350px"}
                                         />
                                     </div>
                                 </div>
@@ -262,6 +272,7 @@ export default function FashionDesigner() {
                                 iconColor={color ? color : '#1B4245'}
                                 margin={'10px 0px 0px 0px'}
                                 parentStyle={styles.contactFont}
+                                maxWidth={"245px"}
                             />
                         </Box>
                         {/* _____________ Skill _____________ */}
@@ -344,6 +355,7 @@ export default function FashionDesigner() {
                                         />
                                         <Language
                                             langStyle={styles.contactFont}
+                                            maxWidth={"270px"}
                                         />
                                     </div>
                                 </div>
