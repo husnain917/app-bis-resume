@@ -84,7 +84,8 @@ const Skill = (props) => {
     childContainerStyle,
     DndDirection,
     margin,
-    percentStyle,maxwidth
+    percentStyle,
+    maxwidth,
   } = props;
 
   return (
@@ -127,6 +128,7 @@ const Skill = (props) => {
                       }
                       customClass={`${skillStyle}`}
                       path={`skills.items.${index}.title`}
+                      maxWidth={maxwidth}
                     />
                   </ListItem>
                 </UnorderedList>
