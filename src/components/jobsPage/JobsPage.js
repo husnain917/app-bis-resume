@@ -35,7 +35,6 @@ import { MdDone } from "react-icons/md";
 import Navbar from "../blog/latestPost/navbar/Navbar";
 
 const JobsPage = () => {
-
   return (
     <>
       <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>

@@ -56,7 +56,8 @@ const StudentTemplate = () => {
                                 SNameStyle={Classes.name}
                             />
                             {/* =============== Profession Section =============== */}
-                            <Profession professionStyle={Classes.Profession} />
+                            <Profession professionStyle={Classes.Profession} 
+                            />
                         </Box>
                     </Box>
                     <Box display={'flex'} alignItems="stretch">
@@ -104,6 +105,8 @@ const StudentTemplate = () => {
                                 style={Classes.profileText}
                                 margin={'5px 0px'}
                                 circleIcon={true}
+                            maxWidth={'180px'}
+
                             />
                         </Box>
                         {/* __________________  Second Section  __________________ */}
@@ -155,6 +158,9 @@ const StudentTemplate = () => {
                                             summaryStyle={Classes.summary}
                                             dateStyle={Classes.summary}
                                             margin="0px 0px 0px 25px"
+                                            maxWidth={'470px'}
+                    datewidthmax={'140px'}
+
                                         />
                                     </div>
                                 </div>
@@ -196,6 +202,8 @@ const StudentTemplate = () => {
                                         <Language
                                             langStyle={Classes.summary}
                                             margin={'0px 0px 0px 25px'}
+                                            maxWidth={'470px'}
+                                            datewidthmax={'140px'}
                                         />
                                     </div>
                                 </div>
@@ -234,6 +242,8 @@ const StudentTemplate = () => {
                                         <Skill
                                             skillStyle={Classes.summary}
                                             margin={'0px 0px 0px 25px'}
+                                            maxWidth={'470px'}
+                                            datewidthmax={'140px'}
                                         />
                                     </div>
                                 </div>
@@ -279,6 +289,8 @@ const StudentTemplate = () => {
                                             dateStyle={Classes.summary}
                                             summaryStyle={Classes.summary}
                                             margin="0px 0px 0px 25px"
+                                            maxWidth={'470px'}
+                                            datewidthmax={'140px'}
                                         />
                                     </div>
                                 </div>
