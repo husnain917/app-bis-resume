@@ -43,7 +43,7 @@ const Certificate = (props) => {
     childContainerStyle,
     iconShow,
     icon,
-    maxwidth,
+    maxWidth,
   } = props;
 
   const data = resumeData?.certifications?.items?.length
@@ -74,7 +74,7 @@ const Certificate = (props) => {
                   }
                   customClass={`${certificateStyle}`}
                   path={`${path}.${index}.title`}
-                  maxWidth={maxwidth}
+                  maxWidth={maxWidth}
                 />
               )}
               {institute && (
@@ -85,7 +85,7 @@ const Certificate = (props) => {
                   }
                   customClass={`${instituteStyle}`}
                   path={`${path}.${index}.issuer`}
-                  maxWidth={maxwidth}
+                  maxWidth={maxWidth}
                 />
               )}
               {issueDate && (
@@ -96,7 +96,7 @@ const Certificate = (props) => {
                   }
                   customClass={`${issueDateStyle}`}
                   path={`${path}.${index}.endDate`}
-                  maxWidth={maxwidth}
+                  maxWidth={maxWidth}
                 />
               )}
             </div>
