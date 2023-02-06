@@ -96,7 +96,7 @@ function Text(props) {
           onClick={() => {
             setAddBorder(true);
           }}
-        ></TextField>
+        >{'sdgfsgfsdgsgfgfgsgdsgdsgdgsfgsfdgsdgsdgdsgdsgsdgsgsdg'}</TextField>
       </GrammarlyEditorPlugin>
     </div>
   );
