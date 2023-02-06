@@ -82,7 +82,7 @@ const Language = (props) => {
     direction,
     lineStyle,
     margin,
-    maxwidth,
+    maxWidth,
   } = props;
 
   return (
@@ -123,7 +123,7 @@ const Language = (props) => {
                       }
                       customClass={`${langStyle}`}
                       path={`languages.items.${index}.title`}
-                      maxWidth={maxwidth}
+                      maxWidth={maxWidth}
                     />
                   </ListItem>
                 </UnorderedList>

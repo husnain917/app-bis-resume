@@ -67,8 +67,8 @@ const WorkExperience = (props) => {
     sideLine,
     lineColor,
     margin,
-    maxwidth,
-    minwidth,
+    maxWidth,
+
     datewidthmax,
   } = props;
 
@@ -120,8 +120,7 @@ const WorkExperience = (props) => {
                       fontSize={fontSize}
                       fontWeight={fontWeight}
                       textAlign={textAlign}
-                      maxWidth={maxwidth}
-                      minWidth={minwidth}
+                      maxWidth={maxWidth}
                     />
                   </Box>
                 )}
@@ -143,8 +142,7 @@ const WorkExperience = (props) => {
                       fontSize={fontSize}
                       fontWeight={fontWeight}
                       textAlign={textAlign}
-                      maxWidth={maxwidth}
-                      minWidth={minwidth}
+                      maxWidth={maxWidth}
                     />
                   </Box>
                 )}
@@ -161,7 +159,7 @@ const WorkExperience = (props) => {
                         placeholder={
                           startDate_placeholder ? startDate_placeholder : "From"
                         }
-                        maxChr={props.maxchr}
+                        maxChr={props.maxChr}
                         path={`${path}.${index}.startDate`}
                         customClass={`${dateStyle ? dateStyle : ""}`}
                         color={textColor}
@@ -193,7 +191,7 @@ const WorkExperience = (props) => {
                         fontWeight={fontWeight}
                         textAlign={textAlign}
                         maxWidth={datewidthmax}
-                        maxChr={props.maxchr}
+                        maxChr={props.maxChr}
                       />
                     </Stack>
                   </Box>
@@ -216,8 +214,7 @@ const WorkExperience = (props) => {
                       fontSize={fontSize}
                       color={textColor}
                       textAlign={textAlign}
-                      maxWidth={maxwidth}
-                      minWidth={minwidth}
+                      maxWidth={maxWidth}
                     />
                   </Box>
                 )}
@@ -234,8 +231,7 @@ const WorkExperience = (props) => {
                     fontSize={fontSize}
                     color={textColor}
                     textAlign={textAlign}
-                    maxWidth={maxwidth}
-                    minWidth={minwidth}
+                    maxWidth={maxWidth}
                   />
                 </>
               )}

@@ -69,17 +69,12 @@ const Education = (props) => {
     icon,
     iconShow,
     margin,
-    maxwidth,
-    minwidth,
-    startdatewidthmax,
-    startdatewidthmin,
-    enddatewidthmax,
-    enddatewidthmin,
+    maxWidth,
+    minWidth,
     datewidthmax,
     datewidthmin,
+    maxChr,
   } = props;
-
-  console.log("MAXWIDTH: " + maxwidth);
 
   return (
     <div
@@ -116,8 +111,8 @@ const Education = (props) => {
                       fontSize={fontSize}
                       fontWeight={fontWeight}
                       textAlign={textAlign}
-                      maxWidth={maxwidth}
-                      minWidth={minwidth}
+                      maxWidth={maxWidth}
+                      minWidth={minWidth}
                     />
                   </Box>
                 )}
@@ -141,8 +136,8 @@ const Education = (props) => {
                       fontSize={fontSize}
                       fontWeight={fontWeight}
                       textAlign={textAlign}
-                      maxWidth={maxwidth}
-                      minWidth={minwidth}
+                      maxWidth={maxWidth}
+                      minWidth={minWidth}
                     />
                   </Box>
                 )}
@@ -167,6 +162,7 @@ const Education = (props) => {
                         textAlign={textAlign}
                         maxWidth={datewidthmax}
                         minWidth={datewidthmin}
+                        maxChr={maxChr}
                       />
                       {dateDirection == "row" && (
                         <p
@@ -192,6 +188,7 @@ const Education = (props) => {
                         textAlign={textAlign}
                         maxWidth={datewidthmax}
                         minWidth={datewidthmin}
+                        maxChr={maxChr}
                       />
                     </Stack>
                   </Box>
@@ -214,8 +211,8 @@ const Education = (props) => {
                       fontSize={fontSize}
                       color={textColor}
                       textAlign={textAlign}
-                      maxWidth={maxwidth}
-                      minWidth={minwidth}
+                      maxWidth={maxWidth}
+                      minWidth={minWidth}
                     />
                   </Box>
                 )}
@@ -251,8 +248,8 @@ const Education = (props) => {
                     fontSize={fontSize}
                     color={textColor}
                     textAlign={textAlign}
-                    maxWidth={maxwidth}
-                    minWidth={minwidth}
+                    maxWidth={maxWidth}
+                    minWidth={minWidth}
                   />
                 </>
               )}

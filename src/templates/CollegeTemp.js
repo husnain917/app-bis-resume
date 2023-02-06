@@ -59,7 +59,7 @@ const CollegeTemp = () => {
               <Name
                 FName={true}
                 SName={true}
-                maxchr={38}
+                maxChr={38}
                 maxWidth={"210px"}
                 minWidth={"210px"}
                 direction="row"

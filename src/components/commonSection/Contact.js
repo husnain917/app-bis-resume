@@ -41,10 +41,10 @@ const Contact = (props) => {
     alignItem,
     margin,
     parentStyle,
-    maxwidth,
-    minwidth,
+    maxWidth,
+    minWidth,
   } = props;
-  console.log("MAXWIDTH", maxwidth, "MINWIDTH", minwidth);
+  console.log("MAXWIDTH", maxWidth, "MINWIDTH", minWidth);
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const { font } = useSelector((state) => state.fontReducer.font);
   const CircleDesign = ({ icon }) => (
@@ -102,8 +102,8 @@ const Contact = (props) => {
               customClass={`${style}`}
               value={resumeData?.profile?.phone}
               path={"profile.phone"}
-              maxWidth={maxwidth}
-              minWidth={minwidth}
+              maxWidth={maxWidth}
+              minWidth={minWidth}
             />
           </Stack>
         </>
@@ -132,8 +132,8 @@ const Contact = (props) => {
               customClass={`${style}`}
               value={resumeData?.profile?.email}
               path={"profile.email"}
-              maxWidth={maxwidth}
-              minWidth={minwidth}
+              maxWidth={maxWidth}
+              minWidth={minWidth}
             />
           </Stack>
         </>
@@ -161,6 +161,8 @@ const Contact = (props) => {
               customClass={`${style}`}
               value={resumeData?.profile?.website}
               path={"profile.website"}
+              maxWidth={maxWidth}
+              minWidth={minWidth}
             />
           </Stack>
         </>
@@ -190,6 +192,8 @@ const Contact = (props) => {
               customClass={`${style}`}
               value={resumeData?.profile?.address?.city}
               path={"profile.address.city"}
+              maxWidth={maxWidth}
+              minWidth={minWidth}
             />
           </Stack>
         </>
@@ -219,6 +223,8 @@ const Contact = (props) => {
               customClass={`${style}`}
               value={resumeData?.profile?.linkedinURL}
               path={"profile.linkedinURL"}
+              maxWidth={maxWidth}
+              minWidth={minWidth}
             />
           </Stack>
         </>

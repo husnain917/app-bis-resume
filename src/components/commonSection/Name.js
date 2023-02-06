@@ -34,7 +34,7 @@ const Name = (props) => {
           color={fontColor ? fontColor : ""}
           minWidth={props.maxWidth}
           maxWidth={props.minWidth}
-          maxChr={props.maxchr}
+          maxChr={props.maxChr}
         />
       )}
       {SName && (
@@ -45,7 +45,7 @@ const Name = (props) => {
           path={"profile.lastName"}
           minWidth={props.maxWidth}
           maxWidth={props.minWidth}
-          maxChr={props.maxchr}
+          maxChr={props.maxChr}
           color={fontColor ? fontColor : ""}
         />
       )}

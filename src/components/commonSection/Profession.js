@@ -11,9 +11,9 @@ const Profession = (props) => {
     containerStyle,
     margin,
     fontColor,
-    maxwidth,
+    maxWidth,
   } = props;
-  console.log("maxWidth: in profession " + maxwidth);
+
   return (
     <Box
       className={`${containerStyle ? containerStyle : ""}`}
@@ -23,7 +23,7 @@ const Profession = (props) => {
         placeholder={
           professionPlaceholder ? professionPlaceholder : "Profession"
         }
-        maxWidth={maxwidth}
+        maxWidth={maxWidth}
         customClass={`${professionStyle}`}
         path={"profile.profession"}
         value={resumeData?.profile?.profession}

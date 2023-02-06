@@ -63,7 +63,7 @@ const RowSkill = (props) => {
               placeholder={skillPlaceholder ? skillPlaceholder : "Skill"}
               customClass={`${skillStyle}`}
               path={`${path}.${index}.title`}
-              maxWidth={props.maxwidth}
+              maxWidth={props.maxWidth}
               maxChr={props.maxchr}
             />
           </Box>
