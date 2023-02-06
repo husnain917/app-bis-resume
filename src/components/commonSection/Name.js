@@ -32,7 +32,6 @@ const Name = (props) => {
           customClass={`${FNameStyle}`}
           path={"profile.firstName"}
           color={fontColor ? fontColor : ""}
-          // maxWidth={props.maxWidth}
           minWidth={props.maxWidth}
           maxWidth={props.minWidth}
           maxChr={props.maxchr}
@@ -44,7 +43,6 @@ const Name = (props) => {
           placeholder={SNamePlaceholder ? SNamePlaceholder : "Last Name"}
           customClass={`${SNameStyle}`}
           path={"profile.lastName"}
-          // maxWidth={props.maxWidth}
           minWidth={props.maxWidth}
           maxWidth={props.minWidth}
           maxChr={props.maxchr}

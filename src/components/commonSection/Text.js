@@ -40,7 +40,7 @@ function Text(props) {
   console.log("MAXCHR", props?.maxChr);
   const maxChr = props?.maxChr;
   console.log("maxChr", maxChr);
-  const onChange = (e) => {
+  const onChangeName = (e) => {
     const textValue = e.target.textContent;
     if (textValue.length === maxChr && e.keyCode !== 8) {
       e.preventDefault();
@@ -78,7 +78,7 @@ function Text(props) {
           as={"p"}
           id={path}
           contentEditable={editable}
-          onKeyDown={onChange}
+          onKeyDown={onChangeName}
           onPaste={(e) => {
             var bufferText = (
               (e.originalEvent || e).clipboardData || window.clipboardData
