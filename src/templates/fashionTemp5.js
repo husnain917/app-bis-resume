@@ -77,6 +77,7 @@ const FashionTemp5 = () => {
             />
             <Contact
               phone={true}
+              maxWidth={"230px"}
               email={true}
               location={true}
               color={color ? color : "#fff"}
@@ -115,6 +116,7 @@ const FashionTemp5 = () => {
                   />
                   <Skill
                     color={color ? color : "#fff"}
+                    maxWidth={"230px"}
                     skillStyle={Classes.skillText}
                     parentContainerStyle={Classes.ml}
                   />
@@ -150,6 +152,7 @@ const FashionTemp5 = () => {
                     }
                   />
                   <Language
+                    maxWidth={"230px"}
                     color={color ? color : "#fff"}
                     langStyle={Classes.skillText}
                     langContainerStyle={Classes.ml}
@@ -169,6 +172,7 @@ const FashionTemp5 = () => {
           >
             <Name
               FName={true}
+              maxChr={38}
               SName={true}
               FNameStyle={Classes.fashionName}
               SNameStyle={Classes.fashionName}
@@ -229,6 +233,9 @@ const FashionTemp5 = () => {
                   <WorkExperience
                     position={true}
                     date={true}
+                    maxWidth={"450px"}
+                    datewidthmax={"200px"}
+                    maxChr={20}
                     summary={true}
                     sideLine={true}
                     childContainerStyle={Classes.childWork}
@@ -275,6 +282,9 @@ const FashionTemp5 = () => {
                   <Education
                     institution={true}
                     date={true}
+                    maxWidth={"480px"}
+                    datewidthmax={"200px"}
+                    maxChr={20}
                     summary={true}
                     institutionStyle={Classes.workText}
                     dateStyle={Classes.workText}
@@ -285,7 +295,7 @@ const FashionTemp5 = () => {
                 </div>
               </div>
             )}
-           <DateSection/>
+            <DateSection />
           </Box>
         </HStack>
       </Box>

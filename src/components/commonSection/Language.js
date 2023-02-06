@@ -1,27 +1,27 @@
-import { Box, Input, ListItem, Stack, UnorderedList } from '@chakra-ui/react';
-import React, { useState } from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { Box, Input, ListItem, Stack, UnorderedList } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { connect, useDispatch } from "react-redux";
 import {
   addNewObj,
   deleteObjInArray,
   updateOrder,
-} from '../../../store/actions/builderAction';
-import Util from '../../../utils/templateUtils';
-import Rating from '../rating/Rating';
-import Dnd from './Dnd';
-import Text from './Text';
-import { Line } from 'rc-progress';
-import { onBlurField } from '../../../store/actions/builderAction';
-import { sampleData } from '../../../constants/sampleData';
+} from "../../../store/actions/builderAction";
+import Util from "../../../utils/templateUtils";
+import Rating from "../rating/Rating";
+import Dnd from "./Dnd";
+import Text from "./Text";
+import { Line } from "rc-progress";
+import { onBlurField } from "../../../store/actions/builderAction";
+import { sampleData } from "../../../constants/sampleData";
 const Language = (props) => {
   const dispatch = useDispatch();
   const { resumeData } = props;
   const data = resumeData?.languages?.items?.length
     ? [...resumeData?.languages?.items]
     : [...sampleData?.data?.languages?.items];
-  const path = 'languages.items';
+  const path = "languages.items";
   const onOrderUpdate = (datas) => {
-    const storeReorder = Util.mapOrder(data, datas, 'id');
+    const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));
   };
   const _addNewItem = () => {
@@ -77,17 +77,18 @@ const Language = (props) => {
     strokeWidth,
     trailColor,
     trailWidth,
-    minWText = '130px',
-    maxWText = '130px',
+    minWText = "130px",
+    maxWText = "130px",
     direction,
     lineStyle,
     margin,
+    maxWidth,
   } = props;
 
   return (
     <div
-      className={`${langContainerStyle ? langContainerStyle : ''}`}
-      style={{ margin: margin ? margin : '' }}
+      className={`${langContainerStyle ? langContainerStyle : ""}`}
+      style={{ margin: margin ? margin : "" }}
     >
       <Dnd
         data={data}
@@ -96,10 +97,10 @@ const Language = (props) => {
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
           <Stack
-            direction={direction ? direction : 'row'}
-            minW={minW ? minW : ''}
-            maxW={maxW ? maxW : ''}
-            className={`${childContainerStyle ? childContainerStyle : ''}`}
+            direction={direction ? direction : "row"}
+            minW={minW ? minW : ""}
+            maxW={maxW ? maxW : ""}
+            className={`${childContainerStyle ? childContainerStyle : ""}`}
           >
             <Box
               minW={(rating || progressBar) && minWText}
@@ -108,7 +109,7 @@ const Language = (props) => {
               {rating || progressBar ? (
                 <Text
                   value={item.title}
-                  placeholder={langPlaceholder ? langPlaceholder : 'Language'}
+                  placeholder={langPlaceholder ? langPlaceholder : "Language"}
                   customClass={`${langStyle}`}
                   path={`languages.items.${index}.title`}
                 />
@@ -118,10 +119,11 @@ const Language = (props) => {
                     <Text
                       value={item.title}
                       placeholder={
-                        langPlaceholder ? langPlaceholder : 'Language'
+                        langPlaceholder ? langPlaceholder : "Language"
                       }
                       customClass={`${langStyle}`}
                       path={`languages.items.${index}.title`}
+                      maxWidth={maxWidth}
                     />
                   </ListItem>
                 </UnorderedList>
@@ -129,7 +131,7 @@ const Language = (props) => {
             </Box>
             {rating && (
               <Rating
-                activeColor={ratingIconColor ? ratingIconColor : '#3498DB'}
+                activeColor={ratingIconColor ? ratingIconColor : "#3498DB"}
                 size={24}
               />
             )}
@@ -137,11 +139,11 @@ const Language = (props) => {
               <>
                 <Line
                   percent={progress[index]}
-                  strokeWidth={strokeWidth ? strokeWidth : '6'}
-                  strokeColor={strokeColor ? strokeColor : '#000'}
-                  trailColor={trailColor ? trailColor : 'gray'}
-                  trailWidth={trailWidth ? trailWidth : '2px'}
-                  className={`${lineStyle ? lineStyle : ''}`}
+                  strokeWidth={strokeWidth ? strokeWidth : "6"}
+                  strokeColor={strokeColor ? strokeColor : "#000"}
+                  trailColor={trailColor ? trailColor : "gray"}
+                  trailWidth={trailWidth ? trailWidth : "2px"}
+                  className={`${lineStyle ? lineStyle : ""}`}
                 />
 
                 <Input

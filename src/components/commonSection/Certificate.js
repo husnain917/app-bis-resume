@@ -1,22 +1,22 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import Dnd from './Dnd';
+import React from "react";
+import { connect } from "react-redux";
+import Dnd from "./Dnd";
 import {
   addNewObj,
   deleteObjInArray,
   onBlurField,
   updateOrder,
-} from '../../../store/actions/builderAction';
-import { useDispatch } from 'react-redux';
-import Util from '../../../utils/templateUtils';
-import { sampleData } from '../../../constants/sampleData';
-import Text from './Text';
-
+} from "../../../store/actions/builderAction";
+import { useDispatch } from "react-redux";
+import Util from "../../../utils/templateUtils";
+import { sampleData } from "../../../constants/sampleData";
+import Text from "./Text";
+import { Box } from "@chakra-ui/react";
 const Certificate = (props) => {
   const dispatch = useDispatch();
-  const path = 'certifications.items';
+  const path = "certifications.items";
   const onOrderUpdate = (datas) => {
-    const storeReorder = Util.mapOrder(data, datas, 'id');
+    const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));
   };
   const _addNewItem = () => {
@@ -43,13 +43,15 @@ const Certificate = (props) => {
     childContainerStyle,
     iconShow,
     icon,
+    maxwidth,
   } = props;
+
   const data = resumeData?.certifications?.items?.length
     ? [...resumeData?.certifications?.items]
     : [...sampleData?.data?.certifications?.items];
 
   return (
-    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
+    <div className={`${parentContainerStyle ? parentContainerStyle : ""}`}>
       <Dnd
         data={data}
         additem={_addNewItem}
@@ -57,42 +59,51 @@ const Certificate = (props) => {
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
           <div
-            className={`${childContainerStyle ? childContainerStyle : ''}`}
-            style={{ display: 'flex' }}
+            className={`${childContainerStyle ? childContainerStyle : ""}`}
+            style={{ display: "flex" }}
           >
             {iconShow && React.createElement(icon)}
             <div>
               {certificate && (
-                <Text
-                  value={item.title}
-                  placeholder={
-                    certificatePlaceholder
-                      ? certificatePlaceholder
-                      : 'Certificate Name'
-                  }
-                  customClass={`${certificateStyle}`}
-                  path={`${path}.${index}.title`}
-                />
+                <Box maxWidth={props.maxWidth}>
+                  <Text
+                    value={item.title}
+                    placeholder={
+                      certificatePlaceholder
+                        ? certificatePlaceholder
+                        : "Certificate Name"
+                    }
+                    customClass={`${certificateStyle}`}
+                    path={`${path}.${index}.title`}
+                    maxWidth={maxwidth}
+                  />
+                </Box>
               )}
               {institute && (
-                <Text
-                  value={item.issuer}
-                  placeholder={
-                    institutePlaceholder ? issueDatePlaceholder : 'Institute'
-                  }
-                  customClass={`${instituteStyle}`}
-                  path={`${path}.${index}.issuer`}
-                />
+                <Box maxWidth={props.maxWidth}>
+                  <Text
+                    value={item.issuer}
+                    placeholder={
+                      institutePlaceholder ? issueDatePlaceholder : "Institute"
+                    }
+                    customClass={`${instituteStyle}`}
+                    path={`${path}.${index}.issuer`}
+                    maxWidth={maxwidth}
+                  />
+                </Box>
               )}
               {issueDate && (
-                <Text
-                  value={item.endDate}
-                  placeholder={
-                    issueDatePlaceholder ? issueDatePlaceholder : 'Issue Date'
-                  }
-                  customClass={`${issueDateStyle}`}
-                  path={`${path}.${index}.endDate`}
-                />
+                <Box maxWidth={props.maxWidth}>
+                  <Text
+                    value={item.endDate}
+                    placeholder={
+                      issueDatePlaceholder ? issueDatePlaceholder : "Issue Date"
+                    }
+                    customClass={`${issueDateStyle}`}
+                    path={`${path}.${index}.endDate`}
+                    maxWidth={maxwidth}
+                  />
+                </Box>
               )}
             </div>
           </div>

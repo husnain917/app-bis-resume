@@ -65,8 +65,14 @@ export default function Graphic_Design_Temp() {
                 direction="row"
                 FNameStyle={styles.nameStyle}
                 SNameStyle={styles.nameStyle}
+                maxWidth={"200px"}
+                minWidth={"200px"}
+                maxChr={38}
               />
-              <Profession professionStyle={styles.profileSubTitle} />
+              <Profession
+                professionStyle={styles.profileSubTitle}
+                maxWidth={"735px"}
+              />
             </Box>
             {/* _____________ Image _____________ */}
             <Box
@@ -92,6 +98,7 @@ export default function Graphic_Design_Temp() {
                   iconColor="#fff"
                   margin={"12px 0px 0px 0px"}
                   parentStyle={styles.contactFont}
+                  maxWidth={"170px"}
                 />
               </Box>
               {/* center container */}
@@ -122,6 +129,7 @@ export default function Graphic_Design_Temp() {
                   iconColor="#fff"
                   margin={"12px 0px 0px 0px"}
                   parentStyle={styles.contactFont}
+                  maxWidth={"170px"}
                 />
               </Box>
             </Box>
@@ -184,6 +192,7 @@ export default function Graphic_Design_Temp() {
                         <Interest
                           interestStyle={styles.contactFont}
                           parentContainerStyle={styles.parentDiv}
+                          maxWidth={"240px"}
                         />
                       </div>
                     </div>
@@ -218,6 +227,7 @@ export default function Graphic_Design_Temp() {
                         <Skill
                           skillStyle={styles.contactFont}
                           parentContainerStyle={styles.parentDiv}
+                          maxWidth={"240px"}
                         />
                       </div>
                     </div>
@@ -266,6 +276,9 @@ export default function Graphic_Design_Temp() {
                           parentContainerStyle={styles.parentDiv}
                           textColor="#947F57"
                           direction="row"
+                          maxWidth={"440px"}
+                          maxChr={20}
+                          datewidthmax={"67px"}
                         />
                       </div>
                     </div>
@@ -312,6 +325,9 @@ export default function Graphic_Design_Temp() {
                           degree_placeholder="Study Program"
                           textColor="#947F57"
                           direction="row"
+                          maxWidth={"440px"}
+                          maxChr={20}
+                          datewidthmax={"67px"}
                         />
                       </div>
                     </div>

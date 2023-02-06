@@ -1,7 +1,7 @@
-import { Box } from '@chakra-ui/react';
-import React from 'react';
-import { useSelector } from 'react-redux';
-import Text from './Text';
+import { Box } from "@chakra-ui/react";
+import React from "react";
+import { useSelector } from "react-redux";
+import Text from "./Text";
 
 const About = (props) => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
@@ -15,26 +15,30 @@ const About = (props) => {
     maxW,
     minW,
     margin,
+    maxwidth,
+    minWidth,
   } = props;
   return (
     <Box
       maxW={maxW ? maxW : 230}
       minW={minW ? minW : 230}
-      margin={margin ? margin : ''}
+      margin={margin ? margin : ""}
     >
       <Text
         placeholder={
           aboutPlaceholder
             ? aboutPlaceholder
-            : 'Short and Engaging pitch about yourself '
+            : "Short and Engaging pitch about yourself "
         }
         customClass={` ${aboutStyle}`}
         value={resumeData?.objective?.body}
         path="objective.body"
-        color={fontColor ? fontColor : ''}
+        color={fontColor ? fontColor : ""}
         fontSize={fontSize}
         fontWeight={fontWeight}
         textAlign={textAlign}
+        maxWidth={maxwidth}
+        minWidth={minWidth}
       />
     </Box>
   );

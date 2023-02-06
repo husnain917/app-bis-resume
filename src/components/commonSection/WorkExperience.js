@@ -1,26 +1,26 @@
-import React from 'react';
-import Util from '../../../utils/templateUtils';
-import Text from './Text';
-import Dnd from './Dnd';
-import { Box, Stack, VStack } from '@chakra-ui/react';
-import { useDispatch, connect } from 'react-redux';
+import React from "react";
+import Util from "../../../utils/templateUtils";
+import Text from "./Text";
+import Dnd from "./Dnd";
+import { Box, Stack, VStack } from "@chakra-ui/react";
+import { useDispatch, connect } from "react-redux";
 import {
   updateOrder,
   addNewObj,
   deleteObjInArray,
-} from '../../../store/actions/builderAction';
-import { onBlurField } from '../../../store/actions/builderAction';
-import { sampleData } from '../../../constants/sampleData';
+} from "../../../store/actions/builderAction";
+import { onBlurField } from "../../../store/actions/builderAction";
+import { sampleData } from "../../../constants/sampleData";
 const WorkExperience = (props) => {
   const { resumeData } = props;
   const data = resumeData?.work?.items?.length
     ? [...resumeData?.work?.items]
     : [...sampleData?.data?.work?.items];
   const dispatch = useDispatch();
-  const path = 'work.items';
+  const path = "work.items";
 
   const onOrderUpdate = (datas) => {
-    const storeReorder = Util.mapOrder(data, datas, 'id');
+    const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));
   };
 
@@ -56,7 +56,7 @@ const WorkExperience = (props) => {
     summary,
     location,
     direction,
-    dateDirection = 'row',
+    dateDirection = "row",
     row1MinW = 160,
     row1MaxW = 160,
     row2MaxW = 230,
@@ -67,29 +67,32 @@ const WorkExperience = (props) => {
     sideLine,
     lineColor,
     margin,
+    maxWidth,
+
+    datewidthmax,
   } = props;
 
   return (
-    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
+    <div className={`${parentContainerStyle ? parentContainerStyle : ""}`}>
       <Dnd
         data={data}
-        direction={DndDirection ? DndDirection : ''}
+        direction={DndDirection ? DndDirection : ""}
         reorder={(e) => onOrderUpdate(e)}
         additem={_addNewItem}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
           <Box
-            className={`${childContainerStyle ? childContainerStyle : ''}`}
-            style={{ display: 'flex', alignItems: sideLine && 'stretch' }}
-            m={margin ? margin : ''}
+            className={`${childContainerStyle ? childContainerStyle : ""}`}
+            style={{ display: "flex", alignItems: sideLine && "stretch" }}
+            m={margin ? margin : ""}
           >
             {iconShow && React.createElement(icon)}
             {sideLine && (
-              <Box w={1} bg={lineColor ? lineColor : '#06213D'} ml={-3} mr={4}>
+              <Box w={1} bg={lineColor ? lineColor : "#06213D"} ml={-3} mr={4}>
                 <Box
                   h={4}
                   w={4}
-                  bg={lineColor ? lineColor : '#06213D'}
+                  bg={lineColor ? lineColor : "#06213D"}
                   borderRadius="full"
                   mr={4}
                   ml={-1.5}
@@ -97,74 +100,78 @@ const WorkExperience = (props) => {
                 ></Box>
               </Box>
             )}
-            <VStack justifyContent={'flex-start'} alignItems="flex-start">
-              <Stack direction={direction ? direction : 'column'}>
+            <VStack justifyContent={"flex-start"} alignItems="flex-start">
+              <Stack direction={direction ? direction : "column"}>
                 {position && (
                   <Box
-                    minW={direction === 'row' && row1MinW}
-                    maxW={direction === 'row' && row1MaxW}
+                    minW={direction === "row" && row1MinW}
+                    maxW={direction === "row" && row1MaxW}
                   >
                     <Text
                       value={item.position}
                       placeholder={
                         position_placeholder
                           ? position_placeholder
-                          : 'Title/Position'
+                          : "Title/Position"
                       }
                       path={`${path}.${index}.position`}
-                      customClass={`${positionStyle ? positionStyle : ''}`}
+                      customClass={`${positionStyle ? positionStyle : ""}`}
                       color={textColor}
                       fontSize={fontSize}
                       fontWeight={fontWeight}
                       textAlign={textAlign}
+                      maxWidth={maxWidth}
                     />
                   </Box>
                 )}
                 {company && (
                   <Box
-                    minW={direction === 'row' && row2MinW}
-                    maxW={direction === 'row' && row2MaxW}
+                    minW={direction === "row" && row2MinW}
+                    maxW={direction === "row" && row2MaxW}
                   >
                     <Text
                       value={item.company}
                       placeholder={
                         company_placeholder
                           ? company_placeholder
-                          : 'Workplace/Company'
+                          : "Workplace/Company"
                       }
                       path={`${path}.${index}.company`}
-                      customClass={`${companyStyle ? companyStyle : ''}`}
+                      customClass={`${companyStyle ? companyStyle : ""}`}
                       color={textColor}
                       fontSize={fontSize}
                       fontWeight={fontWeight}
                       textAlign={textAlign}
+                      maxWidth={maxWidth}
                     />
                   </Box>
                 )}
               </Stack>
-              <Stack direction={direction ? direction : 'column'}>
+              <Stack direction={direction ? direction : "column"}>
                 {date && (
                   <Box
-                    minW={direction === 'row' && row1MinW}
-                    maxW={direction === 'row' && row1MaxW}
+                    minW={direction === "row" && row1MinW}
+                    maxW={direction === "row" && row1MaxW}
                   >
-                    <Stack direction={dateDirection ? dateDirection : 'row'}>
+                    <Stack direction={dateDirection ? dateDirection : "row"}>
                       <Text
                         value={item.startDate}
                         placeholder={
-                          startDate_placeholder ? startDate_placeholder : 'From'
+                          startDate_placeholder ? startDate_placeholder : "From"
                         }
+                        maxChr={props.maxChr}
                         path={`${path}.${index}.startDate`}
-                        customClass={`${dateStyle ? dateStyle : ''}`}
+                        customClass={`${dateStyle ? dateStyle : ""}`}
                         color={textColor}
                         fontSize={fontSize}
                         fontWeight={fontWeight}
                         textAlign={textAlign}
+                        maxWidth={datewidthmax}
                       />
-                      {dateDirection == 'row' && (
+                      {dateDirection == "row" && (
                         <p
                           style={{
-                            fontWeight: 'bold',
+                            fontWeight: "bold",
                           }}
                           className={dateStyle}
                         >
@@ -175,14 +182,16 @@ const WorkExperience = (props) => {
                       <Text
                         value={item.endDate}
                         placeholder={
-                          endDate_placeholder ? endDate_placeholder : 'End'
+                          endDate_placeholder ? endDate_placeholder : "End"
                         }
                         path={`${path}.${index}.endDate`}
-                        customClass={`${dateStyle ? dateStyle : ''}`}
+                        customClass={`${dateStyle ? dateStyle : ""}`}
                         color={textColor}
                         fontSize={fontSize}
                         fontWeight={fontWeight}
                         textAlign={textAlign}
+                        maxWidth={datewidthmax}
+                        maxChr={props.maxChr}
                       />
                     </Stack>
                   </Box>
@@ -190,21 +199,22 @@ const WorkExperience = (props) => {
 
                 {summary && (
                   <Box
-                    minW={direction === 'row' && row2MinW}
-                    maxW={direction === 'row' && row2MaxW}
+                    minW={direction === "row" && row2MinW}
+                    maxW={direction === "row" && row2MaxW}
                   >
                     <Text
                       value={item.summary}
                       placeholder={
                         summary_placeholder
                           ? summary_placeholder
-                          : 'Short Description'
+                          : "Short Description"
                       }
                       path={`${path}.${index}.description`}
-                      customClass={`${summaryStyle ? summaryStyle : ''}`}
+                      customClass={`${summaryStyle ? summaryStyle : ""}`}
                       fontSize={fontSize}
                       color={textColor}
                       textAlign={textAlign}
+                      maxWidth={maxWidth}
                     />
                   </Box>
                 )}
@@ -214,13 +224,14 @@ const WorkExperience = (props) => {
                   <Text
                     value={`${item.location}`}
                     placeholder={
-                      location_placeholder ? location_placeholder : 'Location'
+                      location_placeholder ? location_placeholder : "Location"
                     }
                     path={`${path}.${index}.location`}
-                    customClass={`${locationStyle ? locationStyle : ''}`}
+                    customClass={`${locationStyle ? locationStyle : ""}`}
                     fontSize={fontSize}
                     color={textColor}
                     textAlign={textAlign}
+                    maxWidth={maxWidth}
                   />
                 </>
               )}

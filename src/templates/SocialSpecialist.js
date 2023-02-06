@@ -59,17 +59,20 @@ export default function SocialSpecialist() {
           <Name
             FName={true}
             SName={true}
+            maxChr={38}
             direction="column"
             FNameStyle={styles.nameStyle}
             SNameStyle={styles.nameStyle}
             margin={"15% 0% 0% 0%"}
             fontColor={color ? color : "#E07559"}
-            maxWidth={"200px"}
+            maxWidth={"300px"}
+            minWidth={"200px"}
           />
           <Profession
             professionStyle={styles.profileSubTitle}
             margin={"0% 0% 10% 0%"}
             fontColor={color ? color : "#000000"}
+            maxWidth={"400px"}
           />
           <Heading
             title={"CONTACT PERSON"}
@@ -92,6 +95,7 @@ export default function SocialSpecialist() {
             iconColor={color ? color : "#f8f9fa"}
             margin={"10px 0px 0px 0px"}
             parentStyle={styles.contactFont}
+            maxWidth={"230px"}
           />
 
           {/* _____________ About me _____________ */}
@@ -211,6 +215,9 @@ export default function SocialSpecialist() {
                     summaryStyle={Classes.description}
                     parentContainerStyle={styles.rightContainerWork}
                     textColor="#000000"
+                    maxWidth={"350px"}
+                    datewidthmax={"180px"}
+                    maxChr={20}
                   />
                 </div>
               </div>
@@ -256,6 +263,9 @@ export default function SocialSpecialist() {
                     summaryStyle={Classes.description}
                     degree_placeholder="Study Program"
                     textColor="#000000"
+                    maxWidth={"350px"}
+                    datewidthmax={"180px"}
+                    maxChr={20}
                   />
                 </div>
               </div>
