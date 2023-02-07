@@ -215,7 +215,7 @@ const JobsPage = () => {
                   width={["95%", "25%", "25%", "25%", "25%"]}
                 ></Box>
 
-                <Text
+                {/* <Text
                   className={"medium-text"}
                   mt={4}
                   color={"black"}
@@ -223,7 +223,7 @@ const JobsPage = () => {
                   fontSize={["16px", "16px", "17px", "20px", "20px"]}
                 >
                   Unsure? Check out our free sample!
-                </Text>
+                </Text> */}
                 <Link href="/templates">
                   <CommonButton
                     className={"medium-text"}
