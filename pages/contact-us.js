@@ -5,9 +5,6 @@ import CustomInput from "../src/components/contactUs/CustomInput";
 import { buttonData } from "../src/components/contactUs/buttonData";
 import CancelSubscription from "../src/components/cancelSubscription";
 import SideBar from "../src/components/sideBar/SideBar";
-
-import Link from "next/link";
-import Layout from "../src/Layout";
 import { ToastContainer } from "react-toastify";
 import { ToastError, ToastSuccess } from "../src/components/Toast";
 

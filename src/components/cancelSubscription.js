@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Image, Link, Text } from "@chakra-ui/react";
-import { Icon, createIcon } from "@chakra-ui/react";
+import { Box, Link, Text } from "@chakra-ui/react";
+import { Icon, } from "@chakra-ui/react";
 import { QuestionIcon } from "@chakra-ui/icons";
 
 export default function CancelSubscription() {
