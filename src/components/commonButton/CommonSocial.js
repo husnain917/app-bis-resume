@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@chakra-ui/react";
 
 export default function CommonButton({
@@ -25,7 +25,9 @@ export default function CommonButton({
   fontSize,
   fontWeight,
   icon,
+  onMouseOver,
 }) {
+  const [currentIconColor, setCurrentIconColor] = useState("#463477");
   return (
     <Button
       className={`button-text ${className}`}
@@ -41,20 +43,21 @@ export default function CommonButton({
       rightIcon={rightIcon}
       leftIcon={leftIcon}
       margin={margin}
+      onMouseOver={onMouseOver}
       _hover={{
         // border: { hoverBorder },
         // cursor: hoverCursor || "pointer",
-        // color: hoverColor,
-        // backgroundColor: hoverBackgroundColor,
+        color: hoverColor,
+        backgroundColor: hoverBackgroundColor,
         // transition: hoverTransition || "0.5s",
-        backgroundcolor: "#50bce0",
+        // backgroundcolor: "#50bce0",
         boxShadow: "-1px -2px 4px 5px #8fd1e7",
         borderRadius: "8px",
       }}
       onClick={onClick}
       disabled={disabled}
     >
-      {loading ? loading : icon}
+      <a target="_blank">{loading ? loading : icon}</a>
     </Button>
   );
 }

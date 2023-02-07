@@ -37,81 +37,11 @@ export const TABLE_CONTENT_DATA = [
   },
 ];
 
-export const PREMIUM_ACCOUNT_DATA = [
-  {
-    label: "BisResume will be constantly available, or available at all.",
-  },
-  {
-    label:
-      "The information on BisResume is complete, true, accurate or non-misleading.",
-  },
-  {
-    label: "That BisResume will meet your requirements.",
-  },
-  {
-    label:
-      "That BisResume will be available at any particular time or location, uninterrupted or secure.",
-  },
-  {
-    label: "That BisResume will be 24/7 active all the time.",
-  },
-  {
-    label:
-      "Your data will be saved all the time in your account, and that data loss will never occur. However, we will do our best to make sure all the information is saved in your account for a flawless experience. Data loss is very unlikely.",
-  },
-];
-
-export const PREMIUM_ACCOUNT_DATA_LINKS = [
-  {
-    label: "Purchased on:",
-    link: "[insert date of Subscription]",
-  },
-  {
-    label: "Order No:",
-    link: "[insert your Receipt ID number]",
-  },
-  {
-    label: "Your full name:",
-    link: "[insert your full name]",
-  },
-  {
-    label: "Your address:",
-    link: "[insert your address]",
-  },
-  {
-    label: "Tel No:",
-    link: "[insert your telephone]",
-  },
-  {
-    label: "Date:",
-    link: "[insert date of purchase]",
-  },
-];
-
-export const CONTACT_US_DATA = [
-  {
-    label: "istLink",
-    description:
-      "If you feel like something is missing or misleading in our Terms of Use, please feel free to notify us.",
-    mail: "",
-  },
-  {
-    label: "secondLink",
-    description: "You can contact us by sending an email to ",
-    mail: "contact@bisResume.com.",
-  },
-  {
-    label: "thirdLink",
-    description: "The Terms of Use was last modified on 03/June/2022.",
-    mail: "",
-  },
-];
-
 export const TERMS_DATA = {
   TermsOfUse: {
     heading: [
       {
-        title: "BisResume ApS’s",
+        title: "BisResume App",
       },
       {
         title: "Terms of Use",
@@ -119,151 +49,109 @@ export const TERMS_DATA = {
     ],
     data: [
       {
-        text: "BisResume ApS welcomes you with gratitude. Many thanks for using BisResume and supporting us!",
+        text: `Thank you for choosing BisResume as your preferred service provider. We appreciate your support and are honored to have you as a customer.`,
       },
       {
-        text: "Please read these Terms of Use („Terms”, „Terms and Conditions”) before using BisResume (the „Website”, the „Software”, the „Service”).",
+        text: `Please take a moment to review these Terms of Use ("Terms," "Terms and Conditions") before utilizing our services (the "Website," the "Software," the "Service"). Your access to and use of our Service is conditioned upon your acceptance and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use our Service.`,
       },
       {
-        text: "Your access to use of the Service is conditioned on your acceptance of and compliance with these Terms of Use. The Terms apply to all visitors, users and others who access or use BisResume.",
-      },
-      {
-        text: "By accessing or using BisResume, you agree to be bound by these Terms of Use. If you disagree with any part of the Terms, we kindly ask you to stop using BisResume.",
+        text: `By accessing or using our Service, you agree to be bound by these Terms of Use. If you do not agree with any part of the Terms, we kindly ask that you refrain from using our Service.`,
       },
     ],
-    description:
-      "(Disclaimer: BisResume is a product of BisResume ApS, meaning that the Terms of Use found below applies to BisResume. When there is a reference to „BisResume”, „us” or „we” this takes into account the following: bisResume.com, BisResume ApS, website, site or any other application/app/service/software directly related to BisResume and owned & developed by BisResume.)",
+    description: `(Disclaimer: XYZ Company is a product of XYZ Company, LLC, meaning that the Terms of Use found below applies to our Service. When there is a reference to "XYZ Company," "us," or "we," this includes our website, app, service, software, and any other application or product directly related to XYZ Company and owned & developed by XYZ Company, LLC.)`,
   },
   TableOfContents: {
     heading: "Table of Contents:",
   },
   TheNovoresumeContent: {
-    heading: "1. The BisResume Content",
+    heading: `1. What is a cookie?`,
     data: [
       {
-        text: "All of the information, content, operations, functionality and software displayed on, transmitted through, or used in connection with BisResume, including for example: directories, guides, articles, reviews, text, photographs, images, illustrations, video, source and object code, software, data, and all other matters related to BisResume, including without limitation, the selection and arrangement of the aforementioned and the „look and feel” of BisResume (collectively, the „Content”), are protected under applicable copyrights and other proprietary (including but not limited to intellectual property) rights and are the intellectual property of BisResume.",
+        text: `Bisresume uses cookies to enhance the user experience, remember user preferences, and track website usage statistics.`,
       },
       {
-        text: "You may not frame or utilize framing techniques that involve any trademark, logo, copyrighted material or other proprietary information (including images, text, page layout, or form) of any portion of BisResume without the express written consent of an authorized person from BisResume. In addition, you agree not to decompile, reverse engineer or disassemble any software or other products or processes accessible through BisResume, not to insert any code or product or manipulate the content of BisResume in any way that affects the user's experience, and not to use any data mining, robots, cancelbots, Trojan horse, or any data gathering or extraction method in connection with your use of BisResume.",
+        text: `These cookies are essential for the proper functioning of the website and cannot be disabled. Additionally, Bisresume may also use third-party cookies for targeted advertising and analytics purposes. These cookies may be transferred outside of the EU in accordance with the European Commission's standard contractual clauses for the protection of personal data.`,
       },
       {
-        text: "BisResume respects the intellectual property of others. If you believe that your work has been copied in a way that constitutes copyright infringement or if you are aware of any infringing material placed on BisResume, please contact us.",
-      },
-      {
-        text: "The information available on BisResume is for general information purpose only. While we strive to do thorough research and keep the information all the time up-to-date and correct, we do not guarantee the full completeness, accuracy, reliability, suitability or availability concerning the information. Any reliance on the information available is therefore at your own risk.",
+        text: `Users can opt-out of these cookies by adjusting their browser settings. By continuing to use Bisresume's website, you consent to the use of cookies in accordance with this Cookie Policy.`,
       },
     ],
   },
   AcceptableUse: {
-    heading: "2. Acceptable Use",
+    heading: `"2. Use of cookies and web storage(browsing data) by Bisresume
+    Authentication
+    "`,
+    description: `To use Bisresume to its full potential, users need to be uniquely identified.
+    Personal Preferences & Information
+    `,
     data: [
       {
-        text: "You must not use BisResume in any way that causes, or may cause, damage to BisResume or impairment of the availability or accessibility of BisResume, or in any way which is unlawful, illegal, fraudulent or harmful, or in connection with any unlawful, illegal, fraudulent or harmful purpose or activity.",
+        text: `To give a better user experience, Bisresume uses the browsing data to remember the users personal preferences and information regarding Bisresume usage.`,
       },
       {
-        text: "You must not use BisResume to copy, store, host, transmit, send, use, publish or distribute any material which consists of (or is linked to) any spyware, computer virus, Trojan horse, worm, keystroke logger, rootkit or other malicious computer software.",
+        text: `(Bisresume is not responsible for third-party cookies, for more information, please read the respective Cookie Policy. You can find a list of our third parties here.)
+        To improve Bisresume's services, for a better understanding of your needs, preferences and provide you the best experience using novoresume.com, etc. Bisresume uses third-party cookies which allows to:
+        `,
       },
       {
-        text: "You must not use BisResume in a way that does not respect the copyright and proprietary rights of other individuals or companies/ organizations.",
+        text: `Create better content that you will enjoy and will improve your job searching process & career.`,
       },
       {
-        text: "You must not conduct any systematic or automated data collection activities (including without limitation scraping, data mining, data extraction and data harvesting) on or concerning BisResume without an authorized person's express written consent from BisResume.",
+        text: `Deliver you exclusive discounts, promotions and seasonal offers that will save you time and money.`,
       },
       {
-        text: "You must not use BisResume in order to create a résumé, cover letter, online portfolio for a third party since all the documents include personal information unless you are using an explicit Business/Enterprise account, which is different from the regular account and the regular premium account. BisResume was developed for helping individual persons get their dream job or improve their career. You must not sell/trade the layout or documents from/generated by BisResume to any third party. For B2B (as „Business to Business”) services there are other „Terms of Use” and „Privacy Policy” that must be accepted.",
+        text: `Create user personas and discover the interests of the Bisresume users and insights to improve the content, advertisements, promotions and discounts shown to you.
+        Show you tailored content for your region and unique examples, tips, and tutorials following the local recruiting trends.
+        `,
       },
       {
-        text: "You must not use BisResume to transmit or send unsolicited commercial communications.",
+        text: `Analyze the user journey to identify key issues and pain points where we can make improvements.`,
       },
       {
-        text: "You must not use BisResume for any purposes related to marketing without an authorized person's express written consent from BisResume.",
+        text: `Target users with informative marketing campaigns related to our services.
+        Provide personalized recommendations for job opportunities and career development resources based on your browsing history and interests.
+        `,
       },
       {
-        text: "In order to use BisResume you must be at least 18 years old.",
+        text: `Track the effectiveness of our marketing campaigns and measure the success of our website and services.`,
       },
+     
     ],
+   
   },
   Security: {
-    heading: "3. Security",
-    data: "BisResume has implemented commercially reasonable technical and organizational measures designed to secure your private information from accidental loss and unauthorized access, use, alteration or disclosure. However, we cannot guarantee that unauthorized third parties will never be able to defeat those measures or use your private information for improper purposes.",
+    heading: `3. Disabling/Enabling Cookies`,
+    data: `You acknowledge and understand that the transmission of data over the internet or other networks is not completely secure, and any information you transmit to BisResume may be intercepted or accessed by unauthorized parties. While BisResume has implemented commercially reasonable security measures to protect your personal information, we cannot guarantee the complete security of your information and will not be liable for any unauthorized access or use of your personal information. It is important for you to protect against unauthorized access to your account and information by selecting and protecting your password appropriately, and limiting access to your computer and browser by signing off after you have finished accessing your account.`,
   },
   LinksToOtherSoftware: {
     heading: "4. Links To Other Software/Websites/Services",
-    data: [
-      {
-        text: "BisResume may contain links to third-party software, websites or services that are not owned or controlled by BisResume. BisResume has no control over and assumes no responsibility for, the content, privacy policies, or practices of any third party software, websites or services.",
-      },
-      {
-        text: "You further acknowledge and agree that BisResume shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such software, websites or services.",
-      },
-      {
-        text: "Additionally, your dealings with or participation in promotions of advertisers found on BisResume, including payment and delivery of goods, and any other terms (such as warranties) are solely between you and such advertisers. You agree that BisResume shall not be responsible for any loss or damage of any sort relating to your dealings with such advertisers.",
-      },
-      {
-        text: "We cannot be held liable for anything that happens as a result of malicious software, virus, etc. that might affect your computer and is interfering with BisResume showing corrupt data that you might click on and as an effect put your information at risk. We strongly advise you to protect your device with an antivirus and do a monthly checkup of your device.",
-      },
-      {
-        text: "Our team always strives to bring you professional and researched content to help you at all the steps of your career, and in some cases, the content will be provided by third-party software, websites or services.",
-      },
-      {
-        text: "We strongly advise you to read the terms of use and privacy policies of any third-party software, websites or services that you visit.",
-      },
-    ],
+    description: `BisResume is not responsible for the content, privacy policies, or practices of any third-party software, websites, or services that may be linked to on the BisResume website. It also states that any dealings or transactions with advertisers on BisResume are solely between the user and the advertiser, and BisResume will not be held responsible for any loss or damage related to those dealings. Additionally, the text mentions that BisResume cannot be held liable for any issues that may arise from malicious software or viruses affecting the website, and advises users to protect their devices with antivirus software and to regularly check for any potential issues. The text also states that BisResume's team strives to provide professional and researched content, and in some cases this content may be provided by third-party software, websites, or services. Users are advised to read the terms of use and privacy policies of any third-party software, websites, or services that they visit.`,
   },
   WarrantyAndPremiumAccount: {
     heading: "5. Warranty and Premium Account",
-    description:
-      "BisResume strives to provide the best service and products, but you understand and agree that BisResume is provided „as is” and „as available” without any representations or warranties, express or implied. Without prejudice, BisResume does not warrant that:",
-    paragraphs: [
-      {
-        text: "BisResume reserves the right to change the structure and design of the résumé, cover letter or other services when they can be improved, and there are benefits for the users. These changes are made according to our users' feedback, research and after consulting HR experts.",
-      },
-      {
-        text: "If you are acting as a consumer, you have the right to cancel your purchase and claim a refund within 14 days from the day of purchase.",
-      },
-    ],
-    startLinkHeading: "I hereby give notice that I cancel my purchase",
-    ReasonForCanceling: "Reason for canceling (optional):",
-    data: [
-      {
-        text: "When you choose to extend the Premium account by any period, this will be extended according to the calculations made by our databases and the number of days per month can range from 28 to 31, depending on the particular month.",
-      },
-      {
-        text: "We reserve the right to delete also the Premium Accounts if the user is misusing BisResume or doing malicious activities, but we doubt this will be the case.",
-      },
-      {
-        text: "Your private details are encrypted between the client (YOU, as a user) and the server using an SSL certificate, to protect your data.",
-      },
-      {
-        text: "We reserve the right to change the price of our services when introducing new promotions, special packages or when changes are being made regarding taxes, VAT regulations or external factors such as inflation/deflation.",
-      },
-    ],
+    description: `BisResume provides its service and products on an "as is" and "as available" basis without any representations or warranties. The service may not be constantly available or meet all user requirements. BisResume reserves the right to change the design and structure of its products and services for improvement. If acting as a consumer, users have the right to cancel their purchase within 14 days and claim a refund. If there are technical issues during purchase, users should contact BisResume to have the problem investigated and possibly receive compensation or refund. BisResume may delete premium accounts if the user is misusing the service. Private details are encrypted for protection, and BisResume reserves the right to change prices for services due to promotions, taxes, or external factors.`,
   },
   GoverningLaw: {
     heading: "6. Governing Law",
-    data: "These Terms shall be governed and construed in agreement with the laws of Denmark and the European Union. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.",
+    data: `These terms of service are governed and interpreted in accordance with the laws of Denmark and the European Union. BisResume reserves the right to enforce any rights outlined in these terms and failure to do so does not waive those rights. If any provision of these terms is deemed invalid or unenforceable by a court, the remaining provisions will remain in effect.`,
   },
   Changes: {
     heading: "7. Changes",
-    data: "Occasionally BisResume might change the terms. When such changes are made, BisResume will make sure to provide you with prominent notice as appropriate under the circumstances, e.g., by displaying a prominent notice within BisResume or by sending you an email. In some cases, we will notify you in advance. Please, therefore, make sure you read any such notice carefully.",
+    data: `By continuing to access or use BisResume after those changes become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you should stop using BisResume. If you have any questions or concerns about these Terms, please contact us at `,
+    href: 'contact@bisResume.com'
   },
   BreachesOfTheseTermsOfUse: {
     heading: "8. Breaches of these terms of use",
-    data: "Without prejudice to BisResume’s other rights under these terms and use, if you breach these terms of use in any way, BisResume may take such action as BisResume deems appropriate to deal with the breach, including suspending your access to BisResume, prohibiting you from accessing BisResume, blocking computers using your IP address from accessing BisResume, contacting your internet service provider to request that they block your access to BisResume and/or bringing court proceedings against you.",
+    data: `At XYZ Company, we take the protection of our intellectual property very seriously. If it is found that any of our copyrighted material, trademarks, or proprietary information has been used without our express permission, we reserve the right to take legal action against the offending party. This includes, but is not limited to, seeking monetary damages, injunctions, and any other remedies available under the law. Furthermore, any unauthorized access or use of our protected information will be considered a violation of our terms of service and may result in termination of your account and/or access to our services. We strongly advise all users to respect our intellectual property rights and to seek proper authorization before using any of our protected materials.`,
   },
   Termination: {
     heading: "9. Termination",
-    data: [
-      {
-        text: "We may terminate or suspend access to BisResume immediately, for both Basic and Premium membership users, without prior notice or liability if you breach the Terms, or for any other reason, we consider justified. All provisions of the Terms shall survive termination, including but not limited to: ownership provisions, warranty disclaimers, indemnity and limitations of liability.",
-      },
-      {
-        text: "BisResume reserves the right of deleting an account if there are signs of suspicious, unusual or harmful activities, therefore creating a potential danger for BisResume. However, we highly trust and respect our users and we do not believe it will be the case to terminate someone’s account.",
-      },
-    ],
+    data: `BisResume also reserves the right to remove any content that is in violation of our terms of use, including but not limited to: copyrighted material, offensive language or images, and any content that is deemed to be harmful or illegal. Failure to comply with these guidelines may result in the termination of your account and potential legal action. We encourage our users to report any suspicious or inappropriate behavior to help maintain a safe and enjoyable experience for all.`,
   },
   ContactUs: {
     heading: "Contact Us",
-    subHeading: "BisResume details:",
+    href: 'contact@bisResume.com ',
+    desIst: `At BisResume, we value the feedback of our users and are committed to providing a transparent and accurate service. Therefore, we encourage you to reach out to us if you have any concerns or suggestions regarding our Terms of Use. Our team can be reached at `,
+    desLast: `and we will do our best to respond promptly. Additionally, we regularly review and update our Terms of Use to ensure they reflect the latest regulations and best practices. The date of the last modification was 03/June/2022 and we encourage you to review the Terms of Use periodically for any updates or changes.`,
   },
 };

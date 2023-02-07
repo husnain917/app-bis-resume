@@ -13,7 +13,7 @@ export default function ResumeFormats() {
             {/* blogs */}
             <Box display={"flex"} alignItems={"center"}>
               <Link
-                href="#"
+                href="/blog"
                 color={"#fff"}
                 fontSize={["1.2em", "1.2em", "1.2em", "1.2em"]}
                 _hover={{
@@ -36,7 +36,7 @@ export default function ResumeFormats() {
             {/* Resume Help */}
             <Box display={"flex"} alignItems={"center"}>
               <Link
-                href="#"
+                href="/help/resume-help"
                 color={"#fff"}
                 fontSize={["1.2em", "1.2em", "1.2em", "1.2em"]}
                 _hover={{
@@ -58,21 +58,23 @@ export default function ResumeFormats() {
 
             {/* The 3 Best Resume Formats to  */}
             <Box>
-              <Text
-                color={"#fff"}
-                fontSize={["1.2em", "1.2em", "1.2em", "1.2em"]}
-                lineHeight={10}
-                fontFamily={`'EuclidCircularB', sans-serif`}
-              >
-                The 3 Best Resume Formats to...
-              </Text>
+              <Link href="/templates" color={"#fff"}>
+                <Text
+                  color={"#fff"}
+                  fontSize={["1.2em", "1.2em", "1.2em", "1.2em"]}
+                  lineHeight={10}
+                  fontFamily={`'EuclidCircularB', sans-serif`}
+                >
+                  The 3 Best Resume Formats to...
+                </Text>
+              </Link>
             </Box>
           </Box>
           <Text
             className={styles.ctaHeading}
             fontFamily={`'EuclidCircularB', sans-serif`}
           >
-            The 3 Best Resume Formats to Use in 2022 (Examples)
+            {"The 3 Best Resume Formats to Use in 2023 (Examples)"}
           </Text>
 
           {/* about */}
@@ -99,13 +101,6 @@ export default function ResumeFormats() {
                 fontFamily={`'EuclidCircularB', sans-serif`}
               >
                 Career Expert
-              </Text>
-              <Text
-                fontSize={"15px"}
-                color={"#63B3ED"}
-                fontFamily={`'EuclidCircularB', sans-serif`}
-              >
-                Updated 09/08/2022
               </Text>
             </Box>
           </Box>

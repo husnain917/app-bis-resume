@@ -39,8 +39,8 @@ const Section5 = () => {
           mt={"20px"}
           className={"small-text"}
         >
-          Get to know some of the passionate professionals, career experts,
-          technologists, and certified resume writers behind My Perfect Resume.
+          {`Get to know some of the passionate professionals, career experts,
+          technologists, and certified resume writers behind BisResume.`}
         </Text>
       </Box>
       <Box className="cardContent">

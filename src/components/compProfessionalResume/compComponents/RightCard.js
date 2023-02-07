@@ -12,12 +12,17 @@ export default function RightCard({ cardData }) {
       bg="white"
       minHeight={width >= 767 ? "fit-content" : { base: 530, sm: 330 }}
       borderRadius="10px"
-      py={width >= 767 ? 4 : 6}
+      py={width >= 767 ? 3 : 6}
       px={6}
       my={width >= 767 ? 3 : 0}
       mx={3}
+      mt={7}
     >
-      <Box pos="relative" textAlign={width >= 767 ? null : "center"}>
+      <Box
+        pos="relative"
+        height={["60px", "60px", "35px", "35px", "38px", "60px"]}
+        textAlign={width >= 767 ? null : "center"}
+      >
         <Circle
           data={{ customStyle: cardData.customStyle, text: cardData.text }}
         />

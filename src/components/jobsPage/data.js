@@ -9,7 +9,14 @@ export const data = [
   {
     id: "subHeading",
     className: "medium-text",
-    text: "Whether you're a recent university graduate looking for your first job in your chosen field, or a senior professional looking to take the next step in your career, you're probably going to agree with us on this:",
+    text: `Job search can be a challenging process, but by having a well-planned strategy, you 
+    can improve your chances of success. Start by identifying your career goals and updating your 
+    resume and LinkedIn profile to accurately reflect your skills and experience. Network with 
+    people in your field, apply for jobs that match your skills and interests, prepare for
+     interviews by researching the company and practicing answers to common interview questions,
+      and follow up with a thank-you note after each interview. Stay positive, keep trying, and
+       with persistence and dedication, you will eventually find the right job for you.
+       `,
     margin: ["0px 0px", "0px 0px", "0px 134px", "30px 172px", "30px 250px"],
     fontSize: ["16px", "16px", "16px", "20px", "20px"],
     lineHeight: ["30px", "30px", "26px", "36px", "36px"],
@@ -44,13 +51,13 @@ export const data = [
 
       {
         cardtext:
-          "Unless you have a Ph.D. in Human Resources or a few years of experience as an HR manager, you've probably struggled with at least some parts of the process.",
+          `This is where resources and guides can come in handy. By learning from experts and experienced professionals, you can gain insights into best practices and avoid common mistakes.`,
       },
       {
         cardtext:
-          "You might, for example, be unsure of how to create a resume that stands out from the rest. Or you might have difficulties charming the hiring manager during the interviewing process.",
+         `Whether it's studying up on the latest resume writing techniques, learning how to answer interview questions with confidence, or researching a company before your interview, taking the time to prepare can make a big difference in your job search outcome. So, don't be afraid to seek out help and guidance, and remember to stay positive and confident throughout the process. With the right tools and approach, you can increase your chances of landing your dream job.`,
       },
-      { cardtext: "Whichever the case..." },
+   
     ],
   },
 ];
@@ -68,7 +75,7 @@ export const thirdContent = [
     id: "content",
     className: "small-text",
     fontSize: ["16px", "16px", "16px", "20px", "20px"],
-    text: `At Novoresume, we wanted to create the ultimate job search resource - something that's useful for job seekers of all levels, from students to senior professionals.`,
+    text: `The Job Search Masterclass e-book by Bisresume is the ultimate guide for job seekers looking to improve their chances of success in the job search process. Whether you are a recent university graduate or a senior professional, the e-book covers the entire process from creating a compelling resume to acing the job interview.`,
     textAlign: ["start", "start", "start", "start", "start"],
     color: "rgb(49,59,71)",
     lineHeight: ["24px", "24px", "26px", "36px", "36px"],
@@ -77,7 +84,7 @@ export const thirdContent = [
     id: "content",
     fontSize: ["16px", "16px", "16px", "20px", "20px"],
     className: "medium-text",
-    text: `With the Job Search Masterclass e-book, we cover the job search process from start to finish, arming you with the knowledge you need to take charge of your career. The e-book features:`,
+    text: `The e-book provides step-by-step guidance on writing a convincing cover letter, preparing for common interview questions, and includes practical examples and templates to help you along the way. With its comprehensive approach, the Job Search Masterclass e-book is a valuable resource for anyone looking to take control of their career and land their dream job.`,
     textAlign: ["start", "start", "start", "start", "start"],
     margin: "25px 0px",
     lineHeight: ["24px", "24px", "26px", "36px", "36px"],
@@ -87,42 +94,8 @@ export const thirdContent = [
       {
         imageUrl: "/book-chapters.png",
       },
-      {
-        id: "List",
-        fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        className: "medium-text",
-        text: `How to Create a Compelling Resume That Stands Out.`,
-        textAlign: "start",
-        lineHeight: ["28px", "28px", "24px", "26px", "26px"],
-
-        doneIcon: "MdDone",
-        iconSize: "18px",
-        iconWeight: "bold",
-      },
-      {
-        id: "List",
-        fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        className: "medium-text",
-        text: ` 5 Steps to a Convincing Cover Letter (That Gets Read).`,
-        textAlign: "start",
-        lineHeight: ["28px", "28px", "24px", "26px", "26px"],
-      },
-      {
-        id: "List",
-        fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        className: "medium-text",
-        text: `Acing the Job Interview - The Common Interview Questions (And How to Answer Them).`,
-        textAlign: "start",
-        lineHeight: ["28px", "28px", "24px", "26px", "26px"],
-      },
-      {
-        id: "List",
-        fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        className: "medium-text",
-        text: `Templates, Checklists, Practical Examples, and So Much More!`,
-        textAlign: "start",
-        lineHeight: ["28px", "28px", "24px", "26px", "26px"],
-      },
+      
+      
     ],
   },
 ];
@@ -350,7 +323,7 @@ export const fifthContent = [
     id: "Sub-Heading",
     className: "medium-text",
     fontSize: ["16px", "16px", "16px", "20px", "20px"],
-    text: "Whether you're a recent university graduate looking for your first job in your chosen field, or a senior professional looking to take the next step in their career, you're probably going to agree with us on this:",
+    text: `The job search process can be overwhelming and time-consuming. With so many applicants and competition for each job, it's important to have a well-thought-out strategy to increase your chances of success. By creating a strong resume, writing a convincing cover letter, preparing for job interviews, and following up with employers, you can make a positive impression and stand out from the crowd. Additionally, networking and staying up-to-date on industry trends can also help you find the right job opportunity. Remember, job search is a marathon, not a sprint, and with persistence and determination, you can find the job that's right for you.`,
     textAlign: "center",
     // margin: ["0px 172px", "0px 172px", "0px 134px", "30px 172px", "30px 250px"],
     margin: ["10px 0px", "10px 0px", "20px 50px", "20px 0px", "20px 0px"],
@@ -449,7 +422,9 @@ export const seventhContent = [
     id: "content",
     fontSize: ["16px", "16px", "16px", "20px", "20px"],
     className: "medium-text",
-    text: `Simply creating a resume is not enough - you want a resume that stands out. In the e-book, we teach you how to do just that:`,
+    text: `The job search process is not just about submitting your resume and cover letter and waiting for a response. It's about making a lasting impression and demonstrating your value as a potential employee. In the Job Search Masterclass e-book, Novoresume provides valuable tips and strategies for making the most of each step of the process, from networking and researching companies, to preparing for job interviews and following up with employers. With its focus on real-world advice and practical tips, the e-book is a must-read for anyone looking to take their job search to the next level.
+    One of the key areas covered in the e-book is the job interview. Interviews can be nerve-wracking, but with the right preparation and strategy, you can shine and impress the hiring manager. In the e-book, you'll learn about common interview questions and how to answer them effectively, as well as tips for making a lasting impression and demonstrating your interest in the role. With its practical advice and real-world examples, the Job Search Masterclass e-book is the ultimate resource for anyone looking to ace the job interview and secure their dream job.
+    `,
     textAlign: "start",
     margin: [
       "30px 0px 10px 0px",
@@ -464,43 +439,6 @@ export const seventhContent = [
     listItems: [
       {
         imageUrl: "/creating-compeling-resume.png",
-      },
-
-      {
-        id: "List",
-        fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        className: "medium-text",
-        text: `Pick the Best Resume Format (For Your Skill Level).`,
-        textAlign: "start",
-        lineHeight: ["24px", "24px", "24px", "36px", "36px"],
-
-        doneIcon: "MdDone",
-        iconSize: "18px",
-        iconWeight: "bold",
-      },
-      {
-        id: "List",
-        fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        className: "medium-text",
-        text: ` Learn How HR Managers Evaluate Your Resume.`,
-        textAlign: "start",
-        lineHeight: ["24px", "24px", "24px", "36px", "36px"],
-      },
-      {
-        id: "List",
-        fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        className: "medium-text",
-        text: `Make Sure Your Resume Gets Attention With an Eye-Catching Resume Summary.`,
-        textAlign: "start",
-        lineHeight: ["24px", "24px", "24px", "36px", "36px"],
-      },
-      {
-        id: "List",
-        fontSize: ["1rem", "1rem", "1rem", "1.25rem", "1.25rem"],
-        className: "medium-text",
-        text: `Beat the Applicant Tracking Systems with Resume Tailoring.`,
-        textAlign: "start",
-        lineHeight: ["1.5rem", "1.5rem", "1.5rem", "2.25rem", "2.25rem"],
       },
     ],
   },
@@ -529,7 +467,15 @@ export const eighthContent = [
   {
     id: "Sub-Heading",
     className: "medium-text",
-    text: "We wanted to make this e-book as comprehensive as possible, so we made sure to answer all the common questions job seekers have about resumes, cover letters, and so on. Some of the questions we answer are:",
+    text: `Some of the questions we answer in the Job Search Masterclass e-book include:
+How can I write a resume that gets noticed by HR managers?
+What should I include in my cover letter?
+ How do I tailor my resume to each specific job I apply for?
+ What are the most common interview questions and how should I answer them?
+How can I make a lasting impression during the interview?
+How should I follow up with the employer after the interview?
+We believe that the more you know about the job search process, the better equipped you will be to succeed. That's why we've made sure to cover every aspect of the process in our Job Search Masterclass e-book. Whether you're just starting out or you're a seasoned professional looking to take your career to the next level, this e-book is the ultimate resource for anyone looking to improve their job search skills and increase their chances of success.
+`,
     textAlign: "center",
     margin: "20px 0px",
     color: "black",
@@ -615,7 +561,7 @@ export const ninthContent = [
     id: "Sub-Heading",
     className: "medium-text",
     fontSize: ["16px", "16px", "16px", "20px", "20px"],
-    text: "When we say visual, we mean visual. The entire e-book was conceived to provide a reader-friendly experience from start to finish, using example boxes, checklists, visual resume examples, and more. Download the preview to see what we mean!",
+    text: `The Job Search Masterclass e-book is designed to be the ultimate resource for job seekers. It covers all aspects of the job search process, from creating a compelling resume to acing the interview. The e-book is visually appealing and easy to understand, with practical examples, templates, and checklists to help you put the advice into action. Whether you're a recent graduate or a senior professional, this e-book will provide you with the knowledge and skills you need to succeed in your job search. So, don't wait any longer and download it today to take your career to the next level!`,
     textAlign: "center",
     margin: "10px 0px 20px 0px",
     color: "black",
@@ -647,10 +593,11 @@ export const tenthContent = [
     className: "small-text",
     fontSize: ["16px", "16px", "16px", "20px", "20px"],
     lineHeight: ["24px", "24px", "24px", "36px", "36px"],
-    text: `We cover some of the most creative job search hacks that no one in the industry has even talked about:`,
+    text: `These creative job search hacks, combined with the comprehensive information on resumes, cover letters, and interviewing, make the Job Search Masterclass e-book a must-have resource for anyone looking to land their dream job. Get your copy today!`,
     textAlign: "start",
     color: "rgb(49,59,71)",
   },
+  
   {
     listItems: [
       {
@@ -662,23 +609,14 @@ export const tenthContent = [
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "26px", "26px"],
         className: "medium-text",
-        text: `Learn if your job application got lost in the recruiter's inbox (and when to send a follow-up)`,
+        text: `Leverage the power of social media and professional networks to increase your chances of landing the job you want`,
         textAlign: "start",
       },
       {
         id: "List",
 
         className: "medium-text",
-        text: ` Learn how long a hiring manager spent reading your resume (yes, it's possible)`,
-        textAlign: "start",
-        fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "26px", "26px"],
-      },
-      {
-        id: "List",
-
-        className: "medium-text",
-        text: `Know when you get rejected for a job long before you receive a rejection email`,
+        text: ` Maximize your chances of success by timing your job search strategically`,
         textAlign: "start",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "26px", "26px"],
@@ -687,7 +625,16 @@ export const tenthContent = [
         id: "List",
 
         className: "medium-text",
-        text: `Send a speculative application and get hired for a job that doesn't even exist`,
+        text: `Understand what hiring managers are really looking for in candidates and tailor your application accordingly`,
+        textAlign: "start",
+        fontSize: ["16px", "16px", "16px", "20px", "20px"],
+        lineHeight: ["24px", "24px", "24px", "26px", "26px"],
+      },
+      {
+        id: "List",
+
+        className: "medium-text",
+        text: `Take advantage of the latest technology and tools to streamline your job search process`,
         textAlign: "start",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "26px", "26px"],
@@ -718,7 +665,7 @@ export const lastContent = [
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "26px", "30px"],
         className: "medium-text",
-        text: `72 pages of content on resumes, interviews, cover letters, and more.`,
+        text: `Comprehensive guide to creating a convincing cover letter`,
         textAlign: "start",
       },
       {
@@ -726,7 +673,7 @@ export const lastContent = [
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "26px", "30px"],
         className: "medium-text",
-        text: ` 5 Steps to a Convincing Cover Letter (That Gets Read).`,
+        text: ` 	Visual guide with examples, illustrations, and more`,
         textAlign: "start",
       },
       {
@@ -734,7 +681,7 @@ export const lastContent = [
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "26px", "30px"],
         className: "medium-text",
-        text: `Fully visual guide with examples, illustrations, and more.`,
+        text: `	Unique job search hacks`,
         textAlign: "start",
       },
       {
@@ -742,7 +689,7 @@ export const lastContent = [
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "26px", "30px"],
         className: "medium-text",
-        text: ` 5 job search hacks (that you never even heard of).`,
+        text: ` Optimization of resume for increased visibility by resume reading software`,
         textAlign: "start",
       },
       {
@@ -750,31 +697,14 @@ export const lastContent = [
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "30px", "30px"],
         className: "medium-text",
-        text: ` Guide to optimizing your resume for resume reading software.`,
+        text: ` 	Use of the STAR method for effective interview preparation`,
         textAlign: "start",
       },
       {
         id: "List",
 
         className: "medium-text",
-        text: ` 5 job search hacks (that you never even heard of).`,
-        textAlign: "start",
-        fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "26px", "30px"],
-      },
-      {
-        id: "List",
-
-        className: "medium-text",
-        text: `How to use the STAR method to answer behavioral interview questions.`,
-        textAlign: "start",
-        fontSize: ["16px", "16px", "16px", "20px", "20px"],
-        lineHeight: ["24px", "24px", "24px", "26px", "30px"],
-      },
-      {
-        id: "List",
-        className: "medium-text",
-        text: `3 free cover letter templates.`,
+        text: `	Free customizable cover letter templates`,
         textAlign: "start",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "26px", "30px"],
@@ -783,7 +713,7 @@ export const lastContent = [
         id: "List",
 
         className: "medium-text",
-        text: ` Guide on where to find remote jobs (and how to get hired).`,
+        text: `	Exclusive tips for finding and getting hired for remote jobs`,
         textAlign: "start",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "26px", "30px"],
@@ -791,7 +721,7 @@ export const lastContent = [
       {
         id: "List",
         className: "medium-text",
-        text: `Most common job interview questions (and sample answers).`,
+        text: `In-depth analysis of common job interview questions with suggested answers`,
         textAlign: "start",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "26px", "30px"],
@@ -800,11 +730,12 @@ export const lastContent = [
         id: "List",
 
         className: "medium-text",
-        text: `“Before you go” checklist to perfect your resume.`,
+        text: ` Final checklist to ensure a flawless and optimized resume`,
         textAlign: "start",
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "26px", "30px"],
       },
+      
     ],
   },
 ];

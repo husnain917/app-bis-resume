@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import style from "../../../../styles/blog/latestPosts.module.css";
 import Image from "next/image";
-import SearchIcon from "../../../../public/searchIcon.webp";
-// import { Row, Col } from 'react-bootstrap'
-import Skeleton from "react-loading-skeleton";
 import Link from "next/link";
-import { SimpleGrid, Box } from "@chakra-ui/react";
+import { SimpleGrid, Box, Container, Text } from "@chakra-ui/react";
+import SocialIcons from "../../Social/SocialIcons";
+import ReadMoreReact from "read-more-react";
+import CommonButton from "../../commonButton/CommonButton";
+import moment from "moment";
+import { AiOutlineClockCircle } from "react-icons/ai";
 
 export default function LatestPosts({ blogs }) {
-  console.log("blogs", blogs);
-
   const [searchKey, setSearchKey] = useState("");
-
   var filterBlog = blogs?.filter(function (item) {
     return (
       item?.fields?.description
@@ -21,83 +20,365 @@ export default function LatestPosts({ blogs }) {
     );
   });
   const filteredBlogs = filterBlog?.filter((item) => item?.slug !== "test");
+  const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className={style.bgColor}>
-      <div className="mainContainer">
-        <SimpleGrid columns={{ lg: 2, sm: 1 }} spacing={10}>
-          <Box className={style.titleContainer} lg={6} md={6} sm={6} xs={12}>
-            <h1 className={`${style.title} title`}>Latest Posts</h1>
-          </Box>
-          <Box className={style.titleContainer} lg={6} md={6} sm={6} xs={12}>
-            <div className={style.searchIconContainer}>
-              <div className={style.searchIcon}>
-                <Image
-                  width="30px"
-                  height="30px"
-                  src={SearchIcon}
-                  alt="SearchIcon"
-                />
-              </div>
-              <input
-                onChange={(e) => setSearchKey(e.target.value)}
-                className={style.input}
-                placeholder="Search"
-              />
-            </div>
-          </Box>
-        </SimpleGrid>
-        <div>
-          {filteredBlogs?.length == 0 ? (
-            <div className={style.imageContainerE}>
-              <Image
-                src="/images/career/no-data-found.svg"
-                width="400px"
-                height="400px"
-                alt="No data found"
-              />
-              <h3 className={`${style.notFound} title`}>No Blogs Found</h3>
-            </div>
-          ) : (
-            <SimpleGrid
-              className={style.centerblogs}
-              columns={{ sm: 1, md: 2, lg: 3 }}
-            >
-              {filteredBlogs?.map((item, index) => {
-                const {
-                  author,
-                  category,
-                  description,
-                  body,
-                  featuredImage,
-                  publishDate,
-                  slug,
-                  title,
-                } = item.fields;
-                return (
-                  <Box key={index} style={{ margin: 10 }}>
+    <div className="mainContainer">
+      <Box
+        lg={12}
+        md={12}
+        sm={6}
+        xs={12}
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+        }}
+      >
+        <Text as="h1" className={"title"} mt={["10px"]}>
+          All Articles
+        </Text>
+      </Box>
+
+      <Box
+        maxW={["100%", "100%", "94%", "94%", "94%"]}
+        style={{
+          borderBottom: "1px solid",
+          borderColor: "#C6C6C6",
+          marginTop: "2%",
+        }}
+        ml={["", "", "5%", "5%", "5%"]}
+      ></Box>
+      <Text
+        fontStyle={"italic"}
+        ml={["5px", "5px", "40px", "50px", "60px"]}
+        mb={"20px"}
+      >
+        Featured
+      </Text>
+      <SimpleGrid
+        className={style.centerblogs}
+        columns={[1, 1, 2, 2, 2]}
+        ml={["", "", "5%", "5%", "5%", "5%"]}
+        spacing={[0, 0, 6, 6, 6]}
+      >
+        {filteredBlogs?.map((item, index) => {
+          const {
+            author,
+            category,
+            description,
+            body,
+            featuredImage,
+            publishDate,
+            slug,
+            title,
+            readingTime,
+            featured,
+          } = item.fields;
+          return (
+            <>
+              {featured === true ? (
+                <>
+                  <Box key={index} minHeight={"420px"}>
+                    <Box
+                      margin={"0 5px 5px 5px"}
+                      borderBottom={"2px solid"}
+                      borderColor={"#C6C6C6"}
+                      paddingBottom={"5%"}
+                      className={style.mainContainer}
+                      height={"auto"}
+                      minHeight={"420px"}
+                    >
+                      <Link href={`blog/[slug]`} as={`blog/${slug}`}>
+                        <Box
+                          className={style.imageContainer}
+                          style={{ height: 240, borderRadius: "5%" }}
+                        >
+                          <Image
+                            className={style.coverImage}
+                            style={{ border: "2px solid black" }}
+                            layout="fill"
+                            objectFit="cover"
+                            alt="image"
+                            src={"https:" + featuredImage.fields.file.url}
+                          />
+                        </Box>
+                      </Link>
+                      <Text as={"h3"} className={`${style.Cardtitle} subTitle`}>
+                        {title}
+                      </Text>
+                      <Box
+                        className={style.dateHeading}
+                        display={"flex"}
+                        alignItems={"center"}
+                      >
+                        <Text
+                          as={"span"}
+                          className={"xsmall-heading"}
+                          mr={"3px"}
+                        >
+                          {publishDate
+                            ? moment(publishDate).format("Do MMMM")
+                            : null}{" "}
+                          |{" "}
+                        </Text>
+                        <AiOutlineClockCircle
+                          color={"#00C8AA"}
+                          size={18}
+                          style={{ marginLeft: "3px" }}
+                        />
+                        <Text
+                          as={"span"}
+                          className={"xsmall-heading"}
+                          ml={"6px"}
+                        >
+                          {readingTime} min read
+                        </Text>
+                      </Box>
+                      <Text
+                        as={"p"}
+                        className={`${style.cardHeadingFeat} paragraph`}
+                        padding={"2px"}
+                      >
+                        <ReadMore text={description} />
+                      </Text>
+                    </Box>
+                    <Box></Box>
+                  </Box>
+                </>
+              ) : (
+                ""
+              )}
+            </>
+          );
+        })}
+      </SimpleGrid>
+      <Box
+        maxW={["100%", "100%", "96%", "96%", "96%"]}
+        style={{ borderBottom: "1px solid", borderColor: "#C6C6C6" }}
+        ml={["", "", "5%", "5%", "5%"]}
+        marginBottom={"20px"}
+        marginTop={"20px"}
+      ></Box>
+
+      <div>
+        {filteredBlogs?.length == 0 ? (
+          <div className={style.imageContainerE}>
+            <Image
+              src="/images/career/no-data-found.svg"
+              width="400px"
+              height="400px"
+              layout="fill"
+              alt="No data found"
+            />
+            <Text as={"h3"} className={`${style.notFound} title`}>
+              No Blogs Found
+            </Text>
+          </div>
+        ) : (
+          // article show
+          <SimpleGrid
+            className={style.centerblogs}
+            columns={{ sm: 1, md: 2, lg: 3 }}
+            spacing={[1, 1, 2, 5, 5]}
+            ml={["", "", "5%", "5%", "5%", "5%"]}
+          >
+            {filteredBlogs?.map((item, index) => {
+              const {
+                author,
+                category,
+                description,
+                body,
+                featuredImage,
+                publishDate,
+                slug,
+                title,
+                featured,
+                readingTime,
+              } = item.fields;
+              return (
+                <>
+                  {featured === true ? "" : ""}
+                  <Box
+                    key={index}
+                    marginBottom={"40px"}
+                    className={style.blogContainer}
+                  >
                     <Link href={`blog/[slug]`} as={`blog/${slug}`}>
-                      <div className={style.imageContainer}>
+                      <Box className={style.imageContainer}>
                         <Image
                           className={style.coverImage}
                           layout="fill"
                           objectFit="cover"
                           src={"https:" + featuredImage.fields.file.url}
                           alt="image"
+                          width={"80px"}
+                          height={"60px"}
                         />
-                      </div>
+                      </Box>
                     </Link>
                     <h3 className={`${style.Cardtitle} subTitle`}>{title}</h3>
+                    <Box
+                      className={style.dateHeading}
+                      display={"flex"}
+                      alignItems={"center"}
+                    >
+                      <Text as={"span"} className={"xsmall-heading"} mr={"4px"}>
+                        {publishDate
+                          ? moment(publishDate).format("Do MMMM YYYY")
+                          : null}{" "}
+                        |{" "}
+                      </Text>
+                      <AiOutlineClockCircle
+                        color={"#00C8AA"}
+                        size={18}
+                        style={{ marginLeft: "3px" }}
+                      />
+                      <Text as={"span"} className={"xsmall-heading"} ml={"6px"}>
+                        {readingTime} min read
+                      </Text>
+                    </Box>
                     <p className={`${style.cardHeading} paragraph`}>
-                      {description}
+                      <ReadMore text={description} />
                     </p>
                   </Box>
-                );
-              })}
-            </SimpleGrid>
-          )}
-        </div>
+                </>
+              );
+            })}
+          </SimpleGrid>
+        )}
       </div>
+
+      {expanded ? (
+        <SimpleGrid
+          className={style.centerblogs}
+          columns={{ sm: 1, md: 2, lg: 3 }}
+          spacing={[1, 1, 2, 5, 5]}
+          ml={["", "", "5%", "5%", "5%", "5%"]}
+        >
+          {filteredBlogs?.map((item, index) => {
+            const {
+              author,
+              category,
+              description,
+              body,
+              featuredImage,
+              publishDate,
+              slug,
+              title,
+              featured,
+              readingTime,
+            } = item.fields;
+            return (
+              <>
+                {featured === true ? "" : ""}
+                <Box
+                  key={index}
+                  marginBottom={"40px"}
+                  className={style.blogContainer}
+                >
+                  <Link href={`blog/[slug]`} as={`blog/${slug}`}>
+                    <Box className={style.imageContainer}>
+                      <Image
+                        className={style.coverImage}
+                        layout="fill"
+                        objectFit="cover"
+                        src={"https:" + featuredImage.fields.file.url}
+                        alt="image"
+                        width={"80px"}
+                        height={"60px"}
+                      />
+                    </Box>
+                  </Link>
+                  <h3 className={`${style.Cardtitle} subTitle`}>{title}</h3>
+                  <Box
+                    className={style.dateHeading}
+                    display={"flex"}
+                    alignItems={"center"}
+                  >
+                    <Text as={"span"} className={"xsmall-heading"} mr={"4px"}>
+                      {publishDate
+                        ? moment(publishDate).format("Do MMMM YYYY")
+                        : null}{" "}
+                      |{" "}
+                    </Text>
+                    <AiOutlineClockCircle
+                      color={"#00C8AA"}
+                      size={18}
+                      style={{ marginLeft: "3px" }}
+                    />
+                    <Text as={"span"} className={"xsmall-heading"} ml={"6px"}>
+                      {readingTime} min read
+                    </Text>
+                  </Box>
+                  <p className={`${style.cardHeading} paragraph`}>
+                    <ReadMore text={description} />
+                  </p>
+                </Box>
+              </>
+            );
+          })}
+        </SimpleGrid>
+      ) : null}
+
+      <Box
+        mt={"30px"}
+        mb={"30px"}
+        display="flex"
+        flexDirection="row"
+        alignItems={"center"}
+        justifyContent={"center"}
+      >
+        {!expanded ? (
+          <CommonButton
+            title="Load More"
+            hoverCursor={"pointer"}
+            backgroundColor={"#00C8AA"}
+            color={"whitesmoke"}
+            onClick={() => setExpanded(true)}
+            // rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
+
+            fontSize={[
+              "0.9rem",
+              "0.9rem",
+              "1.1rem",
+              "1.1rem",
+              "1.1rem",
+              "1.5rem",
+            ]}
+          />
+        ) : (
+          <Box
+            className={"small-heading"}
+            textColor="#00C8AA"
+            fontWeight={"bold"}
+          >
+            All Posts Show
+          </Box>
+        )}
+      </Box>
     </div>
   );
 }
+
+const ReadMore = ({ text }) => {
+  const [isReadMore, setIsReadMore] = useState(true);
+  const toggleReadMore = () => {
+    setIsReadMore(!isReadMore);
+  };
+  return (
+    <Text as={"p"} className="text">
+      {isReadMore ? text.slice(0, 100) : text}
+      <Text
+        as={"span"}
+        onClick={toggleReadMore}
+        color={"blue"}
+        _hover={{
+          cursor: "pointer",
+        }}
+      >
+        {isReadMore ? "...read more" : " show less"}
+      </Text>
+    </Text>
+  );
+};

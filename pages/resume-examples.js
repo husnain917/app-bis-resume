@@ -14,12 +14,12 @@ import SelectResume from "../src/components/resumeExampleData/selectResume/Selec
 import Fade from "react-reveal/Fade";
 import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
 import SideBar from "../src/components/sideBar/SideBar";
-import styles from "../styles/sideBarSection.module.css"
+import styles from "../styles/sideBarSection.module.css";
+import Navbar from "../src/components/navbar/Navbar";
 
 const ResumeExamples = () => {
-
   return (
-    <Box fontFamily={"EuclidCircularB-Light"} >
+    <Box fontFamily={"EuclidCircularB-Light"}>
       <Box bg="lightcyan" height={"auto"} width={"100wv"}>
         <WritingGuides />
       </Box>
@@ -29,7 +29,7 @@ const ResumeExamples = () => {
         justifyContent={"space-between"}
       >
         <Box
-          padding={'40px 0px'}
+          padding={"40px 0px"}
           maxW={["0%", "0%", "0%", "10%"]}
           zIndex={"1049"}
         >
@@ -61,7 +61,6 @@ const ResumeExamples = () => {
 
       <BlogPost />
       <SelectResume />
-
     </Box>
   );
 };

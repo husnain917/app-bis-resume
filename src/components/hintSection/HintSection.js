@@ -39,12 +39,12 @@ export default function HintSection() {
             color="#313B47"
             fontWeight="bold"
             textAlign="center"
-            pl={["7%", "14%"]}
-            pr={["14%"]}
+            pl={["7%", "7%"]}
+            pr={["7%"]}
             // className={"afterHeading"}
             className={"sub-heading"}
             // margin={"0 auto"}
-            lineHeight={["30px", "30px", "40px", "40px", "40px"]}
+            lineHeight={["30px", "40px", "50px", "50px", "40px"]}
           >
             Create a {"High-Impact"} Resume in Seconds.
           </Text>

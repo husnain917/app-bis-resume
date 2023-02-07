@@ -17,7 +17,7 @@ export default function CallToAction() {
           lineHeight={["30px", "30px", "36px", "50px", "50px"]}
           textAlign={["center", "center", "center", "start", "start"]}
         >
-         Get Ahead of the Competition with Our Professional Resume Builder!
+          Get Ahead of the Competition with Our Professional Resume Builder!
         </Text>
         <Box
           mt={"30px"}

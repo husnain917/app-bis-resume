@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Button } from "@chakra-ui/react";
 import ImageCrop from "./Crop/ImageCrop";
 import { canvasPreview } from "./canvasPreview";
 import { useDispatch, useSelector } from "react-redux";

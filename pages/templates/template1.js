@@ -22,6 +22,7 @@ import Security from '../../src/components/template1/Security';
 import Military from '../../src/components/template1/Military';
 import { Tooltip } from 'react-tippy';
 import Link from 'next/link';
+import { Image } from '@chakra-ui/react';
 
 class Manager extends Component {
   render() {
@@ -34,7 +35,7 @@ class Manager extends Component {
           <div className={style.swapCont}>
             <Tooltip title="Change Template" arrow distance={20}>
               <div className={style.swap}>
-                <img src="/icons/swap.png" />
+                <Image src="/icons/swap.png" alt='' />
               </div>
             </Tooltip>
           </div>

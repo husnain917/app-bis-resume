@@ -34,7 +34,7 @@ export default function DownloadModal({
                 color="white"
                 _hover={{
                     backgroundColor: 'transparent',
-                    color: '#313C4E',
+                    color: '#00c8aa',
                     transition: '0.4s',
                 }}
                 fontSize={{ base: '12px', sm: '14px', md: '16px' }}
@@ -52,7 +52,7 @@ export default function DownloadModal({
             >
                 <ModalOverlay />
                 <Box
-                    display={['none','none','none','block']}
+                    display={['none', 'none', 'none', 'block']}
                     className={styles.avator}
                 >
                     <Image
@@ -64,7 +64,7 @@ export default function DownloadModal({
                     />
                 </Box>
                 <Box
-                    display={['none','none','none','block']}
+                    display={['none', 'none', 'none', 'block']}
                     className={styles.wing}
                 >
                     <Image

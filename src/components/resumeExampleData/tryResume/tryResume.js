@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Button, Image } from "@chakra-ui/react";
+import { Box, Text, Button, Image, Link } from "@chakra-ui/react";
 import { Grid } from "@chakra-ui/react";
 import CommonButton from "../../commonButton/CommonButton";
 
@@ -20,12 +20,12 @@ const TryResume = () => {
         >
           <Box
             width={["100%", "100%", "45%", "57%", "49%"]}
-            marginBottom={["16px"]}
+            marginBottom={["24px"]}
             position="relative"
             marginRight={["0", "0", "0", "16px", "32px"]}
             flexShrink={["0", "0", "", "", "0"]}
             minWidth={["50%", "", "", "0%", "0%"]}
-            height={["320px"]}
+            height={["420px"]}
           >
             <Image
               src="./sampleTemplate.png"
@@ -51,12 +51,12 @@ const TryResume = () => {
             <Text
               fontWeight={700}
               fontSize={["2em", "2.4em", "2.5em", "3.8em", "3.8em"]}
-              lineHeight={["36px", "36px", "48px", "48px", "48px"]}
+              lineHeight={["36px", "36px", "62px", "62px", "62px"]}
               marginBottom={["20px"]}
               maxWidth={["auto", "auto", "10em", "10em", "10em"]}
               className={"sub-heading"}
             >
-              Try our Professional Resume builder now!
+              Create the perfect resume with our user-friendly resume builder
             </Text>
             <Box
               padding={[
@@ -73,26 +73,55 @@ const TryResume = () => {
                 fontSize={["16px", "16px", "16px", "16px", "16px"]}
                 lineHeight={"24px"}
               >
-                Save time with our easy 3-step resume builder. No more writer’s
-                block or formatting difficulties in Word. Rapidly make a perfect
-                resume employers love.
+                Say goodbye to writers block and formatting struggles. In just a
+                few simple steps, you can have a polished, professional resume
+                ready to impress employers. Upgrade your job search today with
+                our powerful resume tool.
               </Text>{" "}
             </Box>
             <Box display={"flex"} alignItems={"center"}>
-              <Box mx={2}>
-                <CommonButton
-                  backgroundColor={"#2CACD5"}
-                  color={"whitesmoke"}
-                  fontSize={["14x", "14px", "16px", "16px", "16px"]}
-                  height={"40px"}
-                  width={"150px"}
-                  padding={"20px"}
-                  borderRadius={"5px"}
-                  title={"Create My Resume"}
-                />
+              <Box mx={2} >
+                <Link
+                  href="/templates"
+                  _hover={{
+                    textDecoration: "none",
+                  }}
+                >
+                  <CommonButton
+                    backgroundColor={"#2CACD5"}
+                    color={"whitesmoke"}
+                    fontSize={["14x", "14px", "16px", "16px", "16px"]}
+                    height={"40px"}
+                    width={"180px"}
+                    padding={"20px"}
+                    borderRadius={"5px"}
+                    title={"Create My Resume"}
+                  />
+                </Link>
               </Box>
-              <Button fontSize={["14x", "14px", "16px", "16px", "16px"]}>
-                Resume Examples
+
+              <Button>
+                <Link
+                  href="/resume-examples"
+                  textDecoration={"none"}
+                  cursor="pointer"
+                  color="black"
+                  _hover={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                 <CommonButton
+                    backgroundColor={"#2CACD5"}
+                    color={"whitesmoke"}
+                    fontSize={["14x", "14px", "16px", "16px", "16px"]}
+                    height={"40px"}
+                    width={"180px"}
+                    padding={"20px"}
+                    borderRadius={"5px"}
+                    title={" Resume Examples"}
+                  />
+                </Link>
               </Button>
             </Box>
           </Box>
