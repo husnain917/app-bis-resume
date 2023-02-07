@@ -1,22 +1,22 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import Dnd from './Dnd';
+import React from "react";
+import { connect } from "react-redux";
+import Dnd from "./Dnd";
 import {
   addNewObj,
   deleteObjInArray,
   onBlurField,
   updateOrder,
-} from '../../../store/actions/builderAction';
-import { useDispatch } from 'react-redux';
-import Util from '../../../utils/templateUtils';
-import { sampleData } from '../../../constants/sampleData';
-import Text from './Text';
+} from "../../../store/actions/builderAction";
+import { useDispatch } from "react-redux";
+import Util from "../../../utils/templateUtils";
+import { sampleData } from "../../../constants/sampleData";
+import Text from "./Text";
 
 const Certificate = (props) => {
   const dispatch = useDispatch();
-  const path = 'certifications.items';
+  const path = "certifications.items";
   const onOrderUpdate = (datas) => {
-    const storeReorder = Util.mapOrder(data, datas, 'id');
+    const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));
   };
   const _addNewItem = () => {
@@ -43,13 +43,15 @@ const Certificate = (props) => {
     childContainerStyle,
     iconShow,
     icon,
+    maxwidth,
   } = props;
+
   const data = resumeData?.certifications?.items?.length
     ? [...resumeData?.certifications?.items]
     : [...sampleData?.data?.certifications?.items];
 
   return (
-    <div className={`${parentContainerStyle ? parentContainerStyle : ''}`}>
+    <div className={`${parentContainerStyle ? parentContainerStyle : ""}`}>
       <Dnd
         data={data}
         additem={_addNewItem}
@@ -57,8 +59,8 @@ const Certificate = (props) => {
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
           <div
-            className={`${childContainerStyle ? childContainerStyle : ''}`}
-            style={{ display: 'flex' }}
+            className={`${childContainerStyle ? childContainerStyle : ""}`}
+            style={{ display: "flex" }}
           >
             {iconShow && React.createElement(icon)}
             <div>
@@ -68,30 +70,33 @@ const Certificate = (props) => {
                   placeholder={
                     certificatePlaceholder
                       ? certificatePlaceholder
-                      : 'Certificate Name'
+                      : "Certificate Name"
                   }
                   customClass={`${certificateStyle}`}
                   path={`${path}.${index}.title`}
+                  maxWidth={maxwidth}
                 />
               )}
               {institute && (
                 <Text
                   value={item.issuer}
                   placeholder={
-                    institutePlaceholder ? issueDatePlaceholder : 'Institute'
+                    institutePlaceholder ? issueDatePlaceholder : "Institute"
                   }
                   customClass={`${instituteStyle}`}
                   path={`${path}.${index}.issuer`}
+                  maxWidth={maxwidth}
                 />
               )}
               {issueDate && (
                 <Text
                   value={item.endDate}
                   placeholder={
-                    issueDatePlaceholder ? issueDatePlaceholder : 'Issue Date'
+                    issueDatePlaceholder ? issueDatePlaceholder : "Issue Date"
                   }
                   customClass={`${issueDateStyle}`}
                   path={`${path}.${index}.endDate`}
+                  maxWidth={maxwidth}
                 />
               )}
             </div>

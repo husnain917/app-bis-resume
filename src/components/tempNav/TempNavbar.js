@@ -51,6 +51,7 @@ export default function TempNavbar({
   interest,
   certificate,
   downloadPDF,
+  downloadWord,
   leftMenu,
   setleftMenu,
 }) {
@@ -89,7 +90,7 @@ export default function TempNavbar({
           borderRadius={"100px"}
           justifyContent="center"
           py={1}
-          ml={{ base: "120px", md: "0px" }}
+          ml={{ base: "120px", lg: '120px', md: "0px" }}
           display={{ base: "none", lg: "flex" }}
         >
           <Popover>
@@ -153,7 +154,7 @@ export default function TempNavbar({
                   color: "#00c8aa",
                   transition: "0.4s",
                 }}
-                position={'relative'}
+                position={"relative"}
               >
                 <SettingsIcon mr="5px" />
                 Setting
@@ -162,7 +163,10 @@ export default function TempNavbar({
             <SettingModal />
           </Popover>
 
-          <DownloadModal downloadPDF={downloadPDF} />
+          <DownloadModal
+            downloadPDF={downloadPDF}
+            downloadDocx={downloadWord}
+          />
           <Button
             bgColor="transparent"
             color="white"

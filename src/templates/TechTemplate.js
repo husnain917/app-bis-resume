@@ -81,12 +81,16 @@ const TechTemplate = () => {
                                 direction="row"
                                 FNameStyle={Classes.techName}
                                 SNameStyle={Classes.techName}
+                                minWidth={'180px'}
+                                
                             />
                             <Box pb={10} justifyContent={'center'} ml={1}>
-                                <Profession professionStyle={Classes.ProfessionHybrid} />
+                                <Profession professionStyle={Classes.ProfessionHybrid} 
+                                maxWidth={'380px'}
+                                />
                                 <About
                                     minW="full"
-                                    maxW="full"
+                                    maxW="180px"
                                     aboutStyle={Classes.techAbout}
                                 />
                             </Box>
@@ -110,6 +114,8 @@ const TechTemplate = () => {
                             margin="10px"
                             circleBorderColor="#319795"
                             style={Classes.techContact}
+                            maxWidth={'150px'}
+
                         />
                     </Box>
                 </HStack>
@@ -168,6 +174,9 @@ const TechTemplate = () => {
                                             degreeStyle={Classes.programText}
                                             dateStyle={Classes.date}
                                             locationStyle={Classes.date}
+                                            maxWidth={'420px'}
+                    datewidthmax={'120px'}
+
                                         />
                                     </div>
                                 </div>
@@ -224,6 +233,9 @@ const TechTemplate = () => {
                                             companyStyle={Classes.institute}
                                             locationStyle={Classes.date}
                                             summaryStyle={Classes.date}
+                                            maxWidth={'420px'}
+                    datewidthmax={'120px'}
+
                                         />
                                     </div>
                                 </div>
@@ -272,7 +284,9 @@ const TechTemplate = () => {
                                         }
                                     />
                                     {/* Skill Row Components */}
-                                    <RowSkill skillStyle={Classes.skillText} />
+                                    <RowSkill skillStyle={Classes.skillText}
+                                    maxWidth={'250px'}
+                                    />
                                 </div>
                             </div>
                         )}
@@ -321,6 +335,8 @@ const TechTemplate = () => {
                                         projectPlaceholder={'Project Name'}
                                         durationPlaceholder="Project Duration"
                                         summaryPlaceholder="Project Summary"
+                                        maxwidth={'250px'}
+
                                     />
                                 </div>
                             </div>
@@ -370,6 +386,8 @@ const TechTemplate = () => {
                                         dateStyle={Classes.description}
                                         roleStyle={Classes.description}
                                         rolePlaceholder="Role"
+                                        maxwidth={'250px'}
+                                        datewidthmax={'120px'}
                                     />
                                 </div>
                             </div>
@@ -418,6 +436,8 @@ const TechTemplate = () => {
                                         certificateStyle={Classes.projectTitleText}
                                         issueDateStyle={Classes.description}
                                         instituteStyle={Classes.description}
+                                        maxwidth={'250px'}
+
                                     />
                                 </div>
                             </div>
@@ -461,7 +481,10 @@ const TechTemplate = () => {
                                         }
                                     />
                                     {/* Language Component */}
-                                    <Language langStyle={Classes.projectTitleText} />
+                                    <Language langStyle={Classes.projectTitleText}
+                                        maxWidth={'250px'}
+                                    
+                                    />
                                 </div>
                             </div>
                         )}
@@ -504,6 +527,8 @@ const TechTemplate = () => {
                                         <Interest
                                             dndDirection="horizontal"
                                             interestStyle={Classes.skillText}
+                                        maxwidth={'250px'}
+
                                         />
                                     </div>
                                 </div>

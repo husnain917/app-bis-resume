@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import { useState, useEffect } from "react";
 import { SessionProvider } from "next-auth/react";
 import { ChakraProvider } from "@chakra-ui/react";
-import store from "../config/store";
+import store, { persistor } from "../config/store";
 import "antd/dist/antd.css";
 import "react-tippy/dist/tippy.css";
 import "slick-carousel/slick/slick.css";
@@ -11,8 +11,9 @@ import { createWrapper } from "next-redux-wrapper";
 import GoToTopBtn from "../src/components/goTopBtn/GoToTopBtn";
 import Layout from "../src/Layout";
 import { getToken } from "../src/components/localStorage/LocalStorage";
-import { redirect } from "../store/actions/AuthAction";
+import { getLoggedInUser, redirect } from "../store/actions/AuthAction";
 import { useDispatch } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 import { Grammarly } from "@grammarly/editor-sdk-react";
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const dispatch = useDispatch();
@@ -23,11 +24,17 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       let token = getToken();
       if (token.access_token) {
         dispatch(redirect());
+        console.log("sami", token);
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     setShowChild(true);
+  }, []);
+  useEffect(() => {
+    dispatch(getLoggedInUser());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!showChild) {
@@ -42,7 +49,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         <ChakraProvider>
           <Layout>
             <Grammarly clientId="client_1ELZ9wGkGZnLMaooRjbfxR">
-              <Component {...pageProps} />
+              <PersistGate loading={null} persistor={persistor}>
+                <Component {...pageProps} />
+              </PersistGate>
             </Grammarly>
           </Layout>
         </ChakraProvider>

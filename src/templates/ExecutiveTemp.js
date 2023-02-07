@@ -50,6 +50,7 @@ const ExecutiveTemp = () => {
         >
             <Box
                 minW={830}
+                maxW={830}
                 pt={8}
                 pb={2}
                 px={2}
@@ -76,9 +77,13 @@ const ExecutiveTemp = () => {
                             direction="row"
                             FNameStyle={Classes.hybridName}
                             SNameStyle={Classes.hybridName}
+                        minWidth={'280px'}
+
                         />
                         {/* Profession Section  */}
-                        <Profession professionStyle={Classes.ProfessionHybrid} />
+                        <Profession professionStyle={Classes.ProfessionHybrid}
+                        maxWidth={'300px'}
+                        />
                     </Box>
                 </HStack>
                 <HStack
@@ -92,6 +97,7 @@ const ExecutiveTemp = () => {
                         maxW={'400px'}
                         minW={'400px'}
                         aboutStyle={Classes.profile}
+                        
                     />
                 </HStack>
                 <Box
@@ -113,6 +119,8 @@ const ExecutiveTemp = () => {
                         iconSize={'20px'}
                         style={Classes.profile}
                         margin={'0px 4px 0px 4px'}
+                        maxWidth={'200px'}ç
+
                     />
                 </Box>
                 <HStack mt={5} alignItems="stretch" py={'20px'}>
@@ -167,6 +175,8 @@ const ExecutiveTemp = () => {
                                             degreeStyle={Classes.programText}
                                             dateStyle={Classes.date}
                                             locationStyle={Classes.date}
+                                            maxWidth={'420px'}
+                    datewidthmax={'120px'}
                                         />
                                     </div>
                                 </div>
@@ -222,7 +232,8 @@ const ExecutiveTemp = () => {
                                             positionStyle={Classes.programText}
                                             companyStyle={Classes.institute}
                                             locationStyle={Classes.date}
-                                            summaryStyle={Classes.date}
+                                            summaryStyle={Classes.date}maxWidth={'420px'}
+                                            datewidthmax={'120px'}
                                         />
                                     </div>
                                 </div>
@@ -264,7 +275,10 @@ const ExecutiveTemp = () => {
                                         }
                                     />
                                     {/* Skill Row Components */}
-                                    <RowSkill skillStyle={Classes.skillText} />
+                                    <RowSkill skillStyle={Classes.skillText} 
+                                    maxWidth={'220px'}
+                                    datewidthmax={'120px'}
+                                    />
                                 </div>
                             </div>
                         )}
@@ -313,6 +327,8 @@ const ExecutiveTemp = () => {
                                         projectPlaceholder={'Project Name'}
                                         durationPlaceholder="Project Duration"
                                         summaryPlaceholder="Project Summary"
+                                        maxwidth={'270px'}
+                    datewidthmax={'120px'}
                                     />
                                 </div>
                             </div>
@@ -362,6 +378,8 @@ const ExecutiveTemp = () => {
                                         dateStyle={Classes.description}
                                         roleStyle={Classes.description}
                                         rolePlaceholder="Role"
+                                        maxwidth={'270px'}
+                                        datewidthmax={'120px'}
                                     />
                                 </div>
                             </div>
@@ -410,6 +428,8 @@ const ExecutiveTemp = () => {
                                         certificateStyle={Classes.projectTitleText}
                                         issueDateStyle={Classes.description}
                                         instituteStyle={Classes.description}
+                                        maxwidth={'270px'}
+                                        datewidthmax={'120px'}
                                     />
                                 </div>
                             </div>
@@ -453,7 +473,9 @@ const ExecutiveTemp = () => {
                                         }
                                     />
                                     {/* Language Component */}
-                                    <Language langStyle={Classes.projectTitleText} />
+                                    <Language langStyle={Classes.projectTitleText}
+                                      maxWidth={'270px'}
+                                    />
                                 </div>
                             </div>
                         )}
@@ -496,6 +518,8 @@ const ExecutiveTemp = () => {
                                         <Interest
                                             dndDirection="horizontal"
                                             interestStyle={Classes.skillText}
+                                      maxwidth={'270px'}
+
                                         />
                                     </div>
                                 </div>

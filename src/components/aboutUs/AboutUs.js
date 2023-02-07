@@ -134,11 +134,11 @@ const AboutUs = () => {
           </Box>
 
           <Box maxW={["100%", "100%", "80%", "80%", "85%"]}>
-            <Box className={"section1"} padding={"50px 0px 50px 0px"}>
+            <Box className={"section1"} padding={"50px 0px 30px 0px"}>
               <Box maxW={"750px"} className={"container1"}>
                 <Box maxW={"750px"} margin={"0 auto"} fontSize={"1.1rem"}>
                   <Text
-                    my={6}
+                    my={5}
                     textAlign={[
                       "center",
                       "center",
@@ -179,11 +179,9 @@ const AboutUs = () => {
               }}
             >
               <Box
-                maxW={"950px"}
+                maxW={"1000px"}
                 width={"100%"}
-                style={{
-                  margin: "0 auto",
-                }}
+                
               >
                 {data.map((section2, index) => {
                   return (

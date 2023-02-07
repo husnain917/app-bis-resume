@@ -85,6 +85,7 @@ export default function Graph_Template() {
                         iconColor={color ? color : '#000000'}
                         margin={'10px 0px 0px 0px'}
                         parentStyle={styles.contactFont}
+                        maxWidth={"245px"}
                     />
 
                     {/* _____________ About me _____________ */}
@@ -101,6 +102,7 @@ export default function Graph_Template() {
                     <About
                         minW="100%"
                         maxW="100%"
+                        maxwidth={"280px"}
                         aboutStyle={Classes.aboutText}
                         fontColor="#fff"
                         fontWeight={'600'}
@@ -169,6 +171,9 @@ export default function Graph_Template() {
                     <Name
                         FName={true}
                         SName={true}
+                        maxWidth={"360px"}
+                        minWidth={"360px"}
+                        maxChr={38}
                         direction="column"
                         FNameStyle={styles.nameStyle}
                         SNameStyle={styles.nameStyle}
@@ -178,6 +183,7 @@ export default function Graph_Template() {
                     <Profession
                         professionStyle={styles.profileSubTitle}
                         margin={'2% 0% 10% 10%'}
+                        maxWidth={"360px"}
                         fontColor={backgroundColor ? backgroundColor : '#fff'}
                     />
                     {/* Work */}
@@ -234,6 +240,9 @@ export default function Graph_Template() {
                                         summaryStyle={Classes.description}
                                         parentContainerStyle={styles.rightContainerWork}
                                         textColor="#fff"
+                                        datewidthmax={"150px"}
+                                        maxChr={20}
+                                        maxWidth={"320px"}
                                     />
                                 </div>
                             </div>
@@ -294,6 +303,9 @@ export default function Graph_Template() {
                                         summaryStyle={Classes.description}
                                         degree_placeholder="Study Program"
                                         textColor="#fff"
+                                        datewidthmax={"150px"}
+                                        maxChr={20}
+                                        maxWidth={"320px"}
                                     />
                                 </div>
                             </div>

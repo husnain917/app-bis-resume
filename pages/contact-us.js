@@ -5,13 +5,26 @@ import CustomInput from "../src/components/contactUs/CustomInput";
 import { buttonData } from "../src/components/contactUs/buttonData";
 import CancelSubscription from "../src/components/cancelSubscription";
 import SideBar from "../src/components/sideBar/SideBar";
-
-import Link from "next/link";
-import Layout from "../src/Layout";
+import { ToastContainer } from "react-toastify";
+import { ToastError, ToastSuccess } from "../src/components/Toast";
 
 export default function ContactUs() {
   const [active, setActive] = useState("");
   const [cancel, setCancel] = useState(1);
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  // console.log("NAME", name, "EMAIL", email, "Message", message);
+  const onSubmitHandler = () => {
+    if (!email || !name || !message) {
+      ToastError("Please fill this Fields");
+      return
+    }
+    setEmail("");
+    setName("");
+    setMessage("");
+    ToastSuccess("Message successfully sent");
+  };
   const onFocunHandler = (index) => {
     setCancel(1);
     setActive(index);
@@ -31,6 +44,16 @@ export default function ContactUs() {
         justifyContent="center"
         pb="150px"
       >
+        <Box
+          w={["0%", "0%", "0%", "10%"]}
+          display={['none', 'none', 'none', 'block']}
+        >
+          <Box
+            marginTop={'8rem'}
+          >
+            <SideBar />
+          </Box>
+        </Box>
         {/* inner main div  */}
         <Box w={["100%", "100%", "98%", "70%"]} h="auto" mt="5%">
           <Text fontSize="3rem" fontWeight="750" color="#1B6672" pl="10%">
@@ -73,10 +96,9 @@ export default function ContactUs() {
                       <ContactButton
                         button={button}
                         index={index}
-                        bgColor={active === index ? "#1B6672" : "none"}
                         color={active === index ? "white" : "grey"}
                         onFocunHandler={onFocunHandler}
-                        // onClick={button.link}
+                      // onClick={button.link}
                       />
                     </div>
                   );
@@ -97,14 +119,27 @@ export default function ContactUs() {
               ) : (
                 <>
                   <Box w={["100%", "100%", "50%", "50%"]} mt="3%">
-                    <CustomInput title="Email" height="50px" />
-                    <CustomInput title="Name" marginTop="5%" height="50px" />
+                    <CustomInput
+                      title="Email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      height="50px"
+                    />
+                    <CustomInput
+                      title="Name"
+                      marginTop="5%"
+                      height="50px"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
                   </Box>
                   <Box w={["100%", "100%", "50%", "50%"]} mt="3%">
                     <CustomInput
                       title="Message"
                       height="150px"
                       paddingBottom="100px"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                     />
                   </Box>{" "}
                 </>
@@ -128,17 +163,23 @@ export default function ContactUs() {
                 Policy and Terms of Service apply.
               </Text>
               <Button
-                p="25px"
-                borderRadius="5px"
-                fontSize="1rem"
-                color="white"
-                bgColor="#1B6672"
-                pl="35px"
-                pr="35px"
-                mt={["5%", "5%", "5%", "0%"]}
-                _hover={{ bg: "#1B6672", color: " white" }}
+                height={"35px"}
+                onClick={onSubmitHandler}
+                bg={'#2CACD5'}
+                color={'white'}
+                padding="20px"
+                borderRadius={'50px'}
+                _hover={{
+                  bg: '#2CACD5',
+                  color: 'white',
+                  transition: "0.5s",
+                  boxShadow: "-1px -2px 4px 5px #8fd1e7",
+                  borderRadius: "8px",
+                }}
+                mt={'15px'}
               >
                 Send Message
+                <ToastContainer />
               </Button>
             </Box>
           </Box>

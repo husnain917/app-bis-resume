@@ -82,7 +82,8 @@ const Feedback = () => {
         feedBackHandler(user.uid);
       }
     });
-  }, [auth]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <>
       <div>
