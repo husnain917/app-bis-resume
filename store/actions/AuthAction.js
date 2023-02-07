@@ -32,7 +32,8 @@ import {
   getAdditionalUserInfo,
   sendPasswordResetEmail,
   updateEmail,
-  signOut
+  signOut,
+  deleteUser
 } from "firebase/auth";
 import { getAuth, sendEmailVerification } from "firebase/auth";
 import { ToastSuccess } from "../../src/components/Toast";
@@ -276,7 +277,22 @@ export const ChangeEmail = (setLoading, setErr, email) => async (dispatch) => {
   }
 }
 
+// delete account
 
+export const doUserDelete = () => async (dispatch) => {
+  try {
+    const user = auth?.currentUser;
+    const res = await deleteUser(user);
+    console.log(res);
+    ToastSuccess("account deleted")
+    dispatch({
+      type: USERREMOVE,
+      payload: null,
+    });
+  } catch (error) {
+    console.log("error", error);
+  }
+};
 
 
 export const doCheckUser = (uid) => async (dispatch) => {

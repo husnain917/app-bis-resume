@@ -1,3 +1,4 @@
+
 import { Box, Container, Toast } from '@chakra-ui/react'
 import React from 'react'
 import {
@@ -41,10 +42,7 @@ export default function UpdateEmailAddress() {
             }, 3000);
         }
     };
-
-
-
-
+    
     return (
 
         <div>
