@@ -9,23 +9,20 @@ import { Text as TextField } from "@chakra-ui/react";
 
 import { useState } from "react";
 
-
 function Text(props) {
   React.useEffect(() => {
     const myPara = document.getElementById(path);
     console.log("myPara", myPara?.innerText);
     if (myPara) {
       myPara.addEventListener("input", function () {
-
         console.log("TEXT >>>> ", document.getElementById(path).innerText);
 
         const text = document.getElementById(path).innerText;
         if (text.length <= 10) {
           console.log("TEXT >>>> ", document.getElementById(path).innerText);
         } else {
-          // return alert("Maximum text length reached.");
+          return alert("Maximum text length reached.");
         }
-
       });
     }
   });
@@ -43,6 +40,7 @@ function Text(props) {
   };
 
   const { value, customClass, tag, path, editable = true } = props;
+  console.log(value, "value from props");
   console.log("MAXCHR", props?.maxChr);
   const maxChr = props?.maxChr;
   console.log("maxChr", maxChr);
@@ -102,7 +100,9 @@ function Text(props) {
           onClick={() => {
             setAddBorder(true);
           }}
-        ></TextField>
+        >
+          {value}
+        </TextField>
       </GrammarlyEditorPlugin>
     </div>
   );
