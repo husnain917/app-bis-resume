@@ -119,6 +119,7 @@ const MarketingManager = () => {
                                     dateStyle={Classes.date}
                                     institutionStyle={Classes.date}
                                     margin="0px 20px 0px 0px"
+                                    maxWidth={'220px'}
                                 />
                             </div>
                         </div>
@@ -154,6 +155,8 @@ const MarketingManager = () => {
                                 <Skill
                                     skillStyle={Classes.skillText}
                                     margin="0px 20px 0px 0px"
+                                    maxwidth={'220px'}
+
                                 />
                             </div>
                         </div>
@@ -189,6 +192,8 @@ const MarketingManager = () => {
                                 <Language
                                     langStyle={Classes.skillText}
                                     margin="0px 20px 0px 0px"
+                                    maxWidth={'220px'}
+
                                 />
                             </div>
                         </div>
@@ -205,6 +210,8 @@ const MarketingManager = () => {
                         SNameStyle={Classes.lastName}
                         direction="row"
                         margin="60px 0px 0px 30px"
+                        maxchr={20}
+                        minWidth={'300px'}
                     />
                     <Profession
                         professionStyle={Classes.ProfessionFashion}
@@ -254,6 +261,9 @@ const MarketingManager = () => {
                                     companyStyle={Classes.workText}
                                     dateStyle={Classes.workDate}
                                     summaryStyle={Classes.workDate}
+                        maxWidth={'400px'}
+                        datewidthmax={'200px'}
+
                                 />
                             </div>
                         </div>
@@ -293,7 +303,7 @@ const MarketingManager = () => {
                                     phone={true}
                                     DndDirection={'horizontal'}
                                     minW={230}
-                                    maxW={230}
+                                    maxW={350}
                                     nameStyle={Classes.referenceText}
                                     professionStyle={Classes.workDate}
                                     phoneStyle={Classes.workDate}

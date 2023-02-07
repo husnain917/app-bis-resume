@@ -27,12 +27,14 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         console.log("sami", token);
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     setShowChild(true);
   }, []);
   useEffect(() => {
     dispatch(getLoggedInUser());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!showChild) {
