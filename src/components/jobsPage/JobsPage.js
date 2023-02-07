@@ -189,10 +189,10 @@ const JobsPage = () => {
                         ]}
                         lineHeight={["22px", "22px", "22px", "31px", "31px"]}
                       >
-                        The only book about the job search process that you’ll
-                        ever need. Learn how to create an impeccable resume,
-                        match it with a convincing cover letter, and ace the job
-                        interview.
+                Keep your resume concise, clear, and easy to read, using bullet points and action verbs to highlight your accomplishments.
+                Use keywords relevant to the job you are applying for, but avoid using too much jargon or technical terms.
+              Highlight your education, relevant experience, and skills, emphasizing the achievements and results you have achieved.
+              Avoid using personal pronouns and keep your resume focused on what you can offer the employer.
                       </Text>
                       <Text
                         className={"sub-heading"}

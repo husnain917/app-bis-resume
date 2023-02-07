@@ -101,8 +101,7 @@ const AboutUs = () => {
                       lineHeight={"26px"}
                       className={"small-heading"}
                     >
-                      We give you the tools, expert advice and knowledge to help
-                      you build your career and be successful
+                   At JobReady, we have been empowering job seekers to achieve their career goals since 2015
                     </Text>
                   </Box>
                   <Box
@@ -148,9 +147,9 @@ const AboutUs = () => {
                     ]}
                     className={"small-text"}
                   >
-                    Since 2013, BisResume has helped more than 15 million people
-                    worldwide create stronger resumes, navigate their job
-                    search, and achieve career fulfillment.
+                   Our team of certified career coaches and resume experts work closely with each individual to
+                    understand their unique skills and experiences, and use that knowledge to create a personalized 
+                    and effective job search strategy. 
                   </Text>
                   <Text
                     textAlign={[
@@ -162,10 +161,10 @@ const AboutUs = () => {
                     ]}
                     className={"small-text"}
                   >
-                    Our team of experts is dedicated to helping you every step
-                    of the way, from using our tools to create a showstopping
-                    resume and cover letter to providing professional interview
-                    tips and career guidance.
+                    Whether it's crafting a compelling resume and cover letter, preparing for interviews,
+                     or providing ongoing career guidance, we are dedicated to helping our clients stand out 
+                     in today's competitive job market and land the job of their dreams. So, JobReady is the perfect 
+                     solution for your career search journey.
                   </Text>
                 </Box>
               </Box>
