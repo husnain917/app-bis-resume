@@ -80,6 +80,7 @@ export default function Templatebrand() {
                         iconColor={color ? color : '#f8f9fa'}
                         margin={'10px 0px 0px 0px'}
                         parentStyle={styles.contactFont}
+                        maxWidth={"245px"}
                     />
 
                     {/* _____________ About me _____________ */}
@@ -92,6 +93,7 @@ export default function Templatebrand() {
                     <About
                         minW="100%"
                         maxW="100%"
+                        maxwidth={"280px"}
                         aboutStyle={Classes.aboutText}
                         fontColor="#000000"
                         fontWeight={'600'}
@@ -147,6 +149,9 @@ export default function Templatebrand() {
                     <Name
                         FName={true}
                         SName={true}
+                        maxWidth={"360px"}
+                        minWidth={"360px"}
+                        maxChr={38}
                         direction="column"
                         FNameStyle={styles.nameStyle}
                         SNameStyle={styles.nameStyle}
@@ -156,6 +161,7 @@ export default function Templatebrand() {
                     <Profession
                         professionStyle={styles.profileSubTitle}
                         margin={'2% 0% 10% 10%'}
+                        maxWidth={"360px"}
                         fontColor={backgroundColor ? backgroundColor : '#000000'}
                     />
                     {/* Work */}
@@ -198,6 +204,9 @@ export default function Templatebrand() {
                                         summaryStyle={Classes.description}
                                         parentContainerStyle={styles.rightContainerWork}
                                         textColor="#000000"
+                                        datewidthmax={"150px"}
+                                        maxChr={20}
+                                        maxWidth={"360px"}
                                     />
                                 </div>
                             </div>
@@ -244,6 +253,9 @@ export default function Templatebrand() {
                                         summaryStyle={Classes.description}
                                         degree_placeholder="Study Program"
                                         textColor="#000000"
+                                        datewidthmax={"150px"}
+                                        maxChr={20}
+                                        maxWidth={"360px"}
                                     />
                                 </div>
                             </div>
