@@ -139,8 +139,8 @@ export default function Pricing() {
             className="only-font-family"
             fontSize={["1em", "1em", "1em", "1.1em", "1.1em", "1.3em"]}
           >
-            Don't hesitate to reach out to us for any assistance with our 
-            Free account or services. We are here to help you get the most out of ElitePro.
+            {`Don't hesitate to reach out to us for any assistance with our 
+            Free account or services. We are here to help you get the most out of ElitePro.`}
 
 
           </Text>
