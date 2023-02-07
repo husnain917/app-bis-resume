@@ -85,6 +85,7 @@ export const thirdContent = [
   {
     listItems: [
       {
+        id: "images",
         imageUrl: "/book-chapters.png",
       },
       {
@@ -305,7 +306,7 @@ export const forthContent = [
     id: "Faqitem",
     className: "medium-heading",
     fontSize: ["19px", "19px", "22px", "32px", "32px"],
-    text: "Bonus - How to hack your job search in 2022",
+    text: "Bonus - How to hack your job search in 2023",
     textAlign: "start",
     margin: "20px 0px",
     faqsContent: [
@@ -463,6 +464,7 @@ export const seventhContent = [
   {
     listItems: [
       {
+        id: "images",
         imageUrl: "/creating-compeling-resume.png",
       },
 
