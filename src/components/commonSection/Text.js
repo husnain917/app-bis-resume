@@ -75,6 +75,8 @@ function Text(props) {
             transition: "1s color",
             maxWidth: props.maxWidth,
           }}
+          lineHeight={props.lineHeight}
+          textAlign={props.textAlign}
           // style={{
 
           // broder: '1px solid',

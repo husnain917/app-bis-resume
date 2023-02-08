@@ -43,7 +43,7 @@ const Certificate = (props) => {
     childContainerStyle,
     iconShow,
     icon,
-    maxwidth,
+    maxWidth,
   } = props;
 
   const data = resumeData?.certifications?.items?.length
@@ -65,45 +65,39 @@ const Certificate = (props) => {
             {iconShow && React.createElement(icon)}
             <div>
               {certificate && (
-                <Box maxWidth={props.maxWidth}>
-                  <Text
-                    value={item.title}
-                    placeholder={
-                      certificatePlaceholder
-                        ? certificatePlaceholder
-                        : "Certificate Name"
-                    }
-                    customClass={`${certificateStyle}`}
-                    path={`${path}.${index}.title`}
-                    maxWidth={maxwidth}
-                  />
-                </Box>
+                <Text
+                  value={item.title}
+                  placeholder={
+                    certificatePlaceholder
+                      ? certificatePlaceholder
+                      : "Certificate Name"
+                  }
+                  customClass={`${certificateStyle}`}
+                  path={`${path}.${index}.title`}
+                  maxWidth={maxWidth}
+                />
               )}
               {institute && (
-                <Box maxWidth={props.maxWidth}>
-                  <Text
-                    value={item.issuer}
-                    placeholder={
-                      institutePlaceholder ? issueDatePlaceholder : "Institute"
-                    }
-                    customClass={`${instituteStyle}`}
-                    path={`${path}.${index}.issuer`}
-                    maxWidth={maxwidth}
-                  />
-                </Box>
+                <Text
+                  value={item.issuer}
+                  placeholder={
+                    institutePlaceholder ? issueDatePlaceholder : "Institute"
+                  }
+                  customClass={`${instituteStyle}`}
+                  path={`${path}.${index}.issuer`}
+                  maxWidth={maxWidth}
+                />
               )}
               {issueDate && (
-                <Box maxWidth={props.maxWidth}>
-                  <Text
-                    value={item.endDate}
-                    placeholder={
-                      issueDatePlaceholder ? issueDatePlaceholder : "Issue Date"
-                    }
-                    customClass={`${issueDateStyle}`}
-                    path={`${path}.${index}.endDate`}
-                    maxWidth={maxwidth}
-                  />
-                </Box>
+                <Text
+                  value={item.endDate}
+                  placeholder={
+                    issueDatePlaceholder ? issueDatePlaceholder : "Issue Date"
+                  }
+                  customClass={`${issueDateStyle}`}
+                  path={`${path}.${index}.endDate`}
+                  maxWidth={maxWidth}
+                />
               )}
             </div>
           </div>

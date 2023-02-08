@@ -17,6 +17,7 @@ const Name = (props) => {
     margin,
     fontColor,
     maxchr,
+    textAlign,
     maxWidth,
   } = props;
   console.log("maxChr: " + maxchr, "MAXCHR", props.maxchr);
@@ -37,6 +38,7 @@ const Name = (props) => {
             minWidth={props.maxWidth}
             maxWidth={props.minWidth}
             maxChr={props.maxChr}
+            textAlign={textAlign}
           />
         </Box>
       )}

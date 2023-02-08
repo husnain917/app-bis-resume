@@ -190,9 +190,10 @@ const SalesRepresentative = () => {
           transition="0.5s background"
           px={"20px"}
         >
-          <Box maxWidth={"200px"}>
+          <Box maxWidth={"400px"}>
             <Name
               FName={true}
+              maxChr={38}
               SName={true}
               direction="column"
               //   maxWidth={"160px"}
