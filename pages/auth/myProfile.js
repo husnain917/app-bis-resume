@@ -2,6 +2,7 @@ import {
   Avatar,
   Box,
   Button,
+  ButtonGroup,
   Checkbox,
   FormLabel,
   HStack,
@@ -37,16 +38,24 @@ import { canvasPreview } from "../../src/components/canvasPreview";
 import UseModal from "./useModal";
 import CommonButton from "../../src/components/commonButton/CommonButton";
 import { getLoggedInUser } from "../../store/actions/AuthAction";
+import { getAuth, updateEmail } from "firebase/auth";
+import { doUserDelete } from "../../store/actions/AuthAction";
+import { doLogout } from "../../store/actions/AuthAction";
+ 
+
 // import { UseModal } from "./useModal";
 
 const Profile = () => {
   const userData = useSelector((store) => store.AuthReducer?.userData);
+  console.log(userData?.uid);
   const [isOpen, setisOpen] = useState(false);
   const [showFull, setShowFull] = useState(false);
   const [scale, setScale] = useState(1);
   const [rotate, setRotate] = useState(0);
   const [crop, setCrop] = useState();
-  const [resetPass, setResetPass] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [reset,setResetPass]=useState(false)
   const imgRef = useRef(null);
   const uploadedImage = React.useRef(null);
   const isUserLoggedIn = useSelector(
@@ -77,6 +86,11 @@ const Profile = () => {
     dispatch(onBlurField(result, "profile.profileImage"));
   };
 
+
+  const deleteUs = async () => {
+    await dispatch(doUserDelete());
+    await dispatch(doLogout(setLoading))
+  }
 
   const dummyEmail = "ahsanbutt515@gmail.com";
   const dummyfirstName = "Ahsan Ali";
@@ -109,6 +123,8 @@ const Profile = () => {
   //   setGivenName(userData?.given_name);
   //   setVerifiedEmail(userData?.verified_email);
   // }, []);
+
+
 
   return (
     <>
@@ -298,7 +314,6 @@ const Profile = () => {
                     >
                       Account
                     </Text>
-
                     <Text
                       fontSize={{ base: 14, md: 16 }}
                       fontWeight="600"
@@ -364,7 +379,7 @@ const Profile = () => {
                   <Text color={"#9B9B9B"} mt={4} fontSize={"18px"}>
                     Password
                   </Text>
-                  
+
                   {verified_email ? (
                     <Text color="#fff" fontSize={14} fontWeight="500">
                       Google Account
@@ -382,7 +397,7 @@ const Profile = () => {
                           }}
                           onClick={() => setResetPass(true)}
                         >
-                        Request Password Change
+                          Request Password Change
                         </Text>
                       </Link>
                     </>
@@ -412,13 +427,20 @@ const Profile = () => {
                       Email
                     </Text>
 
-                    <Box marginTop={"20px"}>
-                      <UseModal
-                        margin={"5px 0 0 0"}
-                        onOpen={updateEmail}
-                        title={"Change"}
-                      />
-                    </Box>
+                    <Link href={"/auth/UpdateEmailAddress"}>
+                      <Text
+                        fontSize={15}
+                        fontWeight="500"
+                        color={"#00c8aa"}
+                        _hover={{
+                          textDecoration: "underline",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => setResetPass(true)}
+                      >
+                        Change Email
+                      </Text>
+                    </Link>
                   </HStack>
 
                   <Box mt={2}>
@@ -502,18 +524,51 @@ const Profile = () => {
             {/* =============== Leave Section =============== */}
             <HStack mt={4}>
               <TbArrowBack size={24} color="#fff" />
-              <Link href={"#"}>
-                <Text
-                  fontSize={{ base: 16, md: 20 }}
-                  fontWeight="700"
-                  color="#fff"
-                  letterSpacing={"0.5px"}
-                  _hover={{ color: "#00c8aa", cursor: "pointer" }}
-                >
-                  Want to leave us ?
+              <Text
+                fontSize={{ base: 16, md: 20 }}
+                fontWeight="700"
+                color="#fff"
+                letterSpacing={"0.5px"}
+                _hover={{ color: "#00c8aa", cursor: "pointer" }}
+                onClick={()=>setVisible(!visible)}
+              >
+                Want to leave us?
+              </Text>
+              </HStack>
+             {
+              visible ?
+              <Box alignItems={"center"} display="flex" flexDirection={"column"} >
+              <Text color="#fff" mt="3%" mb="1%" px="6%" >We would be sad to see you go, but here you can permanently delete your Account Details and the created Resumes/CVs/Cover Letters etc.              </Text>
+              <Box
+              h={["180px","180px","140px"]}
+              bg="#313B47"
+              w={["100%","100%","85%","85%","85%"]}
+              alignItems="center"
+              display={"flex"}
+              flexDirection="column"
+              ml="5%"
+              mt="3%"
+              borderRadius={4}
+              p={"15px"}
+            >
+              <HStack mt={2}>
+                <Text color={"#fff"} fontSize={16}>
+                  Are you sure you want to delete the account ?
                 </Text>
-              </Link>
-            </HStack>
+              </HStack>
+              <Box mt={["3%","3%","2%"]}>
+              <CommonButton
+              title="Permanently Delete"
+               backgroundColor="   #00C8AA"
+              color="white"
+              onClick={deleteUs}
+            />
+            </Box>
+            </Box>
+            </Box>
+              :null
+             }
+      
           </Box>
         </Box>
       </Box>
