@@ -82,6 +82,15 @@ export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
         type: MODAL_OPEN,
         payload: false,
       });
+      getAuth()
+        .getUser(userLoginData?.uid)
+        .then((userRecord) => {
+          // See the UserRecord reference doc for the contents of userRecord.
+          console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
+        })
+        .catch((error) => {
+          console.log("Error fetching user data:", error);
+        });
     }
   } catch (e) {
     const errorCode = e.code;
@@ -96,7 +105,17 @@ export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
     setLoading(false);
   }
 };
-
+// export const getUserResumeData = () => {
+//   getAuth()
+//     .getUser(uid)
+//     .then((userRecord) => {
+//       // See the UserRecord reference doc for the contents of userRecord.
+//       console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
+//     })
+//     .catch((error) => {
+//       console.log("Error fetching user data:", error);
+//     });
+// };
 export const doGoogleLogin =
   (terms, setLoading, setErr) => async (dispatch) => {
     const provider = new GoogleAuthProvider();
@@ -173,7 +192,6 @@ export const doSignUp =
 
       setLoadingsignup(false);
 
-
       ToastSuccess("Verification Email Sent.");
       const docRef = await addDoc(collection(db, "users"), {
         ...data,
@@ -185,7 +203,6 @@ export const doSignUp =
           payload: userData,
         });
       } else {
-
         // ToastError("This Email is already in use");
         ToastSuccess("Email Already Registered");
 
