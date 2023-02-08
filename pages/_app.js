@@ -15,6 +15,41 @@ import { getLoggedInUser, redirect } from "../store/actions/AuthAction";
 import { useDispatch } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { Grammarly } from "@grammarly/editor-sdk-react";
+import { useRouter } from "next/router";
+
+function Loading() {
+  const router = useRouter();
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const handleStart = (url) => url !== router.asPath && setLoading(true);
+    const handleComplete = (url) =>
+      url === router.asPath &&
+      setTimeout(() => {
+        setLoading(false);
+      }, 5000);
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
+
+    return () => {
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleComplete);
+      router.events.off("routeChangeError", handleComplete);
+    };
+  });
+
+  return (
+    loading && (
+      <div className="spinner-wrapper">
+        <div className="spinner"></div>
+      </div>
+    )
+  );
+}
+
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const dispatch = useDispatch();
   const [showChild, setShowChild] = useState(false);
@@ -27,14 +62,14 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         console.log("sami", token);
       }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     setShowChild(true);
   }, []);
   useEffect(() => {
     dispatch(getLoggedInUser());
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!showChild) {
@@ -50,7 +85,10 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
           <Layout>
             <Grammarly clientId="client_1ELZ9wGkGZnLMaooRjbfxR">
               <PersistGate loading={null} persistor={persistor}>
-                <Component {...pageProps} />
+                <>
+                  <Loading />
+                  <Component {...pageProps} />
+                </>
               </PersistGate>
             </Grammarly>
           </Layout>

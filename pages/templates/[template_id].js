@@ -24,7 +24,7 @@ const TemplateDetail = () => {
   // const isUserLoggedIn = useSelector(
   //   (state) => state.AuthReducer.isUserLoggedIn
   // );
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   // useEffect(()=>{
   //   if (!isUserLoggedIn) {
   //     router.push('/')
@@ -34,12 +34,12 @@ const TemplateDetail = () => {
   // if (!isUserLoggedIn) {
   //   router.push('/')
   //   dispatch(modalOpen());
-    
+
   // }
   const { template_id } = router.query;
   const [sideTempSelect, setsideTempSelect] = useState(false);
   const { width } = useWindowSizing();
-  const { downloadPDFHandler, pdfRef ,downloadWordHandler} = PDFGenerater();
+  const { downloadPDFHandler, pdfRef, downloadWordHandler } = PDFGenerater();
   const [template, settemplate] = useState();
 
   const selected =
@@ -59,10 +59,12 @@ const TemplateDetail = () => {
         interest={selected?.sections?.interest}
         certificate={selected?.sections?.certificate}
         downloadPDF={downloadPDFHandler}
-        downloadWord={()=>{downloadWordHandler({
-          ...resumeData,
-          id:selected.id
-        })}}
+        downloadWord={() => {
+          downloadWordHandler({
+            ...resumeData,
+            id: selected.id,
+          });
+        }}
         sideTempSelect={sideTempSelect}
         setsideTempSelect={setsideTempSelect}
       >

@@ -22,7 +22,6 @@ export default function Resume_Formats() {
 
   return (
     <>
-      <Navbar />
       <ResumeFormats />
       {/* content container */}
       <Container
@@ -163,7 +162,7 @@ export default function Resume_Formats() {
                 fontSize={"16px"}
               >
                 Create your own professional resume in seconds with our easy-to-use builder.
-                <Link color={"#3983fa"}>See more resume examples here.</Link>
+                <Link color={"#3983fa"} href="/templates">See more resume examples here.</Link>
               </Text>
             </Box>
 
