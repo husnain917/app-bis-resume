@@ -110,7 +110,12 @@ const SkillBaseTemp = () => {
                                         }
                                     />
                                     {/* Skill Row Components */}
-                                    <RowSkill skillStyle={Classes.baseText} bg="gray" />
+                                    <RowSkill
+                                        skillStyle={Classes.baseText}
+                                        bg="gray"
+                                        maxwidth={"220px"}
+                                        maxchr={24}
+                                    />
                                 </div>
                             </div>
                         )}
@@ -154,7 +159,10 @@ const SkillBaseTemp = () => {
                                         }
                                     />
                                     {/* Language Component */}
-                                    <Language langStyle={Classes.baseText} />
+                                    <Language
+                                        langStyle={Classes.baseText}
+                                        maxWidth={"220px"}
+                                    />
                                 </div>
                             </div>
                         )}
@@ -202,6 +210,7 @@ const SkillBaseTemp = () => {
                                             dndDirection="horizontal"
                                             interestStyle={Classes.baseText}
                                             borderColor="#fff"
+                                            maxwidth={"220px"}
                                         />
                                     </div>
                                 </div>
@@ -212,14 +221,24 @@ const SkillBaseTemp = () => {
                         <Name
                             FName={true}
                             SName={true}
+                            maxChr={38}
+                            maxWidth={"220px"}
+                            minWidth={"220px"}
                             direction="row"
                             FNameStyle={Classes.hybridName}
                             SNameStyle={Classes.hybridName}
                         />
                         {/* Profession Section  */}
-                        <Profession professionStyle={Classes.baseTempProfession} />
+                        <Profession
+                            professionStyle={Classes.baseTempProfession}
+                            maxWidth={"460px"}
+                        />
                         {/* About Section */}
-                        <About minW="full" aboutStyle={Classes.description} />
+                        <About
+                            minW="full"
+                            aboutStyle={Classes.description}
+                            maxwidth={"460px"}
+                        />
 
                         <Box
                             bg={'#313B47'}
@@ -240,6 +259,7 @@ const SkillBaseTemp = () => {
                                 iconSize={'20px'}
                                 style={Classes.profileText}
                                 margin={'0px 4px 0px 4px'}
+                                maxWidth={"120px"}
                             />
                         </Box>
                         {/* Education Section  */}
@@ -292,6 +312,9 @@ const SkillBaseTemp = () => {
                                         degreeStyle={Classes.programText}
                                         dateStyle={Classes.date}
                                         locationStyle={Classes.date}
+                                        datewidthmax={"180px"}
+                                        maxChr={20}
+                                        maxWidth={"420px"}
                                     />
                                 </div>
                             </div>
@@ -345,6 +368,9 @@ const SkillBaseTemp = () => {
                                         positionStyle={Classes.programText}
                                         companyStyle={Classes.institute}
                                         locationStyle={Classes.date}
+                                        datewidthmax={"180px"}
+                                        maxChr={20}
+                                        maxWidth={"420px"}
                                     />
                                 </div>
                             </div>
@@ -394,6 +420,7 @@ const SkillBaseTemp = () => {
                                         projectPlaceholder={'Project Name'}
                                         durationPlaceholder="Project Duration"
                                         summaryPlaceholder="Project Summary"
+                                        maxWidth={"420px"}
                                     />
                                 </div>
                             </div>
@@ -443,6 +470,8 @@ const SkillBaseTemp = () => {
                                         dateStyle={Classes.description}
                                         roleStyle={Classes.description}
                                         rolePlaceholder="Role"
+                                        maxwidth={"420px"}
+                                        datewidthmax={"200px"}
                                     />
                                 </div>
                             </div>
@@ -491,6 +520,7 @@ const SkillBaseTemp = () => {
                                         certificateStyle={Classes.projectTitleText}
                                         issueDateStyle={Classes.description}
                                         instituteStyle={Classes.description}
+                                        maxwidth={"420px"}
                                     />
                                 </div>
                             </div>

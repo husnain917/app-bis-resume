@@ -55,12 +55,16 @@ export default function Fashion_Temp() {
                         <Name
                             FName={true}
                             SName={true}
+                            maxWidth={"280px"}
+                            minWidth={"280px"}
+                            maxChr={38}
                             direction="column"
                             FNameStyle={styles.nameStyle}
                             SNameStyle={styles.nameStyle}
                         />
                         <Profession
                             professionStyle={styles.profileSubTitle}
+                            maxWidth={"280px"}
                         />
 
                         {/* _____________ Image _____________ */}
@@ -92,8 +96,8 @@ export default function Fashion_Temp() {
                             )}
                         />
                         <About
-                            minW="100%"
-                            maxW="100%"
+                            minW="90%"
+                            maxW="90%"
                             aboutStyle={Classes.aboutText}
                             fontColor="#000000"
                             fontSize="14px"
@@ -186,6 +190,7 @@ export default function Fashion_Temp() {
                             margin={'5px 0px 0px 0px'}
                             parentStyle={styles.rightContainerWork}
                             style={styles.profileText}
+                            maxWidth={"245px"}
                         />
                         {/* _____________ Work _____________ */}
                         <Box
@@ -236,6 +241,9 @@ export default function Fashion_Temp() {
                                             summaryStyle={Classes.description}
                                             parentContainerStyle={styles.rightContainerWork}
                                             textColor={'#fff'}
+                                            datewidthmax={"150px"}
+                                            maxChr={20}
+                                            maxWidth={"320px"}
                                         />
                                     </div>
                                 </div>
@@ -292,6 +300,9 @@ export default function Fashion_Temp() {
                                             summaryStyle={Classes.description}
                                             degree_placeholder="Study Program"
                                             textColor="#fff"
+                                            datewidthmax={"150px"}
+                                            maxChr={20}
+                                            maxWidth={"320px"}
                                         />
                                     </div>
                                 </div>
