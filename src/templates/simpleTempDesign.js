@@ -75,14 +75,21 @@ export default function Simple_Temp_Design() {
                             <Name
                                 FName={true}
                                 SName={true}
+                                maxChr={38}
+                                maxWidth={"220px"}
+                                minWidth={"220px"}
                                 direction="row"
                                 FNameStyle={styles.hybridName}
                                 SNameStyle={styles.hybridName}
                             />
-                            <Profession professionStyle={styles.ProfessionHybrid} />
+                            <Profession
+                                professionStyle={styles.ProfessionHybrid}
+                                maxWidth={"460px"}
+                            />
                             <About
                                 minW="100%"
                                 maxW="100%"
+                                maxwidth={"460px"}
                                 fontColor="#000000"
                                 fontSize="16px"
                                 fontWeight={600}
@@ -110,6 +117,7 @@ export default function Simple_Temp_Design() {
                             iconSize={'20px'}
                             style={styles.profileText}
                             margin={'0px 4px 0px 4px'}
+                            maxWidth={"100px"}
                         />
                     </Box>
                     <HStack mt={5} alignItems="stretch">
@@ -151,6 +159,9 @@ export default function Simple_Temp_Design() {
                                                     degreeStyle={Classes.programText}
                                                     dateStyle={Classes.date}
                                                     locationStyle={Classes.date}
+                                                    datewidthmax={"150px"}
+                                                    maxChr={20}
+                                                    maxWidth={"320px"}
                                                 />
                                             </div>
                                         </div>
@@ -195,6 +206,9 @@ export default function Simple_Temp_Design() {
                                                     companyStyle={Classes.institute}
                                                     locationStyle={Classes.date}
                                                     summaryStyle={Classes.date}
+                                                    datewidthmax={"150px"}
+                                                    maxChr={20}
+                                                    maxWidth={"320px"}
                                                 />
                                             </div>
                                         </div>
@@ -234,7 +248,11 @@ export default function Simple_Temp_Design() {
                                                     setShow({ ...show, skills: true })
                                                 }
                                             />
-                                            <RowSkill skillStyle={Classes.skillText} />
+                                            <RowSkill
+                                                skillStyle={Classes.skillText}
+                                                maxwidth={"220px"}
+                                                maxchr={24}
+                                            />
                                         </div>
                                     </div>
                                 )}
@@ -275,6 +293,7 @@ export default function Simple_Temp_Design() {
                                                 projectPlaceholder={'Project Name'}
                                                 durationPlaceholder="Project Duration"
                                                 summaryPlaceholder="Project Summary"
+                                                maxWidth={"220px"}
                                             />
                                         </div>
                                     </div>
@@ -316,6 +335,8 @@ export default function Simple_Temp_Design() {
                                                 dateStyle={Classes.description}
                                                 roleStyle={Classes.description}
                                                 rolePlaceholder="Role"
+                                                maxwidth={"220px"}
+                                                datewidthmax={"100px"}
                                             />
                                         </div>
                                     </div>
@@ -356,6 +377,7 @@ export default function Simple_Temp_Design() {
                                                 certificateStyle={Classes.projectTitleText}
                                                 issueDateStyle={Classes.description}
                                                 instituteStyle={Classes.description}
+                                                maxwidth={"220px"}
                                             />
                                         </div>
                                     </div>
@@ -390,6 +412,7 @@ export default function Simple_Temp_Design() {
                                             <Language
                                                 langStyle={Classes.projectTitleText}
                                                 margin={'0px 0px 0px 10px'}
+                                                maxWidth={"220px"}
                                             />
                                         </div>
                                     </div>
@@ -424,6 +447,7 @@ export default function Simple_Temp_Design() {
                                             <Interest
                                                 dndDirection="horizontal"
                                                 interestStyle={Classes.skillText}
+                                                maxwidth={"220px"}
                                             />
                                         </div>
                                     </div>

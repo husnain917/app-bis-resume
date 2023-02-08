@@ -1,7 +1,15 @@
 import React from "react";
 import { Grid, GridItem, Box, Image, Text } from "@chakra-ui/react";
 
-const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
+const FaqRightImage = ({
+  heading,
+  text1,
+  text2,
+  text3,
+  text4,
+  image,
+  height,
+}) => {
   return (
     <Box
       w={["100%", "100%", "100%", "1000px", "92%", "95%"]}
@@ -25,6 +33,7 @@ const FaqRightImage = ({ heading, text1, text2, text3, text4, image }) => {
         style={{
           letterSpacing: "0.3px",
         }}
+        h={height}
       >
         <GridItem pl="2" area={"textArea"} position="relative">
           <Text

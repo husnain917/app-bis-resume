@@ -59,6 +59,9 @@ export default function SoftEngineer() {
                         <Name
                             FName={true}
                             SName={true}
+                            maxWidth={"280px"}
+                            minWidth={"280px"}
+                            maxChr={38}
                             direction="column"
                             FNameStyle={styles.nameStyle}
                             SNameStyle={styles.nameStyle}
@@ -68,6 +71,7 @@ export default function SoftEngineer() {
                         <Profession
                             professionStyle={styles.profileSubTitle}
                             margin={'0% 0% 10% 0%'}
+                            maxWidth={"280px"}
                             fontColor={color ? color : '#000000'}
                         />
                         <Box
@@ -99,6 +103,7 @@ export default function SoftEngineer() {
                                 iconColor={color ? color : '#f8f9fa'}
                                 margin={'10px 0px 0px 0px'}
                                 parentStyle={styles.contactFont}
+                                maxWidth={"245px"}
                             />
                         </Box>
                         {/* _____________ About me _____________ */}
@@ -248,6 +253,9 @@ export default function SoftEngineer() {
                                             summaryStyle={Classes.description}
                                             parentContainerStyle={styles.rightContainerWork}
                                             textColor="#000000"
+                                            datewidthmax={"120px"}
+                                            maxChr={20}
+                                            maxWidth={"270px"}
                                         />
                                     </div>
                                 </div>
@@ -303,6 +311,9 @@ export default function SoftEngineer() {
                                             summaryStyle={Classes.description}
                                             degree_placeholder="Study Program"
                                             textColor="#000000"
+                                            maxWidth={"220px"}
+                                            datewidthmax={"100px"}
+                                            maxChr={20}
                                         />
                                     </div>
                                 </div>

@@ -1,25 +1,25 @@
-import { Box } from '@chakra-ui/react';
-import React from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { Box } from "@chakra-ui/react";
+import React from "react";
+import { connect, useDispatch } from "react-redux";
 import {
   addNewObj,
   deleteObjInArray,
   updateOrder,
-} from '../../../store/actions/builderAction';
-import Util from '../../../utils/templateUtils';
-import Dnd from './Dnd';
-import Text from './Text';
-import { onBlurField } from '../../../store/actions/builderAction';
-import { sampleData } from '../../../constants/sampleData';
+} from "../../../store/actions/builderAction";
+import Util from "../../../utils/templateUtils";
+import Dnd from "./Dnd";
+import Text from "./Text";
+import { onBlurField } from "../../../store/actions/builderAction";
+import { sampleData } from "../../../constants/sampleData";
 const Reference = (props) => {
-  const path = 'references.items';
+  const path = "references.items";
   const { resumeData } = props;
   const data = resumeData?.references?.items?.length
     ? [...resumeData?.references?.items]
     : [...sampleData?.data?.references?.items];
   const dispatch = useDispatch();
   const onOrderUpdate = (datas) => {
-    const storeReorder = Util.mapOrder(data, datas, 'id');
+    const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));
   };
   const _addNewItem = () => {
@@ -56,27 +56,29 @@ const Reference = (props) => {
     minW = 180,
     maxW = 180,
     margin,
+    maxWidth,
+    minWidth,
   } = props;
   return (
     <div
-      className={`${parentContainerStyle ? parentContainerStyle : ''}`}
-      style={{ margin: margin ? margin : '' }}
+      className={`${parentContainerStyle ? parentContainerStyle : ""}`}
+      style={{ margin: margin ? margin : "" }}
     >
       <Dnd
         data={data}
-        direction={DndDirection ? DndDirection : ''}
+        direction={DndDirection ? DndDirection : ""}
         additem={_addNewItem}
         reorder={(e) => onOrderUpdate(e)}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
           <Box
-            minW={DndDirection == 'horizontal' && minW}
-            maxW={DndDirection == 'horizontal' && maxW}
-            className={`${childContainerStyle ? childContainerStyle : ''}`}
+            minW={DndDirection == "horizontal" && minW}
+            maxW={DndDirection == "horizontal" && maxW}
+            className={`${childContainerStyle ? childContainerStyle : ""}`}
           >
             {name && (
               <Text
-                placeholder={namePlaceholder ? namePlaceholder : 'Name'}
+                placeholder={namePlaceholder ? namePlaceholder : "Name"}
                 value={item.name}
                 customClass={`${nameStyle}`}
                 path={`${path}.${index}.name`}
@@ -84,12 +86,14 @@ const Reference = (props) => {
                 fontSize={fontSize}
                 fontWeight={fontWeight}
                 textAlign={textAlign}
+                maxWidth={maxWidth}
+                minWidth={minWidth}
               />
             )}
             {profession && (
               <Text
                 placeholder={
-                  professionPlaceholder ? professionPlaceholder : 'Profession'
+                  professionPlaceholder ? professionPlaceholder : "Profession"
                 }
                 value={item.profession}
                 customClass={`${professionStyle}`}
@@ -98,12 +102,14 @@ const Reference = (props) => {
                 fontSize={fontSize}
                 fontWeight={fontWeight}
                 textAlign={textAlign}
+                minWidth={minWidth}
+                maxWidth={maxWidth}
               />
             )}
             {address && (
               <Text
                 placeholder={
-                  addressPlaceholder ? addressPlaceholder : 'Address'
+                  addressPlaceholder ? addressPlaceholder : "Address"
                 }
                 value={item.address}
                 customClass={`${addressStyle}`}
@@ -112,11 +118,13 @@ const Reference = (props) => {
                 fontSize={fontSize}
                 fontWeight={fontWeight}
                 textAlign={textAlign}
+                minWidth={minWidth}
+                maxWidth={maxWidth}
               />
             )}
             {phone && (
               <Text
-                placeholder={phonePlaceholder ? phonePlaceholder : 'Phone'}
+                placeholder={phonePlaceholder ? phonePlaceholder : "Phone"}
                 value={item.phone}
                 customClass={`${phoneStyle}`}
                 path={`${path}.${index}.phone`}
@@ -124,11 +132,13 @@ const Reference = (props) => {
                 fontSize={fontSize}
                 fontWeight={fontWeight}
                 textAlign={textAlign}
+                minWidth={minWidth}
+                maxWidth={maxWidth}
               />
             )}
             {email && (
               <Text
-                placeholder={emailPlaceholder ? emailPlaceholder : 'E-mail'}
+                placeholder={emailPlaceholder ? emailPlaceholder : "E-mail"}
                 value={item.email}
                 customClass={`${emailStyle}`}
                 path={`${path}.${index}.email`}
@@ -136,6 +146,8 @@ const Reference = (props) => {
                 fontSize={fontSize}
                 fontWeight={fontWeight}
                 textAlign={textAlign}
+                minWidth={minWidth}
+                maxWidth={maxWidth}
               />
             )}
           </Box>

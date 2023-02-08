@@ -177,7 +177,6 @@ export const doSignUp =
 
       setLoadingsignup(false);
 
-
       ToastSuccess("Verification Email Sent.");
       const docRef = await addDoc(collection(db, "users"), {
         ...data,
@@ -189,7 +188,6 @@ export const doSignUp =
           payload: userData,
         });
       } else {
-
         // ToastError("This Email is already in use");
         ToastSuccess("Email Already Registered");
 
