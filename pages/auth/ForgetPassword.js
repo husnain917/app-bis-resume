@@ -23,10 +23,6 @@ export default function ForgetPassword() {
   const dispatch = useDispatch();
   const notify = () => toast("Wow so easy!");
 
-
-
-
-
   const validateEmail = (email) => {
     var re =
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-z  A-Z]{2,}))$/;

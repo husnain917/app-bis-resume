@@ -10,6 +10,7 @@ import {
   updateDoc,
   arrayUnion,
   orderBy,
+
 } from "firebase/firestore";
 import { Magic } from "magic-sdk";
 import {
@@ -30,6 +31,9 @@ import {
   signInWithPopup,
   getAdditionalUserInfo,
   sendPasswordResetEmail,
+  updateEmail,
+  signOut,
+  deleteUser
 } from "firebase/auth";
 import { getAuth, sendEmailVerification } from "firebase/auth";
 
@@ -269,20 +273,56 @@ export const doLogout = (setLoading) => async (dispatch) => {
   }
 };
 
-export const passwordReset =
-  (setLoading, setErr, email) => async (dispatch) => {
+export const passwordReset = (setLoading, setErr, email) => async (dispatch) => {
+  try {
+    setLoading(true);
+    await sendPasswordResetEmail(auth, email);
+  } catch (err) {
+    const errorCode = err.code;
+    if (errorCode === "auth/user-not-found") {
+      setErr({ fieldErr: "No account exists with this email." });
+    }
+  } finally {
+    setLoading(false);
+  }
+};
+
+export const ChangeEmail = (setLoading, setErr, email) => async (dispatch) => {
+  console.log("email", email);
+
+  if (email !== fullAuth?.currentUser?.email) {
     try {
       setLoading(true);
-      await sendPasswordResetEmail(auth, email);
+      const data = await updateEmail(fullAuth?.currentUser, email);
+      console.log(data);
+      ToastSuccess("Change Email SuccessFully");
+
     } catch (err) {
-      const errorCode = err.code;
-      if (errorCode === "auth/user-not-found") {
-        setErr({ fieldErr: "No account exists with this email." });
-      }
-    } finally {
-      setLoading(false);
+      console.log(err);
     }
-  };
+  }
+  else {
+    ToastSuccess("same account not enter")
+  }
+}
+
+// delete account
+
+export const doUserDelete = () => async (dispatch) => {
+  try {
+    const user = auth?.currentUser;
+    const res = await deleteUser(user);
+    console.log(res);
+    ToastSuccess("account deleted")
+    dispatch({
+      type: USERREMOVE,
+      payload: null,
+    });
+  } catch (error) {
+    console.log("error", error);
+  }
+};
+
 
 export const doCheckUser = (uid) => async (dispatch) => {
   try {
