@@ -190,7 +190,7 @@ const SalesRepresentative = () => {
           transition="0.5s background"
           px={"20px"}
         >
-          <Box maxWidth={"200px"}>
+          <Box maxWidth={"400px"}>
             <Name
               FName={true}
               SName={true}
@@ -199,6 +199,7 @@ const SalesRepresentative = () => {
               FNameStyle={Class.fName}
               SNameStyle={Class.sName}
               margin={"38px 0px 0px 0px"}
+              maxChr={38}
             />
           </Box>
           <About aboutStyle={Class.profileText} maxW={"320px"} minW={"320px"} />
