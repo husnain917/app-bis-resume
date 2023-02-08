@@ -64,61 +64,62 @@ export const TERMS_DATA = {
     heading: "Table of Contents:",
   },
   TheNovoresumeContent: {
-    heading: "1. The BisResume Content",
+    heading: `1. What is a cookie?`,
     data: [
       {
-        text: `All of the information, content, features, and functionality provided by XYZ Company, including but not limited to directories, guides, articles, reviews, text, photographs, images, illustrations, video, source and object code, software, data, and all other matters related to our Service (collectively, the "Content"), are protected under applicable copyrights and other proprietary (including but not limited to intellectual property) rights and are the property of XYZ Company.`,
+        text: `Bisresume uses cookies to enhance the user experience, remember user preferences, and track website usage statistics.`,
       },
       {
-        text: `You may not use any framing techniques or utilize framing techniques that involve any trademark, logo, copyrighted material, or other proprietary information (including images, text, page layout, or form) of XYZ Company without the express written consent of an authorized representative of XYZ Company. Additionally, you agree not to decompile, reverse engineer or disassemble any software or other products or processes available through our Service, not to insert any code or product or manipulate the Content of our Service in any way that affects the user's experience, and not to use any data mining, robots, cancelbots, Trojan horse, or any data gathering or extraction method in connection with your use of our Service.`,
+        text: `These cookies are essential for the proper functioning of the website and cannot be disabled. Additionally, Bisresume may also use third-party cookies for targeted advertising and analytics purposes. These cookies may be transferred outside of the EU in accordance with the European Commission's standard contractual clauses for the protection of personal data.`,
       },
       {
-        text: `XYZ Company respects the intellectual property of others. If you believe that your work has been copied in a way that constitutes copyright infringement or if you are aware of any infringing material placed on our Service, please contact us.`,
-      },
-      {
-        text: `The information available on our Service is for general information purposes only. While we strive to do thorough research and keep the information up-to-date and accurate, we do not guarantee the completeness, accuracy, reliability, suitability or availability of the information. Any reliance on the information available is therefore at your own risk.`,
+        text: `Users can opt-out of these cookies by adjusting their browser settings. By continuing to use Bisresume's website, you consent to the use of cookies in accordance with this Cookie Policy.`,
       },
     ],
   },
   AcceptableUse: {
-    heading: "2. Acceptable Use",
-    description: `As a user of XYZ platform, you agree to use the platform in a responsible and lawful manner. Specifically, you agree not to:`,
+    heading: `"2. Use of cookies and web storage(browsing data) by Bisresume
+    Authentication
+    "`,
+    description: `To use Bisresume to its full potential, users need to be uniquely identified.
+    Personal Preferences & Information
+    `,
     data: [
       {
-        text: `Cause damage to the platform or impair its availability or accessibility.`,
+        text: `To give a better user experience, Bisresume uses the browsing data to remember the users personal preferences and information regarding Bisresume usage.`,
       },
       {
-        text: `Use the platform for any unlawful, illegal, fraudulent or harmful purposes.`,
+        text: `(Bisresume is not responsible for third-party cookies, for more information, please read the respective Cookie Policy. You can find a list of our third parties here.)
+        To improve Bisresume's services, for a better understanding of your needs, preferences and provide you the best experience using novoresume.com, etc. Bisresume uses third-party cookies which allows to:
+        `,
       },
       {
-        text: `Copy, store, host, transmit, send, use, publish or distribute any material that contains malicious software.`,
+        text: `Create better content that you will enjoy and will improve your job searching process & career.`,
       },
       {
-        text: `Violate the copyright or proprietary rights of others.`,
+        text: `Deliver you exclusive discounts, promotions and seasonal offers that will save you time and money.`,
       },
       {
-        text: `Conduct any automated data collection activities without express written consent.`,
+        text: `Create user personas and discover the interests of the Bisresume users and insights to improve the content, advertisements, promotions and discounts shown to you.
+        Show you tailored content for your region and unique examples, tips, and tutorials following the local recruiting trends.
+        `,
       },
       {
-        text: `Use the platform to create resumes or other documents for third parties without explicit authorization.`,
+        text: `Analyze the user journey to identify key issues and pain points where we can make improvements.`,
       },
       {
-        text: `Sell or trade any materials or documents generated by the platform to any third party.`,
+        text: `Target users with informative marketing campaigns related to our services.
+        Provide personalized recommendations for job opportunities and career development resources based on your browsing history and interests.
+        `,
       },
       {
-        text: `Transmit or send unsolicited commercial communications.`,
-      },
-      {
-        text: `Use the platform for marketing purposes without express written consent.`,
-      },
-      {
-        text: `Use the platform if you are under 18 years of age.`,
+        text: `Track the effectiveness of our marketing campaigns and measure the success of our website and services.`,
       },
     ],
     lastDescription: `It is important to note that any violation of these terms of use may result in the suspension or termination of your account.`,
   },
   Security: {
-    heading: "3. Security",
+    heading: `3. Disabling/Enabling Cookies`,
     data: `You acknowledge and understand that the transmission of data over the internet or other networks is not completely secure, and any information you transmit to BisResume may be intercepted or accessed by unauthorized parties. While BisResume has implemented commercially reasonable security measures to protect your personal information, we cannot guarantee the complete security of your information and will not be liable for any unauthorized access or use of your personal information. It is important for you to protect against unauthorized access to your account and information by selecting and protecting your password appropriately, and limiting access to your computer and browser by signing off after you have finished accessing your account.`,
   },
   LinksToOtherSoftware: {

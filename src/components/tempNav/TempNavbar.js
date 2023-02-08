@@ -90,7 +90,7 @@ export default function TempNavbar({
           borderRadius={"100px"}
           justifyContent="center"
           py={1}
-          ml={{ base: "120px", md: "0px" }}
+          ml={{ base: "120px", lg: '120px', md: "0px" }}
           display={{ base: "none", lg: "flex" }}
         >
           <Popover>
