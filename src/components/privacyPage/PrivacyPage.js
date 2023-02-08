@@ -100,7 +100,7 @@ const PrivacyPage = () => {
 
                 {/* description */}
                 <Box margin={"10px 0px 40px 0px"}>
-                  <OrderedList>
+                  <OrderedList className={"xsmall-text"}>
                     {PRIVACY_PAGE_DATA?.map((item, index) => (
                       <>
                         <ListItem key={index}>
