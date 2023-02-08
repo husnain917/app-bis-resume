@@ -20,6 +20,7 @@ import SixthSection from "./sixthSection/SixthSection";
 import ContentText from "./components/ContentText";
 import Sidebar from "../blog/Sidebar";
 import Link from "next/link";
+import Footer from "../footer/Footer";
 import styles from "../../../styles/resumeFormats.module.css";
 import {
   thirdContent,
@@ -234,7 +235,6 @@ const JobsPage = () => {
                           ) : (
                             ""
                           )}
-                          {/* <Image src={item.imageUrl} alt="will load soon" /> */}
                         </>
                       );
                     })}
@@ -767,6 +767,7 @@ const JobsPage = () => {
           </Box>
         </Box>
       </Box>
+      <Footer />
     </>
   );
 };
