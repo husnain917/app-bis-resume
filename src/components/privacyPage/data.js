@@ -81,7 +81,7 @@ export const CONTACT_US_DATA = [
         item: "The user should always have the freedom of choice, so if you disagree with the Privacy Policy, please do not use BisResume ApS’s. ",
       },
       {
-        item: "The Privacy Policy was last modified on 27/April/2021.",
+        item: "The Privacy Policy was last modified on 07/February/2023.",
       },
     ],
   },
@@ -104,13 +104,19 @@ export const PRIVACY_DATA = {
     ],
     data: [
       {
-        text: "This chapter informs you of our policies regarding the collection, use, and disclosure of the Personal Data we receive from users of BisResume ApS’s, in accordance with the laws of Denmark and the European Union regarding the data protection.",
+        text: `"By using Bisresume, you consent to the use of cookies in accordance with our Cookie Policy. Bisresume uses cookies to improve your browsing experience, personalize content and ads, provide social media features, and analyze traffic."`,
       },
       {
-        text: "By using BisResume ApS’s, you agree to the collection and use of information in agreement with this policy.",
+        text: `" We may also use cookies to understand your preferences and tailor our website to better suit your needs,
+        We may use both session cookies and persistent cookies, Session cookies are temporary and are automatically deleted when you close your browser. Persistent cookies remain on your device until they expire or you choose to delete them.
+         "`,
       },
       {
-        text: "BisResume ApS’s acts as a data controller.",
+        text: `"You can choose to have your computer warn you each time a cookie is being sent,
+         or you can choose to turn off all cookies. You do this through your browser settings. 
+         Each browser is a little different, so look at your browser's Help menu to learn the
+          correct way to modify your cookies.If you disable cookies, some features of Bisresume 
+          will not function properly. By continuing to browse our website, you consent to the use of cookies."`,
       },
     ],
     description:
