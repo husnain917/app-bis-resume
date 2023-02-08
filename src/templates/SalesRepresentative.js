@@ -194,12 +194,12 @@ const SalesRepresentative = () => {
             <Name
               FName={true}
               SName={true}
+              maxChr={38}
               direction="column"
               //   maxWidth={"160px"}
               FNameStyle={Class.fName}
               SNameStyle={Class.sName}
               margin={"38px 0px 0px 0px"}
-              maxChr={38}
             />
           </Box>
           <About aboutStyle={Class.profileText} maxW={"320px"} minW={"320px"} />
