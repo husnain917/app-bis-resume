@@ -99,16 +99,14 @@ const SecondSection = () => {
           ]}
         >
           <ContentText
-            text={`Unless you have a Ph.D. in Human Resources or a few years of experience as an HR manager, you've probably struggled with at least some parts of the process.`}
+            text={`This is where resources and guides can come in handy. By learning from experts and experienced professionals, you can gain insights into best practices and avoid common mistakes.`}
             className={"medium-text"}
             fontSize={["16px", "16px", "16px", "20px", "20px"]}
             textAlign={["center", "center", "start", "start", "start"]}
             lineHeight={["30px", "30px", "25px", "30px", "30px"]}
           />
           <ContentText
-            text={`You might, for example, be unsure of how to create a resume that
-            stands out from the rest. Or you might have difficulties charming
-            the hiring manager during the interviewing process.`}
+            text={`Whether it's studying up on the latest resume writing techniques, learning how to answer interview questions with confidence, or researching a company before your interview, taking the time to prepare can make a big difference in your job search outcome. So, don't be afraid to seek out help and guidance, and remember to stay positive and confident throughout the process. With the right tools and approach, you can increase your chances of landing your dream job.`}
             className={"medium-text"}
             fontSize={["16px", "16px", "16px", "20px", "20px"]}
             textAlign={["center", "center", "start", "start", "start"]}

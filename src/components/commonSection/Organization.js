@@ -10,7 +10,7 @@ import Dnd from "./Dnd";
 import { onBlurField } from "../../../store/actions/builderAction";
 import { sampleData } from "../../../constants/sampleData";
 import Text from "./Text";
-import { HStack } from "@chakra-ui/react";
+import { HStack, Box } from "@chakra-ui/react";
 import { useDispatch } from "react-redux";
 const Organization = (props) => {
   const {
@@ -57,17 +57,19 @@ const Organization = (props) => {
         renderItem={(item, index) => (
           <div className={`${childContainerStyle ? childContainerStyle : ""}`}>
             {organization && (
-              <Text
-                value={item.name}
-                placeholder={
-                  organizationPlaceholder
-                    ? organizationPlaceholder
-                    : "Organization Name"
-                }
-                customClass={`${organizationStyle ? organizationStyle : ""}`}
-                path={`${path}.${index}.name`}
-                maxWidth={maxwidth}
-              />
+              <Box maxWidth={props.maxWidth}>
+                <Text
+                  value={item.name}
+                  placeholder={
+                    organizationPlaceholder
+                      ? organizationPlaceholder
+                      : "Organization Name"
+                  }
+                  customClass={`${organizationStyle ? organizationStyle : ""}`}
+                  path={`${path}.${index}.name`}
+                  maxWidth={maxwidth}
+                />
+              </Box>
             )}
             {date && (
               <HStack>
@@ -93,13 +95,15 @@ const Organization = (props) => {
               </HStack>
             )}
             {role && (
-              <Text
-                value={item.role}
-                placeholder={rolePlaceholder ? rolePlaceholder : "Role"}
-                customClass={`${roleStyle ? roleStyle : ""}`}
-                path={`${path}.${index}.role`}
-                maxWidth={maxwidth}
-              />
+              <Box maxWidth={props.maxWidth}>
+                <Text
+                  value={item.role}
+                  placeholder={rolePlaceholder ? rolePlaceholder : "Role"}
+                  customClass={`${roleStyle ? roleStyle : ""}`}
+                  path={`${path}.${index}.role`}
+                  maxWidth={props.maxwidth}
+                />
+              </Box>
             )}
           </div>
         )}

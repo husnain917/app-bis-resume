@@ -77,6 +77,7 @@ const Profile = () => {
     dispatch(onBlurField(result, "profile.profileImage"));
   };
 
+
   const dummyEmail = "ahsanbutt515@gmail.com";
   const dummyfirstName = "Ahsan Ali";
   const dummyLastName = "Butt";

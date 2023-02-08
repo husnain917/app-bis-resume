@@ -1,13 +1,11 @@
 import React from "react";
-import { Box, Image, Link, Text } from "@chakra-ui/react";
-import { Icon, createIcon } from "@chakra-ui/react";
+import { Box, Link, Text } from "@chakra-ui/react";
+import { Icon, } from "@chakra-ui/react";
 import { QuestionIcon } from "@chakra-ui/icons";
-import SideBar from "../components/sideBar/SideBar";
 
 export default function CancelSubscription() {
   return (
     <Box>
-      <SideBar />
       <Box display={"flex"} alignItems={"center"} flexDirection={"column"}>
         <Box
           borderWidth={"thin"}

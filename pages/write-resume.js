@@ -53,12 +53,11 @@ export default function Write_resume() {
                         >
                             <Box p={["5%", "5%"]} >
 
-                                <Text fontSize={["30px", "40px", "40px"]}  className={"main-heading"} mb="3%"  >
-                                    {`Unleash Your Potential: A Comprehensive Guide to Writing a Winning Resume in 2023`}
+                                <Text fontSize={["30px", "40px", "40px"]} className={"main-heading"} mb="3%"  > {'Unleash Your Potential: A Comprehensive Guide to Writing a Winning Resume in 2023'}
                                 </Text>
 
-                                <Text fontSize={["20px"]} className={"sub-heading"} fontWeight={"bold"} >
-                                    {`Master the Art of Resume Writing: A Step-by-Step Guide for Beginners`}
+                                <Text fontSize={["20px"]} className={"sub-heading"} fontWeight={"bold"} >{'How to Write a Resume - Step by step '}
+
                                 </Text>
                                 <Text fontSize={'1rem'} className={"only-font-family"} mt={["2%", "3%", "3%"]}>
                                     {`For job seekers, crafting a strong resume is the key to unlocking the doors of opportunity. A well-written resume can lead to multiple job offers and a fulfilling career, while a weak one can leave you stuck in a job search limbo.`}

@@ -13,7 +13,6 @@ import Util from "../../../utils/templateUtils";
 import Dnd from "./Dnd";
 import Text from "./Text";
 const Interest = (props) => {
-  const { resumeData, maxwidth } = props;
   const data = resumeData?.hobbies?.items?.length
     ? [...resumeData?.hobbies?.items]
     : [...sampleData?.data?.hobbies?.items];
@@ -32,12 +31,16 @@ const Interest = (props) => {
     dispatch(deleteObjInArray(deletedPath));
   };
   const {
+    resumeData,
     dndDirection,
     interestPlaceholder,
     interestStyle,
     parentContainerStyle,
     childContainerStyle,
     borderColor,
+    maxBoxWidth,
+    maxChr,
+    maxWidth,
   } = props;
   return (
     <div className={`${parentContainerStyle ? parentContainerStyle : ""}`}>
@@ -55,6 +58,7 @@ const Interest = (props) => {
                 borderColor={borderColor ? borderColor : "blackAlpha.400"}
                 borderRadius={6}
                 m={0.5}
+                maxW={maxBoxWidth}
               >
                 <Text
                   value={item.title}
@@ -63,12 +67,13 @@ const Interest = (props) => {
                   }
                   customClass={`${interestStyle ? interestStyle : ""}`}
                   path={`${path}.${index}.title`}
-                  maxWidth={maxwidth}
+                  maxWidth={props.maxwidth}
+                  maxChr={maxChr}
                 />
               </Box>
             ) : (
               <UnorderedList>
-                <ListItem>
+                <ListItem maxW={maxWidth}>
                   <Text
                     value={item.title}
                     placeholder={
@@ -76,7 +81,7 @@ const Interest = (props) => {
                     }
                     customClass={`${interestStyle ? interestStyle : ""}`}
                     path={`${path}.${index}.title`}
-                    maxWidth={maxwidth}
+                    maxWidth={props.maxwidth}
                   />
                 </ListItem>
               </UnorderedList>

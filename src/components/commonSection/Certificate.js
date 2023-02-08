@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import Util from "../../../utils/templateUtils";
 import { sampleData } from "../../../constants/sampleData";
 import Text from "./Text";
-
+import { Box } from "@chakra-ui/react";
 const Certificate = (props) => {
   const dispatch = useDispatch();
   const path = "certifications.items";

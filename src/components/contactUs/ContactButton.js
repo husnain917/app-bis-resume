@@ -5,7 +5,6 @@ export default function ContactButton({
   button,
   index,
   onFocunHandler,
-  bgColor,
   color,
   className,
 }) {
@@ -15,7 +14,6 @@ export default function ContactButton({
         height={"35px"}
         title={button.title}
         hoverCursor={"pointer"}
-        backgroundColor={bgColor}
         color={color}
         hoverColor={"white"}
         hoverBackgroundColor={"#2CACD5"}

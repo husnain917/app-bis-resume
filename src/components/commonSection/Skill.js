@@ -85,7 +85,10 @@ const Skill = (props) => {
     DndDirection,
     margin,
     percentStyle,
+    maxwidth,
     maxWidth,
+    maxChr,
+    minWidth,
   } = props;
 
   return (
@@ -116,7 +119,7 @@ const Skill = (props) => {
                   placeholder={skillPlaceholder ? skillPlaceholder : "Skill"}
                   customClass={`${skillStyle}`}
                   path={`skills.items.${index}.title`}
-                  maxWidth={maxWidth}
+                  maxWidth={maxwidth || maxWidth}
                 />
               ) : (
                 <UnorderedList>
@@ -127,8 +130,8 @@ const Skill = (props) => {
                         skillPlaceholder ? skillPlaceholder : "Skill"
                       }
                       customClass={`${skillStyle}`}
-                      maxWidth={maxWidth}
                       path={`skills.items.${index}.title`}
+                      maxWidth={maxwidth || maxWidth}
                     />
                   </ListItem>
                 </UnorderedList>
@@ -162,6 +165,7 @@ const Skill = (props) => {
                   type="number"
                   className={`${percentageStyle}`}
                   style={{ marginLeft: "5px" }}
+                  maxWidth={maxWidth}
                 />
                 <div
                   style={{

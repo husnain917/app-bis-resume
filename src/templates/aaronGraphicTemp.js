@@ -63,7 +63,7 @@ export default function Aaron_Graphic_Temp() {
                 FNameStyle={styles.nameStyle}
                 SNameStyle={styles.nameStyle}
               />
-              <Profession professionStyle={styles.profileSubTitle} />
+              <Profession professionStyle={styles.profileSubTitle}  maxWidth={'650px'} />
             </Box>
             {/* _____________ Contact Us _____________ */}
             <Box>
@@ -80,6 +80,7 @@ export default function Aaron_Graphic_Temp() {
                   circleSize="25px"
                   iconColor="#000000"
                   parentStyle={styles.contactFont}
+                  maxWidth={'150px'}
                 />
                 <Contact
                   email={true}
@@ -88,6 +89,7 @@ export default function Aaron_Graphic_Temp() {
                   circleSize="25px"
                   iconColor="#000000"
                   parentStyle={styles.contactFont}
+                  maxWidth={'150px'}
                 />
                 <Contact
                   linkedinURL={true}
@@ -96,6 +98,7 @@ export default function Aaron_Graphic_Temp() {
                   circleSize="25px"
                   iconColor="#000000"
                   parentStyle={styles.contactFont}
+                  maxWidth={'150px'}
                 />
                 <Contact
                   website={true}
@@ -104,6 +107,7 @@ export default function Aaron_Graphic_Temp() {
                   circleSize="25px"
                   iconColor="#000000"
                   parentStyle={styles.contactFont}
+                  maxWidth={'150px'}
                 />
               </Box>
               <Underline height="0.1em" width="100%" bgColor="#fff" />
@@ -151,6 +155,7 @@ export default function Aaron_Graphic_Temp() {
                           onSideSectionShow={() =>
                             setShow({ ...show, education: true })
                           }
+                          
                         />
                         <Education
                           degree={true}
@@ -164,6 +169,7 @@ export default function Aaron_Graphic_Temp() {
                           summaryStyle={Classes.description}
                           degree_placeholder="Study Program"
                           textColor="#fff"
+                          maxWidth={'350px'}
                         />
                       </div>
                     </div>
@@ -209,6 +215,7 @@ export default function Aaron_Graphic_Temp() {
                           summaryStyle={Classes.description}
                           parentContainerStyle={styles.parentDiv}
                           textColor="#fff"
+                          maxWidth={'350px'}
                         />
                       </div>
                     </div>
@@ -280,6 +287,8 @@ export default function Aaron_Graphic_Temp() {
                           trailColor="#fff"
                           percentageStyle={styles.percent}
                           parentContainerStyle={styles.parentDiv}
+                          maxwidth={'130px'}
+
                         />
                       </div>
                     </div>
@@ -316,6 +325,7 @@ export default function Aaron_Graphic_Temp() {
                         />
                         <Interest
                           parentContainerStyle={`${styles.parentDiv} ${styles.contactFont}`}
+                          maxwidth={'300px'}
                         />
                       </div>
                     </div>
@@ -357,6 +367,8 @@ export default function Aaron_Graphic_Temp() {
                           role={true}
                           rolePlaceholder="Role"
                           parentContainerStyle={`${styles.parentDiv} ${styles.contactFont}`}
+                          maxwidth={'300px'}
+
                         />
                       </div>
                     </div>

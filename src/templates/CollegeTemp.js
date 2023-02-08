@@ -68,7 +68,7 @@ const CollegeTemp = () => {
               />
               <Box pb={10} justifyContent={"center"} ml={1}>
                 <Profession
-                  maxwidth={"200px"}
+                  maxWidth={"420px"}
                   professionStyle={Classes.ProfessionHybrid}
                 />
                 <About
@@ -89,7 +89,7 @@ const CollegeTemp = () => {
               marginLeft="40px"
             />
           </Box>
-          <Box minW={"150"} maxW={"150"} pt={8} pr={8}>
+          <Box minW={"150px"} maxW={"150px"} pt={8} pr={8}>
             <Contact
               email={true}
               phone={true}
@@ -100,8 +100,7 @@ const CollegeTemp = () => {
               margin="10px 0px 0px 0px"
               circleBorderColor="#313c4e"
               direction="row-reverse"
-              maxwidth={"90px"}
-              minwidth={"40px"}
+              maxWidth={"80px"}
             />
           </Box>
         </HStack>
@@ -152,10 +151,9 @@ const CollegeTemp = () => {
                       degreeStyle={Classes.programText}
                       dateStyle={Classes.date}
                       locationStyle={Classes.date}
-                      maxwidth={"450px"}
-                      minwidth={"200px"}
-                      datewidthmax={"220px"}
-                      // datewidthmin={"100px"}
+                      datewidthmax={"150px"}
+                      maxChr={20}
+                      maxWidth={"320px"}
                     />
                   </div>
                 </div>
@@ -202,10 +200,9 @@ const CollegeTemp = () => {
                       companyStyle={Classes.institute}
                       locationStyle={Classes.date}
                       summaryStyle={Classes.date}
-                      maxwidth={"450px"}
-                      minwidth={"200px"}
-                      datewidthmax={"220px"}
-                      maxchr={18}
+                      datewidthmax={"150px"}
+                      maxChr={20}
+                      maxWidth={"320px"}
                     />
                   </div>
                 </div>
@@ -297,7 +294,7 @@ const CollegeTemp = () => {
                     projectPlaceholder={"Project Name"}
                     durationPlaceholder="Project Duration"
                     summaryPlaceholder="Project Summary"
-                    maxwidth={"220px"}
+                    maxWidth={"220px"}
                   />
                 </div>
               </div>
@@ -420,15 +417,9 @@ const CollegeTemp = () => {
                     }
                   />
                   {/* Language Component */}
-                  {/* <Box>
-                    <Language
-                      maxwidth={"200px"}
-                      langStyle={Classes.projectTitleText}
-                    />
-                  </Box> */}
                   <Box>
                     <Language
-                      maxwidth={"220px"}
+                      maxWidth={"220px"}
                       langStyle={Classes.projectTitleText}
                     />
                   </Box>
