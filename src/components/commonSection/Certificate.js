@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import Util from "../../../utils/templateUtils";
 import { sampleData } from "../../../constants/sampleData";
 import Text from "./Text";
-
+import { Box } from "@chakra-ui/react";
 const Certificate = (props) => {
   const dispatch = useDispatch();
   const path = "certifications.items";
@@ -65,39 +65,45 @@ const Certificate = (props) => {
             {iconShow && React.createElement(icon)}
             <div>
               {certificate && (
-                <Text
-                  value={item.title}
-                  placeholder={
-                    certificatePlaceholder
-                      ? certificatePlaceholder
-                      : "Certificate Name"
-                  }
-                  customClass={`${certificateStyle}`}
-                  path={`${path}.${index}.title`}
-                  maxWidth={maxwidth}
-                />
+                <Box maxWidth={props.maxWidth}>
+                  <Text
+                    value={item.title}
+                    placeholder={
+                      certificatePlaceholder
+                        ? certificatePlaceholder
+                        : "Certificate Name"
+                    }
+                    customClass={`${certificateStyle}`}
+                    path={`${path}.${index}.title`}
+                    maxWidth={maxwidth}
+                  />
+                </Box>
               )}
               {institute && (
-                <Text
-                  value={item.issuer}
-                  placeholder={
-                    institutePlaceholder ? issueDatePlaceholder : "Institute"
-                  }
-                  customClass={`${instituteStyle}`}
-                  path={`${path}.${index}.issuer`}
-                  maxWidth={maxwidth}
-                />
+                <Box maxWidth={props.maxWidth}>
+                  <Text
+                    value={item.issuer}
+                    placeholder={
+                      institutePlaceholder ? issueDatePlaceholder : "Institute"
+                    }
+                    customClass={`${instituteStyle}`}
+                    path={`${path}.${index}.issuer`}
+                    maxWidth={maxwidth}
+                  />
+                </Box>
               )}
               {issueDate && (
-                <Text
-                  value={item.endDate}
-                  placeholder={
-                    issueDatePlaceholder ? issueDatePlaceholder : "Issue Date"
-                  }
-                  customClass={`${issueDateStyle}`}
-                  path={`${path}.${index}.endDate`}
-                  maxWidth={maxwidth}
-                />
+                <Box maxWidth={props.maxWidth}>
+                  <Text
+                    value={item.endDate}
+                    placeholder={
+                      issueDatePlaceholder ? issueDatePlaceholder : "Issue Date"
+                    }
+                    customClass={`${issueDateStyle}`}
+                    path={`${path}.${index}.endDate`}
+                    maxWidth={maxwidth}
+                  />
+                </Box>
               )}
             </div>
           </div>

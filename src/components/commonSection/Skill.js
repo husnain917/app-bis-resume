@@ -87,6 +87,8 @@ const Skill = (props) => {
     percentStyle,
     maxwidth,
     maxWidth,
+    maxChr,
+    minWidth,
   } = props;
 
   return (
@@ -163,6 +165,7 @@ const Skill = (props) => {
                   type="number"
                   className={`${percentageStyle}`}
                   style={{ marginLeft: "5px" }}
+                  maxWidth={maxWidth}
                 />
                 <div
                   style={{

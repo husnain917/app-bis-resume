@@ -73,6 +73,7 @@ function Text(props) {
             marginTop: props.marginTop,
             fontFamily: font,
             transition: "1s color",
+            maxWidth: props.maxWidth,
           }}
           // style={{
 
