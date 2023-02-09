@@ -27,14 +27,14 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         console.log("sami", token);
       }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     setShowChild(true);
   }, []);
   useEffect(() => {
     dispatch(getLoggedInUser());
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!showChild) {
@@ -47,13 +47,13 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     return (
       <SessionProvider session={session}>
         <ChakraProvider>
-          <Layout>
-            <Grammarly clientId="client_1ELZ9wGkGZnLMaooRjbfxR">
-              <PersistGate loading={null} persistor={persistor}>
+          <Grammarly clientId="client_1ELZ9wGkGZnLMaooRjbfxR">
+            <PersistGate loading={null} persistor={persistor}>
+              <Layout>
                 <Component {...pageProps} />
-              </PersistGate>
-            </Grammarly>
-          </Layout>
+              </Layout>
+            </PersistGate>
+          </Grammarly>
         </ChakraProvider>
         <GoToTopBtn />
       </SessionProvider>

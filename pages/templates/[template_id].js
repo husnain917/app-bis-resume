@@ -18,14 +18,20 @@ import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { modalOpen } from "../../store/actions/AuthAction";
+import SaveTempData from "../../src/components/saveTempBtn/SaveTempData";
 
 const TemplateDetail = () => {
   const router = useRouter();
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer?.isUserLoggedIn
+  );
+console.log('resumeData====>',resumeData)
   // const isUserLoggedIn = useSelector(
   //   (state) => state.AuthReducer.isUserLoggedIn
   // );
-  const dispatch = useDispatch()
+  const { onClickHandler } = SaveTempData();
+  const dispatch = useDispatch();
   // useEffect(()=>{
   //   if (!isUserLoggedIn) {
   //     router.push('/')
@@ -65,11 +71,21 @@ const TemplateDetail = () => {
         interest={selected?.sections?.interest}
         certificate={selected?.sections?.certificate}
         downloadPDF={downloadPDFHandler}
+        saveDataHandler={() => {
+          console.log('isUserLoggedIn==>',isUserLoggedIn)
+          if (!isUserLoggedIn) {
+            dispatch(modalOpen());
+          } else {
+            onClickHandler({
+              templateId: selected.id,
+            });
+          }
+        }}
         downloadWord={() => {
           downloadWordHandler({
             ...resumeData,
-            id: selected.id
-          })
+            id: selected.id,
+          });
         }}
         sideTempSelect={sideTempSelect}
         setsideTempSelect={setsideTempSelect}
