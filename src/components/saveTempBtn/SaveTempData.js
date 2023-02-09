@@ -19,11 +19,12 @@ const SaveTempData = () => {
     dispatch(feedbackAction(true));
   };
   const onClickHandler = ({ templateId }) => {
-    console.log('templateId',templateId)
-    console.log('myTemplates',myTemplates)
+    console.log("templateId", templateId);
+    const oldTemp = myTemplates?.length > 0 ? myTemplates : [templateId];
+    console.log("myTemplates", oldTemp);
 
-    const allMytemplates = [...new Set([...myTemplates, templateId])];
-    console.log('uid',uid)
+    const allMytemplates = [...new Set([...oldTemp, templateId])];
+    console.log("uid", uid);
     if (uid) {
       setDoc(doc(resumeRef, uid), {
         resumeData,
