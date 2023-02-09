@@ -108,7 +108,7 @@ const BlogPost = () => {
                   <Box
                     className="compare-resumes__resume compare-resumes__resume--bad"
                     style={{
-                      backgroundImage: `url(${"/realTemp27.png"})`,
+                      backgroundImage: `url(${"/realTemp27.PNG"})`,
                       backgroundSize: "cover",
                       backgroundRepeat: false,
                     }}
