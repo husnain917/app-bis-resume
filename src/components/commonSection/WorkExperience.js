@@ -18,7 +18,10 @@ const WorkExperience = (props) => {
     : [...sampleData?.data?.work?.items];
   const dispatch = useDispatch();
   const path = "work.items";
-
+  console.log(
+    "ResumeData in Work Expirence",
+    resumeData?.work?.items[0].description
+  );
   const onOrderUpdate = (datas) => {
     const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));

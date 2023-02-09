@@ -33,22 +33,20 @@ import {
 } from "./data";
 import { MdDone } from "react-icons/md";
 import Navbar from "../blog/latestPost/navbar/Navbar";
-
+import Link from "next/link";
 const JobsPage = () => {
   return (
     <>
       <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
+        <Navbar />
         <Box
           bg={"#FFD67B"}
           display={"flex"}
           flexDirection={["column", "column", "row", "row", "row"]}
           padding={"20px 10px 0px 10px"}
         >
-          <Navbar />
           <Box w={"100%"}>
             <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
-
-
               <Box
                 bg={"#FFD67B"}
                 display={"flex"}
@@ -86,16 +84,7 @@ const JobsPage = () => {
                       justifyContent="center"
                       alignItems={"center"}
                       m={"0px 10px 0px 0px"}
-                    >
-                      <CommonButton
-                        color={"white"}
-                        title={"SALE"}
-                        padding={"0px 5px 0px 5px"}
-                        borderRadius={"none"}
-                        hoverBoxShadow={"none"}
-                        backgroundColor={"black"}
-                      />
-                    </Box>
+                    ></Box>
                     <Box mt={"-50px"}>
                       <Image
                         src={"./jobsPage/topimage1.png"}
@@ -103,22 +92,6 @@ const JobsPage = () => {
                         alt="will load soon"
                       />
                     </Box>
-                    {/* <Box
-                display={"flex"}
-                alignItems={"flex-start"}
-                m={"-50px 180px 0px 0px"}
-              >
-                <CommonButton
-                  color={"white"}
-                  title={"Quick View"}
-                  fontSize={"16px"}
-                  fontWeight={"400"}
-                  padding={"20px"}
-                  borderRadius={"none"}
-                  hoverBoxShadow={"none"}
-                  backgroundColor={"black"}
-                />
-              </Box> */}
                   </Box>
                 </Box>
                 <Box
@@ -167,7 +140,7 @@ const JobsPage = () => {
                       color={"black"}
                       mt={["1%", "1%", "3%", "-2%", "-2%"]}
                     >
-                      An E-book by Novoresume
+                      An E-book by BisResume
                     </Text>
                     <Text
                       className={"medium-text"}
@@ -177,9 +150,10 @@ const JobsPage = () => {
                       textAlign={["center", "start", "start", "start", "start"]}
                       lineHeight={["22px", "22px", "22px", "31px", "31px"]}
                     >
-                      The only book about the job search process that you’ll ever
-                      need. Learn how to create an impeccable resume, match it with
-                      a convincing cover letter, and ace the job interview.
+                      The only book about the job search process that you’ll
+                      ever need. Learn how to create an impeccable resume, match
+                      it with a convincing cover letter, and ace the job
+                      interview.
                     </Text>
                     <Text
                       className={"sub-heading"}
@@ -190,43 +164,7 @@ const JobsPage = () => {
                     >
                       Digital Download: PDF
                     </Text>
-                    <Text
-                      className={"sub-heading"}
-                      mt={[-1, -1, 1, 1, 1, 2]}
-                      color={"black"}
-                      fontSize={["18px", "18px", "18px", "22px", "22px"]}
-                    >
-                      Prices are in USD.
-                    </Text>
-                    <Text
-                      className={"medium-text"}
-                      marginTop={["-0.2rem", "-0.2rem", "1rem", "1rem", "2rem"]}
-                      color={"black"}
-                      fontSize={["18px", "18px", "18px", "21px", "21px"]}
-                      display={"flex"}
-                    >
-                      $10.99
-                      <Text ml={2} textDecoration={"line-through"}>
-                        {" "}
-                        $15.00{" "}
-                      </Text>
-                    </Text>
-                    <CommonButton
-                      height={["3.5rem", "3.5rem", "3.5rem", "3.5rem", "3.5rem"]}
-                      width={["9rem", "9rem", "9rem", "10rem", "10rem"]}
-                      padding={["20px", "20px", "20px", "24px", "24px"]}
-                      borderRadius={"40px"}
-                      title={"Buy Today"}
-                      margin={[
-                        "18px 0px",
-                        "18px 0px",
-                        "18px 0px",
-                        "18px 0px",
-                        "24px 0px",
-                      ]}
-                      fontSize={["18px", "18px", "17px", "19px", "19px"]}
-                      backgroundColor={"rgb(75,204,239)"}
-                    />
+
                     <Box
                       height={"2px"}
                       backgroundColor={"black"}
@@ -243,15 +181,23 @@ const JobsPage = () => {
                     >
                       Unsure? Check out our free sample!
                     </Text>
-                    <CommonButton
-                      className={"medium-text"}
-                      width={["12rem", "12rem", "12rem", "14rem", "14rem"]}
-                      height={["3.4rem", "3.8rem", "3.8rem", "3.8rem", "3.8rem"]}
-                      title={"Download Sample"}
-                      backgroundColor={"white"}
-                      fontSize={["16px", "16px", "17px", "20px", "20px"]}
-                      margin={"1.5rem 0rem 0rem 0rem"}
-                    />
+                    <Link href="/templates">
+                      <CommonButton
+                        className={"medium-text"}
+                        width={["12rem", "12rem", "12rem", "14rem", "14rem"]}
+                        height={[
+                          "3.4rem",
+                          "3.8rem",
+                          "3.8rem",
+                          "3.8rem",
+                          "3.8rem",
+                        ]}
+                        title={"Download Sample"}
+                        backgroundColor={"white"}
+                        fontSize={["16px", "16px", "17px", "20px", "20px"]}
+                        margin={"1.5rem 0rem 0rem 0rem"}
+                      />
+                    </Link>
                   </Box>
                 </Box>
               </Box>
@@ -268,7 +214,7 @@ const JobsPage = () => {
             </Box>
             <SecondSection />
             <ThirdSection />
-            <ForthSection />
+            {/* <ForthSection /> */}
             <FifthSection />
             <SixthSection />
             <Box>
@@ -361,7 +307,11 @@ const JobsPage = () => {
                                   fontSize={item.fontSize}
                                 >
                                   <ListItem display={"flex"} mb={2}>
-                                    <Box mr={1} color={"#00C8AA"} fontWeight={600}>
+                                    <Box
+                                      mr={1}
+                                      color={"#00C8AA"}
+                                      fontWeight={600}
+                                    >
                                       ✔
                                     </Box>
                                     <ContentText
@@ -465,44 +415,23 @@ const JobsPage = () => {
                     "0px 30px 0px 30px",
                   ]}
                 >
-                  <Text
-                    className={"small-text"}
-                    marginTop={"0.3rem"}
-                    fontSize={["18px", "18px", "18px", "26px", "26px"]}
-                    display={"flex"}
-                    flexDirection={["row"]}
-                  >
-                    $10.99
-                    <Text ml={2} textDecoration={"line-through"}>
-                      {" "}
-                      $15.00{" "}
-                    </Text>
-                  </Text>
-                  <CommonButton
-                    height={"3.5rem"}
-                    width={"10rem"}
-                    padding={"24px"}
-                    borderRadius={"40px"}
-                    title={"Buy Today"}
-                    margin={"24px 0px"}
-                    fontSize={["17px", "17px", "17px", "18px", "18px"]}
-                    backgroundColor={"rgb(75,204,239)"}
-                  />
                   <Box
                     height={"2px"}
                     backgroundColor={"black"}
                     mt={4}
                     width={"25%"}
                   ></Box>
-                  <CommonButton
-                    className={"medium-text"}
-                    width={"16rem"}
-                    height={"3.5rem"}
-                    title={"More About Job Searching"}
-                    backgroundColor={"#E6E6E6"}
-                    fontSize={["17px", "17px", "17px", "18px", "18px"]}
-                    margin={"1.5rem 0rem 0rem 0rem"}
-                  />
+                  <Link href="/templates">
+                    <CommonButton
+                      className={"medium-text"}
+                      width={"16rem"}
+                      height={"3.5rem"}
+                      title={"More About Job Searching"}
+                      backgroundColor={"#E6E6E6"}
+                      fontSize={["17px", "17px", "17px", "18px", "18px"]}
+                      margin={"1.5rem 0rem 0rem 0rem"}
+                    />
+                  </Link>
                 </Box>
               </Box>
             </Box>
@@ -522,7 +451,13 @@ const JobsPage = () => {
               gap={[4, 4, 4, 6, 6]}
               width={"100%"}
               margin={"0 auto"}
-              padding={["10px 0px", "10px 0px", "10px 0px", "10px 0px", "10px 0px"]}
+              padding={[
+                "10px 0px",
+                "10px 0px",
+                "10px 0px",
+                "10px 0px",
+                "10px 0px",
+              ]}
               bg={"#FAFAFA"}
             >
               {ninthContent?.map((item, index) => {
@@ -567,7 +502,13 @@ const JobsPage = () => {
                             />
                             <CommonButton
                               className={"medium-text"}
-                              width={["16rem", "16rem", "16rem", "20rem", "20rem"]}
+                              width={[
+                                "16rem",
+                                "16rem",
+                                "16rem",
+                                "20rem",
+                                "20rem",
+                              ]}
                               height={[
                                 "3.5rem",
                                 "3.5rem",
@@ -577,7 +518,13 @@ const JobsPage = () => {
                               ]}
                               title={item.buttonText}
                               backgroundColor={"#E6E6E6"}
-                              fontSize={["17px", "17px", "17px", "18px", "19px"]}
+                              fontSize={[
+                                "17px",
+                                "17px",
+                                "17px",
+                                "18px",
+                                "19px",
+                              ]}
                               margin={"1.5rem 0rem 0rem 0rem"}
                             />
                           </Flex>
@@ -638,8 +585,15 @@ const JobsPage = () => {
                                   className={item.className}
                                   fontSize={item.fontSize}
                                 >
-                                  <ListItem display={"flex"} mt={[2, 2, 2, 5, 5]}>
-                                    <Box mr={2} color={"#00C8AA"} fontWeight={600}>
+                                  <ListItem
+                                    display={"flex"}
+                                    mt={[2, 2, 2, 5, 5]}
+                                  >
+                                    <Box
+                                      mr={2}
+                                      color={"#00C8AA"}
+                                      fontWeight={600}
+                                    >
                                       ✔
                                     </Box>
                                     <ContentText
@@ -707,9 +661,9 @@ const JobsPage = () => {
               </Box>
             </Box>
             <Box id={"border-section"} bg={"#FFD67B"}>
-              <Box>
+              {/* <Box>
                 <Image src="yellow-wave-wbg-top.png" alt="will load soon" />
-              </Box>
+              </Box> */}
             </Box>
             <Box>
               <Box display={"flex"} flexDirection={"column"} bg={"#FED67B"}>
@@ -759,29 +713,6 @@ const JobsPage = () => {
                     {lastContent.map((item, index) => {
                       return (
                         <>
-                          {/* <ContentText
-                      id={item.id}
-                      text={item.text}
-                      className={item.className}
-                      fontSize={item.fontSize}
-                      margin={item.margin}
-                      textAlign={item.textAlign}
-                      backgroundColor={item.backgroundColor}
-                      width={item.width}
-                      marginBox={item.marginBox}
-                      fontWeight={item.fontWeight}
-                      color={item.color}
-                    />
-                    {item.id === "Heading" ? (
-                      <Box
-                        height={"2px"}
-                        backgroundColor={"black"}
-                        width={"25%"}
-                        marginY={10}
-                      ></Box>
-                    ) : (
-                      ""
-                    )} */}
                           <Box
                             padding={[
                               "0px 30px 0px 30px",
@@ -820,7 +751,9 @@ const JobsPage = () => {
                                             fontSize={item.fontSize}
                                             margin={item.margin}
                                             textAlign={item.textAlign}
-                                            backgroundColor={item.backgroundColor}
+                                            backgroundColor={
+                                              item.backgroundColor
+                                            }
                                             width={item.width}
                                             marginBox={item.marginBox}
                                             fontWeight={item.fontWeight}
@@ -880,65 +813,18 @@ const JobsPage = () => {
                                         >
                                           Digital Download: PDF
                                         </Text>
-                                        <Text
-                                          className={"sub-heading"}
-                                          mt={[1, 1, 1, 1, 1, 2]}
-                                          color={"black"}
-                                          fontSize={[
-                                            "18px",
-                                            "18px",
-                                            "18px",
-                                            "22px",
-                                            "22px",
-                                          ]}
-                                        >
-                                          Prices are in USD.
-                                        </Text>
-                                        <Text
-                                          className={"medium-text"}
-                                          mt={2}
-                                          color={"black"}
-                                          fontSize={[
-                                            "21px",
-                                            "21px",
-                                            "21px",
-                                            "26px",
-                                            "26px",
-                                          ]}
-                                        >
-                                          Job Search Masterclass
-                                        </Text>
-                                        <Text
-                                          className={"small-text"}
-                                          marginTop={"0.3rem"}
-                                          fontSize={[
-                                            "16px",
-                                            "16px",
-                                            "16px",
-                                            "20px",
-                                            "20px",
-                                          ]}
-                                          display={"flex"}
-                                        >
-                                          $10.99
-                                          <Text
-                                            ml={2}
-                                            textDecoration={"line-through"}
-                                          >
-                                            {" "}
-                                            $15.00{" "}
-                                          </Text>
-                                        </Text>
-                                        <CommonButton
-                                          height={"3.5rem"}
-                                          width={"10rem"}
-                                          padding={"24px"}
-                                          borderRadius={"40px"}
-                                          title={"Buy Today"}
-                                          margin={"24px 0px"}
-                                          fontSize={"17px"}
-                                          backgroundColor={"rgb(75,204,239)"}
-                                        />
+                                        <Link href="/templates">
+                                          <CommonButton
+                                            height={"3.5rem"}
+                                            width={"10rem"}
+                                            padding={"24px"}
+                                            borderRadius={"40px"}
+                                            title={"Download Now"}
+                                            margin={"24px 0px"}
+                                            fontSize={"17px"}
+                                            backgroundColor={"rgb(75,204,239)"}
+                                          />
+                                        </Link>
                                       </Box>
                                       <Box
                                         padding={"0px 30px 0px 30px "}
@@ -969,6 +855,6 @@ const JobsPage = () => {
         </Box>
       </Box>
     </>
-  )
-}
+  );
+};
 export default JobsPage;

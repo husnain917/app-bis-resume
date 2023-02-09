@@ -3,6 +3,7 @@ import ContentText from "../components/ContentText";
 import CommonButton from "../../commonButton/CommonButton";
 import { Box, Text, Image } from "@chakra-ui/react";
 import { fifthContent } from "../data";
+import Link from "next/link";
 
 const FifthSection = () => {
   return (
@@ -108,51 +109,23 @@ const FifthSection = () => {
             "30px 30px 0px 30px",
           ]}
         >
-          <Text
-            className={"medium-text"}
-            mt={2}
-            color={"black"}
-            fontSize={["21px", "21px", "21px", "26px", "26px"]}
-          >
-            Job Search Masterclass
-          </Text>
-          <Text
-            className={"small-text"}
-            marginTop={"0.3rem"}
-            fontSize={["18px", "18px", "18px", "26px", "26px"]}
-            display={"flex"}
-          >
-            $10.99
-            <Text ml={2} textDecoration={"line-through"}>
-              {" "}
-              $15.00{" "}
-            </Text>
-          </Text>
-          <CommonButton
-            height={"3.5rem"}
-            width={"10rem"}
-            padding={"24px"}
-            borderRadius={"40px"}
-            title={"Buy Today"}
-            margin={"24px 0px"}
-            fontSize={"17px"}
-            backgroundColor={"rgb(75,204,239)"}
-          />
           <Box
             height={"2px"}
             backgroundColor={"black"}
             mt={4}
             width={"25%"}
           ></Box>
-          <CommonButton
-            className={"medium-text"}
-            width={["12rem", "12rem", "12rem", "14rem", "14rem"]}
-            height={["3.4rem", "3.8rem", "3.8rem", "3.8rem", "3.8rem"]}
-            title={"Download Sample"}
-            backgroundColor={"#E6E6E6"}
-            fontSize={"17px"}
-            margin={"1.5rem 0rem 0rem 0rem"}
-          />
+          <Link href={"/templates"}>
+            <CommonButton
+              className={"medium-text"}
+              width={["12rem", "12rem", "12rem", "14rem", "14rem"]}
+              height={["3.4rem", "3.8rem", "3.8rem", "3.8rem", "3.8rem"]}
+              title={"Download Sample"}
+              backgroundColor={"#E6E6E6"}
+              fontSize={"17px"}
+              margin={"1.5rem 0rem 0rem 0rem"}
+            />
+          </Link>
         </Box>
       </Box>
     </Box>

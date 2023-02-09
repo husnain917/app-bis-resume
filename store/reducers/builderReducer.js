@@ -17,7 +17,7 @@ const initialState = {
 };
 
 export default function resumeEditor(state = initialState, action) {
-  console.log("Resume Data", action.payload);
+  console.log("Resume Data in BuilderReducer", action.payload);
   switch (action.type) {
     ///////// custom Cases ///////////////////////
     case actionTypes.ON_BLUR_FILED:
