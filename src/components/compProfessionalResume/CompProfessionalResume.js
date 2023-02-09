@@ -55,7 +55,7 @@ export default function CompProfessionalResume() {
             return <RightCard cardData={item} key={index} />;
           })
         ) : (
-          <CardSliderFunc cardWidth={carouselWidth} />
+          <CardSliderFunc cardWidth={carouselWidth} marginTop={"10px"} />
         )}
       </Box>
     </SimpleGrid>

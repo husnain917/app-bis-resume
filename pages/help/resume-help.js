@@ -64,7 +64,14 @@ export default function HelpCenter() {
               </Box>
             </Box>
 
-            <Box maxW={"900px"}>
+            <Box
+              maxW={"900px"}
+              display={"flex"}
+              flexDirection={"column"}
+              alignItems={"center"}
+              justifyContent={"center"}
+              ml={"-15px"}
+            >
               {helpLink.map((item) => {
                 return (
                   <>
@@ -73,7 +80,7 @@ export default function HelpCenter() {
                         width={["100%"]}
                         bgColor="white"
                         border="3px"
-                        mt="5%"
+                        // mt="5%"
                         display="flex"
                         justifyContent="row"
                         mb="30px"

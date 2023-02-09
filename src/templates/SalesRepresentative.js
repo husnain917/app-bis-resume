@@ -193,6 +193,7 @@ const SalesRepresentative = () => {
           <Box maxWidth={"400px"}>
             <Name
               FName={true}
+              maxChr={38}
               SName={true}
               maxChr={38}
               direction="column"

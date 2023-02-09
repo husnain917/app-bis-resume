@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 import Util from "../../../utils/templateUtils";
 import { sampleData } from "../../../constants/sampleData";
 import Text from "./Text";
-
+import { Box } from "@chakra-ui/react";
 const Certificate = (props) => {
   const dispatch = useDispatch();
   const path = "certifications.items";
@@ -43,7 +43,7 @@ const Certificate = (props) => {
     childContainerStyle,
     iconShow,
     icon,
-    maxwidth,
+    maxWidth,
   } = props;
 
   const data = resumeData?.certifications?.items?.length
@@ -74,7 +74,7 @@ const Certificate = (props) => {
                   }
                   customClass={`${certificateStyle}`}
                   path={`${path}.${index}.title`}
-                  maxWidth={maxwidth}
+                  maxWidth={maxWidth}
                 />
               )}
               {institute && (
@@ -85,7 +85,7 @@ const Certificate = (props) => {
                   }
                   customClass={`${instituteStyle}`}
                   path={`${path}.${index}.issuer`}
-                  maxWidth={maxwidth}
+                  maxWidth={maxWidth}
                 />
               )}
               {issueDate && (
@@ -96,7 +96,7 @@ const Certificate = (props) => {
                   }
                   customClass={`${issueDateStyle}`}
                   path={`${path}.${index}.endDate`}
-                  maxWidth={maxwidth}
+                  maxWidth={maxWidth}
                 />
               )}
             </div>

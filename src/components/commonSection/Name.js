@@ -1,4 +1,4 @@
-import { Stack } from "@chakra-ui/react";
+import { Stack, Box } from "@chakra-ui/react";
 import React from "react";
 import { useSelector } from "react-redux";
 import Text from "./Text";
@@ -18,6 +18,8 @@ const Name = (props) => {
     margin,
     fontColor,
     maxchr,
+    textAlign,
+    maxWidth,
   } = props;
   console.log("maxChr: " + maxchr, "MAXCHR", props.maxchr);
   return (
@@ -27,36 +29,41 @@ const Name = (props) => {
       m={margin ? margin : ""}
     >
       {FName && (
-        <Text
-          value={resumeData?.profile?.firstName}
-          placeholder={
-            resumeData?.profile?.firstName
-              ? resumeData?.profile?.firstName
-              : "First Name"
-          }
-          customClass={`${FNameStyle}`}
-          path={"profile.firstName"}
-          color={fontColor ? fontColor : ""}
-          minWidth={props.maxWidth}
-          maxWidth={props.minWidth}
-          maxChr={props.maxChr}
-        />
+        <Box maxWidth={props.maxCWidth}>
+          <Text
+            value={resumeData?.profile?.firstName}
+            placeholder={
+              resumeData?.profile?.firstName
+                ? resumeData?.profile?.firstName
+                : "First Name"
+            }
+            customClass={`${FNameStyle}`}
+            path={"profile.firstName"}
+            color={fontColor ? fontColor : ""}
+            minWidth={props.maxWidth}
+            maxWidth={props.minWidth}
+            maxChr={props.maxChr}
+            textAlign={textAlign}
+          />
+        </Box>
       )}
       {SName && (
-        <Text
-          value={resumeData?.profile?.lastName}
-          placeholder={
-            resumeData?.profile?.lastName
-              ? resumeData?.profile?.lastName
-              : "Last Name"
-          }
-          customClass={`${SNameStyle}`}
-          path={"profile.lastName"}
-          minWidth={props.maxWidth}
-          maxWidth={props.minWidth}
-          maxChr={props.maxChr}
-          color={fontColor ? fontColor : ""}
-        />
+        <Box maxWidth={props.maxCWidth}>
+          <Text
+            value={resumeData?.profile?.lastName}
+            placeholder={
+              resumeData?.profile?.lastName
+                ? resumeData?.profile?.lastName
+                : "Last Name"
+            }
+            customClass={`${SNameStyle}`}
+            path={"profile.lastName"}
+            minWidth={props.maxWidth}
+            maxWidth={props.minWidth}
+            maxChr={props.maxChr}
+            color={fontColor ? fontColor : ""}
+          />
+        </Box>
       )}
     </Stack>
   );

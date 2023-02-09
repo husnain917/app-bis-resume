@@ -16,6 +16,7 @@ const About = (props) => {
     minW,
     margin,
     maxwidth,
+    minWidth,
   } = props;
   return (
     <Box
@@ -37,6 +38,7 @@ const About = (props) => {
         fontWeight={fontWeight}
         textAlign={textAlign}
         maxWidth={maxwidth}
+        minWidth={minWidth}
       />
     </Box>
   );

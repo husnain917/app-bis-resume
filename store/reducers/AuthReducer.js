@@ -6,6 +6,7 @@ import {
   ACTIVE_USER,
   REDIRECT,
   MODAL_OPEN,
+  USERREMOVE
 } from "../type/Type";
 
 const initialState = {
@@ -36,13 +37,14 @@ function AuthReducer(state = initialState, action) {
       };
     }
 
-    case LOGOUT: {
+    case USERREMOVE: {
       return {
         ...state,
         isUserLoggedIn: false,
         user: null,
       };
     }
+
     case ACTIVE_USER: {
       return {
         ...state,
@@ -50,7 +52,13 @@ function AuthReducer(state = initialState, action) {
         userData: action.payload,
       };
     }
-
+    case LOGOUT: {
+      return {
+        ...state,
+        isUserLoggedIn: false,
+        user: null,
+      };
+    }
     case CHECK_USER: {
       return {
         ...state,
