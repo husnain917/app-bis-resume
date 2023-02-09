@@ -87,7 +87,7 @@ const BlogPost = () => {
                     href="templates/sBpVCiYIojHRtGlh"
                     className="compare-resumes__resume compare-resumes__resume--good is-image-loaded"
                     style={{
-                      backgroundImage: `url(${"/realTemp37.png"})`,
+                      backgroundImage: `url(${"/realTemp37.PNG"})`,
                       backgroundSize: "cover",
                       backgroundRepeat: false,
                     }}
@@ -97,7 +97,7 @@ const BlogPost = () => {
                       width={"20px"}
                       height={"20px"}
                       style={{
-                        backgroundImage: `url(${"/correct.png"})`,
+                        backgroundImage: `url(${"/correct.PNG"})`,
                         backgroundSize: "cover",
                         backgroundRepeat: false,
                       }}
