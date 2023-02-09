@@ -26,7 +26,7 @@ const TemplateDetail = () => {
   const isUserLoggedIn = useSelector(
     (state) => state.AuthReducer?.isUserLoggedIn
   );
-
+console.log('resumeData====>',resumeData)
   // const isUserLoggedIn = useSelector(
   //   (state) => state.AuthReducer.isUserLoggedIn
   // );
