@@ -7,25 +7,25 @@ export const data = [
     exampleData: [
       {
         label: "Fashion Designer ",
-        src: "realTemp2.png",
+        src: "realTemp2.PNG",
         alt: "random from unsplash",
         link: "/templates/ny1FF7ED91mc6i2k",
       },
       {
         label: "FashTemplate4",
-        src: "realTemp3.png",
+        src: "realTemp3.PNG",
         alt: "random from unsplash",
         link: "/templates/7UM1U7FJgAQ5sjWD",
       },
       {
         label: "Fashion Designer2",
-        src: "realTemp6.png",
+        src: "realTemp6.PNG",
         alt: "random from unsplash",
         link: "/templates/b5BJwQR7sCmlADl5",
       },
       {
         label: "Fashion Designer1",
-        src: "realTemp16.png",
+        src: "realTemp16.PNG",
         alt: "random from unsplash",
         link: "/templates/5RpawNwFi49M8BrR",
       },
@@ -45,13 +45,13 @@ export const data = [
     exampleData: [
       {
         label: "College Resume",
-        src: "realTemp33.png",
+        src: "realTemp33.PNG",
         alt: "random from unsplash",
         link: "/templates/DkXlwWNOhGxOYVIN",
       },
       {
         label: "Student Resume",
-        src: "realTemp29.png",
+        src: "realTemp29.PNG",
         alt: "random from unsplash",
         link: "/templates/8xDcvDwe76xjzVG3",
       },
@@ -65,7 +65,7 @@ export const data = [
     exampleData: [
       {
         label: "Graphic Designer",
-        src: "realTemp28.png",
+        src: "realTemp28.PNG",
         alt: "random from unsplash",
         link: "/templates/4WEhJ5hAXOIcASUB",
       },
@@ -95,7 +95,7 @@ export const data = [
       },
       {
         label: "Graphic Designer5",
-        src: "realTemp18.png",
+        src: "realTemp18.PNG",
         alt: "random from unsplash",
         link: "/templates/UKkFhQx6Qe7JsEXT",
       },
@@ -107,7 +107,7 @@ export const data = [
       },
       {
         label: "Graphic Designer8",
-        src: "realTemp22.png",
+        src: "realTemp22.PNG",
         alt: "random from unsplash",
         link: "/templates/q7I7S5FySY1L035S",
       },
@@ -133,13 +133,13 @@ export const data = [
     exampleData: [
       {
         label: "Marketing Manager",
-        src: "realTemp23.png",
+        src: "realTemp23.PNG",
         alt: "random from unsplash",
         link: "/templates/ZmNpNzLENZPooOwP",
       },
       {
         label: "Hybrid Template",
-        src: "realTemp14.png",
+        src: "realTemp14.PNG",
         alt: "random from unsplash",
         link: "/templates/d9Ow8i0HO4dP9FMG",
       },
@@ -157,25 +157,25 @@ export const data = [
       },
       {
         label: "Sales Representative",
-        src: "realTemp4.png",
+        src: "realTemp4.PNG",
         alt: "random from unsplash",
         link: "/templates/ovIeX2yz4B7V1y0G",
       },
       {
         label: "Executive Resume",
-        src: "realTemp27.png",
+        src: "realTemp27.PNG",
         alt: "random from unsplash",
         link: "/templates/a8e9GJtWwOAIbAVf",
       },
       {
         label: "Marketing Manger ",
-        src: "realTemp19.png",
+        src: "realTemp19.PNG",
         alt: "random from unsplash",
         link: "/templates/zApetir0shFU3R40",
       },
       {
         label: "Digital Marketing",
-        src: "realTemp15.png",
+        src: "realTemp15.PNG",
         alt: "random from unsplash",
         link: "/templates/vn6uST13L2DZbKXe",
       },
@@ -201,7 +201,7 @@ export const data = [
       },
       {
         label: "Tech Temp",
-        src: "realTemp30.png",
+        src: "realTemp30.PNG",
         alt: "random from unsplash",
         link: "/templates/3JeA53zVHMSQsOay",
       },
@@ -215,31 +215,31 @@ export const data = [
     exampleData: [
       {
         label: "Simple Template",
-        src: "realTemp34.png",
+        src: "realTemp34.PNG",
         alt: "random from unsplash",
         link: "/templates/Dd7HVIibnPERnyhy",
       },
       {
         label: "Content Template",
-        src: "realTemp26.png",
+        src: "realTemp26.PNG",
         alt: "random from unsplash",
         link: "/templates/2HU7Uuw10GMgVWgJ",
       },
       {
         label: " Baby Resume",
-        src: "realTemp13.png",
+        src: "realTemp13.PNG",
         alt: "random from unsplash",
         link: "/templates/Mmq0HbjSLc364GmS",
       },
       {
         label: "Flight Attendant ",
-        src: "realTemp10.png",
+        src: "realTemp10.PNG",
         alt: "random from unsplash",
         link: "/templates/MTmaNZdZrNEMy0v0",
       },
       {
         label: "Digital Marketer",
-        src: "realTemp8.png",
+        src: "realTemp8.PNG",
         alt: "random from unsplash",
         link: "/templates/Z8T9Wg5LoA7Ihbsq",
       },
@@ -256,31 +256,31 @@ export const popularData = [
     popularTemplates: [
       {
         label: "Simple Template",
-        src: "realTemp34.png",
+        src: "realTemp34.PNG",
         alt: "random from unsplash",
         link: "/templates/Dd7HVIibnPERnyhy",
       },
       {
         label: "Content Template",
-        src: "realTemp26.png",
+        src: "realTemp26.PNG",
         alt: "random from unsplash",
         link: "/templates/2HU7Uuw10GMgVWgJ",
       },
       {
         label: " Baby Resume",
-        src: "realTemp13.png",
+        src: "realTemp13.PNG",
         alt: "random from unsplash",
         link: "/templates/Mmq0HbjSLc364GmS",
       },
       {
         label: "Flight Attendant Template",
-        src: "realTemp10.png",
+        src: "realTemp10.PNG",
         alt: "random from unsplash",
         link: "/templates/MTmaNZdZrNEMy0v0",
       },
       {
         label: "Resume Digital Market",
-        src: "realTemp8.png",
+        src: "realTemp8.PNG",
         alt: "random from unsplash",
         link: "/templates/Z8T9Wg5LoA7Ihbsq",
       },
@@ -291,31 +291,31 @@ export const popularData = [
 export const sliderData = [
   {
     label: "Fashion Designer ",
-    src: "realTemp2.png",
+    src: "realTemp2.PNG",
     alt: "random from unsplash",
     link: "/templates/ny1FF7ED91mc6i2k",
   },
   {
     label: "FashTemplate4",
-    src: "realTemp3.png",
+    src: "realTemp3.PNG",
     alt: "random from unsplash",
     link: "/templates/7UM1U7FJgAQ5sjWD",
   },
   {
     label: "College Resume Template",
-    src: "realTemp33.png",
+    src: "realTemp33.PNG",
     alt: "random from unsplash",
     link: "/templates/DkXlwWNOhGxOYVIN",
   },
   {
     label: "Student Resume Template",
-    src: "realTemp29.png",
+    src: "realTemp29.PNG",
     alt: "random from unsplash",
     link: "/templates/8xDcvDwe76xjzVG3",
   },
   {
     label: "Graphic Designer 8",
-    src: "realTemp22.png",
+    src: "realTemp22.PNG",
     alt: "random from unsplash",
     link: "/templates/q7I7S5FySY1L035S",
   },
@@ -333,37 +333,37 @@ export const sliderData = [
   },
   {
     label: "TechTemp.png",
-    src: "realTemp30.png",
+    src: "realTemp30.PNG",
     alt: "random from unsplash",
     link: "/templates/3JeA53zVHMSQsOay",
   },
   {
     label: " Baby Resume",
-    src: "realTemp13.png",
+    src: "realTemp13.PNG",
     alt: "random from unsplash",
     link: "/templates/Mmq0HbjSLc364GmS",
   },
   {
     label: "Flight Attendant Template",
-    src: "realTemp10.png",
+    src: "realTemp10.PNG",
     alt: "random from unsplash",
     link: "/templates/MTmaNZdZrNEMy0v0",
   },
   {
     label: "Resume Digital Market",
-    src: "realTemp8.png",
+    src: "realTemp8.PNG",
     alt: "random from unsplash",
     link: "/templates/Z8T9Wg5LoA7Ihbsq",
   },
   {
     label: "Simple Template",
-    src: "realTemp34.png",
+    src: "realTemp34.PNG",
     alt: "random from unsplash",
     link: "/templates/Dd7HVIibnPERnyhy",
   },
   {
     label: "Content Template",
-    src: "realTemp26.png",
+    src: "realTemp26.PNG",
     alt: "random from unsplash",
     link: "/templates/2HU7Uuw10GMgVWgJ",
   },
