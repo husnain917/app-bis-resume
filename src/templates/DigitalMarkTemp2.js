@@ -55,14 +55,16 @@ const DigitalMarkTemp2 = () => {
             <Name
               FName={true}
               SName={true}
+
+
               direction="row"
               margin={"20px 0px 0px 20px"}
               FNameStyle={Classes.digitalName}
               SNameStyle={Classes.digitalName}
-              maxWidth={"200px"}
-              maxCWidth={"200px"}
-              //   minWidth={"100px"}
+
+             
               maxChr={38}
+
             />
             <Box
               minH={10}
@@ -105,7 +107,9 @@ const DigitalMarkTemp2 = () => {
               style={Classes.profileText}
               direction="column"
               margin="5px 0px 0px 30px"
+
               maxWidth={"350px"}
+
             />
             {resumeData?.skills?.visible && (
               <div className={Classes.sideMenu}>
@@ -202,9 +206,11 @@ const DigitalMarkTemp2 = () => {
                       dateStyle={Classes.date}
                       summaryStyle={Classes.desText}
                       degree_placeholder={"Study Program"}
+
                       maxWidth={"300px"}
                       maxChr={20}
                       datewidthmax={"141px"}
+
                     />
                   </div>
                 </div>
@@ -237,9 +243,11 @@ const DigitalMarkTemp2 = () => {
                       positionStyle={Classes.programText}
                       dateStyle={Classes.date}
                       summaryStyle={Classes.desText}
+
                       maxWidth={"300px"}
                       maxChr={20}
                       datewidthmax={"141px"}
+
                     />
                   </div>
                 </div>

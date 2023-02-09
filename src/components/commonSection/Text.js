@@ -16,7 +16,6 @@ function Text(props) {
   //   if (myPara) {
   //     myPara.addEventListener("input", function () {
   //       console.log("TEXT >>>> ", document.getElementById(path).innerText);
-
   //       const text = document.getElementById(path).innerText;
   //       if (text.length <= 10) {
   //         console.log("TEXT >>>> ", document.getElementById(path).innerText);
