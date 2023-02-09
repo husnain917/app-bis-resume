@@ -20,6 +20,8 @@ const SaveTempData = () => {
   };
   const onClickHandler = ({ templateId }) => {
     console.log('templateId',templateId)
+    console.log('myTemplates',myTemplates)
+
     const allMytemplates = [...new Set([...myTemplates, templateId])];
     console.log('uid',uid)
     if (uid) {
