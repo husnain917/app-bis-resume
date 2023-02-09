@@ -85,10 +85,9 @@ export default function FormatsTables() {
             fontFamily={`'EuclidCircularB-Medium', sans-serif`}
           >
             <ListItem>
-                Use a clear and consistent layout throughout your resume. This
-                will make it easy for recruiters to read and understand your
-                qualifications.
-              &nbsp;
+              Use a clear and consistent layout throughout your resume. This
+              will make it easy for recruiters to read and understand your
+              qualifications. &nbsp;
             </ListItem>
             <ListItem>
               Use a professional and modern resume font, such as Calibri, Arial
@@ -239,6 +238,8 @@ export default function FormatsTables() {
                     <Image
                       src={item?.img}
                       alt={"Image Not Found"}
+                      h={"100vh"}
+                      w={"100%"}
                       onMouseEnter={() => setOver(true)}
                       onMouseLeave={() => setOver(false)}
                     />
@@ -498,7 +499,12 @@ export default function FormatsTables() {
 
             {/* Image */}
             <Box marginBottom={"30px"}>
-              <Image src={"/resume_format_temp1.jpg"} alt={"Image Not Found"} />
+              <Image
+                src={"/realTemp38.png"}
+                alt={"Image Not Found"}
+                w={"100%"}
+                h={"100vh"}
+              />
             </Box>
 
             {/* button */}
@@ -748,8 +754,10 @@ export default function FormatsTables() {
             {/* Image */}
             <Box marginBottom={"30px"}>
               <Image
-                src={"/resume_format_skill1.jpg"}
+                src={"/realTemp3.png"}
                 alt={"Image Not Found"}
+                w={"100%"}
+                h={"100vh"}
               />
             </Box>
 
@@ -1054,8 +1062,10 @@ export default function FormatsTables() {
             {/* Image */}
             <Box marginBottom={"30px"}>
               <Image
-                src={"/resume_format_hybird1.jpg"}
+                src={"/realTemp22.png"}
                 alt={"Image Not Found"}
+                w={"100%"}
+                h="100vh"
               />
             </Box>
 
@@ -1321,7 +1331,7 @@ export default function FormatsTables() {
             paddingBottom={"25px"}
             fontFamily={`'EuclidCircularB-Medium', sans-serif`}
           >
-            M• Make Sure Your Resume Format Beats <br />
+            Make Sure Your Resume Format Beats <br />
             the ATS Resume Test
           </Text>
           {/* description */}

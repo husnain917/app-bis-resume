@@ -62,7 +62,7 @@ export default function Navbar() {
         >
           <Link href="/#">
             <Image
-              src="/Dark_Blue.svg"
+              src="/oldLogo.svg"
               alt="Image Not Found"
               fill
               height={"70px"}

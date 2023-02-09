@@ -287,7 +287,7 @@ export default function Write_resume() {
                     {" "}
                     {`The Ultimate Resume Layout Checklist: How to Create a Professional and Organized Resume`}{" "}
                   </Text>
-                  <OrderedList ml={["4%", "5%", "5%"]}>
+                  <UnorderedList ml={["4%", "5%", "5%"]}>
                     <ListItem fontSize={"1rem"} className={"only-font-family"}>
                       {`Consider using a functional or skills-based format if you lack relevant work experience or are looking to make a career change.`}
                     </ListItem>
@@ -311,7 +311,7 @@ export default function Write_resume() {
                     <ListItem fontSize={"1rem"} className={"only-font-family"}>
                       {`Consider the industry you are applying to and choose a resume layout that is appropriate, traditional industries may prefer a more traditional looking template.`}
                     </ListItem>
-                  </OrderedList>
+                  </UnorderedList>
                 </Box>
 
                 <Box mt={["3%", "3%", "3%"]}>
@@ -484,7 +484,7 @@ export default function Write_resume() {
                   >
                     {`Yes, that is correct. A resume summary is a 2-3 sentence summary of your career that highlights your most relevant qualifications, skills, and experience. It is typically placed at the top of the resume, near the contact information section. It is a great way to give the HR manager a quick overview of your qualifications and to show how they align with the requirements of the job you are applying for.`}
                   </Text>
-                  <OrderedList ml={["4%", "5%", "5%"]}>
+                  <UnorderedList ml={["4%", "5%", "5%"]}>
                     <ListItem fontSize={"1rem"} className={"only-font-family"}>
                       {` Your job title and years of experience in the field, such as "Customer support representative with 5+ years of experience in the IT industry."`}
                     </ListItem>
@@ -498,7 +498,7 @@ export default function Write_resume() {
                     <ListItem fontSize={"1rem"} className={"only-font-family"}>
                       {`It's a good idea to use a resume summary in most situations, especially if you have some experience in the field, unless you are a recent university graduate or switching careers. In that case, a resume objective might be more appropriate as it will focus more on your goals and objectives for the job you are applying for.`}
                     </ListItem>
-                  </OrderedList>
+                  </UnorderedList>
                 </Box>
 
                 <Box mt={["3%", "3%", "3%"]}>
@@ -509,16 +509,23 @@ export default function Write_resume() {
                   >
                     {`Formula to Create Your Resume Objective:`}
                   </Text>
-
-                  <Text fontSize={"1rem"} className={"only-font-family"}>
-                    {`(1) 	State the position you are applying for, such as "Seeking a position as a [JOB TITLE]."`}
-                  </Text>
-                  <Text fontSize={"1rem"} className={"only-font-family"}>
-                    {`(2) 	Indicate your relevant qualifications, skills, and experience, such as "With [X years/months] of experience in [Y INDUSTRY/FIELD], and a [DEGREE/CERTIFICATION] in [Z]."`}
-                  </Text>
-                  <Text fontSize={"1rem"} className={"only-font-family"}>
-                    {`to help (3) 	Highlight your specific goals and objectives for the position, such as "I am eager to use my skills and experience to [ACHIEVE SPECIFIC GOALS OR RESPONSIBILITIES RELATED TO THE JOB]."`}
-                  </Text>
+                  <UnorderedList>
+                    <ListItem>
+                      <Text fontSize={"1rem"} className={"only-font-family"}>
+                        {`State the position you are applying for, such as "Seeking a position as a [JOB TITLE]."`}
+                      </Text>
+                    </ListItem>
+                    <ListItem>
+                      <Text fontSize={"1rem"} className={"only-font-family"}>
+                        {`Indicate your relevant qualifications, skills, and experience, such as "With [X years/months] of experience in [Y INDUSTRY/FIELD], and a [DEGREE/CERTIFICATION] in [Z]."`}
+                      </Text>
+                    </ListItem>
+                    <ListItem>
+                      <Text fontSize={"1rem"} className={"only-font-family"}>
+                        {`Highlight your specific goals and objectives for the position, such as "I am eager to use my skills and experience to [ACHIEVE SPECIFIC GOALS OR RESPONSIBILITIES RELATED TO THE JOB]."`}
+                      </Text>
+                    </ListItem>
+                  </UnorderedList>
                 </Box>
                 <Box mt={["3%", "3%", "3%"]}>
                   <Text

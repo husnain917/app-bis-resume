@@ -16,7 +16,8 @@ import { useDispatch } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { Grammarly } from "@grammarly/editor-sdk-react";
 import { useRouter } from "next/router";
-
+import RotateLoader from "react-spinners/RotateLoader";
+import { css } from "@emotion/react";
 function Loading() {
   const router = useRouter();
 
@@ -28,7 +29,7 @@ function Loading() {
       url === router.asPath &&
       setTimeout(() => {
         setLoading(false);
-      }, 5000);
+      }, 2000);
 
     router.events.on("routeChangeStart", handleStart);
     router.events.on("routeChangeComplete", handleComplete);
@@ -40,11 +41,22 @@ function Loading() {
       router.events.off("routeChangeError", handleComplete);
     };
   });
+  const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+  `;
 
   return (
     loading && (
       <div className="spinner-wrapper">
-        <div className="spinner"></div>
+        {/* <div className="spinner"></div> */}
+        <RotateLoader
+          css={override}
+          size={250}
+          color={"#f1ff00"}
+          loading={loading}
+        />
       </div>
     )
   );
