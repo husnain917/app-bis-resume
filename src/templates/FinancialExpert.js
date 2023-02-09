@@ -61,6 +61,7 @@ const FinancialExpert = () => {
               fontColor={color ? color : "#000000"}
               FName={true}
               SName={true}
+              maxChr={38}
               FNameStyle={"fullName1"}
               SNameStyle={"fullName2"}
             />

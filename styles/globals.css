@@ -840,7 +840,8 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
   font-size: 2.4em;
   padding: 0;
   line-height: 30px;
-  text-align: left;
+  text-align: center;
+  /* line-height:30px; */
   margin-top: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 4px;
@@ -850,7 +851,7 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
 .fDesigner2a {
   padding: 0;
   line-height: 30px;
-  text-align: left;
+  text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 4px;
   text-transform: uppercase;

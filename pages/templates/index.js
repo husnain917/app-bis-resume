@@ -38,12 +38,12 @@ function Templates() {
         maxWidth={"100%"}
         display={"flex"}
         flexWrap={"wrap"}
-        justifyContent={["center", "center", "space-evenly", "space-evenly"]}
+        justifyContent={"center"}
         py={4}
       >
         {ProfessionalTemp?.map((items, index) => (
           <>
-            <Box className="cursor" key={index} mx={[0, 0, 0, 0, 6]}>
+            <Box className="cursor" key={index} mx={[0, 4, 6, 3, 8]}>
               <Link
                 onClick={() => {
                   router.push(items?.href);
@@ -113,12 +113,12 @@ function Templates() {
         maxWidth={"100%"}
         display={"flex"}
         flexWrap={"wrap"}
-        justifyContent={["center", "center", "space-evenly", "space-evenly"]}
+        justifyContent={"center"}
         py={4}
       >
         {Modern?.map((items, index) => (
           <>
-            <Box className="cursor" key={index} mx={[0, 0, 0, 0, 6]}>
+            <Box className="cursor" key={index} mx={[0, 4, 6, 3, 8]}>
               <Link
                 onClick={() => {
                   isUserLoggedIn ? router.push(items?.href) : ismodalOpen();

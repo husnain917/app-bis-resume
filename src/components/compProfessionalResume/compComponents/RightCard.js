@@ -37,7 +37,7 @@ export default function RightCard({ cardData }) {
           textAlign={width >= 767 ? null : "center"}
           display={width >= 767 ? "inline-block" : "block"}
           mx={2}
-          my={width >= 767 ? null : 3}
+          my={width >= 767 ? null : -1}
         >
           {cardData.HeadingData}
         </Text>
@@ -51,7 +51,6 @@ export default function RightCard({ cardData }) {
           className={"small-text"}
           fontSize={["0.5rem", "0.8rem", "1em", "1.1em", "1.1em"]}
           lineHeight={["14px", "18px", "23px", "22px", "22px"]}
-          mt={2}
         >
           Include your full name, professional email address, phone number and
           location. Consider adding a link to your LinkedIn profile or personal
