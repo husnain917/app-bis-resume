@@ -53,7 +53,7 @@ export default function TempNavbar({
   downloadPDF,
   downloadWord,
   leftMenu,
-  setleftMenu,
+  setleftMenu,saveDataHandler
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -181,6 +181,21 @@ export default function TempNavbar({
           >
             <ArrowBackIcon mr="5px" />
             Left
+          </Button>
+          <Button
+            bgColor="transparent"
+            color="white"
+            fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+            _hover={{
+              backgroundColor: "transparent",
+
+              color: "#00c8aa",
+              transition: "0.4s",
+            }}
+            onClick={saveDataHandler}
+          >
+            <ArrowBackIcon mr="5px" />
+            Save
           </Button>
         </Box>
       )}

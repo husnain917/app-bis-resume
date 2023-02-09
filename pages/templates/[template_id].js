@@ -17,14 +17,20 @@ import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { modalOpen } from "../../store/actions/AuthAction";
+import SaveTempData from "../../src/components/saveTempBtn/SaveTempData";
 
 const TemplateDetail = () => {
   const router = useRouter();
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer?.isUserLoggedIn
+  );
+
   // const isUserLoggedIn = useSelector(
   //   (state) => state.AuthReducer.isUserLoggedIn
   // );
-  const dispatch = useDispatch()
+  const { onClickHandler } = SaveTempData();
+  const dispatch = useDispatch();
   // useEffect(()=>{
   //   if (!isUserLoggedIn) {
   //     router.push('/')
@@ -34,12 +40,12 @@ const TemplateDetail = () => {
   // if (!isUserLoggedIn) {
   //   router.push('/')
   //   dispatch(modalOpen());
-    
+
   // }
   const { template_id } = router.query;
   const [sideTempSelect, setsideTempSelect] = useState(false);
   const { width } = useWindowSizing();
-  const { downloadPDFHandler, pdfRef ,downloadWordHandler} = PDFGenerater();
+  const { downloadPDFHandler, pdfRef, downloadWordHandler } = PDFGenerater();
   const [template, settemplate] = useState();
 
   const selected =
@@ -59,10 +65,22 @@ const TemplateDetail = () => {
         interest={selected?.sections?.interest}
         certificate={selected?.sections?.certificate}
         downloadPDF={downloadPDFHandler}
-        downloadWord={()=>{downloadWordHandler({
-          ...resumeData,
-          id:selected.id
-        })}}
+        saveDataHandler={() => {
+          console.log('isUserLoggedIn==>',isUserLoggedIn)
+          if (!isUserLoggedIn) {
+            dispatch(modalOpen());
+          } else {
+            onClickHandler({
+              templateId: selected.id,
+            });
+          }
+        }}
+        downloadWord={() => {
+          downloadWordHandler({
+            ...resumeData,
+            id: selected.id,
+          });
+        }}
         sideTempSelect={sideTempSelect}
         setsideTempSelect={setsideTempSelect}
       >

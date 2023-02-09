@@ -14,10 +14,18 @@ const initialState = {
   getScanResultStatus: "loading",
   getResumeBuilderChoice: "form",
   builderResumeData: {},
+  myTemplates: [],
 };
 
 export default function resumeEditor(state = initialState, action) {
   switch (action.type) {
+    case actionTypes.USER_TEMP_DATA:
+      console.log("action====.0>>>", action);
+      return {
+        ...state,
+        resumeData: action?.payload?.resumeData,
+        myTemplates: action?.payload?.myTemplates,
+      };
     ///////// custom Cases ///////////////////////
     case actionTypes.ON_BLUR_FILED:
     case actionTypes.ON_UPDATE_ORDER:

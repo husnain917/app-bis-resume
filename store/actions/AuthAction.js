@@ -44,6 +44,7 @@ import {
   getUserToken,
   removeUserToken,
 } from "../../src/components/localStorage/LocalStorage";
+import { actionTypes } from "../../constants/actionTypes";
 export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
   try {
     setLoading(true);
@@ -77,6 +78,11 @@ export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
         },
       });
       setErr({ fieldErr: "" });
+      const userTempData = await getUserTemplatedata(userLoginData.uid);
+      dispatch({
+        type: actionTypes.USER_TEMP_DATA,
+        payload: userTempData,
+      });
       ToastSuccess("Login Successfull");
       dispatch({
         type: MODAL_OPEN,
@@ -135,6 +141,11 @@ export const doGoogleLogin =
           type: MODAL_OPEN,
           payload: false,
         });
+        const userTempData = await getUserTemplatedata(user.uid);
+        dispatch({
+          type: actionTypes.USER_TEMP_DATA,
+          payload: userTempData,
+        });
         setIsModalOpen(false);
         setErr({ fieldErr: "" });
         setLoading(false);
@@ -173,7 +184,6 @@ export const doSignUp =
 
       setLoadingsignup(false);
 
-
       ToastSuccess("Verification Email Sent.");
       const docRef = await addDoc(collection(db, "users"), {
         ...data,
@@ -185,7 +195,6 @@ export const doSignUp =
           payload: userData,
         });
       } else {
-
         // ToastError("This Email is already in use");
         ToastSuccess("Email Already Registered");
 
@@ -235,16 +244,25 @@ export const doSignUp =
       // }
     }
   };
-
+const getUserTemplatedata = async (id) => {
+  const docRef = doc(db, "templateData", id);
+  const docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
 export const getLoggedInUser = () => async (dispatch) => {
   try {
     let uid;
-    onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, async (user) => {
       if (user) {
         uid = user.uid;
         dispatch({
           type: ACTIVE_USER,
           payload: user,
+        });
+        const userTempData = await getUserTemplatedata(user.uid);
+        dispatch({
+          type: actionTypes.USER_TEMP_DATA,
+          payload: userTempData,
         });
       }
     });
