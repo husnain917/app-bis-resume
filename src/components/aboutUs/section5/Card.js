@@ -30,7 +30,7 @@ const Card = () => {
               <Box
                 width={"140px"}
                 height={"140px"}
-                margin={"0 auto 20px"}
+                margin={"10px auto 10px"}
                 // display={"flex"}
                 // alignItems={"center"}
               >

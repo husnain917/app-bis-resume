@@ -46,16 +46,22 @@ const FaqsSection = () => {
           "It also helps you tailor your resume to specific job opportunities by providing pre-written, industry-specific bullet points and matching your resume to the job description."
         }
         image={"/faq0@2x.png"}
+        height={["auto", "auto", "auto", "250px", "250px", "250px"]}
       />
       <FaqLeftImage
         heading={`            Can I customize my resume to the job I am applying for?    `}
         text1={`  Yes, BisResume allows you to customize your resume to the job by providing a feature to copy and paste a job description and getting a job-specific resume match score. `}
-        text2={"This feature guides you through tailoring your resume for the job."}
+        text2={
+          "This feature guides you through tailoring your resume for the job."
+        }
         image={"/faq1@2x.png"}
+        height={["auto", "auto", "auto", "200px", "200px", "180px"]}
       />
       <FaqRightImage
         heading={"Why is it important to have a professional resume?"}
-        text1={"Having a professional resume is essential in today's job market. "}
+        text1={
+          "Having a professional resume is essential in today's job market. "
+        }
         text2={
           " It is often the first impression a potential employer has of you, and it should showcase your qualifications and experience in the best possible light. "
         }
@@ -66,16 +72,22 @@ const FaqsSection = () => {
           "It also helps you stand out among other applicants and increases your chances of getting an interview and getting hired."
         }
         image={"/faq2@2x.png"}
+        height={["auto", "auto", "auto", "380px", "350px", "330px"]}
       />
       <FaqLeftImage
         heading={`   What are the most important elements of a resume?     `}
         text1={` The most important elements of a resume include your contact information, a professional summary or objective, your work experience, and your education.`}
         text2={` Additional elements such as skills, certifications, and volunteer experience can also be included, depending on the job and your personal brand.`}
-        text3={'It is important to highlight your accomplishments and use keywords relevant to the job you are applying for.'}
+        text3={
+          "It is important to highlight your accomplishments and use keywords relevant to the job you are applying for."
+        }
         image={"/faq3@2x.png"}
+        height={["auto", "auto", "auto", "330px", "280px", "260px"]}
       />
       <FaqRightImage
-        heading={"How can I optimize my resume to pass applicant tracking systems (ATS)?        "}
+        heading={
+          "How can I optimize my resume to pass applicant tracking systems (ATS)?        "
+        }
         text1={`Our resume builder offers ATS-friendly templates and allows you to customize your resume 
         to match the specific job you are applying for. Additionally, our AI-powered content analyzer
          will check and optimize your resume for keywords and formatting to increase your chances of passing ATS.`}
@@ -83,6 +95,7 @@ const FaqsSection = () => {
           " In the United States, however, a resume is a document you use to apply for jobs, while a CV is mainly used by academics."
         }
         image={"/faq4@2x.png"}
+        height={["auto", "auto", "auto", "350px", "300px", "280px"]}
       />
       <FaqLeftImage
         heading={`           Can I save and edit my resume later?
@@ -93,14 +106,17 @@ const FaqsSection = () => {
 
         `}
         image={"/faq5@2x.png"}
+        height={["auto", "auto", "200px", "200px", "150px", "150px"]}
       />
       <FaqRightImage
-        heading={"How can I stand out from other applicants with my resume?       "}
+        heading={
+          "How can I stand out from other applicants with my resume?       "
+        }
         text1={`Our resume builder offers a wide variety of professional templates to choose from, and also allows you to customize the design and layout to make it unique. `}
         text2={`  Additionally, our expertly crafted phrases and resume score feature will help you to highlight your skills and achievements to stand out to potential employers.
  `}
         image={"/faq6@2x.png"}
-
+        height={["auto", "auto", "auto", "250px", "220px", "250px"]}
       />
     </Box>
   );

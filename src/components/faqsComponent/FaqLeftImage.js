@@ -28,6 +28,7 @@ const FaqLeftImage = ({
   item6,
   item6h,
   image,
+  height,
 }) => {
   return (
     <Box w={["100%", "100%", "100%", "1000px", "92%", "95%"]}>
@@ -45,6 +46,7 @@ const FaqLeftImage = ({
         marginInlineEnd={["20px", "30px", "60px", "60px", "40px"]}
         display={["flex", "flex", "grid", "grid", "grid", "grid", "grid"]}
         flexDirection={["column-reverse"]}
+        h={height}
       >
         <GridItem
           pl="2"

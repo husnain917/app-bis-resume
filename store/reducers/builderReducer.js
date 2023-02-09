@@ -31,6 +31,8 @@ export default function resumeEditor(state = initialState, action) {
     case actionTypes.ON_UPDATE_ORDER:
     case actionTypes.ON_ADD_OBJECT:
     case actionTypes.DELETE_OBJECT:
+      console.log(action.payload, "data in action.payload");
+
       return {
         ...state,
 

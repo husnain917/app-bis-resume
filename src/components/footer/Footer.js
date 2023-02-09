@@ -166,7 +166,7 @@ export default function Footer() {
             <Link href="/about-us">About Us</Link>
           </div>
           <div>
-            <Link href="/Jobs">E-Book:How to get a job in 2022</Link>
+            <Link href="/Jobs">E-Book:How to get a job in 2023</Link>
           </div>
           {/* <div>
             <Link href="#/">Media Kit</Link>
