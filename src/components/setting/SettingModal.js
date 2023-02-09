@@ -12,8 +12,8 @@ import { DateFormatter } from "./Handlers";
 import { actionTypes } from "../../../constants/actionTypes";
 
 const SettingModal = () => {
-  let { date } = useSelector((state) => state.editorReducer.resumeData);
-
+  let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const date = resumeData?.date;
   const dispatch = useDispatch();
 
   return (

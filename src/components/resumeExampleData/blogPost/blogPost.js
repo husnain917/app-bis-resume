@@ -97,7 +97,7 @@ const BlogPost = () => {
                       width={"20px"}
                       height={"20px"}
                       style={{
-                        backgroundImage: `url(${"/correct.PNG"})`,
+                        backgroundImage: `url(${"/correct.png"})`,
                         backgroundSize: "cover",
                         backgroundRepeat: false,
                       }}

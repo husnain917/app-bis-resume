@@ -16,7 +16,7 @@ export default function TempLayout({
   certificate,
   downloadPDF,downloadWord,
   sideTempSelect,
-  setsideTempSelect,
+  setsideTempSelect,saveDataHandler
 }) {
   const feedBackGet = useSelector((state) => state?.feedBackReducer?.feedBack);
   const [leftMenu, setleftMenu] = useState(false);
@@ -34,6 +34,7 @@ export default function TempLayout({
         certificate={certificate}
         downloadPDF={downloadPDF}
         leftMenu={leftMenu}
+        saveDataHandler={saveDataHandler}
         downloadWord={downloadWord}
 
         setleftMenu={() => {
