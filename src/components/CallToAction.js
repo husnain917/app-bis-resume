@@ -78,13 +78,13 @@ export default function CallToAction() {
       </div>
       <div className={styles.ctaRightSec}>
         <Box>
-          <Image
+          {/* <Image
             src="/hero.png"
             maxH={"98% !important"}
             maxW={"100% !important"}
             layout="fill"
             alt="will load soon"
-          />
+          /> */}
         </Box>
       </div>
     </div>

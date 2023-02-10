@@ -31,7 +31,7 @@ export default function FormatsTables() {
   return (
     <>
       {/* resume table */}
-      <ResumeTable />
+      {/* <ResumeTable /> */}
       {/* ist table heading explain */}
       <Container maxW={"100%"} p={0}>
         <Box id={"b1"}>
@@ -580,7 +580,7 @@ export default function FormatsTables() {
               work, certifications.
             </Text>
 
-            <Text
+            {/* <Text
               fontSize={"16px"}
               marginBottom={"20px"}
               lineHeight={8}
@@ -603,7 +603,7 @@ export default function FormatsTables() {
                   </ListItem>
                 </>
               ))}
-            </OrderedList>
+            </OrderedList> */}
 
             <Text
               fontSize={"18px"}
