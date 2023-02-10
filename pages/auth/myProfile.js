@@ -82,7 +82,7 @@ const Profile = () => {
     const result = await canvasPreview(imgRef.current, crop, scale, rotate);
     console.log(result, "image uploaded");
     const { current } = uploadedImage;
-    current.src = result;
+    current = result;
     dispatch(onBlurField(result, "profile.profileImage"));
   };
 

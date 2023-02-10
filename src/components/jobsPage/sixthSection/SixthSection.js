@@ -49,17 +49,19 @@ const SixthSection = () => {
                     ]}
                     borderRadius={"20px"}
                   >
-                    <ContentText
-                      id={item?.id}
-                      text={item?.text}
-                      className={item?.className}
-                      fontSize={item?.fontSize}
-                      margin={item?.margin}
-                      textAlign={item.textAlign}
-                      backgroundColor={item?.backgroundColor}
-                      width={item?.width}
-                      lineHeight={item?.lineHeight}
-                    />
+                    <Text id={item?.id} mt={"2%"} className={"xsmall-text"}>
+                      <ContentText
+                        id={item?.id}
+                        text={item?.text}
+                        className={item?.className}
+                        fontSize={item?.fontSize}
+                        margin={item?.margin}
+                        textAlign={item.textAlign}
+                        backgroundColor={item?.backgroundColor}
+                        width={item?.width}
+                        lineHeight={item?.lineHeight}
+                      />
+                    </Text>
 
                     <Text id={item?.id} mt={"2%"} className={"xsmall-text"}>
                       <ContentText

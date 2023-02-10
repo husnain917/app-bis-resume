@@ -115,9 +115,8 @@ export const TERMS_DATA = {
       {
         text: `Track the effectiveness of our marketing campaigns and measure the success of our website and services.`,
       },
-     
     ],
-   
+    lastDescription: `It is important to note that any violation of these terms of use may result in the suspension or termination of your account.`,
   },
   Security: {
     heading: `3. Disabling/Enabling Cookies`,
@@ -138,7 +137,7 @@ export const TERMS_DATA = {
   Changes: {
     heading: "7. Changes",
     data: `By continuing to access or use BisResume after those changes become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you should stop using BisResume. If you have any questions or concerns about these Terms, please contact us at `,
-    href: 'contact@bisResume.com'
+    href: "contact@bisResume.com",
   },
   BreachesOfTheseTermsOfUse: {
     heading: "8. Breaches of these terms of use",
@@ -150,8 +149,8 @@ export const TERMS_DATA = {
   },
   ContactUs: {
     heading: "Contact Us",
-    href: 'contact@bisResume.com ',
+    href: "contact@bisResume.com ",
     desIst: `At BisResume, we value the feedback of our users and are committed to providing a transparent and accurate service. Therefore, we encourage you to reach out to us if you have any concerns or suggestions regarding our Terms of Use. Our team can be reached at `,
-    desLast: `and we will do our best to respond promptly. Additionally, we regularly review and update our Terms of Use to ensure they reflect the latest regulations and best practices. The date of the last modification was 03/June/2022 and we encourage you to review the Terms of Use periodically for any updates or changes.`,
+    desLast: `and we will do our best to respond promptly. Additionally, we regularly review and update our Terms of Use to ensure they reflect the latest regulations and best practices. The date of the last modification was 03/Jan/2023 and we encourage you to review the Terms of Use periodically for any updates or changes.`,
   },
 };

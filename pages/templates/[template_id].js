@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import styles from "../../styles/TemplateDetail.module.css";
 import TempLayout from "../../src/components/tempNav/TempLayout";
@@ -9,6 +9,7 @@ import {
   ModalContent,
   ModalBody,
   ModalCloseButton,
+  useOutsideClick,
 } from "@chakra-ui/react";
 import { CUSTOM_TEMP_DATA } from "../../src/components/customTempData/CustomTempData";
 import ChangeTempBtn from "../../src/components/changeTempbtn/ChangeTempBtn";
@@ -34,18 +35,23 @@ const TemplateDetail = () => {
   // if (!isUserLoggedIn) {
   //   router.push('/')
   //   dispatch(modalOpen());
-    
+
   // }
   const { template_id } = router.query;
   const [sideTempSelect, setsideTempSelect] = useState(false);
   const { width } = useWindowSizing();
-  const { downloadPDFHandler, pdfRef ,downloadWordHandler} = PDFGenerater();
+  const { downloadPDFHandler, pdfRef, downloadWordHandler } = PDFGenerater();
   const [template, settemplate] = useState();
 
   const selected =
     CUSTOM_TEMP_DATA?.find((item) => item.id === template) ||
     CUSTOM_TEMP_DATA?.find((item) => item.id === template_id);
 
+  const ref = useRef()
+  useOutsideClick({
+    ref: ref,
+    handler: () => setsideTempSelect(false),
+  })
   return (
     <Box>
       <TempLayout
@@ -59,10 +65,12 @@ const TemplateDetail = () => {
         interest={selected?.sections?.interest}
         certificate={selected?.sections?.certificate}
         downloadPDF={downloadPDFHandler}
-        downloadWord={()=>{downloadWordHandler({
-          ...resumeData,
-          id:selected.id
-        })}}
+        downloadWord={() => {
+          downloadWordHandler({
+            ...resumeData,
+            id: selected.id
+          })
+        }}
         sideTempSelect={sideTempSelect}
         setsideTempSelect={setsideTempSelect}
       >
@@ -85,16 +93,14 @@ const TemplateDetail = () => {
             base: "none",
             lg: sideTempSelect ? "flex-start" : "center",
           }}
-          justifyContent={{ lg: sideTempSelect ? "flex-start" : "center" }}
-          className={styles.flexContainer}
+          justifyContent={{ lg: sideTempSelect ? "space-evenly" : "center" }}
         >
           {sideTempSelect && (
             <Box
               className={styles.sideBarTempContainer}
-              margin={"6% 0% 0% 0%"}
-              ml={"105px"}
               borderRadius={6}
               border={"1px solid #313b47"}
+              ref={ref}
             >
               {CUSTOM_TEMP_DATA?.map((items, index) => (
                 <>
