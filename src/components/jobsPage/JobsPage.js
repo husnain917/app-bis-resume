@@ -52,7 +52,7 @@ const JobsPage = () => {
         <Box
           className={styles.sideBarContainer}
           display={["none", "none", "block", "block", "block"]}
-          position={"absolute"}
+          position={"fixed"}
           mt={20}
         >
           <SideBar />
