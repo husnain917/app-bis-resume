@@ -373,6 +373,7 @@ body {
   border-radius: 5rem;
   transition: linear 0.2s;
 }
+
 .buttonClassGreen:hover {
   cursor: pointer;
   font-size: 1.1rem;
@@ -645,6 +646,7 @@ a,
   width: 300px !important;
   transition: 0.5s ease;
   backface-visibility: hidden;
+  cursor: pointer;
 }
 
 .templatemiddle {
@@ -656,6 +658,7 @@ a,
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  cursor: pointer;
 }
 
 .templatecontainer:hover .templateimage {
@@ -675,6 +678,12 @@ a,
   font-size: 14px;
   border-radius: 5px;
   padding: 8px 10px;
+  cursor: pointer;
+}
+
+.templatetext:hover {
+  color: #00c8aa;
+  transition: 0.5s;
 }
 
 .templateHover {
@@ -685,6 +694,22 @@ a,
 .templateHover:hover {
   transform: scale(1.1);
   /* Scales the image up by 20% on hover */
+}
+
+.tempSearchIcon {
+  color: #fff;
+  background-color: #313b47;
+  border-radius: 50px 50px;
+  padding: 0px 12px;
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  z-index: 500;
+}
+
+.tempSearchIcon:hover {
+  color: #00c8aa;
+  transition: 0.5s;
 }
 
 a {
@@ -914,6 +939,7 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
 
 .cursor {
   cursor: pointer !important;
+  position: relative;
 }
 
 .cursor img {
@@ -998,6 +1024,7 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
 }
 
 @media only screen and(max-width: 1000px) {
+
   #coverEffectSlider .swiper-button-prev,
   #coverEffectSlider .swiper-container-rtl .swiper-button-prev {
     top: 40px !important;
@@ -1207,9 +1234,7 @@ input[type="date"]:in-range::-webkit-datetime-edit-text {
 }
 
 .blog-post__content-aside {
-  width: calc(
-    var(--blog-column-with-gutter-2) + var(--blog-desktop-gutter-step)
-  );
+  width: calc(var(--blog-column-with-gutter-2) + var(--blog-desktop-gutter-step));
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
@@ -1430,18 +1455,9 @@ button {
   margin: 40px 0px;
 }
 
-.blog-post--with-single-aside
-  .blog-post__content
-  .blog-post__content-main-wrapper
-  figure.image.image--large,
-.blog-post--with-single-aside
-  .blog-post__content
-  .blog-post__content-main-wrapper
-  .js-wide-element,
-.blog-post--with-single-aside
-  .blog-post__content
-  .blog-post__content-main-wrapper
-  .wide-element {
+.blog-post--with-single-aside .blog-post__content .blog-post__content-main-wrapper figure.image.image--large,
+.blog-post--with-single-aside .blog-post__content .blog-post__content-main-wrapper .js-wide-element,
+.blog-post--with-single-aside .blog-post__content .blog-post__content-main-wrapper .wide-element {
   max-width: 1120px;
   left: 0;
   -webkit-transform: translateX(0);
@@ -1502,9 +1518,7 @@ button {
   transition: opacity 0.2s 0.4s ease;
 }
 
-.blog-post__content
-  .compare-resumes__view--intro
-  .compare-resumes__mark::before {
+.blog-post__content .compare-resumes__view--intro .compare-resumes__mark::before {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
@@ -1618,12 +1632,9 @@ user agent stylesheet div {
 
 /* After icon div */
 .blog-post__content .compare-resumes__view--intro .compare-resumes__mark::after,
-.blog-post__content
-  .compare-resumes__view--intro
-  .compare-resumes__mark::before,
+.blog-post__content .compare-resumes__view--intro .compare-resumes__mark::before,
 .blog-post__content .compare-resumes__view--intro .compare-resumes__mark-icon {
-  -webkit-animation: zoomIn 0.4s 0.2s cubic-bezier(0.33, 0.12, 0.02, 1.5)
-    forwards;
+  -webkit-animation: zoomIn 0.4s 0.2s cubic-bezier(0.33, 0.12, 0.02, 1.5) forwards;
   animation: zoomIn 0.4s 0.2s cubic-bezier(0.33, 0.12, 0.02, 1.5) forwards;
 }
 
@@ -1711,9 +1722,7 @@ user agent stylesheet div {
   user-select: none;
 }
 
-.blog-post__content
-  .compare-resumes__view--ready.compare-resumes__view--hover
-  .compare-resumes__create-resume {
+.blog-post__content .compare-resumes__view--ready.compare-resumes__view--hover .compare-resumes__create-resume {
   -webkit-transform: translateX(-50%) translateY(0px);
   /* transform: translateX(-50%) translateY(0px); */
   -webkit-transition: -webkit-transform 0.3s 0.2s ease;
@@ -1997,26 +2006,20 @@ user agent stylesheet div {
 /* ________________________ */
 
 @media only screen and (max-width: 1023px) {
-  .blog-post__content
-    .compare-resumes__view--ready.compare-resumes__view--hover
-    .compare-resumes__resume--good {
+  .blog-post__content .compare-resumes__view--ready.compare-resumes__view--hover .compare-resumes__resume--good {
     -webkit-transform: translateX(0) translateY(32px) scale(2);
     transform: translateX(0) translateY(32px) scale(2);
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .blog-post__content
-    .compare-resumes__view--ready.compare-resumes__view--hover
-    .compare-resumes__resume--good {
+  .blog-post__content .compare-resumes__view--ready.compare-resumes__view--hover .compare-resumes__resume--good {
     -webkit-transform: translateX(0) translateY(24px) scale(2);
     transform: translateX(0) translateY(24px) scale(2);
   }
 }
 
-.blog-post__content
-  .compare-resumes__view--ready.compare-resumes__view--hover
-  .compare-resumes__resume--good {
+.blog-post__content .compare-resumes__view--ready.compare-resumes__view--hover .compare-resumes__resume--good {
   border-radius: 3px;
   -webkit-transform: translateX(0) translateY(48px) scale(2);
   transform: translateX(0) translateY(48px) scale(2);
@@ -2052,9 +2055,7 @@ user agent stylesheet div {
   }
 }
 
-.blog-post__content
-  .compare-resumes__view--ready.compare-resumes__view--hover
-  .compare-resumes__mark {
+.blog-post__content .compare-resumes__view--ready.compare-resumes__view--hover .compare-resumes__mark {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -2345,7 +2346,7 @@ video {
   height: 300px;
 }
 
-#selectResume .swiper-container > .swiper-slide__content {
+#selectResume .swiper-container>.swiper-slide__content {
   position: absolute;
   top: 0;
 }
@@ -2768,6 +2769,7 @@ video {
   background-color: #2cacd5;
   opacity: 1;
 }
+
 /* .chakra-collapse{
   display: flex !important;
   justify-content: flex-end;
@@ -2797,6 +2799,7 @@ video {
   justify-content: center;
   align-items: center;
 }
+
 .coming-soon-text {
   font-size: 4rem;
   text-align: center;
@@ -2804,11 +2807,13 @@ video {
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 @media screen and (max-width: 501px) {
   .coming-soon-text {
     font-size: 2.4rem;
   }
 }
+
 .rotate {
   transform: rotate(5deg);
   display: "none";

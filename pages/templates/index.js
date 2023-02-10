@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { modalOpen } from "../../store/actions/AuthAction";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
+import CustomTempSearchModel from "../../src/components/customTempSearchModel/CustomTempSearchModel";
 
 function Templates() {
   const dispatch = useDispatch();
@@ -42,7 +43,12 @@ function Templates() {
       >
         {ProfessionalTemp?.map((items, index) => (
           <>
-            <Box className="cursor" key={index} mx={[0, 4, 6, 3, 8]}>
+            <Box className="cursor" key={index} mx={[0, 4, 6, 3, 6]}>
+              <CustomTempSearchModel
+                href={items?.href}
+                src={items?.src}
+                alt={items?.alt}
+              />
               <Link onClick={() => {
                 router.push(items?.href)
               }} style={{ cursor: "default" }}
@@ -116,6 +122,11 @@ function Templates() {
         {Modern?.map((items, index) => (
           <>
             <Box className="cursor" key={index} mx={[0, 4, 6, 3, 8]}>
+              <CustomTempSearchModel
+                href={items?.href}
+                src={items?.src}
+                alt={items?.alt}
+              />
               <Link onClick={() => {
                 isUserLoggedIn ?
                   router.push(items?.href)
