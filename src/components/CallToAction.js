@@ -77,14 +77,15 @@ export default function CallToAction() {
         </div>
       </div>
       <div className={styles.ctaRightSec}>
-        <Box>
-          {/* <Image
-            src="/hero.png"
-            maxH={"98% !important"}
-            maxW={"100% !important"}
+        <Box marginTop={"-25px"}>
+          <Image
+            src="https://mobirise.com/extensions/techm4/assets/images/background10.jpg"
+            // maxH={"98% !important"}
+            height={"500px"}
+            // maxW={"100% !important"}
             layout="fill"
             alt="will load soon"
-          /> */}
+          />
         </Box>
       </div>
     </div>
