@@ -107,11 +107,12 @@ export default function ResumeFormats() {
         </Box>
         <Box className={styles.ctaRightSec} marginTop={"30px"}>
           <Image
-            height={"500px"}
-            width={"730px"}
-            src="https://mobirise.com/extensions/techm4/assets/images/background10.jpg"
-            // w="100%"
-            // h="98%"
+            // height={"500px"}
+            // width={"730px"}
+            // src="https://mobirise.com/extensions/techm4/assets/images/background10.jpg"
+            w="100%"
+            h="98%"
+            src="/hero.png"
             alt="will show soon"
           />
         </Box>
