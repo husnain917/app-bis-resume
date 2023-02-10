@@ -36,6 +36,7 @@ import {
 import { ToastSuccess } from "../Toast";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loader from "../loader/Loader";
 
 const inCorrect = {
   fontSize: "0.7rem",
@@ -58,7 +59,8 @@ export default function AuthModal({
   const [terms, setTerms] = useState(false);
   const [password, setPassword] = useState("");
   const [resetPass, setResetPass] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loadingLogin, setLoadingLogin] = useState(false);
+  const [loadingGoogle, setLoadingGoogle] = useState(false);
   const [loadingsignup, setLoadingsignup] = useState(false);
   const [resetLoading, setResetLoading] = useState(false);
   const [err, setErr] = useState({ inputId: 0, inputField: "", fieldErr: "" });
@@ -149,7 +151,7 @@ export default function AuthModal({
         email: email,
         password: password,
       };
-      dispatch(doLogin(data, setLoading, setErr));
+      dispatch(doLogin(data, setLoadingLogin, setErr));
       setErr({ inputField: "", inputId: 0 });
     }
   };
@@ -157,7 +159,7 @@ export default function AuthModal({
     // if (!terms) {
     //   setErr({ inputField: 'Accept the terms and policies before use', inputId: 11 })
     // } else {
-    dispatch(doGoogleLogin(terms, setLoading, setErr));
+    dispatch(doGoogleLogin(terms, setLoadingGoogle, setErr));
     // }
   };
 
@@ -187,7 +189,7 @@ export default function AuthModal({
       >
         <ModalOverlay
           bg="blackAlpha.300"
-          backdropFilter="blur(1px) hue-rotate(90deg)"
+          backdropFilter="blur(2px)"
         />
         <ModalContent
           w={["100%", "100%", "100%", "70%", "60%"]}
@@ -201,7 +203,7 @@ export default function AuthModal({
             h={["70%", "85%", "100%", "100%", "100%"]}
           >
             <Box w={[0, 0, 0, "50%"]} h="100%" overflow="hidden">
-              {!isRegister ? (
+              {active === 0 ? (
                 <Image
                   src="/signup.png"
                   w="100%"
@@ -229,6 +231,7 @@ export default function AuthModal({
                 top="10px"
                 color="white"
                 bgColor="#E1E1E1"
+                cursor='pointer'
                 p="5px"
                 ml="7%"
                 borderRadius="100px"
@@ -359,8 +362,8 @@ export default function AuthModal({
                     />
                     {((err.inputField !== "" && err.inputId === 7) ||
                       (err.inputField !== "" && err.inputId === 8)) && (
-                      <span style={inCorrect}>{err.inputField}</span>
-                    )}
+                        <span style={inCorrect}>{err.inputField}</span>
+                      )}
                     <InputGroup>
                       <Input
                         variant="outline"
@@ -394,8 +397,8 @@ export default function AuthModal({
 
                     {((err.inputField !== "" && err.inputId === 9) ||
                       (err.inputField !== "" && err.inputId === 10)) && (
-                      <span style={inCorrect}>{err.inputField}</span>
-                    )}
+                        <span style={inCorrect}>{err.inputField}</span>
+                      )}
                     <Checkbox
                       size="lg"
                       mt="5%"
@@ -451,9 +454,9 @@ export default function AuthModal({
                     />
                     {((err.inputField !== "" && err.inputId === 1) ||
                       (err.inputField !== "" && err.inputId === 2)) && (
-                      <span style={inCorrect}>{err.inputField}</span>
-                    )}
-                    {fieldActive && (
+                        <span style={inCorrect}>{err.inputField}</span>
+                      )}
+                    {!fieldActive && (
                       <>
                         <InputGroup>
                           <Input
@@ -487,8 +490,8 @@ export default function AuthModal({
                         </InputGroup>
                         {((err.inputField !== "" && err.inputId === 3) ||
                           (err.inputField !== "" && err.inputId === 4)) && (
-                          <span style={inCorrect}>{err.inputField}</span>
-                        )}
+                            <span style={inCorrect}>{err.inputField}</span>
+                          )}
                         <Text
                           onClick={() => setResetPass(true)}
                           color="#2a69cb"
@@ -525,7 +528,7 @@ export default function AuthModal({
                   <>
                     <CustomBtn
                       clr="green"
-                      title={loadingsignup ? "Loading..." : "Register Now"}
+                      title={loadingsignup ?  <Loader size={150} color='white' /> : "Register Now"}
                       bgColor="#00C8AA"
                       color="white"
                       hoverColor="#00e2c0"
@@ -538,7 +541,7 @@ export default function AuthModal({
                   <CustomBtn
                     clr="green"
                     title={
-                      resetLoading ? "Loading..." : "Request Password Change"
+                      resetLoading ?  <Loader size={150} color='white' /> : "Request Password Change"
                     }
                     bgColor="#00C8AA"
                     color="white"
@@ -548,13 +551,13 @@ export default function AuthModal({
                   />
                 ) : (
                   <>
-                    <Text align="center" fontSize="14px" mt="4%" p="5px">
+                    {/* <Text align="center" fontSize="14px" mt="4%" p="5px">
                       We will send you a one-time sign in link.
-                    </Text>
-                    {fieldActive && (
+                    </Text> */}
+                    {!fieldActive && (
                       <CustomBtn
                         clr="green"
-                        title={loading ? "loading..." : "Sign In"}
+                        title={loadingLogin ?  <Loader size={150} color='white' /> : "Sign In"}
                         bgColor="#00C8AA"
                         color="white"
                         blue={true}
@@ -562,7 +565,7 @@ export default function AuthModal({
                         onClickHandler={login}
                       />
                     )}
-                    <CustomBtn
+                    {/* <CustomBtn
                       clr="green"
                       title={loading ? "loading..." : "Sign In With Magic Link"}
                       bgColor={fieldActive ? "#E1E1E1" : "#00C8AA"}
@@ -570,17 +573,17 @@ export default function AuthModal({
                       blue={true}
                       onClickHandler={magicLogin}
                       mt="5%"
-                    />
-                    {!fieldActive && (
+                    /> */}
+                    {/* {!fieldActive && (
                       <CustomBtn
-                        clr="grey"
+                        clr="green"
                         title="Switch to password"
                         bgColor="#E1E1E1"
                         color="grey"
                         mt="5%"
                         onClickHandler={() => setFieldActive(true)}
                       />
-                    )}
+                    )} */}
                   </>
                 )}
                 {isRegister ? (
@@ -613,7 +616,13 @@ export default function AuthModal({
                     // className={styles.modalBtn}
                     onClick={() => loginWithGoogle()}
                   >
-                    <Image src="/googleIcon.png" height={"25px"} alt={""} />
+                    {
+                      loadingGoogle ?
+                        <Loader size={150} color='green' />
+                        :
+                        <Image src="/googleIcon.png" height={"25px"} alt={""} />
+                    }
+
                   </Button>
                 )}
               </Box>
