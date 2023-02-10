@@ -1,18 +1,25 @@
 import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 import SaveTempData from "../saveTempBtn/SaveTempData";
+import { useSelector } from "react-redux";
 
-export default function PDFGenerater() {
+export default function PDFGenerater(templateId) {
   // Save Template Data in DB Hook
   const { onClickHandler } = SaveTempData();
-
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer?.isUserLoggedIn
+  );
   // pdf generater
   const pdfRef = useRef(null);
   const downloadPDFHandler = useReactToPrint({
     content: () => pdfRef.current,
     documentTitle: "download.pdf",
     onAfterPrint: () => {
-      onClickHandler();
+      if (isUserLoggedIn) {
+        onClickHandler({
+          templateId: templateId,
+        });
+      }
     },
   });
 
@@ -24,7 +31,6 @@ export default function PDFGenerater() {
 }
 const downloadWordHandler = async (resumeData) => {
   try {
-    console.log("resumeData", resumeData);
 
     const options = {
       method: "POST",

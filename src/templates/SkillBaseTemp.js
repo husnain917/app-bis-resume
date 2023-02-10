@@ -49,10 +49,12 @@ const SkillBaseTemp = () => {
             bg={'#fff'}
         >
             <Box
-                minW={830}
-                maxW={830}
+                minW={837}
+                maxW={837}
+          minHeight={1183}
+
                 bg={'white'}
-                mb="20px"
+              
                 borderRadius={6}
                 borderWidth="1px"
                 borderColor={'#00000023'}

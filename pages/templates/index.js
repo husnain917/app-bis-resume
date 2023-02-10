@@ -1,5 +1,5 @@
 import { Box, Image, Text, Container } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "@chakra-ui/react";
 import { CUSTOM_TEMP_DATA } from "../../src/components/customTempData/CustomTempData";
 import { useDispatch } from "react-redux";
@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import CustomTempSearchModel from "../../src/components/customTempSearchModel/CustomTempSearchModel";
 
 function Templates() {
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
   const router = useRouter();
   const isUserLoggedIn = useSelector(
@@ -35,10 +36,10 @@ function Templates() {
         </Text>
       </Box>
       <Container
-        maxWidth={'100%'}
-        display={'flex'}
-        flexWrap={'wrap'}
-        justifyContent={'center'}
+        maxWidth={"100%"}
+        display={"flex"}
+        flexWrap={"wrap"}
+        justifyContent={"center"}
         py={4}
       >
         {ProfessionalTemp?.map((items, index) => (
@@ -69,25 +70,25 @@ function Templates() {
                   </div>
                 </div>
                 <Box
-                  display={'flex'}
-                  margin={'20px 0px 30px 0px'}
-                  alignItems={'center'}
+                  display={"flex"}
+                  margin={"20px 0px 30px 0px"}
+                  alignItems={"center"}
                 >
                   <Text
-                    fontSize={'1.3rem'}
-                    fontStyle={'normal'}
+                    fontSize={"1.3rem"}
+                    fontStyle={"normal"}
                     fontFamily={`poppins-bold`}
-                    margin={'10px 0px 0px 0px'}
-                    color={'#313B47'}
+                    margin={"10px 0px 0px 0px"}
+                    color={"#313B47"}
                   >
                     {items?.category?.categoryName}
                   </Text>
                   <Text
-                    fontSize={'0.92rem'}
-                    fontStyle={'normal'}
+                    fontSize={"0.92rem"}
+                    fontStyle={"normal"}
                     fontFamily={`poppins`}
-                    margin={'10px 0px 0px 20px'}
-                    color={'#757575'}
+                    margin={"10px 0px 0px 20px"}
+                    color={"#757575"}
                   >
                     {items?.category?.categoryID}
                     {"/"}
@@ -113,10 +114,10 @@ function Templates() {
         </Text>
       </Box>
       <Container
-        maxWidth={'100%'}
-        display={'flex'}
-        flexWrap={'wrap'}
-        justifyContent={'center'}
+        maxWidth={"100%"}
+        display={"flex"}
+        flexWrap={"wrap"}
+        justifyContent={"center"}
         py={4}
       >
         {Modern?.map((items, index) => (
@@ -150,16 +151,16 @@ function Templates() {
                   </div>
                 </div>
                 <Box
-                  display={'flex'}
-                  margin={'20px 0px 30px 0px'}
-                  alignItems={'center'}
+                  display={"flex"}
+                  margin={"20px 0px 30px 0px"}
+                  alignItems={"center"}
                 >
                   <Text
                     fontSize={"1.3rem"}
                     fontStyle={"normal"}
                     fontFamily={`poppins-bold`}
-                    margin={'10px 0px 0px 0px'}
-                    color={'#313B47'}
+                    margin={"10px 0px 0px 0px"}
+                    color={"#313B47"}
                   >
                     {items?.category?.categoryName}
                   </Text>
@@ -167,8 +168,8 @@ function Templates() {
                     fontSize={"0.92rem"}
                     fontStyle={"normal"}
                     fontFamily={`poppins`}
-                    margin={'10px 0px 0px 20px'}
-                    color={'#757575'}
+                    margin={"10px 0px 0px 20px"}
+                    color={"#757575"}
                   >
                     {items?.category?.categoryID}
                     {"/"}

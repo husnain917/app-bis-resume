@@ -18,14 +18,20 @@ import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { modalOpen } from "../../store/actions/AuthAction";
+import SaveTempData from "../../src/components/saveTempBtn/SaveTempData";
 
 const TemplateDetail = () => {
   const router = useRouter();
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer?.isUserLoggedIn
+  );
+
   // const isUserLoggedIn = useSelector(
   //   (state) => state.AuthReducer.isUserLoggedIn
   // );
-  const dispatch = useDispatch()
+  const { onClickHandler } = SaveTempData();
+  const dispatch = useDispatch();
   // useEffect(()=>{
   //   if (!isUserLoggedIn) {
   //     router.push('/')
@@ -40,18 +46,18 @@ const TemplateDetail = () => {
   const { template_id } = router.query;
   const [sideTempSelect, setsideTempSelect] = useState(false);
   const { width } = useWindowSizing();
-  const { downloadPDFHandler, pdfRef, downloadWordHandler } = PDFGenerater();
   const [template, settemplate] = useState();
 
   const selected =
     CUSTOM_TEMP_DATA?.find((item) => item.id === template) ||
     CUSTOM_TEMP_DATA?.find((item) => item.id === template_id);
+    const { downloadPDFHandler, pdfRef, downloadWordHandler } = PDFGenerater(selected?.id);
 
-  const ref = useRef()
+  const ref = useRef();
   useOutsideClick({
     ref: ref,
     handler: () => setsideTempSelect(false),
-  })
+  });
   return (
     <Box>
       <TempLayout
@@ -65,11 +71,20 @@ const TemplateDetail = () => {
         interest={selected?.sections?.interest}
         certificate={selected?.sections?.certificate}
         downloadPDF={downloadPDFHandler}
+        saveDataHandler={() => {
+          if (!isUserLoggedIn) {
+            dispatch(modalOpen());
+          } else {
+            onClickHandler({
+              templateId: selected.id,
+            });
+          }
+        }}
         downloadWord={() => {
           downloadWordHandler({
             ...resumeData,
-            id: selected.id
-          })
+            id: selected.id,
+          });
         }}
         sideTempSelect={sideTempSelect}
         setsideTempSelect={setsideTempSelect}

@@ -202,7 +202,6 @@ export const uploadImageAction = (image) => {
 
 export const onBlurField = (data, path) => (dispatch, getState) => {
   let resumeObj = getState().editorReducer.resumeData;
-  console.log(resumeObj, "data in action");
 
   let newObject = updateObject(resumeObj, path, data);
   persistor.flush();

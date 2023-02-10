@@ -35,14 +35,11 @@ export default function Navbar() {
   const isUserLoggedIn = useSelector(
     (state) => state.AuthReducer.isUserLoggedIn
   );
-  const modalOpenstate = useSelector((state) => state.AuthReducer.isModalOpen);
   const dispatch = useDispatch();
   const ismodalOpen = async () => {
     dispatch(modalOpen());
   };
-  const ismodalClose = async () => {
-    dispatch(modalClose());
-  };
+
   const uid = useSelector((state) => state.AuthReducer.userID);
   return (
     <Box>
@@ -62,7 +59,7 @@ export default function Navbar() {
         >
           <Link href="/#">
             <Image
-              src="/Dark_Blue.svg"
+              src="/oldLogo.svg"
               alt="Image Not Found"
               fill
               height={"70px"}
@@ -180,12 +177,6 @@ export default function Navbar() {
                     ) : (
                       <></>
                     )}
-                    <AuthModal
-                      ismodalClose={ismodalClose}
-                      isModalOpen={modalOpenstate}
-                      setIsModalOpen={ismodalOpen}
-                      setIsActive={setIsActive}
-                    />
                   </Box>
                 </>
               );
@@ -221,7 +212,7 @@ export default function Navbar() {
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav ismodalOpen={modalOpenstate} setIsModalOpen={ismodalOpen} />
+        <MobileNav setIsModalOpen={ismodalOpen} />
       </Collapse>
     </Box>
   );
@@ -326,7 +317,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
   );
 };
 
-const MobileNav = ({ setIsModalOpen, ismodalOpen }) => {
+const MobileNav = ({ setIsModalOpen }) => {
   return (
     <Stack
       bg={useColorModeValue("white", "gray.800")}
@@ -403,10 +394,6 @@ const MobileNav = ({ setIsModalOpen, ismodalOpen }) => {
                 ) : (
                   <></>
                 )}
-                <AuthModal
-                  isModalOpen={ismodalOpen}
-                  setIsModalOpen={setIsModalOpen}
-                />
               </Box>
             </>
           );

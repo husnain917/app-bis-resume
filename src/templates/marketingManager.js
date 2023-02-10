@@ -36,13 +36,14 @@ const MarketingManager = () => {
             bg={'#fff'}
         >
             <HStack
-                minW={830}
-                maxW={830}
+                minW={837}
+                maxW={837}
+          minHeight={1183}
+                
                 alignItems="stretch"
                 borderRadius={6}
                 bg={'white'}
                 borderColor={'#00000023'}
-                mb={'20px'}
             >
                 {/* ============== First Section ============== */}
                 <Box

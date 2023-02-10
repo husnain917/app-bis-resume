@@ -84,10 +84,10 @@ const BlogPost = () => {
                 >
                   <a
                     data-lazy-bg="https://s3.resume.io/cdn-cgi/image/width=770,dpr=1,format=auto/uploads/local_template_image/image/370/persistent-resource/stockholm-resume-templates.jpg 1x, https://s3.resume.io/cdn-cgi/image/width=770,dpr=2,format=auto/uploads/local_template_image/image/370/persistent-resource/stockholm-resume-templates.jpg 2x"
-                    href="/app/create-resume"
+                    href="templates/sBpVCiYIojHRtGlh"
                     className="compare-resumes__resume compare-resumes__resume--good is-image-loaded"
                     style={{
-                      backgroundImage: `url(${"/FashTemp4.png"})`,
+                      backgroundImage: `url(${"/realTemp37.PNG"})`,
                       backgroundSize: "cover",
                       backgroundRepeat: false,
                     }}
@@ -108,13 +108,15 @@ const BlogPost = () => {
                   <Box
                     className="compare-resumes__resume compare-resumes__resume--bad"
                     style={{
-                      backgroundImage: `url(${"/GraphicDesigner5.png"})`,
+                      backgroundImage: `url(${"/realTemp27.PNG"})`,
                       backgroundSize: "cover",
                       backgroundRepeat: false,
                     }}
                   >
                     <Box
                       className="compare-resumes__mark"
+                      ml={"-8%"}
+                      cursor="pointer"
                       style={{
                         backgroundImage: `url(${"/wrong.png"})`,
                         backgroundSize: "cover",
@@ -176,8 +178,12 @@ const BlogPost = () => {
           </Box>
 
           <Box className="blog-post__content-aside blog-post__content-aside--right">
-            <Box className="blog-aside" opacity={["1"]}>
-              <Box className="blog-aside__item show" position="static">
+            <Box>
+              <Box
+                className="blog-aside__item show"
+                position="static"
+                mt={"14%"}
+              >
                 <Box className="post-banner-cta">
                   <Box className="post-banner-cta__main">
                     <Box className="post-banner-cta__title post-banner-cta__title--top">
