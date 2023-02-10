@@ -117,10 +117,6 @@ const FifthSection = () => {
           ></Box>
 
           <Link href={"/templates"}>
-<<<<<<< HEAD
-=======
-
->>>>>>> 1100a5b434e7b64cc20d8ea457afc49af8419a85
             <CommonButton
               className={"medium-text"}
               width={["12rem", "12rem", "12rem", "14rem", "14rem"]}
