@@ -36,7 +36,7 @@ const SecondSection = () => {
           </>
         );
       })}
-      <Box
+      {/* <Box
         borderRadius={"30px"}
         bg={"white"}
         padding={[
@@ -57,7 +57,7 @@ const SecondSection = () => {
         <Text textAlign={"end"} mt={"-2%"}>
           — Anybody, everywhere
         </Text>
-      </Box>
+      </Box> */}
 
       <Box w={"10%"} h={"1px"} bg={"black"}></Box>
       <Box

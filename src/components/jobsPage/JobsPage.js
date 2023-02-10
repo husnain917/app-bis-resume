@@ -40,7 +40,7 @@ const JobsPage = () => {
   };
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Box w={"100%"}>
         <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
@@ -197,7 +197,7 @@ const JobsPage = () => {
         <ThirdSection />
         {/* <ForthSection /> */}
         <FifthSection />
-        <SixthSection />
+        {/* <SixthSection /> */}
         <Box>
           <Box
             display={"flex"}
@@ -353,7 +353,7 @@ const JobsPage = () => {
                   {item?.Content?.map((item, index) => {
                     return (
                       <>
-                        <GridItem w="100%" mb={8} colSpan={[3, 3, 1, 1, 1]}>
+                        {/* <GridItem w="100%" mb={8} colSpan={[3, 3, 1, 1, 1]}>
                           <ContentText
                             id={item.id}
                             text={item.text}
@@ -368,7 +368,7 @@ const JobsPage = () => {
                             color={item.color}
                             lineHeight={item.lineHeight}
                           />
-                        </GridItem>
+                        </GridItem> */}
                       </>
                     );
                   })}
@@ -394,7 +394,7 @@ const JobsPage = () => {
               <Box
                 height={"2px"}
                 backgroundColor={"black"}
-                mt={4}
+                // mt={4}
                 width={"25%"}
               ></Box>
               <Link href="/blog">
