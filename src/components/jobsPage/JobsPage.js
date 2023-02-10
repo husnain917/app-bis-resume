@@ -41,6 +41,7 @@ const JobsPage = () => {
   return (
     <>
       {/* <Navbar /> */}
+      <Sidebar />
 
       <Box w={"100%"}>
         <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
