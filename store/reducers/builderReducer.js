@@ -14,11 +14,27 @@ const initialState = {
   getScanResultStatus: "loading",
   getResumeBuilderChoice: "form",
   builderResumeData: {},
+  myTemplates: [],
 };
 
 export default function resumeEditor(state = initialState, action) {
   console.log("Resume Data in BuilderReducer", action.payload);
   switch (action.type) {
+    case actionTypes.USER_TEMP_DATA:
+      console.log("action====.0>>>", action);
+      if (action?.payload) {
+        return {
+          ...state,
+          resumeData: action?.payload?.resumeData,
+          myTemplates: action?.payload?.myTemplates,
+        };
+      } else {
+        return {
+          ...state,
+          resumeData: state?.resumeData,
+        };
+      }
+      return;
     ///////// custom Cases ///////////////////////
     case actionTypes.ON_BLUR_FILED:
     case actionTypes.ON_UPDATE_ORDER:

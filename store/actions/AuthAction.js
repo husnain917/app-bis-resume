@@ -10,7 +10,6 @@ import {
   updateDoc,
   arrayUnion,
   orderBy,
-
 } from "firebase/firestore";
 import { Magic } from "magic-sdk";
 import {
@@ -33,7 +32,7 @@ import {
   sendPasswordResetEmail,
   updateEmail,
   signOut,
-  deleteUser
+  deleteUser,
 } from "firebase/auth";
 import { getAuth, sendEmailVerification } from "firebase/auth";
 
@@ -48,6 +47,7 @@ import {
   getUserToken,
   removeUserToken,
 } from "../../src/components/localStorage/LocalStorage";
+import { actionTypes } from "../../constants/actionTypes";
 export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
   try {
     setLoading(true);
@@ -81,6 +81,13 @@ export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
         },
       });
       setErr({ fieldErr: "" });
+      const userTempData = await getUserTemplatedata(userLoginData.uid);
+      if (userTempData) {
+        dispatch({
+          type: actionTypes.USER_TEMP_DATA,
+          payload: userTempData,
+        });
+      }
       ToastSuccess("Login Successfull");
       dispatch({
         type: MODAL_OPEN,
@@ -158,6 +165,13 @@ export const doGoogleLogin =
           type: MODAL_OPEN,
           payload: false,
         });
+        const userTempData = await getUserTemplatedata(user.uid);
+        if (userTempData) {
+          dispatch({
+            type: actionTypes.USER_TEMP_DATA,
+            payload: userTempData,
+          });
+        }
         setIsModalOpen(false);
         setErr({ fieldErr: "" });
         setLoading(false);
@@ -256,17 +270,28 @@ export const doSignUp =
       // }
     }
   };
-
+const getUserTemplatedata = async (id) => {
+  const docRef = doc(db, "templateData", id);
+  const docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
 export const getLoggedInUser = () => async (dispatch) => {
   try {
     let uid;
-    onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, async (user) => {
       if (user) {
         uid = user.uid;
         dispatch({
           type: ACTIVE_USER,
           payload: user,
         });
+        const userTempData = await getUserTemplatedata(user.uid);
+        if (userTempData) {
+          dispatch({
+            type: actionTypes.USER_TEMP_DATA,
+            payload: userTempData,
+          });
+        }
       }
     });
   } catch (error) {
@@ -292,19 +317,20 @@ export const doLogout = (setLoading) => async (dispatch) => {
   }
 };
 
-export const passwordReset = (setLoading, setErr, email) => async (dispatch) => {
-  try {
-    setLoading(true);
-    await sendPasswordResetEmail(auth, email);
-  } catch (err) {
-    const errorCode = err.code;
-    if (errorCode === "auth/user-not-found") {
-      setErr({ fieldErr: "No account exists with this email." });
+export const passwordReset =
+  (setLoading, setErr, email) => async (dispatch) => {
+    try {
+      setLoading(true);
+      await sendPasswordResetEmail(auth, email);
+    } catch (err) {
+      const errorCode = err.code;
+      if (errorCode === "auth/user-not-found") {
+        setErr({ fieldErr: "No account exists with this email." });
+      }
+    } finally {
+      setLoading(false);
     }
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
 export const ChangeEmail = (setLoading, setErr, email) => async (dispatch) => {
   console.log("email", email);
@@ -315,15 +341,13 @@ export const ChangeEmail = (setLoading, setErr, email) => async (dispatch) => {
       const data = await updateEmail(fullAuth?.currentUser, email);
       console.log(data);
       ToastSuccess("Change Email SuccessFully");
-
     } catch (err) {
       console.log(err);
     }
+  } else {
+    ToastSuccess("same account not enter");
   }
-  else {
-    ToastSuccess("same account not enter")
-  }
-}
+};
 
 // delete account
 
@@ -332,7 +356,7 @@ export const doUserDelete = () => async (dispatch) => {
     const user = auth?.currentUser;
     const res = await deleteUser(user);
     console.log(res);
-    ToastSuccess("account deleted")
+    ToastSuccess("account deleted");
     dispatch({
       type: USERREMOVE,
       payload: null,
@@ -341,7 +365,6 @@ export const doUserDelete = () => async (dispatch) => {
     console.log("error", error);
   }
 };
-
 
 export const doCheckUser = (uid) => async (dispatch) => {
   try {

@@ -65,7 +65,7 @@ export default function ProfileComponent() {
           mt={4}
           p={0}
           minW="0"
-          w={"140px"}
+          w={"160px"}
           padding={"2px"}
           _hover={{
             backgroundColor: "white",
@@ -108,6 +108,32 @@ export default function ProfileComponent() {
                 // pb="5px"
               >
                 My Profile
+              </Text>
+            </Link>
+          </MenuItem>
+          <MenuItem
+            zIndex={"4"}
+            minH="30px"
+            closeOnSelect={true}
+            // borderTopColor={"transparent"}
+            background={"white"}
+            _hover={{
+              backgroundColor: "white",
+            }}
+          >
+            <Link href="/myTemplates">
+              <Text
+                fontSize="18px"
+                fontWeight={"500"}
+                // color="#00C8AA"
+                _hover={{
+                  color: "#00C8AA",
+                }}
+                letterSpacing={"1px"}
+                // pt="5px"
+                // pb="5px"
+              >
+                My Templates
               </Text>
             </Link>
           </MenuItem>

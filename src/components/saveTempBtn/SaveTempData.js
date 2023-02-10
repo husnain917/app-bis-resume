@@ -6,11 +6,10 @@ import { useSelector } from "react-redux";
 import { db } from "../../../config/firebase";
 import { useDispatch } from "react-redux";
 import { feedbackAction } from "../../../store/actions/feedbackAction";
+import { actionTypes } from "../../../constants/actionTypes";
 const SaveTempData = () => {
-  let resumeData = useSelector(
-    (store) => store?.editorReducer?.resumeData.profile.firstName
-  );
-  console.log("RESUME >>>> DATA", resumeData);
+  let resumeData = useSelector((store) => store?.editorReducer?.resumeData);
+  const myTemplates = useSelector((state) => state.editorReducer?.myTemplates);
   const dispatch = useDispatch();
   const [uid, setUid] = React.useState("");
   const toast = useToast();
@@ -19,11 +18,18 @@ const SaveTempData = () => {
   const feedBackGetHandler = () => {
     dispatch(feedbackAction(true));
   };
-  const onClickHandler = () => {
+  const onClickHandler = ({ templateId }) => {
+    console.log("templateId", templateId);
+    const oldTemp = myTemplates?.length > 0 ? myTemplates : [templateId];
+    console.log("myTemplates", oldTemp);
+
+    const allMytemplates = [...new Set([...oldTemp, templateId])];
+    console.log("uid", uid);
     if (uid) {
       setDoc(doc(resumeRef, uid), {
         resumeData,
         by: uid,
+        myTemplates: allMytemplates,
       })
         .then((res) => {
           toast({
@@ -35,6 +41,13 @@ const SaveTempData = () => {
             position: "top-right",
           });
           feedBackGetHandler();
+          dispatch({
+            type: actionTypes.USER_TEMP_DATA,
+            payload: {
+              resumeData: resumeData,
+              myTemplates: allMytemplates,
+            },
+          });
         })
         .catch((e) => {
           toast({
