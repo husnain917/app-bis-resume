@@ -40,6 +40,9 @@ import DownloadModal from "../downloadModel/DownloadModal";
 import ThemeModal from "../themeModal/ThemeModal";
 import FontPopover from "../fontPopover/FontPopover";
 import SettingModal from "../setting/SettingModal";
+import { doLogout } from "../../../store/actions/AuthAction";
+import { useDispatch } from "react-redux";
+
 export default function TempNavbar({
   work,
   education,
@@ -58,6 +61,14 @@ export default function TempNavbar({
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const [showNav, setShowNav] = useState(false);
+  const [loading,setLoading]=useState(false)
+
+
+  const dispatch = useDispatch()
+   
+  const hshdh= ()=>{
+    dispatch(doLogout(setLoading))
+  }
 
   return (
     <Box
@@ -233,6 +244,7 @@ export default function TempNavbar({
                 transition: "all .2s  ease-in",
               }}
               cursor="pointer"
+              onClick={()=>hshdh()}
             >
               Sign Out
             </Text>
