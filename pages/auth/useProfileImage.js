@@ -26,7 +26,6 @@ const UseProfileImage = ({
   showFull,
 }) => {
   useEffect(() => {
-    console.log("Height", height, "Width", width);
   }, [height, width]);
   const userData = useSelector((store) => store.AuthReducer.user);
   const [isOpen, setisOpen] = useState(false);
@@ -61,7 +60,7 @@ const UseProfileImage = ({
     // const { current } = uploadedImage;
     // current.src = result;
     // dispatch(onBlurField(result, "profile.profileImage"));
-    return console.log("cancelButtonClicked");
+    return ''
   };
 
   return (

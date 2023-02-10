@@ -42,9 +42,9 @@ const FlightAttendant1 = () => {
         display="flex"
         flexDir="row"
         w="100%"
-        minW="830px"
+        minW="837px" minHeight={1183}
         maxW="850px"
-        mb={"20px"}
+        mb={"0px"}
         borderWidth="1px"
         borderColor={"#00000023"}
       >

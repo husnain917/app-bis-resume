@@ -70,7 +70,6 @@ export default function AuthModal({
     dispatch(modalClose());
   };
   let active = +localStorage.getItem("active");
-  console.log("sami", active);
   const magicLogin = async () => {
     if (email !== "") {
       dispatch(loginMagicUser(email, setUser, setLoading));

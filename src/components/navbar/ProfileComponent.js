@@ -25,12 +25,10 @@ export default function ProfileComponent() {
   const dispatch = useDispatch();
   const router = useRouter();
   const logoutHandler = () => {
-    console.log("Caled logout functions");
     dispatch(doLogout(setLoading));
     router.push("/");
   };
   const handleIconColor = () => {
-    console.log("COLOR FUNCTION");
     setIconColor("green");
   };
   return (

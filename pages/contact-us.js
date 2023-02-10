@@ -14,7 +14,6 @@ export default function ContactUs() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  // console.log("NAME", name, "EMAIL", email, "Message", message);
   const onSubmitHandler = () => {
     if (!email || !name || !message) {
       ToastError("Please fill this Fields");
@@ -28,7 +27,6 @@ export default function ContactUs() {
   const onFocunHandler = (index) => {
     setCancel(1);
     setActive(index);
-    console.log("This is Index", index);
     if (index === 4) {
       setCancel(2);
     }

@@ -23,7 +23,6 @@ export default function CardSliderFunc({ cardWidth }) {
 
   const [height, setHeight] = useState(400);
   const [width, setWidth] = useState(0);
-  // console.log(height)
 
   useEffect(() => {
     setHeight(ref.current.offsetHeight);
