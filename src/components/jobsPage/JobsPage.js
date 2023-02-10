@@ -48,6 +48,7 @@ const JobsPage = () => {
         {/* <Box position={"absolute"}>
           <Sidebar />
         </Box> */}
+
         <Box
           className={styles.sideBarContainer}
           display={["none", "none", "block", "block", "block"]}
@@ -781,7 +782,6 @@ const JobsPage = () => {
           </Box>
         </Box>
       </Box>
-      <Footer />
     </>
   );
 };
