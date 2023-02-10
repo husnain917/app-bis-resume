@@ -21,7 +21,6 @@ function Text(props) {
         if (text.length <= 10) {
           console.log("TEXT >>>> ", document.getElementById(path).innerText);
         } else {
-          // return alert("Maximum text length reached.");
         }
       });
     }

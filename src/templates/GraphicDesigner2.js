@@ -41,8 +41,8 @@ export default function GraphicDesigner2() {
         display="flex"
         flexDir="row"
         maxW="830px"
-        minW="830px"
-        mb={"20px"}
+        minW="837px" minHeight={1183}
+        mb={"0px"}
       >
         <Box
           w="38%"

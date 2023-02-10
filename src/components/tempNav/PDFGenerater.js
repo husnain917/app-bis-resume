@@ -12,8 +12,6 @@ export default function PDFGenerater() {
     content: () => pdfRef.current,
     documentTitle: "download.pdf",
     onAfterPrint: (item) => {
-      alert('ll')
-      console.log('asdasad====>',item)
       onClickHandler();
     },
   })

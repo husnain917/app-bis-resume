@@ -37,13 +37,13 @@ const FashionTemp5 = () => {
       alignItems={{ sm: "none", lg: "center" }}
       bg={"#fff"}
     >
-      <Box mb={"20px"}>
+      <Box >
         <HStack
           minW={830}
           maxW={830}
           alignItems="stretch"
           borderRadius={6}
-          bg={"white"}
+          bg={"white"}minHeight={1183}
           borderColor={"#00000033"}
         >
           <Box
