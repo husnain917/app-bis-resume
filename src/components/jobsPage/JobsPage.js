@@ -40,7 +40,7 @@ const JobsPage = () => {
   };
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Box w={"100%"}>
         <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
@@ -333,7 +333,7 @@ const JobsPage = () => {
                 <>
                   <GridItem
                     colSpan={3}
-                    width={["100%", "100%", "59%", "59%", "57%"]}
+                    width={["100%", "100%", "80%", "80%", "85%"]}
                     margin={"0 auto"}
                   >
                     <ContentText
@@ -435,7 +435,7 @@ const JobsPage = () => {
               <>
                 <GridItem
                   colSpan={3}
-                  w={["85%", "85%", "50%", "55%", "55%"]}
+                  w={["85%", "85%", "65%", "75%", "75%"]}
                   margin={"0 auto"}
                 >
                   <ContentText

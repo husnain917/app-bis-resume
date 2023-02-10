@@ -13,9 +13,9 @@ const SecondSection = () => {
       padding={[
         "10px 32px 0px 32px",
         "10px 32px 0px 32px",
-        "10px 50px 0px 50px",
-        "10px 50px 0px 50px",
-        "10px 50px 0px 50px",
+        "10px 0px 0px 0px",
+        "10px 0px 0px 0px",
+        "10px 0px 0px 0px",
       ]}
     >
       {data?.map((text, index) => {
@@ -65,7 +65,7 @@ const SecondSection = () => {
         w={"100%"}
         flexDirection={["column", "column", "row", "row", "row"]}
         justifyContent={"space-around"}
-        mt={[0, 0, 0, 0, 1]}
+        mt={[0, 0, 0, 0, 0]}
       >
         <Box
           id={"image"}
