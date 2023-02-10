@@ -21,7 +21,7 @@ import ContentText from "./components/ContentText";
 import Sidebar from "../blog/Sidebar";
 import Link from "next/link";
 import Footer from "../footer/Footer";
-import styles from "../../../styles/resumeFormats.module.css";
+// import styles from "../../../styles/resumeFormats.module.css";
 import {
   thirdContent,
   seventhContent,
@@ -33,6 +33,8 @@ import {
 } from "./data";
 import { MdDone } from "react-icons/md";
 import Navbar from "../blog/latestPost/navbar/Navbar";
+import SideBar from "../sideBar/SideBar";
+import styles from "../../../styles/sideBarSection.module.css";
 
 const JobsPage = () => {
   const handleButton = () => {
@@ -41,9 +43,19 @@ const JobsPage = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <Sidebar />
 
       <Box w={"100%"}>
+        {/* <Box position={"absolute"}>
+          <Sidebar />
+        </Box> */}
+        <Box
+          className={styles.sideBarContainer}
+          display={["none", "none", "block", "block", "block"]}
+          position={"absolute"}
+          mt={20}
+        >
+          <SideBar />
+        </Box>
         <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
           <Box
             bg={"#FFD67B"}
@@ -194,6 +206,7 @@ const JobsPage = () => {
             />
           </Box>
         </Box>
+
         <SecondSection />
         <ThirdSection />
         {/* <ForthSection /> */}
