@@ -48,9 +48,9 @@ import {
   removeUserToken,
 } from "../../src/components/localStorage/LocalStorage";
 import { actionTypes } from "../../constants/actionTypes";
-export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
+export const doLogin = (data, setLoadingLogin, setErr) => async (dispatch) => {
   try {
-    setLoading(true);
+    setLoadingLogin(true);
     const logInData = await signInWithEmailAndPassword(
       auth,
       data.email,
@@ -104,16 +104,16 @@ export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
 
     console.log("Error User LogIn", e.code);
   } finally {
-    setLoading(false);
+    setLoadingLogin(false);
   }
 };
 
 export const doGoogleLogin =
-  (terms, setLoading, setErr) => async (dispatch) => {
+  (terms, setLoadingLogin, setErr) => async (dispatch) => {
     const provider = new GoogleAuthProvider();
 
     try {
-      setLoading(true);
+      setLoadingLogin(true);
       const userLoginData = await signInWithPopup(auth, provider);
       const credential = GoogleAuthProvider.credentialFromResult(userLoginData);
       const token = credential?.accessToken;
@@ -155,7 +155,7 @@ export const doGoogleLogin =
         }
         setIsModalOpen(false);
         setErr({ fieldErr: "" });
-        setLoading(false);
+        setLoadingLogin(false);
       }
       // console.log({ credential, token, user });
     } catch (error) {
@@ -168,7 +168,7 @@ export const doGoogleLogin =
       }
       // console.log({ errorCode, errorMessage, email, credential });
     } finally {
-      setLoading(false);
+      setLoadingLogin(false);
     }
   };
 
