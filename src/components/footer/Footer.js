@@ -139,6 +139,8 @@ export default function Footer() {
             >
               <a target="_blank">
                 <CommonSocial
+                  width={"1.6rem"}
+                  height={"1.6rem"}
                   hoverCursor={"pointer"}
                   backgroundColor={"white"}
                   borderRadius={"50%"}
@@ -151,7 +153,7 @@ export default function Footer() {
                     <FaFacebookF
                       color={"#006772"}
                       fontWeight={"bold"}
-                      fontSize={"1.1rem"}
+                      fontSize={"0.8rem"}
                     />
                   }
                 />
@@ -166,18 +168,20 @@ export default function Footer() {
             >
               <a target={"_blank"}>
                 <CommonSocial
+                  width={"1.6rem"}
+                  height={"1.6rem"}
                   hoverCursor={"pointer"}
                   backgroundColor={"white"}
                   borderRadius={"50%"}
                   color={"whitesmoke"}
-                  margin={"0px 20px 0px 20px"}
+                  margin={"0px 10px 0px 10px"}
                   padding={"0"}
                   hoverBorder={"1px solid black"}
                   icon={
                     <FaLinkedinIn
                       color={"#006772"}
                       fontWeight={"bold"}
-                      fontSize={"1.1rem"}
+                      fontSize={"0.8rem"}
                     />
                   }
                 />
@@ -190,23 +194,28 @@ export default function Footer() {
               as="https://twitter.com/login"
             >
               <a target={"_blank"}>
-                <CommonSocial
-                  hoverCursor={"pointer"}
-                  backgroundColor={"white"}
-                  borderRadius={"50%"}
-                  color={"whitesmoke"}
-                  margin={"0px 20px 0px 0px"}
-                  padding={"0"}
-                  hoverBorder={"1px solid black"}
-                  // className={"hoverEffects"}
-                  icon={
-                    <FaTwitter
-                      color={"#006772"}
-                      fontWeight={"bold"}
-                      fontSize={"1.1rem"}
-                    />
-                  }
-                />
+                <Box>
+                  <CommonSocial
+                    width={"1.6rem"}
+                    height={"1.6rem"}
+                    hoverCursor={"pointer"}
+                    backgroundColor={"white"}
+                    borderRadius={"50%"}
+                    color={"whitesmoke"}
+                    margin={"0px 10px 0px 0px"}
+                    padding={"0"}
+                    hoverBorder={"1px solid black"}
+                    // className={"hoverEffects"}
+
+                    icon={
+                      <FaTwitter
+                        color={"#006772"}
+                        fontWeight={"bold"}
+                        fontSize={"0.8rem"}
+                      />
+                    }
+                  />
+                </Box>
               </a>
             </Link>
             <Link
@@ -217,6 +226,8 @@ export default function Footer() {
             >
               <a target="_blank">
                 <CommonSocial
+                  width={"1.6rem"}
+                  height={"1.6rem"}
                   hoverCursor={"pointer"}
                   backgroundColor={"white"}
                   borderRadius={"50%"}
@@ -229,7 +240,7 @@ export default function Footer() {
                     <FaInstagram
                       color={"#006772"}
                       fontWeight={"bold"}
-                      fontSize={"1.1rem"}
+                      fontSize={"0.8rem"}
                     />
                   }
                 />
