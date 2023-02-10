@@ -195,7 +195,6 @@ const SalesRepresentative = () => {
               FName={true}
               maxChr={38}
               SName={true}
-              maxChr={38}
               direction="column"
               //   maxWidth={"160px"}
               FNameStyle={Class.fName}
