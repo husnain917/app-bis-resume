@@ -50,7 +50,6 @@ const Language = (props) => {
       newArr = [e.target.value];
     } else if (progress.length === index2) {
       newArr = [...progress, e.target.value];
-      console.log(newArr);
     } else {
       newArr = progress.map((item, index) => {
         if (index === index2) {

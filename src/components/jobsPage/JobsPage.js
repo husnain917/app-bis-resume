@@ -36,7 +36,6 @@ import Navbar from "../blog/latestPost/navbar/Navbar";
 
 const JobsPage = () => {
   const handleButton = () => {
-    console.log("FOCUSED");
   };
   return (
     <>

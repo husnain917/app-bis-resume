@@ -3,7 +3,6 @@ import { Box, Image, Badge, Text } from "@chakra-ui/react";
 import { CheckCircleIcon, StarIcon } from "@chakra-ui/icons";
 
 const RatingWeb = ({ title, desc, date, name, rating }) => {
-  console.log("RatingWeb:", rating);
   const [currentValue, setCurrentValue] = useState(rating);
 
   const property = {

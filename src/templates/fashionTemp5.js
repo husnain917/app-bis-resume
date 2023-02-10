@@ -24,7 +24,6 @@ import ImageSelector from "../components/imageSelector";
 const FashionTemp5 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   let font = useSelector((state) => state.fontReducer.font);
-  console.log("Font:", font);
   const [show, setShow] = useShow();
   const { backgroundColor, color } = useSelector(
     (store) => store.themeReducer.theme

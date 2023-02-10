@@ -40,7 +40,6 @@ const HybridTemplate = () => {
   const { backgroundColor, color } = useSelector(
     (store) => store.themeReducer.theme
   );
-  // console.log(backgroundColor, color);
   // custom Hook For Template
   const [show, setShow] = useShow();
 
