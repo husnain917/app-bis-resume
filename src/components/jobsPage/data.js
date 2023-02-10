@@ -92,6 +92,7 @@ export const thirdContent = [
   {
     listItems: [
       {
+        id: "images",
         imageUrl: "/book-chapters.png",
       },
       
@@ -278,7 +279,7 @@ export const forthContent = [
     id: "Faqitem",
     className: "medium-heading",
     fontSize: ["19px", "19px", "22px", "32px", "32px"],
-    text: "Bonus - How to hack your job search in 2022",
+    text: "Bonus - How to hack your job search in 2023",
     textAlign: "start",
     margin: "20px 0px",
     faqsContent: [
@@ -378,6 +379,7 @@ export const sixthContent = [
         textAlign: "start",
         authorTextAlign: "end",
         lineHeight: ["24px", "24px", "24px", "26px", "26px"],
+        className: "medium-text",
       },
       {
         text: "“Thank you for taking the time to do that for others! A treasure in a world on fire. I’m sure you will help facilitate dreams.”        ",
@@ -398,7 +400,7 @@ export const sixthContent = [
       {
         text: "“Great job.. I just went through your e book, loved it I think I might get some in finding pit a job during these times. I recently have quit my job and am searching for one.”",
         author: "— Reddit @arjunssat",
-        fontSize: ["16px", "16px", "20px", "27px", "27px"],
+        fontSize: ["16px", "16px", "20px", "20px", "20px"],
         textAlign: "start",
         authorTextAlign: "end",
         lineHeight: ["24px", "24px", "24px", "26px", "26px"],
@@ -438,6 +440,7 @@ export const seventhContent = [
   {
     listItems: [
       {
+        id: "images",
         imageUrl: "/creating-compeling-resume.png",
       },
     ],

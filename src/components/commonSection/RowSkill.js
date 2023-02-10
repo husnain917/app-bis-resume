@@ -23,6 +23,8 @@ const RowSkill = (props) => {
     skillPlaceholder,
     parentContainerStyle,
     childContainerStyle,
+    maxChr,
+    maxWidth,
   } = props;
   const data = resumeData?.skills?.items?.length
     ? [...resumeData?.skills?.items]
@@ -63,8 +65,8 @@ const RowSkill = (props) => {
               placeholder={skillPlaceholder ? skillPlaceholder : "Skill"}
               customClass={`${skillStyle}`}
               path={`${path}.${index}.title`}
-              maxWidth={props.maxWidth}
-              maxChr={props.maxchr}
+              maxWidth={maxWidth}
+              maxChr={maxChr}
             />
           </Box>
         )}

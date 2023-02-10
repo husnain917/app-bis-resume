@@ -43,6 +43,7 @@ const Contact = (props) => {
     parentStyle,
     maxWidth,
     minWidth,
+    maxChr,
   } = props;
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const { font } = useSelector((state) => state.fontReducer.font);
@@ -103,6 +104,7 @@ const Contact = (props) => {
               path={"profile.phone"}
               maxWidth={maxWidth}
               minWidth={minWidth}
+              maxChr={maxChr}
             />
           </Stack>
         </>

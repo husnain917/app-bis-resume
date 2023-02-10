@@ -333,11 +333,9 @@ export default function LatestPosts({ blogs }) {
           <CommonButton
             title="Load More"
             hoverCursor={"pointer"}
-            backgroundColor={"#00C8AA"}
+            backgroundColor={"#2CACD5"}
             color={"whitesmoke"}
             onClick={() => setExpanded(true)}
-            // rightIcon={<FaArrowRight color="white" fontWeight="bold" />}
-
             fontSize={[
               "0.9rem",
               "0.9rem",
@@ -350,7 +348,7 @@ export default function LatestPosts({ blogs }) {
         ) : (
           <Box
             className={"small-heading"}
-            textColor="#00C8AA"
+            textColor="black"
             fontWeight={"bold"}
           >
             All Posts Show

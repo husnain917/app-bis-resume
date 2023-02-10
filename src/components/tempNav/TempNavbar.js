@@ -23,6 +23,7 @@ import {
   SettingsIcon,
   HamburgerIcon,
   ArrowBackIcon,
+  ArrowDownIcon,
 } from "@chakra-ui/icons";
 import {
   FaFacebookF,
@@ -54,6 +55,7 @@ export default function TempNavbar({
   downloadWord,
   leftMenu,
   setleftMenu,
+  saveDataHandler,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -90,7 +92,7 @@ export default function TempNavbar({
           borderRadius={"100px"}
           justifyContent="center"
           py={1}
-          ml={{ base: "120px", lg: '120px', md: "0px" }}
+          ml={["0px", "0px", "0px", "120px", "0px"]}
           display={{ base: "none", lg: "flex" }}
         >
           <Popover>
@@ -181,6 +183,21 @@ export default function TempNavbar({
           >
             <ArrowBackIcon mr="5px" />
             Left
+          </Button>
+          <Button
+            bgColor="transparent"
+            color="white"
+            fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+            _hover={{
+              backgroundColor: "transparent",
+
+              color: "#00c8aa",
+              transition: "0.4s",
+            }}
+            onClick={saveDataHandler}
+          >
+            <ArrowDownIcon mr="5px" />
+            Save
           </Button>
         </Box>
       )}

@@ -11,10 +11,12 @@ export default function PDFGenerater() {
   const downloadPDFHandler = useReactToPrint({
     content: () => pdfRef.current,
     documentTitle: "download.pdf",
-    onAfterPrint: () => {
+    onAfterPrint: (item) => {
+      alert('ll')
+      console.log('asdasad====>',item)
       onClickHandler();
     },
-  });
+  })
 
   return {
     pdfRef,
