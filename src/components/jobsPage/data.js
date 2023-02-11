@@ -17,7 +17,7 @@ export const data = [
       and follow up with a thank-you note after each interview. Stay positive, keep trying, and
        with persistence and dedication, you will eventually find the right job for you.
        `,
-    margin: ["0px 0px", "0px 0px", "0px 134px", "30px 172px", "30px 250px"],
+    margin: ["0px 0px", "0px 0px", "0px 134px", "30px 172px", "30px 180px"],
     fontSize: ["16px", "16px", "16px", "20px", "20px"],
     lineHeight: ["30px", "30px", "26px", "36px", "36px"],
   },
@@ -50,14 +50,11 @@ export const data = [
       },
 
       {
-        cardtext:
-          `This is where resources and guides can come in handy. By learning from experts and experienced professionals, you can gain insights into best practices and avoid common mistakes.`,
+        cardtext: `This is where resources and guides can come in handy. By learning from experts and experienced professionals, you can gain insights into best practices and avoid common mistakes.`,
       },
       {
-        cardtext:
-         `Whether it's studying up on the latest resume writing techniques, learning how to answer interview questions with confidence, or researching a company before your interview, taking the time to prepare can make a big difference in your job search outcome. So, don't be afraid to seek out help and guidance, and remember to stay positive and confident throughout the process. With the right tools and approach, you can increase your chances of landing your dream job.`,
+        cardtext: `Whether it's studying up on the latest resume writing techniques, learning how to answer interview questions with confidence, or researching a company before your interview, taking the time to prepare can make a big difference in your job search outcome. So, don't be afraid to seek out help and guidance, and remember to stay positive and confident throughout the process. With the right tools and approach, you can increase your chances of landing your dream job.`,
       },
-   
     ],
   },
 ];
@@ -95,8 +92,6 @@ export const thirdContent = [
         id: "images",
         imageUrl: "/book-chapters.png",
       },
-      
-      
     ],
   },
 ];
@@ -600,7 +595,7 @@ export const tenthContent = [
     textAlign: "start",
     color: "rgb(49,59,71)",
   },
-  
+
   {
     listItems: [
       {
@@ -738,7 +733,6 @@ export const lastContent = [
         fontSize: ["16px", "16px", "16px", "20px", "20px"],
         lineHeight: ["24px", "24px", "24px", "26px", "30px"],
       },
-      
     ],
   },
 ];
