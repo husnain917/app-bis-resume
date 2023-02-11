@@ -36,3 +36,4 @@ export { default as templatebrand } from './templatebrand';
 export { default as graphTemplate } from './graphTemplate';
 export { default as SkillBaseTemp } from './SkillBaseTemp';
 export { default as FashionDesigner } from './FashionDesigner';
+export { default as NovoResumeTemplate } from './ novoResumeTemplate';

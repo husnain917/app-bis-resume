@@ -14,9 +14,7 @@ function Text(props) {
     const myPara = document.getElementById(path);
     if (myPara) {
       myPara.addEventListener("input", function () {
-
         const text = document.getElementById(path).innerText;
-      
       });
     }
   });

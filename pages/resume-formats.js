@@ -157,6 +157,7 @@ export default function Resume_Formats() {
               >
                 Create your own professional resume in seconds with our
                 easy-to-use builder.
+
                 <Link color={"#3983fa"} href="/templates">
                   See more resume examples here.
                 </Link>
@@ -188,7 +189,7 @@ export default function Resume_Formats() {
         </Box>
       </Container>
       {/* content container end */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -5,6 +5,7 @@ import Text from "./Text";
 
 const Name = (props) => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  console.log("ResumeData in name function", resumeData?.profile?.firstName);
   const {
     direction,
     FName,
@@ -45,7 +46,11 @@ const Name = (props) => {
         <Box maxWidth={props.maxCWidth}>
           <Text
             value={resumeData?.profile?.lastName}
-            placeholder={SNamePlaceholder ? SNamePlaceholder : "Last Name"}
+            placeholder={
+              resumeData?.profile?.lastName
+                ? resumeData?.profile?.lastName
+                : "Last Name"
+            }
             customClass={`${SNameStyle}`}
             path={"profile.lastName"}
             minWidth={props.maxWidth}

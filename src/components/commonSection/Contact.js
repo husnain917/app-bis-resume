@@ -98,7 +98,11 @@ const Contact = (props) => {
             />
 
             <Text
-              placeholder={phonePlaceholder ? phonePlaceholder : "Phone"}
+              placeholder={
+                resumeData?.profile?.phone
+                  ? resumeData?.profile?.phone
+                  : "Phone"
+              }
               customClass={`${style}`}
               value={resumeData?.profile?.phone}
               path={"profile.phone"}
@@ -158,7 +162,11 @@ const Contact = (props) => {
               )}
             />
             <Text
-              placeholder={websitePlaceholder ? websitePlaceholder : "Website"}
+              placeholder={
+                resumeData?.profile?.website
+                  ? resumeData?.profile?.website
+                  : "Website"
+              }
               customClass={`${style}`}
               value={resumeData?.profile?.website}
               path={"profile.website"}
@@ -188,7 +196,9 @@ const Contact = (props) => {
             />
             <Text
               placeholder={
-                locationPlaceholder ? locationPlaceholder : "location"
+                resumeData?.profile?.address?.city
+                  ? resumeData?.profile?.address?.city
+                  : "location"
               }
               customClass={`${style}`}
               value={resumeData?.profile?.address?.city}
@@ -219,7 +229,9 @@ const Contact = (props) => {
             <Heading text={"Linkedin"} />
             <Text
               placeholder={
-                linkedInPlaceholder ? linkedInPlaceholder : "LinkedIn"
+                resumeData?.profile?.linkedinURL
+                  ? resumeData?.profile?.linkedinURL
+                  : "LinkedIn"
               }
               customClass={`${style}`}
               value={resumeData?.profile?.linkedinURL}

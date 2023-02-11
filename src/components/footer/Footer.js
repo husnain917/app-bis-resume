@@ -9,13 +9,14 @@ import {
 } from "react-icons/fa";
 import CommonSocial from "../commonButton/CommonSocial";
 import { FaArrowRight } from "react-icons/fa";
+import { Box } from "@chakra-ui/react";
 
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <>
       <div className={styles.fcontainer2}>
-        <Link
+        {/* <Link
           target="_blank"
           href={"#"}
           passhref
@@ -118,7 +119,7 @@ export default function Footer() {
               }
             />
           </a>
-        </Link>
+        </Link> */}
       </div>
       <div className={styles.fcontainer1}>
         <div className={styles.linkDiv}>
@@ -129,6 +130,123 @@ export default function Footer() {
           <div>
             <Link href="/templates">Resume Templates</Link>
           </div>
+          <Box display={"flex"}>
+            <Link
+              target="_blank"
+              href={"#"}
+              passhref
+              as={"https://web.facebook.com/login/?_rdc=1&_rdr"}
+            >
+              <a target="_blank">
+                <CommonSocial
+                  width={"1.6rem"}
+                  height={"1.6rem"}
+                  hoverCursor={"pointer"}
+                  backgroundColor={"white"}
+                  borderRadius={"50%"}
+                  color={"whitesmoke"}
+                  margin={"0"}
+                  padding={"0"}
+                  hoverBorder={"1px solid black"}
+                  // className={"hoverEffects"}
+                  icon={
+                    <FaFacebookF
+                      color={"#006772"}
+                      fontWeight={"bold"}
+                      fontSize={"0.8rem"}
+                    />
+                  }
+                />
+              </a>
+            </Link>
+            <Link
+              // href={"#"}
+              target="_blank"
+              passhref
+              href={"https://www.linkedin.com/home"}
+              as={"https://www.linkedin.com/home"}
+            >
+              <a target={"_blank"}>
+                <CommonSocial
+                  width={"1.6rem"}
+                  height={"1.6rem"}
+                  hoverCursor={"pointer"}
+                  backgroundColor={"white"}
+                  borderRadius={"50%"}
+                  color={"whitesmoke"}
+                  margin={"0px 10px 0px 10px"}
+                  padding={"0"}
+                  hoverBorder={"1px solid black"}
+                  icon={
+                    <FaLinkedinIn
+                      color={"#006772"}
+                      fontWeight={"bold"}
+                      fontSize={"0.8rem"}
+                    />
+                  }
+                />
+              </a>
+            </Link>
+            <Link
+              href={"https://twitter.com/login"}
+              target="_blank"
+              passhref
+              as="https://twitter.com/login"
+            >
+              <a target={"_blank"}>
+                <Box>
+                  <CommonSocial
+                    width={"1.6rem"}
+                    height={"1.6rem"}
+                    hoverCursor={"pointer"}
+                    backgroundColor={"white"}
+                    borderRadius={"50%"}
+                    color={"whitesmoke"}
+                    margin={"0px 10px 0px 0px"}
+                    padding={"0"}
+                    hoverBorder={"1px solid black"}
+                    // className={"hoverEffects"}
+
+                    icon={
+                      <FaTwitter
+                        color={"#006772"}
+                        fontWeight={"bold"}
+                        fontSize={"0.8rem"}
+                      />
+                    }
+                  />
+                </Box>
+              </a>
+            </Link>
+            <Link
+              href={"https://www.instagram.com/accounts/login/"}
+              target="_blank"
+              passhref
+              as="https://www.instagram.com/accounts/login/"
+            >
+              <a target="_blank">
+                <CommonSocial
+                  width={"1.6rem"}
+                  height={"1.6rem"}
+                  hoverCursor={"pointer"}
+                  backgroundColor={"white"}
+                  borderRadius={"50%"}
+                  color={"whitesmoke"}
+                  margin={"0"}
+                  padding={"0"}
+                  hoverBorder={"1px solid black"}
+                  // className={"hoverEffects"}
+                  icon={
+                    <FaInstagram
+                      color={"#006772"}
+                      fontWeight={"bold"}
+                      fontSize={"0.8rem"}
+                    />
+                  }
+                />
+              </a>
+            </Link>
+          </Box>
           {/* <div>
             <Link href="/templates">CV Templates</Link>
           </div> */}
@@ -195,10 +313,10 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.fcontainer}>
-        <p>Our Vision is to</p>
+        {/* <p>Our Vision is to</p>
         <h1 className={styles.h1}>Fight Galactic Unemployment</h1>
         <p>Ny Carlsberg Vej 80</p>
-        <p>DK 1799 Copenhangen,Denmark</p>
+        <p>DK 1799 Copenhangen,Denmark</p> */}
         <p className={styles.copyright}>
           Copyright {year} Bisresume. All Rights Reserved
         </p>

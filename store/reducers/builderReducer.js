@@ -18,6 +18,8 @@ const initialState = {
 };
 
 export default function resumeEditor(state = initialState, action) {
+  console.log("Resume Data", action.payload);
+  console.log("Resume Data in BuilderReducer", action.payload);
   switch (action.type) {
     case actionTypes.USER_TEMP_DATA:
       if (action?.payload) {

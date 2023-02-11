@@ -125,7 +125,7 @@ export const PRIVACY_DATA = {
   TableOfContents: {
     heading: "Table of Contents:",
   },
-  TheNovoresumeContent: {
+  TheBisresumeContent: {
     heading: "1. What personal data does BisResume App use?",
     data: [
       {
@@ -198,6 +198,7 @@ export const PRIVACY_DATA = {
     data: "The data and information that identify you as an individual will be kept on our servers as long as they are needed, but no longer than 6 years since the last usage of BisResume App. E.g.: you might want after a couple of months or years to Sign In to your account to update your job application when looking for a new job.",
   },
   LinksToOtherSoftware: {
+    // id: "a4",
     heading:
       "4. What authorizes BisResume App to process the data as a data controller?",
     subHeading:
@@ -381,8 +382,9 @@ export const PRIVACY_DATA = {
       },
     ],
   },
-  Termination: {
+  PrivacyPolicy: {
     heading: "9. Changes to This Privacy Policy",
+    id: "a9",
     data: [
       {
         text: "Occasionally BisResume App might make changes to the Privacy Policy. When such changes are made, BisResume App will make sure to provide you with prominent notice as appropriate under the circumstances, e.g., by displaying a prominent notice within BisResume App or by sending you an email. In some cases, we will notify you in advance. Please, therefore, make sure you read any such notice carefully.",
