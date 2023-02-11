@@ -97,10 +97,10 @@ export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
         .getUser(userLoginData?.uid)
         .then((userRecord) => {
           // See the UserRecord reference doc for the contents of userRecord.
-          console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
+          // console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
         })
         .catch((error) => {
-          console.log("Error fetching user data:", error);
+          // console.log("Error fetching user data:", error);
         });
     }
   } catch (e) {

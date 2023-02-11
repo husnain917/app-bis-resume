@@ -38,7 +38,6 @@ const JobsPage = () => {
   return (
     <>
       <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
-        <Navbar />
         <Box
           bg={"#FFD67B"}
           display={"flex"}
@@ -732,11 +731,6 @@ const JobsPage = () => {
                                         fontSize={item.fontSize}
                                       >
                                         <ListItem display={"flex"} mt={5}>
-                                          {/* <MdDone
-                              height={"12px"}
-                              width={"30px"}
-                              color={"#00C8AA"}
-                            /> */}
                                           <Box
                                             mr={2}
                                             color={"#00C8AA"}

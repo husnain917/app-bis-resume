@@ -136,15 +136,6 @@ const ThirdSection = () => {
                       )}
                     </>
                   );
-                  // return (
-                  //   <>
-                  //     <Image
-                  //       src={item.imageUrl}
-                  //       alt="will load soon"
-                  //       key={index}
-                  //     />
-                  //   </>
-                  // );
                 })}
               </>
             );
