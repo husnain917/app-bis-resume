@@ -15,6 +15,7 @@ const FaqLeftImage = ({
   text01,
   text2,
   text3,
+  text4,
   item1,
   item2,
   item3,
@@ -96,6 +97,15 @@ const FaqLeftImage = ({
           >
             {text3}
           </Text>
+          <Text
+            fontSize={["1em", "1em", "1em", "1em", "1.1em", "1.3em"]}
+            my={4}
+            lineHeight={["23px", "24px", "30px", "30px", "30px"]}
+            className={"small-text"}
+          >
+            {text4}
+          </Text>
+
           {item1 ? (
             <UnorderedList
               ml={4}

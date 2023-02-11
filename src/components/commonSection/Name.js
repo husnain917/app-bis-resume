@@ -31,11 +31,7 @@ const Name = (props) => {
         <Box maxWidth={props.maxCWidth}>
           <Text
             value={resumeData?.profile?.firstName}
-            placeholder={
-              resumeData?.profile?.firstName
-                ? resumeData?.profile?.firstName
-                : "First Name"
-            }
+            placeholder={FNamePlaceholder ? FNamePlaceholder : "First Name"}
             customClass={`${FNameStyle}`}
             path={"profile.firstName"}
             color={fontColor ? fontColor : ""}
