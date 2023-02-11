@@ -14,7 +14,7 @@ export default function Heading({
   maxW,
   height,
   margin,
-  padding,
+  padding,paddingHorizantal,
   textPadding,
   textMargin,
   iconHeading,
@@ -35,7 +35,7 @@ export default function Heading({
   lineBg,
   lineAlign,
   lineStyle,
-
+  fontFamily,
   marginTop,
 
   alignItems,
@@ -58,7 +58,7 @@ export default function Heading({
       onClick={onSideSectionShow}
       marginTop={marginTop ? marginTop : ''}
       cursor={onSideSectionShow && 'pointer'}
-
+px={paddingHorizantal}
       // alignItems={alignItems ? alignItems : ''}
       // justifyContent={justifyContent ? justifyContent : ''}
     >
@@ -89,7 +89,7 @@ export default function Heading({
           m={textMargin ? textMargin : ''}
           p={textPadding ? textPadding : ''}
           letterSpacing={letterSpacing ? letterSpacing : ''}
-          fontFamily={font}
+          fontFamily={font?font:fontFamily}
           transition="1s color"
         >
           {title}

@@ -37,9 +37,30 @@ import {
   graphTemplate,
   SkillBaseTemp,
   FashionDesigner,
+  NovoResumeTemplate,
 } from "../../templates";
 
 export const CUSTOM_TEMP_DATA = [
+  {
+    id: "dhqAtIa3jaWjxddw",
+    href: "/templates/dhqAtIa3jaWjxddw",
+    src: "/NovoResumeTemplate.png",
+    alt: "Template Not Found",
+    height: "200px",
+    width: "250px",
+    heading: "Executive",
+    component: NovoResumeTemplate,
+    sections: {
+      work: true,
+
+      skills: true,
+    },
+    category: {
+      categoryID: "1",
+      totalCategory: "6",
+      categoryName: "Executive",
+    },
+  }, 
   {
     id: "zyCeSJJ2A8fEGNRx",
     href: "/templates/zyCeSJJ2A8fEGNRx",
@@ -61,9 +82,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '1',
-      totalCategory: '6',
-      categoryName: 'Graphic Designer',
+      categoryID: "1",
+      totalCategory: "6",
+      categoryName: "Graphic Designer",
     },
   },
   {
@@ -87,9 +108,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '2',
-      totalCategory: '6',
-      categoryName: 'Graphic Designer',
+      categoryID: "2",
+      totalCategory: "6",
+      categoryName: "Graphic Designer",
     },
   },
   {
@@ -113,9 +134,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '3',
-      totalCategory: '6',
-      categoryName: 'Graphic Designer',
+      categoryID: "3",
+      totalCategory: "6",
+      categoryName: "Graphic Designer",
     },
   },
   {
@@ -139,9 +160,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '4',
-      totalCategory: '6',
-      categoryName: 'Graphic Designer',
+      categoryID: "4",
+      totalCategory: "6",
+      categoryName: "Graphic Designer",
     },
   },
   {
@@ -165,9 +186,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '5',
-      totalCategory: '6',
-      categoryName: 'Graphic Designer',
+      categoryID: "5",
+      totalCategory: "6",
+      categoryName: "Graphic Designer",
     },
   },
   {
@@ -191,9 +212,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '6',
-      totalCategory: '6',
-      categoryName: 'Graphic Designer',
+      categoryID: "6",
+      totalCategory: "6",
+      categoryName: "Graphic Designer",
     },
   },
   {
@@ -217,9 +238,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '1',
-      totalCategory: '3',
-      categoryName: 'Creative',
+      categoryID: "1",
+      totalCategory: "3",
+      categoryName: "Creative",
     },
   },
   {
@@ -243,9 +264,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: true,
     },
     category: {
-      categoryID: '2',
-      totalCategory: '3',
-      categoryName: 'Creative',
+      categoryID: "2",
+      totalCategory: "3",
+      categoryName: "Creative",
     },
   },
   {
@@ -269,9 +290,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '3',
-      totalCategory: '3',
-      categoryName: 'Creative',
+      categoryID: "3",
+      totalCategory: "3",
+      categoryName: "Creative",
     },
   },
   {
@@ -295,9 +316,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: true,
     },
     category: {
-      categoryID: '1',
-      totalCategory: '7',
-      categoryName: 'Fashion Designer',
+      categoryID: "1",
+      totalCategory: "7",
+      categoryName: "Fashion Designer",
     },
   },
   {
@@ -321,9 +342,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '2',
-      totalCategory: '7',
-      categoryName: 'Fashion Designer',
+      categoryID: "2",
+      totalCategory: "7",
+      categoryName: "Fashion Designer",
     },
   },
   {
@@ -347,9 +368,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '3',
-      totalCategory: '7',
-      categoryName: 'Fashion Designer',
+      categoryID: "3",
+      totalCategory: "7",
+      categoryName: "Fashion Designer",
     },
   },
   {
@@ -373,9 +394,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '4',
-      totalCategory: '7',
-      categoryName: 'Fashion Designer',
+      categoryID: "4",
+      totalCategory: "7",
+      categoryName: "Fashion Designer",
     },
   },
   {
@@ -399,9 +420,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: true,
     },
     category: {
-      categoryID: '5',
-      totalCategory: '7',
-      categoryName: 'Fashion Designer',
+      categoryID: "5",
+      totalCategory: "7",
+      categoryName: "Fashion Designer",
     },
   },
   {
@@ -425,9 +446,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '6',
-      totalCategory: '7',
-      categoryName: 'Fashion Designer',
+      categoryID: "6",
+      totalCategory: "7",
+      categoryName: "Fashion Designer",
     },
   },
   {
@@ -451,9 +472,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '7',
-      totalCategory: '7',
-      categoryName: 'Fashion Designer',
+      categoryID: "7",
+      totalCategory: "7",
+      categoryName: "Fashion Designer",
     },
   },
   {
@@ -477,9 +498,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '1',
-      totalCategory: '4',
-      categoryName: 'Digital Marketing',
+      categoryID: "1",
+      totalCategory: "4",
+      categoryName: "Digital Marketing",
     },
   },
   {
@@ -503,9 +524,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '2',
-      totalCategory: '4',
-      categoryName: 'Digital Marketing',
+      categoryID: "2",
+      totalCategory: "4",
+      categoryName: "Digital Marketing",
     },
   },
   {
@@ -529,9 +550,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '3',
-      totalCategory: '4',
-      categoryName: 'Digital Marketing',
+      categoryID: "3",
+      totalCategory: "4",
+      categoryName: "Digital Marketing",
     },
   },
   {
@@ -555,12 +576,12 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '4',
-      totalCategory: '4',
-      categoryName: 'Digital Marketing',
+      categoryID: "4",
+      totalCategory: "4",
+      categoryName: "Digital Marketing",
     },
   },
-
+  
   {
     id: "dhqAtIa3jaWjxQLb",
     href: "/templates/dhqAtIa3jaWjxQLb",
@@ -582,9 +603,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '1',
-      totalCategory: '6',
-      categoryName: 'Executive',
+      categoryID: "1",
+      totalCategory: "6",
+      categoryName: "Executive",
     },
   },
   {
@@ -608,9 +629,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '2',
-      totalCategory: '6',
-      categoryName: 'Executive',
+      categoryID: "2",
+      totalCategory: "6",
+      categoryName: "Executive",
     },
   },
   {
@@ -634,9 +655,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '3',
-      totalCategory: '6',
-      categoryName: 'Executive',
+      categoryID: "3",
+      totalCategory: "6",
+      categoryName: "Executive",
     },
   },
   {
@@ -660,9 +681,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '4',
-      totalCategory: '6',
-      categoryName: 'Executive',
+      categoryID: "4",
+      totalCategory: "6",
+      categoryName: "Executive",
     },
   },
   {
@@ -686,9 +707,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '5',
-      totalCategory: '6',
-      categoryName: 'Executive',
+      categoryID: "5",
+      totalCategory: "6",
+      categoryName: "Executive",
     },
   },
   {
@@ -712,9 +733,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '6',
-      totalCategory: '6',
-      categoryName: 'Executive',
+      categoryID: "6",
+      totalCategory: "6",
+      categoryName: "Executive",
     },
   },
   {
@@ -738,9 +759,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: true,
     },
     category: {
-      categoryID: '1',
-      totalCategory: '3',
-      categoryName: 'Basic',
+      categoryID: "1",
+      totalCategory: "3",
+      categoryName: "Basic",
     },
   },
   {
@@ -764,9 +785,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '2',
-      totalCategory: '3',
-      categoryName: 'Basic',
+      categoryID: "2",
+      totalCategory: "3",
+      categoryName: "Basic",
     },
   },
   {
@@ -790,9 +811,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '3',
-      totalCategory: '3',
-      categoryName: 'Basic',
+      categoryID: "3",
+      totalCategory: "3",
+      categoryName: "Basic",
     },
   },
   {
@@ -816,9 +837,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: true,
     },
     category: {
-      categoryID: '1',
-      totalCategory: '4',
-      categoryName: 'Skill-Based',
+      categoryID: "1",
+      totalCategory: "4",
+      categoryName: "Skill-Based",
     },
   },
   {
@@ -842,9 +863,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '1',
-      totalCategory: '5',
-      categoryName: 'General',
+      categoryID: "1",
+      totalCategory: "5",
+      categoryName: "General",
     },
   },
   {
@@ -868,9 +889,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '2',
-      totalCategory: '5',
-      categoryName: 'General',
+      categoryID: "2",
+      totalCategory: "5",
+      categoryName: "General",
     },
   },
   {
@@ -894,9 +915,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: true,
     },
     category: {
-      categoryID: '2',
-      totalCategory: '4',
-      categoryName: 'Skill-Based',
+      categoryID: "2",
+      totalCategory: "4",
+      categoryName: "Skill-Based",
     },
   },
   {
@@ -920,9 +941,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: true,
     },
     category: {
-      categoryID: '3',
-      totalCategory: '4',
-      categoryName: 'Skill-Based',
+      categoryID: "3",
+      totalCategory: "4",
+      categoryName: "Skill-Based",
     },
   },
   {
@@ -946,9 +967,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '3',
-      totalCategory: '5',
-      categoryName: 'General',
+      categoryID: "3",
+      totalCategory: "5",
+      categoryName: "General",
     },
   },
   {
@@ -972,9 +993,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '4',
-      totalCategory: '5',
-      categoryName: 'General',
+      categoryID: "4",
+      totalCategory: "5",
+      categoryName: "General",
     },
   },
   {
@@ -998,9 +1019,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: true,
     },
     category: {
-      categoryID: '4',
-      totalCategory: '4',
-      categoryName: 'Skill-Based',
+      categoryID: "4",
+      totalCategory: "4",
+      categoryName: "Skill-Based",
     },
   },
   {
@@ -1024,9 +1045,9 @@ export const CUSTOM_TEMP_DATA = [
       certificate: false,
     },
     category: {
-      categoryID: '5',
-      totalCategory: '5',
-      categoryName: 'General',
+      categoryID: "5",
+      totalCategory: "5",
+      categoryName: "General",
     },
   },
 ];

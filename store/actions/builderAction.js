@@ -232,7 +232,62 @@ export const addNewObj = (old_data, path) => (dispatch, getState) => {
     payload: newObject,
   });
 };
+export const addNewWorkPoint = (index) => (dispatch, getState) => {
+  let resumeObj = getState().editorReducer.resumeData;
 
+  const refactor = {
+    ...resumeObj,
+    work: {
+      ...resumeObj?.work,
+      items: resumeObj?.work?.items?.map((item, i) => {
+        if (i === index) {
+          return {
+            ...item,
+            pointsItems: [
+              ...item?.pointsItems,
+              {
+                title: "",
+              },
+            ],
+          };
+        }
+        return item;
+      }),
+    },
+  };
+  console.log("refactor===>", refactor);
+  dispatch({
+    type: actionTypes.ON_ADD_OBJECT,
+    payload: refactor,
+  });
+};
+export const deleteWorkPoint =
+  (parentIndex, pointIndex) => (dispatch, getState) => {
+    let resumeObj = getState().editorReducer.resumeData;
+
+    const refactor = {
+      ...resumeObj,
+      work: {
+        ...resumeObj?.work,
+        items: resumeObj?.work?.items?.map((item, i) => {
+          if (i === parentIndex) {
+            return {
+              ...item,
+              pointsItems: item?.pointsItems?.filter(
+                (_, pindex) => pindex !== pointIndex
+              ),
+            };
+          }
+          return item;
+        }),
+      },
+    };
+    console.log("refactor===>", refactor);
+    dispatch({
+      type: actionTypes.ON_ADD_OBJECT,
+      payload: refactor,
+    });
+  };
 export const addNewSkillObj = (data, path) => (dispatch, getState) => {
   let resumeObj = getState().editorReducer.resumeData;
   const index_value = objectPath.get(resumeObj, path).length;
