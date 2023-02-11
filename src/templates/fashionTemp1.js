@@ -48,7 +48,7 @@ const FashionTemp1 = () => {
         px={10}
         borderWidth="1px"
         borderColor={"#00000030"}
-        mb={"20px"}
+        mb={"0px"} minHeight={1183}
       >
         <Box maxW={336} minW={336}>
           <Name

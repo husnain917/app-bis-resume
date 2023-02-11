@@ -40,7 +40,6 @@ const HybridTemplate = () => {
   const { backgroundColor, color } = useSelector(
     (store) => store.themeReducer.theme
   );
-  // console.log(backgroundColor, color);
   // custom Hook For Template
   const [show, setShow] = useShow();
 
@@ -54,13 +53,13 @@ const HybridTemplate = () => {
         bg={"#fff"}
       >
         <Box
-          minW={"830px"}
-          maxW={"830px"}
+          minW={"837px"}
+          maxW={"837px"}
+          minHeight={1183}
           pt={10}
           pb={2}
           px={2}
           bg={"white"}
-          mb="20px"
           borderRadius={6}
           borderWidth="1px"
           borderColor={"#00000023"}

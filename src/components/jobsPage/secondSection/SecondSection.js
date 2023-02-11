@@ -125,7 +125,6 @@ const SecondSection = () => {
       </Box>
       {/* {data?.map((item, index) => {
         item?.cardContent?.map((item, index) => {
-          console.log("item>>>", item.cardtext);
           return (
             <>
               <Box>
@@ -137,7 +136,6 @@ const SecondSection = () => {
         
         // {
         //   item?.cardContent?.map((item, index) => {
-        //     console.log("cardText>>>>", item.cardtext);
         //     return (
         //       <>
         //         <Box>{item.cardtext}</Box>

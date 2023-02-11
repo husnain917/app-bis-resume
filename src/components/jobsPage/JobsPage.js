@@ -38,7 +38,6 @@ import styles from "../../../styles/sideBarSection.module.css";
 
 const JobsPage = () => {
   const handleButton = () => {
-    console.log("FOCUSED");
   };
   return (
     <>

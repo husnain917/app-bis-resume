@@ -47,7 +47,6 @@ const SettingModal = () => {
                 placeholder="Select option"
                 variant="filled"
                 onChange={(e) => {
-                  console.log("ss", date);
                   const res = DateFormatter(
                     e.target.value,
                     date?.dateSeparator

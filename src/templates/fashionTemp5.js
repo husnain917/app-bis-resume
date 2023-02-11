@@ -24,7 +24,6 @@ import ImageSelector from "../components/imageSelector";
 const FashionTemp5 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   let font = useSelector((state) => state.fontReducer.font);
-  console.log("Font:", font);
   const [show, setShow] = useShow();
   const { backgroundColor, color } = useSelector(
     (store) => store.themeReducer.theme
@@ -37,13 +36,13 @@ const FashionTemp5 = () => {
       alignItems={{ sm: "none", lg: "center" }}
       bg={"#fff"}
     >
-      <Box mb={"20px"}>
+      <Box >
         <HStack
           minW={830}
           maxW={830}
           alignItems="stretch"
           borderRadius={6}
-          bg={"white"}
+          bg={"white"}minHeight={1183}
           borderColor={"#00000033"}
         >
           <Box
