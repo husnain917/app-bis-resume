@@ -71,7 +71,7 @@ export default function Navbar() {
               src="/oldLogo.svg"
               alt="Image Not Found"
               fill
-              height={"70px"}
+              height={"60px"}
               width={"230px"}
             />
           </Link>
