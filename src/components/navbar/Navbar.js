@@ -57,9 +57,9 @@ export default function Navbar() {
           justify={{ base: "start" }}
           alignItems={{ base: "center" }}
         >
-          <Link href="/#">
+          <Link href="/">
             <Image
-              src="/Dark_Blue.svg"
+              src="/oldLogo.svg"
               alt="Image Not Found"
               fill
               height={"70px"}

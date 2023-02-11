@@ -3,13 +3,13 @@ import {
   Container,
   Heading,
   ChakraProvider,
-  Link,
   ListItem,
   Text,
   UnorderedList,
   OrderedList,
 } from "@chakra-ui/react";
-import React from "react";
+import Link from "next/link";
+import React, { useRef } from "react";
 import { CONTACT_US_DATA, PRIVACY_DATA } from "./data";
 import Underline from "../aaronGraphicTemp/Underline";
 import { PRIVACY_PAGE_DATA } from "./data";
@@ -19,6 +19,8 @@ import SideBar from "../sideBar/SideBar";
 import SideBarSection from "../aboutUs/SideBarSection/SideBarSection";
 
 const PrivacyPage = () => {
+  const scrollSecend = useRef();
+  const scollToRef = useRef();
   return (
     <>
       <ChakraProvider>
@@ -104,22 +106,26 @@ const PrivacyPage = () => {
                     {PRIVACY_PAGE_DATA?.map((item, index) => (
                       <>
                         <ListItem key={index}>
-                          <Link
-                            color="#2679C7"
-                            textDecor={"none"}
-                            fontSize={"1.1em"}
-                            lineHeight={"1.5"}
-                            to={item.href}
-                            smooth={true}
-                            duration={800}
-                            fontWeight={500}
-                            offset={0}
-                            _hover={{
-                              color: "40a9ff",
-                              textDecoration: "underline",
-                            }}
-                          >
-                            {item?.label}
+                          <Link href={`#${item.href}`}>
+                            <Text
+                              color="#2679C7"
+                              textDecor={"none"}
+                              fontSize={"1.1em"}
+                              lineHeight={"1.5"}
+                              smooth={true}
+                              href={"#"}
+                              duration={800}
+                              fontWeight={500}
+                              offset={0}
+                              _hover={{
+                                color: "40a9ff",
+                                textDecoration: "underline",
+                                cursor: "pointer",
+                              }}
+                              onClick={(e) => console.log(item.href)}
+                            >
+                              {item?.label}
+                            </Text>
                           </Link>
                         </ListItem>
                       </>
@@ -128,24 +134,28 @@ const PrivacyPage = () => {
                 </Box>
               </Box>
 
-              {/* 1. The Novorésumé Content */}
-              <Box margin={"40px 0px"} id={"a1"}>
+              {/* 1. The BisResume Content */}
+              <Box margin={"40px 0px"}>
                 <Text
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
                   className={"medium-heading1"}
+                  key={"a1"}
+                  id={"a1"}
                 >
-                  {PRIVACY_DATA?.TheNovoresumeContent?.heading}
+                  {PRIVACY_DATA?.TheBisresumeContent?.heading}
                 </Text>
 
                 {/* description */}
                 <Box margin={"10px 0px 40px 0px"}>
-                  {PRIVACY_DATA?.TheNovoresumeContent?.data?.map(
+                  {PRIVACY_DATA?.TheBisresumeContent?.data?.map(
                     (item, index) => (
                       <>
                         <Text
                           key={index}
+                          // key={"a1"}
+                          // id={"a1"}
                           fontSize={"1rem"}
                           lineHeight={"1.5"}
                           marginBottom={"1rem"}
@@ -306,14 +316,15 @@ const PrivacyPage = () => {
                           className={"small-text"}
                         >
                           {item.description}
-                          <Link
-                            href={"#"}
-                            color={"#2679C7"}
-                            lineHeight={"1.5"}
-                            fontSize={"1.2rem"}
-                            className={"small-text"}
-                          >
-                            {item?.link1}
+                          <Link href={"#"}>
+                            <Text
+                              color={"#2679C7"}
+                              lineHeight={"1.5"}
+                              fontSize={"1.2rem"}
+                              className={"small-text"}
+                            >
+                              {item?.link1}{" "}
+                            </Text>
                           </Link>
                         </Text>
                         <UnorderedList mb={6}>
@@ -338,14 +349,15 @@ const PrivacyPage = () => {
                           className={"small-text"}
                         >
                           {item?.description2}
-                          <Link
-                            href={"#"}
-                            color={"#2679C7"}
-                            lineHeight={"1.5"}
-                            fontSize={"1.2rem"}
-                            className={"xsmall-text"}
-                          >
-                            {item?.link1}
+                          <Link href={"#"}>
+                            <Text
+                              color={"#2679C7"}
+                              lineHeight={"1.5"}
+                              fontSize={"1.2rem"}
+                              className={"xsmall-text"}
+                            >
+                              {item?.link1}{" "}
+                            </Text>
                           </Link>
                         </Text>
                       </>
@@ -437,13 +449,14 @@ const PrivacyPage = () => {
                           className={"small-text"}
                         >
                           {item.text}
-                          <Link
-                            href={"https://gmail.com/"}
-                            color={"#2679C7"}
-                            lineHeight={"1.5"}
-                            fontSize={"1.2rem"}
-                          >
-                            {item?.link}
+                          <Link href={"https://gmail.com/"}>
+                            <Text
+                              color={"#2679C7"}
+                              lineHeight={"1.5"}
+                              fontSize={"1.2rem"}
+                            >
+                              {item?.link}{" "}
+                            </Text>
                           </Link>
                         </Text>
                       </Box>
@@ -487,13 +500,15 @@ const PrivacyPage = () => {
                             className={"small-text"}
                           >
                             {item.description}
-                            <Link
-                              href={"/contact-us"}
-                              color={"#2679C7"}
-                              lineHeight={"1.5"}
-                              fontSize={"1.2rem"}
-                            >
-                              {item?.link1}
+                            <Link href={"/contact-us"}>
+                              <Text
+                                color={"#2679C7"}
+                                lineHeight={"1.5"}
+                                fontSize={"1.2rem"}
+                              >
+                                {" "}
+                                {item?.link1}
+                              </Text>
                             </Link>
                           </Text>
 
@@ -512,13 +527,15 @@ const PrivacyPage = () => {
                             className={"small-text"}
                           >
                             {item?.description3p1}
-                            <Link
-                              href={"/contact-us"}
-                              color={"#2679C7"}
-                              lineHeight={"1.5"}
-                              fontSize={"1.2rem"}
-                            >
-                              {item?.link2}
+                            <Link href={"/contact-us"}>
+                              <Text
+                                color={"#2679C7"}
+                                lineHeight={"1.5"}
+                                fontSize={"1.2rem"}
+                              >
+                                {" "}
+                                {item?.link2}{" "}
+                              </Text>
                             </Link>
                             {item?.description3p2}
                           </Text>
@@ -545,20 +562,22 @@ const PrivacyPage = () => {
                 </Box>
               </Box>
 
-              {/* 9. Termination */}
+              {/* 9. PrivacyPolicy */}
               <Box margin={"40px 0px"} id={"a9"}>
                 <Text
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
                   className={"medium-heading1"}
+                  id={PRIVACY_DATA?.PrivacyPolicy?.id}
+                  key={PRIVACY_DATA?.PrivacyPolicy?.id}
                 >
-                  {PRIVACY_DATA?.Termination?.heading}
+                  {PRIVACY_DATA?.PrivacyPolicy?.heading}
                 </Text>
 
                 {/* description */}
                 <Box margin={"10px 0px 40px 0px"}>
-                  {PRIVACY_DATA?.Termination?.data?.map((item, index) => (
+                  {PRIVACY_DATA?.PrivacyPolicy?.data?.map((item, index) => (
                     <>
                       <Text
                         key={index}
@@ -619,22 +638,26 @@ const PrivacyPage = () => {
                           <>
                             <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
                               {item?.description}
-                              <Link
-                                href={"https://gmail.com/"}
-                                color={"#2679C7"}
-                                lineHeight={"1.5"}
-                                fontSize={"1rem"}
-                              >
-                                {item?.mail}
+                              <Link href={"https://gmail.com/"}>
+                                <Text
+                                  color={"#2679C7"}
+                                  lineHeight={"1.5"}
+                                  fontSize={"1rem"}
+                                >
+                                  {" "}
+                                  {item?.mail}
+                                </Text>
                               </Link>
                               {item?.description2}
-                              <Link
-                                href={"https://gmail.com/"}
-                                color={"#2679C7"}
-                                lineHeight={"1.5"}
-                                fontSize={"1rem"}
-                              >
-                                {item?.mail2}
+                              <Link href={"https://gmail.com/"}>
+                                <Text
+                                  color={"#2679C7"}
+                                  lineHeight={"1.5"}
+                                  fontSize={"1rem"}
+                                >
+                                  {" "}
+                                  {item?.mail2}{" "}
+                                </Text>
                               </Link>
                             </ListItem>
                           </>

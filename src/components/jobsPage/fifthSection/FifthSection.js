@@ -19,8 +19,8 @@ const FifthSection = () => {
                 "0px 35px",
                 "0px 35px",
                 "0px 135px",
-                "0px 260px",
-                "0px 380px",
+                "0px 150px",
+                "0px 180px",
               ]}
             >
               <ContentText

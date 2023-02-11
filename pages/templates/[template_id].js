@@ -26,7 +26,7 @@ const TemplateDetail = () => {
   const isUserLoggedIn = useSelector(
     (state) => state.AuthReducer?.isUserLoggedIn
   );
-console.log('resumeData====>',resumeData)
+
   // const isUserLoggedIn = useSelector(
   //   (state) => state.AuthReducer.isUserLoggedIn
   // );
@@ -46,18 +46,18 @@ console.log('resumeData====>',resumeData)
   const { template_id } = router.query;
   const [sideTempSelect, setsideTempSelect] = useState(false);
   const { width } = useWindowSizing();
-  const { downloadPDFHandler, pdfRef, downloadWordHandler } = PDFGenerater();
   const [template, settemplate] = useState();
 
   const selected =
     CUSTOM_TEMP_DATA?.find((item) => item.id === template) ||
     CUSTOM_TEMP_DATA?.find((item) => item.id === template_id);
+    const { downloadPDFHandler, pdfRef, downloadWordHandler } = PDFGenerater(selected?.id);
 
-  const ref = useRef()
+  const ref = useRef();
   useOutsideClick({
     ref: ref,
     handler: () => setsideTempSelect(false),
-  })
+  });
   return (
     <Box>
       <TempLayout
@@ -72,7 +72,6 @@ console.log('resumeData====>',resumeData)
         certificate={selected?.sections?.certificate}
         downloadPDF={downloadPDFHandler}
         saveDataHandler={() => {
-          console.log('isUserLoggedIn==>',isUserLoggedIn)
           if (!isUserLoggedIn) {
             dispatch(modalOpen());
           } else {

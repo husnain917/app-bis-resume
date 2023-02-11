@@ -50,7 +50,7 @@ const CollegeTemp = () => {
         borderRadius={6}
         borderWidth="1px"
         borderColor={"#00000023"}
-        mb={"20px"}
+        mb={"0px"} minHeight={1183}
       >
         {/* =============== Profile Section =============== */}
         <HStack alignItems="flex-start">

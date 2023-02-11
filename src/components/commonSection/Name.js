@@ -21,7 +21,6 @@ const Name = (props) => {
     textAlign,
     maxWidth,
   } = props;
-  console.log("maxChr: " + maxchr, "MAXCHR", props.maxchr);
   return (
     <Stack
       direction={direction ? direction : "column"}
