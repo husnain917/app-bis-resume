@@ -35,8 +35,7 @@ import { MdDone } from "react-icons/md";
 import Navbar from "../blog/latestPost/navbar/Navbar";
 
 const JobsPage = () => {
-  const handleButton = () => {
-  };
+  const handleButton = () => {};
   return (
     <>
       {/* <Navbar /> */}
@@ -766,7 +765,6 @@ const JobsPage = () => {
           </Box>
         </Box>
       </Box>
-      <Footer />
     </>
   );
 };

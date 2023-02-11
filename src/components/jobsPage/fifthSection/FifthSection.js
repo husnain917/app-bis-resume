@@ -19,8 +19,8 @@ const FifthSection = () => {
                 "0px 35px",
                 "0px 35px",
                 "0px 135px",
-                "0px 260px",
-                "0px 380px",
+                "0px 150px",
+                "0px 180px",
               ]}
             >
               <ContentText
@@ -109,45 +109,14 @@ const FifthSection = () => {
             "30px 30px 0px 30px",
           ]}
         >
-          {/* <Text
-            className={"medium-text"}
-            mt={2}
-            color={"black"}
-            fontSize={["21px", "21px", "21px", "26px", "26px"]}
-          >
-            Job Search Masterclass
-          </Text>
-          <Text
-            className={"small-text"}
-            marginTop={"0.3rem"}
-            fontSize={["18px", "18px", "18px", "26px", "26px"]}
-            display={"flex"}
-          >
-            $10.99
-            <Text ml={2} textDecoration={"line-through"}>
-              {" "}
-              $15.00{" "}
-            </Text>
-          </Text>
-          <Link href="/templates">
-            <CommonButton
-              height={"3.5rem"}
-              width={"10rem"}
-              padding={"24px"}
-              borderRadius={"40px"}
-              title={"Buy Today"}
-              margin={"24px 0px"}
-              fontSize={"17px"}
-              backgroundColor={"rgb(75,204,239)"}
-            />
-          </Link> */}
           <Box
             height={"2px"}
             backgroundColor={"black"}
             mt={4}
             width={"25%"}
           ></Box>
-          <Link href="/templates">
+
+          <Link href={"/templates"}>
             <CommonButton
               className={"medium-text"}
               width={["12rem", "12rem", "12rem", "14rem", "14rem"]}
