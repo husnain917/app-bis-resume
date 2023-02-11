@@ -46,15 +46,24 @@ export default function Navbar() {
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
-        minH={"110px"}
+        minH={"50px"}
         py={{ base: 2 }}
         mx={{ xl: "60px", lg: "30px" }}
         align={"center"}
       >
         {/* logo */}
+        {/* <Link href="/">
+          <Image
+            src="/oldLogo.svg"
+            alt="Image Not Found"
+            fill
+            height={"60px"}
+            width={"230px"}
+          />
+        </Link> */}
         <Flex
           flex={{ base: 1 }}
-          justify={{ base: "start" }}
+          justify={{ base: "space-between" }}
           alignItems={{ base: "center" }}
         >
           <Link href="/">
@@ -66,6 +75,7 @@ export default function Navbar() {
               width={"230px"}
             />
           </Link>
+          <Box></Box>
 
           {/* deskTop Nav */}
           <Flex
@@ -231,10 +241,10 @@ const DesktopNav = () => {
               <PopoverTrigger position={"absolute"}>
                 <Link
                   href={navItem?.href ?? "#"}
-                  fontWeight={500}
+                  fontWeight={600}
                   key={navItem.label}
                   color={linkColor}
-                  fontSize={["10px", "12px", "14px", "16px", "18px"]}
+                  fontSize={["10px", "12px", "14px", "16px", "16px"]}
                   _hover={{
                     textDecoration: "none",
                     color: linkHoverColor,

@@ -2615,7 +2615,7 @@ video {
 
 .afterlink {
   position: relative;
-  font-family: EuclidCircularB-Bold;
+  font-family: "poppins", sans-serif;
 }
 
 .afterlink::after {
