@@ -10,7 +10,6 @@ import {
   updateDoc,
   arrayUnion,
   orderBy,
-
 } from "firebase/firestore";
 import { Magic } from "magic-sdk";
 import {
@@ -33,7 +32,7 @@ import {
   sendPasswordResetEmail,
   updateEmail,
   signOut,
-  deleteUser
+  deleteUser,
 } from "firebase/auth";
 import { getAuth, sendEmailVerification } from "firebase/auth";
 
@@ -48,9 +47,10 @@ import {
   getUserToken,
   removeUserToken,
 } from "../../src/components/localStorage/LocalStorage";
-export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
+import { actionTypes } from "../../constants/actionTypes";
+export const doLogin = (data, setLoadingLogin, setErr) => async (dispatch) => {
   try {
-    setLoading(true);
+    setLoadingLogin(true);
     const logInData = await signInWithEmailAndPassword(
       auth,
       data.email,
@@ -81,11 +81,27 @@ export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
         },
       });
       setErr({ fieldErr: "" });
+      const userTempData = await getUserTemplatedata(userLoginData.uid);
+      if (userTempData) {
+        dispatch({
+          type: actionTypes.USER_TEMP_DATA,
+          payload: userTempData,
+        });
+      }
       ToastSuccess("Login Successfull");
       dispatch({
         type: MODAL_OPEN,
         payload: false,
       });
+      getAuth()
+        .getUser(userLoginData?.uid)
+        .then((userRecord) => {
+          // See the UserRecord reference doc for the contents of userRecord.
+          console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
+        })
+        .catch((error) => {
+          console.log("Error fetching user data:", error);
+        });
     }
   } catch (e) {
     const errorCode = e.code;
@@ -94,19 +110,16 @@ export const doLogin = (data, setLoading, setErr) => async (dispatch) => {
     } else if (errorCode === "auth/user-not-found") {
       setErr({ fieldErr: "No account exists with this email." });
     }
-
-    console.log("Error User LogIn", e.code);
   } finally {
-    setLoading(false);
+    setLoadingLogin(false);
   }
 };
-
 export const doGoogleLogin =
-  (terms, setLoading, setErr) => async (dispatch) => {
+  (terms, setLoadingLogin, setErr) => async (dispatch) => {
     const provider = new GoogleAuthProvider();
 
     try {
-      setLoading(true);
+      setLoadingLogin(true);
       const userLoginData = await signInWithPopup(auth, provider);
       const credential = GoogleAuthProvider.credentialFromResult(userLoginData);
       const token = credential?.accessToken;
@@ -139,11 +152,17 @@ export const doGoogleLogin =
           type: MODAL_OPEN,
           payload: false,
         });
+        const userTempData = await getUserTemplatedata(user.uid);
+        if (userTempData) {
+          dispatch({
+            type: actionTypes.USER_TEMP_DATA,
+            payload: userTempData,
+          });
+        }
         setIsModalOpen(false);
         setErr({ fieldErr: "" });
-        setLoading(false);
+        setLoadingLogin(false);
       }
-      // console.log({ credential, token, user });
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -152,9 +171,8 @@ export const doGoogleLogin =
       if (errorCode === "auth/popup-closed-by-user") {
         setErr({ fieldErr: "Login Failed, Please try again." });
       }
-      // console.log({ errorCode, errorMessage, email, credential });
     } finally {
-      setLoading(false);
+      setLoadingLogin(false);
     }
   };
 
@@ -199,7 +217,6 @@ export const doSignUp =
         ToastError("Email Already Registered");
         setErr({ fieldErr: "This email already in use." });
       }
-      console.log("Error at signup: ", errorCode);
       // if (errorCode === "auth/email-already-in-use") {
       //   dispatch({
       //     type: MODAL_OPEN,
@@ -237,22 +254,31 @@ export const doSignUp =
       // }
     }
   };
-
+const getUserTemplatedata = async (id) => {
+  const docRef = doc(db, "templateData", id);
+  const docSnap = await getDoc(docRef);
+  return docSnap.data();
+};
 export const getLoggedInUser = () => async (dispatch) => {
   try {
     let uid;
-    onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(auth, async (user) => {
       if (user) {
         uid = user.uid;
         dispatch({
           type: ACTIVE_USER,
           payload: user,
         });
+        const userTempData = await getUserTemplatedata(user.uid);
+        if (userTempData) {
+          dispatch({
+            type: actionTypes.USER_TEMP_DATA,
+            payload: userTempData,
+          });
+        }
       }
     });
-  } catch (error) {
-    console.log(error.message);
-  }
+  } catch (error) {}
 };
 
 export const doLogout = (setLoading) => async (dispatch) => {
@@ -267,44 +293,37 @@ export const doLogout = (setLoading) => async (dispatch) => {
     });
     console.clear();
   } catch (error) {
-    console.log("error", error);
   } finally {
     setLoading(false);
   }
 };
 
-export const passwordReset = (setLoading, setErr, email) => async (dispatch) => {
-  try {
-    setLoading(true);
-    await sendPasswordResetEmail(auth, email);
-  } catch (err) {
-    const errorCode = err.code;
-    if (errorCode === "auth/user-not-found") {
-      setErr({ fieldErr: "No account exists with this email." });
+export const passwordReset =
+  (setLoading, setErr, email) => async (dispatch) => {
+    try {
+      setLoading(true);
+      await sendPasswordResetEmail(auth, email);
+    } catch (err) {
+      const errorCode = err.code;
+      if (errorCode === "auth/user-not-found") {
+        setErr({ fieldErr: "No account exists with this email." });
+      }
+    } finally {
+      setLoading(false);
     }
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
 export const ChangeEmail = (setLoading, setErr, email) => async (dispatch) => {
-  console.log("email", email);
-
   if (email !== fullAuth?.currentUser?.email) {
     try {
       setLoading(true);
       const data = await updateEmail(fullAuth?.currentUser, email);
-      console.log(data);
       ToastSuccess("Change Email SuccessFully");
-
-    } catch (err) {
-      console.log(err);
-    }
+    } catch (err) {}
+  } else {
+    ToastSuccess("same account not enter");
   }
-  else {
-    ToastSuccess("same account not enter")
-  }
-}
+};
 
 // delete account
 
@@ -312,17 +331,13 @@ export const doUserDelete = () => async (dispatch) => {
   try {
     const user = auth?.currentUser;
     const res = await deleteUser(user);
-    console.log(res);
-    ToastSuccess("account deleted")
+    ToastSuccess("account deleted");
     dispatch({
       type: USERREMOVE,
       payload: null,
     });
-  } catch (error) {
-    console.log("error", error);
-  }
+  } catch (error) {}
 };
-
 
 export const doCheckUser = (uid) => async (dispatch) => {
   try {
@@ -335,19 +350,15 @@ export const doCheckUser = (uid) => async (dispatch) => {
     querySnapshot.forEach((doc) => {
       userData = doc.data();
     });
-    // console.log('Check user at action: ', userData);
     //End UserData Code
     dispatch({
       type: CHECK_USER,
       payload: userData,
     });
-  } catch (error) {
-    console.log("error at Check user data", error);
-  }
+  } catch (error) {}
 };
 export const redirect = () => async (dispatch) => {
   if (getToken()) {
-    console.log("redirect", getToken(), getUserToken());
     let user = getUserToken();
     dispatch({
       type: LOGIN,
@@ -363,7 +374,6 @@ export const modalOpen = () => async (dispatch) => {
     type: MODAL_OPEN,
     payload: true,
   });
-  console.log("smi");
 };
 export const modalClose = () => async (dispatch) => {
   dispatch({
@@ -397,7 +407,6 @@ export const loginMagicUser =
       }
       return didToken;
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }

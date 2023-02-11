@@ -78,12 +78,11 @@ export default function HintSection() {
         >
           BisResume is lightning fast. There is no software to download. No
           multi-part sign-up form. No long-winded tutorials. Just a
-          straightforward process.`&#34;` effectively emphasizes the speed and
+          straightforward process.&#34; effectively emphasizes the speed and
           ease of use of your resume builder service. This content clearly
           communicates the benefits of using your service and highlights the
           simplicity of the process, which is likely to appeal to users looking
-          to quickly create a professional resume.`&#34;`
-
+          to quickly create a professional resume.&#34;
         </Text>
         <Hint
           number="1"

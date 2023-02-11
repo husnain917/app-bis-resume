@@ -123,7 +123,17 @@ const ThirdSection = () => {
                 {item?.listItems?.map((item, index) => {
                   return (
                     <>
-                      <Image src={item.imageUrl} alt="will load soon" />
+                      {item.id === "images" ? (
+                        <>
+                          <Image
+                            src={item.imageUrl}
+                            alt="will load soon"
+                            key={index}
+                          />
+                        </>
+                      ) : (
+                        ""
+                      )}
                     </>
                   );
                 })}

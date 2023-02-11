@@ -28,7 +28,6 @@ class Manager extends Component {
   render() {
     const { resumeData, updater, width } = this.props;
 
-    console.log('resumeData', resumeData);
     return (
       <div className={style.main}>
         <Link href={'/templates'}>

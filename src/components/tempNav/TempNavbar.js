@@ -23,6 +23,7 @@ import {
   SettingsIcon,
   HamburgerIcon,
   ArrowBackIcon,
+  ArrowDownIcon,
 } from "@chakra-ui/icons";
 import {
   FaFacebookF,
@@ -40,6 +41,9 @@ import DownloadModal from "../downloadModel/DownloadModal";
 import ThemeModal from "../themeModal/ThemeModal";
 import FontPopover from "../fontPopover/FontPopover";
 import SettingModal from "../setting/SettingModal";
+import { useDispatch, useSelector } from "react-redux";
+import { doLogout, modalOpen } from "../../../store/actions/AuthAction";
+import Loader from "../loader/Loader";
 export default function TempNavbar({
   work,
   education,
@@ -54,11 +58,23 @@ export default function TempNavbar({
   downloadWord,
   leftMenu,
   setleftMenu,
+  saveDataHandler,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const dispatch = useDispatch()
   const [showNav, setShowNav] = useState(false);
-
+  const isUserLoggedIn = useSelector(
+    (state) => state.AuthReducer.isUserLoggedIn
+  );
+  const [loading, setLoading] = useState(false)
+  const logoutHandler = () => {
+    console.log("Caled logout functions");
+    dispatch(doLogout(setLoading));
+  };
+  const ismodalOpen = async () => {
+    dispatch(modalOpen());
+  };
   return (
     <Box
       display={"flex"}
@@ -90,7 +106,7 @@ export default function TempNavbar({
           borderRadius={"100px"}
           justifyContent="center"
           py={1}
-          ml={{ base: "120px", lg: '120px', md: "0px" }}
+          ml={["0px", "0px", "0px", "120px", "0px"]}
           display={{ base: "none", lg: "flex" }}
         >
           <Popover>
@@ -182,6 +198,21 @@ export default function TempNavbar({
             <ArrowBackIcon mr="5px" />
             Left
           </Button>
+          <Button
+            bgColor="transparent"
+            color="white"
+            fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+            _hover={{
+              backgroundColor: "transparent",
+
+              color: "#00c8aa",
+              transition: "0.4s",
+            }}
+            onClick={saveDataHandler}
+          >
+            <ArrowDownIcon mr="5px" />
+            Save
+          </Button>
         </Box>
       )}
 
@@ -232,9 +263,18 @@ export default function TempNavbar({
                 color: "#006772",
                 transition: "all .2s  ease-in",
               }}
+              onClick={!isUserLoggedIn ? ismodalOpen : logoutHandler}
               cursor="pointer"
             >
-              Sign Out
+              {
+                loading ?
+                  <Loader size={150} color='green' /> :
+                  isUserLoggedIn ?
+                    'Sign Out'
+                    :
+                    'Login'
+              }
+
             </Text>
             <Box display={"flex"} justifyContent="space-evenly" mt="20px">
               <Circle

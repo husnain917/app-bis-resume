@@ -72,7 +72,7 @@ const CommonComponent = ({ data }) => {
           </Box>
         </Box>
         <Box display={["none", "none", "flex", "flex", "flex"]}>
-          <Box  w={"40em"}>
+          <Box w={"40em"}>
             <Text
               fontSize={["12px", "12px", "12px", "14px", "14px"]}
               className="xsmall-text"
@@ -87,7 +87,7 @@ const CommonComponent = ({ data }) => {
           </Box>
         </Box>
       </Box>
-      <SimpleGrid columns={[1, 1, 3, 3, 4]} spacing={10}>
+      <SimpleGrid columns={[1, 1, 3, 3, 4]} spacing={5}>
         {width <= 500
           ? dataForDisplay.map((template, index) => {
               return (

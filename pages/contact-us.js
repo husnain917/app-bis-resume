@@ -20,10 +20,6 @@ export default function ContactUs() {
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-z  A-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   };
-
-
-
-  // console.log("NAME", name, "EMAIL", email, "Message", message);
   const onSubmitHandler = () => {
     if (!email || !name || !message) {
       ToastError("Please fill this Fields");
@@ -42,7 +38,6 @@ export default function ContactUs() {
   const onFocunHandler = (index) => {
     setCancel(1);
     setActive(index);
-    console.log("This is Index", index);
     if (index === 4) {
       setCancel(2);
     }
