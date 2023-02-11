@@ -97,10 +97,10 @@ export const doLogin = (data, setLoadingLogin, setErr) => async (dispatch) => {
         .getUser(userLoginData?.uid)
         .then((userRecord) => {
           // See the UserRecord reference doc for the contents of userRecord.
-          // console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
+          console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
         })
         .catch((error) => {
-          // console.log("Error fetching user data:", error);
+          console.log("Error fetching user data:", error);
         });
     }
   } catch (e) {
@@ -110,22 +110,10 @@ export const doLogin = (data, setLoadingLogin, setErr) => async (dispatch) => {
     } else if (errorCode === "auth/user-not-found") {
       setErr({ fieldErr: "No account exists with this email." });
     }
-
   } finally {
     setLoadingLogin(false);
   }
 };
-// export const getUserResumeData = () => {
-//   getAuth()
-//     .getUser(uid)
-//     .then((userRecord) => {
-//       // See the UserRecord reference doc for the contents of userRecord.
-//       console.log(`Successfully fetched user data: ${userRecord.toJSON()}`);
-//     })
-//     .catch((error) => {
-//       console.log("Error fetching user data:", error);
-//     });
-// };
 export const doGoogleLogin =
   (terms, setLoadingLogin, setErr) => async (dispatch) => {
     const provider = new GoogleAuthProvider();
@@ -290,8 +278,7 @@ export const getLoggedInUser = () => async (dispatch) => {
         }
       }
     });
-  } catch (error) {
-  }
+  } catch (error) {}
 };
 
 export const doLogout = (setLoading) => async (dispatch) => {
@@ -327,14 +314,12 @@ export const passwordReset =
   };
 
 export const ChangeEmail = (setLoading, setErr, email) => async (dispatch) => {
-
   if (email !== fullAuth?.currentUser?.email) {
     try {
       setLoading(true);
       const data = await updateEmail(fullAuth?.currentUser, email);
       ToastSuccess("Change Email SuccessFully");
-    } catch (err) {
-    }
+    } catch (err) {}
   } else {
     ToastSuccess("same account not enter");
   }
@@ -351,8 +336,7 @@ export const doUserDelete = () => async (dispatch) => {
       type: USERREMOVE,
       payload: null,
     });
-  } catch (error) {
-  }
+  } catch (error) {}
 };
 
 export const doCheckUser = (uid) => async (dispatch) => {
@@ -371,8 +355,7 @@ export const doCheckUser = (uid) => async (dispatch) => {
       type: CHECK_USER,
       payload: userData,
     });
-  } catch (error) {
-  }
+  } catch (error) {}
 };
 export const redirect = () => async (dispatch) => {
   if (getToken()) {
