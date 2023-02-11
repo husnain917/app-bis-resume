@@ -43,9 +43,9 @@ export default function Designer_Template() {
       >
         <Box
           w="100%"
-          minW="830px"
+          minW="837px" minHeight={1183}
           maxW="830px"
-          mb={"20px"}
+          mb={"0px"}
           borderWidth="1px"
           borderColor={"#00000023"}
         >

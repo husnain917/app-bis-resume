@@ -43,12 +43,14 @@ export default function Simple_Temp_Design() {
                 bg={'#fff'}
             >
                 <Box
-                    minW={830}
+                    minW={837}
+          minHeight={1183}
+
                     pb={2}
                     px={4}
                     bg={'white'}
                     borderRadius={6}
-                    mb={'20px'}
+                
                     borderWidth="1px"
                     borderColor={'#00000023'}
                 >

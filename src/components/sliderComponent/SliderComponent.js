@@ -6,13 +6,8 @@ import Slider from "react-slick";
 import RatingWeb from "../ratingComponent/RatingWeb";
 
 const SliderComponent = () => {
-  console.log("SliderComponent", data);
+ 
 
-  {
-    data.map((item) => {
-      console.log(item);
-    });
-  }
   var settings = {
     infinite: true,
     speed: 300,

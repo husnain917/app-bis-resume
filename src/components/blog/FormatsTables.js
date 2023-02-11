@@ -90,7 +90,6 @@ export default function FormatsTables() {
                 will make it easy for recruiters to read and understand your
                 qualifications.
               </>
-              &nbsp;
             </ListItem>
             <ListItem>
               <>
@@ -98,21 +97,18 @@ export default function FormatsTables() {
                 Arial or Times New Roman, and stick to one font throughout your
                 resume.
               </>
-              &nbsp;
             </ListItem>
             <ListItem>
               <>
                 Set one-inch margins on all four sides to give your resume a
                 clean and polished look.
               </>
-              &nbsp;
             </ListItem>
             <ListItem>
               <>
                 Create a proper header format for your contact details,
                 including your name, address, phone number, and email address.
               </>{" "}
-              &nbsp;
             </ListItem>
             <ListItem>
               <>
@@ -120,7 +116,6 @@ export default function FormatsTables() {
                 Contact Information, Resume Summary, Work Experience, Education,
                 and Skills.
               </>
-              &nbsp;
             </ListItem>
             <ListItem>
               <>
@@ -128,7 +123,6 @@ export default function FormatsTables() {
                 accomplishments. This makes it easy for recruiters to quickly
                 scan your resume and understand your qualifications.
               </>
-              &nbsp;
             </ListItem>
             <ListItem>
               <>
@@ -148,7 +142,6 @@ export default function FormatsTables() {
                 Add an extra space before and after each section heading to make
                 it clear where one section ends and the other begins.
               </>
-              &nbsp;
             </ListItem>
             <ListItem>
               <>
@@ -268,6 +261,8 @@ export default function FormatsTables() {
                     <Image
                       src={item?.img}
                       alt={"Image Not Found"}
+                      h={"100vh"}
+                      w={"100%"}
                       onMouseEnter={() => setOver(true)}
                       onMouseLeave={() => setOver(false)}
                     />
@@ -527,7 +522,12 @@ export default function FormatsTables() {
 
             {/* Image */}
             <Box marginBottom={"30px"}>
-              <Image src={"/resume_format_temp1.jpg"} alt={"Image Not Found"} />
+              <Image
+                src={"/realTemp38.png"}
+                alt={"Image Not Found"}
+                w={"100%"}
+                h={"100vh"}
+              />
             </Box>
 
             {/* button */}
@@ -777,8 +777,10 @@ export default function FormatsTables() {
             {/* Image */}
             <Box marginBottom={"30px"}>
               <Image
-                src={"/resume_format_skill1.jpg"}
+                src={"/realTemp3.png"}
                 alt={"Image Not Found"}
+                w={"100%"}
+                h={"100vh"}
               />
             </Box>
 
@@ -1083,8 +1085,10 @@ export default function FormatsTables() {
             {/* Image */}
             <Box marginBottom={"30px"}>
               <Image
-                src={"/resume_format_hybird1.jpg"}
+                src={"/realTemp22.png"}
                 alt={"Image Not Found"}
+                w={"100%"}
+                h="100vh"
               />
             </Box>
 
@@ -1350,7 +1354,7 @@ export default function FormatsTables() {
             paddingBottom={"25px"}
             fontFamily={`'EuclidCircularB-Medium', sans-serif`}
           >
-            M• Make Sure Your Resume Format Beats <br />
+            Make Sure Your Resume Format Beats <br />
             the ATS Resume Test
           </Text>
           {/* description */}

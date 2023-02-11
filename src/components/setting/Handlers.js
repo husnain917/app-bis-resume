@@ -24,7 +24,6 @@ const DateFormatter = (requireFormat, separator) => {
     SelectFormat(formatList[1]) +
     separator +
     SelectFormat(formatList[2]);
-  console.log("dateformat", dateformat);
   return dateformat;
 };
 
