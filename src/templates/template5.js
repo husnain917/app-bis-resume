@@ -46,8 +46,10 @@ const Template5 = () => {
       bg={"#fff"}
     >
       <SimpleGrid
-        minW={830}
-        maxW={830}
+        minW={837}
+        maxW={837}
+        minHeight={1183}
+
         bg={"blackAlpha.300"}
         py={12}
         borderRadius={6}
@@ -56,6 +58,7 @@ const Template5 = () => {
       >
         <HStack alignItems={"flex-start"}>
           <VStack align={"flex-end"} lineHeight="34px" pr={6} w="415px">
+
             <Box
               display={"flex"}
               flexDir={"column"}
@@ -67,14 +70,17 @@ const Template5 = () => {
                 SName={true}
                 maxCWidth={"180px"}
                 maxWidth={"100px"}
+
                 direction="row"
                 FNameStyle={Classes.name}
                 SNameStyle={Classes.name}
               />
+
               <Profession
                 professionStyle={Classes.professionNameTemplate5}
                 maxWidth={"350px"}
               />
+
             </Box>
             <Contact
               phone={true}
@@ -89,7 +95,9 @@ const Template5 = () => {
               direction="row-reverse"
               style={Classes.DetailStyle}
               margin={"8px 0px 0px 0px"}
+
               maxWidth={"310px"}
+
             />
           </VStack>
           <Box h={"full"} width="2px" bg="black"></Box>
@@ -132,9 +140,11 @@ const Template5 = () => {
                 row1MaxW={230}
                 row2MaxW={250}
                 row2MinW={250}
+
                 maxWidth={"440px"}
                 maxChr={20}
                 datewidthmax={"100px"}
+
               />
             </div>
           </div>
@@ -173,9 +183,11 @@ const Template5 = () => {
                 row2MaxW={250}
                 row2MinW={250}
                 degree_placeholder="Study Program"
+
                 maxWidth={"440px"}
                 maxChr={20}
                 datewidthmax={"100px"}
+
               />
             </div>
           </div>
@@ -211,8 +223,10 @@ const Template5 = () => {
                 maxWText="90px"
                 margin={"0px 20px "}
                 percentStyle={Classes.percent}
+
                 minWidth={"340px"}
                 maxWidth={"340px"}
+
               />
             </div>
           </div>

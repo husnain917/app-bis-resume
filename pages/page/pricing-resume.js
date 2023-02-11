@@ -99,17 +99,7 @@ export default function Pricing() {
                   >
                     One Resume
                   </h3>
-                  <h3
-                    style={{
-                      fontSize: "16px",
-                      marginTop: "5%",
-                      color: "white",
-                    }}
-                    className="only-font-family"
-                    fontSize={["1em", "1em", "1em", "1.1em", "1.1em", "1.3em"]}
-                  >
-                    <del>Cover letter</del>
-                  </h3>
+                  {/*  */}
                 </Box>
               </Box>
             </Box>

@@ -30,10 +30,11 @@ const FashionTemp4 = () => {
       alignItems={{ sm: "none", lg: "center" }}
       bg={"#fff"}
     >
-      <Box mb={"20px"}>
+      <Box>
         <Box
           minW={830}
           maxW={830}
+          minHeight={1183}
           h={"full"}
           borderRadius={6}
           bg={backgroundColor ? backgroundColor : "#fcd5ce"}

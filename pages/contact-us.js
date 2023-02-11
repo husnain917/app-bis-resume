@@ -42,7 +42,6 @@ export default function ContactUs() {
   const onFocunHandler = (index) => {
     setCancel(1);
     setActive(index);
-    console.log("This is Index", index);
     if (index === 4) {
       setCancel(2);
     }

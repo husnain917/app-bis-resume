@@ -1,14 +1,6 @@
-import {
-  Box,
-  Link,
-  ListItem,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react";
+import { Box, Link, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import React from "react";
-import {
-  TERMS_DATA,
-} from "../../src/components/legal/CustomData";
+import { TERMS_DATA } from "../../src/components/legal/CustomData";
 import Underline from "../../src/components/aaronGraphicTemp/Underline";
 import TableOfContent from "../../src/components/legal/TableOfContent";
 import styles from "../../styles/resumeFormats.module.css";
@@ -132,11 +124,7 @@ export default function Terms_And_Conditions() {
 
             {/* description */}
             <Box margin={"10px 0px 40px 0px"}>
-              <Text
-                fontSize={"1rem"}
-                lineHeight={"1.5"}
-                marginBottom={"1rem"}
-              >
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.AcceptableUse?.description}
               </Text>
               {/* Points */}
@@ -154,11 +142,7 @@ export default function Terms_And_Conditions() {
                   </>
                 ))}
               </UnorderedList>
-              <Text
-                fontSize={"1rem"}
-                lineHeight={"1.5"}
-                marginTop={"1rem"}
-              >
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginTop={"1rem"}>
                 {TERMS_DATA?.AcceptableUse?.lastDescription}
               </Text>
             </Box>
@@ -194,11 +178,7 @@ export default function Terms_And_Conditions() {
 
             {/* description */}
             <Box margin={"10px 0px 40px 0px"}>
-              <Text
-                fontSize={"1rem"}
-                lineHeight={"1.5"}
-                marginBottom={"1rem"}
-              >
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.LinksToOtherSoftware?.description}
               </Text>
             </Box>
@@ -255,12 +235,11 @@ export default function Terms_And_Conditions() {
               <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.Changes?.data}
                 <Link
-                  href={TERMS_DATA?.Changes?.href ?? '#'}
+                  href={TERMS_DATA?.Changes?.href ?? "#"}
                   color={"#2679C7"}
                   fontSize={"1rem"}
                 >
-                  {TERMS_DATA?.Changes?.href}
-                  .
+                  {TERMS_DATA?.Changes?.href}.
                 </Link>
               </Text>
             </Box>
@@ -296,18 +275,14 @@ export default function Terms_And_Conditions() {
 
             {/* description */}
             <Box margin={"10px 0px 40px 0px"}>
-              <Text
-                fontSize={"1rem"}
-                lineHeight={"1.5"}
-                marginBottom={"1rem"}
-              >
+              <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.Termination?.data}
               </Text>
             </Box>
           </Box>
 
           {/* underline */}
-          <Underline height="0.1em" width="100%" bgColor="#000" />
+          {/* <Underline height="0.1em" width="100%" bgColor="#000" /> */}
 
           {/* Contact Us */}
           <Box margin={"30px 0px"}>
@@ -324,7 +299,7 @@ export default function Terms_And_Conditions() {
               <Text fontSize={"1rem"} lineHeight={"1.5"} marginBottom={"1rem"}>
                 {TERMS_DATA?.ContactUs?.desIst}
                 <Link
-                  href={TERMS_DATA?.ContactUs?.href ?? '#'}
+                  href={TERMS_DATA?.ContactUs?.href ?? "#"}
                   color={"#2679C7"}
                   fontSize={"1rem"}
                 >

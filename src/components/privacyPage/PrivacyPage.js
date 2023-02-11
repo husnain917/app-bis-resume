@@ -52,6 +52,7 @@ const PrivacyPage = () => {
                       fontSize={["2em", "3em", "3em", "3em"]}
                       fontWeight={"bold"}
                       color={"#313B47"}
+                      className={"main-heading"}
                     >
                       {item?.title}
                     </Text>
@@ -69,6 +70,7 @@ const PrivacyPage = () => {
                       fontWeight={500}
                       lineHeight={"1.5"}
                       marginBottom={"1rem"}
+                      className={"small-text"}
                     >
                       {item?.text}
                     </Text>
@@ -79,6 +81,7 @@ const PrivacyPage = () => {
                   lineHeight={"1.5"}
                   marginBottom={"1rem"}
                   color={"#757575"}
+                  className={"xsmall-text"}
                 >
                   {PRIVACY_DATA?.TermsOfUse?.description}
                 </Text>
@@ -90,13 +93,14 @@ const PrivacyPage = () => {
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
+                  className={"medium-heading1"}
                 >
                   {PRIVACY_DATA?.TableOfContents?.heading}
                 </Text>
 
                 {/* description */}
                 <Box margin={"10px 0px 40px 0px"}>
-                  <OrderedList>
+                  <OrderedList className={"xsmall-text"}>
                     {PRIVACY_PAGE_DATA?.map((item, index) => (
                       <>
                         <ListItem key={index}>
@@ -130,6 +134,7 @@ const PrivacyPage = () => {
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
+                  className={"medium-heading1"}
                 >
                   {PRIVACY_DATA?.TheNovoresumeContent?.heading}
                 </Text>
@@ -144,6 +149,7 @@ const PrivacyPage = () => {
                           fontSize={"1rem"}
                           lineHeight={"1.5"}
                           marginBottom={"1rem"}
+                          className={"small-text"}
                         >
                           {item?.text}
                         </Text>
@@ -159,6 +165,7 @@ const PrivacyPage = () => {
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
+                  className={"medium-heading1"}
                 >
                   {PRIVACY_DATA?.AcceptableUse?.heading}
                 </Text>
@@ -170,6 +177,7 @@ const PrivacyPage = () => {
                     fontWeight={"500"}
                     color={"#313B47"}
                     marginBottom={4}
+                    className={"xsmall-text"}
                   >
                     {PRIVACY_DATA?.AcceptableUse?.description}
                   </Text>
@@ -177,7 +185,11 @@ const PrivacyPage = () => {
                     {PRIVACY_DATA?.AcceptableUse?.data?.map((item, index) => {
                       return (
                         <>
-                          <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
+                          <ListItem
+                            lineHeight={"1.5"}
+                            fontSize={"1.1em"}
+                            className={"small-text"}
+                          >
                             {item?.text}
                           </ListItem>
                         </>
@@ -189,6 +201,7 @@ const PrivacyPage = () => {
                     fontWeight={"500"}
                     color={"#313B47"}
                     marginBottom={4}
+                    className={"small-text"}
                   >
                     {PRIVACY_DATA?.AcceptableUse?.description2}
                   </Text>
@@ -197,6 +210,7 @@ const PrivacyPage = () => {
                     fontWeight={"500"}
                     color={"#313B47"}
                     marginBottom={4}
+                    className={"small-text"}
                   >
                     {PRIVACY_DATA?.AcceptableUse?.description3}
                   </Text>
@@ -205,6 +219,7 @@ const PrivacyPage = () => {
                     fontWeight={"500"}
                     color={"#313B47"}
                     marginBottom={4}
+                    className={"small-text"}
                   >
                     {PRIVACY_DATA?.AcceptableUse?.description4}
                   </Text>
@@ -213,6 +228,7 @@ const PrivacyPage = () => {
                     fontWeight={"500"}
                     color={"#313B47"}
                     marginBottom={4}
+                    className={"small-text"}
                   >
                     {PRIVACY_DATA?.AcceptableUse?.description5}
                   </Text>
@@ -221,6 +237,7 @@ const PrivacyPage = () => {
                     fontWeight={"500"}
                     color={"#313B47"}
                     marginBottom={4}
+                    className={"small-text"}
                   >
                     {PRIVACY_DATA?.AcceptableUse?.description6}
                   </Text>
@@ -233,6 +250,7 @@ const PrivacyPage = () => {
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
+                  className={"medium-heading1"}
                 >
                   {PRIVACY_DATA?.Security?.heading}
                 </Text>
@@ -243,6 +261,7 @@ const PrivacyPage = () => {
                     fontSize={"1.2rem"}
                     lineHeight={"1.5"}
                     marginBottom={"1rem"}
+                    className={"small-text"}
                   >
                     {PRIVACY_DATA?.Security?.data}
                   </Text>
@@ -255,6 +274,7 @@ const PrivacyPage = () => {
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
+                  className={"medium-heading1"}
                 >
                   {PRIVACY_DATA?.LinksToOtherSoftware?.heading}
                 </Text>
@@ -271,13 +291,19 @@ const PrivacyPage = () => {
                   {PRIVACY_DATA?.LinksToOtherSoftware?.data?.map(
                     (item, index) => (
                       <>
-                        <Text fontSize={"1.3rem"} fontWeight={700} my={"5"}>
+                        <Text
+                          fontSize={"1.3rem"}
+                          fontWeight={700}
+                          my={"5"}
+                          className={"xsmall-text"}
+                        >
                           {item.heading}
                         </Text>
                         <Text
                           fontSize={"1.2rem"}
                           lineHeight={"1.5"}
                           marginBottom={"1rem"}
+                          className={"small-text"}
                         >
                           {item.description}
                           <Link
@@ -285,6 +311,7 @@ const PrivacyPage = () => {
                             color={"#2679C7"}
                             lineHeight={"1.5"}
                             fontSize={"1.2rem"}
+                            className={"small-text"}
                           >
                             {item?.link1}
                           </Link>
@@ -293,7 +320,11 @@ const PrivacyPage = () => {
                           {item?.data?.map((item, index) => {
                             return (
                               <>
-                                <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
+                                <ListItem
+                                  lineHeight={"1.5"}
+                                  fontSize={"1.1em"}
+                                  className={"xsmall-text"}
+                                >
                                   {item?.text}
                                 </ListItem>
                               </>
@@ -304,6 +335,7 @@ const PrivacyPage = () => {
                           fontSize={"1.2rem"}
                           lineHeight={"1.5"}
                           marginBottom={"1rem"}
+                          className={"small-text"}
                         >
                           {item?.description2}
                           <Link
@@ -311,6 +343,7 @@ const PrivacyPage = () => {
                             color={"#2679C7"}
                             lineHeight={"1.5"}
                             fontSize={"1.2rem"}
+                            className={"xsmall-text"}
                           >
                             {item?.link1}
                           </Link>
@@ -327,6 +360,7 @@ const PrivacyPage = () => {
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
+                  className={"medium-heading1"}
                 >
                   {PRIVACY_DATA?.WarrantyAndPremiumAccount?.heading}
                 </Text>
@@ -344,6 +378,7 @@ const PrivacyPage = () => {
                             fontSize={"1.2rem"}
                             lineHeight={"1.5"}
                             marginBottom={"1rem"}
+                            className={"small-text"}
                           >
                             {item.description}
                           </Text>
@@ -360,6 +395,7 @@ const PrivacyPage = () => {
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
+                  className={"medium-heading1"}
                 >
                   {PRIVACY_DATA?.GoverningLaw?.heading}
                 </Text>
@@ -370,6 +406,7 @@ const PrivacyPage = () => {
                     fontSize={"1.2rem"}
                     lineHeight={"1.5"}
                     marginBottom={"1rem"}
+                    className={"small-text"}
                   >
                     {PRIVACY_DATA?.GoverningLaw?.data}
                   </Text>
@@ -382,6 +419,7 @@ const PrivacyPage = () => {
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
+                  className={"medium-heading1"}
                 >
                   {PRIVACY_DATA?.Changes?.heading}
                 </Text>
@@ -396,6 +434,7 @@ const PrivacyPage = () => {
                           fontSize={"1.2rem"}
                           lineHeight={"1.5"}
                           marginBottom={"1rem"}
+                          className={"small-text"}
                         >
                           {item.text}
                           <Link
@@ -419,6 +458,7 @@ const PrivacyPage = () => {
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
+                  className={"medium-heading1"}
                 >
                   {PRIVACY_DATA?.BreachesOfTheseTermsOfUse?.heading}
                 </Text>
@@ -429,6 +469,7 @@ const PrivacyPage = () => {
                     fontSize={"1rem"}
                     lineHeight={"1.5"}
                     marginBottom={"1rem"}
+                    className={"small-text"}
                   >
                     {PRIVACY_DATA?.BreachesOfTheseTermsOfUse?.data}
                   </Text>
@@ -443,6 +484,7 @@ const PrivacyPage = () => {
                             fontSize={"1.2rem"}
                             lineHeight={"1.5"}
                             marginBottom={"1rem"}
+                            className={"small-text"}
                           >
                             {item.description}
                             <Link
@@ -459,6 +501,7 @@ const PrivacyPage = () => {
                             fontSize={"1.2rem"}
                             lineHeight={"1.5"}
                             marginBottom={"1rem"}
+                            className={"small-text"}
                           >
                             {item.description2 || ""}
                           </Text>
@@ -466,6 +509,7 @@ const PrivacyPage = () => {
                             fontSize={"1.2rem"}
                             lineHeight={"1.5"}
                             marginBottom={"1rem"}
+                            className={"small-text"}
                           >
                             {item?.description3p1}
                             <Link
@@ -482,6 +526,7 @@ const PrivacyPage = () => {
                             fontSize={"1.2rem"}
                             lineHeight={"1.5"}
                             marginBottom={"1rem"}
+                            className={"small-text"}
                           >
                             {item.description4 || ""}
                           </Text>
@@ -489,6 +534,7 @@ const PrivacyPage = () => {
                             fontSize={"1.2rem"}
                             lineHeight={"1.5"}
                             marginBottom={"1rem"}
+                            className={"small-text"}
                           >
                             {item.description5 || ""}
                           </Text>
@@ -505,6 +551,7 @@ const PrivacyPage = () => {
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
+                  className={"medium-heading1"}
                 >
                   {PRIVACY_DATA?.Termination?.heading}
                 </Text>
@@ -518,6 +565,7 @@ const PrivacyPage = () => {
                         fontSize={"1rem"}
                         lineHeight={"1.5"}
                         marginBottom={"1rem"}
+                        className={"small-text"}
                       >
                         {item?.text}
                       </Text>
@@ -527,7 +575,7 @@ const PrivacyPage = () => {
               </Box>
 
               {/* underline */}
-              <Underline height="0.1em" width="100%" bgColor="#000" />
+              {/*  */}
 
               {/* Contact Us */}
               <Box margin={"30px 0px"}>
@@ -535,6 +583,7 @@ const PrivacyPage = () => {
                   fontSize={["2em", "2.4em", "2.4em", "2.4em"]}
                   fontWeight={"bold"}
                   color={"#313B47"}
+                  className={"medium-heading1"}
                 >
                   {PRIVACY_DATA?.ContactUs?.heading}
                 </Text>
@@ -556,7 +605,11 @@ const PrivacyPage = () => {
                           item.description.map((item, index) => {
                             return (
                               <>
-                                <ListItem lineHeight={"1.5"} fontSize={"1.1em"}>
+                                <ListItem
+                                  lineHeight={"1.5"}
+                                  fontSize={"1.1em"}
+                                  className={"xsmall-text"}
+                                >
                                   {item?.item}
                                 </ListItem>
                               </>

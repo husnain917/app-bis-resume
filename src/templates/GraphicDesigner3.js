@@ -43,8 +43,8 @@ export default function GraphicDesigner3() {
       display="flex"
       flexDir="row"
       maxW="830px"
-      minW="830px"
-      mb={"20px"}
+      minW="837px" minHeight={1183}
+      mb={"0px"}
     >
       <Box w="35%" h="auto" display="flex" flexDir="column">
         <Box bgColor="#56C8EA" pb="30px">

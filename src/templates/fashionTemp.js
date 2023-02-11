@@ -38,9 +38,9 @@ export default function Fashion_Temp() {
                 <Box
                     display={'flex'}
                     w="100%"
-                    minW="830px"
+                    minW="837px" minHeight={1183}
                     maxW="830px"
-                    mb={'20px'}
+                    
                 >
                     <Box
                         w="45%"

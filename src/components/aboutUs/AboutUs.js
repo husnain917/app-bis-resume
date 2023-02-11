@@ -202,42 +202,7 @@ const AboutUs = () => {
                 "30px 0px",
               ]}
             >
-              <Box maxWidth={"960px"} className="container1">
-                <UnorderedList
-                  margin={["0px"]}
-                  padding={["0px"]}
-                  display={"flex"}
-                  justifyContent={"space-between"}
-                  alignItems={"center"}
-                  width={"100%"}
-                  style={{
-                    listStyle: "none",
-                  }}
-                  flexDirection={["column", "column", "row", "row", "row"]}
-                >
-                  <ListItem>As seen in: </ListItem>
-                  <ListItem>
-                    <Image src="/thegaurdian-blue.png" alt="will show soon" />
-                  </ListItem>
-                  <ListItem>
-                    <Image src="/time-blue.png" alt="will show soon" />
-                  </ListItem>
-                  <ListItem>
-                    <Image
-                      src="/thenewyorktimes-blue.png"
-                      alt="will show soon"
-                    />
-                  </ListItem>
-                  <ListItem>
-                    <Image src="/msn-blue.png" alt="will show soon" />
-                  </ListItem>
-                  <ListItem>
-                    {" "}
-                    <Image src="/forbes-blue.png" alt="will show soon" />
-                  </ListItem>
-                </UnorderedList>
-              </Box>
-            </Box>
+             </Box>
           </Box>
         </Box>
 

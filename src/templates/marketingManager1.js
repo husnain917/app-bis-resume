@@ -81,7 +81,7 @@ const MarketingManager1 = () => {
         pr={"30px"}
         borderWidth="1px"
         borderColor={"black"}
-        mb={"20px"}
+        mb={"0px"} minHeight={1183}
       >
         {/* ============== Profile Section ============== */}
         <div style={{ display: "flex", marginLeft: "3pc" }}>

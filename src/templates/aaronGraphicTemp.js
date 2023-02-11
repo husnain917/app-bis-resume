@@ -41,9 +41,9 @@ export default function Aaron_Graphic_Temp() {
           display="flex"
           flexDir="row"
           w="100%"
-          minW="830px"
+          minW="837px" minHeight={1183}
           maxW="830px"
-          mb={"20px"}
+          mb={"0px"}
         >
           {/* =============== First Section ============== */}
           <Box w="100%" bgColor="#000000" py={2} px={8}>

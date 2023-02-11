@@ -12,8 +12,8 @@ import { DateFormatter } from "./Handlers";
 import { actionTypes } from "../../../constants/actionTypes";
 
 const SettingModal = () => {
-  let { date } = useSelector((state) => state.editorReducer.resumeData);
-
+  let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const date = resumeData?.date;
   const dispatch = useDispatch();
 
   return (
@@ -47,7 +47,6 @@ const SettingModal = () => {
                 placeholder="Select option"
                 variant="filled"
                 onChange={(e) => {
-                  console.log("ss", date);
                   const res = DateFormatter(
                     e.target.value,
                     date?.dateSeparator

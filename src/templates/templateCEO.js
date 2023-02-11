@@ -42,9 +42,10 @@ export default function TemplateCEO() {
         display="flex"
         flexDir="row"
         w="100%"
-        minW="830px"
-        maxW="830px"
-        mb={"20px"}
+        minW="837px"
+        maxW="837px"
+        minHeight={1183}
+        mb={"0px"}
       >
         {/* =============== First Section ============== */}
         <Box
