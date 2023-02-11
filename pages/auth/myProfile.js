@@ -47,7 +47,6 @@ import { doLogout } from "../../store/actions/AuthAction";
 
 const Profile = () => {
   const userData = useSelector((store) => store.AuthReducer?.userData);
-  console.log(userData?.uid);
   const [isOpen, setisOpen] = useState(false);
   const [showFull, setShowFull] = useState(false);
   const [scale, setScale] = useState(1);
@@ -80,7 +79,6 @@ const Profile = () => {
   const onDone = async () => {
     setisOpen(false);
     const result = await canvasPreview(imgRef.current, crop, scale, rotate);
-    console.log(result, "image uploaded");
     const { current } = uploadedImage;
     current = result;
     dispatch(onBlurField(result, "profile.profileImage"));
@@ -99,7 +97,6 @@ const Profile = () => {
   const [picture, setPicture] = useState(
     userData?.picture || "/uploadpic1.png"
   );
-  console.log("PICTURE", picture);
   const [family_name, setFamilyName] = useState(
     userData.family_name || dummyfirstName
   );

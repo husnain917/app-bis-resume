@@ -32,7 +32,6 @@ const RowSkill = (props) => {
   const path = "skills.items";
   const dispatch = useDispatch();
   const _addNewItem = () => {
-    console.log(data);
     dispatch(addNewObj(data[0], path));
   };
 

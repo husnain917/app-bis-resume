@@ -5,10 +5,8 @@ import { Text } from "@chakra-ui/react";
 import { CheckCircleIcon, StarIcon } from "@chakra-ui/icons";
 
 const RatingComponent = ({ title, desc, date, name, rating }) => {
-  console.log("RatingComponent:", rating);
   const [currentValue, setCurrentValue] = useState(rating);
   const [hoverValue, setHoverValue] = useState(undefined);
-  console.log("hoverValue", hoverValue);
   const property = {
     title: "Excellent and wonderfull",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iste impedit maxime? Corrupti, saepe quam!",
@@ -19,7 +17,6 @@ const RatingComponent = ({ title, desc, date, name, rating }) => {
 
   const handleClick = (value) => {
     // setCurrentValue(value);
-    console.log("value: " + value);
   };
   const handleMouseOver = (value) => {
     // setHoverValue(value);

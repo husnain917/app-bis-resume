@@ -17,6 +17,7 @@ export default function AuthButton({
         color={color}
         bgColor={bgColor}
         borderRadius="10px"
+        outline='none'
         _hover={{
           bg: "#00C8AA",
           color: " white",
