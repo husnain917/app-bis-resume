@@ -8,6 +8,8 @@ import {
   updateOrder,
   addNewObj,
   deleteObjInArray,
+  addNewWorkPoint,
+  deleteWorkPoint,
 } from "../../../store/actions/builderAction";
 import { onBlurField } from "../../../store/actions/builderAction";
 import { sampleData } from "../../../constants/sampleData";
@@ -27,7 +29,12 @@ const WorkExperience = (props) => {
   const _addNewItem = () => {
     dispatch(addNewObj(data[0], path));
   };
-
+  const _addNewPoint = (index) => {
+    dispatch(addNewWorkPoint(index));
+  };
+  const deletePoint = (parentIndex, pointIndex) => {
+    dispatch(deleteWorkPoint(parentIndex, pointIndex));
+  };
   const _removeItem = (index) => {
     let deletedPath = `${path}.${index}`;
     dispatch(deleteObjInArray(deletedPath));
@@ -68,10 +75,31 @@ const WorkExperience = (props) => {
     lineColor,
     margin,
     maxWidth,
-
+    locationWithDate = false,
     datewidthmax,
+    insideContainerStyle,
+    positionContainerStyle,
+    achieement,
+    containerForSummaryAndAchievement,
+    PointsComponent,
+    ponintsDescription,
   } = props;
-
+  const LocationComponent = ({ item, index }) => {
+    return (
+      <>
+        <Text
+          value={`${item.location}`}
+          placeholder={"Location"}
+          path={`${path}.${index}.location`}
+          customClass={`${locationStyle ? locationStyle : ""}`}
+          fontSize={fontSize}
+          color={textColor}
+          textAlign={textAlign}
+          maxWidth={maxWidth}
+        />
+      </>
+    );
+  };
   return (
     <div className={`${parentContainerStyle ? parentContainerStyle : ""}`}>
       <Dnd
@@ -102,28 +130,40 @@ const WorkExperience = (props) => {
             )}
             <VStack justifyContent={"flex-start"} alignItems="flex-start">
               <Stack direction={direction ? direction : "column"}>
-                {position && (
-                  <Box
-                    minW={direction === "row" && row1MinW}
-                    maxW={direction === "row" && row1MaxW}
-                  >
-                    <Text
-                      value={item.position}
-                      placeholder={
-                        position_placeholder
-                          ? position_placeholder
-                          : "Title/Position"
-                      }
-                      path={`${path}.${index}.position`}
-                      customClass={`${positionStyle ? positionStyle : ""}`}
-                      color={textColor}
-                      fontSize={fontSize}
-                      fontWeight={fontWeight}
-                      textAlign={textAlign}
-                      maxWidth={maxWidth}
-                    />
-                  </Box>
-                )}
+                <Stack
+                  direction={"row"}
+                  justifyContent={"space-between"}
+                  alignItems={"center"}
+                  w={"740px"}
+                  className={positionContainerStyle}
+                >
+                  {position && (
+                    <Box
+                      minW={direction === "row" && row1MinW}
+                      maxW={direction === "row" && row1MaxW}
+                    >
+                      <Text
+                        value={item.position}
+                        placeholder={
+                          position_placeholder
+                            ? position_placeholder
+                            : "Title/Position"
+                        }
+                        path={`${path}.${index}.position`}
+                        customClass={`${positionStyle ? positionStyle : ""}`}
+                        color={textColor}
+                        fontSize={fontSize}
+                        fontWeight={fontWeight}
+                        textAlign={textAlign}
+                        maxWidth={maxWidth}
+                      />
+                    </Box>
+                  )}
+                  {location && locationWithDate && (
+                    <LocationComponent item={item} index={index} />
+                  )}
+                </Stack>
+
                 {company && (
                   <Box
                     minW={direction === "row" && row2MinW}
@@ -153,7 +193,10 @@ const WorkExperience = (props) => {
                     minW={direction === "row" && row1MinW}
                     maxW={direction === "row" && row1MaxW}
                   >
-                    <Stack direction={dateDirection ? dateDirection : "row"}>
+                    <Stack
+                      direction={dateDirection ? dateDirection : "row"}
+                      className={insideContainerStyle}
+                    >
                       <Text
                         value={item.startDate}
                         placeholder={
@@ -194,6 +237,19 @@ const WorkExperience = (props) => {
                         maxChr={props.maxChr}
                       />
                     </Stack>
+                    {achieement && (
+                      <Box className={containerForSummaryAndAchievement}>
+                        <Text
+                          value={"Achievements"}
+                          customClass={`${dateStyle ? dateStyle : ""}`}
+                          color={textColor}
+                          fontSize={fontSize}
+                          fontWeight={fontWeight}
+                          textAlign={textAlign}
+                          maxWidth={datewidthmax}
+                        />
+                      </Box>
+                    )}
                   </Box>
                 )}
 
@@ -201,6 +257,7 @@ const WorkExperience = (props) => {
                   <Box
                     minW={direction === "row" && row2MinW}
                     maxW={direction === "row" && row2MaxW}
+                    className={containerForSummaryAndAchievement}
                   >
                     <Text
                       value={item.summary}
@@ -218,22 +275,17 @@ const WorkExperience = (props) => {
                     />
                   </Box>
                 )}
-              </Stack>
-              {location && (
-                <>
-                  <Text
-                    value={`${item.location}`}
-                    placeholder={
-                      location_placeholder ? location_placeholder : "Location"
-                    }
-                    path={`${path}.${index}.location`}
-                    customClass={`${locationStyle ? locationStyle : ""}`}
-                    fontSize={fontSize}
-                    color={textColor}
-                    textAlign={textAlign}
-                    maxWidth={maxWidth}
+                {ponintsDescription && (
+                  <PointsComponent
+                    items={item?.pointsItems}
+                    addPoint={() => _addNewPoint(index)}
+                    deletePoint={(childIndex) => deletePoint(index, childIndex)}
+                    index={index}
                   />
-                </>
+                )}
+              </Stack>
+              {location && !locationWithDate && (
+                <LocationComponent item={item} index={index} />
               )}
             </VStack>
           </Box>

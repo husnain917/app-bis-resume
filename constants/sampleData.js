@@ -172,7 +172,7 @@ export const sampleData = {
       ],
       visible: true,
     },
-
+    
     additional_skills: {
       heading: "Additonal Skills",
       index: 16,
@@ -334,6 +334,9 @@ export const sampleData = {
           summary: "",
           title: "",
           website: "",
+          pointsItems:[{
+          title:''
+          }]
         },
       ],
       visible: true,

@@ -41,6 +41,10 @@
   src: url(../assets/fonts/brandon-text/HVD\ Fonts\ -\ BrandonText-Thin.otf);
 }
 
+@font-face {
+  font-family: Ubuntu;
+  src: url(../assets/fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
 html,
 body {
   scroll-behavior: smooth;
