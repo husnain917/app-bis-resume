@@ -14,15 +14,30 @@ export default function ContactUs() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+
+  const validateEmail = (email) => {
+    var re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-z  A-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+
+
+  // console.log("NAME", name, "EMAIL", email, "Message", message);
   const onSubmitHandler = () => {
     if (!email || !name || !message) {
       ToastError("Please fill this Fields");
       return
+    } else if (validateEmail(email) === false) {
+      ToastError("This Email is not Valid")
+    } else {
+      setEmail("");
+      setName("");
+      setMessage("");
+      ToastSuccess("Message successfully sent");
     }
-    setEmail("");
-    setName("");
-    setMessage("");
-    ToastSuccess("Message successfully sent");
+
+
   };
   const onFocunHandler = (index) => {
     setCancel(1);

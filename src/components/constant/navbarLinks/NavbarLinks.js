@@ -44,7 +44,7 @@ export const NAV_ITEMS = [
   },
 
   {
-    label: "About",
+    label: "About Us",
     href: "/about-us",
   },
 ];
