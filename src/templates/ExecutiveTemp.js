@@ -49,8 +49,10 @@ const ExecutiveTemp = () => {
             bg={'#fff'}
         >
             <Box
-                minW={830}
-                maxW={830}
+                minW={837}
+                maxW={837}
+          minHeight={1183}
+
                 pt={8}
                 pb={2}
                 px={2}
@@ -58,7 +60,7 @@ const ExecutiveTemp = () => {
                 borderRadius={6}
                 borderWidth="1px"
                 borderColor={'#00000023'}
-                mb={'20px'}
+             
             >
                 {/* =============== Profile Section =============== */}
                 <HStack>

@@ -41,7 +41,7 @@ const DigitalMarkTemp2 = () => {
         pb={4}
         borderWidth="1px"
         borderColor={"#00000033"}
-        mb={"20px"}
+        mb={"0px"} minHeight={1183}
       >
         <Box
           bg={backgroundColor ? backgroundColor : "#E0EFFA"}

@@ -24,7 +24,7 @@ export default function GraphicDesigner1() {
   const [show, setShow] = useShow();
 
   return (
-    <Box display="flex" minW="830px" maxW="830px" mb={"20px"}>
+    <Box display="flex" minW="837px" minHeight={1183} maxW="830px" mb={"0px"}>
       <Box w="40%" bgColor="#365B6D" pb="100px" pr={"30px"}>
         <Box mr="5%" mt={"30px"}>
           <Contact

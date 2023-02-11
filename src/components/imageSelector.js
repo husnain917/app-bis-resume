@@ -19,10 +19,8 @@ const ImageSelector = ({
   minWidth,
 }) => {
   useEffect(() => {
-    console.log("Height", height, "Width", width);
   }, [height, width]);
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  console.log("resumeData", resumeData?.profile?.profileImage);
   const [isOpen, setisOpen] = useState(false);
   const uploadedImage = React.useRef(null);
   const imageUploader = React.useRef(null);

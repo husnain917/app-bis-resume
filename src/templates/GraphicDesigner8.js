@@ -33,8 +33,8 @@ const GraphicDesigner8 = () => {
             bg={'#fff'}
         >
             <Box
-                minW={830}
-                maxW={830}
+                minW={837}
+                maxW={837}
                 borderRadius={6}
                 bg={'#fff'}
                 p={'50px 30px 30px 0px'}
@@ -42,7 +42,7 @@ const GraphicDesigner8 = () => {
                 alignItems={'stretch'}
                 borderWidth="1px"
                 borderColor={'#00000033'}
-                mb={'20px'}
+                minHeight={1183}
             >
                 {/* _______________ First Section _______________  */}
                 <Box

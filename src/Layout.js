@@ -23,7 +23,6 @@ export default function Layout({ children }) {
       {path.includes("templates/") ||
       path.includes("/blog") ||
       path.includes("/personal-development") ||
-      path.includes("/Jobs") ||
       path.includes("/ComingSoon") ||
       path.includes("/inspiring-stories") ? (
         <>

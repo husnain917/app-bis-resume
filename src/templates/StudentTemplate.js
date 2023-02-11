@@ -36,14 +36,15 @@ const StudentTemplate = () => {
             bg={'#fff'}
         >
             <Box
-                minW={830}
-                maxW={830}
+                minW={837}
+                maxW={837}
+          minHeight={1183}
+
                 borderRadius={6}
                 pt={'50px'}
                 bg="white"
                 borderWidth="1px"
                 borderColor={'#00000023'}
-                mb={'20px'}
             >
                 <Box>
                     <Box bg={'#EBC9BB'} h={'230px'}>

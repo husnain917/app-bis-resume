@@ -10,6 +10,7 @@ import { Text as TextField } from "@chakra-ui/react";
 import { useState } from "react";
 
 function Text(props) {
+
   // React.useEffect(() => {
   //   const myPara = document.getElementById(path);
   //   console.log("myPara", myPara?.innerText);
@@ -25,6 +26,17 @@ function Text(props) {
   //     });
   //   }
   // });
+
+  React.useEffect(() => {
+    const myPara = document.getElementById(path);
+    if (myPara) {
+      myPara.addEventListener("input", function () {
+
+        const text = document.getElementById(path).innerText;
+      
+      });
+    }
+  });
   const dispatch = useDispatch();
   const { getResumeBuilderChoice } = useSelector(
     (state) => state.editorReducer
@@ -39,10 +51,7 @@ function Text(props) {
   };
 
   const { value, customClass, tag, path, editable = true } = props;
-  console.log(value, "value from props");
-  console.log("MAXCHR", props?.maxChr);
   const maxChr = props?.maxChr;
-  console.log("maxChr", maxChr);
   const onChangeName = (e) => {
     const textValue = e.target.textContent;
     if (textValue.length === maxChr && e.keyCode !== 8) {

@@ -46,8 +46,10 @@ const Template5 = () => {
       bg={"#fff"}
     >
       <SimpleGrid
-        minW={830}
-        maxW={830}
+        minW={837}
+        maxW={837}
+        minHeight={1183}
+
         bg={"blackAlpha.300"}
         py={12}
         borderRadius={6}
