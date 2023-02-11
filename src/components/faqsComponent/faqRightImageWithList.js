@@ -61,25 +61,32 @@ const FaqRightImageWithList = ({
             {" "}
             {text1}
           </Text>
-          <UnorderedList
-            ml={2}
-            fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
-            lineHeight={["20px", "20px", "24px", "24px", "24px"]}
-            className={"medium-text"}
-          >
-            <ListItem ml="3" mb={0.5}>
-              {item1}
-            </ListItem>
-            <ListItem ml="3" mb={0.5}>
-              {item2}
-            </ListItem>
-            <ListItem ml="3" mb={0.5}>
-              {item3}
-            </ListItem>
-            <ListItem ml="3" mb={0.5}>
-              {item4}
-            </ListItem>
-          </UnorderedList>
+          {item1 ? (
+            <>
+              <UnorderedList
+                ml={2}
+                fontSize={["0.9em", "0.9em", "1em", "1em", "1.1em"]}
+                lineHeight={["20px", "20px", "24px", "24px", "24px"]}
+                className={"medium-text"}
+              >
+                <ListItem ml="3" mb={0.5}>
+                  {item1}
+                </ListItem>
+                <ListItem ml="3" mb={0.5}>
+                  {item2}
+                </ListItem>
+                <ListItem ml="3" mb={0.5}>
+                  {item3}
+                </ListItem>
+                <ListItem ml="3" mb={0.5}>
+                  {item4}
+                </ListItem>
+              </UnorderedList>
+            </>
+          ) : (
+            ""
+          )}
+
           <Text
             fontSize={["1em", "1em", "1em", "1.1em", "1.1em", "1.3em"]}
             my={4}
@@ -88,20 +95,26 @@ const FaqRightImageWithList = ({
           >
             {text2}
           </Text>
-          <UnorderedList
-            ml={2}
-            className={"medium-text"}
-            fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
-            lineHeight={["20px", "20px", "24px", "24px", "24px"]}
-          >
-            <ListItem ml="3" mb={0.5}>
-              {item5}
-            </ListItem>
-            <ListItem ml="3" mb={0.5}>
-              {item6}
-            </ListItem>
-            <ListItem ml="3">{item7}</ListItem>
-          </UnorderedList>
+          {item5 ? (
+            <>
+              <UnorderedList
+                ml={2}
+                className={"medium-text"}
+                fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
+                lineHeight={["20px", "20px", "24px", "24px", "24px"]}
+              >
+                <ListItem ml="3" mb={0.5}>
+                  {item5}
+                </ListItem>
+                <ListItem ml="3" mb={0.5}>
+                  {item6}
+                </ListItem>
+                <ListItem ml="3">{item7}</ListItem>
+              </UnorderedList>
+            </>
+          ) : (
+            ""
+          )}
         </GridItem>
         <GridItem
           // pl="2"

@@ -133,11 +133,7 @@ const Contact = (props) => {
             />
 
             <Text
-              placeholder={
-                resumeData?.profile?.email
-                  ? resumeData?.profile?.email
-                  : "E-mail"
-              }
+              placeholder={emailPlaceholder ? emailPlaceholder : "E-mail"}
               customClass={`${style}`}
               value={resumeData?.profile?.email}
               path={"profile.email"}
