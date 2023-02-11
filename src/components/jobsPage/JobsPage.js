@@ -331,7 +331,7 @@ const JobsPage = () => {
                 <>
                   <GridItem
                     colSpan={3}
-                    width={["100%", "100%", "59%", "59%", "57%"]}
+                    width={["100%", "100%", "85%", "90%", "95%"]}
                     margin={"0 auto"}
                   >
                     <ContentText
@@ -349,26 +349,7 @@ const JobsPage = () => {
                   </GridItem>
 
                   {item?.Content?.map((item, index) => {
-                    return (
-                      <>
-                        {/* <GridItem w="100%" mb={8} colSpan={[3, 3, 1, 1, 1]}>
-                          <ContentText
-                            id={item.id}
-                            text={item.text}
-                            className={item.className}
-                            fontSize={item.fontSize}
-                            margin={item.margin}
-                            textAlign={item.textAlign}
-                            backgroundColor={item.backgroundColor}
-                            width={item.width}
-                            marginBox={item.marginBox}
-                            fontWeight={item.fontWeight}
-                            color={item.color}
-                            lineHeight={item.lineHeight}
-                          />
-                        </GridItem> */}
-                      </>
-                    );
+                    return <></>;
                   })}
                 </>
               );
@@ -433,7 +414,7 @@ const JobsPage = () => {
               <>
                 <GridItem
                   colSpan={3}
-                  w={["85%", "85%", "50%", "55%", "55%"]}
+                  w={["85%", "85%", "75%", "80%", "85%"]}
                   margin={"0 auto"}
                 >
                   <ContentText
