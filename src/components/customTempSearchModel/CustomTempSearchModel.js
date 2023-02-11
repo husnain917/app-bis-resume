@@ -8,7 +8,6 @@ import {
     useDisclosure,
     Button,
     Box,
-    Text,
     Link,
     Image
 } from '@chakra-ui/react'
@@ -32,7 +31,7 @@ export default function CustomTempSearchModel({
                 <FaSearchPlus size={16} />
             </Box>
 
-            <Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose} size={'3xl'}>
+            <Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose} size={'2xl'}>
                 <ModalOverlay />
                 <ModalContent
                     bg={'none'}
@@ -40,18 +39,16 @@ export default function CustomTempSearchModel({
                 >
                     <ModalHeader
                         bg={'#fff'}
-                        width={'80%'}
-                        mx={'auto'}
+                        width={['100%', '100%', '75%', '55%', '38%']}
+                        ml={['0px', '0px', '48px', '55px', '65px']}
                         borderRadius={'50px 50px'}
                         display={'flex'}
                         justifyContent={'space-between'}
                         alignItems={'center'}
+                        position={'fixed'}
+                        top={'30px'}
+                        p={'12px 30px'}
                     >
-                        <Text
-                            fontFamily="poppins"
-                        >
-                            Examples
-                        </Text>
                         <Link
                             href={href ?? '#'}
                             _hover={{
@@ -62,7 +59,7 @@ export default function CustomTempSearchModel({
                                 title={'Customize Now'}
                                 backgroundColor={'#2CACD5'}
                                 color={'#fff'}
-                                padding={'10px 20px 10px 20px'}
+                                padding={'5px 20px 5px 20px'}
                             />
                         </Link>
                         <Button
@@ -80,7 +77,7 @@ export default function CustomTempSearchModel({
                         </Button>
                     </ModalHeader>
                     <ModalBody
-                        mt={'20px'}
+                        mt={'60px'}
                         bg={'#fff'}
                         display={'flex'}
                         justifyContent={'center'}
