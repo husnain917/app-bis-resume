@@ -123,27 +123,6 @@ const SecondSection = () => {
           </Text>
         </Box>
       </Box>
-      {/* {data?.map((item, index) => {
-        item?.cardContent?.map((item, index) => {
-          return (
-            <>
-              <Box>
-                <Text>{item.cardtext}</Text>
-              </Box>
-            </>
-          );
-        });
-        
-        // {
-        //   item?.cardContent?.map((item, index) => {
-        //     return (
-        //       <>
-        //         <Box>{item.cardtext}</Box>
-        //       </>
-        //     );
-        //   });
-        // }
-      })} */}
     </Box>
   );
 };

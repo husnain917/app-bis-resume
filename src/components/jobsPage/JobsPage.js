@@ -21,7 +21,7 @@ import ContentText from "./components/ContentText";
 import Sidebar from "../blog/Sidebar";
 import Link from "next/link";
 import Footer from "../footer/Footer";
-// import styles from "../../../styles/resumeFormats.module.css";
+import styles from "../../../styles/resumeFormats.module.css";
 import {
   thirdContent,
   seventhContent,
@@ -33,29 +33,14 @@ import {
 } from "./data";
 import { MdDone } from "react-icons/md";
 import Navbar from "../blog/latestPost/navbar/Navbar";
-import SideBar from "../sideBar/SideBar";
-import styles from "../../../styles/sideBarSection.module.css";
 
 const JobsPage = () => {
-  const handleButton = () => {
-  };
+  const handleButton = () => {};
   return (
     <>
       {/* <Navbar /> */}
 
       <Box w={"100%"}>
-        {/* <Box position={"absolute"}>
-          <Sidebar />
-        </Box> */}
-
-        <Box
-          className={styles.sideBarContainer}
-          display={["none", "none", "block", "block", "block"]}
-          position={"fixed"}
-          mt={20}
-        >
-          <SideBar />
-        </Box>
         <Box bg={"white"} paddingY={"10px 10px 0px 10px"}>
           <Box
             bg={"#FFD67B"}
@@ -206,12 +191,11 @@ const JobsPage = () => {
             />
           </Box>
         </Box>
-
         <SecondSection />
         <ThirdSection />
         {/* <ForthSection /> */}
         <FifthSection />
-        <SixthSection />
+        {/* <SixthSection /> */}
         <Box>
           <Box
             display={"flex"}
@@ -347,7 +331,7 @@ const JobsPage = () => {
                 <>
                   <GridItem
                     colSpan={3}
-                    width={["100%", "100%", "80%", "80%", "85%"]}
+                    width={["100%", "100%", "59%", "59%", "57%"]}
                     margin={"0 auto"}
                   >
                     <ContentText
@@ -367,7 +351,7 @@ const JobsPage = () => {
                   {item?.Content?.map((item, index) => {
                     return (
                       <>
-                        <GridItem w="100%" mb={8} colSpan={[3, 3, 1, 1, 1]}>
+                        {/* <GridItem w="100%" mb={8} colSpan={[3, 3, 1, 1, 1]}>
                           <ContentText
                             id={item.id}
                             text={item.text}
@@ -382,7 +366,7 @@ const JobsPage = () => {
                             color={item.color}
                             lineHeight={item.lineHeight}
                           />
-                        </GridItem>
+                        </GridItem> */}
                       </>
                     );
                   })}
@@ -408,7 +392,7 @@ const JobsPage = () => {
               <Box
                 height={"2px"}
                 backgroundColor={"black"}
-                mt={4}
+                // mt={4}
                 width={"25%"}
               ></Box>
               <Link href="/blog">
@@ -449,7 +433,7 @@ const JobsPage = () => {
               <>
                 <GridItem
                   colSpan={3}
-                  w={["85%", "85%", "65%", "75%", "75%"]}
+                  w={["85%", "85%", "50%", "55%", "55%"]}
                   margin={"0 auto"}
                 >
                   <ContentText
