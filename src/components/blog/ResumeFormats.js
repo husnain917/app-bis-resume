@@ -11,7 +11,7 @@ export default function ResumeFormats() {
           {/* links */}
           <Box className={styles.blogLinksDiv}>
             {/* blogs */}
-            <Box display={"flex"} alignItems={"center"}>
+            {/* <Box display={"flex"} alignItems={"center"}>
               <Link
                 href="/blog"
                 color={"#fff"}
@@ -34,7 +34,7 @@ export default function ResumeFormats() {
             </Box>
 
             {/* Resume Help */}
-            <Box display={"flex"} alignItems={"center"}>
+            {/* <Box display={"flex"} alignItems={"center"}>
               <Link
                 href="/help/resume-help"
                 color={"#fff"}
@@ -57,7 +57,7 @@ export default function ResumeFormats() {
             </Box>
 
             {/* The 3 Best Resume Formats to  */}
-            <Box>
+            {/* <Box>
               <Link href="/templates" color={"#fff"}>
                 <Text
                   color={"#fff"}
@@ -68,7 +68,7 @@ export default function ResumeFormats() {
                   The 3 Best Resume Formats to...
                 </Text>
               </Link>
-            </Box>
+            </Box> */}
           </Box>
           <Text
             className={styles.ctaHeading}
@@ -76,10 +76,9 @@ export default function ResumeFormats() {
           >
             {"The 3 Best Resume Formats to Use in 2023 (Examples)"}
           </Text>
-
           {/* about */}
           <Box className={styles.avatarDiv}>
-            <Box>
+            {/* <Box>
               <Image
                 src="/formatAvatar.png"
                 boxSize="110px"
@@ -102,7 +101,7 @@ export default function ResumeFormats() {
               >
                 Career Expert
               </Text>
-            </Box>
+            </Box> */}
           </Box>
         </Box>
         <Box className={styles.ctaRightSec} marginTop={"30px"}>

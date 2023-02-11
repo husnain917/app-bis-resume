@@ -85,86 +85,86 @@ export default function FormatsTables() {
             fontFamily={`'EuclidCircularB-Medium', sans-serif`}
           >
             <ListItem>
-              <strong>
+              <>
                 Use a clear and consistent layout throughout your resume. This
                 will make it easy for recruiters to read and understand your
                 qualifications.
-              </strong>
+              </>
               &nbsp;
             </ListItem>
             <ListItem>
-              <strong>
+              <>
                 Use a professional and modern resume font, such as Calibri,
                 Arial or Times New Roman, and stick to one font throughout your
                 resume.
-              </strong>
+              </>
               &nbsp;
             </ListItem>
             <ListItem>
-              <strong>
+              <>
                 Set one-inch margins on all four sides to give your resume a
                 clean and polished look.
-              </strong>
+              </>
               &nbsp;
             </ListItem>
             <ListItem>
-              <strong>
+              <>
                 Create a proper header format for your contact details,
                 including your name, address, phone number, and email address.
-              </strong>{" "}
+              </>{" "}
               &nbsp;
             </ListItem>
             <ListItem>
-              <strong>
+              <>
                 Divide your resume into clear and legible sections, such as
                 Contact Information, Resume Summary, Work Experience, Education,
                 and Skills.
-              </strong>
+              </>
               &nbsp;
             </ListItem>
             <ListItem>
-              <strong>
+              <>
                 Use bullet points to talk about your past jobs and
                 accomplishments. This makes it easy for recruiters to quickly
                 scan your resume and understand your qualifications.
-              </strong>
+              </>
               &nbsp;
             </ListItem>
             <ListItem>
-              <strong>
+              <>
                 Be consistent with your resume formatting throughout. Use the
                 same date format for all your job listings, and make sure to use
                 the same font, spacing, and formatting for all sections.
-              </strong>
+              </>
             </ListItem>
             <ListItem>
-              <strong>
+              <>
                 Use single or 1.15 line spacing to make your resume easy to
                 read.
-              </strong>
+              </>
             </ListItem>
             <ListItem>
-              <strong>
+              <>
                 Add an extra space before and after each section heading to make
                 it clear where one section ends and the other begins.
-              </strong>
+              </>
               &nbsp;
             </ListItem>
             <ListItem>
-              <strong>
+              <>
                 Make your resume as long as it needs to be, but keep in mind
                 that recruiters usually spend only a few seconds scanning each
                 resume, so try to keep it concise and to the point. Unless the
                 job description specifically asks for them. You re looking for a
                 job, not a date!
-              </strong>
+              </>
             </ListItem>
             <ListItem>
-              <strong>
+              <>
                 Avoid using photos on your resume, unless the job description
                 specifically asks for them, remember that you are looking for a
                 job, not a date!
-              </strong>
+              </>
             </ListItem>
           </OrderedList>
 
@@ -788,10 +788,10 @@ export default function FormatsTables() {
               lineHeight={8}
               fontFamily={`'EuclidCircularB-Medium', sans-serif`}
             >
-              <strong>
+              <>
                 Want to save time and have your skills-based (functional) resume
                 ready in 5 minutes?
-              </strong>
+              </>
               &nbsp;
               <Link color={"#3983fa"} href={"/templates"}>
                 Pick from 20+ resume templates
