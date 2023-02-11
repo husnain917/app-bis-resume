@@ -22,7 +22,7 @@ import Router, { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 export default function ProfileComponent() {
   const userData = useSelector((store) => store.AuthReducer?.userData);
-  console.log('sss', userData?.photoURL)
+  // console.log('sss', userData?.photoURL)
   const [loading, setLoading] = useState(false);
   const [iconColor, setIconColor] = useState("");
   const dispatch = useDispatch();
@@ -52,7 +52,7 @@ export default function ProfileComponent() {
             <Image
               boxSize={"2.7rem"}
               borderRadius="full"
-              src={userData?.photoURL || '/uploadpic1.png'}
+              src={userData?.photoURL || "/uploadpic1.png"}
               alt="Fluffybuns the destroyer"
             />
             <TiArrowSortedDown
@@ -105,8 +105,8 @@ export default function ProfileComponent() {
                   color: "#00C8AA",
                 }}
                 letterSpacing={"1px"}
-              // pt="5px"
-              // pb="5px"
+                // pt="5px"
+                // pb="5px"
               >
                 My Profile
               </Text>
@@ -131,8 +131,8 @@ export default function ProfileComponent() {
                   color: "#00C8AA",
                 }}
                 letterSpacing={"1px"}
-              // pt="5px"
-              // pb="5px"
+                // pt="5px"
+                // pb="5px"
               >
                 My Templates
               </Text>

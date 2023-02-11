@@ -189,7 +189,7 @@ export default function Resume_Formats() {
         </Box>
       </Container>
       {/* content container end */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
