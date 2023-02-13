@@ -33,7 +33,10 @@ import ImageSelector from "../../src/components/imageSelector";
 import ImageCrop from "../../src/components/Crop/ImageCrop";
 import UseProfileImage from "./useProfileImage";
 import { useEffect, useRef } from "react";
-import { onBlurField } from "../../store/actions/builderAction";
+import {
+  onBlurField,
+  uploadImageAction,
+} from "../../store/actions/builderAction";
 import { canvasPreview } from "../../src/components/canvasPreview";
 import UseModal from "./useModal";
 import CommonButton from "../../src/components/commonButton/CommonButton";
@@ -41,7 +44,6 @@ import { getLoggedInUser } from "../../store/actions/AuthAction";
 import { getAuth, updateEmail } from "firebase/auth";
 import { doUserDelete } from "../../store/actions/AuthAction";
 import { doLogout } from "../../store/actions/AuthAction";
- 
 
 // import { UseModal } from "./useModal";
 
@@ -54,7 +56,7 @@ const Profile = () => {
   const [crop, setCrop] = useState();
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [reset,setResetPass]=useState(false)
+  const [reset, setResetPass] = useState(false);
   const imgRef = useRef(null);
   const uploadedImage = React.useRef(null);
   const isUserLoggedIn = useSelector(
@@ -82,21 +84,20 @@ const Profile = () => {
     const { current } = uploadedImage;
     current = result;
     dispatch(onBlurField(result, "profile.profileImage"));
+    dispatch(uploadImageAction(current));
   };
-
 
   const deleteUs = async () => {
     await dispatch(doUserDelete());
-    await dispatch(doLogout(setLoading))
-  }
+    await dispatch(doLogout(setLoading));
+  };
 
   const dummyEmail = "ahsanbutt515@gmail.com";
   const dummyfirstName = "Ahsan Ali";
   const dummyLastName = "Butt";
   const [email, setEmail] = useState(userData?.email || dummyEmail);
-  const [picture, setPicture] = useState(
-    userData?.picture || "/uploadpic1.png"
-  );
+  const [picture, setPicture] = useState(userData?.picture || "/UPLOAD1.png");
+
   const [family_name, setFamilyName] = useState(
     userData.family_name || dummyfirstName
   );
@@ -120,8 +121,6 @@ const Profile = () => {
   //   setGivenName(userData?.given_name);
   //   setVerifiedEmail(userData?.verified_email);
   // }, []);
-
-
 
   return (
     <>
@@ -456,7 +455,7 @@ const Profile = () => {
                   w={{ base: "85vw", md: "40vw" }}
                   borderRadius={4}
                   p={"15px"}
-                // className={`${Style.mt}`}
+                  // className={`${Style.mt}`}
                 >
                   <HStack>
                     <CgNotes size={34} color="#fff" />
@@ -527,45 +526,50 @@ const Profile = () => {
                 color="#fff"
                 letterSpacing={"0.5px"}
                 _hover={{ color: "#00c8aa", cursor: "pointer" }}
-                onClick={()=>setVisible(!visible)}
+                onClick={() => setVisible(!visible)}
               >
                 Want to leave us?
               </Text>
-              </HStack>
-             {
-              visible ?
-              <Box alignItems={"center"} display="flex" flexDirection={"column"} >
-              <Text color="#fff" mt="3%" mb="1%" px="6%" >We would be sad to see you go, but here you can permanently delete your Account Details and the created Resumes/CVs/Cover Letters etc.              </Text>
+            </HStack>
+            {visible ? (
               <Box
-              h={["180px","180px","140px"]}
-              bg="#313B47"
-              w={["100%","100%","85%","85%","85%"]}
-              alignItems="center"
-              display={"flex"}
-              flexDirection="column"
-              ml="5%"
-              mt="3%"
-              borderRadius={4}
-              p={"15px"}
-            >
-              <HStack mt={2}>
-                <Text color={"#fff"} fontSize={16}>
-                  Are you sure you want to delete the account ?
+                alignItems={"center"}
+                display="flex"
+                flexDirection={"column"}
+              >
+                <Text color="#fff" mt="3%" mb="1%" px="6%">
+                  We would be sad to see you go, but here you can permanently
+                  delete your Account Details and the created Resumes/CVs/Cover
+                  Letters etc.{" "}
                 </Text>
-              </HStack>
-              <Box mt={["3%","3%","2%"]}>
-              <CommonButton
-              title="Permanently Delete"
-               backgroundColor="   #00C8AA"
-              color="white"
-              onClick={deleteUs}
-            />
-            </Box>
-            </Box>
-            </Box>
-              :null
-             }
-      
+                <Box
+                  h={["180px", "180px", "140px"]}
+                  bg="#313B47"
+                  w={["100%", "100%", "85%", "85%", "85%"]}
+                  alignItems="center"
+                  display={"flex"}
+                  flexDirection="column"
+                  ml="5%"
+                  mt="3%"
+                  borderRadius={4}
+                  p={"15px"}
+                >
+                  <HStack mt={2}>
+                    <Text color={"#fff"} fontSize={16}>
+                      Are you sure you want to delete the account ?
+                    </Text>
+                  </HStack>
+                  <Box mt={["3%", "3%", "2%"]}>
+                    <CommonButton
+                      title="Permanently Delete"
+                      backgroundColor="   #00C8AA"
+                      color="white"
+                      onClick={deleteUs}
+                    />
+                  </Box>
+                </Box>
+              </Box>
+            ) : null}
           </Box>
         </Box>
       </Box>
