@@ -104,11 +104,11 @@ export default function Navbar() {
                     key={items?.label}
                     display={{ base: "inline-block", md: "inline-block" }}
                     justify={{ base: "end" }}
-                    style={{
-                      border: "1px solid #e0e2e8",
-                      boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
-                      borderRadius: "0.2rem",
-                    }}
+                    // style={{
+                    //   border: "1px solid #e0e2e8",
+                    //   boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
+                    //   borderRadius: "0.2rem",
+                    // }}
                     onClick={
                       items.label === "Register"
                         ? () => {
@@ -125,18 +125,18 @@ export default function Navbar() {
                         : ""
                     }
                     cursor={"pointer"}
-                    width={{
-                      xl: "120px",
-                      lg: "80px",
-                      md: "110px",
-                    }}
-                    bg={
-                      items?.label === "Register"
-                        ? "#006772"
-                        : items?.label === "Login"
-                        ? "#006772"
-                        : ""
-                    }
+                    // width={{
+                    //   xl: "120px",
+                    //   lg: "80px",
+                    //   md: "110px",
+                    // }}
+                    // bg={
+                    //   items?.label === "Register"
+                    //     ? "#006772"
+                    //     : items?.label === "Login"
+                    //     ? "#006772"
+                    //     : ""
+                    // }
                     textAlign={"center"}
                     padding={"10px 5px"}
                     textTransform={"uppercase"}
@@ -147,20 +147,33 @@ export default function Navbar() {
                         <Link
                           // href={items?.href ?? '#'}
                           key={items.label}
-                          fontWeight={650}
-                          color={"#fdfffc"}
-                          fontSize={{ xl: "14px", lg: "12px" }}
                           _hover={{
                             textDecoration: "none",
                             color: "#fff",
                           }}
-                          onClick={() => {
-                            setIsActive(0);
-                            localStorage.setItem("active", 0);
-                            ismodalOpen();
-                          }}
+                          // fontWeight={650}
+                          // color={"#fdfffc"}
+                          // fontSize={{ xl: "14px", lg: "12px" }}
+                          // onClick={() => {
+                          //   setIsActive(0);
+                          //   localStorage.setItem("active", 0);
+                          //   ismodalOpen();
+                          // }}
                         >
-                          {items.label}
+                          <CommonButton
+                            fontWeight={650}
+                            color={"#fdfffc"}
+                            fontSize={{ xl: "14px", lg: "12px" }}
+                            onClick={() => {
+                              setIsActive(0);
+                              localStorage.setItem("active", 0);
+                              ismodalOpen();
+                            }}
+                            title={items.label}
+                            backgroundColor={"#006772"}
+                            width={"120px"}
+                          />
+                          {/* {items.label} */}
                         </Link>
                       </>
                     ) : items.label === "Login" ? (
@@ -168,20 +181,33 @@ export default function Navbar() {
                         <Link
                           // href={items?.href ?? '#'}
                           key={items.label}
-                          fontWeight={650}
-                          color={"#fdfffc"}
-                          fontSize={{ xl: "14px", lg: "12px" }}
-                          _hover={{
-                            textDecoration: "none",
-                            color: "#fff",
-                          }}
-                          onClick={() => {
-                            setIsActive(1);
-                            localStorage.setItem("active", 1);
-                            ismodalOpen();
-                          }}
+                          // fontWeight={650}
+                          // color={"#fdfffc"}
+                          // fontSize={{ xl: "14px", lg: "12px" }}
+                          // _hover={{
+                          //   textDecoration: "none",
+                          //   color: "#fff",
+                          // }}
+                          // onClick={() => {
+                          //   setIsActive(1);
+                          //   localStorage.setItem("active", 1);
+                          //   ismodalOpen();
+                          // }}
                         >
-                          {items.label}
+                          <CommonButton
+                            fontWeight={650}
+                            color={"#fdfffc"}
+                            fontSize={{ xl: "14px", lg: "12px" }}
+                            onClick={() => {
+                              setIsActive(1);
+                              localStorage.setItem("active", 1);
+                              ismodalOpen();
+                            }}
+                            title={items.label}
+                            backgroundColor={"#006772"}
+                            width={"120px"}
+                          />
+                          {/* {items.label} */}
                         </Link>
                       </>
                     ) : (
