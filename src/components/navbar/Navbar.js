@@ -172,6 +172,7 @@ export default function Navbar() {
                             title={items.label}
                             backgroundColor={"#006772"}
                             width={"120px"}
+                            margin={"0px"}
                           />
                           {/* {items.label} */}
                         </Link>
