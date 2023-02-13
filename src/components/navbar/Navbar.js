@@ -102,8 +102,8 @@ export default function Navbar() {
                 <>
                   <Box
                     key={items?.label}
-                    display={{ base: "inline-block", md: "inline-block" }}
-                    justify={{ base: "end" }}
+                    // display={{ base: "inline-block", md: "inline-block" }}
+                    // justify={{ base: "end" }}
                     // style={{
                     //   border: "1px solid #e0e2e8",
                     //   boxShadow: "0 0.8rem 2.4rem 0 rgb(44 61 124 / 10%)",
@@ -138,7 +138,7 @@ export default function Navbar() {
                     //     : ""
                     // }
                     textAlign={"center"}
-                    padding={"10px 5px"}
+                    // padding={"10px 5px"}
                     textTransform={"uppercase"}
                     ml="1.5rem"
                   >
@@ -171,7 +171,7 @@ export default function Navbar() {
                             }}
                             title={items.label}
                             backgroundColor={"#006772"}
-                            width={"120px"}
+                            width={"130px"}
                             margin={"0px"}
                           />
                           {/* {items.label} */}
@@ -206,7 +206,7 @@ export default function Navbar() {
                             }}
                             title={items.label}
                             backgroundColor={"#006772"}
-                            width={"120px"}
+                            width={"130px"}
                           />
                           {/* {items.label} */}
                         </Link>
