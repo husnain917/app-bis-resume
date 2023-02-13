@@ -24,7 +24,7 @@ const RowSkill = (props) => {
     parentContainerStyle,
     childContainerStyle,
     maxChr,
-    maxWidth,
+    maxWidth,textColor
   } = props;
   const data = resumeData?.skills?.items?.length
     ? [...resumeData?.skills?.items]
@@ -66,6 +66,7 @@ const RowSkill = (props) => {
               path={`${path}.${index}.title`}
               maxWidth={maxWidth}
               maxChr={maxChr}
+              color={textColor}
             />
           </Box>
         )}

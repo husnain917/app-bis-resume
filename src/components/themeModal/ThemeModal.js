@@ -4,21 +4,21 @@ import {
   PopoverCloseButton,
   PopoverContent,
   PopoverHeader,
-} from '@chakra-ui/popover';
-import { Button } from '@chakra-ui/react';
-import React, { useRef } from 'react';
-import { useDispatch } from 'react-redux';
-import { themeMode } from '../../../store/actions/themeAction';
-import { themeData } from './themeData';
+} from "@chakra-ui/popover";
+import { Button } from "@chakra-ui/react";
+import React, { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { themeMode } from "../../../store/actions/themeAction";
+import { themeData } from "./themeData";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
-import { useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import { useSwiper } from "swiper/react";
 // Import Swiper styles
-import 'swiper/css';
+import "swiper/css";
 
-const ThemeModal = () => {
+const ThemeModal = ({ colorLength = 2 }) => {
   const swiperRef = useRef();
   const dispatch = useDispatch();
   const themeHandler = (theme) => {
@@ -26,42 +26,46 @@ const ThemeModal = () => {
       themeMode({
         backgroundColor: theme.backgroundColor,
         color: theme.color,
+        thirdColor: theme.thirdColor,
       })
     );
   };
-
+  const themeFilteredData = themeData.filter(
+    (item) => item.colorLength === colorLength
+  );
   return (
-    <PopoverContent bg={'#fff'} w="225px" pl="5px">
-      <PopoverArrow bg={'#fff'} />
+    <PopoverContent bg={"#fff"} w="225px" pl="5px">
+      <PopoverArrow bg={"#fff"} />
       <PopoverCloseButton />
-      <PopoverHeader color={'black'}>Theme Changer</PopoverHeader>
+      <PopoverHeader color={"black"}>Theme Changer</PopoverHeader>
       <PopoverBody>
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Button
-            size={'xs'}
+            size={"xs"}
             my="10px"
             onClick={() =>
               dispatch(
                 themeMode({
-                  backgroundColor: '',
-                  color: '',
+                  backgroundColor: "",
+                  color: "",
+                  thirdColor: "",
                 })
               )
             }
           >
             Default
           </Button>
-          <div style={{ display: 'flex', marginTop: '10px' }}>
+          <div style={{ display: "flex", marginTop: "10px" }}>
             <AiFillCaretLeft
               color="black"
               size={16}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
               onClick={() => swiperRef.current.slidePrev()}
             />
             <AiFillCaretRight
               color="black"
               size={16}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
               onClick={() => swiperRef.current.slideNext()}
             />
           </div>
@@ -73,7 +77,7 @@ const ThemeModal = () => {
           loop={true}
           loopFillGroupWithBlank={true}
           pagination={{
-            el: '.swiper-pagination',
+            el: ".swiper-pagination",
           }}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
@@ -81,65 +85,32 @@ const ThemeModal = () => {
           // navigation={true}
           modules={[Pagination, Navigation]}
         >
-          <SwiperSlide>
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-around',
-                flexFlow: 'wrap',
-              }}
-            >
-              {themeData.slice(0, 15).map((item, index) => (
-                <div key={index} style={{ flexBasis: '20%' }}>
+          {new Array(Math.ceil(themeFilteredData.length / 15))
+            .fill("")
+            .map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
                   <div
-                    style={item.style}
-                    onClick={() => themeHandler(item.theme)}
-                  ></div>
-                </div>
-              ))}
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-around',
-                flexFlow: 'wrap',
-              }}
-            >
-              {themeData.slice(15, 30).map((item, index) => (
-                <div
-                  key={index}
-                  style={{ flexBasis: '20%' }}
-                  className="themeActive"
-                >
-                  <div
-                    style={item.style}
-                    onClick={() => themeHandler(item.theme)}
-                  ></div>
-                </div>
-              ))}
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-around',
-                flexFlow: 'wrap',
-              }}
-            >
-              {themeData.slice(30, 40).map((item, index) => (
-                <div key={index} style={{ flexBasis: '20%' }}>
-                  <div
-                    style={item.style}
-                    onClick={() => themeHandler(item.theme)}
-                  ></div>
-                </div>
-              ))}
-            </div>
-          </SwiperSlide>
-          {/* <SwiperSlide>Slide 4</SwiperSlide> */}
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                      flexFlow: "wrap",
+                    }}
+                  >
+                    {themeFilteredData
+                      .slice(index * 15, (index + 1) * 15)
+                      .map((item, index) => (
+                        <div key={index} style={{ flexBasis: "20%" }}>
+                          <div
+                            style={item.style}
+                            onClick={() => themeHandler(item.theme)}
+                          ></div>
+                        </div>
+                      ))}
+                  </div>
+                </SwiperSlide>
+              );
+            })}
         </Swiper>
       </PopoverBody>
     </PopoverContent>
