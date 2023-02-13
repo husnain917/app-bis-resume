@@ -86,6 +86,7 @@ const WorkExperience = (props) => {
     containerForSummaryAndAchievement,
     PointsComponent,
     ponintsDescription,
+    bgColor,
   } = props;
   const LocationComponent = ({ item, index }) => {
     return (
@@ -114,7 +115,11 @@ const WorkExperience = (props) => {
         renderItem={(item, index) => (
           <Box
             className={`${childContainerStyle ? childContainerStyle : ""}`}
-            style={{ display: "flex", alignItems: sideLine && "stretch" }}
+            style={{
+              display: "flex",
+              alignItems: sideLine && "stretch",
+              backgroundColor: bgColor ? bgColor : "",
+            }}
             m={margin ? margin : ""}
           >
             {iconShow && React.createElement(icon)}

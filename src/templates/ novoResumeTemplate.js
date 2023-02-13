@@ -38,6 +38,10 @@ import {
 
 const NovoResumeTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const { backgroundColor, color, thirdColor } = useSelector(
+    (store) => store.themeReducer.theme
+  );
+console.log('thirdColor',thirdColor);
   // custom Hook For Template
   const [show, setShow] = useShow();
 
@@ -54,7 +58,7 @@ const NovoResumeTemplate = () => {
         maxW={830}
         pt={8}
         pb={2}
-        bg={"white"}
+        bg={backgroundColor ? backgroundColor : "white"}
         borderRadius={6}
         borderWidth="1px"
         borderColor={"#00000023"}
@@ -70,6 +74,7 @@ const NovoResumeTemplate = () => {
                 FNameStyle={Classes.Name}
                 SNameStyle={Classes.Name}
                 minWidth={"280px"}
+                fontColor={color ? color : "#eba43f"}
               />
               {/* Profession Section  */}
               <Profession
@@ -79,7 +84,7 @@ const NovoResumeTemplate = () => {
             </Box>
           </HStack>
           <HStack minH={"80px"} alignItems="flex-start">
-            <About maxW={"100%"} minW={"100%"} aboutStyle={Classes.profile} />
+            <About maxW={"100%"} minW={"100%"} aboutStyle={Classes.profile} fontColor={thirdColor}/>
           </HStack>
         </Box>
         <Box
@@ -100,9 +105,10 @@ const NovoResumeTemplate = () => {
             circleIcon={true}
             website={true}
             linkedinURL={true}
-            iconColor="#eba43f"
+            iconColor={color ? color : "#eba43f"}
             iconSize={"20px"}
             style={Classes.contactprofile}
+            textColor={thirdColor}
           />
         </Box>
         <Box>
@@ -124,7 +130,7 @@ const NovoResumeTemplate = () => {
                   title="AREAS OF EXPERTISE"
                   fontSize="28px"
                   fontWeight={"bold"}
-                  color="#eba43f"
+                  color={color ? color : "#eba43f"}
                   fontFamily={"Ubuntu"}
                   minW={"full"}
                   maxW="full"
@@ -136,6 +142,8 @@ const NovoResumeTemplate = () => {
                   skillStyle={Classes.skillText}
                   childContainerStyle={Classes.skillContainer}
                   skillPlaceholder={"Bussiness Process"}
+                  bg={color ? color : "#eba43f"}
+                  textColor={backgroundColor ? backgroundColor : "white"}
                 />
               </div>
             </div>
@@ -161,7 +169,7 @@ const NovoResumeTemplate = () => {
                   title="PROFESSIONAL EXPERIENCE"
                   fontSize="28px"
                   fontWeight={"bold"}
-                  color="#eba43f"
+                  color={color ? color : "#eba43f"}
                   fontFamily={"Ubuntu"}
                   minW={"full"}
                   maxW="full"
@@ -176,6 +184,7 @@ const NovoResumeTemplate = () => {
                   company={true}
                   location={true}
                   achieement={true}
+                  bgColor={backgroundColor ? backgroundColor : "white"}
                   summary_placeholder="Company Description (optional,fill when the company is not well known"
                   location_placeholder="Country,City"
                   dateStyle={Classes.date}
@@ -187,6 +196,7 @@ const NovoResumeTemplate = () => {
                   parentContainerStyle={Classes.WorkparentContainerStyle}
                   locationWithDate={true}
                   insideContainerStyle={Classes.insideContainerStyle}
+                  textColor={thirdColor}
                   positionContainerStyle={Classes.positionContainerStyle}
                   containerForSummaryAndAchievement={
                     Classes.containerForSummaryAndAchievement
@@ -208,9 +218,15 @@ const NovoResumeTemplate = () => {
                       addPoint={addPoint}
                       deletePoint={deletePoint}
                       parentIndex={index}
+                  textColor={thirdColor}
+
                       BulletContainerStyle={Classes.BulletContainerStyle}
                       BulletIcon={() => (
-                        <Box w={"100%"} bg={"#eba43f"} h={"5px"} />
+                        <Box
+                          w={"100%"}
+                          bg={color ? color : "#eba43f"}
+                          h={"5px"}
+                        />
                       )}
                     />
                   )}

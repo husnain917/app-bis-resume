@@ -60,7 +60,8 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
-  }, 
+    colorLength: 3,
+  },
   {
     id: "zyCeSJJ2A8fEGNRx",
     href: "/templates/zyCeSJJ2A8fEGNRx",
@@ -581,7 +582,7 @@ export const CUSTOM_TEMP_DATA = [
       categoryName: "Digital Marketing",
     },
   },
-  
+
   {
     id: "dhqAtIa3jaWjxQLb",
     href: "/templates/dhqAtIa3jaWjxQLb",

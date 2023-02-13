@@ -32,6 +32,7 @@ const PointsDescription = (props) => {
     DndDirection,
     BulletIcon,
     BulletContainerStyle,
+    textColor,
   } = props;
   console.log("items======>", data);
   const path = "work.items";
@@ -71,6 +72,7 @@ const PointsDescription = (props) => {
                   path={`${path}.${parentIndex}.pointsItems.${index}.title`}
                   maxWidth={maxWidth}
                   maxChr={maxChr}
+                  color={textColor}
                 />
               </Box>
             </Stack>

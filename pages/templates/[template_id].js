@@ -51,7 +51,9 @@ const TemplateDetail = () => {
   const selected =
     CUSTOM_TEMP_DATA?.find((item) => item.id === template) ||
     CUSTOM_TEMP_DATA?.find((item) => item.id === template_id);
-    const { downloadPDFHandler, pdfRef, downloadWordHandler } = PDFGenerater(selected?.id);
+  const { downloadPDFHandler, pdfRef, downloadWordHandler } = PDFGenerater(
+    selected?.id
+  );
 
   const ref = useRef();
   useOutsideClick({
@@ -88,6 +90,7 @@ const TemplateDetail = () => {
         }}
         sideTempSelect={sideTempSelect}
         setsideTempSelect={setsideTempSelect}
+        colorLength={selected?.colorLength || 2}
       >
         <ChangeTempBtn
           onPress={() => setsideTempSelect(!sideTempSelect)}
