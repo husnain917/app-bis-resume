@@ -1,4 +1,4 @@
-const borderColor = (color, color2) => {
+const borderColor = (color, color2, color3) => {
   return {
     width: "32px",
     height: "32px",
@@ -6,7 +6,7 @@ const borderColor = (color, color2) => {
     borderWidth: "8px",
     borderStyle: "solid",
     borderLeftColor: color,
-    borderTopColor: color,
+    borderTopColor: color3 ? color3 : color,
     cursor: "pointer",
     borderRightColor: color2,
     borderBottomColor: color2,
@@ -16,7 +16,16 @@ const borderColor = (color, color2) => {
 };
 export const themeData = [
   {
-    style: borderColor("brown", "#2b343d"),
+    style: borderColor("#0A1128", "#6D9DC5", "#0A1128"),
+    theme: {
+      backgroundColor: "#0A1128",
+      color: "#6D9DC5",
+      thirdColor: "#FEFCFB",
+    },
+    colorLength: 3,
+  },
+  {
+    style: borderColor("#472D30", "#E26D5C",'#FFE1A8'),
     theme: {
       backgroundColor: "#472D30",
       color: "#E26D5C",
@@ -24,6 +33,7 @@ export const themeData = [
     },
     colorLength: 3,
   },
+  //2 color scheme
   {
     style: borderColor("brown", "#2b343d"),
     theme: {
