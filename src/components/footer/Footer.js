@@ -34,6 +34,7 @@ export default function Footer() {
               <a target="_blank">
                 <CommonSocial
                   width={"1.6rem"}
+                  minWidth="1.6rem"
                   height={"1.6rem"}
                   hoverCursor={"pointer"}
                   backgroundColor={"white"}
@@ -63,6 +64,7 @@ export default function Footer() {
               <a target={"_blank"}>
                 <CommonSocial
                   width={"1.6rem"}
+                  minWidth="1.6rem"
                   height={"1.6rem"}
                   hoverCursor={"pointer"}
                   backgroundColor={"white"}
@@ -92,6 +94,7 @@ export default function Footer() {
                   <CommonSocial
                     width={"1.6rem"}
                     height={"1.6rem"}
+                    minWidth="1.6rem"
                     hoverCursor={"pointer"}
                     backgroundColor={"white"}
                     borderRadius={"50%"}
@@ -121,6 +124,7 @@ export default function Footer() {
               <a target="_blank">
                 <CommonSocial
                   width={"1.6rem"}
+                  minWidth="1.6rem"
                   height={"1.6rem"}
                   hoverCursor={"pointer"}
                   backgroundColor={"white"}
