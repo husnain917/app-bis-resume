@@ -294,7 +294,7 @@ const DesktopNav = () => {
     (state) => state.AuthReducer.isUserLoggedIn
   );
   const fontSize = isUserLoggedIn ? "12.5px" : "14px";
-  const fontSizes = isUserLoggedIn ? ["14px", "16px"] : ["15px", "17px"];
+  const fontSizes = isUserLoggedIn ? ["14px", "16px"] : ["15px", "16px"];
   return (
     <Stack direction={"row"} alignItems={"center"} spacing={{ xl: 2, lg: 2 }}>
       {NAV_ITEMS?.map((navItem) => {

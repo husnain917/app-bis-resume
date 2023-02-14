@@ -58,7 +58,7 @@ export default function TempNavbar({
   downloadWord,
   leftMenu,
   setleftMenu,
-  saveDataHandler,
+  saveDataHandler,colorLength
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -101,12 +101,12 @@ export default function TempNavbar({
       </Link>
       {!leftMenu && (
         <Box
-          w="650px"
+          w={['750px', '750px', '750px', '720px', '750px']}
           bgColor="#006772"
           borderRadius={"100px"}
           justifyContent="center"
           py={1}
-          ml={["0px", "0px", "0px", "120px", "0px"]}
+          ml={["0px", "0px", "0px", "145px", "0px"]}
           display={{ base: "none", lg: "flex" }}
         >
           <Popover>
@@ -145,7 +145,7 @@ export default function TempNavbar({
                 Theme
               </Button>
             </PopoverTrigger>
-            <ThemeModal />
+            <ThemeModal colorLength={colorLength}/>
           </Popover>
           <LayoutModal
             work={work}
