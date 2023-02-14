@@ -122,7 +122,7 @@ function Templates() {
       >
         {Modern?.map((items, index) => (
           <>
-            <Box className="cursor" key={index} mx={[0, 4, 6, 3, 8]}>
+            <Box className="cursor" key={index} mx={[0, 4, 6, 3, 6]}>
               <CustomTempSearchModel
                 href={items?.href}
                 src={items?.src}
