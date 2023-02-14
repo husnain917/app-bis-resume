@@ -83,6 +83,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
+    colorLength: 3,
   },
   {
     id: "zyCeSJJ2A8fEGNRx",

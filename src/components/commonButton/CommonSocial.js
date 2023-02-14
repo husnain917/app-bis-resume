@@ -26,6 +26,7 @@ export default function CommonButton({
   fontWeight,
   icon,
   onMouseOver,
+  minWidth,
 }) {
   const [currentIconColor, setCurrentIconColor] = useState("#463477");
   return (
@@ -44,7 +45,7 @@ export default function CommonButton({
         rightIcon={rightIcon}
         leftIcon={leftIcon}
         margin={margin}
-        minWidth={"20px"}
+        minWidth={minWidth}
         minH={"10px"}
         onMouseOver={onMouseOver}
         _hover={{

@@ -43,7 +43,7 @@ const Contact = (props) => {
     parentStyle,
     maxWidth,
     minWidth,
-    maxChr,
+    maxChr,textColor
   } = props;
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const { font } = useSelector((state) => state.fontReducer.font);
@@ -110,6 +110,7 @@ const Contact = (props) => {
               maxWidth={maxWidth}
               minWidth={minWidth}
               maxChr={maxChr}
+              color={textColor}
             />
           </Stack>
         </>
@@ -140,6 +141,7 @@ const Contact = (props) => {
               value={resumeData?.profile?.email}
               path={"profile.email"}
               maxWidth={maxWidth}
+              color={textColor}
               minWidth={minWidth}
             />
           </Stack>
@@ -174,6 +176,7 @@ const Contact = (props) => {
               value={resumeData?.profile?.website}
               path={"profile.website"}
               maxWidth={maxWidth}
+              color={textColor}
               minWidth={minWidth}
             />
           </Stack>
@@ -208,6 +211,7 @@ const Contact = (props) => {
               value={resumeData?.profile?.address?.city}
               path={"profile.address.city"}
               maxWidth={maxWidth}
+              color={textColor}
               minWidth={minWidth}
             />
           </Stack>
@@ -242,6 +246,7 @@ const Contact = (props) => {
               value={resumeData?.profile?.linkedinURL}
               path={"profile.linkedinURL"}
               maxWidth={maxWidth}
+              color={textColor}
               minWidth={minWidth}
             />
           </Stack>
