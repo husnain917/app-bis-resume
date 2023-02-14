@@ -14,16 +14,17 @@ import {
 import { onBlurField } from "../../../store/actions/builderAction";
 import { sampleData } from "../../../constants/sampleData";
 const WorkExperience = (props) => {
+  console.log("MAX WIDTH ON LOCATION: " + props.locationWidth);
   const { resumeData } = props;
   const data = resumeData?.work?.items?.length
     ? [...resumeData?.work?.items]
     : [...sampleData?.data?.work?.items];
   const dispatch = useDispatch();
   const path = "work.items";
-  console.log(
-    "ResumeData in Work Expirence",
-    resumeData?.work?.items[0].description
-  );
+  // console.log(
+  //   "ResumeData in Work Expirence",
+  //   resumeData?.work?.items[0].description
+  // );
   const onOrderUpdate = (datas) => {
     const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));
@@ -90,16 +91,18 @@ const WorkExperience = (props) => {
   const LocationComponent = ({ item, index }) => {
     return (
       <>
-        <Text
-          value={`${item.location}`}
-          placeholder={"Location"}
-          path={`${path}.${index}.location`}
-          customClass={`${locationStyle ? locationStyle : ""}`}
-          fontSize={fontSize}
-          color={textColor}
-          textAlign={textAlign}
-          maxWidth={maxWidth}
-        />
+        <Box maxWidth={"200px"}>
+          <Text
+            value={`${item.location}`}
+            placeholder={"Location"}
+            path={`${path}.${index}.location`}
+            customClass={`${locationStyle ? locationStyle : ""}`}
+            fontSize={fontSize}
+            color={textColor}
+            textAlign={textAlign}
+            maxWidth={"200px"}
+          />
+        </Box>
       </>
     );
   };
@@ -163,7 +166,11 @@ const WorkExperience = (props) => {
                     </Box>
                   )}
                   {location && locationWithDate && (
-                    <LocationComponent item={item} index={index} />
+                    <LocationComponent
+                      maxWidth={props.locationWidth}
+                      item={item}
+                      index={index}
+                    />
                   )}
                 </Stack>
 

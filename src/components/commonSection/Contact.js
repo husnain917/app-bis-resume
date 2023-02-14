@@ -51,7 +51,7 @@ const Contact = (props) => {
     <>
       {circleIcon && (
         <Circle
-          size={circleSize ? circleSize : "none"}
+          size={circleSize ? circleSize : "32px"}
           bg={circleBg ? circleBg : "none"}
           borderWidth={circleBorderW ? circleBorderW : "0px"}
           borderColor={circleBorderColor ? circleBorderColor : "none"}
@@ -83,7 +83,8 @@ const Contact = (props) => {
           <Stack
             direction={direction ? direction : "row"}
             justifyContent={"flex-start"}
-            alignItems={direction === "column" && "flex-start"}
+            // alignItems={direction === "column" && "flex-start"}
+            alignItems={props.cAlignItems || "flex-start"}
             m={margin ? margin : ""}
           >
             <Heading text={"Phone"} />
@@ -118,7 +119,8 @@ const Contact = (props) => {
           <Stack
             direction={direction ? direction : "row"}
             justifyContent={"flex-start"}
-            alignItems={direction === "column" && "flex-start"}
+            // alignItems={direction === "column" && "flex-start"}
+            alignItems={props.cAlignItems || "flex-start"}
             m={margin ? margin : ""}
           >
             <Heading text={"E-mail"} />
@@ -148,7 +150,8 @@ const Contact = (props) => {
           <Stack
             direction={direction ? direction : "row"}
             justifyContent="flex-start"
-            alignItems={direction === "column" && "flex-start"}
+            // alignItems={direction === "column" && "flex-start"}
+            alignItems={props.cAlignItems || "flex-start"}
             m={margin ? margin : ""}
           >
             <Heading text={"Website"} />
@@ -181,7 +184,8 @@ const Contact = (props) => {
           <Stack
             direction={direction ? direction : "row"}
             justifyContent="flex-start"
-            alignItems={direction === "column" && "flex-start"}
+            // alignItems={direction === "column" && "flex-start"}
+            alignItems={props.cAlignItems || "flex-start"}
             m={margin ? margin : ""}
           >
             <Heading text={"Location"} />
@@ -214,7 +218,8 @@ const Contact = (props) => {
           <Stack
             direction={direction ? direction : "row"}
             justifyContent="flex-start"
-            alignItems={direction === "column" && "flex-start"}
+            // alignItems={direction === "column" && "flex-start"}
+            alignItems={props.cAlignItems || "flex-start"}
             m={margin ? margin : ""}
           >
             <CircleDesign

@@ -38,8 +38,9 @@ import {
   SkillBaseTemp,
   FashionDesigner,
   NovoResumeTemplate,
+  // AhsanTemplate1,
 } from "../../templates";
-
+import AhsanTemplate1 from "../../templates/AhsanTemplate1";
 export const CUSTOM_TEMP_DATA = [
   {
     id: "dhqAtIa3jaWjxddw",
@@ -60,7 +61,29 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
-  }, 
+  },
+  {
+    id: "l8exLF7L53qddC2E",
+    href: "/templates/l8exLF7L53qddC2E",
+    src: "/NovoResumeTemplate.png",
+    alt: "Template Not Found",
+    height: "200px",
+    width: "250px",
+    heading: "Executive",
+    component: AhsanTemplate1,
+    sections: {
+      work: true,
+
+      skills: true,
+      education: true,
+      organization: true,
+    },
+    category: {
+      categoryID: "1",
+      totalCategory: "6",
+      categoryName: "Executive",
+    },
+  },
   {
     id: "zyCeSJJ2A8fEGNRx",
     href: "/templates/zyCeSJJ2A8fEGNRx",
@@ -581,7 +604,7 @@ export const CUSTOM_TEMP_DATA = [
       categoryName: "Digital Marketing",
     },
   },
-  
+
   {
     id: "dhqAtIa3jaWjxQLb",
     href: "/templates/dhqAtIa3jaWjxQLb",
