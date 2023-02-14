@@ -250,7 +250,7 @@ const AhsanTemplate1 = () => {
                       BulletIcon={() => (
                         <Box
                           w={"100%"}
-                          bg={thirdColor ? thirdColor : ""}
+                          bg={thirdColor ? thirdColor : "#11ad64"}
                           h={"5px"}
                         />
                       )}
