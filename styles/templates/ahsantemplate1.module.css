@@ -163,7 +163,6 @@
     color:red
   }
   .OrganizationChildContainer{
-    min-width: 380px !important;
+    min-width: 370px !important;
     background-color: white;
-    margin:"0px 20px"
   }

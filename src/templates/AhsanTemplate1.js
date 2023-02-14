@@ -38,6 +38,9 @@ import {
 
 const AhsanTemplate1 = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
+  const { backgroundColor, color, thirdColor } = useSelector(
+    (store) => store.themeReducer.theme
+  );
   // custom Hook For Template
   const [show, setShow] = useShow();
 
@@ -54,7 +57,7 @@ const AhsanTemplate1 = () => {
         maxW={830}
         // pt={6}
         pb={2}
-        bg={"white"}
+        bg={backgroundColor ? backgroundColor : "white"}
         borderRadius={6}
         borderWidth="1px"
         borderColor={"#00000023"}
@@ -82,12 +85,14 @@ const AhsanTemplate1 = () => {
                 minWidth={"180px"}
                 maxWidth={"300px"}
                 maxChr={38}
+                fontColor={color ? color : ""}
               />
               {/* Profession Section  */}
               <Profession
                 professionStyle={Classes.ProfessionHybrid}
                 professionPlaceholder={"Profession"}
                 maxWidth={"500px"}
+                fontColor={thirdColor ? thirdColor : ""}
               />
               <HStack minH={"80px"} alignItems="flex-start">
                 <About
@@ -95,6 +100,7 @@ const AhsanTemplate1 = () => {
                   minW={"100%"}
                   aboutStyle={Classes.profile}
                   maxWidth={"600px"}
+                  fontColor={thirdColor ? thirdColor : ""}
                 />
               </HStack>
             </Box>
@@ -126,6 +132,7 @@ const AhsanTemplate1 = () => {
             // caxWidth={"full"}
             style={Classes.contactprofile}
             parentDirection={"row"}
+            textColor={thirdColor ? thirdColor : ""}
           />
         </Box>
         <Box>
@@ -147,7 +154,7 @@ const AhsanTemplate1 = () => {
                   title="Skills"
                   fontSize="28px"
                   fontWeight={"bold"}
-                  color="#11ad64"
+                  color={color ? color : "#11ad64"}
                   fontFamily={"Ubuntu"}
                   minW={"full"}
                   maxW="full"
@@ -184,7 +191,7 @@ const AhsanTemplate1 = () => {
                   title="WORK EXPERIENCE"
                   fontSize="28px"
                   fontWeight={"bold"}
-                  color="#11ad64"
+                  color={color ? color : "#11ad64"}
                   fontFamily={"Ubuntu"}
                   minW={"full"}
                   maxW="full"
@@ -208,7 +215,9 @@ const AhsanTemplate1 = () => {
                   locationStyle={Classes.date}
                   summaryStyle={Classes.summaryStyle}
                   datewidthmax={"180px"}
+                  bgColor={backgroundColor ? backgroundColor : "white"}
                   maxWidth={"600px"}
+                  textColor={thirdColor ? thirdColor : ""}
                   max
                   parentContainerStyle={Classes.WorkparentContainerStyle}
                   locationWithDate={true}
@@ -232,13 +241,18 @@ const AhsanTemplate1 = () => {
                       childContainerStyle={Classes.pointsContainer}
                       PointsDescriptionPlaceholder={"Description"}
                       data={items}
+                      textColor={thirdColor ? thirdColor : ""}
                       addPoint={addPoint}
                       deletePoint={deletePoint}
                       parentIndex={index}
                       maxWidth={"600px"}
                       BulletContainerStyle={Classes.BulletContainerStyle}
                       BulletIcon={() => (
-                        <Box w={"100%"} bg={"#11ad64"} h={"5px"} />
+                        <Box
+                          w={"100%"}
+                          bg={thirdColor ? thirdColor : ""}
+                          h={"5px"}
+                        />
                       )}
                     />
                   )}
@@ -267,7 +281,7 @@ const AhsanTemplate1 = () => {
                   title="EDUCATION"
                   fontSize="28px"
                   fontWeight={"bold"}
-                  color="#11ad64"
+                  color={color ? color : "#11ad64"}
                   fontFamily={"Ubuntu"}
                   minW={"full"}
                   maxW="full"
@@ -289,6 +303,8 @@ const AhsanTemplate1 = () => {
                   maxWidth={"750px"}
                   maxChr={20}
                   dateStyle={Classes.date}
+                  bgColor={backgroundColor ? backgroundColor : "white"}
+                  textColor={thirdColor ? thirdColor : ""}
                   degreeStyle={Classes.programText}
                   institutionStyle={Classes.institute}
                   locationStyle={Classes.date}
@@ -328,7 +344,7 @@ const AhsanTemplate1 = () => {
                   title="ORGANIZATION"
                   fontSize="28px"
                   fontWeight={"bold"}
-                  color="#11ad64"
+                  color={color ? color : "#11ad64"}
                   fontFamily={"Ubuntu"}
                   minW={"full"}
                   maxW="full"
@@ -348,6 +364,8 @@ const AhsanTemplate1 = () => {
                   organizationStyle={Classes.programText}
                   roleStyle={Classes.programText}
                   locationStyle={Classes.date}
+                  bgColor={backgroundColor ? backgroundColor : ""}
+                  textColor={thirdColor ? thirdColor : ""}
                   summaryStyle={Classes.summaryStyle}
                   datewidthmax={"120px"}
                   parentContainerStyle={Classes.WorkparentContainerStyle}
