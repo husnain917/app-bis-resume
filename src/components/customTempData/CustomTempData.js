@@ -38,6 +38,7 @@ import {
   SkillBaseTemp,
   FashionDesigner,
   NovoResumeTemplate,
+  novoHybirdTemp,
 } from "../../templates";
 
 export const CUSTOM_TEMP_DATA = [
@@ -52,11 +53,43 @@ export const CUSTOM_TEMP_DATA = [
     component: NovoResumeTemplate,
     sections: {
       work: true,
-
+      education: false,
+      languages: false,
       skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
     },
     category: {
       categoryID: "1",
+      totalCategory: "6",
+      categoryName: "Executive",
+    },
+  }, 
+  {
+    id: "FHkisdjckzd23df9",
+    href: "/templates/FHkisdjckzd23df9",
+    src: "/hybrid-resume-template.png",
+    alt: "Template Not Found",
+    height: "200px",
+    width: "250px",
+    heading: "Executive",
+    component: novoHybirdTemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: true,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: true,
+    },
+    category: {
+      categoryID: "2",
       totalCategory: "6",
       categoryName: "Executive",
     },
