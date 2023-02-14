@@ -28,6 +28,7 @@
 
 .templateMainContainer {
   margin-top: 70px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 1440px) {
