@@ -5,15 +5,14 @@ const WritingGuides = () => {
   return (
     <Box
       backgroundColor={"#EFF2F9"}
-      padding={["0 20px", "0 20px", "0 44px", "0 44px", "0 44px"]}
+      padding={["0 20px", "0 20px", "0 24px", "0 24px", "0 24px"]}
     >
       <Box
-        paddingTop={["32px", "64px", "64px", "80px", "80px"]}
+        paddingTop={["32px", "64px", "64px", "0px", "0px"]}
         maxWidth={"1320px"}
         margin={"0 auto"}
         display={"flex"}
         flexDirection={["column", "column", "column", "column", "row"]}
-       
       >
         <Box
           flexGrow={1}
@@ -76,17 +75,17 @@ const WritingGuides = () => {
         <Box
           position={"relative"}
           flexShrink={"0"}
-          alignSelf={["center", "center", "center",'center', "flex-end"]}
+          alignSelf={["flex-end", "flex-end", "flex-end", "flex-end"]}
           marginLeft={"128px"}
           // maxW={["544px", "544px", "380px", "390px", "544px"]}
           // w={["344px", "444px", "544px", "544px", "544px", "544px"]}
           display={"flex"}
-          marginTop={"-60px"}
+          marginTop={["0px", "0px", "50px", "70px", "70px"]}
         >
           <Box right={"0"} position={"absolute"} marginTop={"-5%"}>
             <Image
               src="./top1.png"
-              w={"200px"}
+              w={["150px", "150px", "200px", "200px", "200px"]}
               alignSelf={[
                 "center",
                 "flex-end",
@@ -95,16 +94,17 @@ const WritingGuides = () => {
                 "flex-end",
                 "flex-end",
               ]}
-              marginLeft={"-60px"}
-              marginTop={"-36px"}
+              marginLeft={["-60px", "-60px", "-60px", "-60px", "-60px"]}
+              marginTop={["-26px", "-26px", "-36px", "-36px", "-36px"]}
               alt="will load soon"
+              left={"20%"}
             />
           </Box>
           <Box
             overflow={"hidden"}
             borderRadius={"4px 4px 0 0"}
             // height={"480px"}
-            w={["550px", "550px", "550px", "550px", "550px"]}
+            w={["250px", "250px", "550px", "550px", "550px"]}
             display={"flex"}
             alignItems={"center"}
           >
