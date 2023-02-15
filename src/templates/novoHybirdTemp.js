@@ -144,8 +144,8 @@ export default function Novo_Hybird_Temp() {
               iconSize={"20px"}
               style={styles.contactprofile}
               textColor={thirdColor ? thirdColor : '#fff'}
-              maxWidth={'340px'}
-              minWidth={'340px'}
+              maxWidth={'315px'}
+              minWidth={'315px'}
               parentStyle={styles.parentStyleContact}
               parentDirection={'row'}
             />
