@@ -1,0 +1,168 @@
+.profileText {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .profile {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+  }
+  .contactprofile {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    width: 350px;
+  }
+  .ProfessionHybrid {
+    font-weight: bold;
+    font-family: Ubuntu;
+    font-size: 24px;
+    color: #6e6e6e;
+    line-height: 25px;
+  }
+  .Name {
+    color: black;
+    text-align: left;
+    font-size: 46px;
+    font-weight: bold;
+    font-family: Ubuntu;
+    line-height: 45px;
+  }
+  .programText {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Ubuntu;
+  }
+  .institute {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: -20px;
+    font-family: Ubuntu;
+  }
+  .positionContainerStyle {
+    margin-top: -10px;
+  }
+  .pointsContainer{
+    padding-inline: 10px;
+    color: black !important;
+  }
+  .pointsText{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 3px;
+    color: black;
+  }
+  .containerForSummaryAndAchievement {
+    margin-top: -8px;
+  }
+  .insideContainerStyle {
+    margin-top: -20px;
+  }
+  .WorkparentContainerStyle {
+    width: 800px !important;
+    padding-inline: 25px !important;
+    height: auto !important;
+  }
+  .WorkchildContainerStyle{
+    background-color: white;
+    display: flex !important;
+    align-items: flex-start;
+  }
+  .date {
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    font-style: italic;
+  }
+  .summaryStyle {
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    margin-top: -10px;
+  }
+  .description {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+  }
+  .projectTitleText {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .ContactparentStyle {
+    display: flex !important;
+    grid-template-columns: auto auto;
+    /* padding-inline: 20px; */
+  }
+  .skillText {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 3px;
+    color: white;
+  }
+  .BulletContainerStyle{
+    width: 20px !important;
+    margin-top: 15px;
+  }
+  .skillContainer {
+    background-color: #11ad64 !important;
+    padding-inline: 10px;
+  }
+  .baseText {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 3px;
+    color: #fff;
+  }
+  .languageText {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 1px;
+  }
+  .sideMenu {
+    display: flex;
+    align-items: flex-start;
+  }
+  .sideMenuBox {
+    width: 20px;
+    margin-left: -27px;
+    margin-right: 4px;
+    margin-top: 10px;
+  }
+  .width {
+    min-width: 25px !important;
+    margin-left: 3px;
+    margin-top: 10px;
+  }
+  .techName {
+    color: #313c4e;
+    text-align: left;
+    font-size: 35px;
+    font-weight: 700;
+  }
+  .techAbout {
+    color: "black";
+    margin-top: -37px;
+  }
+  .techContact {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .baseTempProfession {
+    font-weight: 500;
+    font-size: 1.4em;
+    padding: 0;
+    line-height: 30px;
+    text-align: left;
+    color: #319795;
+    margin-left: 3px;
+  }
+  .institutionStyle{
+    color:red
+  }
+  .OrganizationChildContainer{
+    min-width: 370px !important;
+    background-color: white;
+  }

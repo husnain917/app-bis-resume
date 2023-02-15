@@ -39,8 +39,8 @@ import {
   FashionDesigner,
   NovoResumeTemplate,
   novoHybirdTemp,
+  AhsanTemplate1,
 } from "../../templates";
-
 export const CUSTOM_TEMP_DATA = [
   {
     id: "dhqAtIa3jaWjxddw",
@@ -67,6 +67,28 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
+  },
+  {
+    id: "l8exLF7L53qddC2E",
+    href: "/templates/l8exLF7L53qddC2E",
+    src: "/ahsantemplate1.png",
+    alt: "Template Not Found",
+    height: "200px",
+    width: "250px",
+    heading: "Executive",
+    component: AhsanTemplate1,
+    sections: {
+      work: true,
+
+      skills: true,
+      education: true,
+      organization: true,
+    },
+    category: {
+      categoryID: "2",
+      totalCategory: "6",
+      categoryName: "Executive",
+    },
     colorLength: 3,
   },
   {
@@ -90,7 +112,7 @@ export const CUSTOM_TEMP_DATA = [
       certificate: true,
     },
     category: {
-      categoryID: "2",
+      categoryID: "3",
       totalCategory: "6",
       categoryName: "Executive",
     },
