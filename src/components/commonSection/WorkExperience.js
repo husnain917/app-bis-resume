@@ -20,10 +20,10 @@ const WorkExperience = (props) => {
     : [...sampleData?.data?.work?.items];
   const dispatch = useDispatch();
   const path = "work.items";
-  console.log(
-    "ResumeData in Work Expirence",
-    resumeData?.work?.items[0].description
-  );
+  // console.log(
+  //   "ResumeData in Work Expirence",
+  //   resumeData?.work?.items[0].description
+  // );
   const onOrderUpdate = (datas) => {
     const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));
@@ -142,7 +142,6 @@ const WorkExperience = (props) => {
                   direction={"row"}
                   justifyContent={"space-between"}
                   alignItems={"center"}
-                  w={"740px"}
                   className={positionContainerStyle}
                 >
                   {position && (
@@ -248,7 +247,8 @@ const WorkExperience = (props) => {
                     {achieement && (
                       <Box className={containerForSummaryAndAchievement}>
                         <Text
-                          value={"Achievements"}
+                          value={item.description}
+                          placeholder={'Achievements'}
                           customClass={`${dateStyle ? dateStyle : ""}`}
                           color={textColor}
                           fontSize={fontSize}

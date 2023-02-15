@@ -85,8 +85,8 @@ export const CUSTOM_TEMP_DATA = [
       skills: true,
       projects: true,
       references: false,
-      organization: false,
-      interest: false,
+      organization: true,
+      interest: true,
       certificate: true,
     },
     category: {

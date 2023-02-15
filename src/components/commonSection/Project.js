@@ -53,7 +53,7 @@ const Project = (props) => {
         reorder={(e) => onOrderUpdate(e)}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <>``
+          <>
             <Box
               className={`${childContainerStyle ? childContainerStyle : ""}`}
             >
