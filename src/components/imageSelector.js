@@ -18,8 +18,7 @@ const ImageSelector = ({
   minHeight,
   minWidth,
 }) => {
-  useEffect(() => {
-  }, [height, width]);
+  useEffect(() => {}, [height, width]);
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const [isOpen, setisOpen] = useState(false);
   const uploadedImage = React.useRef(null);

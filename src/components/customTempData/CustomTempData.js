@@ -38,8 +38,8 @@ import {
   SkillBaseTemp,
   FashionDesigner,
   NovoResumeTemplate,
+  AhsanTemplate1,
 } from "../../templates";
-
 export const CUSTOM_TEMP_DATA = [
   {
     id: "dhqAtIa3jaWjxddw",
@@ -54,6 +54,28 @@ export const CUSTOM_TEMP_DATA = [
       work: true,
 
       skills: true,
+    },
+    category: {
+      categoryID: "1",
+      totalCategory: "6",
+      categoryName: "Executive",
+    },
+  },
+  {
+    id: "l8exLF7L53qddC2E",
+    href: "/templates/l8exLF7L53qddC2E",
+    src: "/ahsantemplate1.png",
+    alt: "Template Not Found",
+    height: "200px",
+    width: "250px",
+    heading: "Executive",
+    component: AhsanTemplate1,
+    sections: {
+      work: true,
+
+      skills: true,
+      education: true,
+      organization: true,
     },
     category: {
       categoryID: "1",
