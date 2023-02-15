@@ -20,8 +20,8 @@ const About = (props) => {
   } = props;
   return (
     <Box
-      maxW={maxW ? maxW : 230}
-      minW={minW ? minW : 230}
+      maxW={maxW ? maxW : ""}
+      minW={minW ? minW : ""}
       margin={margin ? margin : ""}
     >
       <Text
