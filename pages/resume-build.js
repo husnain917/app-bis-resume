@@ -49,7 +49,7 @@ export default function ResumeBuild() {
               fontSize={["40px", "50px", "50px"]}
               color="black"
               className={"main-heading"}
-              ml={["11%", "2%", "2%"]}
+              ml={["8%", "2%", "2%"]}
               mb={["11%", "5%", "5%"]}
               mt={["0%", "10%", "10%"]}
             >
@@ -81,7 +81,7 @@ export default function ResumeBuild() {
           <Box
             w={["85%", "85%", "85%", "50%", "50%"]}
             mt={["2%", "2%", "2%"]}
-            ml={["11%", "8%", "8%"]}
+            ml={["8%", "8%", "8%"]}
           >
             <Image src={HeadResume} alt={"Image Not Found"} />
           </Box>
@@ -232,7 +232,7 @@ export default function ResumeBuild() {
               <Box
                 w={["100%", "100%", "100%"]}
                 mt={["2%", "2%", "2%"]}
-                ml={["3%", "0%", "0%"]}
+                ml={["0%", "0%", "0%"]}
               >
                 <Text
                   className="sub-heading"
