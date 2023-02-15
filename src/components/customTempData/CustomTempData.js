@@ -38,9 +38,8 @@ import {
   SkillBaseTemp,
   FashionDesigner,
   NovoResumeTemplate,
-  // AhsanTemplate1,
+  AhsanTemplate1,
 } from "../../templates";
-import AhsanTemplate1 from "../../templates/AhsanTemplate1";
 export const CUSTOM_TEMP_DATA = [
   {
     id: "dhqAtIa3jaWjxddw",
@@ -65,7 +64,7 @@ export const CUSTOM_TEMP_DATA = [
   {
     id: "l8exLF7L53qddC2E",
     href: "/templates/l8exLF7L53qddC2E",
-    src: "/NovoResumeTemplate.png",
+    src: "/ahsantemplate1.png",
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
