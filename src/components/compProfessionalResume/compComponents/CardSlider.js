@@ -39,6 +39,7 @@ export default function CardSliderFunc({ cardWidth }) {
 class CardSlider extends Component {
   render() {
     const settings = {
+      id: "professional",
       dots: true,
       infinite: true,
       slidesToShow: 1,

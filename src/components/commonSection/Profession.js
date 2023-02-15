@@ -21,9 +21,7 @@ const Profession = (props) => {
     >
       <Text
         placeholder={
-          resumeData?.profile?.profession
-            ? resumeData?.profile?.profession
-            : "Profession"
+          professionPlaceholder ? professionPlaceholder : "Profession"
         }
         maxWidth={maxWidth}
         customClass={`${professionStyle}`}

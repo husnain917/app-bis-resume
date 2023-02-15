@@ -29,6 +29,8 @@ const Organization = (props) => {
     roleStyle,
     datewidthmax,
     maxwidth,
+    dndDirection,
+    textColor,
   } = props;
   const data = resumeData?.organization?.items?.length
     ? [...resumeData?.organization?.items]
@@ -48,14 +50,20 @@ const Organization = (props) => {
     dispatch(deleteObjInArray(deletedPath));
   };
   return (
-    <div className={`${parentContainerStyle ? parentContainerStyle : ""}`}>
+    <Box
+      className={`${parentContainerStyle ? parentContainerStyle : ""}`}
+      // minWidth={"400px !important"}
+      // display={"flex !important"}
+      // flexDirection={"row !important"}
+    >
       <Dnd
         data={data}
         additem={_addNewItem}
         reorder={(e) => onOrderUpdate(e)}
         removeitem={(index) => _removeItem(index)}
+        direction={dndDirection ? dndDirection : ""}
         renderItem={(item, index) => (
-          <div className={`${childContainerStyle ? childContainerStyle : ""}`}>
+          <Box className={`${childContainerStyle ? childContainerStyle : ""}`} bg={props.bgColor ? props.bgColor :""}>
             {organization && (
               <Box maxWidth={props.maxWidth}>
                 <Text
@@ -68,6 +76,7 @@ const Organization = (props) => {
                   customClass={`${organizationStyle ? organizationStyle : ""}`}
                   path={`${path}.${index}.name`}
                   maxWidth={maxwidth}
+                  color={textColor}
                 />
               </Box>
             )}
@@ -81,6 +90,8 @@ const Organization = (props) => {
                   customClass={`${dateStyle ? dateStyle : ""}`}
                   path={`${path}.${index}.startDate`}
                   maxWidth={datewidthmax}
+                  maxChr={props.maxChr}
+                  color={textColor}
                 />
                 <div className={`${dateStyle ? dateStyle : ""}`}>-</div>
                 <Text
@@ -91,6 +102,8 @@ const Organization = (props) => {
                   customClass={`${dateStyle ? dateStyle : ""}`}
                   path={`${path}.${index}.endDate`}
                   maxWidth={datewidthmax}
+                  maxChr={props.maxChr}
+                  color={textColor}
                 />
               </HStack>
             )}
@@ -102,13 +115,14 @@ const Organization = (props) => {
                   customClass={`${roleStyle ? roleStyle : ""}`}
                   path={`${path}.${index}.role`}
                   maxWidth={props.maxwidth}
+                  color={textColor}
                 />
               </Box>
             )}
-          </div>
+          </Box>
         )}
       />
-    </div>
+    </Box>
   );
 };
 
