@@ -49,7 +49,7 @@ export default function ResumeBuild() {
               fontSize={["40px", "50px", "50px"]}
               color="black"
               className={"main-heading"}
-              ml={["11%", "8%", "8%"]}
+              ml={["11%", "2%", "2%"]}
               mb={["11%", "5%", "5%"]}
               mt={["0%", "10%", "10%"]}
             >
