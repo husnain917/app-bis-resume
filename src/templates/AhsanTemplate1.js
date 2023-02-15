@@ -9,7 +9,7 @@ import { FaHorseHead } from "react-icons/fa";
 import ImageSelector from "../components/imageSelector";
 import Name from "../components/commonSection/Name";
 import Profession from "../components/commonSection/Profession";
-import Classes from "../../styles/templates/ahsanTemplate1.module.css";
+import Classes from "../../styles/templates/ahsantemplate1.module.css";
 import Contact from "../components/commonSection/Contact";
 import About from "../components/commonSection/About";
 import SectionSideMenu from "../components/tempSectionSide/SectionSideMenu";
