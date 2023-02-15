@@ -49,7 +49,7 @@ export default function ResumeBuild() {
               fontSize={["40px", "50px", "50px"]}
               color="black"
               className={"main-heading"}
-              ml={["11%", "8%", "8%"]}
+              ml={["8%", "2%", "2%"]}
               mb={["11%", "5%", "5%"]}
               mt={["0%", "10%", "10%"]}
             >
@@ -81,7 +81,7 @@ export default function ResumeBuild() {
           <Box
             w={["85%", "85%", "85%", "50%", "50%"]}
             mt={["2%", "2%", "2%"]}
-            ml={["11%", "8%", "8%"]}
+            ml={["8%", "8%", "8%"]}
           >
             <Image src={HeadResume} alt={"Image Not Found"} />
           </Box>
@@ -232,7 +232,7 @@ export default function ResumeBuild() {
               <Box
                 w={["100%", "100%", "100%"]}
                 mt={["2%", "2%", "2%"]}
-                ml={["3%", "0%", "0%"]}
+                ml={["0%", "0%", "0%"]}
               >
                 <Text
                   className="sub-heading"
@@ -242,14 +242,10 @@ export default function ResumeBuild() {
                 >
                   How to Make A Resume
                 </Text>
-                <Box display="flex" flexDirection="row">
+                <Box display="flex" flexDirection="row" alignItems={"center"}>
                   <Text marginRight={["12px", "5px", "5px"]}>
                     {" "}
-                    <TbCircle1
-                      size={30}
-                      color="red"
-                      style={{ marginTop: 3 }}
-                    />{" "}
+                    <TbCircle1 size={30} color="red" />{" "}
                   </Text>
                   <Text className={"medium-heading"} color="black">
                     {" "}
@@ -259,22 +255,18 @@ export default function ResumeBuild() {
                 <Text
                   className={"only-font-family"}
                   fontSize={["14px", "16px"]}
-                  marginTop="2%"
+                  marginTop="1%"
                   marginLeft={["11%", "5%", "5%"]}
                   mr={["2%", "2%", "0%"]}
                 >
                   Open up BisResume and search for Resume to start designing
                   your own.
                 </Text>
-                <Box marginTop="5%">
-                  <Box display="flex" flexDirection="row">
+                <Box marginTop="2%">
+                  <Box display="flex" flexDirection="row" alignItems={"center"}>
                     <Text marginRight={["12px", "5px", "5px"]}>
                       {" "}
-                      <TbCircle2
-                        size={30}
-                        color="red"
-                        style={{ marginTop: 3 }}
-                      />
+                      <TbCircle2 size={30} color="red" />
                     </Text>
                     <Text className={"medium-heading"} color="black">
                       Find the right template
@@ -283,7 +275,7 @@ export default function ResumeBuild() {
                   <Text
                     className={"only-font-family"}
                     fontSize={["14px", "16px"]}
-                    marginTop="2%"
+                    marginTop="1%"
                     marginLeft={["11%", "5%", "5%"]}
                     mr={["2%", "2%", "0%"]}
                   >
@@ -293,15 +285,11 @@ export default function ResumeBuild() {
                     corporate layouts.
                   </Text>
                 </Box>
-                <Box marginTop="5%">
-                  <Box display="flex" flexDirection="row">
+                <Box marginTop="2%">
+                  <Box display="flex" flexDirection="row" alignItems={"center"}>
                     <Text marginRight={["12px", "5px", "5px"]}>
                       {" "}
-                      <TbCircle3
-                        size={30}
-                        color="red"
-                        style={{ marginTop: 3 }}
-                      />{" "}
+                      <TbCircle3 size={30} color="red" />{" "}
                     </Text>
                     <Text className={"medium-heading"} color="black">
                       Personalize your resume
@@ -310,7 +298,7 @@ export default function ResumeBuild() {
                   <Text
                     fontSize={["14px", "16px"]}
                     className={"only-font-family"}
-                    marginTop="2%"
+                    marginTop="1%"
                     marginLeft={["11%", "5%", "5%"]}
                     mr={["2%", "2%", "0%"]}
                   >
@@ -320,15 +308,11 @@ export default function ResumeBuild() {
                     any and all elements as much as you want.
                   </Text>
                 </Box>
-                <Box marginTop="5%">
-                  <Box display="flex" flexDirection="row">
+                <Box marginTop="2%">
+                  <Box display="flex" flexDirection="row" alignItems={"center"}>
                     <Text marginRight={["12px", "5px", "5px"]}>
                       {" "}
-                      <TbCircle4
-                        size={30}
-                        color="red"
-                        style={{ marginTop: 3 }}
-                      />{" "}
+                      <TbCircle4 size={30} color="red" />{" "}
                     </Text>
                     <Text className={"medium-heading"} color="black">
                       Get creative with more features
@@ -337,7 +321,7 @@ export default function ResumeBuild() {
                   <Text
                     fontSize={["14px", "16px"]}
                     className={"only-font-family"}
-                    marginTop="2%"
+                    marginTop="1%"
                     marginLeft={["11%", "5%", "5%"]}
                     mr={["2%", "2%", "0%"]}
                   >
@@ -348,15 +332,11 @@ export default function ResumeBuild() {
                   </Text>
                 </Box>
 
-                <Box marginTop="5%">
-                  <Box display="flex" flexDirection="row">
+                <Box marginTop="2%">
+                  <Box display="flex" flexDirection="row" alignItems={"center"}>
                     <Text marginRight={["12px", "5px", "5px"]}>
                       {" "}
-                      <TbCircle5
-                        size={30}
-                        color="red"
-                        style={{ marginTop: 3 }}
-                      />{" "}
+                      <TbCircle5 size={30} color="red" />{" "}
                     </Text>
                     <Text className={"medium-heading"} color="black">
                       Order your prints
@@ -365,7 +345,7 @@ export default function ResumeBuild() {
                   <Text
                     fontSize={["14px", "16px"]}
                     className={"only-font-family"}
-                    marginTop="2%"
+                    marginTop="1%"
                     marginLeft={["11%", "5%", "5%"]}
                     mr={["4%", "2%", "0%"]}
                   >
@@ -408,11 +388,11 @@ export default function ResumeBuild() {
             </Box>
             <>
               <Container maxW={["100%", "100%", "100%", "100%", "100%"]}>
-                <Box marginTop="10%">
+                <Box marginTop="5%">
                   <Text
                     className="sub-heading"
                     fontSize={["1.9em"]}
-                    mb={["3%"]}
+                    mb={["1%"]}
                   >
                     Save time on formatting and editing
                   </Text>
@@ -427,7 +407,7 @@ export default function ResumeBuild() {
                   <Text
                     className={"only-font-family"}
                     fontSize={"16px"}
-                    mt={["5%", "3%", "3%"]}
+                    mt={["5%", "1%", "1%"]}
                   >
                     Rest assured that BisResumes templates come
                     designer-approved, so you dont have to worry about how they
@@ -436,7 +416,7 @@ export default function ResumeBuild() {
                   <Text
                     className={"only-font-family"}
                     fontSize={"16px"}
-                    mt={["5%", "3%", "3%"]}
+                    mt={["5%", "1%", "1%"]}
                   >
                     With BisResumes free resume builder, applying for your dream
                     job is easy and fast. Choose from hundreds of free,
@@ -445,11 +425,11 @@ export default function ResumeBuild() {
                   </Text>
 
                   {/* heading 2 */}
-                  <Box marginTop="5%">
+                  <Box marginTop="2%">
                     <Text
                       className="sub-heading"
                       fontSize={["1.9em"]}
-                      mb={["3%"]}
+                      mb={["1%"]}
                     >
                       Create a resume for every industry
                     </Text>
@@ -457,7 +437,7 @@ export default function ResumeBuild() {
                       className={"only-font-family"}
                       fontSize={"16px"}
                       textAlign="justify"
-                      mt={["5%", "3%", "3%"]}
+                      mt={["5%", "1%", "1%"]}
                     >
                       Whether youre a lawyer who works in the corporate sector
                       or an interior stylist in the creative industry,
@@ -470,7 +450,7 @@ export default function ResumeBuild() {
                       className={"only-font-family"}
                       fontSize={"16px"}
                       textAlign="justify"
-                      mt={["5%", "3%", "3%"]}
+                      mt={["5%", "1%", "1%"]}
                     >
                       For creative types, we have colorful templates with
                       artistic, illustrative flourishes. Or, if youre after
@@ -481,11 +461,11 @@ export default function ResumeBuild() {
                   </Box>
 
                   {/* heading 3 */}
-                  <Box marginTop="5%">
+                  <Box marginTop="2%">
                     <Text
                       className="sub-heading"
                       fontSize={["1.9em"]}
-                      mb={["3%"]}
+                      mb={["1%"]}
                     >
                       Present your skills in a unique way
                     </Text>
@@ -493,7 +473,7 @@ export default function ResumeBuild() {
                       className={"only-font-family"}
                       fontSize={"16px"}
                       textAlign="justify"
-                      mt={["5%", "3%", "3%"]}
+                      mt={["5%", "1%", "1%"]}
                     >
                       On average, recruiters take six seconds to look at a
                       resume. So, if youre looking for a distinctive way to
@@ -504,7 +484,7 @@ export default function ResumeBuild() {
                     <Text
                       className={"only-font-family"}
                       fontSize={"16px"}
-                      mt={["5%", "3%", "3%"]}
+                      mt={["5%", "1%", "1%"]}
                     >
                       From infographic timelines to one-page pitch decks, and
                       even pie charts, with a few simple clicks you are able to
@@ -513,18 +493,18 @@ export default function ResumeBuild() {
                   </Box>
 
                   {/* heading 4 */}
-                  <Box marginTop="5%">
+                  <Box marginTop="2%">
                     <Text
                       className="sub-heading"
                       fontSize={["1.9em"]}
-                      mb={["3%"]}
+                      mb={["1%"]}
                     >
                       Save and edit as many versions as you like
                     </Text>
                     <Text
                       className={"only-font-family"}
                       fontSize={"16px"}
-                      mt={["5%", "3%", "3%"]}
+                      mt={["5%", "1%", "1%"]}
                     >
                       One of the most time-consuming elements of applying for
                       new jobs is customizing your cover letter and resume for
@@ -534,13 +514,13 @@ export default function ResumeBuild() {
                     <Text
                       className={"only-font-family"}
                       fontSize={"16px"}
-                      mt={["5%", "3%", "3%"]}
+                      mt={["5%", "1%", "1%"]}
                     >
                       With BisResumes free resume builder, all your cover letter
                       and resume designs are saved automatically within the
                       editor.
                     </Text>
-                    <Text fontSize="20px" mt={["5%", "3%", "3%"]}>
+                    <Text fontSize="20px" mt={["5%", "1%", "1%"]}>
                       Create multiple versions of your resume, and make small
                       edits where needed.
                     </Text>
