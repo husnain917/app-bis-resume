@@ -39,8 +39,9 @@ import {
   FashionDesigner,
   NovoResumeTemplate,
   FunctionalFashionTemp,
+  novoHybirdTemp,
+  AhsanTemplate1,
 } from "../../templates";
-
 export const CUSTOM_TEMP_DATA = [
   {
     id: "dhqAtIa3jaWjxddw",
@@ -53,11 +54,39 @@ export const CUSTOM_TEMP_DATA = [
     component: NovoResumeTemplate,
     sections: {
       work: true,
-
+      education: false,
+      languages: false,
       skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
     },
     category: {
       categoryID: "1",
+      totalCategory: "6",
+      categoryName: "Executive",
+    },
+  },
+  {
+    id: "l8exLF7L53qddC2E",
+    href: "/templates/l8exLF7L53qddC2E",
+    src: "/ahsantemplate1.png",
+    alt: "Template Not Found",
+    height: "200px",
+    width: "250px",
+    heading: "Executive",
+    component: AhsanTemplate1,
+    sections: {
+      work: true,
+
+      skills: true,
+      education: true,
+      organization: true,
+    },
+    category: {
+      categoryID: "2",
       totalCategory: "6",
       categoryName: "Executive",
     },
@@ -85,7 +114,32 @@ export const CUSTOM_TEMP_DATA = [
       categoryName: "Skill-Based",
     },
     colorLength: 3,
-
+  },
+  {
+    id: "FHkisdjckzd23df9",
+    href: "/templates/FHkisdjckzd23df9",
+    src: "/hybrid-resume-template.png",
+    alt: "Template Not Found",
+    height: "200px",
+    width: "250px",
+    heading: "Executive",
+    component: novoHybirdTemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: true,
+      references: false,
+      organization: true,
+      interest: true,
+      certificate: true,
+    },
+    category: {
+      categoryID: "3",
+      totalCategory: "6",
+      categoryName: "Executive",
+    },
   },
   {
     id: "zyCeSJJ2A8fEGNRx",

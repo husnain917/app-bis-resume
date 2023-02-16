@@ -18,8 +18,8 @@ function Templates() {
   const ismodalOpen = async () => {
     dispatch(modalOpen());
   };
-  const ProfessionalTemp = CUSTOM_TEMP_DATA.slice(0, 16);
-  const Modern = CUSTOM_TEMP_DATA.slice(16, 38);
+  const ProfessionalTemp = CUSTOM_TEMP_DATA.slice(0, 20);
+  const Modern = CUSTOM_TEMP_DATA.slice(20, 40);
 
   return (
     <Box>

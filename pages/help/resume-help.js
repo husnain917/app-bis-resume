@@ -70,7 +70,8 @@ export default function HelpCenter() {
               flexDirection={"column"}
               alignItems={"center"}
               justifyContent={"center"}
-              ml={"-15px"}
+              ml={["0px", "0px", "-15px", "-15px", "-15px"]}
+              mt={["10px", "10px", "0px", "0px"]}
             >
               {helpLink.map((item) => {
                 return (

@@ -14,6 +14,7 @@ import BuildResume from "../src/components/BuildResume";
 import SideBarSection from "../src/components/aboutUs/SideBarSection/SideBarSection";
 import ChatButton from "../src/components/resumeExampleData/chatButton/chatButton";
 import { ToastContainer } from "react-toastify";
+import { GenerateCustomID } from "../src/components/customTempData/GenerateCustomID";
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -22,7 +23,7 @@ export default function Home() {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
 
-    if (winScroll < heightToHidden ) {
+    if (winScroll < heightToHidden) {
       setIsVisible(false);
     } else if (winScroll > heightToHidden) {
       setIsVisible(true);
@@ -30,6 +31,7 @@ export default function Home() {
       setIsVisible(false);
     }
   };
+  GenerateCustomID();
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
   }, []);

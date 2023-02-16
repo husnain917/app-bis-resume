@@ -74,12 +74,16 @@ const Education = (props) => {
     datewidthmax,
     datewidthmin,
     maxChr,companFontColor,
+    bgColor,
   } = props;
 
   return (
-    <div
+    <Box
       className={`${parentContainerStyle ? parentContainerStyle : ""}`}
-      style={{ margin: margin ? margin : "" }}
+      style={{
+        margin: margin ? margin : "",
+        backgroundColor: bgColor ? bgColor : "",
+      }}
     >
       <Dnd
         data={data}
@@ -90,7 +94,10 @@ const Education = (props) => {
         renderItem={(item, index) => (
           <div
             className={`${childContainerStyle ? childContainerStyle : ""}`}
-            style={{ display: "flex" }}
+            style={{
+              display: "flex",
+              backgroundColor: props.bgColor ? props.bgColor : "",
+            }}
           >
             {iconShow && React.createElement(icon)}
             <VStack justifyContent={"flex-start"} alignItems="flex-start">
@@ -257,7 +264,7 @@ const Education = (props) => {
           </div>
         )}
       />
-    </div>
+    </Box>
   );
 };
 const mapStateToProps = (store) => ({
