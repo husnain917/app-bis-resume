@@ -38,3 +38,5 @@ export { default as SkillBaseTemp } from './SkillBaseTemp';
 export { default as FashionDesigner } from './FashionDesigner';
 export { default as NovoResumeTemplate } from './ novoResumeTemplate';
 export { default as FunctionalFashionTemp } from './FunctionalFashionTemp';
+export { default as AhsanTemplate1 } from "./AhsanTemplate1";
+export { default as novoHybirdTemp } from "./novoHybirdTemp";
