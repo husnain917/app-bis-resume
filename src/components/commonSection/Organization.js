@@ -28,7 +28,7 @@ const Organization = (props) => {
     dateStyle,
     roleStyle,
     datewidthmax,
-    maxwidth,
+    maxwidth,roleColor,dateColor,nameColor
   } = props;
   const data = resumeData?.organization?.items?.length
     ? [...resumeData?.organization?.items]
@@ -68,6 +68,7 @@ const Organization = (props) => {
                   customClass={`${organizationStyle ? organizationStyle : ""}`}
                   path={`${path}.${index}.name`}
                   maxWidth={maxwidth}
+                  color={nameColor}
                 />
               </Box>
             )}
@@ -81,6 +82,7 @@ const Organization = (props) => {
                   customClass={`${dateStyle ? dateStyle : ""}`}
                   path={`${path}.${index}.startDate`}
                   maxWidth={datewidthmax}
+                  color={dateColor}
                 />
                 <div className={`${dateStyle ? dateStyle : ""}`}>-</div>
                 <Text
@@ -91,6 +93,7 @@ const Organization = (props) => {
                   customClass={`${dateStyle ? dateStyle : ""}`}
                   path={`${path}.${index}.endDate`}
                   maxWidth={datewidthmax}
+                  color={dateColor}
                 />
               </HStack>
             )}
@@ -102,6 +105,7 @@ const Organization = (props) => {
                   customClass={`${roleStyle ? roleStyle : ""}`}
                   path={`${path}.${index}.role`}
                   maxWidth={props.maxwidth}
+                  color={roleColor}
                 />
               </Box>
             )}

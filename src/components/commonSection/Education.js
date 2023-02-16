@@ -73,7 +73,7 @@ const Education = (props) => {
     minWidth,
     datewidthmax,
     datewidthmin,
-    maxChr,
+    maxChr,companFontColor,
   } = props;
 
   return (
@@ -132,7 +132,7 @@ const Education = (props) => {
                       customClass={`${
                         institutionStyle ? institutionStyle : ""
                       }`}
-                      color={textColor}
+                      color={companFontColor?companFontColor:textColor}
                       fontSize={fontSize}
                       fontWeight={fontWeight}
                       textAlign={textAlign}
