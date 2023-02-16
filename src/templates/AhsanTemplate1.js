@@ -55,8 +55,10 @@ const AhsanTemplate1 = () => {
       // minHeight={1220}
     >
       <Box
-        minW={830}
-        maxW={830}
+        minW="837px"
+        minHeight={1150}
+        maxW="850px"
+        mb={"0px"}
         // pt={6}
         pb={2}
         bg={backgroundColor ? backgroundColor : "white"}
