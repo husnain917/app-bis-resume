@@ -45,6 +45,7 @@ const Contact = (props) => {
     minWidth,
     maxChr,
     textColor,
+    cMaxWidth,
   } = props;
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const { font } = useSelector((state) => state.fontReducer.font);
@@ -78,6 +79,7 @@ const Contact = (props) => {
       justifyContent={justifyContent ? justifyContent : "normal"}
       alignItems={alignItem ? alignItem : "normal"}
       className={`${parentStyle ? parentStyle : ""}`}
+      cMaxWidth={cMaxWidth ? cMaxWidth : ""}
     >
       {phone && (
         <>

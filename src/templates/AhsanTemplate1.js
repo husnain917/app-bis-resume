@@ -122,7 +122,7 @@ const AhsanTemplate1 = () => {
         >
           {/* Contact Section  */}
           <Contact
-            // parentStyle={Classes.ContactparentStyle}
+            parentStyle={Classes.ContactparentStyle}
             phone={true}
             email={true}
             location={true}
@@ -131,15 +131,41 @@ const AhsanTemplate1 = () => {
             linkedinURL={true}
             iconColor={color ? color : "#11ad64"}
             iconSize={"20px"}
-            minWidth={"115px"}
-            maxWidth={"115px"}
+            maxWidth={"220px"}
             cAlignItems={"flex-start"}
+            cMaxWidth={"800px"}
             // caxWidth={"full"}
-            // style={Classes.contactprofile}
-            parentDirection={"row"}
+            style={Classes.contactprofile}
+            parentDirection={"grid"}
             textColor={thirdColor ? thirdColor : ""}
           />
         </Box>
+        {/* <Box
+          w={"full"}
+          px={7}
+          borderTopColor={"black"}
+          borderTopWidth={2}
+          borderBottomColor={"black"}
+          borderBottomWidth={2}
+        >
+          <Contact
+            parentStyle={Classes.ContactparentStyle}
+            bgColor={backgroundColor ? backgroundColor : "#353A44"}
+            email={true}
+            phone={true}
+            github={true}
+            margin="0px 0px 0px 20px"
+            location={true}
+            circleIcon={true}
+            website={true}
+            linkedinURL={true}
+            
+            iconSize={"16px"}
+            iconColor={color ? color : "#11ad64"}
+            style={Classes.contactprofile}
+            textColor={thirdColor ? thirdColor : ""}
+          />
+        </Box>  */}
         <Box>
           {resumeData?.skills?.visible && (
             <div className={Classes.sideMenu}>

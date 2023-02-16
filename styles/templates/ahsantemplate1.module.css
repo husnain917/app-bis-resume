@@ -91,8 +91,11 @@
     font-weight: 500;
   }
   .ContactparentStyle {
-    display: flex !important;
-    grid-template-columns: auto auto;
+    display: grid !important;
+    grid-template-columns: auto auto auto;
+    border-radius: 10px;
+    padding: 10px 0px;
+    -moz-column-width:100px;
     /* padding-inline: 20px; */
   }
   .skillText {
