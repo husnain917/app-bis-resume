@@ -51,6 +51,8 @@ const AhsanTemplate1 = () => {
       flexDir={"column"}
       alignItems={{ sm: "none", lg: "center" }}
       bg={"#fff"}
+      mb={"0px"}
+      // minHeight={1220}
     >
       <Box
         minW={830}
@@ -127,7 +129,7 @@ const AhsanTemplate1 = () => {
             circleIcon={true}
             website={true}
             linkedinURL={true}
-            iconColor="#11ad64"
+            iconColor={color ? color : "#11ad64"}
             iconSize={"20px"}
             minWidth={"115px"}
             maxWidth={"115px"}
@@ -162,11 +164,14 @@ const AhsanTemplate1 = () => {
                   minW={"full"}
                   maxW="full"
                   margin={"10px 0px"}
+                  paddingHorizantal={1}
                   onSideSectionShow={() => setShow({ ...show, skills: true })}
                 />
                 {/* Skill Row Components */}
                 <RowSkill
                   skillStyle={Classes.skillText}
+                  bg={backgroundColor ? backgroundColor : ""}
+                  textColor={thirdColor ? thirdColor : ""}
                   childContainerStyle={Classes.skillContainer}
                   skillPlaceholder={"Bussiness Process"}
                 />
@@ -248,7 +253,7 @@ const AhsanTemplate1 = () => {
                       addPoint={addPoint}
                       deletePoint={deletePoint}
                       parentIndex={index}
-                      maxWidth={"600px"}
+                      maxWidth={"700px"}
                       BulletContainerStyle={Classes.BulletContainerStyle}
                       BulletIcon={() => (
                         <Box
