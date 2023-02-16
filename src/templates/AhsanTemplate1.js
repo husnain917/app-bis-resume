@@ -197,7 +197,7 @@ const AhsanTemplate1 = () => {
                 {/* Skill Row Components */}
                 <RowSkill
                   skillStyle={Classes.skillText}
-                  bg={backgroundColor ? backgroundColor : ""}
+                  bg={color ? color : "#11ad64"}
                   textColor={thirdColor ? thirdColor : ""}
                   childContainerStyle={Classes.skillContainer}
                   skillPlaceholder={"Bussiness Process"}
