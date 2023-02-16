@@ -8,3 +8,4 @@ export const CERTIFICATE = 'certificates';
 export const ORGANIZATION = 'organization';
 export const PROJECT = 'project';
 export const INTEREST = 'interest';
+export const ACHIEVEMENT = 'achievements';

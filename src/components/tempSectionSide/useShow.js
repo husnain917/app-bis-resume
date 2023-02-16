@@ -10,6 +10,7 @@ const useShow = () => {
     certificates: false,
     interest: false,
     reference: false,
+    achievements: false
   });
   return [show, setShow];
 };
