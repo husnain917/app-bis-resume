@@ -101,7 +101,7 @@ const AhsanTemplate1 = () => {
                   // minW={"100%"}
                   aboutStyle={Classes.profile}
                   maxWidth={"700px"}
-                  maxW={"650px"}
+                  maxW={"600px"}
                   fontColor={thirdColor ? thirdColor : ""}
                   minHeight={"20px"}
                 />
