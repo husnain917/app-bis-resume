@@ -76,6 +76,7 @@ const AhsanTemplate1 = () => {
               minWidth={"60px"}
               marginTop={"15px"}
               marginBottom={"15px"}
+              bg={backgroundColor ? backgroundColor : ""}
             />
             <Box pt={"15px"}>
               <Name

@@ -17,6 +17,7 @@ const ImageSelector = ({
   maxWidth,
   minHeight,
   minWidth,
+  bg,
 }) => {
   useEffect(() => {}, [height, width]);
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
@@ -82,7 +83,6 @@ const ImageSelector = ({
                     ? resumeData?.profile?.profileImage
                     : "/uploadpic1.png"
                 }
-                background={"white"}
                 ref={uploadedImage}
                 alt="will load soon"
                 borderRadius={borderRadius || "full"}
@@ -91,6 +91,7 @@ const ImageSelector = ({
                 minWidth={minWidth || "15.7em"}
                 maxWidth={maxWidth || "15.7em"}
                 transition={"0.5s borderColor"}
+                backgroundColor={bg ? bg : "white"}
                 style={{
                   // objectFit: "cover",
                   objectPosition: "center",
