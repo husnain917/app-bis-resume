@@ -73,6 +73,7 @@ const AhsanTemplate1 = () => {
               maxWidth={"150px"}
               minWidth={"60px"}
               marginTop={"15px"}
+              marginBottom={"15px"}
             />
             <Box pt={"15px"}>
               <Name
