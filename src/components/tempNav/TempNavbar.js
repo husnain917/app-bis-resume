@@ -57,6 +57,7 @@ export default function TempNavbar({
   downloadPDF,
   downloadWord,
   leftMenu,
+  achievements,
   setleftMenu,
   saveDataHandler,
   colorLength,
@@ -158,6 +159,7 @@ export default function TempNavbar({
             organization={organization}
             interest={interest}
             certificate={certificate}
+            achievements={achievements}
           />
           <Popover>
             <PopoverTrigger>

@@ -66,6 +66,7 @@ const TemplateDetail = () => {
         work={selected?.sections?.work}
         education={selected?.sections?.education}
         languages={selected?.sections?.languages}
+        achievements={selected?.sections.achievements}
         skills={selected?.sections?.skills}
         projects={selected?.sections?.projects}
         references={selected?.sections?.references}
@@ -103,6 +104,8 @@ const TemplateDetail = () => {
           organization={selected?.sections?.organization}
           interest={selected?.sections?.interest}
           certificate={selected?.sections?.certificate}
+          achievements={selected?.sections?.achievements}
+
           downloadPDF={downloadPDFHandler}
           colorLength={selected?.colorLength}
         />

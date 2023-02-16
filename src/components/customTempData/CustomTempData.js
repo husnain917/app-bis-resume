@@ -61,6 +61,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements:true
     },
     category: {
       categoryID: "1",

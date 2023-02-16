@@ -24,6 +24,7 @@ const ChangeTempBtn = ({
   organization,
   interest,
   certificate,
+  achievements,
   downloadPDF,
   colorLength,
 }) => {
@@ -123,6 +124,7 @@ const ChangeTempBtn = ({
           organization={organization}
           interest={interest}
           certificate={certificate}
+          achievements={achievements}
         />
         <DownloadModal downloadPDF={downloadPDF} />
       </Box>
