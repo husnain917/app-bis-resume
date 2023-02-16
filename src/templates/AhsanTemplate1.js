@@ -94,13 +94,15 @@ const AhsanTemplate1 = () => {
                 maxWidth={"500px"}
                 fontColor={thirdColor ? thirdColor : ""}
               />
-              <HStack minH={"80px"} alignItems="flex-start">
+              <HStack minH={"60px"} alignItems="flex-start">
                 <About
                   // maxW={"100%"}
                   // minW={"100%"}
                   aboutStyle={Classes.profile}
                   maxWidth={"800px"}
+                  maxW={"650px"}
                   fontColor={thirdColor ? thirdColor : ""}
+                  minHeight={"20px"}
                 />
               </HStack>
             </Box>
