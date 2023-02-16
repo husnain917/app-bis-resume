@@ -91,7 +91,7 @@ const TemplateDetail = () => {
         }}
         sideTempSelect={sideTempSelect}
         setsideTempSelect={setsideTempSelect}
-        colorLength={selected?.colorLength || 2}
+        colorLength={selected?.colorLength}
       >
         <ChangeTempBtn
           onPress={() => setsideTempSelect(!sideTempSelect)}
@@ -107,6 +107,7 @@ const TemplateDetail = () => {
           achievements={selected?.sections?.achievements}
 
           downloadPDF={downloadPDFHandler}
+          colorLength={selected?.colorLength}
         />
         <Flex
           flexDir={"row"}

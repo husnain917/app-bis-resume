@@ -59,7 +59,8 @@ export default function TempNavbar({
   leftMenu,
   achievements,
   setleftMenu,
-  saveDataHandler,colorLength
+  saveDataHandler,
+  colorLength,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -146,7 +147,7 @@ export default function TempNavbar({
                 Theme
               </Button>
             </PopoverTrigger>
-            <ThemeModal colorLength={colorLength}/>
+            <ThemeModal colorLength={colorLength} />
           </Popover>
           <LayoutModal
             work={work}

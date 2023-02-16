@@ -39,7 +39,7 @@ import { FaHorseHead } from "react-icons/fa";
 
 export default function Novo_Hybird_Temp() {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  const { backgroundColor, color, thirdColor } = useSelector(
+  const { backgroundColor, color, thirdColor, fourthColor } = useSelector(
     (store) => store.themeReducer.theme
   );
   // console.log('thirdColor', thirdColor);
@@ -59,7 +59,7 @@ export default function Novo_Hybird_Temp() {
           maxW={830}
           pt={8}
           pb={2}
-          bg={backgroundColor ? backgroundColor : "white"}
+          bg={"#fff"}
           borderRadius={6}
           borderWidth="1px"
           borderColor={"#00000023"}
@@ -68,6 +68,7 @@ export default function Novo_Hybird_Temp() {
           <Box
             display={'flex'}
             width={'100%'}
+            transition="0.8s background"
           >
             <Box
               mb={'-30px'}
@@ -79,7 +80,7 @@ export default function Novo_Hybird_Temp() {
                 minHeight={180}
                 maxHeight={180}
                 marginLeft="40px"
-                borderColor={backgroundColor ? backgroundColor : ""}
+                borderColor={thirdColor ? thirdColor : "#fff"}
               />
             </Box>
             <Box
@@ -94,12 +95,12 @@ export default function Novo_Hybird_Temp() {
                 maxWidth={"270px"}
                 minWidth={"270px"}
                 maxChr={38}
-                fontColor={color ? color : "#432543"}
+                fontColor={"#432543"}
               />
               {/* Profession Section  */}
               <Profession
                 professionStyle={styles.ProfessionHybrid}
-                fontColor={color ? color : '#eaad42'}
+                fontColor={thirdColor ? thirdColor : '#eaad42'}
                 maxWidth={"540px"}
               />
             </Box>
@@ -108,11 +109,12 @@ export default function Novo_Hybird_Temp() {
           <Box
             display={'flex'}
             justifyContent={'center'}
-            bg={color ? color : "#432543"}
+            bg={backgroundColor ? backgroundColor : "#432543"}
             margin={'0px 10px 0px 10px'}
             mt={'-10px'}
             borderRadius={'8px 8px 0px 0px'}
             padding={'5px 0px 15px 0px'}
+            transition="0.8s background"
           >
             <Box width={'30%'}></Box>
             <Box
@@ -122,16 +124,17 @@ export default function Novo_Hybird_Temp() {
                 maxW={"96%"}
                 minW={"96%"}
                 aboutStyle={styles.profile}
-                fontColor={thirdColor ? thirdColor : '#fff'}
+                fontColor={color ? color : '#fff'}
               />
             </Box>
           </Box>
           {/* third section */}
           <Box
-            bg={color ? color : "#eaad42"}
+            bg={thirdColor ? thirdColor : "#eaad42"}
             margin={'0px 10px 10px 10px'}
             borderRadius={'0px 0px 8px 8px'}
             padding={'5px 20px 15px 40px'}
+            transition="0.8s background"
           >
             {/* Contact Section  */}
             <Contact
@@ -140,10 +143,10 @@ export default function Novo_Hybird_Temp() {
               location={true}
               circleIcon={true}
               linkedinURL={true}
-              iconColor={color ? color : "#fff"}
+              iconColor={color ? color : '#fff'}
               iconSize={"20px"}
               style={styles.contactprofile}
-              textColor={thirdColor ? thirdColor : '#fff'}
+              textColor={color ? color : '#fff'}
               maxWidth={'315px'}
               minWidth={'315px'}
               parentStyle={styles.parentStyleContact}
@@ -154,6 +157,7 @@ export default function Novo_Hybird_Temp() {
           <Box
             width={'100%'}
             display={'flex'}
+            transition="0.8s background"
           >
             <Box
               width={'55%'}
@@ -181,7 +185,7 @@ export default function Novo_Hybird_Temp() {
                       <Heading
                         title="EDUCATION"
                         circleSize="38px"
-                        circleBg="#432543"
+                        circleBg={backgroundColor ? backgroundColor : "#432543"}
                         circleIconHeading={true}
                         icon={(props) => (
                           <MdCastForEducation
@@ -192,7 +196,7 @@ export default function Novo_Hybird_Temp() {
                         )}
                         fontSize="23px"
                         fontWeight={"bold"}
-                        color="#432543"
+                        color={backgroundColor ? backgroundColor : "#432543"}
                         margin={"0px 0px 10px 0px"}
                         onSideSectionShow={() =>
                           setShow({ ...show, education: true })
@@ -212,7 +216,7 @@ export default function Novo_Hybird_Temp() {
                         maxWidth={"400px"}
                         maxChr={20}
                         datewidthmax={"210px"}
-                        textColor={color ? color : "#432543"}
+                        textColor={"#000"}
                       />
                     </div>
                   </div>
@@ -237,7 +241,7 @@ export default function Novo_Hybird_Temp() {
                       <Heading
                         title="WORK EXPERIENCE"
                         circleSize="38px"
-                        circleBg="#432543"
+                        circleBg={backgroundColor ? backgroundColor : "#432543"}
                         circleIconHeading={true}
                         icon={(props) => (
                           <BsFillLayersFill
@@ -248,7 +252,7 @@ export default function Novo_Hybird_Temp() {
                         )}
                         fontSize="23px"
                         fontWeight={"bold"}
-                        color="#432543"
+                        color={backgroundColor ? backgroundColor : "#432543"}
                         minW={"full"}
                         maxW="full"
                         margin={"10px 0px"}
@@ -270,7 +274,7 @@ export default function Novo_Hybird_Temp() {
                         maxWidth={"400px"}
                         maxChr={20}
                         datewidthmax={"400px"}
-                        textColor={color ? color : '#432543'}
+                        textColor={'#000'}
                         ponintsDescription={true}
                         PointsComponent={({
                           items,
@@ -286,12 +290,12 @@ export default function Novo_Hybird_Temp() {
                             deletePoint={deletePoint}
                             parentIndex={index}
                             maxWidth={'370px'}
-                            textColor={thirdColor}
+                            textColor={backgroundColor ? backgroundColor : '#000'}
                             BulletContainerStyle={styles.BulletContainerStyle}
                             BulletIcon={() => (
                               <Box
                                 w={"100%"}
-                                bg={color ? color : "#eaad42"}
+                                bg={thirdColor ? thirdColor : "#eaad42"}
                                 h={"6px"}
                                 borderRadius={'100% 100%'}
                               />
@@ -310,6 +314,7 @@ export default function Novo_Hybird_Temp() {
               borderRadius={6}
               pb={2}
               pl={"5px"}
+              transition="0.8s background"
             >
               <Box>
                 {resumeData?.skills?.visible && (
@@ -329,14 +334,14 @@ export default function Novo_Hybird_Temp() {
                       <Heading
                         title="SKILLS"
                         circleSize="38px"
-                        circleBg="#432543"
+                        circleBg={backgroundColor ? backgroundColor : "#432543"}
                         circleIconHeading={true}
                         icon={(props) => (
                           <GiSkills {...props} size={18} color={"white"} />
                         )}
                         fontSize="23px"
                         fontWeight={"bold"}
-                        color="#432543"
+                        color={backgroundColor ? backgroundColor : "#432543"}
                         minW={250}
                         maxW={250}
                         margin={"10px 0px"}
@@ -349,8 +354,8 @@ export default function Novo_Hybird_Temp() {
                         skillStyle={styles.skillText}
                         maxWidth={"250px"}
                         maxChr={20}
-                        bg={color ? color : "#a192a1"}
-                        textColor={backgroundColor ? backgroundColor : "#fff"}
+                        bg={fourthColor ? fourthColor : "#a192a1"}
+                        textColor={color ? color : "#fff"}
                       />
                     </div>
                   </div>
@@ -375,14 +380,14 @@ export default function Novo_Hybird_Temp() {
                       <Heading
                         title="PERSONAL PROJECTS"
                         circleSize="38px"
-                        circleBg="#432543"
+                        circleBg={backgroundColor ? backgroundColor : "#432543"}
                         circleIconHeading={true}
                         icon={(props) => (
                           <GoProject {...props} size={18} color={"white"} />
                         )}
                         fontSize="23px"
                         fontWeight={"bold"}
-                        color="#432543"
+                        color={backgroundColor ? backgroundColor : "#432543"}
                         minW={250}
                         maxW={250}
                         margin={"20px 0px 15px 0px"}
@@ -426,14 +431,14 @@ export default function Novo_Hybird_Temp() {
                       <Heading
                         title="ORGANIZATION"
                         circleSize="38px"
-                        circleBg="#432543"
+                        circleBg={backgroundColor ? backgroundColor : "#432543"}
                         circleIconHeading={true}
                         icon={(props) => (
                           <GiOrganigram {...props} size={18} color={"white"} />
                         )}
                         fontSize="23px"
                         fontWeight={"bold"}
-                        color="#432543"
+                        color={backgroundColor ? backgroundColor : "#432543"}
                         minW={250}
                         maxW={250}
                         margin={"15px 0px 8px 0px"}
@@ -476,14 +481,14 @@ export default function Novo_Hybird_Temp() {
                       <Heading
                         title="CERTIFICATES"
                         circleSize="38px"
-                        circleBg="#432543"
+                        circleBg={backgroundColor ? backgroundColor : "#432543"}
                         circleIconHeading={true}
                         icon={(props) => (
                           <TbCertificate {...props} size={18} color={"white"} />
                         )}
                         fontSize="23px"
                         fontWeight={"bold"}
-                        color="#432543"
+                        color={backgroundColor ? backgroundColor : "#432543"}
                         minW={250}
                         maxW={250}
                         margin={"15px 0px 8px 0px"}
@@ -525,7 +530,7 @@ export default function Novo_Hybird_Temp() {
                       <Heading
                         title="LANGUAGES"
                         circleSize="38px"
-                        circleBg="#432543"
+                        circleBg={backgroundColor ? backgroundColor : "#432543"}
                         circleIconHeading={true}
                         icon={(props) => (
                           <IoLanguageOutline
@@ -536,7 +541,7 @@ export default function Novo_Hybird_Temp() {
                         )}
                         fontSize="23px"
                         fontWeight={"bold"}
-                        color="#432543"
+                        color={backgroundColor ? backgroundColor : "#432543"}
                         minW={250}
                         maxW={250}
                         margin={"15px 0px 8px 0px"}
@@ -573,14 +578,14 @@ export default function Novo_Hybird_Temp() {
                         <Heading
                           title="INTEREST"
                           circleSize="38px"
-                          circleBg="#432543"
+                          circleBg={backgroundColor ? backgroundColor : "#432543"}
                           circleIconHeading={true}
                           icon={(props) => (
                             <FaHorseHead {...props} size={18} color={"white"} />
                           )}
                           fontSize="23px"
                           fontWeight={"bold"}
-                          color="#432543"
+                          color={backgroundColor ? backgroundColor : "#432543"}
                           minW={250}
                           maxW={250}
                           margin={"15px 0px 8px 0px"}

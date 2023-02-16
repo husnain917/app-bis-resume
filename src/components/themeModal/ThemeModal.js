@@ -18,7 +18,7 @@ import { useSwiper } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 
-const ThemeModal = ({ colorLength = 2 }) => {
+const ThemeModal = ({ colorLength }) => {
   const swiperRef = useRef();
   const dispatch = useDispatch();
   const themeHandler = (theme) => {
@@ -27,6 +27,7 @@ const ThemeModal = ({ colorLength = 2 }) => {
         backgroundColor: theme.backgroundColor,
         color: theme.color,
         thirdColor: theme.thirdColor,
+        fourthColor: theme.forthColor,
       })
     );
   };
@@ -49,6 +50,7 @@ const ThemeModal = ({ colorLength = 2 }) => {
                   backgroundColor: "",
                   color: "",
                   thirdColor: "",
+                  fourthColor: "",
                 })
               )
             }
