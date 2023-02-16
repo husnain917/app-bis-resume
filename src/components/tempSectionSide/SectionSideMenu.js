@@ -28,6 +28,7 @@ import {
   REFERENCE,
   SKILL,
   WORK,
+  ACHIEVEMENT
 } from './SectionSideConstant';
 const SectionSideMenu = ({ onDelete, onHide, bg, iconColor }) => {
   const dispatch = useDispatch();
@@ -63,6 +64,9 @@ const SectionSideMenu = ({ onDelete, onHide, bg, iconColor }) => {
       case INTEREST:
         dispatch(visibleHobbiesSection(false));
         break;
+        case ACHIEVEMENT:
+          dispatch(visibleAchievementSection(false));
+          break;
       default:
         break;
     }
