@@ -128,8 +128,8 @@ const AhsanTemplate1 = () => {
             linkedinURL={true}
             iconColor="#11ad64"
             iconSize={"20px"}
-            minWidth={"60px"}
-            maxWidth={"140px"}
+            minWidth={"120px"}
+            maxWidth={"120px"}
             cAlignItems={"flex-start"}
             // caxWidth={"full"}
             // style={Classes.contactprofile}
