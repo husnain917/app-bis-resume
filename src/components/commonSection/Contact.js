@@ -43,7 +43,8 @@ const Contact = (props) => {
     parentStyle,
     maxWidth,
     minWidth,
-    maxChr,textColor
+    maxChr,
+    textColor,
   } = props;
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const { font } = useSelector((state) => state.fontReducer.font);
@@ -167,11 +168,7 @@ const Contact = (props) => {
               )}
             />
             <Text
-              placeholder={
-                resumeData?.profile?.website
-                  ? resumeData?.profile?.website
-                  : "Website"
-              }
+              placeholder={websitePlaceholder ? websitePlaceholder : "Website"}
               customClass={`${style}`}
               value={resumeData?.profile?.website}
               path={"profile.website"}
@@ -203,9 +200,7 @@ const Contact = (props) => {
             />
             <Text
               placeholder={
-                resumeData?.profile?.address?.city
-                  ? resumeData?.profile?.address?.city
-                  : "location"
+                locationPlaceholder ? locationPlaceholder : "location"
               }
               customClass={`${style}`}
               value={resumeData?.profile?.address?.city}
