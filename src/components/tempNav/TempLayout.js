@@ -14,9 +14,12 @@ export default function TempLayout({
   organization,
   interest,
   certificate,
-  downloadPDF,downloadWord,
+  downloadPDF,
+  downloadWord,
   sideTempSelect,
-  setsideTempSelect,saveDataHandler,colorLength
+  setsideTempSelect,
+  saveDataHandler,
+  colorLength
 }) {
   const feedBackGet = useSelector((state) => state?.feedBackReducer?.feedBack);
   const [leftMenu, setleftMenu] = useState(false);
@@ -57,6 +60,7 @@ export default function TempLayout({
           downloadPDF={downloadPDF}
           downloadWord={downloadWord}
           setleftMenu={setleftMenu}
+          colorLength={colorLength}
         />
       )}
 

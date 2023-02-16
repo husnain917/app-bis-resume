@@ -67,6 +67,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
+    colorLength: 4,
   },
   {
     id: "l8exLF7L53qddC2E",
@@ -89,7 +90,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
-    colorLength: 3,
+    colorLength: 4,
   },
   {
     id: "FHkisdjckzd23df9",
@@ -116,7 +117,8 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
-  }, 
+    colorLength: 4,
+  },
   {
     id: "zyCeSJJ2A8fEGNRx",
     href: "/templates/zyCeSJJ2A8fEGNRx",
@@ -142,6 +144,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Graphic Designer",
     },
+    colorLength: 4,
   },
   {
     id: "ny1FF7ED91mc6i2k",
@@ -168,6 +171,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Graphic Designer",
     },
+    colorLength: 4,
   },
   {
     id: "7UM1U7FJgAQ5sjWD",
@@ -194,6 +198,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Graphic Designer",
     },
+    colorLength: 4,
   },
   {
     id: "ovIeX2yz4B7V1y0G",
@@ -220,6 +225,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Graphic Designer",
     },
+    colorLength: 4,
   },
   {
     id: "9H2XODEcK2Aibm5d",
@@ -246,6 +252,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Graphic Designer",
     },
+    colorLength: 4,
   },
   {
     id: "b5BJwQR7sCmlADl5",
@@ -272,6 +279,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Graphic Designer",
     },
+    colorLength: 4,
   },
   {
     id: "UaMsr4yxtyAJ0d9T",
@@ -298,6 +306,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "3",
       categoryName: "Creative",
     },
+    colorLength: 4,
   },
   {
     id: "Z8T9Wg5LoA7Ihbsq",
@@ -324,6 +333,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "3",
       categoryName: "Creative",
     },
+    colorLength: 4,
   },
   {
     id: "pSJl09vc4C39lNL3",
@@ -350,6 +360,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "3",
       categoryName: "Creative",
     },
+    colorLength: 4,
   },
   {
     id: "MTmaNZdZrNEMy0v0",
@@ -376,6 +387,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "7",
       categoryName: "Fashion Designer",
     },
+    colorLength: 4,
   },
   {
     id: "QbnlV2ff7hB3mbdx",
@@ -402,6 +414,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "7",
       categoryName: "Fashion Designer",
     },
+    colorLength: 4,
   },
   {
     id: "PhhchnzxtXfKZXBz",
@@ -428,6 +441,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "7",
       categoryName: "Fashion Designer",
     },
+    colorLength: 4,
   },
   {
     id: "Mmq0HbjSLc364GmS",
@@ -454,6 +468,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "7",
       categoryName: "Fashion Designer",
     },
+    colorLength: 4,
   },
   {
     id: "d9Ow8i0HO4dP9FMG",
@@ -480,6 +495,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "7",
       categoryName: "Fashion Designer",
     },
+    colorLength: 4,
   },
   {
     id: "vn6uST13L2DZbKXe",
@@ -506,6 +522,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "7",
       categoryName: "Fashion Designer",
     },
+    colorLength: 4,
   },
   {
     id: "5RpawNwFi49M8BrR",
@@ -532,6 +549,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "7",
       categoryName: "Fashion Designer",
     },
+    colorLength: 4,
   },
   {
     id: "pC5lVexxlHtEY2v2",
@@ -558,6 +576,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "4",
       categoryName: "Digital Marketing",
     },
+    colorLength: 4,
   },
   {
     id: "UKkFhQx6Qe7JsEXT",
@@ -584,6 +603,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "4",
       categoryName: "Digital Marketing",
     },
+    colorLength: 4,
   },
   {
     id: "zApetir0shFU3R40",
@@ -610,6 +630,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "4",
       categoryName: "Digital Marketing",
     },
+    colorLength: 4,
   },
   {
     id: "6iz8Y7EFbpAos1dn",
@@ -636,6 +657,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "4",
       categoryName: "Digital Marketing",
     },
+    colorLength: 4,
   },
 
   {
@@ -663,6 +685,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
+    colorLength: 4,
   },
   {
     id: "q7I7S5FySY1L035S",
@@ -689,6 +712,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
+    colorLength: 4,
   },
   {
     id: "ZmNpNzLENZPooOwP",
@@ -715,6 +739,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
+    colorLength: 4,
   },
   {
     id: "zY7eR3FNn1HaM2Kd",
@@ -741,6 +766,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
+    colorLength: 4,
   },
   {
     id: "0S4gN5d6gsN4xFd2",
@@ -767,6 +793,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
+    colorLength: 4,
   },
   {
     id: "2HU7Uuw10GMgVWgJ",
@@ -793,6 +820,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "6",
       categoryName: "Executive",
     },
+    colorLength: 4,
   },
   {
     id: "a8e9GJtWwOAIbAVf",
@@ -819,6 +847,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "3",
       categoryName: "Basic",
     },
+    colorLength: 4,
   },
   {
     id: "4WEhJ5hAXOIcASUB",
@@ -845,6 +874,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "3",
       categoryName: "Basic",
     },
+    colorLength: 4,
   },
   {
     id: "8xDcvDwe76xjzVG3",
@@ -871,6 +901,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "3",
       categoryName: "Basic",
     },
+    colorLength: 4,
   },
   {
     id: "3JeA53zVHMSQsOay",
@@ -897,6 +928,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "4",
       categoryName: "Skill-Based",
     },
+    colorLength: 4,
   },
   {
     id: "6nJppDLrOJST3qF2",
@@ -923,6 +955,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "5",
       categoryName: "General",
     },
+    colorLength: 4,
   },
   {
     id: "aacKzXcwGUZADCut",
@@ -949,6 +982,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "5",
       categoryName: "General",
     },
+    colorLength: 4,
   },
   {
     id: "DkXlwWNOhGxOYVIN",
@@ -975,6 +1009,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "4",
       categoryName: "Skill-Based",
     },
+    colorLength: 4,
   },
   {
     id: "Dd7HVIibnPERnyhy",
@@ -1001,6 +1036,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "4",
       categoryName: "Skill-Based",
     },
+    colorLength: 4,
   },
   {
     id: "qUv6wvZZDD75QZ5c",
@@ -1027,6 +1063,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "5",
       categoryName: "General",
     },
+    colorLength: 4,
   },
   {
     id: "XziZdLJgLdEOFB3j",
@@ -1053,6 +1090,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "5",
       categoryName: "General",
     },
+    colorLength: 4,
   },
   {
     id: "sBpVCiYIojHRtGlh",
@@ -1079,6 +1117,7 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "4",
       categoryName: "Skill-Based",
     },
+    colorLength: 4,
   },
   {
     id: "yrXn4MHXPhkKy5Xf",
@@ -1105,5 +1144,6 @@ export const CUSTOM_TEMP_DATA = [
       totalCategory: "5",
       categoryName: "General",
     },
+    colorLength: 4,
   },
 ];

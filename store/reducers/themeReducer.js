@@ -1,7 +1,7 @@
 import { THEME_MODE } from '../actions/themeAction';
 
 const initialState = {
-  theme: { backgroundColor: '', color: '' },
+  theme: { backgroundColor: '', color: '', thirdColor: '', fourthColor: '' },
 };
 const themeReducer = (state = initialState, action) => {
   switch (action.type) {
