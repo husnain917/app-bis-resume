@@ -84,7 +84,7 @@ const AhsanTemplate1 = () => {
                 FNameStyle={Classes.Name}
                 SNameStyle={Classes.Name}
                 minWidth={"180px"}
-                maxWidth={"325px"}
+                maxWidth={"315px"}
                 maxChr={38}
                 fontColor={color ? color : ""}
               />
