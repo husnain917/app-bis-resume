@@ -40,8 +40,37 @@ import {
   NovoResumeTemplate,
   novoHybirdTemp,
   AhsanTemplate1,
+  Fashionsimple,
 } from "../../templates";
 export const CUSTOM_TEMP_DATA = [
+  {
+    id: "dhqAtIa3jaWjxdfal",
+    href: "/templates/dhqAtIa3jaWjxdfal",
+    src: "/NovoResumeTemplate.png",
+    alt: "Template Not Found",
+    height: "200px",
+    width: "250px",
+    heading: "Executive",
+    component: Fashionsimple,
+    sections: {
+      work: true,
+      education: false,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: false,
+      achievements:true
+    },
+    category: {
+      categoryID: "1",
+      totalCategory: "6",
+      categoryName: "Executive",
+    },
+    colorLength: 4,
+  },
   {
     id: "dhqAtIa3jaWjxddw",
     href: "/templates/dhqAtIa3jaWjxddw",
