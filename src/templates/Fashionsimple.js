@@ -276,7 +276,7 @@ const Fashionsimple = () => {
                                     title="EDUCATION"
                                     fontSize="23px"
                                     fontWeight={"bold"}
-                                    color={color ? color : color}
+                                    color={thirdColor ? thirdColor : themeHeadingColor}
                                     margin={"0px 0px 10px 0px"}
                                     onSideSectionShow={() =>
                                         setShow({ ...show, education: true })
@@ -330,7 +330,7 @@ const Fashionsimple = () => {
                                     title="ORGANIZATION"
                                     fontSize="23px"
                                     fontWeight={"bold"}
-                                    color={color}
+                                    color={thirdColor ? thirdColor : themeHeadingColor}
                                     margin={"15px 0px"}
                                     onSideSectionShow={() =>
                                         setShow({ ...show, organization: true })
