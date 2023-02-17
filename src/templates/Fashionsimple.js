@@ -91,6 +91,7 @@ const Fashionsimple = () => {
                                 <Profession
                                     professionStyle={Classes.ProfessionHybrid}
                                     fontColor={forthColor ? forthColor : themesubHeadingColor}
+                                    maxWidth={500}
                                 />
                             </Box>
                         </HStack>
@@ -121,7 +122,7 @@ const Fashionsimple = () => {
                         />
                     </Box>
                 </Box>
-                <Box>
+                <Box px={7} py={2}>
                     {resumeData?.skills?.visible && (
                         <div>
                             <div className={Classes.width}>
@@ -165,9 +166,9 @@ const Fashionsimple = () => {
                         </div>
                     )}
                 </Box>
-                <Box px={7} py={2}>
+                <Box  px={7} py={2}>
                     {resumeData?.work?.visible && (
-                        <div className={Classes.sideMenu}>
+                        <div >
                             <div className={Classes.sideMenuBox}>
                                 {/* Section Side Menu */}
                                 {show.work && (
