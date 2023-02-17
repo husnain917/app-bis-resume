@@ -208,7 +208,7 @@ const AhsanTemplate1 = () => {
             </div>
           )}
         </Box>
-        <Box px={7} py={2}>
+        <Box px={2} py={2}>
           {resumeData?.work?.visible && (
             <div className={Classes.sideMenu}>
               <div className={Classes.sideMenuBox}>
@@ -298,7 +298,7 @@ const AhsanTemplate1 = () => {
             </div>
           )}
         </Box>
-        <Box px={7} py={2}>
+        <Box px={2} py={2}>
           {resumeData?.education?.visible && (
             <div className={Classes.sideMenu}>
               <div className={Classes.sideMenuBox}>
@@ -361,7 +361,7 @@ const AhsanTemplate1 = () => {
             </div>
           )}
         </Box>
-        <Box px={7} py={2}>
+        <Box px={2} py={2}>
           {resumeData?.organization?.visible && (
             <div className={Classes.sideMenu}>
               <div className={Classes.sideMenuBox}>
