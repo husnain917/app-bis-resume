@@ -33,7 +33,7 @@ import { TbCertificate } from "react-icons/tb";
 import { IoLanguageOutline } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 
-export default function novoITtemp() {
+export default function Novo_IT_Temp() {
     let resumeData = useSelector((state) => state.editorReducer.resumeData);
     const { backgroundColor, color, thirdColor, fourthColor } = useSelector(
         (store) => store.themeReducer.theme
