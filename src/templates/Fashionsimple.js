@@ -252,6 +252,115 @@ const Fashionsimple = () => {
                         </div>
                     )}
                 </Box>
+                <Box px={7} py={2}>
+                    {/* Education Section  */}
+                    {resumeData?.education?.visible && (
+                        <div >
+                            <div
+                                className={Classes.sideMenuBox}
+                                style={{ marginTop: "0px" }}
+                            >
+                                {/* Section Side Menu */}
+                                {show.education && (
+                                    <SectionSideMenu
+                                        bg="#006772"
+                                        iconColor={"#fff"}
+                                        onHide={() => setShow({ ...show, education: false })}
+                                        onDelete={EDUCATION}
+                                    />
+                                )}
+                            </div>
+                            <div>
+                                {/* Heading For Education Section  */}
+                                <Heading
+                                    title="EDUCATION"
+                                    fontSize="23px"
+                                    fontWeight={"bold"}
+                                    color={color ? color : color}
+                                    margin={"0px 0px 10px 0px"}
+                                    onSideSectionShow={() =>
+                                        setShow({ ...show, education: true })
+                                    }
+                                    minW={"full"}
+                                    maxW="full"
+                                    borderBottom={`2px solid ${color ? color : themetextColor}`}
+                                    borderTop={`2px solid ${color ? color : themetextColor}`}
+                                    alignItems={"center"}
+                                    justifyContent={"center"}
+                                    paddingVertical={5}
+                                />
+                                {/* Education Components */}
+                                <Education
+                                    institution={true}
+                                    degree={true}
+                                    degree_placeholder="Study Program"
+                                    date={true}
+                                    institutionStyle={Classes.fashioninstitute}
+                                    degreeStyle={Classes.programText}
+                                    locationStyle={Classes.date}
+                                    datewidthmax={"180px"}
+                                    maxChr={20}
+                                    maxWidth={"420px"}
+                                    textColor={color ? color : themetextColor}
+                                    companFontColor={thirdColor ? thirdColor : "black"}
+                                    
+                                />
+                            </div>
+                        </div>
+                    )}
+                </Box>
+                <Box px={7} py={2}>
+                    {/* Organization Section */}
+                    {resumeData?.organization?.visible && (
+                        <div >
+                            <div className={Classes.sideMenuBox}>
+                                {/* Section Side Menu */}
+                                {show.organization && (
+                                    <SectionSideMenu
+                                        bg="#006772"
+                                        iconColor={"#fff"}
+                                        onHide={() => setShow({ ...show, organization: false })}
+                                        onDelete={ORGANIZATION}
+                                    />
+                                )}
+                            </div>
+                            <div>
+                                {/* Organization Heading */}
+                                <Heading
+                                    title="ORGANIZATION"
+                                    fontSize="23px"
+                                    fontWeight={"bold"}
+                                    color={color}
+                                    margin={"15px 0px"}
+                                    onSideSectionShow={() =>
+                                        setShow({ ...show, organization: true })
+                                    }
+                                    maxW={"full"}
+                                    minW={"full"}
+                                    borderBottom={`2px solid ${color ? color : themetextColor}`}
+                                    borderTop={`2px solid ${color ? color : themetextColor}`}
+                                    alignItems={"center"}
+                                    justifyContent={"center"}
+                                    paddingVertical={5}
+                                />
+                                {/* Organization Component */}
+                                <Organization
+                                    organization={true}
+                                    date={true}
+                                    role={true}
+                                    organizationStyle={Classes.projectTitleText}
+                                    dateStyle={Classes.description}
+                                    roleStyle={Classes.description}
+                                    rolePlaceholder="Role"
+                                    maxwidth={"420px"}
+                                    datewidthmax={"200px"}                                    
+                                    textColor={color ? color : themetextColor}
+
+                                />
+                            </div>
+                        </div>
+                    )}
+                </Box>
             </Box>
         </Flex>
     );
