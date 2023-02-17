@@ -87,7 +87,7 @@ const WorkExperience = (props) => {
     containerForSummaryAndAchievement,
     PointsComponent,
     ponintsDescription,
-    bgColor,
+    bgColor,companFontColor,companFontWeight,
   } = props;
   const LocationComponent = ({ item, index }) => {
     return (
@@ -192,9 +192,9 @@ const WorkExperience = (props) => {
                       }
                       path={`${path}.${index}.company`}
                       customClass={`${companyStyle ? companyStyle : ""}`}
-                      color={textColor}
+                      color={companFontColor?companFontColor:textColor}
                       fontSize={fontSize}
-                      fontWeight={fontWeight}
+                      fontWeight={companFontWeight?companFontWeight:fontWeight}
                       textAlign={textAlign}
                       maxWidth={maxWidth}
                     />

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Box, Circle, HStack, Text } from '@chakra-ui/react';
-import { useSelector } from 'react-redux';
+import React from "react";
+import { Box, Circle, HStack, Text } from "@chakra-ui/react";
+import { useSelector } from "react-redux";
 
 export default function Heading({
   title,
@@ -40,21 +40,22 @@ export default function Heading({
   paddingVertical,
   alignItems,
   justifyContent,
+  headingContainerStyle,
 }) {
   const { font } = useSelector((state) => state.fontReducer.font);
   return (
     <HStack
       minW={minW ? minW : 250}
       maxW={maxW ? maxW : 250}
-      bg={headBg ? headBg : ''}
+      bg={headBg ? headBg : ""}
       h={height ? height : 35}
-      m={margin ? margin : ''}
-      p={padding ? padding : ''}
-      borderTop={borderTop ? borderTop : ''}
-      borderBottom={borderBottom ? borderBottom : ''}
-      borderRight={borderRight ? borderRight : ''}
-      borderLeft={borderLeft ? borderLeft : ''}
-      borderRadius={borderRadius ? borderRadius : ''}
+      m={margin ? margin : ""}
+      p={padding ? padding : ""}
+      borderTop={borderTop ? borderTop : ""}
+      borderBottom={borderBottom ? borderBottom : ""}
+      borderRight={borderRight ? borderRight : ""}
+      borderLeft={borderLeft ? borderLeft : ""}
+      borderRadius={borderRadius ? borderRadius : ""}
       onClick={onSideSectionShow}
       marginTop={marginTop ? marginTop : ''}
       cursor={onSideSectionShow && 'pointer'}
@@ -67,11 +68,11 @@ export default function Heading({
       {circleIconHeading && (
         <>
           <Circle
-            size={circleSize ? circleSize : 'none'}
-            bg={circleBg ? circleBg : 'none'}
-            borderWidth={circleBorderW ? circleBorderW : '0px'}
-            borderColor={circleBorderColor ? circleBorderColor : 'none'}
-            transition={'0.5s background'}
+            size={circleSize ? circleSize : "none"}
+            bg={circleBg ? circleBg : "none"}
+            borderWidth={circleBorderW ? circleBorderW : "0px"}
+            borderColor={circleBorderColor ? circleBorderColor : "none"}
+            transition={"0.5s background"}
           >
             {React.createElement(icon)}
           </Circle>
@@ -79,12 +80,12 @@ export default function Heading({
       )}
       <div
         style={{
-          display: 'flex',
-          flexDirection: 'column',
+          display: "flex",
+          flexDirection: "column",
         }}
       >
         <Text
-          color={color ? color : '#000'}
+          color={color ? color : "#000"}
           fontSize={fontSize ? fontSize : 20}
           fontWeight={fontWeight ? fontWeight : 500}
           m={textMargin ? textMargin : ''}
@@ -98,10 +99,10 @@ export default function Heading({
         {line && (
           <Box
             h={lineH ? lineH : 1.5}
-            w={lineW ? lineW : 'full'}
-            bg={lineBg ? lineBg : '#000'}
-            alignSelf={lineAlign ? lineAlign : 'flex-start'}
-            className={`${lineStyle ? lineStyle : ''}`}
+            w={lineW ? lineW : "full"}
+            bg={lineBg ? lineBg : "#000"}
+            alignSelf={lineAlign ? lineAlign : "flex-start"}
+            className={`${lineStyle ? lineStyle : ""}`}
             transition="1s background"
           ></Box>
         )}

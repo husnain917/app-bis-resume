@@ -29,6 +29,9 @@ const Organization = (props) => {
     roleStyle,
     datewidthmax,
     maxwidth,
+    roleColor,
+    dateColor,
+    nameColor,
     dndDirection,
     textColor,
   } = props;
@@ -63,7 +66,10 @@ const Organization = (props) => {
         removeitem={(index) => _removeItem(index)}
         direction={dndDirection ? dndDirection : ""}
         renderItem={(item, index) => (
-          <Box className={`${childContainerStyle ? childContainerStyle : ""}`} bg={props.bgColor ? props.bgColor :""}>
+          <Box
+            className={`${childContainerStyle ? childContainerStyle : ""}`}
+            bg={props.bgColor ? props.bgColor : ""}
+          >
             {organization && (
               <Box maxWidth={props.maxWidth}>
                 <Text
@@ -76,7 +82,7 @@ const Organization = (props) => {
                   customClass={`${organizationStyle ? organizationStyle : ""}`}
                   path={`${path}.${index}.name`}
                   maxWidth={maxwidth}
-                  color={textColor}
+                  color={nameColor ? nameColor : textColor}
                 />
               </Box>
             )}
@@ -91,7 +97,7 @@ const Organization = (props) => {
                   path={`${path}.${index}.startDate`}
                   maxWidth={datewidthmax}
                   maxChr={props.maxChr}
-                  color={textColor}
+                  color={dateColor ? dateColor : textColor}
                 />
                 <div className={`${dateStyle ? dateStyle : ""}`}>-</div>
                 <Text
@@ -103,7 +109,7 @@ const Organization = (props) => {
                   path={`${path}.${index}.endDate`}
                   maxWidth={datewidthmax}
                   maxChr={props.maxChr}
-                  color={textColor}
+                  color={dateColor ? dateColor : textColor}
                 />
               </HStack>
             )}
@@ -115,7 +121,7 @@ const Organization = (props) => {
                   customClass={`${roleStyle ? roleStyle : ""}`}
                   path={`${path}.${index}.role`}
                   maxWidth={props.maxwidth}
-                  color={textColor}
+                  color={roleColor ? roleColor : textColor}
                 />
               </Box>
             )}
