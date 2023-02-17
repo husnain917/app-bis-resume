@@ -40,6 +40,7 @@ import {
   NovoResumeTemplate,
   novoHybirdTemp,
   AhsanTemplate1,
+  Fashionsimple,
 } from "../../templates";
 export const CUSTOM_TEMP_DATA = [
   {
@@ -61,7 +62,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-      achievements:true
+      achievements: true
     },
     category: {
       categoryID: "1",
@@ -115,6 +116,34 @@ export const CUSTOM_TEMP_DATA = [
     },
     category: {
       categoryID: "3",
+      totalCategory: "6",
+      categoryName: "Executive",
+    },
+    colorLength: 4,
+  },
+  {
+    id: "dhqAtIa3jaWjxdfal",
+    href: "/templates/dhqAtIa3jaWjxdfal",
+    src: "/fashionSimple.png",
+    alt: "Template Not Found",
+    height: "200px",
+    width: "250px",
+    heading: "Executive",
+    component: Fashionsimple,
+    sections: {
+      work: true,
+      education: true,
+      languages: false,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: true,
+      interest: false,
+      certificate: false,
+      achievements: true
+    },
+    category: {
+      categoryID: "1",
       totalCategory: "6",
       categoryName: "Executive",
     },

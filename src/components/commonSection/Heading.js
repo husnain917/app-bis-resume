@@ -14,7 +14,7 @@ export default function Heading({
   maxW,
   height,
   margin,
-  padding,paddingHorizantal,
+  padding, paddingHorizantal,
   textPadding,
   textMargin,
   iconHeading,
@@ -37,7 +37,7 @@ export default function Heading({
   lineStyle,
   fontFamily,
   marginTop,
-
+  paddingVertical,
   alignItems,
   justifyContent,
 }) {
@@ -58,9 +58,10 @@ export default function Heading({
       onClick={onSideSectionShow}
       marginTop={marginTop ? marginTop : ''}
       cursor={onSideSectionShow && 'pointer'}
-px={paddingHorizantal}
-      // alignItems={alignItems ? alignItems : ''}
-      // justifyContent={justifyContent ? justifyContent : ''}
+      px={paddingHorizantal}
+      alignItems={alignItems ? alignItems : ''}
+      justifyContent={justifyContent ? justifyContent : ''}
+      py={paddingVertical}
     >
       {iconHeading && <>{React.createElement(icon)} </>}
       {circleIconHeading && (
@@ -89,7 +90,7 @@ px={paddingHorizantal}
           m={textMargin ? textMargin : ''}
           p={textPadding ? textPadding : ''}
           letterSpacing={letterSpacing ? letterSpacing : ''}
-          fontFamily={font?font:fontFamily}
+          fontFamily={font ? font : fontFamily}
           transition="1s color"
         >
           {title}
