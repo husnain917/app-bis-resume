@@ -51,10 +51,14 @@ const AhsanTemplate1 = () => {
       flexDir={"column"}
       alignItems={{ sm: "none", lg: "center" }}
       bg={"#fff"}
+      mb={"0px"}
+      // minHeight={1220}
     >
       <Box
-        minW={830}
-        maxW={830}
+        minW="837px"
+        minHeight={1150}
+        maxW="850px"
+        mb={"0px"}
         // pt={6}
         pb={2}
         bg={backgroundColor ? backgroundColor : "white"}
@@ -73,6 +77,8 @@ const AhsanTemplate1 = () => {
               maxWidth={"150px"}
               minWidth={"60px"}
               marginTop={"15px"}
+              marginBottom={"15px"}
+              bg={backgroundColor ? backgroundColor : ""}
             />
             <Box pt={"15px"}>
               <Name
@@ -83,7 +89,7 @@ const AhsanTemplate1 = () => {
                 FNameStyle={Classes.Name}
                 SNameStyle={Classes.Name}
                 minWidth={"180px"}
-                maxWidth={"300px"}
+                maxWidth={"315px"}
                 maxChr={38}
                 fontColor={color ? color : ""}
               />
@@ -94,13 +100,15 @@ const AhsanTemplate1 = () => {
                 maxWidth={"500px"}
                 fontColor={thirdColor ? thirdColor : ""}
               />
-              <HStack minH={"80px"} alignItems="flex-start">
+              <HStack minH={"60px"} alignItems="flex-start">
                 <About
                   // maxW={"100%"}
                   // minW={"100%"}
                   aboutStyle={Classes.profile}
-                  maxWidth={"800px"}
+                  maxWidth={"700px"}
+                  maxW={"600px"}
                   fontColor={thirdColor ? thirdColor : ""}
+                  minHeight={"20px"}
                 />
               </HStack>
             </Box>
@@ -117,24 +125,50 @@ const AhsanTemplate1 = () => {
         >
           {/* Contact Section  */}
           <Contact
-            // parentStyle={Classes.ContactparentStyle}
+            parentStyle={Classes.ContactparentStyle}
             phone={true}
             email={true}
             location={true}
             circleIcon={true}
             website={true}
             linkedinURL={true}
-            iconColor="#11ad64"
+            iconColor={color ? color : "#11ad64"}
             iconSize={"20px"}
-            maxWidth={"120px"}
+            maxWidth={"220px"}
             cAlignItems={"flex-start"}
-            // minWidth={"auto"}
+            cMaxWidth={"800px"}
             // caxWidth={"full"}
             style={Classes.contactprofile}
-            parentDirection={"row"}
+            parentDirection={"grid"}
             textColor={thirdColor ? thirdColor : ""}
           />
         </Box>
+        {/* <Box
+          w={"full"}
+          px={7}
+          borderTopColor={"black"}
+          borderTopWidth={2}
+          borderBottomColor={"black"}
+          borderBottomWidth={2}
+        >
+          <Contact
+            parentStyle={Classes.ContactparentStyle}
+            bgColor={backgroundColor ? backgroundColor : "#353A44"}
+            email={true}
+            phone={true}
+            github={true}
+            margin="0px 0px 0px 20px"
+            location={true}
+            circleIcon={true}
+            website={true}
+            linkedinURL={true}
+            
+            iconSize={"16px"}
+            iconColor={color ? color : "#11ad64"}
+            style={Classes.contactprofile}
+            textColor={thirdColor ? thirdColor : ""}
+          />
+        </Box>  */}
         <Box>
           {resumeData?.skills?.visible && (
             <div className={Classes.sideMenu}>
@@ -159,11 +193,14 @@ const AhsanTemplate1 = () => {
                   minW={"full"}
                   maxW="full"
                   margin={"10px 0px"}
+                  paddingHorizantal={1}
                   onSideSectionShow={() => setShow({ ...show, skills: true })}
                 />
                 {/* Skill Row Components */}
                 <RowSkill
                   skillStyle={Classes.skillText}
+                  bg={color ? color : "#11ad64"}
+                  textColor={thirdColor ? thirdColor : ""}
                   childContainerStyle={Classes.skillContainer}
                   skillPlaceholder={"Bussiness Process"}
                 />
@@ -171,7 +208,7 @@ const AhsanTemplate1 = () => {
             </div>
           )}
         </Box>
-        <Box px={7} py={2}>
+        <Box px={2} py={2}>
           {resumeData?.work?.visible && (
             <div className={Classes.sideMenu}>
               <div className={Classes.sideMenuBox}>
@@ -245,7 +282,7 @@ const AhsanTemplate1 = () => {
                       addPoint={addPoint}
                       deletePoint={deletePoint}
                       parentIndex={index}
-                      maxWidth={"600px"}
+                      maxWidth={"700px"}
                       BulletContainerStyle={Classes.BulletContainerStyle}
                       BulletIcon={() => (
                         <Box
@@ -261,7 +298,7 @@ const AhsanTemplate1 = () => {
             </div>
           )}
         </Box>
-        <Box px={7} py={2}>
+        <Box px={2} py={2}>
           {resumeData?.education?.visible && (
             <div className={Classes.sideMenu}>
               <div className={Classes.sideMenuBox}>
@@ -324,7 +361,7 @@ const AhsanTemplate1 = () => {
             </div>
           )}
         </Box>
-        <Box px={7} py={2}>
+        <Box px={2} py={2}>
           {resumeData?.organization?.visible && (
             <div className={Classes.sideMenu}>
               <div className={Classes.sideMenuBox}>

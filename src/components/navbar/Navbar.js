@@ -63,7 +63,7 @@ export default function Navbar() {
         </Link> */}
         <Flex
           flex={{ base: 1 }}
-          justify={{ base: "space-between" }}
+          justify={{ base: "" }}
           alignItems={{ base: "center" }}
         >
           <Link href="/">
@@ -75,7 +75,6 @@ export default function Navbar() {
               width={"230px"}
             />
           </Link>
-          <Box></Box>
 
           {/* deskTop Nav */}
           <Flex
