@@ -84,6 +84,8 @@ const Fashionsimple = () => {
                                     FNameStyle={Classes.Name}
                                     SNameStyle={Classes.Name}
                                     fontColor={thirdColor ? thirdColor : themeHeadingColor}
+                                    maxChr={15}
+                                    maxWidth={200}
                                 />
                                 {/* Profession Section  */}
                                 <Profession
