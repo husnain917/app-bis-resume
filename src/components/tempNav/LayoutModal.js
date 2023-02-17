@@ -34,6 +34,7 @@ export default function LayoutModal({
   organization,
   interest,
   certificate,
+  achievements
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -182,21 +183,25 @@ export default function LayoutModal({
               ) : (
                 ''
               )}
-              {/* {resumeData?.achievements?.visible ? (
-                <>
-                  <Btn
-                    title="About"
+                   {achievements ? (
+                resumeData?.achievements?.visible ? (
+                  <>
+                   <Btn
+                    title="Achievement"
                     bgColor="#006772"
                     onClick={() => dispatch(visibleAchievementSection(false))}
                   />
-                </>
-              ) : (
-                <Btn
-                  title="About"
+                  </>
+                ) : (
+                  <Btn
+                  title="Achievement"
                   bgColor="gray"
                   onClick={() => dispatch(visibleAchievementSection(true))}
                 />
-              )} */}
+                )
+              ) : (
+                ''
+              )}
               {skills ? (
                 resumeData?.skills?.visible ? (
                   <>

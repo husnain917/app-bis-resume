@@ -17,12 +17,14 @@ const About = (props) => {
     margin,
     maxwidth,
     minWidth,
+    minHeight,
   } = props;
   return (
     <Box
       maxW={maxW ? maxW : ""}
       minW={minW ? minW : ""}
       margin={margin ? margin : ""}
+      minHeight={minHeight ? minHeight : ""}
     >
       <Text
         placeholder={

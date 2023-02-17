@@ -12,34 +12,32 @@ import { sampleData } from "../../../constants/sampleData";
 import Text from "./Text";
 import { HStack, Box } from "@chakra-ui/react";
 import { useDispatch } from "react-redux";
-const Organization = (props) => {
+const Achievements = (props) => {
   const {
     resumeData,
     parentContainerStyle,
     childContainerStyle,
-    organization,
+    achievement,
     date,
     role,
-    organizationPlaceholder,
+    achievementPlaceholder,
     startDatePlaceholder,
     endDatePlaceholder,
     rolePlaceholder,
-    organizationStyle,
+    achievementStyle,
     dateStyle,
     roleStyle,
     datewidthmax,
     maxwidth,
-    roleColor,
-    dateColor,
-    nameColor,
     dndDirection,
-    textColor,
+    textColor
   } = props;
-  const data = resumeData?.organization?.items?.length
-    ? [...resumeData?.organization?.items]
-    : [...sampleData?.data?.organization?.items];
+  const data = resumeData?.achievements?.items?.length
+    ? [...resumeData?.achievements?.items]
+    : [...sampleData?.data?.achievements?.items];
+  console.log(resumeData);
   const dispatch = useDispatch();
-  const path = "organization.items";
+  const path = "achievements.items";
   const onOrderUpdate = (datas) => {
     const storeReorder = Util.mapOrder(data, datas, "id");
     dispatch(updateOrder(storeReorder, path));
@@ -55,34 +53,28 @@ const Organization = (props) => {
   return (
     <Box
       className={`${parentContainerStyle ? parentContainerStyle : ""}`}
-      // minWidth={"400px !important"}
-      // display={"flex !important"}
-      // flexDirection={"row !important"}
+
     >
       <Dnd
         data={data}
         additem={_addNewItem}
         reorder={(e) => onOrderUpdate(e)}
         removeitem={(index) => _removeItem(index)}
-        direction={dndDirection ? dndDirection : ""}
         renderItem={(item, index) => (
-          <Box
-            className={`${childContainerStyle ? childContainerStyle : ""}`}
-            bg={props.bgColor ? props.bgColor : ""}
-          >
-            {organization && (
+          <Box className={`${childContainerStyle ? childContainerStyle : ""}`} bg={props.bgColor ? props.bgColor : ""}>
+            {achievement && (
               <Box maxWidth={props.maxWidth}>
                 <Text
                   value={item.name}
                   placeholder={
-                    organizationPlaceholder
-                      ? organizationPlaceholder
-                      : "Organization Name"
+                    achievementPlaceholder
+                      ? achievementPlaceholder
+                      : "achievement Name"
                   }
-                  customClass={`${organizationStyle ? organizationStyle : ""}`}
+                  customClass={`${achievementStyle ? achievementStyle : ""}`}
                   path={`${path}.${index}.name`}
                   maxWidth={maxwidth}
-                  color={nameColor ? nameColor : textColor}
+                  color={textColor}
                 />
               </Box>
             )}
@@ -97,7 +89,7 @@ const Organization = (props) => {
                   path={`${path}.${index}.startDate`}
                   maxWidth={datewidthmax}
                   maxChr={props.maxChr}
-                  color={dateColor ? dateColor : textColor}
+                  color={textColor}
                 />
                 <div className={`${dateStyle ? dateStyle : ""}`}>-</div>
                 <Text
@@ -109,7 +101,7 @@ const Organization = (props) => {
                   path={`${path}.${index}.endDate`}
                   maxWidth={datewidthmax}
                   maxChr={props.maxChr}
-                  color={dateColor ? dateColor : textColor}
+                  color={textColor}
                 />
               </HStack>
             )}
@@ -121,7 +113,7 @@ const Organization = (props) => {
                   customClass={`${roleStyle ? roleStyle : ""}`}
                   path={`${path}.${index}.role`}
                   maxWidth={props.maxwidth}
-                  color={roleColor ? roleColor : textColor}
+                  color={textColor}
                 />
               </Box>
             )}
@@ -137,4 +129,4 @@ const mapStateToProps = (store) => ({
   resumeData: store.editorReducer.resumeData,
   updater: store.editorReducer.updater,
 });
-export default connect(mapStateToProps, { onBlurField })(Organization);
+export default connect(mapStateToProps, { onBlurField })(Achievements);
