@@ -441,7 +441,7 @@ export default function novoITtemp() {
                                                 {/* Certificate Heading */}
                                                 <Heading
                                                     title="CERTIFICATES"
-                                                    circleSize="38px"
+                                                    circleSize="35px"
                                                     circleBg={color ? color : "#fff"}
                                                     circleIconHeading={true}
                                                     iconBorderRadius={'10px 10px'}
@@ -496,7 +496,7 @@ export default function novoITtemp() {
                                                 {/* languages Heading */}
                                                 <Heading
                                                     title="LANGUAGES"
-                                                    circleSize="38px"
+                                                    circleSize="35px"
                                                     circleBg={color ? color : "#fff"}
                                                     circleIconHeading={true}
                                                     iconBorderRadius={'10px 10px'}
