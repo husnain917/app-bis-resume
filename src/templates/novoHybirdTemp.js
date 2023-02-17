@@ -388,9 +388,9 @@ export default function Novo_Hybird_Temp() {
                         fontSize="23px"
                         fontWeight={"bold"}
                         color={backgroundColor ? backgroundColor : "#432543"}
-                        minW={250}
-                        maxW={250}
-                        margin={"20px 0px 15px 0px"}
+                        minW={310}
+                        maxW={310}
+                        margin={"15px 0px 8px 0px"}
                         onSideSectionShow={() =>
                           setShow({ ...show, project: true })
                         }

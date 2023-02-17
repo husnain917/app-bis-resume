@@ -43,7 +43,9 @@ const Contact = (props) => {
     parentStyle,
     maxWidth,
     minWidth,
-    maxChr,textColor
+    maxChr,
+    textColor,
+    iconBorderRadius,
   } = props;
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
   const { font } = useSelector((state) => state.fontReducer.font);
@@ -55,6 +57,8 @@ const Contact = (props) => {
           bg={circleBg ? circleBg : "none"}
           borderWidth={circleBorderW ? circleBorderW : "0px"}
           borderColor={circleBorderColor ? circleBorderColor : "none"}
+          borderRadius={iconBorderRadius ? iconBorderRadius : '50px 50px'}
+          transition={"0.8s background"}
         >
           {React.createElement(icon)}
         </Circle>

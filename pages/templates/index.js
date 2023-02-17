@@ -19,7 +19,7 @@ function Templates() {
     dispatch(modalOpen());
   };
   const ProfessionalTemp = CUSTOM_TEMP_DATA.slice(0, 20);
-  const Modern = CUSTOM_TEMP_DATA.slice(20, 40);
+  const Modern = CUSTOM_TEMP_DATA.slice(20, 44);
 
   return (
     <Box>

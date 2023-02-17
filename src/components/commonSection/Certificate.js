@@ -44,6 +44,7 @@ const Certificate = (props) => {
     iconShow,
     icon,
     maxWidth,
+    textColor,
   } = props;
 
   const data = resumeData?.certifications?.items?.length
@@ -75,6 +76,7 @@ const Certificate = (props) => {
                   customClass={`${certificateStyle}`}
                   path={`${path}.${index}.title`}
                   maxWidth={maxWidth}
+                  color={textColor ? textColor : '#000'}
                 />
               )}
               {institute && (
@@ -86,6 +88,7 @@ const Certificate = (props) => {
                   customClass={`${instituteStyle}`}
                   path={`${path}.${index}.issuer`}
                   maxWidth={maxWidth}
+                  color={textColor ? textColor : '#000'}
                 />
               )}
               {issueDate && (
@@ -97,6 +100,7 @@ const Certificate = (props) => {
                   customClass={`${issueDateStyle}`}
                   path={`${path}.${index}.endDate`}
                   maxWidth={maxWidth}
+                  color={textColor ? textColor : '#000'}
                 />
               )}
             </div>
