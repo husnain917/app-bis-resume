@@ -41,6 +41,7 @@ export default function Heading({
   alignItems,
   justifyContent,
   headingContainerStyle,
+  iconBorderRadius,
 }) {
   const { font } = useSelector((state) => state.fontReducer.font);
   return (
@@ -72,7 +73,8 @@ export default function Heading({
             bg={circleBg ? circleBg : "none"}
             borderWidth={circleBorderW ? circleBorderW : "0px"}
             borderColor={circleBorderColor ? circleBorderColor : "none"}
-            transition={"0.5s background"}
+            transition={"0.8s background"}
+            borderRadius={iconBorderRadius ? iconBorderRadius : '50px 50px'}
           >
             {React.createElement(icon)}
           </Circle>

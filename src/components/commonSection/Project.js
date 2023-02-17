@@ -27,6 +27,7 @@ const Project = (props) => {
     childContainerStyle,
     parentContainerStyle,
     maxWidth,
+    textColor,
   } = props;
   const dispatch = useDispatch();
   const data = resumeData?.projects?.items?.length
@@ -66,6 +67,7 @@ const Project = (props) => {
                   customClass={`${projectStyle ? projectStyle : ""}`}
                   path={`projects.items.${index}.Title`}
                   maxWidth={maxWidth}
+                  color={textColor ? textColor : '#000'}
                 />
               )}
               {duration && (
@@ -77,6 +79,7 @@ const Project = (props) => {
                   customclass={`${durationStyle ? durationStyle : ""}`}
                   path={`projects.items.${index}.Duration`}
                   maxWidth={maxWidth}
+                  color={textColor ? textColor : '#000'}
                 />
               )}
               {summary && (
@@ -88,6 +91,7 @@ const Project = (props) => {
                   customclass={`${summaryStyle ? summaryPlaceholder : ""}`}
                   path={`projects.items.${index}.Summary`}
                   maxWidth={maxWidth}
+                  color={textColor ? textColor : '#000'}
                 />
               )}
             </Box>
