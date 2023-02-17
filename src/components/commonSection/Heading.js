@@ -14,8 +14,7 @@ export default function Heading({
   maxW,
   height,
   margin,
-  padding,
-  paddingHorizantal,
+  padding, paddingHorizantal,
   textPadding,
   textMargin,
   iconHeading,
@@ -38,7 +37,7 @@ export default function Heading({
   lineStyle,
   fontFamily,
   marginTop,
-
+  paddingVertical,
   alignItems,
   justifyContent,
   headingContainerStyle,
@@ -58,12 +57,12 @@ export default function Heading({
       borderLeft={borderLeft ? borderLeft : ""}
       borderRadius={borderRadius ? borderRadius : ""}
       onClick={onSideSectionShow}
-      marginTop={marginTop ? marginTop : ""}
-      cursor={onSideSectionShow && "pointer"}
+      marginTop={marginTop ? marginTop : ''}
+      cursor={onSideSectionShow && 'pointer'}
       px={paddingHorizantal}
-      // alignItems={alignItems ? alignItems : ''}
-      // justifyContent={justifyContent ? justifyContent : ''}
-      style={headingContainerStyle}
+      alignItems={alignItems ? alignItems : ''}
+      justifyContent={justifyContent ? justifyContent : ''}
+      py={paddingVertical}
     >
       {iconHeading && <>{React.createElement(icon)} </>}
       {circleIconHeading && (
@@ -89,9 +88,9 @@ export default function Heading({
           color={color ? color : "#000"}
           fontSize={fontSize ? fontSize : 20}
           fontWeight={fontWeight ? fontWeight : 500}
-          m={textMargin ? textMargin : ""}
-          p={textPadding ? textPadding : ""}
-          letterSpacing={letterSpacing ? letterSpacing : ""}
+          m={textMargin ? textMargin : ''}
+          p={textPadding ? textPadding : ''}
+          letterSpacing={letterSpacing ? letterSpacing : ''}
           fontFamily={font ? font : fontFamily}
           transition="1s color"
         >

@@ -52,6 +52,7 @@ export default function ThemeSideMenu({
   certificate,
   downloadPDF,
   setleftMenu,
+  colorLength
 }) {
   return (
     <Box
@@ -116,7 +117,7 @@ export default function ThemeSideMenu({
             Theme
           </Button>
         </PopoverTrigger>
-        <ThemeModal />
+        <ThemeModal colorLength={colorLength} />
       </Popover>
       <Box>
         <LayoutModal

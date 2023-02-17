@@ -24,7 +24,9 @@ const ChangeTempBtn = ({
   organization,
   interest,
   certificate,
+  achievements,
   downloadPDF,
+  colorLength,
 }) => {
   return (
     <Box
@@ -110,7 +112,7 @@ const ChangeTempBtn = ({
               Theme
             </Button>
           </PopoverTrigger>
-          <ThemeModal />
+          <ThemeModal colorLength={colorLength} />
         </Popover>
         <LayoutModal
           work={work}
@@ -122,6 +124,7 @@ const ChangeTempBtn = ({
           organization={organization}
           interest={interest}
           certificate={certificate}
+          achievements={achievements}
         />
         <DownloadModal downloadPDF={downloadPDF} />
       </Box>

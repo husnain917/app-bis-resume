@@ -6,6 +6,10 @@ export const sampleData = {
       items: [
         {
           Description: "",
+          name: "",
+          role: "",
+          startDate: "",
+          endDate: "",
         },
       ],
       visible: true,

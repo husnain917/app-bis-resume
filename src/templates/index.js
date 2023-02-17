@@ -40,3 +40,4 @@ export { default as NovoResumeTemplate } from './ novoResumeTemplate';
 export { default as FunctionalFashionTemp } from './FunctionalFashionTemp';
 export { default as AhsanTemplate1 } from "./AhsanTemplate1";
 export { default as novoHybirdTemp } from "./novoHybirdTemp";
+export { default as Fashionsimple } from "./Fashionsimple";
