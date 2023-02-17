@@ -121,7 +121,7 @@ const Fashionsimple = () => {
                 </Box>
                 <Box>
                     {resumeData?.skills?.visible && (
-                        <div className={Classes.sideMenu}>
+                        <div>
                             <div className={Classes.width}>
                                 {show.skills && (
                                     <SectionSideMenu
