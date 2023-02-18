@@ -7,7 +7,6 @@ import {
   updateOrder,
 } from "../../../store/actions/builderAction";
 import Util from "../../../utils/templateUtils";
-
 import Dnd from "./Dnd";
 import { onBlurField } from "../../../store/actions/builderAction";
 import Text from "./Text";
@@ -24,7 +23,8 @@ const RowSkill = (props) => {
     parentContainerStyle,
     childContainerStyle,
     maxChr,
-    maxWidth,textColor
+    maxWidth,
+    textColor,
   } = props;
   const data = resumeData?.skills?.items?.length
     ? [...resumeData?.skills?.items]
@@ -66,7 +66,7 @@ const RowSkill = (props) => {
               path={`${path}.${index}.title`}
               maxWidth={maxWidth}
               maxChr={maxChr}
-              color={textColor}
+              color={textColor ? textColor : '#000'}
             />
           </Box>
         )}

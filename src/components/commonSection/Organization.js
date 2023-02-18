@@ -55,9 +55,9 @@ const Organization = (props) => {
   return (
     <Box
       className={`${parentContainerStyle ? parentContainerStyle : ""}`}
-      // minWidth={"400px !important"}
-      // display={"flex !important"}
-      // flexDirection={"row !important"}
+    // minWidth={"400px !important"}
+    // display={"flex !important"}
+    // flexDirection={"row !important"}
     >
       <Dnd
         data={data}
@@ -82,7 +82,14 @@ const Organization = (props) => {
                   customClass={`${organizationStyle ? organizationStyle : ""}`}
                   path={`${path}.${index}.name`}
                   maxWidth={maxwidth}
-                  color={nameColor ? nameColor : textColor}
+                  color={
+                    nameColor ?
+                      nameColor :
+                      textColor ?
+                        textColor
+                        :
+                        '#000'
+                  }
                 />
               </Box>
             )}
@@ -97,7 +104,14 @@ const Organization = (props) => {
                   path={`${path}.${index}.startDate`}
                   maxWidth={datewidthmax}
                   maxChr={props.maxChr}
-                  color={dateColor ? dateColor : textColor}
+                  color={
+                    dateColor ?
+                      dateColor :
+                      textColor ?
+                        textColor
+                        :
+                        '#000'
+                  }
                 />
                 <div className={`${dateStyle ? dateStyle : ""}`}>-</div>
                 <Text
@@ -109,7 +123,14 @@ const Organization = (props) => {
                   path={`${path}.${index}.endDate`}
                   maxWidth={datewidthmax}
                   maxChr={props.maxChr}
-                  color={dateColor ? dateColor : textColor}
+                  color={
+                    dateColor ?
+                      dateColor :
+                      textColor ?
+                        textColor
+                        :
+                        '#000'
+                  }
                 />
               </HStack>
             )}
@@ -121,7 +142,14 @@ const Organization = (props) => {
                   customClass={`${roleStyle ? roleStyle : ""}`}
                   path={`${path}.${index}.role`}
                   maxWidth={props.maxwidth}
-                  color={roleColor ? roleColor : textColor}
+                  color={
+                    roleColor ?
+                      roleColor :
+                      textColor ?
+                        textColor
+                        :
+                        '#000'
+                  }
                 />
               </Box>
             )}
