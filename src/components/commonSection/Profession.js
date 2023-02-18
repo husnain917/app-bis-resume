@@ -27,7 +27,7 @@ const Profession = (props) => {
         customClass={`${professionStyle}`}
         path={"profile.profession"}
         value={resumeData?.profile?.profession}
-        color={fontColor ? fontColor : ""}
+        color={fontColor ? fontColor : "#000"}
       />
     </Box>
   );

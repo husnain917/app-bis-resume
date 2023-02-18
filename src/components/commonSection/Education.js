@@ -73,7 +73,8 @@ const Education = (props) => {
     minWidth,
     datewidthmax,
     datewidthmin,
-    maxChr,companFontColor,
+    maxChr,
+    companFontColor,
     bgColor,
   } = props;
 
@@ -114,7 +115,7 @@ const Education = (props) => {
                       }
                       path={`${path}.${index}.degree`}
                       customClass={`${degreeStyle ? degreeStyle : ""}`}
-                      color={textColor}
+                      color={textColor ? textColor : '#000'}
                       fontSize={fontSize}
                       fontWeight={fontWeight}
                       textAlign={textAlign}
@@ -136,10 +137,16 @@ const Education = (props) => {
                           : "University/Institute"
                       }
                       path={`${path}.${index}.institution`}
-                      customClass={`${
-                        institutionStyle ? institutionStyle : ""
-                      }`}
-                      color={companFontColor?companFontColor:textColor}
+                      customClass={`${institutionStyle ? institutionStyle : ""
+                        }`}
+                      color={
+                        companFontColor ?
+                          companFontColor :
+                          textColor ?
+                            textColor
+                            :
+                            '#000'
+                      }
                       fontSize={fontSize}
                       fontWeight={fontWeight}
                       textAlign={textAlign}
@@ -163,7 +170,7 @@ const Education = (props) => {
                         }
                         path={`${path}.${index}.startDate`}
                         customClass={`${dateStyle ? dateStyle : ""}`}
-                        color={textColor}
+                        color={textColor ? textColor : '#000'}
                         fontSize={fontSize}
                         fontWeight={fontWeight}
                         textAlign={textAlign}
@@ -189,7 +196,7 @@ const Education = (props) => {
                         }
                         path={`${path}.${index}.endDate`}
                         customClass={`${dateStyle ? dateStyle : ""}`}
-                        color={textColor}
+                        color={textColor ? textColor : '#000'}
                         fontSize={fontSize}
                         fontWeight={fontWeight}
                         textAlign={textAlign}
@@ -216,7 +223,7 @@ const Education = (props) => {
                       path={`${path}.${index}.summary`}
                       customClass={`${summaryStyle ? summaryStyle : ""}`}
                       fontSize={fontSize}
-                      color={textColor}
+                      color={textColor ? textColor : '#000'}
                       textAlign={textAlign}
                       maxWidth={maxWidth}
                       minWidth={minWidth}
@@ -234,11 +241,10 @@ const Education = (props) => {
                         : "Extra Curricular"
                     }
                     path={`${path}.${index}.extracurricular`}
-                    customClass={`${
-                      extracurricularStyle ? extracurricularStyle : ""
-                    }`}
+                    customClass={`${extracurricularStyle ? extracurricularStyle : ""
+                      }`}
                     fontSize={fontSize}
-                    color={textColor}
+                    color={textColor ? textColor : '#000'}
                     textAlign={textAlign}
                   />
                 </>
@@ -253,7 +259,7 @@ const Education = (props) => {
                     value={`${item.location}`}
                     customClass={`${locationStyle ? locationStyle : ""}`}
                     fontSize={fontSize}
-                    color={textColor}
+                    color={textColor ? textColor : '#000'}
                     textAlign={textAlign}
                     maxWidth={maxWidth}
                     minWidth={minWidth}

@@ -34,7 +34,7 @@ const Name = (props) => {
             placeholder={FNamePlaceholder ? FNamePlaceholder : "First Name"}
             customClass={`${FNameStyle}`}
             path={"profile.firstName"}
-            color={fontColor ? fontColor : ""}
+            color={fontColor ? fontColor : "#000"}
             minWidth={props.minWidth}
             maxWidth={props.maxWidth}
             maxChr={props.maxChr}
@@ -58,7 +58,7 @@ const Name = (props) => {
             maxWidth={props.minWidth}
             maxChr={props.maxChr}
             margin={props.fmargin}
-            color={fontColor ? fontColor : ""}
+            color={fontColor ? fontColor : "#000"}
           />
         </Box>
       )}

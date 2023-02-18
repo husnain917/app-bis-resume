@@ -30,12 +30,12 @@ const About = (props) => {
         placeholder={
           aboutPlaceholder
             ? aboutPlaceholder
-            : "Short and Engaging pitch about yourself "
+            : "Short and Engaging pitch about yourself"
         }
         customClass={` ${aboutStyle}`}
         value={resumeData?.objective?.body}
         path="objective.body"
-        color={fontColor ? fontColor : ""}
+        color={fontColor ? fontColor : "#000"}
         fontSize={fontSize}
         fontWeight={fontWeight}
         textAlign={textAlign}
