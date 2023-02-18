@@ -42,6 +42,7 @@ import {
   novoHybirdTemp,
   AhsanTemplate1,
   Fashionsimple,
+  novoITtemp
 } from "../../templates";
 export const CUSTOM_TEMP_DATA = [
   {
@@ -63,7 +64,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
-      achievements: true
+      achievements: false,
     },
     category: {
       categoryID: "1",
@@ -83,10 +84,15 @@ export const CUSTOM_TEMP_DATA = [
     component: AhsanTemplate1,
     sections: {
       work: true,
-
       skills: true,
       education: true,
       organization: true,
+      languages: false,
+      projects: false,
+      references: false,
+      interest: false,
+      certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "2",
@@ -102,21 +108,26 @@ export const CUSTOM_TEMP_DATA = [
     alt: "Template Not Found",
     height: "200px",
     width: "250px",
-    heading: "Skill-Based",
+    heading: "Executive",
     component: FunctionalFashionTemp,
     sections: {
       work: true,
       education: true,
-      languages: false,
+      languages: true,
       skills: true,
       organization: true,
+      projects: false,
+      references: false,
+      interest: false,
+      certificate: false,
+      achievements: false,
     },
     category: {
-      categoryID: "4",
-      totalCategory: "4",
-      categoryName: "Skill-Based",
+      categoryID: "3",
+      totalCategory: "6",
+      categoryName: "Executive",
     },
-    colorLength: 3,
+    colorLength: 4,
   },
   {
     id: "FHkisdjckzd23df9",
@@ -137,9 +148,38 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
+      achievements: false,
     },
     category: {
-      categoryID: "3",
+      categoryID: "4",
+      totalCategory: "6",
+      categoryName: "Executive",
+    },
+    colorLength: 4,
+  },
+  {
+    id: "DhlCtIb3jaWjxdfa4",
+    href: "/templates/DhlCtIb3jaWjxdfa4",
+    src: "/it-resume-template.png",
+    alt: "Template Not Found",
+    height: "200px",
+    width: "250px",
+    heading: "Executive",
+    component: novoITtemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: true,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: true,
+      achievements: false,
+    },
+    category: {
+      categoryID: "5",
       totalCategory: "6",
       categoryName: "Executive",
     },
@@ -164,10 +204,10 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: false,
       certificate: false,
-      achievements: true
+      achievements: false,
     },
     category: {
-      categoryID: "1",
+      categoryID: "6",
       totalCategory: "6",
       categoryName: "Executive",
     },
@@ -192,6 +232,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "1",
@@ -219,6 +260,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "2",
@@ -246,6 +288,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "3",
@@ -273,6 +316,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "4",
@@ -300,6 +344,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "5",
@@ -327,6 +372,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "6",
@@ -354,6 +400,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "1",
@@ -381,6 +428,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: true,
+      achievements: false,
     },
     category: {
       categoryID: "2",
@@ -408,6 +456,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "3",
@@ -435,6 +484,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: true,
+      achievements: false,
     },
     category: {
       categoryID: "1",
@@ -462,6 +512,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: true,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "2",
@@ -489,6 +540,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "3",
@@ -516,6 +568,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "4",
@@ -543,6 +596,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
+      achievements: false,
     },
     category: {
       categoryID: "5",
@@ -570,6 +624,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "6",
@@ -597,6 +652,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "7",
@@ -624,6 +680,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: true,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "1",
@@ -651,6 +708,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "2",
@@ -678,6 +736,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "3",
@@ -705,6 +764,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: true,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "4",
@@ -733,6 +793,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "1",
@@ -760,6 +821,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "2",
@@ -787,6 +849,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "3",
@@ -814,6 +877,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "4",
@@ -841,6 +905,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "5",
@@ -868,6 +933,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "6",
@@ -895,6 +961,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
+      achievements: false,
     },
     category: {
       categoryID: "1",
@@ -922,6 +989,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "2",
@@ -949,6 +1017,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "3",
@@ -976,6 +1045,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
+      achievements: false,
     },
     category: {
       categoryID: "1",
@@ -1003,6 +1073,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "1",
@@ -1030,6 +1101,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "2",
@@ -1057,6 +1129,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
+      achievements: false,
     },
     category: {
       categoryID: "2",
@@ -1084,6 +1157,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
+      achievements: false,
     },
     category: {
       categoryID: "3",
@@ -1111,6 +1185,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "3",
@@ -1138,6 +1213,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "4",
@@ -1165,6 +1241,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: true,
       interest: true,
       certificate: true,
+      achievements: false,
     },
     category: {
       categoryID: "4",
@@ -1192,6 +1269,7 @@ export const CUSTOM_TEMP_DATA = [
       organization: false,
       interest: false,
       certificate: false,
+      achievements: false,
     },
     category: {
       categoryID: "5",
