@@ -37,8 +37,15 @@ const ThemeModal = ({ colorLength }) => {
   return (
     <PopoverContent bg={"#fff"} w="225px" pl="5px">
       <PopoverArrow bg={"#fff"} />
-      <PopoverCloseButton />
-      <PopoverHeader color={"black"}>Theme Changer</PopoverHeader>
+      <PopoverCloseButton mt={'5px'} />
+      <PopoverHeader
+        color={"#313b47"}
+        fontSize={'16px'}
+        fontFamily={`"Euclid Circular B",sans-serif;`}
+        fontWeight={'700'}
+      >
+        Color
+      </PopoverHeader>
       <PopoverBody>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Button

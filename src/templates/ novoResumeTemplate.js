@@ -1,12 +1,4 @@
 import { Box, Flex, HStack } from "@chakra-ui/react";
-import { MdCastForEducation } from "react-icons/md";
-import { BsFillLayersFill } from "react-icons/bs";
-import { GiSkills, GiOrganigram } from "react-icons/gi";
-import { IoLanguageOutline } from "react-icons/io5";
-import { GoProject } from "react-icons/go";
-import { TbCertificate } from "react-icons/tb";
-import { FaHorseHead } from "react-icons/fa";
-import ImageSelector from "../components/imageSelector";
 import Name from "../components/commonSection/Name";
 import Profession from "../components/commonSection/Profession";
 import Classes from "../../styles/templates/novoResumeTemplate.module.css";
@@ -14,34 +6,22 @@ import Contact from "../components/commonSection/Contact";
 import About from "../components/commonSection/About";
 import SectionSideMenu from "../components/tempSectionSide/SectionSideMenu";
 import Heading from "../components/commonSection/Heading";
-import Education from "../components/commonSection/Education";
 import WorkExperience from "../components/commonSection/WorkExperience";
 import RowSkill from "../components/commonSection/RowSkill";
 import PointsDescription from "../components/commonSection/PointsDescription";
-import Project from "../components/commonSection/Project";
-import Organization from "../components/commonSection/Organization";
-import Certificate from "../components/commonSection/Certificate";
-import Language from "../components/commonSection/Language";
-import Interest from "../components/commonSection/Interest";
 import useShow from "../components/tempSectionSide/useShow";
 import { useSelector } from "react-redux";
 import {
-  CERTIFICATE,
-  EDUCATION,
-  INTEREST,
-  LANGUAGES,
-  ORGANIZATION,
-  PROJECT,
   SKILL,
   WORK,
 } from "../components/tempSectionSide/SectionSideConstant";
 
 const NovoResumeTemplate = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  const { backgroundColor, color, thirdColor } = useSelector(
+  const { backgroundColor, color, thirdColor, fourthColor } = useSelector(
     (store) => store.themeReducer.theme
   );
-console.log('thirdColor',thirdColor);
+  // console.log('thirdColor',thirdColor);
   // custom Hook For Template
   const [show, setShow] = useShow();
 
@@ -58,13 +38,16 @@ console.log('thirdColor',thirdColor);
         maxW={830}
         pt={8}
         pb={2}
-        bg={backgroundColor ? backgroundColor : "white"}
+        bg={"#fff"}
         borderRadius={6}
         borderWidth="1px"
         borderColor={"#00000023"}
       >
         {/* =============== Profile Section =============== */}
-        <Box px={7}>
+        <Box
+          px={7}
+          transition="0.8s background"
+        >
           <HStack>
             <Box>
               <Name
@@ -74,17 +57,27 @@ console.log('thirdColor',thirdColor);
                 FNameStyle={Classes.Name}
                 SNameStyle={Classes.Name}
                 minWidth={"280px"}
-                fontColor={color ? color : "#eba43f"}
+                fontColor={backgroundColor ? backgroundColor : "#eba43f"}
               />
               {/* Profession Section  */}
               <Profession
                 professionStyle={Classes.ProfessionHybrid}
                 maxWidth={"300px"}
+                fontColor={thirdColor ? thirdColor : '#666766'}
               />
             </Box>
           </HStack>
-          <HStack minH={"80px"} alignItems="flex-start">
-            <About maxW={"100%"} minW={"100%"} aboutStyle={Classes.profile} fontColor={thirdColor}/>
+          <HStack
+            minH={"80px"}
+            alignItems="flex-start"
+            transition="0.8s background"
+          >
+            <About
+              maxW={"100%"}
+              minW={"100%"}
+              aboutStyle={Classes.profile}
+              fontColor={"#000"}
+            />
           </HStack>
         </Box>
         <Box
@@ -95,6 +88,7 @@ console.log('thirdColor',thirdColor);
           borderTopWidth={2}
           borderBottomColor={"black"}
           borderBottomWidth={2}
+          transition="0.8s background"
         >
           {/* Contact Section  */}
           <Contact
@@ -105,13 +99,15 @@ console.log('thirdColor',thirdColor);
             circleIcon={true}
             website={true}
             linkedinURL={true}
-            iconColor={color ? color : "#eba43f"}
+            iconColor={backgroundColor ? backgroundColor : "#eba43f"}
             iconSize={"20px"}
             style={Classes.contactprofile}
-            textColor={thirdColor}
+            textColor={"#000"}
           />
         </Box>
-        <Box>
+        <Box
+          transition="0.8s background"
+        >
           {resumeData?.skills?.visible && (
             <div className={Classes.sideMenu}>
               <div className={Classes.width}>
@@ -130,7 +126,7 @@ console.log('thirdColor',thirdColor);
                   title="AREAS OF EXPERTISE"
                   fontSize="28px"
                   fontWeight={"bold"}
-                  color={color ? color : "#eba43f"}
+                  color={backgroundColor ? backgroundColor : "#eba43f"}
                   fontFamily={"Ubuntu"}
                   minW={"full"}
                   maxW="full"
@@ -142,18 +138,22 @@ console.log('thirdColor',thirdColor);
                   skillStyle={Classes.skillText}
                   childContainerStyle={Classes.skillContainer}
                   skillPlaceholder={"Bussiness Process"}
-                  bg={color ? color : "#eba43f"}
-                  textColor={backgroundColor ? backgroundColor : "white"}
+                  bg={fourthColor ? fourthColor : "#eba43f"}
+                  textColor={color ? color : "white"}
                 />
               </div>
             </div>
           )}
         </Box>
-        <Box px={7} py={2}>
+        <Box
+          px={'30px'}
+          py={2}
+          transition="0.8s background"
+        >
           {resumeData?.work?.visible && (
             <div className={Classes.sideMenu}>
               <div className={Classes.sideMenuBox}>
-                {/* Section Side Menu */}
+
                 {show.work && (
                   <SectionSideMenu
                     bg="#006772"
@@ -164,27 +164,25 @@ console.log('thirdColor',thirdColor);
                 )}
               </div>
               <div>
-                {/* Work Experience Heading  */}
+
                 <Heading
                   title="PROFESSIONAL EXPERIENCE"
                   fontSize="28px"
                   fontWeight={"bold"}
-                  color={color ? color : "#eba43f"}
+                  color={backgroundColor ? backgroundColor : "#eba43f"}
                   fontFamily={"Ubuntu"}
-                  minW={"full"}
-                  maxW="full"
+                  minW={"750px"}
+                  maxW="750px"
                   margin={"10px 0px"}
                   onSideSectionShow={() => setShow({ ...show, work: true })}
-                  paddingHorizantal={7}
                 />
-                {/* Work Experience Components */}
+
                 <WorkExperience
                   date={true}
                   position={true}
                   company={true}
                   location={true}
                   achieement={true}
-                  bgColor={backgroundColor ? backgroundColor : "white"}
                   summary_placeholder="Company Description (optional,fill when the company is not well known"
                   location_placeholder="Country,City"
                   dateStyle={Classes.date}
@@ -196,7 +194,7 @@ console.log('thirdColor',thirdColor);
                   parentContainerStyle={Classes.WorkparentContainerStyle}
                   locationWithDate={true}
                   insideContainerStyle={Classes.insideContainerStyle}
-                  textColor={thirdColor}
+                  textColor={"#000"}
                   positionContainerStyle={Classes.positionContainerStyle}
                   containerForSummaryAndAchievement={
                     Classes.containerForSummaryAndAchievement
@@ -218,13 +216,13 @@ console.log('thirdColor',thirdColor);
                       addPoint={addPoint}
                       deletePoint={deletePoint}
                       parentIndex={index}
-                  textColor={thirdColor}
+                      textColor={"#000"}
 
                       BulletContainerStyle={Classes.BulletContainerStyle}
                       BulletIcon={() => (
                         <Box
                           w={"100%"}
-                          bg={color ? color : "#eba43f"}
+                          bg={backgroundColor ? backgroundColor : "#eba43f"}
                           h={"5px"}
                         />
                       )}
