@@ -598,7 +598,7 @@ export default function Novo_Hybird_Temp() {
                           dndDirection="horizontal"
                           interestStyle={styles.langText}
                           maxBoxWidth={"300px"}
-                          maxChr={27}
+                          maxChr={25}
                         />
                       </div>
                     </div>
