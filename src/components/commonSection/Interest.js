@@ -1,4 +1,4 @@
-import { Box, Text as ChakraText } from "@chakra-ui/react";
+import { Box, UnorderedList, ListItem, Text as ChakraText } from "@chakra-ui/react";
 import React from "react";
 import { connect, useDispatch } from "react-redux";
 import {
