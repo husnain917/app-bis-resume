@@ -316,7 +316,6 @@ export default function Novo_IT_Temp() {
                                 bg={backgroundColor ? backgroundColor : '#313b47'}
                                 borderRadius={8}
                                 pl={'5px'}
-                                pb={4}
                                 mb={2}
                                 transition="0.8s background"
                             >
@@ -522,6 +521,7 @@ export default function Novo_IT_Temp() {
                                                     langStyle={styles.langText}
                                                     maxWidth={"215px"}
                                                     textColor={color ? color : '#fff'}
+                                                    margin={'0px 0px 15px 0px'}
                                                 />
                                             </div>
                                         </div>
