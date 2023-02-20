@@ -84,8 +84,8 @@ const Fashionsimple = () => {
                                     FNameStyle={Classes.Name}
                                     SNameStyle={Classes.Name}
                                     fontColor={thirdColor ? thirdColor : themeHeadingColor}
-                                    maxChr={15}
-                                    maxWidth={200}
+                                    maxChr={13}
+                                    maxWidth={250}
                                 />
                                 {/* Profession Section  */}
                                 <Profession
@@ -117,7 +117,7 @@ const Fashionsimple = () => {
                             direction="row-reverse"
                             style={Classes.DetailStyle}
                             margin={"8px 0px 0px 0px"}
-                            maxWidth={"full"}
+                            maxWidth={200}
                             textColor={color ? color : "black"}
                         />
                     </Box>
@@ -166,7 +166,7 @@ const Fashionsimple = () => {
                         </div>
                     )}
                 </Box>
-                <Box  px={7} py={2}>
+                <Box px={7} py={2}>
                     {resumeData?.work?.visible && (
                         <div >
                             <div className={Classes.sideMenuBox}>
@@ -202,6 +202,7 @@ const Fashionsimple = () => {
                                 <WorkExperience
                                     date={true}
                                     position={true}
+                                    maxWidth={300}
                                     company={true}
                                     location={false}
                                     achieement={true}
@@ -306,7 +307,7 @@ const Fashionsimple = () => {
                                     maxWidth={"420px"}
                                     textColor={color ? color : themetextColor}
                                     companFontColor={thirdColor ? thirdColor : "black"}
-                                    
+
                                 />
                             </div>
                         </div>
@@ -356,7 +357,7 @@ const Fashionsimple = () => {
                                     roleStyle={Classes.description}
                                     rolePlaceholder="Role"
                                     maxwidth={"420px"}
-                                    datewidthmax={"200px"}                                    
+                                    datewidthmax={"200px"}
                                     textColor={color ? color : themetextColor}
 
                                 />
