@@ -37,7 +37,7 @@ export default function ImageCrop({
     <>
       <Modal isOpen={isClose} onClose={onClose} isCentered>
         <ModalOverlay />
-        <ModalContent minHeight={400} minWidth={400}>
+        <ModalContent minHeight={crop.height + 20} minWidth={crop.width + 20}>
           <ModalBody>
             <ReactCrop crop={crop} onChange={(c) => setCrop(c)}>
               <Image src={cancelImage} alt={""} ref={imgRef} />

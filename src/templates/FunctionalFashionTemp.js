@@ -161,11 +161,12 @@ const FunctionalFashionTemp = () => {
               <Name
                 FName={true}
                 SName={true}
-                maxChr={38}
+                maxChr={13}
                 direction="row"
                 FNameStyle={Classes.hybridName}
                 SNameStyle={Classes.hybridName}
-                fontColor={"#fff"}
+                fontColor={"white"}
+                maxWidth={'250px'}
               />
               {/* Profession Section  */}
               <Profession
@@ -215,6 +216,8 @@ const FunctionalFashionTemp = () => {
                     />
                     {/* Work Experience Components */}
                     <WorkExperience
+                      maxChr={23}
+
                       date={true}
                       position={true}
                       company={true}

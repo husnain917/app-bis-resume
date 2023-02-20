@@ -166,6 +166,7 @@ const WorkExperience = (props) => {
                         color={textColor ? textColor : '#000'}
                         fontSize={fontSize}
                         fontWeight={fontWeight}
+                        maxChr={props.maxChr}
                         textAlign={textAlign}
                         maxWidth={maxWidth}
                       />
@@ -206,6 +207,7 @@ const WorkExperience = (props) => {
                       fontWeight={companFontWeight ? companFontWeight : fontWeight}
                       textAlign={textAlign}
                       maxWidth={maxWidth}
+                      maxChr={props.maxChr}
                     />
                   </Box>
                 )}
