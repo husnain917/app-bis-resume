@@ -42,7 +42,8 @@ import {
   novoHybirdTemp,
   AhsanTemplate1,
   Fashionsimple,
-  novoITtemp
+  novoITtemp,
+  novoTechTemp,
 } from "../../templates";
 export const CUSTOM_TEMP_DATA = [
   {
@@ -186,6 +187,34 @@ export const CUSTOM_TEMP_DATA = [
     colorLength: 4,
   },
   {
+    id: "MhbhtIbhjaWjxdfa7",
+    href: "/templates/MhbhtIbhjaWjxdfa7",
+    src: "/tech-resume-template.png",
+    alt: "Template Not Found",
+    height: "200px",
+    width: "250px",
+    heading: "Executive",
+    component: novoTechTemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: true,
+      references: false,
+      organization: false,
+      interest: false,
+      certificate: true,
+      achievements: false,
+    },
+    category: {
+      categoryID: "5",
+      totalCategory: "6",
+      categoryName: "Executive",
+    },
+    colorLength: 4,
+  },
+  {
     id: "dhqAtIa3jaWjxdfal",
     href: "/templates/dhqAtIa3jaWjxdfal",
     src: "/fashionSimple.png",
@@ -207,8 +236,8 @@ export const CUSTOM_TEMP_DATA = [
       achievements: false,
     },
     category: {
-      categoryID: "6",
-      totalCategory: "6",
+      categoryID: "7",
+      totalCategory: "7",
       categoryName: "Executive",
     },
     colorLength: 4,
