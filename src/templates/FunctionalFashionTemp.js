@@ -160,7 +160,7 @@ const FunctionalFashionTemp = () => {
                       }}
                     />
                     {/* Language Component */}
-                    <Language maxWidth={"180px"} textColor={thirdColor?thirdColor:'black'} />
+                    <Language maxWidth={"180px"} textColor={thirdColor ? thirdColor : 'black'} />
                   </div>
                 </div>
               )}
@@ -171,11 +171,12 @@ const FunctionalFashionTemp = () => {
               <Name
                 FName={true}
                 SName={true}
-                maxChr={38}
+                maxChr={13}
                 direction="row"
                 FNameStyle={Classes.hybridName}
                 SNameStyle={Classes.hybridName}
                 fontColor={"white"}
+                maxWidth={'250px'}
               />
               {/* Profession Section  */}
               <Profession
@@ -225,6 +226,8 @@ const FunctionalFashionTemp = () => {
                     />
                     {/* Work Experience Components */}
                     <WorkExperience
+                      maxChr={23}
+
                       date={true}
                       position={true}
                       company={true}
@@ -247,7 +250,7 @@ const FunctionalFashionTemp = () => {
                       containerForSummaryAndAchievement={
                         Classes.containerForSummaryAndAchievement
                       }
-                      companFontColor={thirdColor?thirdColor:"black"}
+                      companFontColor={thirdColor ? thirdColor : "black"}
                       companFontWeight={"normal"}
                       minW={"full"}
                       maxW="full"
@@ -337,7 +340,7 @@ const FunctionalFashionTemp = () => {
                     maxChr={20}
                     maxWidth={"420px"}
                     textColor={color ? color : themeSecondaryColor}
-                    companFontColor={thirdColor?thirdColor:"black"}
+                    companFontColor={thirdColor ? thirdColor : "black"}
                   />
                 </div>
               </div>
