@@ -205,7 +205,7 @@ const Contact = (props) => {
             />
             <Text
               placeholder={
-                locationPlaceholder ? locationPlaceholder : "location"
+                locationPlaceholder ? locationPlaceholder : "Location"
               }
               customClass={`${style}`}
               value={resumeData?.profile?.address?.city}
