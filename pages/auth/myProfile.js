@@ -96,7 +96,7 @@ const Profile = () => {
   const dummyfirstName = "Ahsan Ali";
   const dummyLastName = "Butt";
   const [email, setEmail] = useState(userData?.email || dummyEmail);
-  const [picture, setPicture] = useState(userData?.picture || "/UPLOAD1.png");
+  const [picture, setPicture] = useState(userData?.photoURL || "/UPLOAD1.png");
 
   const [family_name, setFamilyName] = useState(
     userData.family_name || dummyfirstName
