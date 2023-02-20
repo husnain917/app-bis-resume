@@ -116,7 +116,7 @@ const Contact = (props) => {
               maxWidth={maxWidth}
               minWidth={minWidth}
               maxChr={maxChr}
-              color={textColor}
+              color={textColor ? textColor : '#000'}
             />
           </Stack>
         </>
@@ -147,7 +147,7 @@ const Contact = (props) => {
               value={resumeData?.profile?.email}
               path={"profile.email"}
               maxWidth={maxWidth}
-              color={textColor}
+              color={textColor ? textColor : '#000'}
               minWidth={minWidth}
             />
           </Stack>
@@ -178,7 +178,7 @@ const Contact = (props) => {
               value={resumeData?.profile?.website}
               path={"profile.website"}
               maxWidth={maxWidth}
-              color={textColor}
+              color={textColor ? textColor : '#000'}
               minWidth={minWidth}
             />
           </Stack>
@@ -211,7 +211,7 @@ const Contact = (props) => {
               value={resumeData?.profile?.address?.city}
               path={"profile.address.city"}
               maxWidth={maxWidth}
-              color={textColor}
+              color={textColor ? textColor : '#000'}
               minWidth={minWidth}
             />
           </Stack>
@@ -246,7 +246,7 @@ const Contact = (props) => {
               value={resumeData?.profile?.linkedinURL}
               path={"profile.linkedinURL"}
               maxWidth={maxWidth}
-              color={textColor}
+              color={textColor ? textColor : '#000'}
               minWidth={minWidth}
             />
           </Stack>

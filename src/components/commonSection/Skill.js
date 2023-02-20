@@ -88,6 +88,7 @@ const Skill = (props) => {
     maxWidth,
     maxChr,
     minWidth,
+    textColor,
   } = props;
 
   return (
@@ -119,6 +120,7 @@ const Skill = (props) => {
                   customClass={`${skillStyle}`}
                   path={`skills.items.${index}.title`}
                   maxWidth={maxwidth || maxWidth}
+                  color={textColor ? textColor : '#000'}
                 />
               ) : (
                 <UnorderedList>
@@ -131,6 +133,7 @@ const Skill = (props) => {
                       customClass={`${skillStyle}`}
                       path={`skills.items.${index}.title`}
                       maxWidth={maxwidth || maxWidth}
+                      color={textColor ? textColor : '#000'}
                     />
                   </ListItem>
                 </UnorderedList>
