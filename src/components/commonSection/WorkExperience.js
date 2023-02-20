@@ -87,7 +87,9 @@ const WorkExperience = (props) => {
     containerForSummaryAndAchievement,
     PointsComponent,
     ponintsDescription,
-    bgColor,companFontColor,companFontWeight,
+    bgColor,
+    companFontColor,
+    companFontWeight,
   } = props;
   const LocationComponent = ({ item, index }) => {
     return (
@@ -99,7 +101,7 @@ const WorkExperience = (props) => {
             path={`${path}.${index}.location`}
             customClass={`${locationStyle ? locationStyle : ""}`}
             fontSize={fontSize}
-            color={textColor}
+            color={textColor ? textColor : '#000'}
             textAlign={textAlign}
             maxWidth={"200px"}
           />
@@ -161,7 +163,7 @@ const WorkExperience = (props) => {
                         }
                         path={`${path}.${index}.position`}
                         customClass={`${positionStyle ? positionStyle : ""}`}
-                        color={textColor}
+                        color={textColor ? textColor : '#000'}
                         fontSize={fontSize}
                         fontWeight={fontWeight}
                         maxChr={props.maxChr}
@@ -193,9 +195,16 @@ const WorkExperience = (props) => {
                       }
                       path={`${path}.${index}.company`}
                       customClass={`${companyStyle ? companyStyle : ""}`}
-                      color={companFontColor?companFontColor:textColor}
+                      color={
+                        companFontColor ?
+                          companFontColor :
+                          textColor ?
+                            textColor
+                            :
+                            '#000'
+                      }
                       fontSize={fontSize}
-                      fontWeight={companFontWeight?companFontWeight:fontWeight}
+                      fontWeight={companFontWeight ? companFontWeight : fontWeight}
                       textAlign={textAlign}
                       maxWidth={maxWidth}
                       maxChr={props.maxChr}
@@ -221,7 +230,7 @@ const WorkExperience = (props) => {
                         maxChr={props.maxChr}
                         path={`${path}.${index}.startDate`}
                         customClass={`${dateStyle ? dateStyle : ""}`}
-                        color={textColor}
+                        color={textColor ? textColor : '#000'}
                         fontSize={fontSize}
                         fontWeight={fontWeight}
                         textAlign={textAlign}
@@ -245,7 +254,7 @@ const WorkExperience = (props) => {
                         }
                         path={`${path}.${index}.endDate`}
                         customClass={`${dateStyle ? dateStyle : ""}`}
-                        color={textColor}
+                        color={textColor ? textColor : '#000'}
                         fontSize={fontSize}
                         fontWeight={fontWeight}
                         textAlign={textAlign}
@@ -259,7 +268,7 @@ const WorkExperience = (props) => {
                           value={item.description}
                           placeholder={'Achievements'}
                           customClass={`${dateStyle ? dateStyle : ""}`}
-                          color={textColor}
+                          color={textColor ? textColor : '#000'}
                           fontSize={fontSize}
                           fontWeight={fontWeight}
                           textAlign={textAlign}
@@ -286,7 +295,7 @@ const WorkExperience = (props) => {
                       path={`${path}.${index}.description`}
                       customClass={`${summaryStyle ? summaryStyle : ""}`}
                       fontSize={fontSize}
-                      color={textColor}
+                      color={textColor ? textColor : '#000'}
                       textAlign={textAlign}
                       maxWidth={maxWidth}
                     />

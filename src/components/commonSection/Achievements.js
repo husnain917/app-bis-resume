@@ -29,7 +29,6 @@ const Achievements = (props) => {
     roleStyle,
     datewidthmax,
     maxwidth,
-    dndDirection,
     textColor
   } = props;
   const data = resumeData?.achievements?.items?.length
@@ -53,7 +52,6 @@ const Achievements = (props) => {
   return (
     <Box
       className={`${parentContainerStyle ? parentContainerStyle : ""}`}
-
     >
       <Dnd
         data={data}
@@ -61,7 +59,10 @@ const Achievements = (props) => {
         reorder={(e) => onOrderUpdate(e)}
         removeitem={(index) => _removeItem(index)}
         renderItem={(item, index) => (
-          <Box className={`${childContainerStyle ? childContainerStyle : ""}`} bg={props.bgColor ? props.bgColor : ""}>
+          <Box
+            className={`${childContainerStyle ? childContainerStyle : ""}`}
+            bg={props.bgColor ? props.bgColor : ""}
+          >
             {achievement && (
               <Box maxWidth={props.maxWidth}>
                 <Text
@@ -74,7 +75,7 @@ const Achievements = (props) => {
                   customClass={`${achievementStyle ? achievementStyle : ""}`}
                   path={`${path}.${index}.name`}
                   maxWidth={maxwidth}
-                  color={textColor}
+                  color={textColor ? textColor : '#000'}
                 />
               </Box>
             )}
@@ -89,7 +90,7 @@ const Achievements = (props) => {
                   path={`${path}.${index}.startDate`}
                   maxWidth={datewidthmax}
                   maxChr={props.maxChr}
-                  color={textColor}
+                  color={textColor ? textColor : '#000'}
                 />
                 <div className={`${dateStyle ? dateStyle : ""}`}>-</div>
                 <Text
@@ -101,7 +102,7 @@ const Achievements = (props) => {
                   path={`${path}.${index}.endDate`}
                   maxWidth={datewidthmax}
                   maxChr={props.maxChr}
-                  color={textColor}
+                  color={textColor ? textColor : '#000'}
                 />
               </HStack>
             )}
@@ -113,7 +114,7 @@ const Achievements = (props) => {
                   customClass={`${roleStyle ? roleStyle : ""}`}
                   path={`${path}.${index}.role`}
                   maxWidth={props.maxwidth}
-                  color={textColor}
+                  color={textColor ? textColor : '#000'}
                 />
               </Box>
             )}

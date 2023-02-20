@@ -82,7 +82,7 @@ const Reference = (props) => {
                 value={item.name}
                 customClass={`${nameStyle}`}
                 path={`${path}.${index}.name`}
-                color={textColor}
+                color={textColor ? textColor : '#000'}
                 fontSize={fontSize}
                 fontWeight={fontWeight}
                 textAlign={textAlign}
@@ -98,7 +98,7 @@ const Reference = (props) => {
                 value={item.profession}
                 customClass={`${professionStyle}`}
                 path={`${path}.${index}.profession`}
-                color={textColor}
+                color={textColor ? textColor : '#000'}
                 fontSize={fontSize}
                 fontWeight={fontWeight}
                 textAlign={textAlign}
@@ -114,7 +114,7 @@ const Reference = (props) => {
                 value={item.address}
                 customClass={`${addressStyle}`}
                 path={`${path}.${index}.address`}
-                color={textColor}
+                color={textColor ? textColor : '#000'}
                 fontSize={fontSize}
                 fontWeight={fontWeight}
                 textAlign={textAlign}
@@ -128,7 +128,7 @@ const Reference = (props) => {
                 value={item.phone}
                 customClass={`${phoneStyle}`}
                 path={`${path}.${index}.phone`}
-                color={textColor}
+                color={textColor ? textColor : '#000'}
                 fontSize={fontSize}
                 fontWeight={fontWeight}
                 textAlign={textAlign}
@@ -142,7 +142,7 @@ const Reference = (props) => {
                 value={item.email}
                 customClass={`${emailStyle}`}
                 path={`${path}.${index}.email`}
-                color={textColor}
+                color={textColor ? textColor : '#000'}
                 fontSize={fontSize}
                 fontWeight={fontWeight}
                 textAlign={textAlign}

@@ -72,7 +72,7 @@ const PointsDescription = (props) => {
                   path={`${path}.${parentIndex}.pointsItems.${index}.title`}
                   maxWidth={maxWidth}
                   maxChr={maxChr}
-                  color={textColor}
+                  color={textColor ? textColor : '#000'}
                 />
               </Box>
             </Stack>

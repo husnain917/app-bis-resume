@@ -1,12 +1,4 @@
 import { Box, Flex, HStack } from "@chakra-ui/react";
-import { MdCastForEducation } from "react-icons/md";
-import { BsFillLayersFill } from "react-icons/bs";
-import { GiSkills, GiOrganigram } from "react-icons/gi";
-import { IoLanguageOutline } from "react-icons/io5";
-import { GoProject } from "react-icons/go";
-import { TbCertificate } from "react-icons/tb";
-import { FaHorseHead } from "react-icons/fa";
-import ImageSelector from "../components/imageSelector";
 import Name from "../components/commonSection/Name";
 import Profession from "../components/commonSection/Profession";
 import Classes from "../../styles/templates/novoResumeTemplate.module.css";
@@ -18,36 +10,23 @@ import Education from "../components/commonSection/Education";
 import WorkExperience from "../components/commonSection/WorkExperience";
 import RowSkill from "../components/commonSection/RowSkill";
 import PointsDescription from "../components/commonSection/PointsDescription";
-import Project from "../components/commonSection/Project";
 import Organization from "../components/commonSection/Organization";
-import Certificate from "../components/commonSection/Certificate";
-import Language from "../components/commonSection/Language";
-import Interest from "../components/commonSection/Interest";
 import useShow from "../components/tempSectionSide/useShow";
 import { useSelector } from "react-redux";
 import {
-    CERTIFICATE,
     EDUCATION,
-    INTEREST,
-    LANGUAGES,
     ORGANIZATION,
-    PROJECT,
     SKILL,
     WORK,
 } from "../components/tempSectionSide/SectionSideConstant";
 
 const Fashionsimple = () => {
     let resumeData = useSelector((state) => state.editorReducer.resumeData);
-    const { backgroundColor, color, thirdColor, forthColor } = useSelector(
+    const { backgroundColor, color, thirdColor, fourthColor } = useSelector(
         (store) => store.themeReducer.theme
     );
-    console.log("thirdColor======>", forthColor);
     // custom Hook For Template
     const [show, setShow] = useShow();
-    const themeHeadingColor = "#0C3366";
-    const themesubHeadingColor = "grey";
-    const themebackgrondColor = "white";
-    const themetextColor = "black";
     return (
         //  ~~~~~~~~~~~~~~ Executive Resume Template ~~~~~~~~~~~~~~  //
         <Flex
@@ -61,7 +40,7 @@ const Fashionsimple = () => {
                 maxW={837}
                 pt={8}
                 pb={2}
-                bg={backgroundColor ? backgroundColor : themebackgrondColor}
+                bg={'#fff'}
                 borderRadius={6}
                 borderWidth="1px"
                 borderColor={"#00000023"}
@@ -83,14 +62,14 @@ const Fashionsimple = () => {
                                     direction="row"
                                     FNameStyle={Classes.Name}
                                     SNameStyle={Classes.Name}
-                                    fontColor={thirdColor ? thirdColor : themeHeadingColor}
+                                    fontColor={backgroundColor ? backgroundColor : '#0C3366'}
                                     maxChr={13}
                                     maxWidth={250}
                                 />
                                 {/* Profession Section  */}
                                 <Profession
                                     professionStyle={Classes.ProfessionHybrid}
-                                    fontColor={forthColor ? forthColor : themesubHeadingColor}
+                                    fontColor={thirdColor ? thirdColor : 'grey'}
                                     maxWidth={500}
                                 />
                             </Box>
@@ -100,7 +79,7 @@ const Fashionsimple = () => {
                                 maxW={"500px"}
                                 minW={"60%"}
                                 aboutStyle={Classes.profile}
-                                fontColor={color ? color : themetextColor}
+                                fontColor={'#000'}
                             />
                         </HStack>
                     </Box>
@@ -111,14 +90,14 @@ const Fashionsimple = () => {
                             website={true}
                             location={true}
                             circleIcon={true}
-                            iconColor={thirdColor ? thirdColor : themeHeadingColor}
+                            iconColor={backgroundColor ? backgroundColor : '#0C3366'}
                             circleSize="25px"
                             iconSize="20px"
                             direction="row-reverse"
                             style={Classes.DetailStyle}
                             margin={"8px 0px 0px 0px"}
                             maxWidth={200}
-                            textColor={color ? color : "black"}
+                            textColor={"#000"}
                         />
                     </Box>
                 </Box>
@@ -141,12 +120,12 @@ const Fashionsimple = () => {
                                     title="SKILLS"
                                     fontSize="23px"
                                     fontWeight={"bold"}
-                                    color={thirdColor ? thirdColor : themeHeadingColor}
+                                    color={backgroundColor ? backgroundColor : '#0C3366'}
                                     maxW={"full"}
                                     minW={"full"}
                                     margin={"10px 0px"}
-                                    borderBottom={`2px solid ${color ? color : themetextColor}`}
-                                    borderTop={`2px solid ${color ? color : themetextColor}`}
+                                    borderBottom={`2px solid ${backgroundColor ? backgroundColor : '#000'}`}
+                                    borderTop={`2px solid ${backgroundColor ? backgroundColor : '#000'}`}
                                     alignItems={"center"}
                                     justifyContent={"center"}
                                     onSideSectionShow={() => setShow({ ...show, skills: true })}
@@ -157,9 +136,9 @@ const Fashionsimple = () => {
                                     skillStyle={Classes.skillText}
                                     childContainerStyle={Classes.skillContainer}
                                     skillPlaceholder={"Bussiness Process"}
-                                    bg={thirdColor ? thirdColor : themeHeadingColor}
+                                    bg={fourthColor ? fourthColor : '#0C3366'}
                                     textColor={
-                                        backgroundColor ? backgroundColor : themebackgrondColor
+                                        color ? color : '#fff'
                                     }
                                 />
                             </div>
@@ -186,14 +165,14 @@ const Fashionsimple = () => {
                                     title="WORK EXPERIENCE"
                                     fontSize="28px"
                                     fontWeight={"bold"}
-                                    color={thirdColor ? thirdColor : themeHeadingColor}
+                                    color={backgroundColor ? backgroundColor : '#0C3366'}
                                     fontFamily={"Ubuntu"}
                                     minW={"full"}
                                     maxW="full"
                                     margin={"10px 0px"}
                                     onSideSectionShow={() => setShow({ ...show, work: true })}
-                                    borderBottom={`2px solid ${color ? color : themetextColor}`}
-                                    borderTop={`2px solid ${color ? color : themetextColor}`}
+                                    borderBottom={`2px solid ${backgroundColor ? backgroundColor : '#000'}`}
+                                    borderTop={`2px solid ${backgroundColor ? backgroundColor : '#000'}`}
                                     alignItems={"center"}
                                     justifyContent={"center"}
                                     paddingVertical={5}
@@ -206,7 +185,6 @@ const Fashionsimple = () => {
                                     company={true}
                                     location={false}
                                     achieement={true}
-                                    bgColor={backgroundColor ? backgroundColor : themebackgrondColor}
                                     summary_placeholder="Company Description (optional,fill when the company is not well known"
                                     location_placeholder="Country,City"
                                     dateStyle={Classes.date}
@@ -218,7 +196,8 @@ const Fashionsimple = () => {
                                     parentContainerStyle={Classes.WorkparentContainerStyle}
                                     locationWithDate={true}
                                     insideContainerStyle={Classes.insideContainerStyle}
-                                    textColor={color ? color : themetextColor}
+                                    textColor={backgroundColor ? backgroundColor : "#0C3366"}
+                                    companFontColor={"#000"}
                                     positionContainerStyle={Classes.positionContainerStyle}
                                     containerForSummaryAndAchievement={
                                         Classes.containerForSummaryAndAchievement
@@ -240,12 +219,12 @@ const Fashionsimple = () => {
                                             addPoint={addPoint}
                                             deletePoint={deletePoint}
                                             parentIndex={index}
-                                            textColor={color ? color : themetextColor}
+                                            textColor={'#000'}
                                             BulletContainerStyle={Classes.BulletContainerStyle}
                                             BulletIcon={() => (
                                                 <Box
                                                     w={"10px"}
-                                                    bg={thirdColor ? thirdColor : themeHeadingColor}
+                                                    bg={backgroundColor ? backgroundColor : '#0C3366'}
                                                     h={"3px"}
                                                 />
                                             )}
@@ -280,15 +259,15 @@ const Fashionsimple = () => {
                                     title="EDUCATION"
                                     fontSize="23px"
                                     fontWeight={"bold"}
-                                    color={thirdColor ? thirdColor : themeHeadingColor}
+                                    color={backgroundColor ? backgroundColor : '#0C3366'}
                                     margin={"0px 0px 10px 0px"}
                                     onSideSectionShow={() =>
                                         setShow({ ...show, education: true })
                                     }
                                     minW={"full"}
                                     maxW="full"
-                                    borderBottom={`2px solid ${color ? color : themetextColor}`}
-                                    borderTop={`2px solid ${color ? color : themetextColor}`}
+                                    borderBottom={`2px solid ${backgroundColor ? backgroundColor : '#0C3366'}`}
+                                    borderTop={`2px solid ${backgroundColor ? backgroundColor : '#0C3366'}`}
                                     alignItems={"center"}
                                     justifyContent={"center"}
                                     paddingVertical={5}
@@ -305,9 +284,8 @@ const Fashionsimple = () => {
                                     datewidthmax={"180px"}
                                     maxChr={20}
                                     maxWidth={"420px"}
-                                    textColor={color ? color : themetextColor}
-                                    companFontColor={thirdColor ? thirdColor : "black"}
-
+                                    textColor={backgroundColor ? backgroundColor : '#0C3366'}
+                                    companFontColor={"#000"}
                                 />
                             </div>
                         </div>
@@ -334,15 +312,15 @@ const Fashionsimple = () => {
                                     title="ORGANIZATION"
                                     fontSize="23px"
                                     fontWeight={"bold"}
-                                    color={thirdColor ? thirdColor : themeHeadingColor}
+                                    color={backgroundColor ? backgroundColor : '#0C3366'}
                                     margin={"15px 0px"}
                                     onSideSectionShow={() =>
                                         setShow({ ...show, organization: true })
                                     }
                                     maxW={"full"}
                                     minW={"full"}
-                                    borderBottom={`2px solid ${color ? color : themetextColor}`}
-                                    borderTop={`2px solid ${color ? color : themetextColor}`}
+                                    borderBottom={`2px solid ${backgroundColor ? backgroundColor : '#0C3366'}`}
+                                    borderTop={`2px solid ${backgroundColor ? backgroundColor : '#0C3366'}`}
                                     alignItems={"center"}
                                     justifyContent={"center"}
                                     paddingVertical={5}
@@ -358,8 +336,9 @@ const Fashionsimple = () => {
                                     rolePlaceholder="Role"
                                     maxwidth={"420px"}
                                     datewidthmax={"200px"}
-                                    textColor={color ? color : themetextColor}
-
+                                    roleColor={'#000'}
+                                    dateColor={backgroundColor ? backgroundColor : '#0C3366'}
+                                    nameColor={backgroundColor ? backgroundColor : '#0C3366'}
                                 />
                             </div>
                         </div>

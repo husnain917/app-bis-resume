@@ -1,12 +1,5 @@
 import React from "react";
 import { Box, Flex, HStack } from "@chakra-ui/react";
-import { MdCastForEducation } from "react-icons/md";
-import { BsFillLayersFill } from "react-icons/bs";
-import { GiSkills, GiOrganigram } from "react-icons/gi";
-import { IoLanguageOutline } from "react-icons/io5";
-import { GoProject } from "react-icons/go";
-import { TbCertificate } from "react-icons/tb";
-import { FaHorseHead } from "react-icons/fa";
 import Classes from "../../styles/templates/FunctionalFashionTemp.module.css";
 import Name from "../../src/components/commonSection/Name";
 import Profession from "../../src/components/commonSection/Profession";
@@ -16,21 +9,15 @@ import Heading from "../../src/components/commonSection/Heading";
 import Education from "../../src/components/commonSection/Education";
 import WorkExperience from "../../src/components/commonSection/WorkExperience";
 import RowSkill from "../../src/components/commonSection/RowSkill";
-import Project from "../../src/components/commonSection/Project";
 import Organization from "../../src/components/commonSection/Organization";
-import Certificate from "../../src/components/commonSection/Certificate";
 import Language from "../../src/components/commonSection/Language";
-import Interest from "../../src/components/commonSection/Interest";
 import { useSelector } from "react-redux";
 import useShow from "../../src/components/tempSectionSide/useShow";
 import SectionSideMenu from "../../src/components/tempSectionSide/SectionSideMenu";
 import {
-  CERTIFICATE,
   EDUCATION,
-  INTEREST,
   LANGUAGES,
   ORGANIZATION,
-  PROJECT,
   SKILL,
   WORK,
 } from "../../src/components/tempSectionSide/SectionSideConstant";
@@ -39,10 +26,9 @@ import PointsDescription from "../components/commonSection/PointsDescription";
 
 const FunctionalFashionTemp = () => {
   let resumeData = useSelector((state) => state.editorReducer.resumeData);
-  const { backgroundColor, color, thirdColor } = useSelector(
+  const { backgroundColor, color, thirdColor, fourthColor } = useSelector(
     (store) => store.themeReducer.theme
   );
-  const themeSecondaryColor = "#59BCAE";
   // custom Hook For Template
   const [show, setShow] = useShow();
 
@@ -57,24 +43,25 @@ const FunctionalFashionTemp = () => {
         minW={837}
         maxW={837}
         minHeight={1183}
-        bg={backgroundColor ? backgroundColor : "white"}
+        bg={"#fff"}
         borderRadius={6}
         borderWidth="1px"
         borderColor={"#00000023"}
         pt={5}
       >
-        <HStack alignItems="stretch">
-          <Box minW={240} maxW={240} borderLeftRadius={6}>
+        <HStack alignItems="stretch" transition="0.8s background">
+          <Box minW={240} maxW={240} borderLeftRadius={6} transition="0.8s background">
             {/* Image Section  */}
-            <Box display={"flex"} justifyContent="center">
+            <Box display={"flex"} justifyContent="center" transition="0.8s background">
               <ImageSelector
                 minWidth={180}
                 maxWidth={180}
                 minHeight={180}
                 maxHeight={180}
+                borderColor={backgroundColor ? backgroundColor : "#fff"}
               />
             </Box>
-            <Box pl={5}>
+            <Box pl={5} transition="0.8s background">
               <Contact
                 phone={true}
                 email={true}
@@ -82,11 +69,11 @@ const FunctionalFashionTemp = () => {
                 website={true}
                 circleIcon={true}
                 circleSize="25px"
-                iconColor={color ? color : themeSecondaryColor}
+                iconColor={backgroundColor ? backgroundColor : '#59BCAE'}
                 margin={"10px 0px 0px 0px"}
                 parentStyle={Classes.contactFont}
                 maxWidth={"180px"}
-                textColor={thirdColor ? thirdColor : "black"}
+                textColor={"#000"}
               />
               {/* skill Section  */}
               {resumeData?.skills?.visible && (
@@ -107,7 +94,7 @@ const FunctionalFashionTemp = () => {
                       title="SKILLS"
                       fontSize="23px"
                       fontWeight={"bold"}
-                      color={color ? color : themeSecondaryColor}
+                      color={backgroundColor ? backgroundColor : '#59BCAE'}
                       maxW={"full"}
                       minW={"full"}
                       margin={"10px 0px"}
@@ -116,14 +103,15 @@ const FunctionalFashionTemp = () => {
                       }
                       headingContainerStyle={{
                         borderBottomWidth: 3,
-                        borderBottomColor: color ? color : themeSecondaryColor,
+                        borderBottomColor: color ? color : '#59BCAE',
                       }}
                     />
                     {/* Skill Row Components */}
                     <RowSkill
                       skillStyle={Classes.baseText}
-                      bg={color ? color : themeSecondaryColor}
+                      bg={fourthColor ? fourthColor : '#59BCAE'}
                       parentContainerStyle={Classes?.SkillsparentContainerStyle}
+                      textColor={color ? color : "#fff"}
                     />
                   </div>
                 </div>
@@ -148,7 +136,7 @@ const FunctionalFashionTemp = () => {
                       title="LANGUAGES"
                       fontSize="23px"
                       fontWeight={"bold"}
-                      color={color ? color : themeSecondaryColor}
+                      color={backgroundColor ? backgroundColor : '#59BCAE'}
                       onSideSectionShow={() =>
                         setShow({ ...show, languages: true })
                       }
@@ -156,18 +144,20 @@ const FunctionalFashionTemp = () => {
                       minW={"full"}
                       headingContainerStyle={{
                         borderBottomWidth: 3,
-                        borderBottomColor: color ? color : themeSecondaryColor,
+                        borderBottomColor: backgroundColor ? backgroundColor : '#59BCAE',
                       }}
                     />
                     {/* Language Component */}
-                    <Language maxWidth={"180px"} textColor={thirdColor ? thirdColor : 'black'} />
+                    <Language
+                      maxWidth={"180px"}
+                      textColor={'#000'} />
                   </div>
                 </div>
               )}
             </Box>
           </Box>
-          <Box minW={585} maxW={585} h="full">
-            <Box bg={color ? color : themeSecondaryColor} p={3}>
+          <Box minW={585} maxW={585} h="full" transition="0.8s background">
+            <Box bg={backgroundColor ? backgroundColor : '#59BCAE'} p={3} transition="0.8s background">
               <Name
                 FName={true}
                 SName={true}
@@ -182,18 +172,18 @@ const FunctionalFashionTemp = () => {
               <Profession
                 professionStyle={Classes.baseTempProfession}
                 maxWidth={"full"}
-                fontColor={"white"}
+                fontColor={"#fff"}
               />
               {/* About Section */}
               <About
                 minW="full"
                 aboutStyle={Classes.description}
                 maxWidth={"full"}
-                fontColor={"white"}
+                fontColor={thirdColor ? thirdColor : "#fff"}
               />
             </Box>
 
-            <Box py={2} p={3}>
+            <Box py={2} p={3} transition="0.8s background">
               {resumeData?.work?.visible && (
                 <div>
                   <div className={Classes.sideMenuBox}>
@@ -213,13 +203,13 @@ const FunctionalFashionTemp = () => {
                       title="WORK EXPERIENCE"
                       fontSize="28px"
                       fontWeight={"bold"}
-                      color={color ? color : themeSecondaryColor}
+                      color={backgroundColor ? backgroundColor : '#59BCAE'}
                       fontFamily={"Ubuntu"}
                       minW={"full"}
                       maxW="full"
                       headingContainerStyle={{
                         borderBottomWidth: 3,
-                        borderBottomColor: color ? color : themeSecondaryColor,
+                        borderBottomColor: backgroundColor ? backgroundColor : '#59BCAE',
                       }}
                       margin={"10px 0px"}
                       onSideSectionShow={() => setShow({ ...show, work: true })}
@@ -233,7 +223,6 @@ const FunctionalFashionTemp = () => {
                       company={true}
                       location={true}
                       achieement={true}
-                      bgColor={backgroundColor ? backgroundColor : "white"}
                       summary_placeholder="Company Description (optional,fill when the company is not well known"
                       location_placeholder="Country,City"
                       dateStyle={Classes.date}
@@ -245,12 +234,12 @@ const FunctionalFashionTemp = () => {
                       parentContainerStyle={Classes.WorkparentContainerStyle}
                       locationWithDate={true}
                       insideContainerStyle={Classes.insideContainerStyle}
-                      textColor={color ? color : themeSecondaryColor}
+                      textColor={backgroundColor ? backgroundColor : '#59BCAE'}
                       positionContainerStyle={Classes.positionContainerStyle}
                       containerForSummaryAndAchievement={
                         Classes.containerForSummaryAndAchievement
                       }
-                      companFontColor={thirdColor ? thirdColor : "black"}
+                      companFontColor={"#000"}
                       companFontWeight={"normal"}
                       minW={"full"}
                       maxW="full"
@@ -274,13 +263,13 @@ const FunctionalFashionTemp = () => {
                           addPoint={addPoint}
                           deletePoint={deletePoint}
                           parentIndex={index}
-                          textColor={thirdColor}
+                          textColor={'#000'}
                           BulletContainerStyle={Classes.BulletContainerStyle}
                           maxWidth={"525px"}
                           BulletIcon={() => (
                             <Box
                               w={"100%"}
-                              borderColor={color ? color : themeSecondaryColor}
+                              borderColor={backgroundColor ? backgroundColor : '#59BCAE'}
                               borderWidth={1}
                               h={"10px"}
                             />
@@ -315,7 +304,7 @@ const FunctionalFashionTemp = () => {
                     title="EDUCATION"
                     fontSize="23px"
                     fontWeight={"bold"}
-                    color={color ? color : themeSecondaryColor}
+                    color={backgroundColor ? backgroundColor : '#59BCAE'}
                     margin={"0px 0px 10px 0px"}
                     onSideSectionShow={() =>
                       setShow({ ...show, education: true })
@@ -324,7 +313,7 @@ const FunctionalFashionTemp = () => {
                     maxW="full"
                     headingContainerStyle={{
                       borderBottomWidth: 3,
-                      borderBottomColor: color ? color : themeSecondaryColor,
+                      borderBottomColor: backgroundColor ? backgroundColor : '#59BCAE',
                     }}
                   />
                   {/* Education Components */}
@@ -339,8 +328,8 @@ const FunctionalFashionTemp = () => {
                     datewidthmax={"180px"}
                     maxChr={20}
                     maxWidth={"420px"}
-                    textColor={color ? color : themeSecondaryColor}
-                    companFontColor={thirdColor ? thirdColor : "black"}
+                    textColor={backgroundColor ? backgroundColor : '#59BCAE'}
+                    companFontColor={"#000"}
                   />
                 </div>
               </div>
@@ -366,7 +355,7 @@ const FunctionalFashionTemp = () => {
                     title="ORGANIZATION"
                     fontSize="23px"
                     fontWeight={"bold"}
-                    color={color ? color : themeSecondaryColor}
+                    color={backgroundColor ? backgroundColor : '#59BCAE'}
                     margin={"15px 0px"}
                     onSideSectionShow={() =>
                       setShow({ ...show, organization: true })
@@ -375,7 +364,7 @@ const FunctionalFashionTemp = () => {
                     maxW="full"
                     headingContainerStyle={{
                       borderBottomWidth: 3,
-                      borderBottomColor: color ? color : themeSecondaryColor,
+                      borderBottomColor: backgroundColor ? backgroundColor : '#59BCAE',
                     }}
                   />
                   {/* Organization Component */}
@@ -389,9 +378,9 @@ const FunctionalFashionTemp = () => {
                     rolePlaceholder="Role"
                     maxwidth={"420px"}
                     datewidthmax={"200px"}
-                    roleColor={color ? color : themeSecondaryColor}
-                    dateColor={color ? color : themeSecondaryColor}
-                    nameColor={color ? color : themeSecondaryColor}
+                    roleColor={'#000'}
+                    dateColor={backgroundColor ? backgroundColor : '#59BCAE'}
+                    nameColor={backgroundColor ? backgroundColor : '#59BCAE'}
                   />
                 </div>
               </div>

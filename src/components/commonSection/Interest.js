@@ -1,27 +1,35 @@
-import { Box, ListItem, UnorderedList } from "@chakra-ui/react";
+import { Box, UnorderedList, ListItem, Text as ChakraText } from "@chakra-ui/react";
 import React from "react";
-import { useDispatch } from "react-redux";
-import { connect } from "react-redux";
-import { sampleData } from "../../../constants/sampleData";
+import { connect, useDispatch } from "react-redux";
 import {
   addNewObj,
   deleteObjInArray,
-  onBlurField,
   updateOrder,
 } from "../../../store/actions/builderAction";
 import Util from "../../../utils/templateUtils";
 import Dnd from "./Dnd";
+import { onBlurField } from "../../../store/actions/builderAction";
 import Text from "./Text";
+import { sampleData } from "../../../constants/sampleData";
 const Interest = (props) => {
+  const {
+    resumeData,
+    parentContainerStyle,
+    childContainerStyle,
+    maxChr,
+    maxWidth,
+    textColor,
+    dndDirection,
+    interestPlaceholder,
+    interestStyle,
+    borderColor,
+    maxBoxWidth,
+  } = props;
   const data = resumeData?.hobbies?.items?.length
     ? [...resumeData?.hobbies?.items]
     : [...sampleData?.data?.hobbies?.items];
-  const dispatch = useDispatch();
   const path = "hobbies.items";
-  const onOrderUpdate = (datas) => {
-    const storeReorder = Util.mapOrder(data, datas, "id");
-    dispatch(updateOrder(storeReorder, path));
-  };
+  const dispatch = useDispatch();
   const _addNewItem = () => {
     dispatch(addNewObj(data[0], path));
   };
@@ -30,18 +38,10 @@ const Interest = (props) => {
     let deletedPath = `${path}.${index}`;
     dispatch(deleteObjInArray(deletedPath));
   };
-  const {
-    resumeData,
-    dndDirection,
-    interestPlaceholder,
-    interestStyle,
-    parentContainerStyle,
-    childContainerStyle,
-    borderColor,
-    maxBoxWidth,
-    maxChr,
-    maxWidth,
-  } = props;
+  const onOrderUpdate = (datas) => {
+    const storeReorder = Util.mapOrder(data, datas, "id");
+    dispatch(updateOrder(storeReorder, path));
+  };
   return (
     <div className={`${parentContainerStyle ? parentContainerStyle : ""}`}>
       <Dnd
@@ -69,6 +69,7 @@ const Interest = (props) => {
                   path={`${path}.${index}.title`}
                   maxWidth={props.maxwidth}
                   maxChr={maxChr}
+                  color={textColor ? textColor : '#000'}
                 />
               </Box>
             ) : (
@@ -82,6 +83,7 @@ const Interest = (props) => {
                     customClass={`${interestStyle ? interestStyle : ""}`}
                     path={`${path}.${index}.title`}
                     maxWidth={props.maxwidth}
+                    color={textColor ? textColor : '#000'}
                   />
                 </ListItem>
               </UnorderedList>
