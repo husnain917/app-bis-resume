@@ -36,7 +36,7 @@ export default function Advantages() {
       setToastWidth(0);
       setIsTabActive((prev) => (prev + 1) % data.length);
     }, 10000);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const imageSrc = toastWidth >= 100 ? isTabActive : isTabActive - 1;
@@ -103,7 +103,12 @@ export default function Advantages() {
         ) : (
           <AdvSlider />
         )}
-        <Box display="flex" alignItems="center" justifyContent="space-around">
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="space-around"
+          mt={[10, 6, 4, 0, 0]}
+        >
           <Box className="cursor">
             <Link href="/templates">
               <CommonButton

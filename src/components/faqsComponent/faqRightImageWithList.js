@@ -65,9 +65,9 @@ const FaqRightImageWithList = ({
             <>
               <UnorderedList
                 ml={2}
-                fontSize={["0.9em", "0.9em", "1em", "1em", "1.1em"]}
+                fontSize={["0.9em", "0.9em", "1em", "1em", "1em"]}
                 lineHeight={["20px", "20px", "24px", "24px", "24px"]}
-                className={"medium-text"}
+                className={"small-text"}
               >
                 <ListItem ml="3" mb={0.5}>
                   {item1}
