@@ -96,7 +96,7 @@ const Fashionsimple = () => {
                             direction="row-reverse"
                             style={Classes.DetailStyle}
                             margin={"8px 0px 0px 0px"}
-                            maxWidth={200}
+                            maxWidth={180}
                             textColor={"#000"}
                         />
                     </Box>
