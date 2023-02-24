@@ -63,8 +63,8 @@ const Fashionsimple = () => {
                                     FNameStyle={Classes.Name}
                                     SNameStyle={Classes.Name}
                                     fontColor={backgroundColor ? backgroundColor : '#0C3366'}
-                                    maxChr={15}
-                                    maxWidth={200}
+                                    maxChr={10}
+                                    maxWidth={250}
                                 />
                                 {/* Profession Section  */}
                                 <Profession
@@ -96,7 +96,7 @@ const Fashionsimple = () => {
                             direction="row-reverse"
                             style={Classes.DetailStyle}
                             margin={"8px 0px 0px 0px"}
-                            maxWidth={"full"}
+                            maxWidth={180}
                             textColor={"#000"}
                         />
                     </Box>
@@ -181,6 +181,7 @@ const Fashionsimple = () => {
                                 <WorkExperience
                                     date={true}
                                     position={true}
+                                    maxWidth={300}
                                     company={true}
                                     location={false}
                                     achieement={true}

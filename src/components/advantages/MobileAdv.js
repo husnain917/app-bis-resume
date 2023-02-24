@@ -59,8 +59,9 @@ export default function MobileAdv({ advNum, title, advDesc, imgSrc }) {
           bgColor="white"
           textAlign="center"
           fontSize={["0.5rem", "0.8rem", "2rem"]}
-          pl="5%"
-          pr="5%"
+          pl="1%"
+          pr="1%"
+          mb={4}
         >
           {advDesc}
         </Text>

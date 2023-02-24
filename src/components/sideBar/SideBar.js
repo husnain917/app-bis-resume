@@ -46,16 +46,6 @@ export default function SideBar() {
                   </a>
                 </Link>
               </li>{" "}
-              <li>
-                <Link href={"/ComingSoon"}>
-                  <a className={styles.a}>
-                    <i>
-                      <RiFileEditFill />
-                    </i>
-                    <span className={styles.BtnOpen}>COVER LETTER Build</span>
-                  </a>
-                </Link>
-              </li>
               <li className={styles.li}>
                 <a href="https://www.facebook.com/">
                   <i className={styles.pin}>
