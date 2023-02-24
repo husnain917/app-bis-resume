@@ -60,7 +60,6 @@ export default function DownloadModal({
                         objectFit='contain'
                         src='/owly-head.png'
                         alt='Image Not Found'
-                        transition={'1.5s'}
                     />
                 </Box>
                 <Box
@@ -72,11 +71,10 @@ export default function DownloadModal({
                         objectFit='contain'
                         src='/owly-wing.png'
                         alt='Image Not Found'
-                        transition={'1.5s'}
                     />
                 </Box>
                 <ModalContent
-                    transition={'0.5s'}
+                    transition={'1s'}
                 >
                     <ModalBody
                         textAlign={'center'}

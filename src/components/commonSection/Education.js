@@ -76,6 +76,7 @@ const Education = (props) => {
     maxChr,
     companFontColor,
     bgColor,
+    textFieldMargin,
   } = props;
 
   return (
@@ -152,6 +153,7 @@ const Education = (props) => {
                       textAlign={textAlign}
                       maxWidth={maxWidth}
                       minWidth={minWidth}
+                      marginTop={textFieldMargin ? textFieldMargin : ''}
                     />
                   </Box>
                 )}
@@ -177,11 +179,13 @@ const Education = (props) => {
                         maxWidth={datewidthmax}
                         minWidth={datewidthmin}
                         maxChr={maxChr}
+                        marginTop={textFieldMargin ? textFieldMargin : ''}
                       />
                       {dateDirection == "row" && (
                         <p
                           style={{
                             fontWeight: "bold",
+                            marginTop: textFieldMargin ? textFieldMargin : '',
                           }}
                           className={`${dateStyle}`}
                         >
@@ -203,6 +207,7 @@ const Education = (props) => {
                         maxWidth={datewidthmax}
                         minWidth={datewidthmin}
                         maxChr={maxChr}
+                        marginTop={textFieldMargin ? textFieldMargin : ''}
                       />
                     </Stack>
                   </Box>
@@ -227,6 +232,7 @@ const Education = (props) => {
                       textAlign={textAlign}
                       maxWidth={maxWidth}
                       minWidth={minWidth}
+                      marginTop={textFieldMargin ? textFieldMargin : ''}
                     />
                   </Box>
                 )}
@@ -246,6 +252,7 @@ const Education = (props) => {
                     fontSize={fontSize}
                     color={textColor ? textColor : '#000'}
                     textAlign={textAlign}
+                    marginTop={textFieldMargin ? textFieldMargin : ''}
                   />
                 </>
               )}
@@ -263,6 +270,7 @@ const Education = (props) => {
                     textAlign={textAlign}
                     maxWidth={maxWidth}
                     minWidth={minWidth}
+                    marginTop={textFieldMargin ? textFieldMargin : ''}
                   />
                 </>
               )}

@@ -90,6 +90,7 @@ const WorkExperience = (props) => {
     bgColor,
     companFontColor,
     companFontWeight,
+    textFieldMargin,
   } = props;
   const LocationComponent = ({ item, index }) => {
     return (
@@ -104,6 +105,7 @@ const WorkExperience = (props) => {
             color={textColor ? textColor : '#000'}
             textAlign={textAlign}
             maxWidth={"200px"}
+            marginTop={textFieldMargin ? textFieldMargin : ''}
           />
         </Box>
       </>
@@ -168,6 +170,7 @@ const WorkExperience = (props) => {
                         fontWeight={fontWeight}
                         textAlign={textAlign}
                         maxWidth={maxWidth}
+                        marginTop={textFieldMargin ? textFieldMargin : ''}
                       />
                     </Box>
                   )}
@@ -206,6 +209,7 @@ const WorkExperience = (props) => {
                       fontWeight={companFontWeight ? companFontWeight : fontWeight}
                       textAlign={textAlign}
                       maxWidth={maxWidth}
+                      marginTop={textFieldMargin ? textFieldMargin : ''}
                     />
                   </Box>
                 )}
@@ -233,11 +237,13 @@ const WorkExperience = (props) => {
                         fontWeight={fontWeight}
                         textAlign={textAlign}
                         maxWidth={datewidthmax}
+                        marginTop={textFieldMargin ? textFieldMargin : ''}
                       />
                       {dateDirection == "row" && (
                         <p
                           style={{
                             fontWeight: "bold",
+                            marginTop: textFieldMargin ? textFieldMargin : '',
                           }}
                           className={dateStyle}
                         >
@@ -258,6 +264,7 @@ const WorkExperience = (props) => {
                         textAlign={textAlign}
                         maxWidth={datewidthmax}
                         maxChr={props.maxChr}
+                        marginTop={textFieldMargin ? textFieldMargin : ''}
                       />
                     </Stack>
                     {achieement && (
@@ -296,6 +303,7 @@ const WorkExperience = (props) => {
                       color={textColor ? textColor : '#000'}
                       textAlign={textAlign}
                       maxWidth={maxWidth}
+                      marginTop={textFieldMargin ? textFieldMargin : ''}
                     />
                   </Box>
                 )}
