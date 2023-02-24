@@ -25,7 +25,7 @@ import {
     WORK,
 } from "../components/tempSectionSide/SectionSideConstant";
 
-export default function novoSimpleTemp() {
+export default function Novo_Simple_Temp() {
     let resumeData = useSelector((state) => state.editorReducer.resumeData);
     const { backgroundColor, color, thirdColor, fourthColor } = useSelector(
         (store) => store.themeReducer.theme
