@@ -247,7 +247,7 @@ export default function AuthModal({
                 display="flex"
                 justifyContent={resetPass ? "space-between" : "center"}
                 alignItems="center"
-                mt="7%"
+                mt="16%"
                 pl={"7%"}
                 pr={"7%"}
               >
@@ -292,7 +292,7 @@ export default function AuthModal({
                 )}
               </Box>
 
-              <Box ml="7%" mr="7%" mt={err.fieldErr !== "" ? "3%" : "6%"}>
+              <Box ml="7%" mr="7%" mt={err.fieldErr !== "" ? "3%" : "9%"}>
                 {err.fieldErr !== "" && (
                   <p
                     style={{
@@ -528,7 +528,7 @@ export default function AuthModal({
                   <>
                     <CustomBtn
                       clr="green"
-                      title={loadingsignup ?  <Loader size={150} color='white' /> : "Register Now"}
+                      title={loadingsignup ? <Loader size={150} color='white' /> : "Register Now"}
                       bgColor="#00C8AA"
                       color="white"
                       hoverColor="#00e2c0"
@@ -541,7 +541,7 @@ export default function AuthModal({
                   <CustomBtn
                     clr="green"
                     title={
-                      resetLoading ?  <Loader size={150} color='white' /> : "Request Password Change"
+                      resetLoading ? <Loader size={150} color='white' /> : "Request Password Change"
                     }
                     bgColor="#00C8AA"
                     color="white"
@@ -557,7 +557,7 @@ export default function AuthModal({
                     {!fieldActive && (
                       <CustomBtn
                         clr="green"
-                        title={loadingLogin ?  <Loader size={150} color='white' /> : "Sign In"}
+                        title={loadingLogin ? <Loader size={150} color='white' /> : "Sign In"}
                         bgColor="#00C8AA"
                         color="white"
                         blue={true}
