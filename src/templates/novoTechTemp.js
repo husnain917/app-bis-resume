@@ -127,6 +127,7 @@ export default function Novo_Tech_Temp() {
                             width={'33.2%'}
                             transition="0.8s background"
                             margin={'0px 7px 0px 0px'}
+                            bg={backgroundColor ? backgroundColor : '#1d3344'}
                         >
                             <Box
                                 bg={backgroundColor ? backgroundColor : '#1d3344'}
@@ -224,6 +225,7 @@ export default function Novo_Tech_Temp() {
                                                 datewidthmax={"210px"}
                                                 textColor={'#000'}
                                                 companFontColor={backgroundColor ? backgroundColor : '#1d3344'}
+                                                textFieldMargin={'-10px'}
                                             />
                                         </div>
                                     </div>
@@ -281,6 +283,7 @@ export default function Novo_Tech_Temp() {
                                                 maxWidth={"465px"}
                                                 maxChr={20}
                                                 datewidthmax={"460px"}
+                                                textFieldMargin={'-10px'}
                                                 textColor={'#000'}
                                                 companFontColor={backgroundColor ? backgroundColor : '#1d3344'}
                                                 ponintsDescription={true}

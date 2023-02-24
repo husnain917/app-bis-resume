@@ -310,278 +310,132 @@ export default function Novo_Hybird_Temp() {
             </Box>
             <Box
               width={'44%'}
-              bg="#ebebeb"
-              borderRadius={6}
-              pb={2}
-              pl={"5px"}
-              transition="0.8s background"
             >
-              <Box>
-                {resumeData?.skills?.visible && (
-                  <div className={styles.sideMenu}>
-                    <div className={styles.width}>
-                      {show.skills && (
-                        <SectionSideMenu
-                          bg="#006772"
-                          iconColor={"#fff"}
-                          onHide={() => setShow({ ...show, skills: false })}
-                          onDelete={SKILL}
-                        />
-                      )}
-                    </div>
-                    <div>
-                      {/* skill Heading */}
-                      <Heading
-                        title="SKILLS"
-                        circleSize="38px"
-                        circleBg={backgroundColor ? backgroundColor : "#432543"}
-                        circleIconHeading={true}
-                        icon={(props) => (
-                          <GiSkills {...props} size={18} color={"white"} />
-                        )}
-                        fontSize="23px"
-                        fontWeight={"bold"}
-                        color={backgroundColor ? backgroundColor : "#432543"}
-                        minW={250}
-                        maxW={250}
-                        margin={"10px 0px"}
-                        onSideSectionShow={() =>
-                          setShow({ ...show, skills: true })
-                        }
-                      />
-                      {/* Skill Row Components */}
-                      <RowSkill
-                        skillStyle={styles.skillText}
-                        maxWidth={"250px"}
-                        maxChr={20}
-                        bg={fourthColor ? fourthColor : "#a192a1"}
-                        textColor={color ? color : "#fff"}
-                      />
-                    </div>
-                  </div>
-                )}
-              </Box>
-              <Box>
-                {resumeData?.projects?.visible && (
-                  <div className={styles.sideMenu}>
-                    <div className={styles.width}>
-                      {/* Section Side Menu */}
-                      {show.project && (
-                        <SectionSideMenu
-                          bg="#006772"
-                          iconColor={"#fff"}
-                          onHide={() => setShow({ ...show, project: false })}
-                          onDelete={PROJECT}
-                        />
-                      )}
-                    </div>
-                    <div>
-                      {/* project Section Heading */}
-                      <Heading
-                        title="PERSONAL PROJECTS"
-                        circleSize="38px"
-                        circleBg={backgroundColor ? backgroundColor : "#432543"}
-                        circleIconHeading={true}
-                        icon={(props) => (
-                          <GoProject {...props} size={18} color={"white"} />
-                        )}
-                        fontSize="23px"
-                        fontWeight={"bold"}
-                        color={backgroundColor ? backgroundColor : "#432543"}
-                        minW={310}
-                        maxW={310}
-                        margin={"15px 0px 8px 0px"}
-                        onSideSectionShow={() =>
-                          setShow({ ...show, project: true })
-                        }
-                      />
-                      {/* project Component */}
-                      <Project
-                        project={true}
-                        duration={true}
-                        summary={true}
-                        projectStyle={styles.projectTitleText}
-                        summaryStyle={styles.description}
-                        durationStyle={styles.description}
-                        projectPlaceholder={"Project Name"}
-                        durationPlaceholder="Project Duration"
-                        summaryPlaceholder="Project Summary"
-                        maxWidth={"300px"}
-                      />
-                    </div>
-                  </div>
-                )}
-              </Box>
-              <Box>
-                {resumeData?.organization?.visible && (
-                  <div className={styles.sideMenu}>
-                    <div className={styles.width}>
-                      {/* Section Side Menu */}
-                      {show.organization && (
-                        <SectionSideMenu
-                          bg="#006772"
-                          iconColor={"#fff"}
-                          onHide={() => setShow({ ...show, organization: false })}
-                          onDelete={ORGANIZATION}
-                        />
-                      )}
-                    </div>
-                    <div>
-                      {/* Organization Heading */}
-                      <Heading
-                        title="ORGANIZATION"
-                        circleSize="38px"
-                        circleBg={backgroundColor ? backgroundColor : "#432543"}
-                        circleIconHeading={true}
-                        icon={(props) => (
-                          <GiOrganigram {...props} size={18} color={"white"} />
-                        )}
-                        fontSize="23px"
-                        fontWeight={"bold"}
-                        color={backgroundColor ? backgroundColor : "#432543"}
-                        minW={250}
-                        maxW={250}
-                        margin={"15px 0px 8px 0px"}
-                        onSideSectionShow={() =>
-                          setShow({ ...show, organization: true })
-                        }
-                      />
-                      {/* Organization Component */}
-                      <Organization
-                        organization={true}
-                        date={true}
-                        role={true}
-                        organizationStyle={styles.projectTitleText}
-                        dateStyle={styles.description}
-                        roleStyle={styles.description}
-                        rolePlaceholder="Role"
-                        maxWidth={"300px"}
-                        datewidthmax={"135px"}
-                      />
-                    </div>
-                  </div>
-                )}
-              </Box>
-              <Box>
-                {resumeData?.certifications?.visible && (
-                  <div className={styles.sideMenu}>
-                    <div className={styles.width}>
-                      {/* Section Side Menu */}
-                      {show.certificates && (
-                        <SectionSideMenu
-                          bg="#006772"
-                          iconColor={"#fff"}
-                          onHide={() => setShow({ ...show, certificates: false })}
-                          onDelete={CERTIFICATE}
-                        />
-                      )}
-                    </div>
-                    <div>
-                      {/* Certificate Heading */}
-                      <Heading
-                        title="CERTIFICATES"
-                        circleSize="38px"
-                        circleBg={backgroundColor ? backgroundColor : "#432543"}
-                        circleIconHeading={true}
-                        icon={(props) => (
-                          <TbCertificate {...props} size={18} color={"white"} />
-                        )}
-                        fontSize="23px"
-                        fontWeight={"bold"}
-                        color={backgroundColor ? backgroundColor : "#432543"}
-                        minW={250}
-                        maxW={250}
-                        margin={"15px 0px 8px 0px"}
-                        onSideSectionShow={() =>
-                          setShow({ ...show, certificates: true })
-                        }
-                      />
-                      {/* Certificate Component */}
-                      <Certificate
-                        issueDate={true}
-                        certificate={true}
-                        institute={true}
-                        certificateStyle={styles.projectTitleText}
-                        issueDateStyle={styles.description}
-                        instituteStyle={styles.description}
-                        maxWidth={"295px"}
-                        datewidthmax={"120px"}
-                      />
-                    </div>
-                  </div>
-                )}
-              </Box>
-              <Box>
-                {resumeData?.languages?.visible && (
-                  <div className={styles.sideMenu}>
-                    <div className={styles.width}>
-                      {/* Section Side Menu */}
-                      {show.languages && (
-                        <SectionSideMenu
-                          bg="#006772"
-                          iconColor={"#fff"}
-                          onHide={() => setShow({ ...show, languages: false })}
-                          onDelete={LANGUAGES}
-                        />
-                      )}
-                    </div>
-                    <div>
-                      {/* languages Heading */}
-                      <Heading
-                        title="LANGUAGES"
-                        circleSize="38px"
-                        circleBg={backgroundColor ? backgroundColor : "#432543"}
-                        circleIconHeading={true}
-                        icon={(props) => (
-                          <IoLanguageOutline
-                            {...props}
-                            size={18}
-                            color={"white"}
-                          />
-                        )}
-                        fontSize="23px"
-                        fontWeight={"bold"}
-                        color={backgroundColor ? backgroundColor : "#432543"}
-                        minW={250}
-                        maxW={250}
-                        margin={"15px 0px 8px 0px"}
-                        onSideSectionShow={() =>
-                          setShow({ ...show, languages: true })
-                        }
-                      />
-                      {/* Language Component */}
-                      <Language
-                        langStyle={styles.projectTitleText}
-                        maxWidth={"285px"}
-                      />
-                    </div>
-                  </div>
-                )}
-              </Box>
-              <Box>
-                {resumeData?.hobbies?.visible && (
-                  <>
+              <Box
+                bg="#ebebeb"
+                borderRadius={6}
+                pl={"5px"}
+                transition="0.8s background"
+              >
+                <Box>
+                  {resumeData?.skills?.visible && (
                     <div className={styles.sideMenu}>
                       <div className={styles.width}>
-                        {/* Section Side Menu */}
-                        {show.interest && (
+                        {show.skills && (
                           <SectionSideMenu
                             bg="#006772"
                             iconColor={"#fff"}
-                            onHide={() => setShow({ ...show, interest: false })}
-                            onDelete={INTEREST}
+                            onHide={() => setShow({ ...show, skills: false })}
+                            onDelete={SKILL}
                           />
                         )}
                       </div>
                       <div>
-                        {/* Interest Heading */}
+                        {/* skill Heading */}
                         <Heading
-                          title="INTEREST"
+                          title="SKILLS"
                           circleSize="38px"
                           circleBg={backgroundColor ? backgroundColor : "#432543"}
                           circleIconHeading={true}
                           icon={(props) => (
-                            <FaHorseHead {...props} size={18} color={"white"} />
+                            <GiSkills {...props} size={18} color={"white"} />
+                          )}
+                          fontSize="23px"
+                          fontWeight={"bold"}
+                          color={backgroundColor ? backgroundColor : "#432543"}
+                          minW={250}
+                          maxW={250}
+                          margin={"10px 0px"}
+                          onSideSectionShow={() =>
+                            setShow({ ...show, skills: true })
+                          }
+                        />
+                        {/* Skill Row Components */}
+                        <RowSkill
+                          skillStyle={styles.skillText}
+                          maxWidth={"250px"}
+                          maxChr={20}
+                          bg={fourthColor ? fourthColor : "#a192a1"}
+                          textColor={color ? color : "#fff"}
+                        />
+                      </div>
+                    </div>
+                  )}
+                </Box>
+                <Box>
+                  {resumeData?.projects?.visible && (
+                    <div className={styles.sideMenu}>
+                      <div className={styles.width}>
+                        {/* Section Side Menu */}
+                        {show.project && (
+                          <SectionSideMenu
+                            bg="#006772"
+                            iconColor={"#fff"}
+                            onHide={() => setShow({ ...show, project: false })}
+                            onDelete={PROJECT}
+                          />
+                        )}
+                      </div>
+                      <div>
+                        {/* project Section Heading */}
+                        <Heading
+                          title="PERSONAL PROJECTS"
+                          circleSize="38px"
+                          circleBg={backgroundColor ? backgroundColor : "#432543"}
+                          circleIconHeading={true}
+                          icon={(props) => (
+                            <GoProject {...props} size={18} color={"white"} />
+                          )}
+                          fontSize="23px"
+                          fontWeight={"bold"}
+                          color={backgroundColor ? backgroundColor : "#432543"}
+                          minW={310}
+                          maxW={310}
+                          margin={"15px 0px 8px 0px"}
+                          onSideSectionShow={() =>
+                            setShow({ ...show, project: true })
+                          }
+                        />
+                        {/* project Component */}
+                        <Project
+                          project={true}
+                          duration={true}
+                          summary={true}
+                          projectStyle={styles.projectTitleText}
+                          summaryStyle={styles.description}
+                          durationStyle={styles.description}
+                          projectPlaceholder={"Project Name"}
+                          durationPlaceholder="Project Duration"
+                          summaryPlaceholder="Project Summary"
+                          maxWidth={"300px"}
+                        />
+                      </div>
+                    </div>
+                  )}
+                </Box>
+                <Box>
+                  {resumeData?.organization?.visible && (
+                    <div className={styles.sideMenu}>
+                      <div className={styles.width}>
+                        {/* Section Side Menu */}
+                        {show.organization && (
+                          <SectionSideMenu
+                            bg="#006772"
+                            iconColor={"#fff"}
+                            onHide={() => setShow({ ...show, organization: false })}
+                            onDelete={ORGANIZATION}
+                          />
+                        )}
+                      </div>
+                      <div>
+                        {/* Organization Heading */}
+                        <Heading
+                          title="ORGANIZATION"
+                          circleSize="38px"
+                          circleBg={backgroundColor ? backgroundColor : "#432543"}
+                          circleIconHeading={true}
+                          icon={(props) => (
+                            <GiOrganigram {...props} size={18} color={"white"} />
                           )}
                           fontSize="23px"
                           fontWeight={"bold"}
@@ -590,20 +444,168 @@ export default function Novo_Hybird_Temp() {
                           maxW={250}
                           margin={"15px 0px 8px 0px"}
                           onSideSectionShow={() =>
-                            setShow({ ...show, interest: true })
+                            setShow({ ...show, organization: true })
                           }
                         />
-                        {/* Interest Component  */}
-                        <Interest
-                          dndDirection="horizontal"
-                          interestStyle={styles.langText}
-                          maxBoxWidth={"300px"}
-                          maxChr={25}
+                        {/* Organization Component */}
+                        <Organization
+                          organization={true}
+                          date={true}
+                          role={true}
+                          organizationStyle={styles.projectTitleText}
+                          dateStyle={styles.description}
+                          roleStyle={styles.description}
+                          rolePlaceholder="Role"
+                          maxWidth={"300px"}
+                          datewidthmax={"135px"}
                         />
                       </div>
                     </div>
-                  </>
-                )}
+                  )}
+                </Box>
+                <Box>
+                  {resumeData?.certifications?.visible && (
+                    <div className={styles.sideMenu}>
+                      <div className={styles.width}>
+                        {/* Section Side Menu */}
+                        {show.certificates && (
+                          <SectionSideMenu
+                            bg="#006772"
+                            iconColor={"#fff"}
+                            onHide={() => setShow({ ...show, certificates: false })}
+                            onDelete={CERTIFICATE}
+                          />
+                        )}
+                      </div>
+                      <div>
+                        {/* Certificate Heading */}
+                        <Heading
+                          title="CERTIFICATES"
+                          circleSize="38px"
+                          circleBg={backgroundColor ? backgroundColor : "#432543"}
+                          circleIconHeading={true}
+                          icon={(props) => (
+                            <TbCertificate {...props} size={18} color={"white"} />
+                          )}
+                          fontSize="23px"
+                          fontWeight={"bold"}
+                          color={backgroundColor ? backgroundColor : "#432543"}
+                          minW={250}
+                          maxW={250}
+                          margin={"15px 0px 8px 0px"}
+                          onSideSectionShow={() =>
+                            setShow({ ...show, certificates: true })
+                          }
+                        />
+                        {/* Certificate Component */}
+                        <Certificate
+                          issueDate={true}
+                          certificate={true}
+                          institute={true}
+                          certificateStyle={styles.projectTitleText}
+                          issueDateStyle={styles.description}
+                          instituteStyle={styles.description}
+                          maxWidth={"295px"}
+                          datewidthmax={"120px"}
+                        />
+                      </div>
+                    </div>
+                  )}
+                </Box>
+                <Box>
+                  {resumeData?.languages?.visible && (
+                    <div className={styles.sideMenu}>
+                      <div className={styles.width}>
+                        {/* Section Side Menu */}
+                        {show.languages && (
+                          <SectionSideMenu
+                            bg="#006772"
+                            iconColor={"#fff"}
+                            onHide={() => setShow({ ...show, languages: false })}
+                            onDelete={LANGUAGES}
+                          />
+                        )}
+                      </div>
+                      <div>
+                        {/* languages Heading */}
+                        <Heading
+                          title="LANGUAGES"
+                          circleSize="38px"
+                          circleBg={backgroundColor ? backgroundColor : "#432543"}
+                          circleIconHeading={true}
+                          icon={(props) => (
+                            <IoLanguageOutline
+                              {...props}
+                              size={18}
+                              color={"white"}
+                            />
+                          )}
+                          fontSize="23px"
+                          fontWeight={"bold"}
+                          color={backgroundColor ? backgroundColor : "#432543"}
+                          minW={250}
+                          maxW={250}
+                          margin={"15px 0px 8px 0px"}
+                          onSideSectionShow={() =>
+                            setShow({ ...show, languages: true })
+                          }
+                        />
+                        {/* Language Component */}
+                        <Language
+                          langStyle={styles.projectTitleText}
+                          maxWidth={"285px"}
+                        />
+                      </div>
+                    </div>
+                  )}
+                </Box>
+                <Box>
+                  {resumeData?.hobbies?.visible && (
+                    <>
+                      <div className={styles.sideMenu}>
+                        <div className={styles.width}>
+                          {/* Section Side Menu */}
+                          {show.interest && (
+                            <SectionSideMenu
+                              bg="#006772"
+                              iconColor={"#fff"}
+                              onHide={() => setShow({ ...show, interest: false })}
+                              onDelete={INTEREST}
+                            />
+                          )}
+                        </div>
+                        <div>
+                          {/* Interest Heading */}
+                          <Heading
+                            title="INTEREST"
+                            circleSize="38px"
+                            circleBg={backgroundColor ? backgroundColor : "#432543"}
+                            circleIconHeading={true}
+                            icon={(props) => (
+                              <FaHorseHead {...props} size={18} color={"white"} />
+                            )}
+                            fontSize="23px"
+                            fontWeight={"bold"}
+                            color={backgroundColor ? backgroundColor : "#432543"}
+                            minW={250}
+                            maxW={250}
+                            margin={"15px 0px 8px 0px"}
+                            onSideSectionShow={() =>
+                              setShow({ ...show, interest: true })
+                            }
+                          />
+                          {/* Interest Component  */}
+                          <Interest
+                            dndDirection="horizontal"
+                            interestStyle={styles.langText}
+                            maxBoxWidth={"300px"}
+                            maxChr={25}
+                          />
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </Box>
               </Box>
             </Box>
           </Box>
