@@ -357,6 +357,7 @@ export default function Novo_IT_Temp() {
                                                 {/* Skill Row Components */}
                                                 <RowSkill
                                                     skillStyle={styles.skillText}
+                                                    skillPlaceholder={'Bussiness Process'}
                                                     maxWidth={"230px"}
                                                     maxChr={20}
                                                     bg={fourthColor ? fourthColor : "#95999e"}
