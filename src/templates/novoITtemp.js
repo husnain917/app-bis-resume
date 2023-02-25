@@ -359,7 +359,7 @@ export default function Novo_IT_Temp() {
                                                     skillStyle={styles.skillText}
                                                     skillPlaceholder={'Bussiness Process'}
                                                     maxWidth={"230px"}
-                                                    maxChr={20}
+                                                    maxChr={19}
                                                     bg={fourthColor ? fourthColor : "#95999e"}
                                                     textColor={color ? color : "#fff"}
                                                 />
