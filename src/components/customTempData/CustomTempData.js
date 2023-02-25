@@ -44,7 +44,8 @@ import {
   Fashionsimple,
   novoITtemp,
   novoTechTemp,
-  novoSimpleTemp
+  novoSimpleTemp,
+  novoEasyTemp,
 } from "../../templates";
 export const CUSTOM_TEMP_DATA = [
   {
@@ -70,7 +71,7 @@ export const CUSTOM_TEMP_DATA = [
     },
     category: {
       categoryID: "1",
-      totalCategory: "8",
+      totalCategory: "9",
       categoryName: "Executive",
     },
     colorLength: 4,
@@ -98,7 +99,7 @@ export const CUSTOM_TEMP_DATA = [
     },
     category: {
       categoryID: "2",
-      totalCategory: "8",
+      totalCategory: "9",
       categoryName: "Executive",
     },
     colorLength: 4,
@@ -126,7 +127,7 @@ export const CUSTOM_TEMP_DATA = [
     },
     category: {
       categoryID: "3",
-      totalCategory: "8",
+      totalCategory: "9",
       categoryName: "Executive",
     },
     colorLength: 4,
@@ -154,7 +155,7 @@ export const CUSTOM_TEMP_DATA = [
     },
     category: {
       categoryID: "4",
-      totalCategory: "8",
+      totalCategory: "9",
       categoryName: "Executive",
     },
     colorLength: 4,
@@ -182,7 +183,7 @@ export const CUSTOM_TEMP_DATA = [
     },
     category: {
       categoryID: "5",
-      totalCategory: "8",
+      totalCategory: "9",
       categoryName: "Executive",
     },
     colorLength: 4,
@@ -210,7 +211,7 @@ export const CUSTOM_TEMP_DATA = [
     },
     category: {
       categoryID: "6",
-      totalCategory: "8",
+      totalCategory: "9",
       categoryName: "Executive",
     },
     colorLength: 4,
@@ -238,7 +239,35 @@ export const CUSTOM_TEMP_DATA = [
     },
     category: {
       categoryID: "7",
-      totalCategory: "8",
+      totalCategory: "9",
+      categoryName: "Executive",
+    },
+    colorLength: 4,
+  },
+  {
+    id: "pl6ghfIbhjyjwxvsg5",
+    href: "/templates/pl6ghfIbhjyjwxvsg5",
+    src: "/novo-easy-template.PNG",
+    alt: "Template Not Found",
+    height: "200px",
+    width: "250px",
+    heading: "Executive",
+    component: novoEasyTemp,
+    sections: {
+      work: true,
+      education: true,
+      languages: true,
+      skills: true,
+      projects: false,
+      references: false,
+      organization: false,
+      interest: true,
+      certificate: true,
+      achievements: false,
+    },
+    category: {
+      categoryID: "8",
+      totalCategory: "9",
       categoryName: "Executive",
     },
     colorLength: 4,
@@ -265,8 +294,8 @@ export const CUSTOM_TEMP_DATA = [
       achievements: false,
     },
     category: {
-      categoryID: "8",
-      totalCategory: "8",
+      categoryID: "9",
+      totalCategory: "9",
       categoryName: "Executive",
     },
     colorLength: 4,

@@ -51,9 +51,7 @@ const TemplateDetail = () => {
   const selected =
     CUSTOM_TEMP_DATA?.find((item) => item.id === template) ||
     CUSTOM_TEMP_DATA?.find((item) => item.id === template_id);
-  const { downloadPDFHandler, pdfRef, downloadWordHandler } = PDFGenerater(
-    selected?.id
-  );
+  const { downloadPDFHandler, pdfRef, downloadWordHandler } = PDFGenerater();
 
   const ref = useRef();
   useOutsideClick({
@@ -78,19 +76,19 @@ const TemplateDetail = () => {
             dispatch(modalOpen());
           } else {
             onClickHandler({
-              templateId: selected.id,
+              templateId: selected?.id,
             });
           }
         }}
         downloadWord={() => {
           downloadWordHandler({
             ...resumeData,
-            id: selected.id,
+            id: selected?.id,
           });
         }}
         sideTempSelect={sideTempSelect}
         setsideTempSelect={setsideTempSelect}
-        colorLength={selected?.colorLength || 2}
+        colorLength={selected?.colorLength}
       >
         <ChangeTempBtn
           onPress={() => setsideTempSelect(!sideTempSelect)}

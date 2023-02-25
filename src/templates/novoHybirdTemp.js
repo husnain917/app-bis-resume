@@ -353,8 +353,9 @@ export default function Novo_Hybird_Temp() {
                         {/* Skill Row Components */}
                         <RowSkill
                           skillStyle={styles.skillText}
-                          maxWidth={"250px"}
-                          maxChr={20}
+                          skillPlaceholder={'Bussiness Process'}
+                          maxWidth={"310px"}
+                          maxChr={26}
                           bg={fourthColor ? fourthColor : "#a192a1"}
                           textColor={color ? color : "#fff"}
                         />

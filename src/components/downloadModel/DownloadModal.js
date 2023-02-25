@@ -26,6 +26,12 @@ export default function DownloadModal({
         onClose();
         downloadPDF();
     }
+    
+    const closeModelDocx = () => {
+        onClose();
+        downloadDocx();
+    }
+    
     return (
         <>
             <Button
@@ -141,7 +147,7 @@ export default function DownloadModal({
                                     boxShadow: '0px -1px 4px 4px #8fd1e7',
                                     borderRadius: '6px'
                                 }}
-                                onClick={downloadDocx}
+                                onClick={closeModelDocx}
                             >
                                 DOC
                             </Button>

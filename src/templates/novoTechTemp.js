@@ -104,7 +104,7 @@ export default function Novo_Tech_Temp() {
                                         SNameStyle={styles.nameStyle}
                                         maxWidth={"260px"}
                                         minWidth={"260px"}
-                                        maxChr={12}
+                                        maxChr={38}
                                         fontColor={backgroundColor ? backgroundColor : "#1d3344"}
                                     />
                                     {/* Profession Section  */}
@@ -368,6 +368,7 @@ export default function Novo_Tech_Temp() {
                                                 {/* Skill Row Components */}
                                                 <RowSkill
                                                     skillStyle={styles.skillText}
+                                                    skillPlaceholder={'Bussiness Process'}
                                                     maxWidth={"230px"}
                                                     maxChr={20}
                                                     bg={fourthColor ? fourthColor : "#8e99a1"}

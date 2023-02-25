@@ -45,7 +45,7 @@ export default function Novo_Simple_Temp() {
                 minW={830}
                 maxW={830}
                 pt={8}
-                pb={2}
+                pb={10}
                 bg={"#fff"}
                 borderRadius={6}
                 borderWidth="1px"
@@ -61,8 +61,9 @@ export default function Novo_Simple_Temp() {
                         SName={true}
                         FNameStyle={styles.nameStyle}
                         SNameStyle={styles.nameStyle}
-                        maxWidth={"770px"}
-                        minWidth={"770px"}
+                        maxWidth={"350px"}
+                        minWidth={"350px"}
+                        direction={'row'}
                         maxChr={38}
                         fontColor={backgroundColor ? backgroundColor : "#00232b"}
                     />
@@ -145,7 +146,8 @@ export default function Novo_Simple_Temp() {
                                         {/* Skill Row Components */}
                                         <RowSkill
                                             skillStyle={styles.skillText}
-                                            maxWidth={"310px"}
+                                            skillPlaceholder={'Bussiness Process'}
+                                            maxWidth={"330px"}
                                             maxChr={28}
                                             bg={fourthColor ? fourthColor : "#7f9195"}
                                             textColor={color ? color : "#fff"}

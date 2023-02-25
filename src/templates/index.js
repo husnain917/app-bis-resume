@@ -44,3 +44,4 @@ export { default as Fashionsimple } from "./Fashionsimple";
 export { default as novoITtemp } from "./novoITtemp";
 export { default as novoTechTemp } from "./novoTechTemp";
 export { default as novoSimpleTemp } from "./novoSimpleTemp";
+export { default as novoEasyTemp } from "./novoEasyTemp";
