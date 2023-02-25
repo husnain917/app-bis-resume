@@ -355,7 +355,7 @@ export default function Novo_Hybird_Temp() {
                           skillStyle={styles.skillText}
                           skillPlaceholder={'Bussiness Process'}
                           maxWidth={"310px"}
-                          maxChr={28}
+                          maxChr={26}
                           bg={fourthColor ? fourthColor : "#a192a1"}
                           textColor={color ? color : "#fff"}
                         />
